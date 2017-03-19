@@ -1,0 +1,50 @@
+\documentclass[10pt]{extbook}
+
+\usepackage[zh,book]{header}
+	\CTEXoptions[today=old]
+	\CTEXoptions[contentsname=Table of Contents]
+	
+\usepackage{wallpaper}
+	\newcommand\chapterimg{Pictures/0.png}
+
+\usepackage{titletoc}
+\usepackage[titletoc,title]{appendix}
+	\renewcommand{\appendixname}{Appendix}
+
+\usepackage{makeidx}
+	\makeindex
+
+\usepackage{hyperref}
+	\hypersetup{bookmarksnumbered=true}
+
+\input{defs}
+	\newcommand{\cc}{\mathbb{C}}
+
+\begin{document}
+\begin{titlepage}
+\setcounter{page}{-1}
+\thispagestyle{empty}
+	\begin{flushright}
+	{\Huge\bfseries 概形的几何}\\[\baselineskip]
+	% {{\scshape In\:}\Large {\itshape a simple} {\scshape Way}} \par
+	{by xxx}\par
+	\today
+	\end{flushright}
+	\vfill
+	{\Large\itshape ggg}
+\end{titlepage}
+\clearpage
+
+\frontmatter
+\tableofcontents
+\mainmatter
+	\input{chap_1}
+	\input{chap_2}
+	\input{chap_3}
+	\input{chap_4}
+	\input{chap_5}
+	\input{chap_6}
+\backmatter
+ 	\input{references}
+\printindex
+\end{document}
