@@ -1,5 +1,4 @@
 #!/bin/bash
-# Author : buwailee
 # Script follows here:
 echo '1'
 xelatex cmain.tex > /dev/null
