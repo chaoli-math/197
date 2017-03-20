@@ -244,3 +244,6 @@ pip-log.txt
 
 # windows
 *.exe
+
+#Pictures
+*.png
