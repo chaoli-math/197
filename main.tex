@@ -21,6 +21,17 @@
 \input{defs}
 	%\newcommand{\cc}{\mathbb{C}}
 
+\theoremstyle{plain}%定理环境样式
+\newtheorem{pro}{Proposition}[chapter]% 定义命题环境
+\newtheorem{defi}{Definition}[chapter]% 定义命题环境
+\newtheorem{theo}{Theorem}[chapter]% 定义定理环境
+
+\newcommand{\paracount}[1]{\refstepcounter{theo}\textbf{#1 \thetheo.}\hspace{0.25em}}
+\newcommand{\exe}{\noindent\paracount{Exercise}}
+
+\newcommand{\picc}[2]{\begin{figure}[!ht]\centering\includegraphics[scale=#1]{Pictures/#2}\end{figure}}
+\newcommand{\pic}[1]{\picc{0.25}{#1}}
+
 \begin{document}
 \begin{titlepage}
 \setcounter{page}{-1}
@@ -35,6 +46,7 @@
 	{\Large\itshape ggg}
 \end{titlepage}
 \clearpage
+\thispagestyle{plain}
 
 \frontmatter
 \tableofcontents

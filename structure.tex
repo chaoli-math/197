@@ -17,13 +17,13 @@
 %% Draw a semi-transparent rectangle across the top
 	%% Check if on an odd or even page
 	\strictpagecheck\checkoddpage
-	\ifoddpage{
-	\ThisULCornerWallPaper{1}{\chapterimg}
+	\ifoddpage {
+		\ThisULCornerWallPaper{1}{\chapterimg}
 	}
 	\else {
 	\newpage
-	\thispagestyle{plain}
-	\ThisULCornerWallPaper{1}{\chapterimg}
+		\thispagestyle{plain}
+		\ThisULCornerWallPaper{1}{\chapterimg}
 	}
 	\fi
 	\tikz[overlay,remember picture]
