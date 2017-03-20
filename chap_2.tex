@@ -13,13 +13,13 @@
 
 这里将使用一个标准的但绝不平凡的一个代数的结论------Hilbert's Nullstellensatz（零点定理）的一种形式；比如可见Eisenbud [1995].
 
-\begin{theo}
-	(Nullstellensatz). 设$K$是一个域，如果$\mathfrak{m}$是多项式环$K[x_1$, $\cdots$, $x_n]$的一个极大理想（或者更一般地，$p$是$K$上的一个代数空间的子簇的一个闭点），则
+\begin{thm}[Nullstellensatz]
+	设$K$是一个域，如果$\mathfrak{m}$是多项式环$K[x_1$, $\cdots$, $x_n]$的一个极大理想（或者更一般地，$p$是$K$上的一个代数空间的子簇的一个闭点），则
 	\[
 		K[x_1\text{, }\cdots\text{, }x_n]/\mathfrak{m}=\kappa(p)
 	\]
 	是一个有限维$K$-矢量空间。
-\end{theo}
+\end{thm}
 
 在我们的例子中，$K$是代数闭的，这就意味着$\kappa(p)=K$. 因此，记$\lambda_i$是$x_i$在$\kappa(p)$中的像，可以看到
 \[
@@ -51,9 +51,11 @@
 
 \nottran % 纤维，或者更一般的原像，即使在经典代数几何中也可能会出现。
 
-\exe 设$\varphi:K[x]\to K[x]$是一个环同态，他将$x$变成$x^2$，考虑$\varphi$诱导的$\spec K[x]$到自身的映射。证明，概形意义上的点$0$的纤维是这条直线的由$(x^2)$定义的子概形。
+\begin{exe}
+设$\varphi:K[x]\to K[x]$是一个环同态，他将$x$变成$x^2$，考虑$\varphi$诱导的$\spec K[x]$到自身的映射。证明，在概形意义上，点$0$的纤维是由$(x^2)$定义的子概形。
 
 \pic{chap_2/3.eps}
+\end{exe}
 
 在所有的概形中，这些关联于代数闭域上的仿射簇的概形被如下性质的环$R$的谱所刻划，
 
