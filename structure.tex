@@ -1,6 +1,6 @@
 \usepackage[b5paper, top=10mm, text={144mm, 208mm}, includehead, includefoot, hmarginratio=1:1, heightrounded]{geometry}
 \usepackage[explicit,clearempty]{titlesec}
-\usepackage{wallpaper,graphicx,changepage,fancyhdr,tikz,indentfirst}
+\usepackage{wallpaper,changepage,fancyhdr,tikz,indentfirst}
 \usepackage{amssymb,amsfonts,amsmath,amsthm,bm,mathrsfs}
 \def\pgfsysdriver{pgfsys-dvipdfm.def}
 \usepackage[all]{xy}
@@ -8,22 +8,17 @@
 \usepackage{hyperref}
 	\hypersetup{bookmarksnumbered=true}
 
-%% Command to hold chapter illustration image
-\newcommand\chapterimg{Pictures/0.png}
-
 %% Define how the chapter title is printed
 \titleformat{\chapter}{}{}{0pt}{
 %% Background image at top of page
 %% Draw a semi-transparent rectangle across the top
 	%% Check if on an odd or even page
 	\strictpagecheck\checkoddpage
-	\ifoddpage {
-		\ThisULCornerWallPaper{1}{\chapterimg}
+	\ifoddpage{
 	}
 	\else {
-	\newpage
+		\newpage
 		\thispagestyle{plain}
-		\ThisULCornerWallPaper{1}{\chapterimg}
 	}
 	\fi
 	\tikz[overlay,remember picture]

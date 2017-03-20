@@ -3,14 +3,14 @@
 \usepackage[zh,book]{header}
 	\CTEXoptions[today=old]
 	%\CTEXoptions[contentsname=Table of Contents]
-	
-\usepackage{wallpaper}
-	\newcommand\chapterimg{Pictures/0.png}
 \usepackage{graphicx}
 
 \usepackage{titletoc}
 \usepackage[titletoc,title]{appendix}
 	\renewcommand{\appendixname}{附录}
+
+\setcounter{secnumdepth}{5}  
+\setcounter{tocdepth}{5} 
 
 \usepackage{makeidx}
 	\makeindex
@@ -29,8 +29,9 @@
 \theoremstyle{definition}
 \newtheorem{exe}[thm]{Exercise}
 
-\newcommand{\picc}[2]{\begin{figure}[!ht]\centering\includegraphics[scale=#1]{Pictures/#2}\end{figure}}
-\newcommand{\pic}[1]{\picc{0.25}{#1}}
+\newcommand{\picc}[1]{\begin{figure}[!ht]\centering\includegraphics[scale=0.5]{#1}\end{figure}}
+\newcommand{\pic}[1]{\picc{#1}}
+\newcommand{\ThisULCornerWallPaper}[2]{}
 
 \begin{document}
 \begin{titlepage}
@@ -51,12 +52,12 @@
 \frontmatter
 \tableofcontents
 \mainmatter
-	\input{chap_1}
-	\input{chap_2}
-	\input{chap_3}
-	\input{chap_4}
-	\input{chap_5}
-	\input{chap_6}
+	\input{chap_1/chap_1}
+	\input{chap_2/chap_2}
+	% \input{chap_3/chap_3}
+	% \input{chap_4/chap_4}
+	% \input{chap_5/chap_5}
+	% \input{chap_6/chap_6}
 \backmatter
  	\input{references}
 \printindex

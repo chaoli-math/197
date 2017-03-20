@@ -3,7 +3,7 @@
 \input{structure.tex}
 % \usepackage[fontset=windows]{ctex}
 \usepackage{ctex}
-	\CTEXoptions[today=old]
+	% \CTEXoptions[today=old]
 	% \CTEXoptions[contentsname=Table of Contents]
 \usepackage{titletoc, makeidx}
 	\makeindex
@@ -11,10 +11,13 @@
 \usepackage[titletoc,title]{appendix}
 	\renewcommand{\appendixname}{附录}
 
+\setcounter{secnumdepth}{5}  
+\setcounter{tocdepth}{5} 
+
 \usepackage{hyperref}
 	\hypersetup{bookmarksnumbered=true}
 
-\input{defs.tex}
+\input{defs}
 	%\newcommand{\cc}{\mathbb{C}}
 
 \theoremstyle{plain}
@@ -25,8 +28,8 @@
 \theoremstyle{definition}
 \newtheorem{exe}[thm]{Exercise}
 
-\newcommand{\picc}[2]{\begin{figure}[!ht]\centering\includegraphics[scale=#1]{Pictures/#2}\end{figure}}
-\newcommand{\pic}[1]{\picc{0.2}{#1}}
+\newcommand{\picc}[1]{\begin{figure}[!ht]\centering\includegraphics[scale=0.4]{#1}\end{figure}}
+\newcommand{\pic}[1]{\picc{#1}}
 
 \begin{document}
 \begin{titlepage}
@@ -44,20 +47,18 @@
 \clearpage
 \frontmatter
 \pagestyle{plain}
-\renewcommand\chapterimg{Pictures/0.png}
-\ThisULCornerWallPaper{1}{\chapterimg}
+\ThisULCornerWallPaper{1}{Pictures/0.pdf}
 \tableofcontents
 \mainmatter
 \pagestyle{headings}
-	\input{chap_1}
-	\input{chap_2}
-	\input{chap_3}
-	\input{chap_4}
-	\input{chap_5}
-	\input{chap_6}
+	\input{chap_1/chap_1}
+	\input{chap_2/chap_2}
+	% \input{chap_3/chap_3}
+	% \input{chap_4/chap_4}
+	% \input{chap_5/chap_5}
+	% \input{chap_6/chap_6}
 \backmatter
 	\input{references}
-	\renewcommand\chapterimg{Pictures/0.png}
-	\ThisULCornerWallPaper{1}{\chapterimg}
+	\ThisULCornerWallPaper{1}{Pictures/0.pdf}
 	\printindex
 \end{document}
