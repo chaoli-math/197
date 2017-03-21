@@ -1,3 +1,46 @@
 \section{非代数闭域上的约态概形}
 
-我们现在考虑当观察非代数闭域上的有限生成约态代数的谱时将会发生什么。对这样的结构的兴趣最开始来自于数论，当然，他远比概形理论要早得多！比如，关于有理二次型的研究，数论中一个古老的课题，能看作对有理数域上二次方程定义的簇的研究。研究有理数域上三个变量的三次型在数论上至今依然是非常活跃的方向。
+我们现在考虑当观察非代数闭域上的有限生成约态代数的谱时将会发生什么。对这样的结构的兴趣最开始来自于数论，当然，他远比概形理论要早得多！比如，关于有理二次型的研究，数论中一个古老的课题，能看作对有理数域上二次方程定义的簇的研究。研究有理数域上三个变量的三次型在数论上至今依然是非常活跃的方向，其中现在主要醉心于$\mathbb{Q}$上的椭圆曲线理论。最基本的对象是$\mathbb{Q}$上的代数簇（或是$\mathbb{Z}$上的概形，我们以后会回到这个情况），但是在处理它们的过程中，数论学家常常使用下面这副图中这些所有的基环，以及许多的中间域以及中间环：
+\[
+\begin{xy}
+	\xymatrix{
+		\hat{\mathbb{Z}}_{(p)}\ar[r]&\hat{\mathbb{Q}}_{p}\ar[rr]&&\mathbb{C}_p\\
+		\mathbb{Z}_{(p)}\ar[u]&&&\\
+		\mathbb{Z}\ar[u]\ar[r]\ar[d]&\mathbb{Q}\ar[r]\ar[uu]&\mathbb{R}\ar[r]&\mathbb{C}\ar[uu]\\
+		\mathbb{F}_p\ar[r]&\bar{\mathbb{F}}_p&&&
+	}
+\end{xy}
+\]
+概形理论提供了一个相当富有弹性且舒适的框架来处理这些基环的改变。同时，一个性质良好的约态簇，在模$p$后可能突然变成一个非约态的东西，描述这东西需要更完整的概形理论（比如见2.4.4节）。
+
+从最简单的例子开始，考虑$\mathbb{A}_{\mathbb{R}}^1=\spec \mathbb{R}[x]$. 使用Nullstellensatz，我们能看到$R[x]$中有两类极大理想：一种的剩余类域是$\mathbb{R}$，它们具有形式$(x-\lambda)$，其中$\lambda\in\mathbb{R}$，剩余类域是$\mathbb{C}$，它们具有形式$(x+\mu x+\nu)$，其中$\mu$, $\nu\in\mathbb{R}$且满足$\mu^2-4\nu<0$. 第二类理想可以写作$((x-z)(x-\bar{z}))$的形式，其中$z\in \mathbb{C}$不是一个实数。于是，$\mathbb{A}_{\mathbb{R}}^1$中的闭点，对应于一个实数或者一对共轭的复数。最后，$\mathbb{A}_{\mathbb{R}}^1$同样有着唯一的非闭点，他对应于素理想$(0)$，它的闭包是整个$\mathbb{A}_{\mathbb{R}}^1$.
+
+接着，我们来到$\mathbb{R}$上的仿射平面，$\mathbb{A}_{\mathbb{R}}^2=\spec \mathbb{R}[x,y]$，以及考虑$R[x,y]$的极大理想$\mathfrak{m}$给出的闭点。同样从Nullstellensatz，$R[x,y]$关于$\mathfrak{m}$的剩余类域只有$\mathbb{R}$与$\mathbb{C}$，于是复合映射
+\[
+	\rr\to \rr[x,y]/\mm\cong (\rr \text{ or } \cc)
+\]
+或者是恒同或者是$\rr$到$\cc$的含入。取$\lambda$和$\mu$作为$x$和$y$在$\cc$中的像，对前一种情况，我们可以看到$\mm=(x-\lambda,y-\mu)$对应于$\rr^2$中一般意义上的点。但是对后一种情况，$\mm$同时对应于$(\lambda,\mu)$和$(\bar\lambda,\bar\mu)$：从另一种视角来看，将$x$, $y$变成$\lambda$, $\mu$的同态$\rr[x,y]\to \cc$与另一个将$x$, $y$变成$\bar\lambda$, $\bar\mu$的同态有着相同的核，因为它们只差一个$\cc$在$\rr$上的自同构。
+
+给出上面描述的极大理想的生成元并不是件很困难的事情。如果$\rr[x,y]/\mm\cong \rr $，很清楚地，$\mm=(x-\lambda,y-\mu)$. 另一方面，假设$\lambda$是实数，则$\mu$必须要满足一个不可约二次实系数多项式$y^2+ay+b=0$，于是$\mm$包含理想$(x-\lambda,y^2+ay+b)$. 但是这个理想显然是一个素理想（比如，先提出$x-\lambda$因子），于是$\mm=(x-\lambda,y^2+ay+b)$. 自然，当$\mu$是实数的时候，类似的结果也成立。
+
+最后，假设$\mu$和$\lambda$都不是实数，于是$\mm$包含以$\mu$和$\lambda$为根的不可约实系数多项式$f$和$g$，但是，因为$g$可以在$\rr/(f(x))\cong \cc$上分解为
+\[
+	g(u)=(y-\mu)(y-\bar\mu),
+\]
+因此$(f(x),g(y))$不是素理想！在复数域上，可以给出如下图像：
+
+\pic{5.png}
+
+于是$f(x)=0$与$g(y)=0$决定的轨迹是两条水平线与数值线的并，反之亦然，它们相交于四点$(\lambda,\mu)$, $(\bar\lambda,\mu)$, $(\lambda,\bar\mu)$和$(\bar\lambda,\bar\mu)$. 多项式
+\[
+	h(x,y)=\mathrm{Im}(\mu) x - \mathrm{Im}(\lambda)  y -\mathrm{Im}(\mu\bar\lambda)
+\]
+是连接$(\lambda,\mu)$和$(\bar\lambda,\bar\mu)$的那条实系数直线。理想
+\[
+	(f(x),h(x,y))=(g(y),h(x,y))\subset \rr[x,y]
+\]
+严格包含理想$(f(x),g(y))$中，这个理想就是我们寻找的极大理想，这点可以通过检查
+\[
+	\rr[x]\cong \rr[x,y]/(h)\cong \rr[y]
+\]
+得到（这些同构中，注意到$(\bar\mu-\mu)$与$(\bar\lambda-\lambda)$都非零）。
