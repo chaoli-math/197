@@ -11,6 +11,8 @@
 \usepackage[titletoc,title]{appendix}
 	\renewcommand{\appendixname}{附录}
 
+\renewcommand\thechapter{\Roman{chapter}} 
+
 \setcounter{secnumdepth}{5}  
 \setcounter{tocdepth}{5} 
 
@@ -27,6 +29,7 @@
 
 \theoremstyle{definition}
 \newtheorem{exe}[thm]{Exercise}
+\newtheorem{exa}[thm]{Example}
 
 \newcommand{\picc}[1]{\begin{figure}[!ht]\centering\includegraphics[scale=0.4]{#1}\end{figure}}
 \newcommand{\pic}[1]{\picc{#1}}
