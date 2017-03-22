@@ -1,0 +1,56 @@
+\begin{theindex}
+  \def\seename{见}
+  \def\alsoname{又见}
+  \providecommand*\indexgroup[1]{%
+    \indexspace
+    \item \textbf{#1}\nopagebreak}
+  %
+  \indexgroup{符号}
+  %
+
+  \item \'{e}tale拓扑, \hyperpage{6}
+
+  \indexspace
+
+  %
+  \indexgroup{C}
+  %
+
+  \item 叉点, \hyperpage{9}
+
+  \indexspace
+
+  %
+  \indexgroup{G}
+  %
+
+  \item 孤立点, \hyperpage{9}
+
+  \indexspace
+
+  %
+  \indexgroup{H}
+  %
+
+  \item Hensel化, \hyperpage{6}
+
+  \indexspace
+
+  %
+  \indexgroup{J}
+  %
+
+  \item 几何不可约的, \hyperpage{8}
+  \item 结点, \hyperpage{8}
+  \item 局部概形, \hyperpage{5}
+  \item 绝对不可约的, \hyperpage{8}
+
+  \indexspace
+
+  %
+  \indexgroup{Y}
+  %
+
+  \item 一般点, \hyperpage{4}
+
+\end{theindex}

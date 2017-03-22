@@ -230,7 +230,6 @@ pip-log.txt
 *.toc
 *.ilg
 *.idx
-*.ind
 *.ilg
 *.thm
 *.out
