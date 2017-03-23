@@ -9,28 +9,97 @@
 \subsection{双重点}
 
 \begin{exa}
-	此类概形最简单的例子是$\mathbb{A}_K^1$由理想$(x^2)$定义的子概形 ------ 即概形$\spec K[x]/(x^2)$，通过商映射$K[x]\to K[x]/(x^2)$诱导的映射看作$\mathbb{A}_K^1$的子概形。这个概形只有一个点，对应于理想$(x)$，
+	此类概形最简单的例子是$\mathbb{A}_K^1$由理想$(x^2)$定义的子概形 ------ 即概形$\spec K[x]/(x^2)$，通过商映射$K[x]\to K[x]/(x^2)$诱导的映射看作$\mathbb{A}_K^1$的子概形。这个概形只有一个点，对应于理想$(x)$，但同样作为$\mathbb{A}_K^1$的子概形与作为抽象概形，这与概形$\spec K[x]/(x)=\spec K$不同。作为抽象概形，我们能看到存在如下差别，在$X$上存在非零正则函数（比如$x$）在$X$唯一一点处为零，当然任意这样的函数平方为零。差别在于，作为$\mathbb{A}_K^1$的子概形，$\mathbb{A}_K^1$上的函数$f\in K[x]$在$X$上为零当且仅当$f$和它的一阶导数同时在点$0$为零。于是$X$上的函数包含两个数据，$\mathbb{A}_K^1$上的一个函数与它的一阶导数在点$0$的值。因为这个原因，有时我们将$X$叫做$\mathbb{A}_K^1$中点$0$的\idx{一阶邻域}。
 \end{exa}
 
-\subsection{多重点}
+更一般的，对于任意的$n$，理想$(x^n)$定义了一个子概形$X\subset \mathbb{A}_K^1$，它的坐标环为$K[x]/(x^n)$，$\mathbb{A}_K^1$上的函数$f(x)$在$X$上为零当且仅当$f$以及它的前$n-1$阶导数全都在点$0$处为零。
 
-\subsubsection*{度与重数}
-\addcontentsline{toc}{subsubsection}{度与重数}
+\begin{exa}[双重点]
+理解双重点的下一步是考虑$\mathbb{A}_K^2=\spec K[x,y]$中其支撑包含原点的子概形，这个子概形需要同构于Example {{\addtocounter{thm}{-1}}\thethm{\addtocounter{thm}{1}}}中的那个子概形$X$. 令$Y\subset \mathbb{A}_K^2$是这样的一个子概形，$R=\mathscr{O}_Y(Y)\cong K[\varepsilon]/(\varepsilon^2)$是它的坐标环，以及满射
+\[
+	\varphi:K[x,y]\to R
+\]
+定义了$Y$到$\mathbb{A}_K^2$的含入。因为，$R$中唯一的极大理想$\mm$在$K[x,y]$中的原像是对应于原点的理想$(x,y)$，因为在$R$中$\mm^2=0$，于是映射$\varphi$在$(x,y)^2=(x^2,xy,y^2)$上为零，于是诱导了映射
+\[
+	\bar\varphi:K[x,y]/(x^2,xy,y^2)\to R.
+\]
+等价地，$Y$必须包含在子概形
+\[
+	\spec K[x,y]/(x^2,xy,y^2)
+\]
+中。但环$K[x,y]/(x^2,xy,y^2)$是一个$K$上的三维矢量空间，$R$只有二维。这是因为，$\varphi$的核将包含一个非零齐次线性型$\alpha x+\beta y$，其中$\alpha$, $\beta\in K$. 记
+\[
+	X_{\alpha,\beta}=\spec K[x,y]/(x^2,xy,y^2,\alpha x+\beta y)\hookrightarrow \mathbb{A}_K^2.
+\]
+子概形$X_{\alpha,\beta}$能被下面的条件所刻画：
 
-\subsection{嵌入点}
+\begin{enumerate}[{(i)}]\setlength{\itemsep}{0pt}
+\item 关联于函数$f\in K[x,y]$的理想的$\mathbb{A}^2_K$子概形，在原点为零以及在那儿其偏导数满足
+\[
+	\beta\frac{\partial f}{\partial x}-\alpha\frac{\partial f}{\partial y}=0
+\]
+（因为这可以推出$f=c(\alpha x+\beta y)+$高阶项），或者
+\item Example {{\addtocounter{thm}{-1}}\thethm{\addtocounter{thm}{1}}}中的子概形$X\subset \mathbb{A}_K^1$在$\mathbb{A}_K^1$到$\mathbb{A}_K^2$的含入映射下的像由$x\mapsto (\beta x,-\alpha x)$给出。
+\end{enumerate}
 
-\subsubsection*{准素分解}
-\addcontentsline{toc}{subsubsection}{准素分解}
+经典语言下，子概形$X_{\alpha,\beta}$被称作包含点$(0,0)$以及一个在$\alpha x+\beta y=0$方向上“无穷接近的点”，我们下面在传统图像中以一个小箭头画出$X_{\alpha,\beta}$：
 
-\subsection{概形的平坦族}
+% \begin{center}\includegraphics[scale=0.5]{chap_2/pics/6.png}\end{center}
 
-\subsubsection*{极限}
-\addcontentsline{toc}{subsubsection}{极限}
+\noindent 这是打算用一个切空间的可区分的一维子空间在平面上来表示这个点（实际上没有可区分的切矢量，不管箭头的方向）。\nottran
+\end{exa}
 
-\subsubsection*{例子}
-\addcontentsline{toc}{subsubsection}{例子}
+% \begin{wrapfigure}{i}{0.25\textwidth}\includegraphics[scale=0.4]{chap_2/pics/7.png}\end{wrapfigure}
+在实际情况下，概形$X_{\alpha,\beta}$会怎么出现呢？一种方式是曲线的相交。比如，当我们想要处理一条直线$L$与一条圆锥曲线$C$相切，显然，只在集合论意义上处理它们的相交是不令人满意的：
+一条直线与一条圆锥曲线应该相交两次。甚至，说$C\cap L$的交点“重数为二”也不是完全令人满意的：比如，交点应该决定直线$L$，正如在非相切的例子中那般。真正令人满意的定义是，$C\cap L$是由理想$I_C$与理想$I_L$的和决定的$\mathbb{A}_K^2$的子概形，使得，比如，直线$y=0$以及抛物线$y=x^2$将相交于子概形$X_{0,1}=\spec K[x,y](x^2,y)$. 作为平面中唯一包含于$X_{0,1}$的直线，这将完全决定$L$. 
 
-\subsubsection*{平坦性}
-\addcontentsline{toc}{subsubsection}{平坦性}
+另一个形如$X_{\alpha,\beta}$的子概形出现的重要方式是作为可约概形的极限。比如，考虑平面上一对不同的点$(0,0)$与$(a,b)$，它们的并是闭子概形
+\[
+	X=\{(0,0),(a,b)\}=\spec S\subset \mathbb{A}_K^2,
+\]
+其中
+\[
+\begin{aligned}
+	S&=K[x,y]/\left((x,y)\cap (x-a,y-b)\right)\\
+	&=K[x,y]/(x^2-ax,xy-bx,xy-ay,y^2-by).
+\end{aligned}
+\]
+由中国剩余定理，$S\cong K\times K$. 于是，特别地，$S$（作为矢量空间）是一个二维$K$-代数。
 
-\subsection{多重直线}
+现在假设点$(a,b)$沿着一条曲线$(a(t),b(t))$往$(0,0)$移动，其中$(a(0),b(0))=(0,0)$而$a$, $b$是$t$的多项式，我们记作
+\[
+	a(t)=a_1t+a_2t^2+\cdots,\quad b(t)=b_1t+b_2t^2+\cdots.
+\]
+
+% \begin{center}\includegraphics[scale=0.5]{chap_2/pics/8.png}\end{center}
+
+那么$X_t=\{(0,0),(a(t),b(t))\}$在$t\to 0$的极限是什么呢？使用概形，我们能采用一种不常见的观点，在如下的合适表述下，此时它的极限依然是两个点：它将是一个仿射概形$X$，其坐标环依然是一个$K$上的二维矢量空间。我们可以取$X$的理想来定义$X$，而$X$的理想是下面这个理想在$t\to 0$下的极限
+\[
+	I_t=(x,y)\cap (x-a(t),y-b(t)).
+\]
+当然，这仅仅把困难转移到了描述什么是理想族的极限上！但这是简单的：在这个例子中，比如，我们能取它们的极限为$K[x,y]$
+中，看作$K$上的矢量空间时，余维数为2的子空间。这个极限依然是一个理想因为乘法是连续的。在理想的余维数是无限时，一个更精巧的解释是必要的，我们将在遇到一维概形族的极限以及再一次在Section 3.3.2中的射影情况下讨论这个问题。
+
+
+% \subsection{多重点}
+
+% \subsubsection*{度与重数}
+% \addcontentsline{toc}{subsubsection}{度与重数}
+
+% \subsection{嵌入点}
+
+% \subsubsection*{准素分解}
+% \addcontentsline{toc}{subsubsection}{准素分解}
+
+% \subsection{概形的平坦族}
+
+% \subsubsection*{极限}
+% \addcontentsline{toc}{subsubsection}{极限}
+
+% \subsubsection*{例子}
+% \addcontentsline{toc}{subsubsection}{例子}
+
+% \subsubsection*{平坦性}
+% \addcontentsline{toc}{subsubsection}{平坦性}
+
+% \subsection{多重直线}

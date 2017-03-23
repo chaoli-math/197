@@ -8,7 +8,7 @@
   \indexgroup{符号}
   %
 
-  \item \'{e}tale拓扑, \hyperpage{6}
+  \item \'{e}tale拓扑, \hyperpage{7}
 
   \indexspace
 
@@ -16,7 +16,7 @@
   \indexgroup{C}
   %
 
-  \item 叉点, \hyperpage{9}
+  \item 叉点, \hyperpage{10}
 
   \indexspace
 
@@ -24,7 +24,7 @@
   \indexgroup{G}
   %
 
-  \item 孤立点, \hyperpage{9}
+  \item 孤立点, \hyperpage{10}
 
   \indexspace
 
@@ -32,7 +32,7 @@
   \indexgroup{H}
   %
 
-  \item Hensel化, \hyperpage{6}
+  \item Hensel化, \hyperpage{7}
 
   \indexspace
 
@@ -40,10 +40,10 @@
   \indexgroup{J}
   %
 
-  \item 几何不可约的, \hyperpage{8}
-  \item 结点, \hyperpage{9}
+  \item 几何不可约的, \hyperpage{9}
+  \item 结点, \hyperpage{10}
   \item 局部概形, \hyperpage{5}
-  \item 绝对不可约的, \hyperpage{8}
+  \item 绝对不可约的, \hyperpage{9}
 
   \indexspace
 
@@ -52,5 +52,6 @@
   %
 
   \item 一般点, \hyperpage{4}
+  \item 一阶邻域, \hyperpage{11}
 
 \end{theindex}
