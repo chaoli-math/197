@@ -13,6 +13,15 @@
   \indexspace
 
   %
+  \indexgroup{B}
+  %
+
+  \item 不可约
+    \subitem 绝对, \hyperpage{8}
+
+  \indexspace
+
+  %
   \indexgroup{C}
   %
 
@@ -48,10 +57,9 @@
   \indexgroup{J}
   %
 
-  \item 几何不可约的, \hyperpage{8}
   \item 结点, \hyperpage{9}
-  \item 局部概形, \hyperpage{5}
-  \item 绝对不可约的, \hyperpage{8}
+  \item 局部
+    \subitem 概形, \hyperpage{5}
 
   \indexspace
 
@@ -68,9 +76,21 @@
   \indexgroup{Y}
   %
 
-  \item 一般点, \hyperpage{4}
-  \item 一阶邻域, \hyperpage{10}
+  \item 一般
+    \subitem 点, \hyperpage{4}
+  \item 一阶
+    \subitem 邻域, \hyperpage{10}
   \item 有限
     \subitem 概形, \hyperpage{12}
+
+  \indexspace
+
+  %
+  \indexgroup{Z}
+  %
+
+  \item 长度
+    \subitem 概形的, \hyperpage{14}
+    \subitem 环的, \hyperpage{14}
 
 \end{theindex}
