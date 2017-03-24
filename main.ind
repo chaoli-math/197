@@ -8,7 +8,7 @@
   \indexgroup{符号}
   %
 
-  \item \'{e}tale拓扑, \hyperpage{7}
+  \item \'{e}tale拓扑, \hyperpage{6}
 
   \indexspace
 
@@ -17,7 +17,7 @@
   %
 
   \item 不可约
-    \subitem 绝对, \hyperpage{9}
+    \subitem 绝对, \hyperpage{8}
 
   \indexspace
 
@@ -25,7 +25,7 @@
   \indexgroup{C}
   %
 
-  \item 叉点, \hyperpage{10}
+  \item 叉点, \hyperpage{9}
 
   \indexspace
 
@@ -33,7 +33,7 @@
   \indexgroup{D}
   %
 
-  \item 度, \hyperpage{13}
+  \item 度, \hyperpage{12}
 
   \indexspace
 
@@ -41,7 +41,9 @@
   \indexgroup{G}
   %
 
-  \item 孤立点, \hyperpage{10}
+  \item 概形
+    \subitem 算术, \hyperpage{14}
+  \item 孤立点, \hyperpage{9}
 
   \indexspace
 
@@ -49,7 +51,7 @@
   \indexgroup{H}
   %
 
-  \item Hensel化, \hyperpage{7}
+  \item Hensel化, \hyperpage{6}
 
   \indexspace
 
@@ -57,7 +59,7 @@
   \indexgroup{J}
   %
 
-  \item 结点, \hyperpage{10}
+  \item 结点, \hyperpage{9}
   \item 局部
     \subitem 概形, \hyperpage{5}
 
@@ -68,7 +70,7 @@
   %
 
   \item 双重
-    \subitem 点, \hyperpage{11}, \hyperpage{13}
+    \subitem 点, \hyperpage{9}, \hyperpage{12}
 
   \indexspace
 
@@ -79,9 +81,9 @@
   \item 一般
     \subitem 点, \hyperpage{4}
   \item 一阶
-    \subitem 邻域, \hyperpage{11}
+    \subitem 邻域, \hyperpage{10}
   \item 有限
-    \subitem 概形, \hyperpage{13}
+    \subitem 概形, \hyperpage{12}
 
   \indexspace
 
@@ -90,7 +92,7 @@
   %
 
   \item 长度
-    \subitem 概形的, \hyperpage{16}
-    \subitem 环的, \hyperpage{16}
+    \subitem 概形的, \hyperpage{14}
+    \subitem 环的, \hyperpage{14}
 
 \end{theindex}
