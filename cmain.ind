@@ -8,7 +8,16 @@
   \indexgroup{符号}
   %
 
-  \item \'{e}tale拓扑, \hyperpage{6}
+  \item \'{e}tale拓扑, \hyperpage{7}
+
+  \indexspace
+
+  %
+  \indexgroup{B}
+  %
+
+  \item 不可约
+    \subitem 绝对, \hyperpage{10}
 
   \indexspace
 
@@ -16,7 +25,15 @@
   \indexgroup{C}
   %
 
-  \item 叉点, \hyperpage{9}
+  \item 叉点, \hyperpage{10}
+
+  \indexspace
+
+  %
+  \indexgroup{D}
+  %
+
+  \item 度, \hyperpage{14}
 
   \indexspace
 
@@ -24,7 +41,7 @@
   \indexgroup{G}
   %
 
-  \item 孤立点, \hyperpage{9}
+  \item 孤立点, \hyperpage{10}
 
   \indexspace
 
@@ -32,7 +49,7 @@
   \indexgroup{H}
   %
 
-  \item Hensel化, \hyperpage{6}
+  \item Hensel化, \hyperpage{7}
 
   \indexspace
 
@@ -40,10 +57,18 @@
   \indexgroup{J}
   %
 
-  \item 几何不可约的, \hyperpage{8}
-  \item 结点, \hyperpage{8}
-  \item 局部概形, \hyperpage{5}
-  \item 绝对不可约的, \hyperpage{8}
+  \item 结点, \hyperpage{10}
+  \item 局部
+    \subitem 概形, \hyperpage{5}
+
+  \indexspace
+
+  %
+  \indexgroup{S}
+  %
+
+  \item 双重
+    \subitem 点, \hyperpage{11}, \hyperpage{14}
 
   \indexspace
 
@@ -51,6 +76,21 @@
   \indexgroup{Y}
   %
 
-  \item 一般点, \hyperpage{4}
+  \item 一般
+    \subitem 点, \hyperpage{4}
+  \item 一阶
+    \subitem 邻域, \hyperpage{11}
+  \item 有限
+    \subitem 概形, \hyperpage{14}
+
+  \indexspace
+
+  %
+  \indexgroup{Z}
+  %
+
+  \item 长度
+    \subitem 概形的, \hyperpage{16}
+    \subitem 环的, \hyperpage{16}
 
 \end{theindex}
