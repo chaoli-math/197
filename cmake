@@ -7,5 +7,4 @@ for ((n=2;n<4;n++)) do
 	xelatex cmain.tex > /dev/null
 	echo $n
 done
-echo '4'
 rm *.ilg *.out
