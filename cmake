@@ -1,11 +1,11 @@
 #!/bin/bash
 # Script follows here:
-echo '1'
 xelatex cmain.tex > /dev/null
+echo '1'
 zhmakeindex -q -s main.mst cmain
-for ((n=2;n<4;n++))
-do
-	echo $n
+for ((n=2;n<4;n++)) do
 	xelatex cmain.tex > /dev/null
+	echo $n
 done
+echo '4'
 rm *.ilg *.out
