@@ -174,7 +174,24 @@
 		\[
 		X_0=\spec K[x,y]/(x^2,xy,y^2).
 		\]
+		\item 证明，$\mathbb{A}_K^2$上的函数$f\in K[x,y]$限制在$X_0$上决定了也被决定于它在原点的值以及在原点处任意方向的一阶导数值。于是我们可以认为$X_0$是$(0,0)$的一阶无穷小邻域。
+		\item 证明，$X_0$包含于任意两条穿过$(0,0)$不同的直线的并中。
+		\item 证明，$X_0$不包含于任意的非奇异曲线中，因此特别地，不是$\mathbb{A}_K^2$中任意两条非奇异曲线概形意义上的交。
 	\end{enumerate}
+\end{exe}
+
+正如我们说的，两类三重点都可以嵌入到任意仿射空间中的平面中。但是四重点$\spec K[x$, $y$, $z]/(x,y,z)^2$不能，因为它的极大理想不能被两个元素所生成。其他新的现象将在空间（即不能包含在平面中）以及更高维度空间中的多重点上出现。比如，在四维仿射空间中不是每个度为$21$的点都可以写成$21$个不同的点的极限，就像下一个习题中所表现的那样。（同样可见Iarrobino [1985].）
+
+\begin{exe}
+	考虑$\mathbb{A}_K^4$的度为$21$零维子概形$\Gamma$，使得
+	\[
+	V(\mm^3)\subset \Gamma \subset V(\mm^4),
+	\]
+	其中$\mm$是$\mathbb{A}_K^4$中原点的极大理想。证明存在一个这样的子概形的$84$维族，然后推出一个一般的这样的子概形不是一个约态概形的极限。
+\end{exe}
+
+\begin{exe}
+	将$\mathbb{A}_K^2$的度为4和5的且支撑包含原点的零维子概形分类到同构。其中哪些同构于$\spec K$上的概形。
 \end{exe}
 
 \subsubsection*{度与重数}
@@ -207,8 +224,18 @@
 
 \subsection{嵌入点}
 
-% \subsubsection*{准素分解}
-% \addcontentsline{toc}{subsubsection}{准素分解}
+将$X$具象为一条由$y=0$定义的直线于一个非约化点的并是比较方便的，比如，由理想$(x^2,xy,y^2)$定义的“原点的一阶邻域”。
+
+% \pic{11.png}
+
+这样的准素分解对任意概形是存在的：我们这里简单地回顾一下代数基础知识。更多的细节，比如可见，Eisenbud [1995]; Atiyah \& Macdonald [1969]或者是这些参考文献中可能最平易近人的，Northcott [1953].
+
+\subsubsection*{准素分解}
+\addcontentsline{toc}{subsubsection}{准素分解}
+
+给定Noether环$R$中的一个理想$I$，我们定义关联于$I$的素理想是那些素理想$\pp$使得$\pp$是$R/I$中某个元素的零化子。这个素理想构成了一个有限集。
+
+一个理想$\mathfrak{q}\subset \pp$被称为$\pp$-准素的，如果$\pp$是$\mathfrak{q}$的根（那些存在一个幂在$\mathfrak{q}$中的元素构成的集合），任取$f$, $g\in R$满足$fg\in \mathfrak{q}$但$f\not\in \pp$，则我们有$g\in\mathfrak{q}$；等价地，$\mathfrak{q}$是$\pp$-准素的，如果$\pp$是它的根以及局部化映射$R/\mathfrak{q}\to R_{\pp}/\mathfrak{q}R_\pp$是一个单射。
 
 \subsection{概形的平坦族}\label{s.2.3.4}
 
