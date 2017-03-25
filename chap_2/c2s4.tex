@@ -74,7 +74,7 @@
 \begin{enumerate}[{(i)}]\setlength{\itemsep}{0pt}
 	\item $(0)$；
 	\item $(p)$，其中$p\in\zz$是一个素数；
-	\item 主理想$(f)$，其中$f\in\zz[x]$是一个$\mathbb{Q}$上的不可约多项式，且所有系数的极大公因子为$1$；
+	\item 主理想$(f)$，其中$f\in\zz[x]$是一个$\mathbb{Q}$上的不可约多项式，且所有系数的最大公因子为$1$；
 	\item 极大理想$(p,f)$，其中$p\in \zz$是一个素数，而$f$是一个首一多项式，模$p$后是不可约的。
 \end{enumerate}
 
@@ -94,11 +94,52 @@
 	在上图中打问号的点是上面？为什么点$(4x+1)$以及$(x-2)$的闭包是相切于点$(3,x-2)$且都横截$(3)$的闭包的那两条曲线？（见\nottran）为什么点$(4x+1)$的闭包画出来在点$(2)\in\spec \zz$上有一个竖直的渐近线？
 \end{exe}
 
+另一个例子，考虑由一个单线性多项式生成的理想，比如$(5x-49)$. 为了继续$\spec \zz$与域上的仿射直线的类比，我们把该点的闭包想象成$\spec\zz$上函数$49/5$的图像，这是一个在点$(5)$处有一个单极点，在点$(7)$处有一个双重零点的函数。（这条曲线相切于$\mathbb{A}_K^1$的子概形$(x)$，正如下面事实所暗示的那样：$(x)$与子概形$(5x-49)$不止相交于点$(7,x)$，而且还包含一个非约化点，其支撑包含$(7,x)$.）
+
+点$(x^2-3)$的闭包长得稍微有点不一样，如下图所示：
+
 % \pic{19.png}
+
+\noindent 它的闭包是上面描述过的概形$\spec \zz[x]/(x^2-3)=\spec \zz[\sqrt 3]$，这里被实现为$\mathbb{A}_\zz^1$的一个子概形。
 
 \begin{exe}
 	确定上图中三个没有标记的点是什么？
 \end{exe}
 
+更一般地，概形$\mathbb{A}_\zz^n=\spec \zz[x_1$, $\dots$, $x_n]$最好通过自然映射$\mathbb{A}_\zz^n\to\spec \zz$来看，它的纤维是概形$\mathbb{A}_{\mathbb{F}_p}^n$以及$\mathbb{A}_{\mathbb{Q}}^n$.
+
 \subsection{$\spec \mathbb{Z}$上的圆锥曲线}
-% \subsection{$\mathbb{A}_K^1$中的双重点}
+
+我们的下一个例子给出了概形理论取得的几何与算术的深刻统一性的线索。我们考虑概形
+\[
+	\spec \zz[x,y]/(x^2-y^2-5),
+\]
+他同构于$\spec \zz$.
+
+首先，这个概形在一般点$[(0)]\in \spec \zz$处的纤维是概形$X=\spec \mathbb{Q}[x,y]/(x^2-y^2-5)$，我们已经描述过它了：它的点是满足$x^2-y^2=5$的偶对$(x,y)\in \bar{\mathbb{Q}}\times \bar{\mathbb{Q}}$在Galois群$G=\mathrm{Gal}(\bar{\mathbb{Q}}/\mathbb{Q})$作用下的轨道。类似地，点$(p)$处的纤维是$\mathbb{F}_p$上仿射平面$\mathbb{A}_{\mathbb{F}_p}^2$的由方程$x^2-y^2=5$定义的子概形，即，它的点是满足$x^2-y^2=5$的偶对$(x,y)\in \bar{\mathbb{F}}_p\times \bar{\mathbb{F}}_p$在Galois群$G=\mathrm{Gal}(\bar{\mathbb{F}}_p/\mathbb{F}_p)$作用下的轨道。
+
+这个概形在除了素数$2$和$5$之外的所有纤维都是非奇异的圆锥曲线，正如一般点处的纤维一样。
+
+\begin{exe}
+	是否存在$\spec \zz$上的平面圆锥曲线是约化且非奇异的？分类他们。
+\end{exe}
+
+然而，$(2)$和$(5)$处的纤维是奇异的：在模$2$的情况下，我们有
+\[
+	x^2-y^2-5=(x+y+1)^2,
+\]
+在模$5$的情况下，我们有
+\[
+	x^2-y^2-5=(x+y)(x-y).
+\]
+于是$(2)$处的纤维是一条二重直线，而$(5)$处的纤维是两条直线的并（于是特别地，有两个非闭点映射到点$(5)$，而只有一个这样的点映射到其他的$(p)\in \spec \zz$）。
+
+% \pic{20.png}
+
+\begin{exe}
+	（这题需要有一定的射影几何知识。）
+\end{exe}
+
+% \begin{wrapfigure}{i}{160pt}\includegraphics[scale=0.5]{chap_2/pics/21.png}\end{wrapfigure}
+
+\subsection{$\mathbb{A}_K^1$中的双重点}
