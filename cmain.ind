@@ -8,7 +8,8 @@
   \indexgroup{符号}
   %
 
-  \item \'{e}tale拓扑, \hyperpage{7}
+  \item \'{e}tale
+    \subitem 拓扑, \hyperpage{7}
 
   \indexspace
 
@@ -42,7 +43,7 @@
   %
 
   \item 概形
-    \subitem 算术, \hyperpage{16}
+    \subitem 算术, \hyperpage{17}
   \item 孤立点, \hyperpage{10}
 
   \indexspace
