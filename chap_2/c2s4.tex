@@ -52,6 +52,53 @@
 
 % \pic{16.png}
 
-% \subsection{$\spec \mathbb{Z}$上的仿射空间}
-% \subsection{$\spec \mathbb{Z}$上的锥}
+一个具有更丰富内容的类比是非代数闭域上的一维概形之间的有限映射。比如考虑映射
+\[
+	\spec \rr[x][y]/(y^2-x)\to \mathbb{A}_\rr^1=\spec \rr[x],
+\]
+只看$\mathbb{A}_\rr^1$中那些剩余类域为$\rr$的点，即对实数$\lambda$形如$(x-\lambda)$的点，我们在点$(x)$处有分岔，对$\lambda\neq 0$，$(x-\lambda)$的原像是剩余类域为$\rr$的两个不同的点（若$\lambda>0$）或是一个剩余类域为$\cc$的点（若$\lambda<0$）。
+
+我们通过观察概形$\spec B$，其中$B\subset A\subset K$是数域的一个序，即$K$中的整数环的子环也有着分式域$K$，来进一步深入上面这个类比。举个例子，$A=\zz[\sqrt 3]$以及$B=\zz[11\sqrt 3]$. 上面描述的映射$\spec A\to \spec \zz$现在可以分解为$\spec A\to \spec B\to \spec \zz$，事实上，映射$\spec A\to \spec B$除了两个点$(4+3\sqrt 3)$和$(4-3\sqrt 3)\in \spec A$同时映到$(11,11\sqrt 3)\in\spec B$之外，它就是一个同构。我们于是将$\spec B$画成一种“结点曲线”，即，$\spec A$到$\spec \zz$的双重覆盖中的两点在这里重合了。
+
+% \pic{17.png}
+
+或者，考虑$A=\zz[\sqrt 3]$以及$B=\zz[2\sqrt 3]$的情况。这里映射$\spec A\to\spec B$是一对一的但不是一个同构，点$[(1+\sqrt 3)]$映到了$[(2,2\sqrt{3})]$.
+
+\begin{exe}
+	证明，点$p=[(2,2\sqrt{3})]$是概形$\spec \zz[2\sqrt 3]$的一个“尖点”，即这是一个奇异点以及消除奇异性的映射$\spec A\to \spec B$在点$p$处的纤维包含一个二重点。
+\end{exe}
+
+\subsection{$\spec \mathbb{Z}$上的仿射空间}
+
+我们下一个例子是一个二维概形$\spec \zz[x]$，或者被记作$\mathbb{A}_\zz^1$. $\zz[x]$中的素理想是
+\begin{enumerate}[{(i)}]\setlength{\itemsep}{0pt}
+	\item $(0)$；
+	\item $(p)$，其中$p\in\zz$是一个素数；
+	\item 主理想$(f)$，其中$f\in\zz[x]$是一个$\mathbb{Q}$上的不可约多项式，且所有系数的极大公因子为$1$；
+	\item 极大理想$(p,f)$，其中$p\in \zz$是一个素数，而$f$是一个首一多项式，模$p$后是不可约的。
+\end{enumerate}
+
+\begin{exe}
+	证明这点。
+\end{exe}
+
+这些素理想中，只有最后一类是闭点。第一类的闭包是整个$\mathbb{A}_\zz^1$，第二第三类的闭包我们下面描述。
+
+可能图像化$\mathbb{A}_\zz^1$的最好方式是通过映射$\mathbb{A}_\zz^1\to\zz$（依然是平坦映射！）。在这个映射下， 上面的第二第四类便被映射成$(p)\in\spec \zz$，而第一第三类点将被映射成$\spec \zz$的一般点$(0)$. 实际上，这个映射在点$(p)$的纤维同构于$\mathbb{A}_{\mathbb{F}_p}^1=\spec \mathbb{F}_p$，点$(p,f)\in\mathbb{A}_\zz^1$将对应于多项式$f$在代数闭包$\bar{\mathbb{F}}_p$中的根给出的$\mathbb{A}_{\mathbb{F}_p}^1$中的点（回忆，$\mathbb{A}_{\mathbb{F}_p}^1$中的点对应于Galois群$\mathrm{Gal}\left(\bar{\mathbb{F}}_p/\mathbb{F}\right)$作用在$\mathbb{F}_p$上的轨道）。类似地，一般点$(0)$处的纤维是概形$\mathbb{A}_\mathbb{Q}^1=\spec \mathbb{Q}[x]$，$(f)\in\mathbb{A}_\zz^1$交$\mathbb{A}_\mathbb{Q}^1$于$f$在$\bar{\mathbb{Q}}$中的根对应的点。因此，图像如下：
+
+% \pic{18.png}
+
+点$(p)\in\mathbb{A}_\zz^1$的闭包是点$(p)\in \spec \zz$处的纤维$\mathbb{A}_{\mathbb{F}_p}^1$. 其他非闭点，即上面的第三类点，的闭包更有趣。它们将包含点$(f)$本身，它在点$(0)$处的纤维$\mathbb{A}_\mathbb{Q}^1$中，以及所有点$(p,g)\in\mathbb{A}_\zz^2$，其中$g$是$\bar{\mathbb{F}}$上$f$的一个因子，即对$\mathbb{A}_\zz^1$的每一条纤维$\mathbb{A}_{\mathbb{F}_p}^1$，$\mathbb{A}_{\mathbb{F}_p}^1$中点的并对应于$f$模$p$后的根。
+
+\begin{exe}
+	在上图中打问号的点是上面？为什么点$(4x+1)$以及$(x-2)$的闭包是相切于点$(3,x-2)$且都横截$(3)$的闭包的那两条曲线？（见\nottran）为什么点$(4x+1)$的闭包画出来在点$(2)\in\spec \zz$上有一个竖直的渐近线？
+\end{exe}
+
+% \pic{19.png}
+
+\begin{exe}
+	确定上图中三个没有标记的点是什么？
+\end{exe}
+
+\subsection{$\spec \mathbb{Z}$上的圆锥曲线}
 % \subsection{$\mathbb{A}_K^1$中的双重点}
