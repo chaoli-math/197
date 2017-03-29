@@ -32,3 +32,16 @@
 \newcommand{\nottran}{\rule{2mm}{2mm}}
 \newcommand{\idx}[1]{\textit{#1}\index{#1}}
 \newcommand{\idxx}[2]{\textit{#2}\index{#1!#2}}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{pro}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{exe}[thm]{Exercise}
+\newtheorem{exa}[thm]{Example}
+
+\renewcommand{\proof}{\textit{Proof}:\hspace{0.25em}}
+\renewcommand{\thethm}{\thechapter-\arabic{thm}}
