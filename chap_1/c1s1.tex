@@ -85,7 +85,7 @@ $X_f$的点是$R$中不包含$f$的素理想，其一一对应于$R$添上$f$的
 \]
 特别地，基本开集如果是某个基本开集$(\spec R)_f$的子集，则它具有形式$(\spec R)_{fg}$.
 
-$\spec R$几乎不会是一个Hausdorff开集，它的开集太大了。实际上，$\spec R$中只有对应于极大理想的点才是闭的。一般地，很清楚，包含给定点$[\pp]$的最小闭集必须是$V(\pp)$，于是$[\pp]$的闭包包含所有的$[\mathfrak{q}]$使得$\mathfrak{q}\supset\pp$. 因此点$[\pp]$是闭集当且仅当$\pp$是极大的。于是当$R$是代数闭域上的代数簇$V$的坐标环时，$V$的点一一对应着$\spec R$的闭点，以及对应于点$[\pp]$的闭包中的点就是$V$中由$\pp$确定的子簇的点。
+$\spec R$几乎不会是一个Hausdorff空间，它的开集太大了。实际上，$\spec R$中只有对应于极大理想的点才是闭的。一般地，很清楚，包含给定点$[\pp]$的最小闭集必须是$V(\pp)$，于是$[\pp]$的闭包包含所有的$[\mathfrak{q}]$使得$\mathfrak{q}\supset\pp$. 因此点$[\pp]$是闭集当且仅当$\pp$是极大的。于是当$R$是代数闭域上的代数簇$V$的坐标环时，$V$的点一一对应着$\spec R$的闭点，以及对应于点$[\pp]$的闭包中的点就是$V$中由$\pp$确定的子簇的点。
 
 \begin{exe}
 	\begin{enumerate}[{(a)}]\setlength{\itemsep}{0pt}
@@ -97,6 +97,45 @@ $\spec R$几乎不会是一个Hausdorff开集，它的开集太大了。实际�
 为了完成$\spec R$的定义，我们必须描述\textit{结构层}或者说$X$上的\textit{正则函数层}。在做这个之前，我们将暂时离开主线给出一些层理论的基本定义以及证明一个以后必须的命题（Proposition \ref{pro:1.1.12}）。
 
 \subsection{插曲：层理论}
+
+令$X$是任意拓扑空间。$X$上的一个\textit{预层}$\mathscr{F}$是对每一个$X$中的开集$U$都附上一个集合，记作$\mathscr{F}(U)$, 以及对每一列开集$U\subset V\subset X$，有一个\textit{限制映射}
+\[
+	\res_{V,U}:\ff(V)\to \ff(U)
+\]
+满足
+\[
+	\res_{U,U}=\mathrm{identity}
+\]
+以及对所有$U\subset V\subset W\subset X$
+\[
+	\res_{V,U}\circ \res_{W,V}=\res_{W,U}.
+\]
+$\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的元素被称为\textit{整体截面}。
+
+表述这个定义的另一种方式是将\textit{预层}定义为一个$X$上的开集范畴（对每一个包含$U\subset V$有一个态射$U\to V$）到集合范畴的反变函子。改变目标范畴到交换群范畴，我们就得到了交换群预层，类似地，可以将目标范畴改成环、代数等。
+
+这类构造中最重要的是在拓扑空间$X$上的一个环预层$\oo$上的\textit{模预层}$\ff$. 这样一个东西包含一对
+\begin{quote}
+对每一个$X$的开集$U$，都有一个环$\oo(U)$以及一个$\oo(U)$-模$\ff(U)$
+\end{quote}
+以及
+\begin{quote}
+任取包含$U\supset V$，有一个环同态$\alpha:\oo(U)\to\oo(V)$，通过$\alpha$将$\ff(V)$看成$\oo(U)$-模，还应有一个$\oo(U)$-模同态$\ff(U)\to\ff(V)$.
+\end{quote}
+
+一个（集合、交换群、环、模等）预层如果他还满足被称为\textit{层公理}的一些新条件时，它被称为一个\textit{层}。这个条件是，对每一个$U\subset X$的开覆盖$U=\bigcup_{a\in A}U_a$，以及任意一族
+\[
+	f_a\in \ff(U_a)\quad \text{对每一个}a\in A
+\]
+如果满足，任取$a$, $b\in A$，如果$f_a$与$f_b$限制到$U_a\cap U_b$相同，则存在唯一的元素$f\in \ff(U)$使得其限制在$U_a$上就是$f_a$对每一个$a$都成立。
+
+这里有一个平凡但时常引起混乱的点值得一提。空集$\varnothing$当然是$\spec R$的一个开集，他也能被写作一个空族的并（即，上一段中的指标集$A$是一个空集）。因此，层公理告诉我们，任意的层都有且只有一个开集上的截面。特别地，对一个环层$\ff$，$\ff(\varnothing)$是零环（即$0=1$的环）。注意到零环没有素理想，如果承认选择公理，这也是唯一不含素理想的一个含幺环，于是它的谱是$\varnothing$.
+
+\begin{exe}
+	\begin{enumerate}[{(a)}]\setlength{\itemsep}{0pt}
+		\item 令$X$是一个二元素集$\{0,1\}$，
+	\end{enumerate}
+\end{exe}
 
 \begin{pro} \label{pro:1.1.12}
 	令$\mathscr{B}$是$X$的一个开集基。
@@ -110,6 +149,4 @@ $\spec R$几乎不会是一个Hausdorff开集，它的开集太大了。实际�
 	\end{itemize}
 \end{pro}
 
-\begin{proof}
-	对每一个$X$的开集$U$，\nottran
-\end{proof}
+\proof 对每一个$X$的开集$U$，\nottran \qed
