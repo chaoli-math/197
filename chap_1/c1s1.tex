@@ -46,10 +46,10 @@
 \end{exe}
 
 \begin{exe}
-	\begin{enumerate}[{(a)}]\setlength{\itemsep}{-4pt}
+	\begin{compactenum}[{(a)}]
 		\item 考虑多项式环$\cc[x]$，令$p(x)$是一个多项式。证明，若$\alpha\in\cc$是一个数，则$(x-\alpha)$是一个$\cc[x]$的素理想，并且，存在$\kappa((x-a))$与$\cc$的自然等同，使得点$(x-\alpha)\in\spec\cc[x]$处的值$p(x)$就是数$p(\alpha)$.
 		\item 更一般地，如果$R$是一个代数闭域上的仿射簇$V$的坐标环，$\pp$是一般意义上对应于点$x\in V$的极大理想，则$\kappa(x)=K$以及$f(x)$就是一般意义上函数$f$在点$x$处的值。
-	\end{enumerate}
+	\end{compactenum}
 \end{exe}
 
 一般地，“函数”$f$取值的域逐点不同。此外，$f$也没必要由在其“函数”每一点的值决定。比如，如果$K$是一个域，环$R=K[x]/(x^2)$只有一个素理想$(x)$，于是对应元素$x\in R$，虽然是非零的，但诱导了一个“函数”在$\spec R$上处处为零。
@@ -88,10 +88,10 @@ $X_f$的点是$R$中不包含$f$的素理想，其一一对应于$R$添上$f$的
 $\spec R$几乎不会是一个Hausdorff空间，它的开集太大了。实际上，$\spec R$中只有对应于极大理想的点才是闭的。一般地，很清楚，包含给定点$[\pp]$的最小闭集必须是$V(\pp)$，于是$[\pp]$的闭包包含所有的$[\mathfrak{q}]$使得$\mathfrak{q}\supset\pp$. 因此点$[\pp]$是闭集当且仅当$\pp$是极大的。于是当$R$是代数闭域上的代数簇$V$的坐标环时，$V$的点一一对应着$\spec R$的闭点，以及对应于点$[\pp]$的闭包中的点就是$V$中由$\pp$确定的子簇的点。
 
 \begin{exe}
-	\begin{enumerate}[{(a)}]\setlength{\itemsep}{-4pt}
+	\begin{compactenum}[{(a)}]
 		\item $\spec \cc[x]$中的点是素理想$(x-a)$与$(0)$，其中$a\in\cc$. 描述它的拓扑。哪些点是闭的？闭点中是否有一个开的？
 		\item 令$K$是一个域，而$R$是局部环$K[x]_{(x)}$. 描述拓扑空间$\spec R$. （这个的答案将在本节后面给出。）
-	\end{enumerate}
+	\end{compactenum}
 \end{exe}
 
 为了完成$\spec R$的定义，我们必须描述\textit{结构层}或者说$X$上的\textit{正则函数层}。在做这个之前，我们将暂时离开主线给出一些层理论的基本定义以及证明一个以后必须的命题（Proposition \ref{pro:1.1.12}）。
@@ -132,10 +132,10 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 这里有一个平凡但时常引起混乱的点值得一提。空集$\varnothing$当然是$\spec R$的一个开集，他也能被写作一个空族的并（即，上一段中的指标集$A$是一个空集）。因此，层公理告诉我们，任意的层都有且只有一个开集上的截面。特别地，对一个环层$\ff$，$\ff(\varnothing)$是零环（即$0=1$的环）。注意到零环没有素理想，如果承认选择公理，这也是唯一不含素理想的一个含幺环，于是它的谱是$\varnothing$.
 
 \begin{exe}
-	\begin{enumerate}[{(a)}]\setlength{\itemsep}{-4pt}
+	\begin{compactenum}[{(a)}]
 		\item 令$X$是一个二元素集$\{0,1\}$，通过将他的四个子集都取成开集赋予$X$的一个拓扑结构。因此$X$上的一个层是四个集合与它们之间的映射，描述这些对象之间的关系。（$X$实际上具有形式$\spec R$，你能找到一个$R$吗？）
 		\item 同样$X$是二元素集$\{0,1\}$，此时$X$上的拓扑使得只有$\varnothing$, $\{0\}$与$\{0,1\}$为开集，同上描述这个拓扑空间上面的层。同样，这个空间可以实现为某个$\spec R$.
-	\end{enumerate}
+	\end{compactenum}
 \end{exe}
 
 若$\ff$是一个$X$上的预层，而$U$是$X$的开子集，我们能定义一个$U$上的预层$\ff|_U$通过令$\ff|_U(V)=\ff(V)$，其中$V$是$U$的开子集，限制映射与那些在$\ff$上的相同，这个预层被称为$\ff$在$U$上的\textit{限制}。容易看到，如果$\ff$是一个层，则$\ff|_U$也是一个层。
@@ -169,14 +169,14 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 
 \begin{pro} \label{pro:1.1.12}
 	令$\mathscr{B}$是$X$的一个开集基。
-	\begin{itemize}\setlength{\itemsep}{-4pt}
+	\begin{compactitem}
 		\item[{\rm (i)}] 每个$\mathscr{B}$-层都可以唯一扩张为$X$上的一个层。
 		\item[{\rm (ii)}] 给定$X$上的层$\mathscr{F}$与$\mathscr{G}$，以及对每一个$U\in \mathscr{B}$有映射
 		\[
 		\tilde{\varphi}(U):\mathscr{F}(U)\to \mathscr{G}(U),
 		\]
 		这族映射与限制映射可交换，则存在唯一的层态射$\varphi:\mathscr{F}\to \mathscr{G}$使得$\varphi(U)=\tilde{\varphi}(U)$对每一个$U\in \mathscr{B}$都成立。
-	\end{itemize}
+	\end{compactitem}
 \end{pro}
 
 \proof 对每一个$X$的开集$U$，\nottran \qed

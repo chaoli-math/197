@@ -5,15 +5,16 @@
 \usepackage{ctex}
 	% \CTEXoptions[today=old]
 	% \CTEXoptions[contentsname=Table of Contents]
-\usepackage{enumerate,wrapfig}
+\usepackage{paralist,wrapfig}
+	\setlength{\pltopsep}{3pt}
+	\setlength{\plpartopsep}{3pt}
 \usepackage{titletoc,makeidx}
+	\setcounter{secnumdepth}{5}  
+	\setcounter{tocdepth}{5} 
 	\makeindex
 	% \renewcommand{\indexname}{Index}
 
-\renewcommand\thechapter{\Roman{chapter}} 
-
-\setcounter{secnumdepth}{5}  
-\setcounter{tocdepth}{5} 
+\renewcommand\thechapter{\Roman{chapter}}
 
 \usepackage{hyperref}
 	\hypersetup{bookmarksnumbered=true}
