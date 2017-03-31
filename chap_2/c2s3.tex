@@ -33,14 +33,14 @@
 \]
 子概形$X_{\alpha,\beta}$能被下面的条件所刻画：
 
-\begin{enumerate}[{(i)}]\setlength{\itemsep}{-4pt}
+\begin{compactenum}[(i)]
 \item 关联于函数$f\in K[x,y]$的理想的$\mathbb{A}^2_K$的子概形，在原点为零以及在那儿其偏导数满足
 \[
 	\beta\frac{\partial f}{\partial x}-\alpha\frac{\partial f}{\partial y}=0
 \]
 （因为这可以推出$f=c(\alpha x+\beta y)+\text{高阶项}$），或者
 \item Example {{\addtocounter{thm}{-1}}\thethm{\addtocounter{thm}{1}}}中的子概形$X\subset \mathbb{A}_K^1$在$\mathbb{A}_K^1$到$\mathbb{A}_K^2$的含入映射下的像由$x\mapsto (\beta x,-\alpha x)$给出。
-\end{enumerate}
+\end{compactenum}
 
 经典语言下，子概形$X_{\alpha,\beta}$被称作包含点$(0,0)$以及一个在$\alpha x+\beta y=0$方向上“无穷接近的点”，我们下面在传统图像中以一个小箭头画出$X_{\alpha,\beta}$：
 
@@ -126,13 +126,13 @@
 特别地，任意的$K$-矢量空间维度为3的环$K[x_1,$ $\dots$, $x_n]/I$能被两个$x_i$的线性型生成。几何上来看，这就是说，$\mathbb{A}_K^n$中度为3的点是平面的，即，处于一个线性子空间$\mathbb{A}_K^2\subset \mathbb{A}_K^n$上。在$\mathbb{A}_K^2$中，以上两类三重点能被实现为三个不同的点的极限。同构于$X$的那一类，能被看作三个点都来自于同一条非奇异曲线，然而同构于$Y$的那一类来自于当两个点以两个不同的方向趋向于第三个点。下面的练习包含了这个现象的例子。
 
 \begin{exe}
-	\begin{enumerate}[{(i)}]\setlength{\itemsep}{-4pt}
+	\begin{compactenum}[(i)]
 		\item 证明，$\mathbb{A}_K^2$的由理想$(y-x^2,xy)$给出的子概形来自于在圆锥曲线$y=x^2$三个点的极限，这个子概形同构于上面的$X$，但是不包含$\mathbb{A}_K^2$的任意直线。
 
 		% \pic{10.png}
 
 		\item 证明，来自于当两个点以两个不同的方向趋向于第三个点极限的$\mathbb{A}_K^2$的子概形同构于上面的$Y$.
-	\end{enumerate}
+	\end{compactenum}
 \end{exe}
 
 \begin{exe} （对那些熟悉Grassmannian的人。）上面的例子可能让人觉得同构于$X$的概形是那些同构于$Y$的概形的极限。然而事实并不如人所愿，下面的例子与其刚好相反。令$\mathscr{H}$是$\mathbb{A}_K^2$中支撑于原点的度为$3$的有限子概形，$\mathscr{H}$可以通过六维矢量空间$K[x,y]/(x,y)^3$ 余维数为$3$的子空间们的Grassmannian的一个闭子概形自然地参数化。证明$\mathscr{H}$是一个曲面，其中一点对应于唯一的子概形$\spec K[x,y]/(x^2,xy,y^2)$，它同构于$Y$，其余的点对应于同构于$X$的子概形。证明，概形$\mathscr{H}$同构于$\mathbb{P}^3_K$中的一个二维立体圆锥，其顶点对应于$Y$.
@@ -148,7 +148,7 @@
 	X_t=\{f(0)\text{, }f(t)\text{, }f(2t)\}\subset C.
 	\]
 
-	\begin{enumerate}[{(a)}]\setlength{\itemsep}{-4pt}
+	\begin{compactenum}[(a)]
 		\item 证明，当$t\to 0$时候概形$X_t$的极限是
 		\[
 		X_0=\spec K[x_1\text{, }\dots\text{, }x_n]/(x_2-x_1^2\text{, }x_1x_2\text{, }x_3\text{, }x_4\text{, }\dots\text{, }x_n),
@@ -159,7 +159,7 @@
 		x_3=x_4=\cdots=x_n=0,
 		\]
 		（回忆，按定义，这是切线以及$C$上原点附近其他点张成的平面在这些点趋向原点时的极限）\nottran，然而$C$的切线是$\mathbb{A}_K^n$的最小线性子空间包含$X_0$坐标环的极大理想的平方定义的子概形。于是，在这层意味上，$X_0$同时“记住”了$C$的切线与密切平面。
-	\end{enumerate}
+	\end{compactenum}
 \end{exe}
 
 \begin{exe}
@@ -169,7 +169,7 @@
 	\]
 	每个都包含了$\mathbb{A}_{K}^2$中三个不同的点。
 
-	\begin{enumerate}[{(a)}]\setlength{\itemsep}{-4pt}
+	\begin{compactenum}[(a)]
 		\item 证明，这族概形当$t\to 0$时的极限为
 		\[
 		X_0=\spec K[x,y]/(x^2,xy,y^2).
@@ -177,7 +177,7 @@
 		\item 证明，$\mathbb{A}_K^2$上的函数$f\in K[x,y]$限制在$X_0$上决定了也被决定于它在原点的值以及在原点处任意方向的一阶导数值。于是我们可以认为$X_0$是$(0,0)$的一阶无穷小邻域。
 		\item 证明，$X_0$包含于任意两条穿过$(0,0)$不同的直线的并中。
 		\item 证明，$X_0$不包含于任意的非奇异曲线中，因此特别地，不是$\mathbb{A}_K^2$中任意两条非奇异曲线概形意义上的交。
-	\end{enumerate}
+	\end{compactenum}
 \end{exe}
 
 正如我们说的，两类三重点都可以嵌入到任意仿射空间中的平面中。但是四重点$\spec K[x$, $y$, $z]/(x,y,z)^2$不能，因为它的极大理想不能被两个元素所生成。其他新的现象将在空间（即不能包含在平面中）以及更高维度空间中的多重点上出现。比如，在四维仿射空间中不是每个度为$21$的点都可以写成$21$个不同的点的极限，就像下一个习题中所表现的那样。（同样可见Iarrobino [1985].）

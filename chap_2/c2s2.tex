@@ -49,10 +49,10 @@
 
 \begin{exe}
 	证明$\mathbb{A}^2_{\rr}$的全部非闭点是
-	\begin{enumerate}[{(a)}]\setlength{\itemsep}{-4pt}
+	\begin{compactenum}[(a)]
 		\item $[(0)]$，它的闭包是整个$\mathbb{A}^2_{\rr}$，或者
 		\item 点$[(f)]\in \mathbb{A}^2_{\rr}$对应于不可约多项式$f\in \rr[x,y]$.
-	\end{enumerate}
+	\end{compactenum}
 
 	上面的(b)类点的多项式在$\cc[x,y]$中不一定还是不可约的，于是$\mathbb{A}^2_{\rr}$中的非闭点$(f)$会对应于$\mathbb{A}^2_{\cc}$的一个非闭点（$f$在$\cc[x,y]$中还是不可约的）或者两个非闭点（$f$在$\cc[x,y]$能写成乘积$g\bar g$，其中$g\in\cc[x,y]$）. 这样的非闭点的闭包中的闭点，要么是上面的第一类第二类都有，要么是只有第二类。给出所有这些可能性的例子。
 \end{exe}
@@ -61,27 +61,25 @@
 
 \begin{exe}
 	域的含入映射$K\hookrightarrow L$诱导了映射$\mathbb{A}_L^n\to \mathbb{A}_K^n$. 找出下面这些$\mathbb{A}_{\overline{\mathbb{Q}}}^n$的点在这个映射下在$\mathbb{A}_{\mathbb{Q}}^n$中的像。
-
-	\begin{enumerate}[{(a)}]\setlength{\itemsep}{-4pt}
+	\begin{compactenum}[(a)]
 		\item $(x-\sqrt{2},y-\sqrt{2})$
 		\item $(x-\sqrt{2},y-\sqrt{3})$
 		\item $(x-\zeta,y-\zeta^{-1})$，其中$\zeta$是$p$次单位根，而$p$是一个素数
 		\item $(\sqrt{2}x-\sqrt{3}y)$
 		\item $(\sqrt{2}x-\sqrt{3}y-1)$
-	\end{enumerate}
+	\end{compactenum}
 	如果可能则做出图像。
 \end{exe}
 
 \begin{exe}
 	我们说子概形$X\subset \mathbb{A}_K^n$是\textit{绝对不可约的}\index{不可约!绝对}或者是\textit{几何不可约的}如果$X$在$\mathbb{A}_{\bar K}^n$中的原像是不可约的。（更一般地，我们说任意$K$-概形$X$是绝对不可约的如果纤维积$X\times_{\spec K}\spec \bar{K}$是不可约的。）分类下面这些$\mathbb{A}_\mathbb{Q}^2=\spec \mathbb{Q}[x,y]$子概形是可约的、不可约但不是绝对不可约的或者绝对不可约的。
-
-	\begin{enumerate}[{(a)}]\setlength{\itemsep}{-4pt}
+	\begin{compactenum}[(a)]
 		\item $V(x^2-y^2)$
 		\item $V(x^2+y^2)$
 		\item $V(x^2+y^2+1)$
 		\item $V(x+y,xy-2)$
 		\item $V(x^2-2y^2,x^3+3y^3)$
-	\end{enumerate}
+	\end{compactenum}
 \end{exe}
 
 最后，这里有一个联合了局部概形与非代数闭域上的概形两个概念的例子。经典地，平面曲线$X\subset \mathbb{A}_\cc^2$如果在原点处有一个解析邻域，其中$Y$的轨迹包含两个光滑弧在$(0,0)$处横截相交，则它被称为在原点处有一个\idx{结点}。在概形的语言中，这等价于说，$X$与形式邻域$\spec \cc[\![x,y]\!]\to \spec \cc[x,y]=\mathbb{A}_\cc^2$的纤维积同构于$\spec \cc[\![u,v]\!]/(uv)$.
