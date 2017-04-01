@@ -26,6 +26,8 @@
   \indexgroup{C}
   %
 
+  \item 层的
+    \subitem 态射, \hyperpage{8}
   \item 叉点, \hyperpage{17}
 
   \indexspace
@@ -81,15 +83,6 @@
 
   \item 双重
     \subitem 点, \hyperpage{17}, \hyperpage{19}
-
-  \indexspace
-
-  %
-  \indexgroup{T}
-  %
-
-  \item 态射
-    \subitem 层的, \hyperpage{8}
 
   \indexspace
 
