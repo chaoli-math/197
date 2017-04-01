@@ -192,10 +192,10 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 
 这个构造说明了，截面$\pi:\overline{\ff}\to X$的芽构成的层同构于$\ff$，于是任意的层“是”一个合适映射的截面的芽层。在早期的工作中，层就是这样定义的。拓扑空间$\overline{\ff}$被称为层的``espace \'{e}tal\'{e}''，因为它的开集都是“平坦展开”于$X$的开集上。
 
-空间$X$上的一个层的\idxx{态射}{层的}$\varphi:\ff\to\scrg$是一族映射$\varphi(U):\ff(U)\to \scrg(U)$，使得对每一个包含$U\subset V$，图
+空间$X$上的一个层的\idxx{层的}{态射}$\varphi:\ff\to\scrg$是一族映射$\varphi(U):\ff(U)\to \scrg(U)$，使得对每一个包含$U\subset V$，图
 \[
 	\xymatrix{
-	\ff(V)\ar[r]^{\varphi(V)}\ar[d]^{\res_{V,U}}&\scrg(V)\ar[d]^{\res_{V,U}}\\
+	\ff(V)\ar[r]^{\varphi(V)}\ar[d]_{\res_{V,U}}&\scrg(V)\ar[d]^{\res_{V,U}}\\
 	\ff(U)\ar[r]_{\varphi(U)}&\scrg(U)
 	}
 \]
@@ -210,11 +210,11 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 \end{exe}
 
 \begin{exe}
-	通过检查下面的例子，Exercise {{\addtocounter{thm}{-2}}\thethm{\addtocounter{thm}{2}}}中将条件“单射”改做“满射”是错误的。在这些例子中，$\varphi$在茎上诱导的映射是满的，但是却存在开集$U$使得$\varphi(U):\ff(U)\to \scrg(U)$不是满射。
+	通过检查下面的例子，Exercise {{\addtocounter{thm}{-1}}\thethm{\addtocounter{thm}{1}}}中将条件“单射”改做“满射”是错误的。在这些例子中，$\varphi$在茎上诱导的映射是满的，但是却存在开集$U$使得$\varphi(U):\ff(U)\to \scrg(U)$不是满射。
 	\begin{compactenum}[(a)]
 	\item 令$X$是拓扑空间$\mathbb{C}\setminus \{0\}$，令$\ff=\scrg$是处处非零的连续复值函数层，令$\varphi$是将函数$f$映射到$f^2$的映射。
 
-	\item 令$X$是Riemann球面$\mathbb{CP}^1=\mathbb{C}\cup\{\infty\}$以及$\scrg$是解析函数层。令$ff_1$是在点$0$处为零的解析函数构成的层：当$U$包含$0$，$\ff_1(U)$是在点$0\in U$处为零的$U$上的解析函数的集合，如果$U$不含$0$，则$\ff_1(U)$是$U$上所有解析函数的集合。类似地，令$\ff_2$是在$\infty$为零的解析函数层，令$\ff=\ff_1\oplus\ff_2$，以及$\varphi:\ff\to\scrg$是加法映射。
+	\item 令$X$是Riemann球面$\mathbb{CP}^1=\mathbb{C}\cup\{\infty\}$以及$\scrg$是其上的解析函数层。令$ff_1$是在点$0$处为零的解析函数构成的层：当$U$包含$0$，$\ff_1(U)$是在点$0\in U$处为零的$U$上的解析函数的集合，如果$U$不含$0$，则$\ff_1(U)$是$U$上所有解析函数的集合。类似地，令$\ff_2$是在$\infty$为零的解析函数层，令$\ff=\ff_1\oplus\ff_2$，以及$\varphi:\ff\to\scrg$是加法映射。
 
 	\item 找到一个例子，其中$X$只包含三个点。
 	\end{compactenum}
