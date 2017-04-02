@@ -37,7 +37,7 @@
 确定$\spec R$，当$R$是~~~~(a) $\zz$;~~~~(b) $\zz/(3)$;~~~~(c) $\zz/(6)$;~~~~(d) $\zz_{(3)}$;~~~~(e) $\cc[x]$;~~~~(f) $\cc[x]/(x^2)$.
 \end{exe}
 
-每一个$R$中的元素$f$都将在$X=\spec R$上定义一个“函数”，我们依然记作$f$：对$x=[\pp]\in \spec R$，我们记$\kappa(x)$或者$\kappa(\pp)$为整环$R/\pp$的商域，称为$X$在点$x$处的剩余类域，同时典范映射
+每一个$R$中的元素$f$都将在$X=\spec R$上定义一个“函数”，我们依然记作$f$：对$x=[\pp]\in \spec R$，我们记$\kappa(x)$或者$\kappa(\pp)$为整环$R/\pp$的商域，称为$X$在点$x$处的\idx{剩余类域}，同时典范映射
 \[
 	R\to R/\pp\to \kappa(x)
 \]
@@ -186,7 +186,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 	\begin{compactenum}[(a)]
 	\item 证明，自然映射$\pi:\overline{\ff}\to X$是连续映射，以及，对$U$以及$s\in \ff(U)$，从$U$到$\overline{\ff}$的映射$\sigma:x\mapsto s_x$是一个$\pi$在$U$上的连续截面（即，他是连续的，且$\pi\circ\sigma$是$U$上的恒等函数）。
 	\item 反之，证明任意使得$\pi\circ\sigma$是$U$上的恒等函数的连续函数$\sigma:U\to \overline{\ff}$都可以这样得到。\\
-	\textit{提示}. 取$x\in U$以及包含$\sigma(x)$的基础开集$\mathscr{V}(V,t)$，其中$V\subset U$. 那么，$t$要变成$\sigma$需要满足哪些条件？
+	\textit{提示}. 取$x\in U$以及包含$\sigma(x)$的基本开集$\mathscr{V}(V,t)$，其中$V\subset U$. 那么，$t$要变成$\sigma$需要满足哪些条件？
 	\end{compactenum}
 \end{exe}
 
@@ -222,6 +222,22 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 
 这些例子是层的上同调理论的起点，读者将在第\pageref{ref:1}页中列出的层理论的参考文献中找到更多这方面的材料。
 
+若$\ff$是一个$X$上的预层，我们定义$\ff$的\idx{层化}为唯一的层$\ff'$与预层态射$\varphi:\ff\to\ff'$使得对每一个$x\in X$都有$\varphi_x:\ff_x\to\ff'_x$是一个同构。更准确地说，层$\ff'$能被如下定义：一个$\ff'$在开集$U$上的截面是一个映射$\sigma$，它将每一点$x\in U$映射成$\ff_x$中的一个元素，使得$\sigma$是由$\ff$的截面\textit{局部诱导}的，这就是说，存在$U$的一个开覆盖$U_i$，以及元素$s_i\in \ff(U_i)$使得对$x\in U_i$都有$\sigma(x)=(s_i)_x$. 映射$\ff\to\ff'$被定义为将$s\in\ff(U)$变成函数$x\mapsto s_x\in\ff_x$. 层$\ff'$可以被称为是“最近似于”预层$\ff$的层。
+
+\begin{exe}
+	这里有$\ff'$的另一个构造：如同Exercise {{\addtocounter{thm}{-3}}\thethm{\addtocounter{thm}{3}}}中那样将不交并$\overline{\ff}=\bigcup \ff_x$拓扑化，接着令$\ff'$是$\overline{\ff}$在自然映射$\pi:\overline{\ff}\to X$下的截面层。说服你自己，这两个构造是等价的，以及这个构造满足上一段开头说的泛性质。
+\end{exe}
+
+若$\varphi:\ff\to\scrg$是一个层之间的单射，我们将称$\ff$是$\scrg$的\idx{子层}。我们常常略去符号$\varphi$，将它记作$\ff\subset \scrg$. 若$\varphi:\ff\to\scrg$是层之间的任意映射，预层$\ker\varphi$定义为$(\ker\varphi)(U)=\ker(\varphi(U))$是一个$\ff$的子层。
+
+商的概念更加微妙。假设$\ff$和$\scrg$是交换群预层，其中$\ff$到$\scrg$有一个单射。那么$\scrg$关于$\ff$的商预层定义为由$\mathscr{H}(U)=\scrg(U)/\ff(U)$定义的预层$\mathscr{H}$. 但是当$\ff$和$\scrg$是层的时候，$\mathscr{H}$一般\textit{不一定}是一个层，我们必须将他们的商层定义为$\mathscr{H}$的层化，即$\scrg/\ff:=\mathscr{H}'$. 从$\mathscr{H}$到$\mathscr{H}'$的自然映射，连同上$\scrg\to \mathscr{H}$的预层间映射，定义了商映射$\scrg\to \scrg/\ff$. 这个映射是$\varphi$的\idx{余核}。
+
+层公理的重要性在于，层是由其局部性质所决定。我们将给出这个原理的两个
+
+在概形的应用中，我们将遇到如下情况：已知拓扑空间$X$的一个\textit{拓扑基}$\mathscr{B}$，然后我们想要确定一个层$\ff$通过仅对基中的元素$U$说有群$\ff(U)$，以及对基中的包含$V\subset U$有同态$\res_{V,U}$. 下一个命题就说明了我们可以这样做。
+
+若对每一个$U\in\mathscr{B}$有群$\ff(U)$，以及对基中的包含$V\subset U$有映射$\res_{V,U}:\ff(V)\to \ff(U)$，满足对基本开集\footnote{译者注：似乎书中对拓扑基里面的元素都叫基本开集（basic open set）.}到基本开集的限制与基本开集的基本开集覆盖的层公理，我们称$\ff$是一个$\mathscr{B}$-层。（在定义中，$U_a$, $U_b\in\mathscr{B}$上的截面集限制在$U_a\cap U_b$相等需要改做，它们限制在任意包含于$U_a\cap U_b$的基本开集$V$上都相同。）
+
 \begin{pro} \label{pro:1.1.12}
 	令$\mathscr{B}$是$X$的一个开集基。
 	\begin{compactitem}
@@ -236,4 +252,4 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 
 \proof 对每一个$X$的开集$U$，\nottran \qed
 
-\noindent {\bf 层理论的参考文献.} \label{ref:1}Serre的里程碑论文 [1955]，它
+\noindent {\bf 层理论的参考文献.} \label{ref:1}Serre的里程碑论文 [1955]，它 \nottran Godemant [1964]和Swan [1964]是更系统的介绍。Hartshorne [1977, Chapter II]包含了\nottran
