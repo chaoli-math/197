@@ -28,6 +28,7 @@
 
   \item 层的
     \subitem 态射, \hyperpage{8}
+  \item 层化, \hyperpage{9}
   \item 叉点, \hyperpage{17}
 
   \indexspace
@@ -46,7 +47,7 @@
 
   \item 概形
     \subitem 仿射, \hyperpage{3}
-    \subitem 算术, \hyperpage{25}
+    \subitem 算术, \hyperpage{27}
   \item 孤立点, \hyperpage{17}
 
   \indexspace
@@ -81,6 +82,7 @@
   \indexgroup{S}
   %
 
+  \item 剩余类域, \hyperpage{4}
   \item 双重
     \subitem 点, \hyperpage{17}, \hyperpage{19}
 
@@ -96,6 +98,7 @@
     \subitem 邻域, \hyperpage{17}
   \item 有限
     \subitem 概形, \hyperpage{19}
+  \item 余核, \hyperpage{9}
 
   \indexspace
 
@@ -106,5 +109,6 @@
   \item 长度
     \subitem 概形的, \hyperpage{22}
     \subitem 环的, \hyperpage{22}
+  \item 子层, \hyperpage{9}
 
 \end{theindex}

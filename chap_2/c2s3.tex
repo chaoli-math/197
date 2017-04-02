@@ -6,7 +6,7 @@
 
 从最简单的情况入手，我们将关注仿射空间$\mathbb{A}_K^n$的子概形，其支撑于原点\footnote{译者注：即其支撑只有这点。} ------ 等价地，它由一个理想$I$给出，其零点集$V(I)$作为集合只包含$(0$, $\dots$, $0)$. （回忆一个概形的支撑是指它自有的那个拓扑空间。）
 
-\subsection{双重点}
+\subsection{双重点}\label{s.2.3.1}
 \index{双重!点}
 \begin{exa}
 	此类概形最简单的例子是$\mathbb{A}_K^1$由理想$(x^2)$定义的子概形 ------ 即概形$\spec K[x]/(x^2)$，通过商映射$K[x]\to K[x]/(x^2)$诱导的映射看作$\mathbb{A}_K^1$的子概形。这个概形只有一个点，对应于理想$(x)$，但同样作为$\mathbb{A}_K^1$的子概形与作为抽象概形，这与概形$\spec K[x]/(x)=\spec K$不同。作为抽象概形，我们能看到存在如下差别，在$X$上存在非零正则函数（比如$x$）在$X$唯一一点处为零，当然任意这样的函数平方为零。差别在于，作为$\mathbb{A}_K^1$的子概形，$\mathbb{A}_K^1$上的函数$f\in K[x]$在$X$上为零当且仅当$f$和它的一阶导数同时在点$0$为零。于是$X$上的函数包含两个数据，$\mathbb{A}_K^1$上的一个函数与它的一阶导数在点$0$的值。因为这个原因，有时我们将$X$叫做$\mathbb{A}_K^1$中点$0$的\textit{一阶邻域}\index{一阶!邻域}。
@@ -302,6 +302,18 @@
 
 % \pic{12.png}
 
+答案，也是唯一可能的答案，足够简单：因为概形族$X_b$的极限在任何合理的意义下都必须纳入一个包含所有概形$X_b$的族中，我们取$\mathscr{X}\subset \mathbb{A}_B^n$为$\mathscr{X}^*$在$\bba_B^n$中的闭包$\overline{\mathscr{X}^*}$，以及取概形族的极限$\lim_{b\to 0}X_b$为$\mathscr{X}$在点$0\in B$处的纤维$X_0$.
+
+更具体些，若$B=\spec R$是仿射概形，以及$t\in R$是对应于点$0\in B$的极大理想$\mm\subset R$的一个生成元（于是$B^*=\spec R[t^{-1}]$），以及$I(\mathscr{X}^*)\subset R[t^{-1}][x_1$, $\dots$, $x_n])$是$\mathscr{X}^*\subset \bba_{B^*}^n$的理想，于是子概形$\mathscr{X}\subset \bba_{B}^n$的理想是交
+\[
+	I(\mathscr{X})=I(\mathscr{X}^*)\cap R[x_1,\,\dots,\,x_n].
+\]
+为了再具体些，如果我们取$B=\spec K[t]$，在概形$X_t$上为零的多项式的极限上极限概形$X_0\subset \bba_K^n$为零\footnote{原文是``the limiting scheme $X_0\subset \bba_K^n$ is cut out by the limits of polynomials vanishing on the schemes $X_t$''.}\nottran ，换句话说，如果我们将理想$I(X_t)\subset K[x_1$, $\dots$, $x_n]$看作$K$-矢量空间$K[x_1$, $\dots$, $x_n]$的线性子空间，以及令$V\subset K[x_1$, $\dots$, $x_n]$是平面族$I(X_t)$的极限位置\nottran ，则理想$I(X_0)$被$V$所生成。于是，这个极限的定义扩展了第\ref{s.2.3.1}节中用过的朴素极限概念。
+
+举个例子，取$B=\spec K[t]$以及$B^*=B\setminus \{0\}=\spec K[t,t^{-1}]$，以及令$\bba_K^1$的子概形$X_t$包含两个点，坐标分别为$t$和$-t$，即，取$\mathscr{X}^*=V(x^2-t^2)\subset \spec K[t,t^{-1}][x]=\bba_{B^*}^1$. 于是，在$\bba_B^n$中，$\mathscr{X}^*$的闭包$\mathscr{X}$同样被$X=V(x^2-t^2)\subset \spec K[t][x]=\mathbb{A}_B^1$给出，以及$\mathscr{X}$在点$0\in B$的纤维$X_0$就是双重点$X_0=V(x^2)\subset\bba_K^1$.
+
+概形族$\mathscr{X}^*\subset \bba_{B^*}^n$的极限概念非常依赖于到$\bba_{B^*}^n$的嵌入，而不仅依赖抽象族$\mathscr{X}^*\to B^*$. 于是，在上面的例子中，概形族$\mathscr{Y}^*=V(x^2-1)$以及概形族$\mathscr{Z}^*=V(x^2-t^{-2})\subset \spec K[t,t^{-1}][x]=\bba_{B^*}^1$作为$B^*$-概形是同构的，但是$\mathscr{Y}^*$的极限是两个约态点$V(x^2-1)\subset \bba^1_K$而$\mathscr{Z}^*$的极限是空集。
+
 \subsubsection*{例子}
 \addcontentsline{toc}{subsubsection}{例子}
 
@@ -322,6 +334,23 @@
 
 这个概念已足够一般到包含给定度的平面曲线族，但也足够限制，使得平坦族中概形有很多共同点。这是非常令人满意的，除了（最初，至少）它似乎不是一个非常“几何”的性质。 然而，这实际上是上面介绍的朴素极限概念的最自然的（ 事实上，这是唯一可能的）拓展！ 我们将建立这个事实，然后继续考虑其他平坦性的性质; 不错的技术讨论见Eisenbud [1995]; Matsumura [1986]; Hartshorne [1977]. \nottran
 
+\begin{pro}
+	令$B=\spec R$是一个非奇异一维仿射概形，$0\in B$是一个闭点以及$B^*=B\setminus \{0\}$. 令$\mathscr{X}\subset \bba_{B}^n$是任意的闭子概形，以及投影$\pi:\mathscr{X}\to B$. 下面的条件是等价的：
+	\begin{compactenum}[\((1)\)]
+		\item $\pi$在点$0$处平坦。
+		\item 纤维$X_0=\pi^{-1}(0)$是纤维族$X_b=\pi^{-1}(b)$在$b\to 0$时的极限。
+		\item $X$没有支撑于$X_0$的不可约组分或者嵌入组分。
+	\end{compactenum}
+\end{pro}
+
+\begin{lem}
+	令$K$是一个域，$B$是一个约态$K$-概形，$b\in B$是一个闭点，而$\mathscr{X}\subset \bba_{B}^n$是一个闭子概形。 $\mathscr{X}$在点$b$处平坦当且仅当，对每一个非奇异一维$K$-概形$B'$，每一个闭点$0\in B'$以及任意将$0$变成$b$的态射$\varphi:B'\to B$，纤维$X_b$是纤维$X_{\varphi(b')}$在$b'$趋向于$0$时候的极限，即，对任意将$0$变成$b$的态射$\varphi:B'\to B$，拉回族
+	\[
+	\mathscr{X}'=\mathscr{X}\times_B B'\subset \bba_{B'}^n\to B'
+	\]
+	在点$0$处平坦。
+\end{lem}
+
 \subsection{多重直线}
 
 我们现在考虑一个非约态仿射概形$X$，它没有嵌入组分且支撑于一条直线。我们将假设这条直线的重数（准素分解意义上）是$2$. 下面我们分析各种可能性。
@@ -331,3 +360,23 @@
 	X=\spec K[x,y]/(y^2)\subset \bba_K^2
 \]
 显然有我们想要的性质。很清楚，在$\bba_K^2$中此外再无支撑于直线$y=0$的例子，不过我们能在$\bba_K^3$中构造不少。
+
+% \pic{14.png}
+
+\begin{exe}
+如果$p$, $q$是互素的多项式，于是环
+\[
+	K[x,y,z]/I_{p,q}
+\]
+中的理想
+\[
+	(x,y)/I_{p,q}
+\]
+是秩为$1$的无挠$K[z]$-模，于是$X_{p,q}$是准素的，$(X_{p,q})_{\text{red}}$是直线$\spec K[x,y,z]/(x,y)$，以及$X_{p,q}$的重数为$2$.
+\end{exe}
+
+\begin{exe}
+	证明，如果$A$一个Noether $K$-代数，使得$X=\spec A$没有嵌入组分，重数为$2$，以及满足$X_{\text{red}}\cong \bba_K^1$,于是$X$同构于$\spec K[x,y]/(y^2)$.
+\end{exe}
+
+我们将在下一章看到，这个例子与投射空间中的情况产生了对比：那里有许多不同构的投射双重直线。
