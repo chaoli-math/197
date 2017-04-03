@@ -250,6 +250,59 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 	\end{compactitem}
 \end{pro}
 
-\proof 对每一个$X$的开集$U$，\nottran \qed
+\textit{证明的开始}. 
+	对每一个$X$的开集$U$，定义$\ff(U)$为集合$\ff(V)$们的逆极限，其中$V$跑遍所有包含于$U$的基本开集：
+	\[
+	\begin{aligned}
+	\ff(U)&={\varprojlim}_{V\subset U,V\in\mathscr{B}}\ff(V)\\
+	&=\left\{\parbox{30em}{
+			集合族$(f_V)_{V\subset U,V\in\mathscr{B}}\in \prod_{V\subset U,V\in\mathscr{B}}(V)$使得当$V$, $W\in\mathscr{B}$以及$W\subset V\subset U$时有$\res_{V,W}(f_V)=f_W$.
+		}\right\}
+	\end{aligned}
+	\]
+	限制映射直接由逆极限的泛性质所定义。
+\qed
+
+\begin{exe}
+	检验层公理以完成上述命题的证明，并证明，在$U\in \mathscr{B}$上，新定义的$\ff$与原本的层的截面集相同。
+\end{exe}
+
+第二个应用，其实是上一个应用的特例，就是说定义一个层只需在一个开覆盖的每个开集上给出一个层，如果这些层是相容的。
+
+\begin{coro}
+令$\mathscr{U}$是$X$的一个开覆盖。如果$\ff_U$是$U\in\mathscr{U}$上的一个层，如果
+\[
+	\varphi_{UV}:\ff_U|_{U\cap V}\to \ff_V|_{U\cap V}
+\]
+是在任意的在$U\cap V\cap W$上满足相容性条件
+\[
+	\varphi_{VW}\varphi_{UV}=\varphi_{UW}
+\]
+的一族同构，其中$U$, $V$, $W\in\mathscr{U}$. 则在$X$上存在唯一的层$\ff$，他限制在每个$U\in\mathscr{B}$上都同构于$\ff_U$，通过与$\varphi_{UV}$相容的同构$\Phi_U:\ff|_U\to \ff_U$，换句话说，对所有$U$, $V\in\mathscr{U}$使得
+\[
+	\varphi_{UV}\circ \Phi_U|_{U\cap V}=\Phi_V|_{U\cap V}:\ff|_{U\cap V}\to \ff_V|_{U\cap V}.
+\]
+\end{coro}
+
+\proof
+	所有包含于某个$U\in\mathscr{B}$的开集构成了$X$的一个拓扑基$\mathscr{B}$. 对每一个这样的开集$V$，选一个$U$包含它，然后定义$\ff(V)=\ff_U(V)$. 如果对某个$W\subset V$，值$\ff(W)$已经被另一个$\ff_{U'}$所定义，我们使用同构$\varphi_{UU'}$来定义限制映射。由同构$\varphi_{UU'}$的相容性条件，这些映射满足正确的复合关系。于是我们有一个$\mathscr{B}$-层，继而有了一个层。
+\qed
+
+层的前推是很基本（也很平凡）的，我们在这里引入它：若$\alpha:X\to Y$是一个拓扑空间间的连续映射，而$\ff$是$X$上的一个预层，我们定义预层$\ff$对映射$\alpha$的前推$\alpha_*\ff$为$Y$上由
+\[
+	\alpha_*\ff(V):=\ff(\alpha^{-1}(V))
+\]
+给出的预层，其中$V$是$Y$的任意开集。当然，一个交换群层（环层，环层上的模层等等）依然是相同类型的层。
+
+\begin{exe}
+证明，层的前推还是一个层。
+\end{exe}
 
 \noindent {\bf 层理论的参考文献.} \label{ref:1}Serre的里程碑论文 [1955]，它 \nottran Godemant [1964]和Swan [1964]是更系统的介绍。Hartshorne [1977, Chapter II]包含了\nottran
+
+\section{作为概形的概形（结构层）}
+
+
+\begin{exe}
+	给出概形$\spec K[x]$的结构层一个类似的完全描述。
+\end{exe}
