@@ -49,7 +49,7 @@
 \noindent 这是打算用一个切空间的可区分的一维子空间在平面上来表示这个点（尽管箭头给出了印象，实际上没有可区分的切矢量）。\nottran
 \end{exa}
 
-% \begin{wrapfigure}{i}{140pt}\includegraphics[scale=0.5]{chap_2/pics/7.png}\end{wrapfigure}
+% \begin{wrapfigure}{r}{140pt}\includegraphics[scale=0.5]{chap_2/pics/7.png}\end{wrapfigure}
 在实践中，概形$X_{\alpha,\beta}$会怎么出现呢？一种方式是曲线的相交。比如，当我们想要处理一条直线$L$与一条圆锥曲线$C$相切，显然，只在集合论意义上处理它们的相交是不令人满意的：
 一条直线与一条圆锥曲线应该相交两次。甚至，说$C\cap L$的交点“重数为二”也不是完全令人满意的：比如，交点应该决定直线$L$，正如在非相切的例子中那般。真正令人满意的定义是，$C\cap L$是由理想$I_C$与理想$I_L$的和决定的$\mathbb{A}_K^2$的子概形，使得，比如，直线$y=0$以及抛物线$y=x^2$将相交于子概形$X_{0,1}=\spec K[x,y](x^2,y)$. 作为平面中唯一包含于$X_{0,1}$的直线，这将完全决定$L$. 
 
@@ -88,7 +88,7 @@
 \[
 	\frac{a(t)y-b(t)x}{t}=a_1y-b_1x+t(\dots)
 \]
-% \begin{wrapfigure}{i}{160pt}\includegraphics[scale=0.5]{chap_2/pics/9.png}\end{wrapfigure}
+% \begin{wrapfigure}{r}{160pt}\includegraphics[scale=0.5]{chap_2/pics/9.png}\end{wrapfigure}
 也在$I$中。于是，理想$I$同样也包含它的极限$a_1y-b_1x$，于是我们有$I\supset (x^2,xy,y^2,a_1y-b_1x)$. 但是上式右侧作为$K[x,y]$的子空间的余维数已经是$2$了。于是$I=(x^2,xy,y^2,a_1y-b_1x)$，以及，相应地，
 \[
 	\lim_{t\to 0}(X_t)=X_{\alpha,\beta},
@@ -308,11 +308,11 @@
 \[
 	I(\mathscr{X})=I(\mathscr{X}^*)\cap R[x_1,\,\dots,\,x_n].
 \]
-为了再具体些，如果我们取$B=\spec K[t]$，在概形$X_t$上为零的多项式的极限上极限概形$X_0\subset \bba_K^n$为零\footnote{原文是``the limiting scheme $X_0\subset \bba_K^n$ is cut out by the limits of polynomials vanishing on the schemes $X_t$''.}\nottran ，换句话说，如果我们将理想$I(X_t)\subset K[x_1$, $\dots$, $x_n]$看作$K$-矢量空间$K[x_1$, $\dots$, $x_n]$的线性子空间，以及令$V\subset K[x_1$, $\dots$, $x_n]$是平面族$I(X_t)$的极限位置\nottran ，则理想$I(X_0)$被$V$所生成。于是，这个极限的定义扩展了第\ref{s.2.3.1}节中用过的朴素极限概念。
+为了再具体些，如果我们取$B=\spec K[t]$，在概形$X_t$上为零的多项式的极限上极限概形$X_0\subset \bba_K^n$为零\footnote{译者注：原文是``the limiting scheme $X_0\subset \bba_K^n$ is cut out by the limits of polynomials vanishing on the schemes $X_t$''.}\nottran ，换句话说，如果我们将理想$I(X_t)\subset K[x_1$, $\dots$, $x_n]$看作$K$-矢量空间$K[x_1$, $\dots$, $x_n]$的线性子空间，以及令$V\subset K[x_1$, $\dots$, $x_n]$是平面族$I(X_t)$的极限位置\nottran ，则理想$I(X_0)$被$V$所生成。于是，这个极限的定义扩展了第\ref{s.2.3.1}节中用过的朴素极限概念。
 
 举个例子，取$B=\spec K[t]$以及$B^*=B\setminus \{0\}=\spec K[t,t^{-1}]$，以及令$\bba_K^1$的子概形$X_t$包含两个点，坐标分别为$t$和$-t$，即，取$\mathscr{X}^*=V(x^2-t^2)\subset \spec K[t,t^{-1}][x]=\bba_{B^*}^1$. 于是，在$\bba_B^n$中，$\mathscr{X}^*$的闭包$\mathscr{X}$同样被$X=V(x^2-t^2)\subset \spec K[t][x]=\mathbb{A}_B^1$给出，以及$\mathscr{X}$在点$0\in B$的纤维$X_0$就是双重点$X_0=V(x^2)\subset\bba_K^1$.
 
-概形族$\mathscr{X}^*\subset \bba_{B^*}^n$的极限概念非常依赖于到$\bba_{B^*}^n$的嵌入，而不仅依赖抽象族$\mathscr{X}^*\to B^*$. 于是，在上面的例子中，概形族$\mathscr{Y}^*=V(x^2-1)$以及概形族$\mathscr{Z}^*=V(x^2-t^{-2})\subset \spec K[t,t^{-1}][x]=\bba_{B^*}^1$作为$B^*$-概形是同构的，但是$\mathscr{Y}^*$的极限是两个约态点$V(x^2-1)\subset \bba^1_K$而$\mathscr{Z}^*$的极限是空集。
+概形族$\mathscr{X}^*\subset \bba_{B^*}^n$的极限概念非常依赖于到$\bba_{B^*}^n$的嵌入，而不只依赖抽象族$\mathscr{X}^*\to B^*$. 于是，在上面的例子中，概形族$\mathscr{Y}^*=V(x^2-1)$以及概形族$\mathscr{Z}^*=V(x^2-t^{-2})\subset \spec K[t,t^{-1}][x]=\bba_{B^*}^1$作为$B^*$-概形是同构的，但是$\mathscr{Y}^*$的极限是两个约态点$V(x^2-1)\subset \bba^1_K$而$\mathscr{Z}^*$的极限是空集。
 
 \subsubsection*{例子}
 \addcontentsline{toc}{subsubsection}{例子}
@@ -353,13 +353,25 @@
 
 \subsection{多重直线}
 
-我们现在考虑一个非约态仿射概形$X$，它没有嵌入组分且支撑于一条直线。我们将假设这条直线的重数（准素分解意义上）是$2$. 下面我们分析各种可能性。
+现在考虑一个非约态仿射概形$X$，它没有嵌入组分且支撑于一条直线。我们将假设这条直线的重数（准素分解意义上）是$2$. 下面我们分析各种可能性。
 
 很容易写出第一个例子：概形
 \[
 	X=\spec K[x,y]/(y^2)\subset \bba_K^2
 \]
-显然有我们想要的性质。很清楚，在$\bba_K^2$中此外再无支撑于直线$y=0$的例子，不过我们能在$\bba_K^3$中构造不少。
+显然有所有想要的性质。很清楚，在$\bba_K^2$中此外再无支撑于直线$y=0$的例子，不过我们能在$\bba_K^3$中构造不少。我们需要的这类子概形$X$，将交于$\bba_{K}^3$中的一个一般平面，它将穿过包含于该平面上的双重点中的一个约态直线上的点。\nottran 已经知道，任意的双重点都可以想成一个点加上一个该点处的切矢量。这就建议我们，可以通过在直线的每一点处给定一个法方向得到$X$. 比如，取$L:=X_{\text{red}}$为直线$x=y=0$，坐标为$z$，选一对没有公共零点的$z$的多项式$p$和$q$，在每一点$(0,0,z_0)\in L$取法方向为法平面$z=z_0$中斜率$p(z_0)/q(z_0)$为的那个方向。很容易看到，所有在给定方向上的双重点的$z$的并将被包含于由
+\[
+	I_{p,q}=(x^2,xy,y^2,p(z)x-q(z)y)
+\]
+以及
+\[
+	X_{p,q}=\spec K[x,y,z]/I_{p,q}
+\]
+定义的概形$X_{p,q}$中。其中，最简单的非平面例子是，选择法方向绕$L$转一圈，比如，由理想
+\[
+	I_\Gamma=(x^2,xy,y^2,zy-x)
+\]
+给出的概形。
 
 % \pic{14.png}
 
@@ -374,6 +386,25 @@
 \]
 是秩为$1$的无挠$K[z]$-模，于是$X_{p,q}$是准素的，$(X_{p,q})_{\text{red}}$是直线$\spec K[x,y,z]/(x,y)$，以及$X_{p,q}$的重数为$2$.
 \end{exe}
+
+尽管第一眼看上去，这些例子有不少有趣的不变量，特别地，它们应该是可区分的，但事实并非如此：我们能通过$\bba_{K}^3$的自同构给出任意一个概形$X_{p,q}$到平面双重直线$\spec K[y,z]/(y^2)$的同构，将其“解耦”。为了证明这点，注意到，因为$p$和$q$没有共同零点，所以存在多项式$a$, $b\in K[z]$使得$1=aq+bp$，故矩阵
+\[
+	\begin{pmatrix}
+	a&b\\
+	p&-q
+	\end{pmatrix}
+\]
+的行列式为$1$，所以由
+\[
+	(x,y,z)\mapsto (x',y',z),\quad \text{其中$x':=p(z)x-q(z)y$, $y':=a(z)x+b(z)y$}
+\]
+给出的映射$\bba_K^3\to \bba_K^3$是可逆的。同样因为上面的矩阵是可逆的，我们有
+\[
+	(x,y)=(x',y')\quad\text{和}\quad (x^2,xy,y^2)=({x'}^2,x'y',{y'}^2)
+\]
+于是$X_{p,q}$的理想是$(x,x^2,xy,y^2)=(x,y^2)$,正如所需。
+
+更一般地，在下题意义上，可以证明精确到同构只存在一条仿射双重直线。
 
 \begin{exe}
 	证明，如果$A$一个Noether $K$-代数，使得$X=\spec A$没有嵌入组分，重数为$2$，以及满足$X_{\text{red}}\cong \bba_K^1$,于是$X$同构于$\spec K[x,y]/(y^2)$.
