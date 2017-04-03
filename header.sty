@@ -1,4 +1,4 @@
-% author: buwailee@nmhs 2017/1/31
+% author: buwailee@nmhs 2017/4/4
 \ProvidesPackage{header}
 
 %% math Package
@@ -63,10 +63,18 @@
 			% \newcommand{\ssubsection}{\subsection}
 		\RequirePackage[a4paper, top=18mm, text={170mm, 246mm}, includehead, includefoot, hmarginratio=1:1, heightrounded]{geometry}
 		\if@book
-			\fancyhead[LO,RE]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
+			\if@zh
+				\fancyhead[LO,RE]{{\sffamily\itshape\footnotesize\nouppercase{\rightmark}}}
+			\else
+				\fancyhead[LO,RE]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
+			\fi
 			\fancyhead[RO,LE]{{\small \sf \thepage}}
 		\else
-			\fancyhead[L]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
+			\if@zh
+				\fancyhead[L]{{\sffamily\itshape\footnotesize\nouppercase{\rightmark}}}
+			\else
+				\fancyhead[L]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
+			\fi
 			\fancyhead[R]{{\small \sf \thepage}}
 		\fi
 		\headwidth=\textwidth
@@ -99,10 +107,18 @@
 			% \newcommand{\ssubsection}{\subsection}
 		
 		\if@book
-			\fancyhead[LO,RE]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
+			\if@zh
+				\fancyhead[LO,RE]{{\sffamily\itshape\footnotesize\nouppercase{\rightmark}}}
+			\else
+				\fancyhead[LO,RE]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
+			\fi
 			\fancyhead[RO,LE]{{\small \sf \thepage}}
 		\else
-			\fancyhead[L]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
+			\if@zh
+				\fancyhead[L]{{\sffamily\itshape\footnotesize\nouppercase{\rightmark}}}
+			\else
+				\fancyhead[L]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
+			\fi
 			\fancyhead[R]{{\small \sf \thepage}}
 		\fi
 		\headwidth=\textwidth
