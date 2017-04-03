@@ -201,7 +201,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 \]
 是交换的。（在范畴论的语言中，一个层之间的态射是对应的从拓扑空间的开集范畴到集合范畴函子之间的自然变换。）
 
-对每一个$x\in X$，态射$\varphi:\ff\to\scrg$同样诱导了茎之间的态射$\varphi_x:\ff_x\to\scrg_x$. 从层公理，态射也被它在茎上诱导了态射决定：如果$\varphi$和$\psi$是对$x\in X$处处满足$\varphi_x=\psi_x$的态射，则$\varphi=\psi$.
+对每一个$x\in X$，态射$\varphi:\ff\to\scrg$同样诱导了茎之间的态射$\varphi_x:\ff_x\to\scrg_x$. 从层公理，态射也被它在茎上诱导的态射决定：如果$\varphi$和$\psi$是对$x\in X$处处满足$\varphi_x=\psi_x$的态射，则$\varphi=\psi$.
 
 我们说层之间的态射$\varphi:\ff\to\scrg$是单、满或者双射，如果每一个茎上诱导的态射$\varphi_x:\ff_x\to\scrg_x$是单、满或者双射。下面的习题说明了，这些概念如何将这个定义与通过任意集合上的截面来定义这种更加朴素的方式相联系。
 
@@ -214,7 +214,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 	\begin{compactenum}[(a)]
 	\item 令$X$是拓扑空间$\mathbb{C}\setminus \{0\}$，令$\ff=\scrg$是处处非零的连续复值函数层，令$\varphi$是将函数$f$映射到$f^2$的映射。
 
-	\item 令$X$是Riemann球面$\mathbb{CP}^1=\mathbb{C}\cup\{\infty\}$以及$\scrg$是其上的解析函数层。令$ff_1$是在点$0$处为零的解析函数构成的层：当$U$包含$0$，$\ff_1(U)$是在点$0\in U$处为零的$U$上的解析函数的集合，如果$U$不含$0$，则$\ff_1(U)$是$U$上所有解析函数的集合。类似地，令$\ff_2$是在$\infty$为零的解析函数层，令$\ff=\ff_1\oplus\ff_2$，以及$\varphi:\ff\to\scrg$是加法映射。
+	\item 令$X$是Riemann球面$\mathbb{CP}^1=\mathbb{C}\cup\{\infty\}$以及$\scrg$是其上的解析函数层。令$\ff_1$是在点$0$处为零的解析函数构成的层：当$U$包含$0$，$\ff_1(U)$是在点$0\in U$处为零的$U$上的解析函数的集合，如果$U$不含$0$，则$\ff_1(U)$是$U$上所有解析函数的集合。类似地，令$\ff_2$是在$\infty$为零的解析函数层，令$\ff=\ff_1\oplus\ff_2$，以及$\varphi:\ff\to\scrg$是加法映射。
 
 	\item 找到一个例子，其中$X$只包含三个点。
 	\end{compactenum}
@@ -222,7 +222,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 
 这些例子是层的上同调理论的起点，读者将在第\pageref{ref:1}页中列出的层理论的参考文献中找到更多这方面的材料。
 
-若$\ff$是一个$X$上的预层，我们定义$\ff$的\idx{层化}为唯一的层$\ff'$与预层态射$\varphi:\ff\to\ff'$使得对每一个$x\in X$都有$\varphi_x:\ff_x\to\ff'_x$是一个同构。更准确地说，层$\ff'$能被如下定义：一个$\ff'$在开集$U$上的截面是一个映射$\sigma$，它将每一点$x\in U$映射成$\ff_x$中的一个元素，使得$\sigma$是由$\ff$的截面\textit{局部诱导}的，这就是说，存在$U$的一个开覆盖$U_i$，以及元素$s_i\in \ff(U_i)$使得对$x\in U_i$都有$\sigma(x)=(s_i)_x$. 映射$\ff\to\ff'$被定义为将$s\in\ff(U)$变成函数$x\mapsto s_x\in\ff_x$. 层$\ff'$可以被称为是“最近似于”预层$\ff$的层。
+若$\ff$是一个$X$上的预层，我们定义$\ff$的\idx{层化}为唯一的层$\ff'$与预层态射$\varphi:\ff\to\ff'$使得对每一个$x\in X$都有$\varphi_x:\ff_x\to\ff'_x$是一个同构。更准确地说，层$\ff'$能被如下定义：一个$\ff'$在开集$U$上的截面是一个映射$\sigma$，它将每一点$x\in U$映射成$\ff_x$中的一个元素，使得$\sigma$是由$\ff$的截面\textit{局部诱导}的，这就是说，存在$U$的一个开覆盖$U_i$，以及元素$s_i\in \ff(U_i)$使得对$x\in U_i$都有$\sigma(x)=(s_i)_x$. 映射$\ff\to\ff'$被定义为将$s\in\ff(U)$变成函数$x\mapsto s_x\in\ff_x$. 层$\ff'$可以被称为“最近似于”预层$\ff$的层。
 
 \begin{exe}
 	这里有$\ff'$的另一个构造：如同Exercise {{\addtocounter{thm}{-3}}\thethm{\addtocounter{thm}{3}}}中那样将不交并$\overline{\ff}=\bigcup \ff_x$拓扑化，接着令$\ff'$是$\overline{\ff}$在自然映射$\pi:\overline{\ff}\to X$下的截面层。说服你自己，这两个构造是等价的，以及这个构造满足上一段开头说的泛性质。
@@ -232,7 +232,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 
 商的概念更加微妙。假设$\ff$和$\scrg$是交换群预层，其中$\ff$到$\scrg$有一个单射。那么$\scrg$关于$\ff$的商预层定义为由$\mathscr{H}(U)=\scrg(U)/\ff(U)$定义的预层$\mathscr{H}$. 但是当$\ff$和$\scrg$是层的时候，$\mathscr{H}$一般\textit{不一定}是一个层，我们必须将他们的商层定义为$\mathscr{H}$的层化，即$\scrg/\ff:=\mathscr{H}'$. 从$\mathscr{H}$到$\mathscr{H}'$的自然映射，连同上$\scrg\to \mathscr{H}$的预层间映射，定义了商映射$\scrg\to \scrg/\ff$. 这个映射是$\varphi$的\idx{余核}。
 
-层公理的重要性在于，层是由其局部性质所决定。我们将给出这个原理的两个
+层公理的重要性在于，层是由其局部性质所决定。我们将给出这个原理的两个表现。
 
 在概形的应用中，我们将遇到如下情况：已知拓扑空间$X$的一个\textit{拓扑基}$\mathscr{B}$，然后我们想要确定一个层$\ff$通过仅对基中的元素$U$说有群$\ff(U)$，以及对基中的包含$V\subset U$有同态$\res_{V,U}$. 下一个命题就说明了我们可以这样做。
 
@@ -300,7 +300,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 
 \noindent {\bf 层理论的参考文献.} \label{ref:1}Serre的里程碑论文 [1955]，它 \nottran Godemant [1964]和Swan [1964]是更系统的介绍。Hartshorne [1977, Chapter II]包含了\nottran
 
-\section{作为概形的概形（结构层）}
+\subsection{作为概形的概形（结构层）}
 
 
 \begin{exe}
