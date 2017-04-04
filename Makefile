@@ -4,17 +4,17 @@ color : cmain
 
 pic :
 	xelatex -synctex=1 main.tex
-	zhmakeindex -q -s main.mst main
+	zhmakeindex -q -s indexstyle.mst main
 	xelatex -synctex=1 main.tex
 
 main : 
 	aplatex -synctex=1 main.tex
-	zhmakeindex -q -s main.mst main
+	zhmakeindex -q -s indexstyle.mst main
 	aplatex -synctex=1 main.tex
 
 cmain :
 	xelatex cmain.tex
-	zhmakeindex -q -s main.mst cmain
+	zhmakeindex -q -s indexstyle.mst cmain
 	for i in 1 2 3; do xelatex cmain.tex; done
 
 clean :
