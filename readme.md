@@ -20,7 +20,9 @@ cmain是一个每章开头带图的样式，实现由`structure.tex`负责，默
 
 总之，一次完整的编译流程如下：先在根目录运行一次`xelatex main`得到`idx`文件，然后运行`zhmakeindex main`来得到`ind`文件，最后再运行一次`xelatex main`。
 
-p.s 1. 个人推荐的编译环境为Linux下的TeXLive，之所以选用Linux，是因为编译比win下的快不少。
+主目录下，以及给出了Makefile. 所以在有GNU make软件的环境中，可以直接运行`make pic`使用XeLaTex生成`main.pdf`，运行`make color`使用XeLaTex生成`cmain.pdf`，默认的`make`留给了ApLaTeX引擎。
+
+p.s 1. 个人推荐的编译环境为Linux下的TeXLive，之所以选用Linux，是因为编译比win下的快不少。同时，本文档默认的字体是开源字体Fandol，至少TeXLive 2016之后，这是包含在整个TeXLive中的。
 
 p.s 2. 由于zhmakeindex已知的问题，无法很好地处理多音字，所以最终版的编译在使用zhmakeindex生成了`ind`文件后应该手动进行修改。
 
