@@ -298,10 +298,49 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 证明，层的前推还是一个层。
 \end{exe}
 
-\noindent {\bf 层理论的参考文献.} \label{ref:1}Serre的里程碑论文 [1955]，它 \nottran Godemant [1964]和Swan [1964]是更系统的介绍。Hartshorne [1977, Chapter II]包含了\nottran
+\noindent {\bf 层理论的参考文献.} \label{ref:1}Serre的里程碑论文 [1955]依然是一个很好的材料，正是它确立了层是代数几何的重要工具。Godemant [1964]和Swan [1964]是更系统的介绍。Hartshorne [1977, Chapter II]包含了适应于概形理论的技术性需求的层理论的一个极好的陈述；这是一个Grothendieck [1961a; 1961b; 1963; 1964; 1965; 1966; 1967]中相关内容的简化版。解析情形不错的参考文献有Forster [1981]（特别是上同调理论引论）以及Gunning [1990].
 
 \subsection{作为概形的概形（结构层）}
 
+最后，我们回到概形$X=\spec R$的定义。我们将具体描述结构层$\oo_X=\oo_{\spec R}$来结束整个定义。就像之前说过的，我们希望$\spec R$和$R$之间的联系可以扩展仿射簇与其坐标环之间的联系，特别地，我们希望，结构层$\oo_X$的整体截面环就是$R$.
+
+因此，我们希望将$X$上的函数环延拓到一整个环层。这就意味着，对每一个$X$的开集$U$，我们要给出一个环$\oo_X(U)$，以及对每一对开集$U\subset V$，要给出限制同态
+\[
+	\res_{V,U}:\oo_X(V)\to \oo_X(U)
+\]
+满足一系列前面说过的公理。对与基本开集$U$和$V$来说，环$\oo_X(U)$与映射$\res_{V,U}$并不难给出：我们令
+\[
+	\oo_X(X_f)=R_f.
+\]
+若$X_f\supset X_g$，一个$g$的幂具有因子$f$\footnote{译者注：即$g^n=af$，其中$a\in R$而$n$是一个正整数。}（回忆，$(f)$的根是所有包含$f$的素理想的交），因此，限制映射$\res_{X_f,X_g}$可以取作局部化映射
+\footnote{译者注：这里并不直观。考虑乘性子集$S$，以及它其中元素的任意因子构成的集合$S'$，后者自然也是一个乘性子集。注意到，此时$S^{-1}R$与${S'}^{-1}R$是同构的。从$S^{-1}R$到${S'}^{-1}R$有一个自然的单同态，他将$r/s$映作$r/s$. 对于满同态的部分，任取$r/s'\in {S'}^{-1}R$，由于$s'$是某个$s\in S$的因子，于是$s't'=s$，其中$t'\in S'$，所以$r/s'=rt'/(s't')=rt'/s$就是$r/s'$在$r/s$中的原像。
+
+在文中，注意到$g^n=af$，$S_g=\{1$, $\cdots$, $g^n$, $\cdots\}$包含$g^{n+1}=afg$，所以$S'_g$中包含$fg$，故$S'_{fg}\subset S'_g$，反过来，由于$g$是$fg$的一个因子，所以$S'_g\subset S'_{fg}$，综上$S'_g=S'_{fg}$，故而$R_g=R_{fg}$.}
+$R_f\to R_{fg}=R_g$. 由Proposition \ref{pro:1.1.12}，只要我们验证基本开集覆盖之间的层公理，这样就给出了一个层。在下面的Propostion \ref{pro:1.1.18}完成这个之前，我们先建立一个简单但是很基本的引理，它描述了仿射概形的基本开集的覆盖。
+
+\begin{lem}
+	令$X=\spec R$，以及$\{f_a\}$是一族$R$中的元素。于是开集族$X_{f_a}$是$X$的开覆盖当且仅当$\{f_a\}$生成单位理想。特别地，$X$是一个预紧拓扑空间。
+\end{lem}
+
+回忆\textit{预紧}指每一个开覆盖都有有限子覆盖，\textit{预}
+
+\begin{exe}
+如果$R$是一个Noether环，$\spec R$的每一个子集都是预紧的。
+\end{exe}
+
+\begin{pro}\label{pro:1.1.18}
+令$X=\spec R$，并设$X_f$被开集$X_{f_a}\subset X_f$所覆盖。
+\begin{compactenum}[(a)]
+\item 如果$g$, $h\in R_f$在每个$R_{f_a}$中相同，则$g=h$.
+\item 如果对每一个$a$，都存在一个$g_a\in R_{f_a}$使得对每一对$a$, $b$，$R_{f_af_b}$中$g_a$与$g_b$的像都相同，则存在一个$g\in R_f$使得$g$在每个$R_{f_a}$中的像是$g_a$.
+\end{compactenum}
+\end{pro}
+
+等价地，如果$\mathscr{B}$是$\spec R$的一个基本开集族，如果我们置$\oo_X(\spec R_f):=R_f$，于是$\oo_X$是一个$\mathscr{B}$-层。由Proposition \ref{pro:1.1.12}，$\oo_X$将可以唯一扩张成$X$上的一个层。
+
+\begin{defi}
+	上面一个命题中定义的层$\oo_X$被称为$X$的\textit{结构层}或者$X$上的\textit{正则函数层}。
+\end{defi}
 
 \begin{exe}
 	给出概形$\spec K[x]$的结构层一个类似的完全描述。
