@@ -246,3 +246,7 @@ pip-log.txt
 
 #Pictures
 *.png
+
+#fonts
+*.otf
+*.ttf
