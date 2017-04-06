@@ -19,3 +19,6 @@ cmain :
 
 clean :
 	rm *.aux *.ilg *.out *.dvi *.toc
+
+cleanall :
+	rm *.aux *.ilg *.out *.dvi *.toc *.synctex.gz* *.ind *.idx *.log

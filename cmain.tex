@@ -5,10 +5,6 @@
 \usepackage[fontset=fandol]{ctex}
 	% \CTEXoptions[today=old]
 	% \CTEXoptions[contentsname=Table of Contents]
-	% \setCJKmainfont[
-	% ItalicFont = AdobeKaitiStd-Regular.otf ,
-	% BoldFont = SourceHanSerifSC-Bold.otf ,
-	% ]{SourceHanSerifSC-Regular.otf}
 \usepackage{paralist,wrapfig}
 	\setlength{\pltopsep}{3pt}
 	\setlength{\plpartopsep}{3pt}
@@ -24,6 +20,12 @@
 
 \input{defs}
 	\newcommand{\cc}{\mathbb{C}}
+
+% \setCJKmainfont[
+% 	ItalicFont = AdobeKaitiStd-Regular ,
+% 	BoldFont = SourceHanSerifSC-Bold ,
+% ]{SourceHanSerifSC-Regular}
+% \renewcommand{\hyp}{\raisebox{.15em}{-}}
 
 \newcommand{\picc}[1]{\begin{center}\includegraphics[scale=0.5]{#1}\end{center}}
 \newcommand{\pic}[1]{\picc{#1}}
