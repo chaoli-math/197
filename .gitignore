@@ -230,13 +230,14 @@ pip-log.txt
 *.toc
 *.ilg
 *.idx
+*.ind
 *.ilg
 *.thm
 *.out
 *.fdb_latexmk
 *.nav
 *.snm
-*.synctex.gz
+*.synctex.gz*
 
 # visual studio code file
 .vscode/
@@ -246,6 +247,7 @@ pip-log.txt
 
 #Pictures
 *.png
+*.jpg
 
 #fonts
 *.otf
