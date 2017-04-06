@@ -30,6 +30,7 @@
 \DeclareMathOperator{\Ann}{Ann}
 \DeclareMathOperator{\ev}{ev}
 
+\newcommand{\hyp}{-}
 \newcommand{\nottran}{\rule{2mm}{2mm}}
 \newcommand{\idx}[1]{\textit{#1}\index{#1}}
 \newcommand{\idxx}[2]{\textit{#2}\index{#1!#2}}
@@ -46,4 +47,4 @@
 \newtheorem{exa}[thm]{Example}
 
 \renewcommand{\proof}{\textit{Proof}:\hspace{0.25em}}
-\renewcommand{\thethm}{\thechapter-\arabic{thm}}
+\renewcommand{\thethm}{\thechapter\raisebox{.15ex}{-}\arabic{thm}}
