@@ -9,7 +9,7 @@
   %
 
   \item \'{e}tale
-    \subitem 拓扑, \hyperpage{16}
+    \subitem 拓扑, \hyperpage{19}
 
   \indexspace
 
@@ -18,7 +18,7 @@
   %
 
   \item 不可约
-    \subitem 绝对, \hyperpage{18}
+    \subitem 绝对, \hyperpage{21}
 
   \indexspace
 
@@ -27,9 +27,9 @@
   %
 
   \item 层的
-    \subitem 态射, \hyperpage{8}
-  \item 层化, \hyperpage{9}
-  \item 叉点, \hyperpage{19}
+    \subitem 态射, \hyperpage{9}
+  \item 层化, \hyperpage{10}
+  \item 叉点, \hyperpage{22}
 
   \indexspace
 
@@ -37,7 +37,7 @@
   \indexgroup{D}
   %
 
-  \item 度, \hyperpage{21}
+  \item 度, \hyperpage{24}
 
   \indexspace
 
@@ -46,9 +46,9 @@
   %
 
   \item 概形
-    \subitem 仿射, \hyperpage{3}
-    \subitem 算术, \hyperpage{31}
-  \item 孤立点, \hyperpage{19}
+    \subitem 仿射, \hyperpage{4}
+    \subitem 算术, \hyperpage{33}
+  \item 孤立点, \hyperpage{22}
 
   \indexspace
 
@@ -56,7 +56,7 @@
   \indexgroup{H}
   %
 
-  \item Hensel化, \hyperpage{16}
+  \item Hensel化, \hyperpage{19}
 
   \indexspace
 
@@ -64,9 +64,9 @@
   \indexgroup{J}
   %
 
-  \item 结点, \hyperpage{18}
+  \item 结点, \hyperpage{22}
   \item 局部
-    \subitem 概形, \hyperpage{15}
+    \subitem 概形, \hyperpage{18}
 
   \indexspace
 
@@ -74,7 +74,7 @@
   \indexgroup{P}
   %
 
-  \item 谱, \hyperpage{4}
+  \item 谱, \hyperpage{5}
 
   \indexspace
 
@@ -82,9 +82,9 @@
   \indexgroup{S}
   %
 
-  \item 剩余类域, \hyperpage{4}
+  \item 剩余类域, \hyperpage{5}
   \item 双重
-    \subitem 点, \hyperpage{19}, \hyperpage{21}
+    \subitem 点, \hyperpage{22}, \hyperpage{24}
 
   \indexspace
 
@@ -93,12 +93,12 @@
   %
 
   \item 一般
-    \subitem 点, \hyperpage{14}
+    \subitem 点, \hyperpage{17}
   \item 一阶
-    \subitem 邻域, \hyperpage{19}
+    \subitem 邻域, \hyperpage{22}
   \item 有限
-    \subitem 概形, \hyperpage{21}
-  \item 余核, \hyperpage{9}
+    \subitem 概形, \hyperpage{24}
+  \item 余核, \hyperpage{10}
 
   \indexspace
 
@@ -107,8 +107,8 @@
   %
 
   \item 长度
-    \subitem 概形的, \hyperpage{24}
-    \subitem 环的, \hyperpage{24}
-  \item 子层, \hyperpage{9}
+    \subitem 概形的, \hyperpage{27}
+    \subitem 环的, \hyperpage{27}
+  \item 子层, \hyperpage{10}
 
 \end{theindex}

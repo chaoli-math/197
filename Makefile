@@ -2,10 +2,16 @@ all : main clean
 
 color : cmain
 
+xe : 
+	xelatex main.tex
+
+ap : 
+	aplatex -synctex=1 main.tex
+	
 pic :
-	xelatex -synctex=1 main.tex
+	xelatex main.tex
 	zhmakeindex -q -s indexstyle.mst main
-	xelatex -synctex=1 main.tex
+	xelatex main.tex
 
 main : 
 	aplatex -synctex=1 main.tex
