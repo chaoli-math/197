@@ -1,4 +1,4 @@
-% author: buwailee@nmhs 2017/4/4
+% author: buwailee@nmhs 2017/4/6
 \ProvidesPackage{header}
 
 %% math Package
@@ -17,23 +17,15 @@
 \DeclareOption{book}{\@plainfalse\@booktrue}
 \DeclareOption{article}{\@plainfalse\@bookfalse}
 
-\newif\if@zh\@zhfalse
-\DeclareOption{en}{\@zhfalse}
-\DeclareOption{zh}{\@zhtrue}
-
-\newif\if@afour\@zhfalse
+\newif\if@afour\@afourfalse
 \DeclareOption{a4paper}{\@afourtrue}
 \DeclareOption{b5paper}{\@afourfalse}
 
-\ExecuteOptions{plain,en,a4paper}
+\ExecuteOptions{plain,a4paper}
 %%
 
 %% Relax
 \ProcessOptions\relax
-
-\if@zh
-	\RequirePackage[fontset=fandol]{ctex}
-\fi
 
 \if@afour
 %% a4paper
@@ -63,19 +55,11 @@
 			% \newcommand{\ssubsection}{\subsection}
 		\RequirePackage[a4paper, top=18mm, text={170mm, 246mm}, includehead, includefoot, hmarginratio=1:1, heightrounded]{geometry}
 		\if@book
-			\if@zh
-				\fancyhead[LO,RE]{{\sffamily\itshape\footnotesize\nouppercase{\rightmark}}}
-			\else
-				\fancyhead[LO,RE]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
-			\fi
-			\fancyhead[RO,LE]{{\small \sf \thepage}}
+			\fancyhead[LO,RE]{{\sffamily\itshape\nouppercase{\rightmark}}}
+			\fancyhead[RO,LE]{{\sf \thepage}}
 		\else
-			\if@zh
-				\fancyhead[L]{{\sffamily\itshape\footnotesize\nouppercase{\rightmark}}}
-			\else
-				\fancyhead[L]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
-			\fi
-			\fancyhead[R]{{\small \sf \thepage}}
+			\fancyhead[L]{{\sffamily\itshape\nouppercase{\rightmark}}}
+			\fancyhead[R]{{\sf \thepage}}
 		\fi
 		\headwidth=\textwidth
 	\fi
@@ -107,19 +91,11 @@
 			% \newcommand{\ssubsection}{\subsection}
 		
 		\if@book
-			\if@zh
-				\fancyhead[LO,RE]{{\sffamily\itshape\footnotesize\nouppercase{\rightmark}}}
-			\else
-				\fancyhead[LO,RE]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
-			\fi
-			\fancyhead[RO,LE]{{\small \sf \thepage}}
+			\fancyhead[LO,RE]{{\sffamily\itshape\nouppercase{\rightmark}}}
+			\fancyhead[RO,LE]{{\sf \thepage}}
 		\else
-			\if@zh
-				\fancyhead[L]{{\sffamily\itshape\footnotesize\nouppercase{\rightmark}}}
-			\else
-				\fancyhead[L]{{\sffamily\itshape\small\nouppercase{\rightmark}}}
-			\fi
-			\fancyhead[R]{{\small \sf \thepage}}
+			\fancyhead[L]{{\sffamily\itshape\nouppercase{\rightmark}}}
+			\fancyhead[R]{{\sf \thepage}}
 		\fi
 		\headwidth=\textwidth
 	\fi
