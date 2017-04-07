@@ -174,7 +174,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 茎的概念有个熟悉的几何含义：这是芽环概形的抽象化。比如，若$X$是一个$n$维解析流形，而$\oo_X^{\text{an}}$是$X$上的解析函数层，则$\oo_X^{\text{an}}$在$x$处的茎就是$x$处的解析函数芽，即$n$元收敛幂级数环。
 
 \begin{exe}
-找到Exercise {{\addtocounter{thm}{-2}}\thethm{\addtocounter{thm}{1}}}与{\thethm{\addtocounter{thm}{2}}}中层的茎。
+找到Exercise {{\addtocounter{thm}{-2}}\thethm{\addtocounter{thm}{1}}}与{\thethm{\addtocounter{thm}{1}}}中层的茎。
 \end{exe}
 
 \begin{exe}
@@ -356,7 +356,7 @@ $R_f\to R_{fg}=R_g$. 由Proposition \ref{pro:1.1.12}，只要我们验证基本�
 \[
 	f_b^Nh_a=(f_af_b)^Ng_a=(f_af_b)^Ng_b=f_a^Nh_b.
 \]
-同样因为已经假设$\{X_{f_a}\}$是有限覆盖，所以对所有的指标，都可以选成一个$N$. 从Lemma \ref{lem:1.1.16}，$f_a\in R$生成单位理想，于是$f_a^N$也生成单位理想\footnote{译者注：注意到$X_{f_a}=X_{f_a^N}$是$X$的一个覆盖。}，于是我们可以记
+同样因为已经假设$\{X_{f_a}\}$是有限覆盖，所以对所有的指标，都可以选成一个$N$. 从Lemma \ref{lem:1.1.16}，$f_a\in R$生成单位理想，于是$f_a^N$也生成单位理想\footnote{译者注：注意到$X_{f_a^N}=X_{f_a}$是$X$的一个覆盖。}，于是我们可以记
 \[
 	1=\sum_a e_a f_a^N,
 \]
@@ -385,6 +385,27 @@ $R_f\to R_{fg}=R_g$. 由Proposition \ref{pro:1.1.12}，只要我们验证基本�
 \]
 \end{exe}
 
+与许多几何理论相反（尽管类似于在复流形范畴中的情况），一个概形可能只有很少的正则函数。例如，在我们定义任意的概形时将看到，与紧流形类似的概形上面根本没有非常值的正则函数。因此，在概形$X$上部分地定义的函数，即一个稠密开集$U$上的$\oo_X(U)$中的元素，发挥了巨大的作用。他们被称为$X$上的\textit{有理}函数\index{有理!函数}，因为当$X=\spec R$而$R$是一个整环，以及$U=X_f$时，$\oo_X(X_f)=R_f$的元素是$R$中元素的分式。在最感兴趣的情况下，我们将看到$X$中的每一个非空开集都是稠密的，于是有理函数的表现将反应$X$的整体性质。
+
 \begin{exe}
-	给出概形$\spec K[x]$的结构层一个类似的完全描述。
+令$\mathscr{U}$是$X$中的稠密开集族，计算\textit{有理函数环}
+\[
+	{\varinjlim}_{U\in \mathscr{U}}\oo_X(U):=
+	\left\{\parbox{30em}{
+			对$U\in\mathscr{U}$的不交并$\oo_X(U)$，模掉等价关系$\sigma\sim \tau$：若$\sigma\in\oo_X(U)$, $\tau\in\oo_X(V)$限制在包含于$U\cap V$中的某个$W\in\mathscr{U}$上是相同的
+		}\right\},
+\]
+首先对整环计算，然后对任意的Noether环计算。
+\end{exe}
+
+\begin{exa}
+另一个非常简单的例子可能有助于牢记这些想法。令$K$是一个域，而$R=K[x]_{(x)}$是以$x$为单变量的多项式环在极大理想$(x)$处的局部化。概形$X=\spec R$只有两个点，$R$的两个素理想$(0)$和$(x)$. 作为拓扑空间，他只有三个开集
+\[
+	\varnothing\subset U:=\{(0)\}\subset \{(0),(x)\}=X.
+\]
+$U$和$\varnothing$是基本开集，因为$\{(0)\}=X_x$. 层$\oo_X$于是很容易描述。它具有值$\oo_X(X)=R=K[x]_{(x)}$以及$\oo_X(U)=K(x)$，其中$K(x)$是有理函数域。从第一个到第二个的限制映射就是自然的含入同态。
+\end{exa}
+
+\begin{exe}
+	给出概形$\spec K[x]$的结构层一个类似的完全描述。（答案将在第\ref{chap:2}章给出。）
 \end{exe}
