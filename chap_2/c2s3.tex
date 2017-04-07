@@ -206,7 +206,7 @@
 正如所预料的那样，非代数闭域上非约态概形的行为将变得更加复杂。下面的习题给给出一个例子。
 
 \begin{exe}
-	分类所有度为2和3的$\rr$上支撑于$\mathbb{A}_\rr^2$原点的概形。$\rr$上的概形$X$的复化指$\cc$上的概形$X\times_{\spec \rr}\spec \cc$. 特别地，证明尽管$\rr$上每个复化同构于$\spec \cc[x]/(x^3)$的概形都同构于$\spec \rr[x]/(x^3)$，但存在且只存在两个不同构概形$X$，它们的复化都同构于$\spec \cc[x,y]/(x^2,xy,y^2)$.
+	分类所有度为2和3的$\rr$上支撑于$\mathbb{A}_\rr^2$原点的概形。$\rr$上的概形$X$的复化指$\cc$上的概形$X\times_{\spec \rr}\spec \cc$. 特别地，证明虽然$\rr$上每个复化同构于$\spec \cc[x]/(x^3)$的概形都同构于$\spec \rr[x]/(x^3)$，但存在且只存在两个不同构概形$X$，它们的复化都同构于$\spec \cc[x,y]/(x^2,xy,y^2)$.
 \end{exe}
 
 \paragraph*{度与重数}\addcontentsline{toc}{subsubsection}{度与重数}
@@ -222,7 +222,7 @@
 \[
 	R\supset \mm \supset \mm^2\supset \cdots \supset 0
 \]
-开始，然后不断选取任意$R/\mm$\hyp 矢量空间$\mm^j/\mm^{j+1}$的子空间来加细它。）尽管这样一条列不唯一，但是它的长度$l$确实与选取无关的，我们定义$l$为环$R$或者零维概形$X$的\textit{重数}或者\textit{长度}\index{长度!环的}\index{长度!概形的}（比如见Eisenbud [1995, Section 2.4]）。注意在原来的情况，当$R$是一个$K$上的有限维矢量空间时，剩余类域$R/\mm=\kappa$是$K$的一个有限扩张，所以我们有关系
+开始，然后不断选取任意$R/\mm$\hyp 矢量空间$\mm^j/\mm^{j+1}$的子空间来加细它。）虽然这样一条列的选取不唯一，但是它的长度$l$确实与选取无关的，我们定义$l$为环$R$或者零维概形$X$的\textit{重数}或者\textit{长度}\index{长度!环的}\index{长度!概形的}（比如见Eisenbud [1995, Section 2.4]）。注意在原来的情况，当$R$是一个$K$上的有限维矢量空间时，剩余类域$R/\mm=\kappa$是$K$的一个有限扩张，所以我们有关系
 \[
 	\deg_K(X)=[\kappa:K]~\mathrm{mult}(X).
 \]
@@ -266,7 +266,7 @@ $I$的相伴素理想就是那些准素组分的根。给定一个$I$的相伴�
 
 因为$(y)$或者$(x,y)^2$都不能从上述分解中略去，这是一个准素分解，它们对应的$X$的相伴概形（相伴概形在下面定义）就是直线$X_{\mathrm{red}}$以及在原点处的约态点。在准素分解中，$(x,y)$\hyp 准素组分不是唯一的，它可以取作$(x,y^2)$或者$(x+y,y^2)$，或者实际上无数多这样的理想中的任意一个，以及它们的交$(x^2,xy,y^2)$，或者是任意的理想$(x^n,xy,y^2)$，其中任意的$n\geq 2$. 当然，$(y)$\hyp 准素组分$(y)$是唯一的，因为$X_{\mathrm{red}}$并不包含于其他任意的相伴概形中。
 
-尽管有这种不唯一性，但对一个给定的相伴素理想$\pp$，$\pp$-准素组分却有一个良定的\textit{长度}概念，不需要选定准素分解，它等于环$R_\pp/IR_\pp$中最长的有限长理想的长度。这里一个模$M$的长度是指子模链
+虽然有这种不唯一性，但对一个给定的相伴素理想$\pp$，$\pp$-准素组分却有一个良定的\textit{长度}概念，不需要选定准素分解，它等于环$R_\pp/IR_\pp$中最长的有限长理想的长度。这里一个模$M$的长度是指子模链
 \[
 	M\supsetneqq M_1 \supsetneqq M_2 \supsetneqq \cdots \supsetneqq M_{l-1} \supsetneqq M_l=0
 \]
@@ -351,6 +351,12 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 \]
 的概形。
 
+这看上去是有道理的，因为$X_{\text{red}}\cup Y_t$的理想
+\[
+	(x,y-t)cap (y)=(xy,y^2-ty)
+\]
+在$t\to 0$时候看上去自然趋向于$(xy,y^2)$. 然而，我们前面引入的极限概念还是不够强到能处理这个例子，因为$X_{\text{red}}\cup Y_t$的理想$(x,y-t)\cap(y)$余维数不是有限的。在下一小节我们将修正这一点，描述取概形的极限的更一般背景。
+
 \subsection{概形的平坦族}\label{s.2.3.4}
 
 概形族是一个相当一般的概形，我们仅将一族概形定义为一个概形间的态射$\pi:X\to B$！族中的概形是$\pi$在$B$上点的纤维。这个概念包含了其他我们能想到的概念，比如一个“含参方程”定义的概形，$B$这是是参数变动的空间。
@@ -366,7 +372,7 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 
 我们从比较具体的东西开始：$B$上的\textit{给定概形$A$的闭子概形族}是一个$B\times A$的闭子概形$X\subset B\times A$和限制在$X$上的投射映射$B\times A\to B$，于是$X$在点$b\in B$上的纤维自然是$B\times A$在$B$上的纤维$A_b$的闭子概形。
 
-令$B$是一个非奇异一维概形，典型地，我们对$R=K[t]$, $K[t]_{(t)}$或者$K[\![t]\!]$考虑$\spec R$，尽管任意的Dedekind整环（包含$\zz$或者$\zz_{(p)}$）也行。令$0\in B$是任意的闭点，即$B^*=B\setminus \{0\}$是$B$关于$\{0\}$的补。令$\mathbb{A}_B^n$和$\bba_{B^*}^n$是一般意义上，$B$与$B^*$上的$n$维仿射空间。
+令$B$是一个非奇异一维概形，典型地，我们对$R=K[t]$, $K[t]_{(t)}$或者$K[\![t]\!]$考虑$\spec R$，尽管任意的Dedekind整环（比如$\zz$或者$\zz_{(p)}$）也行。令$0\in B$是任意的闭点，即$B^*=B\setminus \{0\}$是$B$关于$\{0\}$的补。令$\mathbb{A}_B^n$和$\bba_{B^*}^n$是一般意义上，$B$与$B^*$上的$n$维仿射空间。
 
 考虑一个$\bba_{B^*}^n=\bba_\zz^n\times B^*$的闭子概形$\mathscr{X}^*$，我们可以将其看作一个由$B^*$参数化的闭仿射概形族，即，对每一个$b\in B^*$，令$X_b=\pi^{-1}(b)$是投影$\pi:\mathscr{X}^*\to \bba_{B^*}^n\to B^*$的纤维，以及将这些概形$X_b$看作一个族。（在$B=\spec R$，其中$R=K[t]$或者$K[t]_{(t)}$的情况中，我们能将$\mathscr{X}^*$看作“$\mathbb{A}_K^n$中随着参数$t$改变的子概形族”。）我们问这样一个基本的问题：概形$X_b$在$b$趋向于$0$时候的极限是什么？
 
@@ -378,7 +384,7 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 \[
 	I(\mathscr{X})=I(\mathscr{X}^*)\cap R[x_1,\,\dots,\,x_n].
 \]
-为了再具体些，如果我们取$B=\spec K[t]$，在概形$X_t$上为零的多项式的极限上极限概形$X_0\subset \bba_K^n$为零\footnote{译者注：原文是``the limiting scheme $X_0\subset \bba_K^n$ is cut out by the limits of polynomials vanishing on the schemes $X_t$''.}\nottran ，换句话说，如果我们将理想$I(X_t)\subset K[x_1$, $\dots$, $x_n]$看作$K$\hyp 矢量空间$K[x_1$, $\dots$, $x_n]$的线性子空间，以及令$V\subset K[x_1$, $\dots$, $x_n]$是平面族$I(X_t)$的极限位置\nottran ，则理想$I(X_0)$被$V$所生成。于是，这个极限的定义扩展了第\ref{s.2.3.1}节中用过的朴素极限概念。
+为了再具体些，若取$B=\spec K[t]$，极限概形$X_0\subset \bba_K^n$在概形$X_t$上为零的多项式的极限上为零\footnote{译者注：原文是``the limiting scheme $X_0\subset \bba_K^n$ is cut out by the limits of polynomials vanishing on the schemes $X_t$''.}\nottran ，换句话说，如果我们将理想$I(X_t)\subset K[x_1$, $\dots$, $x_n]$看作$K$\hyp 矢量空间$K[x_1$, $\dots$, $x_n]$的线性子空间，以及令$V\subset K[x_1$, $\dots$, $x_n]$是平面族$I(X_t)$的极限位置\nottran ，则理想$I(X_0)$被$V$所生成。于是，这个极限的定义扩展了第\ref{s.2.3.1}节中用过的朴素极限概念。
 
 举个例子，取$B=\spec K[t]$以及$B^*=B\setminus \{0\}=\spec K[t,t^{-1}]$，以及令$\bba_K^1$的子概形$X_t$包含两个点，坐标分别为$t$和$-t$，即，取$\mathscr{X}^*=V(x^2-t^2)\subset \spec K[t,t^{-1}][x]=\bba_{B^*}^1$. 于是，在$\bba_B^n$中，$\mathscr{X}^*$的闭包$\mathscr{X}$同样被$X=V(x^2-t^2)\subset \spec K[t][x]=\mathbb{A}_B^1$给出，以及$\mathscr{X}$在点$0\in B$的纤维$X_0$就是双重点$X_0=V(x^2)\subset\bba_K^1$.
 
@@ -387,7 +393,62 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 \paragraph*{例子}\addcontentsline{toc}{subsubsection}{例子}
 现在我们遇到的极限的例子都是零维度概形的极限。这里有一些涉及正维的例子。 它们也是有启发性的，因为它们说明了嵌入点如何在簇的极限中自然地出现。
 
-第一个例子是$\mathbb{A}_K^3$中的三条穿过原点的直线，其中$K$是一个域。我们取三条坐标轴
+第一个例子是$\mathbb{A}_K^3$中的三条穿过原点的直线，其中$K$是一个域。我们取三条坐标轴，转动其中一个到另两条直线的平面中，然后问这个族的极限是什么。明确地，在$\bba_K^3=\spec K[x,y,z]$中，我们令$L=V(y,z)$是$x$-轴，$M=V(x,z)$是$y$-轴以及$N_t$是直线
+\[
+	N_t=V(x-y,z-tx).
+\]
+对$t\neq 0$，我们令$X_t=L\cup M\cup N_t$. 曲线$\{X_t\}_{t\neq 0}$构成了基底$B^*=\spec K[t,t^{-1}]$上的一个族$\mathscr{X}^*\subset \bba_{B^*}^3$，我们即是在寻找这个族的极限$X_0$.
+
+这是直接的计算，尽管答案最初可能让人惊讶。三个坐标轴的并的概形是$(xy,xz,yz)$，于是，对$t\neq 0$，概形$X_t$的理想是由线性型的乘积生成的：
+\[
+	I(X_t)=(Q_1,Q_2,Q_3),
+\]
+其中
+\[
+	\begin{aligned}
+		Q_1&=z(z-tx)\\
+		Q_2&=z(z-ty)\\
+		Q_3&=(z-tx)(z-ty).
+	\end{aligned}
+\]
+当我们令$t$趋向于$0$，我们看到极限概形的理想包含$z^2$，这是$Q_1$, $Q_2$和$Q_3$共同的极限。此外，对于$t\neq 0$，理想$I(X_t)$包含$Q_1-Q_3=tyz-t^2xy$以及$Q_2-Q_3=txz-t^2xy$. 于是对$t\neq 0$，理想包含
+\[
+	\frac{Q_1-Q_3}{t}=yz-txy\quad\text{以及}\quad \frac{Q_2-Q_3}{t}=xz-txy.
+\]
+最后，$X_t$的理想包含
+\[
+	x\frac{Q_1-Q_3}{t}-y\frac{Q_2-Q_3}{t}=txy(x-t),
+\]
+因此极限概形的理想包含$xy(x-y)$. 综上，我们有
+\[
+	I(X_0)\supset (xz,yz,z^2,xy(x-t)),
+\]
+可以断言，实际上这还是一个等式。我们一会儿将验证这点，但在这之前，我们需要指出该极限的一个异乎寻常之处：\textit{概形族$\{X_t=L\cup M\cup N_t\}_{t\neq 0}$的极限概形$X_0$并不只是并$L\cup M\cup N_0$.} 事实上，并的理想是
+\[
+	I(L\cup M\cup N_0)=(z,xy(x-y)),
+\]
+于是
+\[
+	I(X_0)=I(L\cup M\cup N_0)\cap (x,y,z)^2.
+\]
+换句话说，极限概形$X_0$在原点处有一个嵌入点。
+
+事实上，这点并不难直接看出，同时反过来也助我们证明等式$I(X_0)=(xz,yz,z^2,xy(x-y))$：所有的概形$X_t$都在原点$(0,0,0)\in\bba_K^3$处有一个三维Zariski切空间，试$X_0$必须也有一个，因为如果$\mathscr{X}\subset \bba_B^n$是任意的闭子概形以及$\sigma:B\to\mathscr{X}$是$\mathscr{X}\to B$的任意截面，Zariski切空间$T_{\sigma(b)}\mathscr{X}$的维数是$b\in B$的一个上半连续函数。这就转而给出了
+\[
+	I(X_0)\subset I(L\cup M\cup N_0)\cap (x,y,z)^2=(xz,yz,z^2,xy(x-t)),
+\]
+继而等式成立。
+
+一个类似的例子是，$\mathbb{A}_K^3$中包含两条不交直线的概形在直线移动到相交于一点时的极限。就像下一个习题所证明的，它们的极限在交点处也有一个嵌入点。
+
+\begin{exe}
+令$L_t$是$\bba_K^3$中由理想$(y,z-t)$定义的直线，而$M$是由$(x,z)$定义的直线。对$t\neq 0$，令$X_t$是它们的并。证明，$X_t$的极限是概形
+\[
+	X_0=\spec K[x,y,z]/(z^2,xz,yz,xy).
+\]
+
+% \pic{13.png}
+\end{exe}
 
 \paragraph*{平坦性}\addcontentsline{toc}{subsubsection}{平坦性}
 
@@ -411,6 +472,16 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 		\item $X$没有支撑于$X_0$的不可约组分或者嵌入组分。
 	\end{compactenum}
 \end{pro}
+
+\proof 我们从(2)和(3)的等价开始，令$\mathscr{X}^*=\pi^{-1}(B^*)\subset \mathscr{X}$. 因为$\mathscr{X}\subset \bba_B^n$是闭的，它包含$\mathscr{X}^*$的闭包，于是纤维$X_0=\pi^{-1}(0)$包含纤维$X_b=\pi^{-1}(b)$当$b\to 0$时的极限，因此，$X_0=\lim_{b\to 0} X_b$等价于$\mathscr{X}=\overline{\mathscr{X}^*}$. 反过来，$X_0$真包含$X_b$的极限当且仅当$\overline{\mathscr{X}^*} \subsetneqq \mathscr{X}$，即，作为闭子概形的并，
+\[
+	\mathscr{X}=\overline{\mathscr{X}^*}\cup X_0
+\]
+是不平凡的。于是(2)和(3)等价。
+
+为了看到(1)与(3)的等价，观察到$\oo_{\mathscr{X},x}$作为$\oo_{B,0}$\hyp 模对每一个$x\in X_0$是平坦的，当且仅当$\oo_{\mathscr{X}}(\mathscr{X})$作为$R$\hyp 模是自由的（见Bourbaki [1972, I.2.4, Porposition 3.ii]；这点不难从这里的环$R$都是主理想整环得到，见Matsumura [1986, Theorem 7.6以及在第50页的逆命题]或者Eisenbud [1995, Corollary 6.3]）。\qed
+
+这个平坦性的解释有多一般呢？首先，
 
 \begin{lem}
 	令$K$是一个域，$B$是一个约态$K$\hyp 概形，$b\in B$是一个闭点，而$\mathscr{X}\subset \bba_{B}^n$是一个闭子概形。 $\mathscr{X}$在点$b$处平坦当且仅当，对每一个非奇异一维$K$\hyp 概形$B'$，每一个闭点$0\in B'$以及任意将$0$变成$b$的态射$\varphi:B'\to B$，纤维$X_b$是纤维$X_{\varphi(b')}$在$b'$趋向于$0$时候的极限，即，对任意将$0$变成$b$的态射$\varphi:B'\to B$，拉回族
