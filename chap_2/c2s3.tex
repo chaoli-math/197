@@ -81,16 +81,16 @@
 作为与$X$对应的理想来定义$X$. 当然，这仅仅把困难转移到了描述什么是理想族的极限上！但这是简单的：在这个例子中，比如，我们可以把它们的极限取为$K[x,y]$
 中（看作$K$上的矢量空间时）余维数为$2$的子空间。这个极限依然是一个理想因为乘法是连续的。在理想的余维数是无限时，一个更精巧的解释是必要的，我们将在遇到一维概形族的极限时以及\ref{s.3.3.2}节在投射情况下再一次遇到极限时讨论这个问题。
 
-为了看看上面说的在实践中是什么意思，首先观察$I_t$生成元$x^2-a(t)x$, $xy-b(t)x$, $xy-a(t)y$以及$y^2-b(t)y$，它们当$t\to 0$的时候有清楚的极限$x^2$, $xy$, $xy$和$y^2$，于是这些多项式应该在$I$中。此外，观察$I_t$包含线性型
+为了看看上面说的在实践中是什么意思，首先观察$I_t$生成元$x^2-a(t)x$, $xy-b(t)x$, $xy-a(t)y$以及$y^2-b(t)y$，它们当$t\to 0$的时候有清楚的极限$x^2$, $xy$, $xy$和$y^2$，于是这些多项式应该在$I$中。此外，观察$I_t$包含线性型\\\vspace{-3em}
+% \begin{wrapfigure}[15]{r}{160pt}\includegraphics[scale=0.5]{chap_2/pics/9.png}\end{wrapfigure}~
 \[
 	a(t)y-b(t)x=(xy-b(t)x)-(xy-a(t)y),
 \]
-因此对$t\neq 0$，同样多项式
+因此对$t\neq 0$，多项式
 \[
 	\frac{a(t)y-b(t)x}{t}=a_1y-b_1x+t(\dots)
 \]
-% \begin{wrapfigure}{r}{160pt}\includegraphics[scale=0.5]{chap_2/pics/9.png}\end{wrapfigure}
-也在$I$中。于是，理想$I$同样也包含它的极限$a_1y-b_1x$，所以有$I\supset (x^2,xy,y^2,a_1y-b_1x)$. 但是上式右侧作为$K[x,y]$的子空间的余维数已经是$2$了。因此$I=(x^2,xy,y^2,a_1y-b_1x)$，以及，相应地，
+同样也在$I$中。于是，理想$I$同样也包含它的极限$a_1y-b_1x$，所以有$I\supset (x^2,xy,y^2,a_1y-b_1x)$. 但是上式右侧作为$K[x,y]$的子空间的余维数已经是$2$了。因此$I=(x^2,xy,y^2,a_1y-b_1x)$，以及，相应地，
 \[
 	\lim_{t\to 0}(X_t)=X_{\alpha,\beta},
 \]
@@ -505,13 +505,15 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 	\end{compactenum}
 \end{pro}
 
-\proof 我们从(2)和(3)的等价开始，令$\mathscr{X}^*=\pi^{-1}(B^*)\subset \mathscr{X}$. 因为$\mathscr{X}\subset \bba_B^n$是闭的，它包含$\mathscr{X}^*$的闭包，于是纤维$X_0=\pi^{-1}(0)$包含纤维$X_b=\pi^{-1}(b)$当$b\to 0$时的极限，因此，$X_0=\lim_{b\to 0} X_b$等价于$\mathscr{X}=\overline{\mathscr{X}^*}$. 反过来，$X_0$真包含$X_b$的极限当且仅当$\overline{\mathscr{X}^*} \subsetneqq \mathscr{X}$，即，作为闭子概形的并，
+\begin{proof}
+我们从(2)和(3)的等价开始，令$\mathscr{X}^*=\pi^{-1}(B^*)\subset \mathscr{X}$. 因为$\mathscr{X}\subset \bba_B^n$是闭的，它包含$\mathscr{X}^*$的闭包，于是纤维$X_0=\pi^{-1}(0)$包含纤维$X_b=\pi^{-1}(b)$当$b\to 0$时的极限，因此，$X_0=\lim_{b\to 0} X_b$等价于$\mathscr{X}=\overline{\mathscr{X}^*}$. 反过来，$X_0$真包含$X_b$的极限当且仅当$\overline{\mathscr{X}^*} \subsetneqq \mathscr{X}$，即，作为闭子概形的并，
 \[
 	\mathscr{X}=\overline{\mathscr{X}^*}\cup X_0
 \]
 是不平凡的。于是(2)和(3)等价。
 
-为了看到(1)与(3)的等价，观察到$\oo_{\mathscr{X},x}$作为$\oo_{B,0}$\hyp 模对每一个$x\in X_0$是平坦的，当且仅当$\oo_{\mathscr{X}}(\mathscr{X})$作为$R$\hyp 模是自由的（见Bourbaki [1972, \uppercase\expandafter{\romannumeral1}.2.4, Porposition 3.\expandafter{\romannumeral2}]；这点不难从这里的环$R$都是主理想整环得到，见Matsumura [1986, Theorem 7.6以及在第50页的逆命题]或者Eisenbud [1995, Corollary 6.3]）。\qed
+为了看到(1)与(3)的等价，观察到$\oo_{\mathscr{X},x}$作为$\oo_{B,0}$\hyp 模对每一个$x\in X_0$是平坦的，当且仅当$\oo_{\mathscr{X}}(\mathscr{X})$作为$R$\hyp 模是自由的（见Bourbaki [1972, \uppercase\expandafter{\romannumeral1}.2.4, Porposition 3.\expandafter{\romannumeral2}]；这点不难从这里的环$R$都是主理想整环得到，见Matsumura [1986, Theorem 7.6以及在第50页的逆命题]或者Eisenbud [1995, Corollary 6.3]）。
+\end{proof}
 
 这个平坦性的解释有多一般呢？首先，平坦性条件在态射$\pi:\mathscr{X}\to B$的定义域\nottran 中是局部性的，所以$\mathscr{X}$和$B$是仿射概形的假设实际上并不失一般性。此外，如果还假设$\mathscr{X}$在$B$上是\textit{有限型}的，这是另一个温和的有限性条件，它将在第\ref{s.3.1.1}节描述，我们还可以进一步将问题约化到$\mathscr{X}$是$\bba_B^n$的一个闭子概形，而$\pi$是投射$\bba_B^n\to B$在$\mathscr{X}$上的限制。所有这些都是次要的假设，在应用到上面的结果中最紧要的限制是我们取$B$是一维非奇异的。然而，我们可以通过以下的引理来扩大这一范围，它刻画了有限型平坦族在约态基上的表现。
 
@@ -523,7 +525,9 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 	在点$0$处平坦。
 \end{lem}
 
-\proof 因为$X_{\varphi(b')}=X'_{b'}$，Proposition \ref{pro:2.29}断言了极限条件$X_b=\lim_{b'\to 0}X_{\varphi(b')}$与$\mathscr{X}'$在$B'$上的平坦性条件是等价的。这就说明了一个方向是清楚的：一般地，如果$\mathscr{X}\to B$是平坦的，而$B'\to B$是任意的态射，纤维积$\mathscr{X}\times_B B'\to B'$是平坦的，见Matsumura [1986, Chapter 2, Section 3]. 另一个方向困难很多，见Raynaud \& Gruson [1971, Cor. 4.2.10].\qed
+\begin{proof}
+因为$X_{\varphi(b')}=X'_{b'}$，Proposition \ref{pro:2.29}断言了极限条件$X_b=\lim_{b'\to 0}X_{\varphi(b')}$与$\mathscr{X}'$在$B'$上的平坦性条件是等价的。这就说明了一个方向是清楚的：一般地，如果$\mathscr{X}\to B$是平坦的，而$B'\to B$是任意的态射，纤维积$\mathscr{X}\times_B B'\to B'$是平坦的，见Matsumura [1986, Chapter 2, Section 3]. 另一个方向困难很多，见Raynaud \& Gruson [1971, Cor. 4.2.10].
+\end{proof}
 
 当Lemma \thethm 的条件满足时，我们将称纤维$X_b$是$\mathscr{X}$在$B$上邻近纤维的\textit{平坦极限}。
 
