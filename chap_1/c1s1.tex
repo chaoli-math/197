@@ -62,14 +62,14 @@
 
 通过正则函数，我们可以将$\spec$修饰成一个拓扑空间，这个拓扑被称为\textit{Zariski拓扑}\index{Zariski!拓扑}. 闭集定义如下，对$R$的任意子集$S$，令
 \[
-	V(S)=\{x\in \spec R\,|\, f(x)=0 \text{对每一个} f\in S\text{都成立}\}=\{[\pp]\in\spec R\,|\, \pp\supset S\}.
+	V(S)=\{x\in \spec R\,|\, \text{$f(x)=0$对每一个$f\in S$都成立}\}=\{[\pp]\in\spec R\,|\, \pp\supset S\}.
 \]
 
 这个定义的动机是使得每个$f\in R$都表现得尽可能像一个连续函数。当然，域$\kappa(x)$没有拓扑，因为它逐点变化让一般意义上的连续无从谈起。但至少，它们都包含了一个零元，于是我们就可以谈$f\in R$在$\spec R$上的零点集，如果$f$像一个连续函数，则零点集应该是一个闭集。因为闭集族相交必须是闭集，我们立即得到了上述定义：$V(S)$就是$S$中所有元素的零点集的交。
 
 为使得所有$V(S)$是闭集，它们的任意交也必须在该族里面。从上面的描述很清楚，对一族集合$S_a$，我们有$\bigcap_a V(S_a)=V(\bigcup_a S_a)$，这正是需要的。此外，如果$I$是$S$生成的理想，则$V(I)=V(S)$.
 
-Zariski拓扑中的一个开集即一个$V(S)$的补。只有一个元素的集合$S$对应的开集有着特殊的地位，本质上是因为它们依旧是某个环的谱。由这个原因，我们有一个特殊的名字与记号。设$f\in R$，定义关联于$f$的\textit{distinguished}\footnote{译者注：这里的英文是`distinguished'，日文wiki翻译为“識別可能”，但如果翻译成“可识别的”似乎不太合适，所以后面正文中出现的`distinguished open set'都当作`basic open set'翻译。}（或者\textit{基本}）开集为
+Zariski拓扑中的一个开集即一个$V(S)$的补。只有一个元素的集合$S$对应的开集有着特殊的地位，本质上是因为它们依旧是某个环的谱。由这个原因，我们有一个特殊的名字与记号。设$f\in R$，定义关联于$f$的{\it distinguished}\footnote{译者注：这里的英文是`distinguished'，日文wiki翻译为“識別可能”，但如果翻译成“可识别的”似乎不太合适，所以后面正文中出现的`distinguished open set'都当作`basic open set'翻译。}（或者\textit{基本}）开集为
 \[
 	X_f=|\spec R|\setminus V(f).
 \]
