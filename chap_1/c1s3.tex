@@ -1,1 +1,119 @@
 \section{相对概形}
+\subsection{纤维积} \label{s.1.3.1}
+
+这里有一个用概形的纤维积描述的，集合关于函数的原像思想的重要拓展。为了准备这个定义，我们首先复习集合范畴的情况。
+
+两个集合$X$和$Y$在第三个集合$S$上的纤维积，在已知一个映射的图
+\[
+	\xymatrix{
+	&X\ar[d]^\varphi\\
+	Y\ar[r]_\psi &S
+	}
+\]
+下，被定义为
+\[
+	X\times_S Y=\{(x,y)\in X\times Y\,:\,\varphi x=\psi y\}.
+\]
+纤维积有时候被叫做$X$（或者关于$X\to S$）到$Y$的\textit{拉回}。这个构造以一种非常有用的方式拓展了许多基础构造：
+
+如果$S$是一个点，则它给出了一般的直积。
+
+如果$X$和$Y$都是$S$的子集，而$\varphi$和$\psi$都是含入映射，则它给出交。
+
+如果$Y\subset S$以及$\psi$是含入，他给出了$Y$在$X$中的原像。
+
+如果$X=Y$，他给出了使得$\varphi$, $\psi$相等的集合，即映射的\textit{等值子}。
+
+\begin{exe}
+	验证这些断言！
+\end{exe}
+
+注意到，$X\times_S Y$与它到$X$和$Y$自然的投射给出了交换图
+\[
+	\xymatrix{
+	X\times_S Y\ar[r]\ar[d]&X\ar[d]^\varphi\\
+	Y\ar[r]_\psi &S
+	}
+\]
+实际上，集合$X\times_S Y$能被下面的泛性质所确定：在所有使得下图交换的$Z$与给定的映射下
+\[
+	\xymatrix{
+	Z\ar[r]\ar[d]&X\ar[d]^\varphi\\
+	Y\ar[r]_\psi &S
+	}
+\]
+$X\times_S Y$与投射是唯一的“最有效的”选择，意即，给定上图中的$Z$，存在唯一的映射$Z\to X\times_S Y$使得图
+\[
+	\xymatrix{
+	Z\ar[dr]\ar[ddr]\ar[drr] & &\\
+	& X\times_S Y \ar[r]\ar[d] &  X \ar[d]^\varphi\\
+	& Y\ar[r]^\psi &  S
+	}
+\]
+交换。
+
+在概形范畴中，我们就\textit{定义}纤维积是一个满足上面泛性质的概形，特别地，泛性质保证了这个概形连同他到$X$和$Y$的投射是唯一的。于是我们能用纤维积来定义直积、交、原像以及等值子！但这就有一个问题，是否作为纤维积的这些对象在概形范畴是存在的？答案是是的，我们下面将描述它的构造。
+
+首先，我们处理仿射情形。回忆仿射概形范畴与交换环范畴对偶，见Corollary \ref{coro.1.41}. 因此，如果我们有概形
+\[
+	X=\spec A,\quad Y=\spec B,\quad S=\spec R,
+\]
+其中$X$, $Y$映到$S$（因此$A$和$B$是$R$\hyp 代数），我们必须定义纤维积$X\times_S Y$为
+\[
+	X\times_S Y=\spec(A\otimes_R B).
+\]
+这是因为自然的图
+\[
+	\xymatrix{
+	A\otimes_R B&A\ar[l]\\
+	B\ar[u]&R\ar[l]\ar[u]_\varphi
+	}
+\]
+有着与纤维积相反的泛性质。时髦一点说法即，张量积即一个交换环范畴的\textit{纤维余积}或者\textit{纤维直和}。
+
+为了检查这个定义是合理的，可以注意到当$Y$是$S$的由$I$定义的闭子概形，即$B=R/I$时，我们有$A\otimes_R B=A/IA$. 于是$X\times_S Y=\spec A/IA$，这就是以前定义过的$Y$在$X$中的原像。
+
+\begin{exe}
+一些简单的特殊例子将在计算纤维积的时候给出巨大的帮助。直接通过代数的张量积的泛性质证明下面的事实：
+
+\begin{compactenum}[(a)]
+\item 对任意的$R$\hyp 代数$S$，我们有$R\otimes_R S=S$.
+\item 若$S$, $T$是$R$\hyp 代数，$I\subset S$是一个理想，于是
+\[
+	(S/I)\otimes_R T=(S\otimes_R T)/(I\otimes 1)(S\otimes_R T).
+\]
+\item 如果$x_1$, $\dots$, $x_n$, $y_1$, $\dots$, $y_m$是不定元，于是
+\[
+	R[\text{$x_1$, $\dots$, $x_n$}]\otimes R[\text{$y_1$, $\dots$, $y_m$}]=R[\text{$x_1$, $\dots$, $x_n$, $y_1$, $\dots$, $y_m$}].
+\]
+\end{compactenum}
+用这些原理来解决习题的剩余部分。
+\begin{compactenum}[(a)] \setcounter{enumi}{3}
+\item 令$m$, $n$是整数。计算纤维积
+\[
+	\spec \zz/(m)\times_{\spec \zz} \spec \zz/(n).
+\]
+\item 计算纤维积$\spec \cc \times_{\spec \rr} \spec \cc$.
+\item 证明，对$R$上的任意多项式环$R[x]$和$R[y]$，我们有
+\[
+	\spec R[x]\times_{\spec R}\spec R[y]=\spec R[x,y].
+\]
+\end{compactenum}
+注意在例子(d)中，纤维积的支集是两个对应支集的纤维积，但是这在(e)和(f)中并不正确。
+\begin{compactenum}[(a)] \setcounter{enumi}{6}
+\item 考虑环同态
+\[
+	R[x]\to R;\quad x\mapsto 0
+\]
+以及
+\[
+	R[x]\to R[y];\quad x\mapsto y^2.
+\]
+证明关于这些映射，我们有
+\[
+	\spec R[y]\times_{\spec R[x]}\spec R=\spec R[y]/(y^2).
+\]
+\end{compactenum}
+
+在一般的情况中，我们用仿射概形$\spec R_\rho$来覆盖$S$，
+\end{exe}
