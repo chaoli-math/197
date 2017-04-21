@@ -114,6 +114,26 @@ $X\times_S Y$与投射是唯一的“最有效的”选择，意即，给定上�
 	\spec R[y]\times_{\spec R[x]}\spec R=\spec R[y]/(y^2).
 \]
 \end{compactenum}
+\end{exe}
 
 在一般的情况中，我们用仿射概形$\spec R_\rho$来覆盖$S$，
+
+
+\subsection{$S$\hyp 概形范畴}
+
+就像在集合范畴里面一样，我们能用纤维积得到绝对积，通过取$S$为概形范畴的终对象，终对象即一个概形$S$使得每一个概形都有到$S$唯一的态射。由Exercise \ref{exe.1.42}，概形范畴的终对象是$\spec \zz$. 然而，绝对积有着许多更加惊奇的性质。我们已经在Exercise \ref{exe.1.46}(d) 中看到，（当$m$和$n$互素时）两个非空集合的积可能是空的！概形的积同样还有其他奇怪的特性：比如，一个不可约概形的维度能被定义为其任意仿射开集的坐标环的Krull维度。我们可能希望两个概形的积
+\[
+	X\times Y=X\times_{\spec \zz} Y
+\]
+的维度是$X$和$Y$的维度的和。但实际上，我们有下题中的结论。
+
+\begin{exe}
+证明，如果$X=\spec \zz[x]$以及$Y=\spec \zz[y]$，那么
+\[
+	\dim X\times Y=\dim X+\dim Y-\dim \spec \zz=\dim X+\dim Y-1.
+\]
+\end{exe}
+
+\begin{exe}
+令$K$是一个域。如果$X$和$Y$是非空$K$\hyp 概形，于是在$K$\hyp 概形范畴，积$X\times Y=X\times_{\spec K}Y$是非空的。
 \end{exe}
