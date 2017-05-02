@@ -100,7 +100,7 @@ $\spec R$几乎不会是一个Hausdorff空间，它的开集太大了。实际�
 
 \subsection{插曲：层理论}
 
-令$X$是任意拓扑空间。$X$上的一个\textit{预层}$\mathscr{F}$是对每一个$X$中的开集$U$都附上一个集合，记作$\mathscr{F}(U)$, 以及对每一列开集$U\subset V\subset X$，有一个\textit{限制映射}
+令$X$是任意拓扑空间。$X$上的一个\textit{预层}\index{预层}$\mathscr{F}$是对每一个$X$中的开集$U$都附上一个集合，记作$\mathscr{F}(U)$, 以及对每一列开集$U\subset V\subset X$，有一个\textit{限制映射}
 \[
 	\res_{V,U}:\ff(V)\to \ff(U)
 \]
@@ -112,7 +112,7 @@ $\spec R$几乎不会是一个Hausdorff空间，它的开集太大了。实际�
 \[
 	\res_{V,U}\circ \res_{W,V}=\res_{W,U}.
 \]
-$\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的元素被称为\textit{整体截面}。
+$\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的元素被称为\textit{整体截面}\index{截面!整体}。
 
 表述这个定义的另一种方式是将\textit{预层}定义为一个$X$上的开集范畴（对每一个包含$U\subset V$有一个态射$U\to V$）到集合范畴的反变函子。改变目标范畴到交换群范畴，我们就得到了交换群预层，类似地，可以将目标范畴改成环、代数等。
 
@@ -125,7 +125,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 任取包含$U\supset V$，有一个环同态$\alpha:\oo(U)\to\oo(V)$，通过$\alpha$将$\ff(V)$看成$\oo(U)$\hyp 模，还应有一个$\oo(U)$\hyp 模同态$\ff(U)\to\ff(V)$.
 \end{quote}
 
-一个（集合、交换群、环、模等）预层如果他还满足被称为\textit{层公理}的一些新条件时，它被称为一个\textit{层}。这个条件是，对每一个$U\subset X$的开覆盖$U=\bigcup_{a\in A}U_a$，以及任意一族
+一个（集合、交换群、环、模等）预层如果他还满足被称为\textit{层公理}\index{层!公理}的一些新条件时，它被称为一个\textit{层}。这个条件是，对每一个$U\subset X$的开覆盖$U=\bigcup_{a\in A}U_a$，以及任意一族
 \[
 	f_a\in \ff(U_a)\quad \text{对每一个}a\in A
 \]
@@ -160,7 +160,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 （对那些熟悉矢量丛的读者。）令$V$是一个拓扑空间$X$上的矢量丛。沿着$V$的截面层是$X$上的连续函数层上的一个模层。（模层一般而言在这个方式上可以看成矢量丛的推广。）
 \end{exe}
 
-另一个描述层的方式是它的茎（stalk）。给定任意预层$\ff$以及一个点$x\in X$，我们定义$\ff$在点$x$处的茎$\ff_x$为在所有包含$x$的开集$U$上$\ff(U)$的\textit{直极限}，
+另一个描述层的方式是它的茎（stalk）。给定任意预层$\ff$以及一个点$x\in X$，我们定义$\ff$在点$x$处的\textit{茎}\index{茎}$\ff_x$为在所有包含$x$的开集$U$上$\ff(U)$的\textit{直极限}\index{极限!直}，
 \[
 	\ff_x={\varinjlim}_{x\in U}\ff(U)=\left\{
 		\parbox{20em}{
@@ -250,8 +250,8 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 	\end{compactitem}
 \end{pro}
 
-\noindent\textit{证明的开始}. 
-	对每一个$X$的开集$U$，定义$\ff(U)$为集合$\ff(V)$们的逆极限，其中$V$跑遍所有包含于$U$的基本开集：
+\begin{proof}[证明的开始]
+	对每一个$X$的开集$U$，定义$\ff(U)$为集合$\ff(V)$们的逆极限\index{极限!逆}，其中$V$跑遍所有包含于$U$的基本开集：
 	\[
 	\begin{aligned}
 	\ff(U)&={\varprojlim}_{V\subset U,V\in\mathscr{B}}\ff(V)\\
@@ -261,7 +261,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 	\end{aligned}
 	\]
 	限制映射直接由逆极限的泛性质所定义。
-\qed
+\end{proof}
 
 \begin{exe}
 	检验层公理以完成上述命题的证明，并证明，在$U\in \mathscr{B}$上，新定义的$\ff$与原本的层的截面集相同。
