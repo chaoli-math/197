@@ -45,12 +45,12 @@
 
 经典语言下，子概形$X_{\alpha,\beta}$被称作包含点$(0,0)$以及一个在$\alpha x+\beta y=0$方向上“无穷接近的点”，我们下面在传统图像中以一个小箭头画出$X_{\alpha,\beta}$：
 
-% \pic{6.png}
+\begin{center}\includegraphics[scale=\scale,bb=0 0 400 274]{chap_2/pics/6.png}\end{center}
 
 \noindent 这是打算用一个切空间的可区分的一维子空间在平面上来表示这个点（尽管箭头给出了印象，然而实际上没有可区分的切矢量）。\nottran
 \end{exa}
 
-% \begin{wrapfigure}{r}{140pt}\includegraphics[scale=0.5]{chap_2/pics/7.png}\end{wrapfigure}
+\begin{wrapfigure}{r}{140pt}\includegraphics[scale=0.5,bb=0 0 266 191]{chap_2/pics/7.png}\end{wrapfigure}
 在实践中，概形$X_{\alpha,\beta}$会怎么出现呢？一种方式是曲线的相交。比如，当我们想要处理一条直线$L$与一条圆锥曲线$C$相切，显然，只在集合论意义上处理它们的相交是不令人满意的：
 一条直线与一条圆锥曲线应该相交两次。甚至，说$C\cap L$的交点“重数为二”也不是完全令人满意的：比如，交点应该决定直线$L$，正如在非相切的例子中那般。真正令人满意的定义是，$C\cap L$是由理想$I_C$与理想$I_L$的和决定的$\mathbb{A}_K^2$的子概形，比如使得直线$y=0$以及抛物线$y=x^2$相交于子概形$X_{0,1}=\spec K[x,y](x^2,y)$. 作为平面中唯一包含于$X_{0,1}$的直线，这将完全决定$L$. 
 
@@ -72,7 +72,7 @@
 	a(t)=a_1t+a_2t^2+\cdots,\quad b(t)=b_1t+b_2t^2+\cdots.
 \]
 
-% \pic{8.png}
+\begin{center}\includegraphics[scale=\scale,bb=0 0 399 296]{chap_2/pics/8.png}\end{center}
 
 那么$X_t=\{(0,0),(a(t),b(t))\}$在$t\to 0$的极限是什么呢？使用概形，我们能采用一种不常见的观点，在如下的合适表述下，使它的极限依然是两个点：它是一个仿射概形$X$，其坐标环还是一个$K$上的二维矢量空间。可以取下面这族理想在$t\to 0$下的极限
 \[
@@ -81,8 +81,8 @@
 作为与$X$对应的理想来定义$X$. 当然，这仅仅把困难转移到了描述什么是理想族的极限上！但这是简单的：比如在这个例子中，我们可以把它们的极限取为$K[x,y]$
 中一个（看作$K$上的矢量空间时）余维数为$2$的子空间。这个极限依然是一个理想因为乘法是连续的。在理想的余维数是无限时，一个更精巧的解释是必要的，我们将在遇到一维概形族的极限时以及\ref{s.3.3.2}节在射影情况下再一次遇到极限时讨论这个问题。
 
-为了看看上面说的在实践中是什么意思，首先观察$I_t$生成元$x^2-a(t)x$, $xy-b(t)x$, $xy-a(t)y$以及$y^2-b(t)y$，它们当$t\to 0$的时候有清楚的极限$x^2$, $xy$, $xy$和$y^2$，于是这些多项式应该在$I$中。此外，观察$I_t$包含线性型\\\vspace{-3em}
-% \begin{wrapfigure}[15]{r}{160pt}\includegraphics[scale=0.5]{chap_2/pics/9.png}\end{wrapfigure}~
+为了看看上面说的在实践中是什么意思，首先观察$I_t$生成元$x^2-a(t)x$, $xy-b(t)x$, $xy-a(t)y$以及$y^2-b(t)y$，它们当$t\to 0$的时候有清楚的极限$x^2$, $xy$, $xy$和$y^2$，于是这些多项式应该在$I$中。此外，观察$I_t$包含线性型\\\vspace{-3.2em}
+\begin{wrapfigure}[15]{r}{160pt}\vspace{-1em}\includegraphics[scale=0.5,bb=0 0 305 271]{chap_2/pics/9.png}\end{wrapfigure}~
 \[
 	a(t)y-b(t)x=(xy-b(t)x)-(xy-a(t)y),
 \]
@@ -131,7 +131,7 @@
 	\begin{compactenum}[(i)]
 		\item 证明，$\mathbb{A}_K^2$的由理想$(y-x^2,xy)$给出的子概形来自于在圆锥曲线$y=x^2$三个点的极限，这个子概形同构于上面的$X$，但是不包含$\mathbb{A}_K^2$的任意直线。
 
-		% \pic{10.png}
+		\begin{center}\includegraphics[scale=\scale,bb=0 0 447 81]{chap_2/pics/10.png}\end{center}
 
 		\item 证明，来自于当两个点以两个不同的方向趋向于第三个点极限的$\mathbb{A}_K^2$的子概形同构于上面的$Y$.
 	\end{compactenum}
@@ -244,7 +244,7 @@
 
 将$X$具象为一条由$y=0$定义的直线与一个非约化点的并是比较方便的，比如，由理想$(x^2,xy,y^2)$定义的“原点的一阶邻域”。
 
-% \pic{11.png}
+\begin{center}\includegraphics[scale=\scale,bb=0 0 410 59]{chap_2/pics/11.png}\end{center}
 
 这样的准素分解对任意概形是存在的：我们这里简单地回顾一下代数基础知识。更多的细节，比如可见，Eisenbud [1995]; Atiyah \& Macdonald [1969]或者是这些参考文献中可能最平易近人的，Northcott [1953].
 
@@ -377,7 +377,7 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 
 考虑一个$\bba_{B^*}^n=\bba_\zz^n\times B^*$的闭子概形$\mathscr{X}^*$，我们可以将其看作一个由$B^*$参数化的闭仿射概形族，即，对每一个$b\in B^*$，令$X_b=\pi^{-1}(b)$是投影$\pi:\mathscr{X}^*\to \bba_{B^*}^n\to B^*$的纤维，以及将这些概形$X_b$看作一个族。（在$B=\spec R$，其中$R=K[t]$或者$K[t]_{(t)}$的情况中，我们能将$\mathscr{X}^*$看作“$\mathbb{A}_K^n$中随着参数$t$改变的子概形族”。）我们问这样一个基本的问题：概形$X_b$在$b$趋向于$0$时候的极限是什么？
 
-% \pic{12.png}
+\begin{center}\includegraphics[scale=\scale,bb=0 0 479 335]{chap_2/pics/12.png}\end{center}
 
 答案，也是唯一可能的答案，足够简单：因为概形族$X_b$的极限在任何合理的意义下都必须纳入一个包含所有概形$X_b$的族中，我们取$\mathscr{X}\subset \mathbb{A}_B^n$为$\mathscr{X}^*$在$\bba_B^n$中的闭包$\overline{\mathscr{X}^*}$，以及取概形族的极限$\lim_{b\to 0}X_b$为$\mathscr{X}$在点$0\in B$处的纤维$X_0$.
 
@@ -448,7 +448,7 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 	X_0=\spec K[x,y,z]/(z^2,xz,yz,xy).
 \]
 
-% \pic{13.png}
+\begin{center}\includegraphics[scale=\scale,bb=0 0 643 222]{chap_2/pics/13.png}\end{center}
 \end{exe}
 
 下面的习题说明了，嵌入点在极限中出现绝不是偶然：
@@ -615,7 +615,7 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 \]
 给出的概形。
 
-% \pic{14.png}
+\begin{center}\includegraphics[scale=\scale,bb=0 0 684 279]{chap_2/pics/14.png}\end{center}
 
 \begin{exe}
 如果$p$, $q$是互素的多项式，于是环

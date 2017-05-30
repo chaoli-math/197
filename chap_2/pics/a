@@ -1,0 +1,7 @@
+#!/bin/bash
+# Script follows here:
+for file in `find -name "*.png"`;do
+	echo "$file"
+	convert "$file" hh.pdf ; gs -sDEVICE=bbox -dNOPAUSE -dBATCH hh.pdf | grep %%BoundingBox | echo
+done
+rm hh.pdf
