@@ -1,6 +1,0 @@
-#!/bin/bash
-# Script follows here:
-for file in `find -name "*.eps"`;do
-	convert "$file" "$file".pdf
-done
-rm *.eps
