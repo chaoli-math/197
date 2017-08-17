@@ -56,4 +56,6 @@ p.s 2. 由于zhmakeindex已知的问题，无法很好地处理多音字，所�
 
 p.s. 思源宋体的较之Fandol的宋体扁一些，所以在`defs.tex`文件中新建了命令`\hyp`来实现连字符，进而可以对其微调使得诸如“K-模”中连字符的位置更加合适。这点也是默认注释的。将其开启需将`\renewcommand{\hyp}{\raisebox{.15em}{-}}`的注释也取消掉。
 
+----
 
+p.s. 增加了moha的字体，见：https://github.com/chaoxu/naivemoha . 代码有所魔改。
