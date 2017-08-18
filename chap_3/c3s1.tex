@@ -43,13 +43,48 @@ Zariski拓扑并不Hausdorff这点还有着其他令人不爽的结果。回忆�
 
 \begin{exe}
 \begin{compactenum}[(a)]
-\item 令$Y$是在域$K$上的具有双重原点的直线，正如在Exercise \ref{exe:1.44}中定义的那样，以及令$\varphi_1$, $\varphi_2:\mathbb{A}_K^1\to Y$是两个显然的含入映射，证明$\varphi_1$和$\varphi_2$相等的点（仅作为拓扑空间间的连续映射）构成的集合不是闭的。
-\item 现在令$X=Y\times_K Y$以及$\varphi$和$\psi$是两个到$X$到$Y$的投射。证明，$\varphi$和$\psi$相等的点构成的集合不是闭的。证明，使得$\varphi$和$\psi$相等的闭点构成的集合也不是闭的。所以这个病态现象并不是概形特有的，它在簇的范畴中已经出现了。
+\item 令$Y$是在域$K$上的具有双重原点的直线，正如在Exercise \ref{exe:1.44}中的定义，以及令$\varphi_1$, $\varphi_2:\mathbb{A}_K^1\to Y$是两个显然的含入映射，证明$\varphi_1$和$\varphi_2$相等的点（仅作为拓扑空间间的连续映射）构成的集合不是闭的。
+\item 现在令$X=Y\times_K Y$以及$\varphi$和$\psi$分别是两个到$X$到$Y$的典范投射。证明，$\varphi$和$\psi$相等的点构成的集合不是闭的。证明，使得$\varphi$和$\psi$相等的闭点构成的集合也不是闭的。所以，这个病态现象并不是概形特有的，它在簇范畴中已经出现了。
 \end{compactenum}
 \end{exe}
 
-如果$X$是一个仿射概形，这样的病态现象并不会出现，反之，当$X$是一个射影概形的时候，它将会出现。
-
+这样的病态现象在$X$是一个仿射概形时并不会出现，同样，当$X$是一个射影概形的时候，这样的事情也被证实是不会出现的。这些概形所具有的理想性质，正是对应的流形上Hausdorff性的最重要结果之一（分离性），它表为：$X$作为一个概形在$K$上是\textit{分离的}。一般地，给定概形间的任意的映射$\alpha:X\to S$，我们定义\textit{对角}子概形$\Delta\subset X\times_S X$如下：局部地，在$X\times_S X$的每一个仿射开集上
 \[
-	X\supset \spec A\xrightarrow{\alpha|_{\spec A}}\spec B\subset S
+	X\supset \spec A\xrightarrow{\alpha|_{\spec A}}\spec B\subset S,
 \]
+它由所有形如
+\[
+a\otimes 1 - 1\otimes a \in A\otimes_B A
+\]
+的元素生成的理想$I$所定义。接着，我们称$\alpha$是\textit{分离的}，或者说$X$是\textit{在$S$上分离的概形}，如果$\Delta$是$X\times_S X$的一个闭子概形。
+
+\begin{exe}
+令$Y\to S$是拓扑空间之间的一个映射，然后令
+\[
+	\Delta \subset Y\times_S Y
+\]
+是其对角。证明，如果$\Delta$是一个闭集，那么对任意的交换图
+\[
+	\xymatrix{
+		X\ar@<0.3ex>[rr]^\varphi \ar@<-0.3ex>[rr]_\psi\ar[dr] &&Y\ar[ld]\\
+		&S&
+	}
+\]
+$X$中使得$\varphi$和$\psi$相等的点集是一个闭集。现在证明对概形正则映射的相似引理：证明，存在一个自然定义的（即，极大的）闭子概形使得限制在上面$\varphi$和$\psi$是相同的。
+\end{exe}
+
+\begin{exe}
+	令$X$是一个在$S$上分离的概形。证明$X$的（闭或开）子概形依然在$S$上分离。
+\end{exe}
+
+\begin{exe}
+	注意，从对角子概形的定义来看，仿射态射是分离的。
+\end{exe}
+
+我们在下面将看到射影概形（等等就会定义）同样是分离的，因此，至少这些Hausdorff空间的性质对它们也是成立的。
+
+在经典的仿射簇的情形中（即使简单如平面曲线），在上个世纪初就意识到，得到一些表现得像一个紧的对象的东西（实际上，在复数域上的仿射簇的情形中，在通常的拓扑下就是紧的），最简单的方式是取一个仿射簇在射影空间的闭包。事实证明，如果$\varphi:X\to Y$是一个射影簇之间的映射，那么$\varphi$确实会将$X$的闭子簇映成$Y$的闭子簇。稍一般些，如果我们取这样一个映射以及一个任意的簇$Z$，得到
+\[
+	\psi:=\varphi\times 1_Z:X\times Z\to Y\times Z,
+\]
+则$\psi$将$X\times Z$的闭子簇映到$Y\times Z$的闭子簇。事实证明，\textit{这个性质连同分离性是使得射影概形如此有用的核心性质}。
