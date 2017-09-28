@@ -1,8 +1,8 @@
 % !TeX program = XeLaTeX
 \documentclass[9pt,svgnames]{extbook}
 \input{structure}
-% \usepackage[fontset=windows]{ctex}
-\usepackage[fontset=fandol]{ctex}
+\usepackage[fontset=windows]{ctex}
+% \usepackage[fontset=fandol]{ctex}
 	% \CTEXoptions[today=old]
 	% \CTEXoptions[contentsname=Table of Contents]
 \usepackage{paralist,wrapfig}
@@ -22,16 +22,15 @@
 \input{defs}
 	\newcommand{\cc}{\mathbb{C}}
 
-% \setCJKmainfont[
-% 	ItalicFont = AdobeKaitiStd-Regular ,
-% 	BoldFont = SourceHanSerifSC-Bold ,
-% ]{SourceHanSerifSC-Regular}
+\setCJKmainfont[
+	ItalicFont = KaiTi ,
+	BoldFont = SourceHanSerifSC-Bold ,
+]{NSimSun}
+\setCJKsansfont{Inziu IosevkaCC SC}
 % \renewcommand{\hyp}{\raisebox{.1em}{-}}
 % \renewcommand{\textit}[1]{{\raisebox{-.05ex}{\scalebox{1.05}{\it #1}}}}
 
 \def\scale{0.5}
-\newcommand{\picc}[1]{\begin{center}\includegraphics[scale=0.5]{#1}\end{center}}
-\newcommand{\pic}[1]{\picc{#1}}
 
 \begin{document}
 \begin{titlepage}
