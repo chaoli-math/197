@@ -45,10 +45,12 @@
 
 经典语言下，子概形$X_{\alpha,\beta}$被称作由点$(0,0)$以及一个在$\alpha x+\beta y=0$方向上“无穷接近的点”组成，我们下面在传统图像中以一个小箭头画出$X_{\alpha,\beta}$：
 \begin{center}\includegraphics[scale=\scale,bb=0 0 400 274]{\PICDIR/6.png}\end{center}
-上图是想用一点连同此处切空间的一个可区分的一维子空间在平面上那个点处来表示$X_{\alpha,\beta}$（尽管箭头给了我们切矢量可区分的印象，然而实际上并没有可区分的切矢量）\footnote{译者注：原文是``This is intended to represent a point with a distinguished one-dimensional subspace of the tangent space to the plane at that point (there is actually no distinguished tangent vector, despite the impression given by the arrow).''}。
+上图是想用一点连同此处切空间的一个可区分的一维子空间在平面上那个点处来表示$X_{\alpha,\beta}$（尽管箭头给了我们切矢量可区分的印象，然而实际上并没有可区分的切矢量）%\footnote{译者注：原文是``This is intended to represent a point with a distinguished one-dimensional subspace of the tangent space to the plane at that point (there is actually no distinguished tangent vector, despite the impression given by the arrow).''}
+。
 \end{exa}
 
-\begin{wrapfigure}{r}{140pt}\vspace{-1em}\includegraphics[scale=0.5,bb=0 0 266 191]{\PICDIR/7.png}\end{wrapfigure}
+\wrapa
+
 在实践中，概形$X_{\alpha,\beta}$会怎么出现呢？一种方式是曲线的相交。比如，当我们想要处理一条直线$L$与一条圆锥曲线$C$相切，显然，只在集合论意义上处理它们的相交是不令人满意的：
 一条直线与一条圆锥曲线应该相交两次。甚至，说$C\cap L$的交点“重数为二”也不是完全令人满意的：比如，交点应该决定直线$L$，正如在非相切的例子中那般。真正令人满意的定义是，$C\cap L$是由理想$I_C$与理想$I_L$的和决定的$\mathbb{A}_K^2$的子概形，比如使得直线$y=0$以及抛物线$y=x^2$相交于子概形$X_{0,1}=\spec K[x,y](x^2,y)$. 作为平面中唯一包含于$X_{0,1}$的直线，这将完全决定$L$. 
 
@@ -94,7 +96,7 @@
 \]
 其中$\alpha=b_1$以及$\beta=-a_1$.
 
-\begin{wrapfigure}[5]{r}{160pt}\vspace{-5em}\includegraphics[scale=0.5,bb=0 0 305 271]{\PICDIR/9.png}\end{wrapfigure}
+\wrapb
 \indent 从这个例子我们看到，$X$作为$\mathbb{A}_K^2$的子概形，“记住”了$(a(t),b(t))$趋向$(0,0)$的方向：我们认为它包含原点以及原点处沿着直线$a_1y-b_1x=0$的切方向。这条直线是连接$(0,0)$以及$(a(t),b(t))$的直线$L_t$的极限，这就是说，这是被参数化为$(a(t),b(t))$的曲线在原点处的切线，正如右图所示。
 
 我们将在\ref{s.2.3.4}节看到如何推广极限的概念。

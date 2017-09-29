@@ -34,7 +34,7 @@
 
 一个开集$U\subset X$上的\textit{正则函数}是层$\oo_X$的在$U$上的截面。一个\textit{整体正则函数}是一个$X$上的正则函数。
 
-结构层$\oo_X$在点$x\in X$处的茎$\oo_{X,x}$被称为$\oo_X$的\textit{局部环}。而$\oo_{X,x}$的剩余类域被记作$\kappa(x)$. 如同第 {\ref{s:1.1.1}} 节，$\oo_X$的一个截面能被想成一个取值于这些域$\kappa(x)$的“函数”：如果$f\in\oo_X(U)$以及$x\in U$，则$f$在点$x$处的值即$f$在复合映射
+结构层$\oo_X$在点$x\in X$处的茎$\oo_{X,x}$被称为$\oo_X$的\textit{局部环}。而$\oo_{X,x}$的剩余类域被记作$\kappa(x)$. 如同第 \ref{s:1.1.1} 节，$\oo_X$的一个截面能被想成一个取值于这些域$\kappa(x)$的“函数”：如果$f\in\oo_X(U)$以及$x\in U$，则$f$在点$x$处的值即$f$在复合映射
 \[
 	\oo_X(U)\to \oo_{X,x}\to \kappa(x)
 \]
@@ -142,25 +142,38 @@ $X_\text{red}$同样可以由拓扑空间$|X|$连同结构层$\oo_{X_\text{red}}
 
 在环理论中，Noether性是非常基本的，而它在概形理论中的拓展也是同样基本的：我们称一个概形是Noether的，如果它可以被有限个仿射开子概形覆盖，其中每个仿射开子概形都是某个Noether环的谱。就像通常的情况，我们可以检查这个性质与选取的覆盖是无关的。
 
+在概形$X$的一点$x$处的芽有一个自然的定义，它是所有包含这点的开子概形的交。这体现为$X$在点$x$处的\textit{局部环}，之前定义为
 \[
 	\oo_{X,x}:={\varinjlim}_{x\in U}\oo_X(U).
 \]
-
+它的极大理想$\mm_{X,x}$是所有在$x$处为零的截面的集合。这个局部环是一个简单的对象：为计算它（特别地，展示它是一个局部环，极大理想就是我们给出的极大理想），我们先用一个$x$的仿射开集来代替$X$，于是假设$X=\spec R$以及$x=[\pp]$. 我们接着把直极限中的开集取作基本开集$\spec R_f$使得$f(x)\neq 0$，即$f\not\in \pp$. 于是
 \[
-	\oo_{X,x}:={\varinjlim}_{f\not\in \pp}R_f=R_{\pp}.
+	\oo_{X,x}:={\varinjlim}_{f\not\in \pp}R_f=R_{\pp}
 \]
-
+以及
 \[
-	\mm_{X,x}:={\varinjlim}_{f\not\in \pp}\pp R_f=\pp R_{\pp}.
+	\mm_{X,x}:={\varinjlim}_{f\not\in \pp}\pp R_f=\pp R_{\pp},
 \]
+就是$R$在$\pp$处的局部化。我们可以认为$X$在$x$处的芽是$\spec \oo_{X,x}$，这样的概形我们将在下一章里面研究。
+
+概形在一点处的局部环的概念在整个概形理论里面是十分关键的。我们下面会给出一些例证，来展示如何使用局部环定义一些几何概念。令$X$是一个概形。
+
+\vspace{0.5em}
+（1） \textit{$X$在一点$x\in X$处的维数}，记作$\dim(X,x)$，是局部环$\oo_{X,x}$的（Krull）维数，即$\oo_{X,x}$中素理想链的长度的上确界。（链的长度是严格包含的个数。）$X$的\textit{维数}，记作$\dim X$，是这些局部维数的上确界。
 
 \begin{exe}
 	零维仿射概形的支集是有限的。
 \end{exe}
 
+（2） $X$在$x$处的\textit{Zariski余切空间}是$\mm_{X,x}/\mm_{X,x}^2$，看作剩余类域$\kappa(x)=\oo_{X,x}/\mm_{X,x}$上的矢量空间。这个矢量空间的对偶空间被称为$x$处的\textit{Zariski切空间}。
+
+为理解这个定义，首先考虑一个非奇异的复代数簇$X$. 此时，$X$在点$p$处的切空间的定义是明确的：他是它这点的解析函数芽映到$\cc$的导子的矢量空间。如果$\mm_{X,p}$是在点$p$处为零的正则函数构成的理想，那么这样一个导子就将诱导出一个$\cc$-线性映射$\mm_{X,p}/\mm_{X,p}^2\to \cc$，于是切空间可以通过这种方式等同为$\Hom_\cc(\mm_{X,p}/\mm_{X,p}^2,\cc)=(\mm_{X,p}/\mm_{X,p}^2)^*$. 见Eisenbud [1995, Ch. 16]. Zariski洞察到，后一个矢量空间是任意簇上的不管光滑还是奇异的点上的切空间的正确类比，Grothendieck随后将这个想法应用到了概形上，就像上面给出的定义。我们将在第 \ref{chap:6} 章以一种新的视角回到这个构造。
+
 \begin{exe}
 如果$K$是一个域，则概形$\spec K[x_1$, $\dots$, $x_n]$在点$[(x_1$, $\dots$, $x_n)]$处的Zariski切空间是$n$维的。
 \end{exe}
+
+（3） $X$被称为在点$x\in X$处\textit{非奇异}（或\textit{正则}）如果$X$在$x$处的Zariski切空间的维数等于$\dim(X,x)$，否则，Zariski切空间的维数一定是会更大，此时我们称$X$在$x$处奇异。在我们最感兴趣的情况中，$X$是Noether的，此时$X$在$x$处非奇异当且仅当局部环$\oo_{X,x}$是一个正则局部环。历史上，这个基础的概念代表了几何代数化的重要一步。他被Zariski在其经典论文[1947]中所采用（值得注意，这是在Krull引入正则局部环的概念来拓展多项式环性质的几年后，是少数几个代数学家在基础几何概念上击败几何学家的例子之一）。
 
 \begin{exe}
 一个零维Noether概形是非奇异的，当且仅当他是约态点的并。
@@ -168,7 +181,31 @@ $X_\text{red}$同样可以由拓扑空间$|X|$连同结构层$\oo_{X_\text{red}}
 
 \subsection{态射}
 
-下面定义概形的态射。在经典理论中，仿射簇之间的正则函数由
+下面定义概形的态射。在经典理论中，仿射簇之间的正则映射由其坐标环之间的相反方向的映射给出。这个对应使得两类对象，仿射簇之间的正则映射以及其坐标代数之间的代数同态，是等价的。下面给出的定义拓展了这点：我们将看到仿射概形之间的映射仅由对应的环之间的（方向相反的）映射给出。
+
+\nottran
+
+为了理解这个定义背后的动机，再一次考虑可微流形的例子。一个可微流形之间的连续函数$\psi:M\to N$是可微的，当且仅当，对每一个开集$U\subset N$上的可微函数$f$，拉回$\psi^\# f:=f\circ \psi$是一个在$\psi^{-1}U\subset M$上的可微函数。我们很容易用概形的语言来表述这点。任意连续函数$\psi:M\to N$诱导了$N$上的层之间的映射
+\[
+	\psi^\#:\mathscr C(N)\to \psi_*\mathscr C(M),
+\]
+他将开集$U\subset N$上的连续函数$f\in \mathscr C(N)(U)$变成了拉回$f\circ \psi\in \mathscr C(M)(\psi^{-1}U)=(\psi_*\mathscr C(M))(U)$. 在这些术语下，一个可微映射$\psi:M\to N$可以定义为一个连续映射$\psi:M\to N$使得诱导的映射$\psi^\#$将子层$\mathscr C\infty(N)\subset \mathscr C(N)$映到子层$\psi_*\mathscr C\infty(M)\subset \psi_*\mathscr C(M)$. 即，我们要求存在交换图
+\[
+	\xymatrix{
+	\mathscr C(N)\ar[r]^{\psi^\#}&\psi_*\mathscr C(M)\\
+	\mathscr C^\infty(N)\ar[r]^{\psi^\#}\ar@{^{(}->}[u]&\psi_*\mathscr C^\infty(M)\ar@{^{(}->}[u]
+	}
+\]
+
+\nottran
+
+\begin{defi}
+一个概形$X$和$Y$之间的\textit{态射}，或\textit{映射}是一个有序对$(\psi,\psi^\#)$，其中$\psi:X\to Y$是一个支集之间的连续映射而
+\[
+	\psi^\#:\oo_Y\to \psi_*\oo_X
+\]
+是一个$Y$上的层之间的映射，满足对每一点$p\in X$以及$Y$中$q=\psi(p)$的任意邻域$U$，一个截面$f\in\oo_Y(U)$在$q$为零当且仅当$\psi_*\oo_X(U)=\oo_X(\psi^{-1}U)$上的截面$\psi^\# f$在点$p$为零。
+\end{defi}
 
 \begin{thm}
 对任意的概形$X$以及任意的环$R$，态射
@@ -202,7 +239,17 @@ $X_\text{red}$同样可以由拓扑空间$|X|$连同结构层$\oo_{X_\text{red}}
 \]
 定义的到$X$的自然映射。当然，含入使得$[p]$是一个闭子概形当且仅当$\pp$是$R$的一个极大理想（一般地，$[\pp]$是一个闭子概形的无限开子概形的交）。
 
-如果$\psi:Y\to X$是一个仿射概形间的态射，$X=\spec R$和$Y=\spec T$，$X'$是由$R$的理想$I$定义的$X$的闭子概形，于是，我们定义$\psi$在$X'$上的原像（有时，为了强调这个构造，我们会说“概形理论的原像”）$\psi^{-1}X'$为$Y$中由$T$的理想$\varphi(I)T$定义的闭子概形。
+如果$\psi:Y\to X$是一个仿射概形间的态射，$X=\spec R$和$Y=\spec T$，$X'$是由$R$的理想$I$定义的$X$的闭子概形，于是，我们定义$\psi$在$X'$上的原像（有时，为了强调这个构造，我们会说“概形意义上的原像”）$\psi^{-1}X'$为$Y$中由$T$的理想$\varphi(I)T$定义的闭子概形。如果$X'$是$X$的一个闭点$p$，我们称$\psi^{-1}p$是$X'$上的\textit{纤维}。（我们马上就会看到如何在任意点上定义纤维。）原像的支集就是集合意义上的原像，然而
+
+\begin{exe}\label{exe:1.43}
+\begin{compactenum}[(a)]
+\item 令$\varphi:X\to Y$是如下展示的仿射概形之间的映射
+\begin{center}\includegraphics[scale=\scale,bb=0 0 257 227]{\PICDIR/1.png}\end{center}
+即，$X=\spec K[x,u]/(xu)$是两条在点$p=(x,u)$处相交的直线的交，其中$Y=\spec K[t]$是一个直线
+\item 令$\varphi:X\to Y$是如下展示的仿射概形之间的映射
+\begin{center}\includegraphics[scale=\scale,bb=0 0 320 352]{\PICDIR/2.png}\end{center}
+\end{compactenum}
+\end{exe}
 
 \subsection{黏合构造}
 
@@ -220,3 +267,19 @@ $X_\text{red}$同样可以由拓扑空间$|X|$连同结构层$\oo_{X_\text{red}}
 \[
 	\psi_{\beta\gamma}\circ \psi_{\alpha\beta}|_{(X_{\alpha\beta}\cap X_{\alpha\gamma})}=\psi_{\alpha\gamma}|_{(X_{\alpha\beta}\cap X_{\alpha\gamma})}.
 \]
+
+\begin{exe}\label{exe:1.44}
+置$Y=\spec K[s]$以及$Z=\spec K[t]$. 令$U\subset Y$是开集$Y_s$，$V\subset Z$是开集$Z_t$. 令$\psi:V\to U$是将$s$变成$t$的映射
+\[
+	\oo_Y(U)=K[s,s^{-1}]\to K[t,t^{-1}]=\oo_Z(V)
+\]
+对应的同构，而$\gamma$是将$s$变成$t^{-1}$得到的同构。令$X_1$是$Y$和$Z$沿着$\psi$黏合得到的概形，$X_2$是$Y$和$Z$沿着$\gamma$黏合得到的概形。
+
+证明$X_1$与$X_2$并不同构。事实上，$X_2$是对应于射影直线$\P_K^1$的概形（我们将在下节中讨论它），而$X_1$是具有双重原点的仿射空间：
+
+\begin{center}\includegraphics[scale=\scale,bb=0 0 562 68]{\PICDIR/3.png}\end{center}
+
+在第 \ref{chap:3} 章中，我们将引入一个被称为\textit{分离性}的条件来排除$X_1$这样的概形。
+\end{exe}
+
+\paragraph*{射影空间}\addcontentsline{toc}{subsubsection}{射影空间}
