@@ -7,31 +7,27 @@
 \usepackage{graphicx,wrapfig,paralist}
 	\setlength{\pltopsep}{3pt}
 	\setlength{\plpartopsep}{3pt}
-
-\usepackage{titletoc}
+\usepackage{titletoc,makeidx}
 	\setcounter{secnumdepth}{5}  
 	\setcounter{tocdepth}{5} 
 
-\usepackage{makeidx}
-	\makeindex
+\makeindex
 
 \usepackage{hyperref}
 	\hypersetup{bookmarksnumbered=true}
 
-\renewcommand\thechapter{\Roman{chapter}} 
-
 \usepackage{stackengine}
 \input{defs}
-	\newcommand{\cc}{\mathbb{C}}
 
 % \setCJKmainfont[
-% 	ItalicFont = AdobeKaitiStd-Regular ,
+% 	ItalicFont = KaiTi ,
 % 	BoldFont = SourceHanSerifSC-Bold ,
-% ]{SourceHanSerifSC-Regular}
-% \renewcommand{\hyp}{\raisebox{.1em}{-}}
-% \renewcommand{\textit}[1]{{\raisebox{-.05ex}{\scalebox{1.05}{\it #1}}}}
+% ]{NSimSun}
+% \setCJKsansfont{Inziu IosevkaCC SC}
 
 \def\scale{0.6}
+\def\wrapa{\begin{wrapfigure}[7]{r}{164pt}\vspace{-1.5em}\includegraphics[scale=\scale,bb=0 0 266 191]{chap_2/pics/7.png}\end{wrapfigure}}
+\def\wrapb{\begin{wrapfigure}[6]{r}{188pt}\vspace{-5.5em}\includegraphics[scale=\scale,bb=0 0 305 271]{chap_2/pics/9.png}\end{wrapfigure}}
 \newcommand{\ThisULCornerWallPaper}[2]{}
 
 \begin{document}
@@ -40,12 +36,13 @@
 \thispagestyle{empty}
 	\begin{flushright}
 	{\Huge\bfseries 概形的几何}\\[\baselineskip]
-	% {{\scshape In\:}\Large {\itshape a simple} {\scshape Way}} \par
-	{by xxx}\par
-	\today
+	% {{\scshape In\:}\Large {\itshape a simple} {\scshape Way}} \\
+	David Eisenbud \& Joe Harris \\
+	翻译：Buwai Lee \& unsinn \\
 	\end{flushright}
 	\vfill
-	{\Large\itshape 仅作内部交流用}
+	{\Large\itshape 仅作内部交流用}\\
+	\noindent 编译日期：\today
 \end{titlepage}
 \clearpage
 \thispagestyle{empty}

@@ -11,26 +11,24 @@
 \usepackage{titletoc,makeidx}
 	\setcounter{secnumdepth}{5}  
 	\setcounter{tocdepth}{5} 
-	\makeindex
 
-\renewcommand\thechapter{\Roman{chapter}}
+\makeindex
 
 \usepackage{hyperref}
 	\hypersetup{bookmarksnumbered=true}
 
 \usepackage{stackengine}
 \input{defs}
-	\newcommand{\cc}{\mathbb{C}}
 
 \setCJKmainfont[
 	ItalicFont = KaiTi ,
 	BoldFont = SourceHanSerifSC-Bold ,
 ]{NSimSun}
 \setCJKsansfont{Inziu IosevkaCC SC}
-% \renewcommand{\hyp}{\raisebox{.1em}{-}}
-% \renewcommand{\textit}[1]{{\raisebox{-.05ex}{\scalebox{1.05}{\it #1}}}}
 
 \def\scale{0.5}
+\def\wrapa{\begin{wrapfigure}[7]{r}{140pt}\vspace{-1.5em}\includegraphics[scale=\scale,bb=0 0 266 191]{chap_2/pics/7.png}\end{wrapfigure}}
+\def\wrapb{\begin{wrapfigure}[6]{r}{156pt}\vspace{-6.5em}\includegraphics[scale=\scale,bb=0 0 305 271]{chap_2/pics/9.png}\end{wrapfigure}}
 
 \begin{document}
 \begin{titlepage}
@@ -38,12 +36,13 @@
 \thispagestyle{empty}
 	\begin{flushright}
 	{\Huge\bfseries 概形的几何}\\[\baselineskip]
-	% {{\scshape In\:}\Large {\itshape a simple} {\scshape Way}} \par
-	{by xxx}\par
-	\today
+	% {{\scshape In\:}\Large {\itshape a simple} {\scshape Way}} \\
+	David Eisenbud \& Joe Harris \\
+	翻译：Buwai Lee \& unsinn \\
 	\end{flushright}
 	\vfill
-	{\Large\itshape 仅作内部交流用}
+	{\Large\itshape 仅作内部交流用}\\
+	\noindent 编译日期：\today
 \end{titlepage}
 \clearpage
 \frontmatter
@@ -62,5 +61,5 @@
 \backmatter
 	\input{references}
 	\ThisULCornerWallPaper{1}{Pictures/0.png}
-	\printindex
+\printindex
 \end{document}
