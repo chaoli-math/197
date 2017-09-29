@@ -87,12 +87,12 @@
 可能图像化$\mathbb{A}_\zz^1$的最好方式是通过映射$\mathbb{A}_\zz^1\to\zz$（依然是平坦映射！）。在这个映射下， 上面的第二第四类便被映射成$(p)\in\spec \zz$，而第一第三类点将被映射成$\spec \zz$的一般点$(0)$. 实际上，这个映射在点$(p)$的纤维同构于$\mathbb{A}_{\mathbb{F}_p}^1=\spec \mathbb{F}_p$，点$(p,f)\in\mathbb{A}_\zz^1$将对应于多项式$f$在代数闭包$\bar{\mathbb{F}}_p$中的根给出的$\mathbb{A}_{\mathbb{F}_p}^1$中的点（回忆，$\mathbb{A}_{\mathbb{F}_p}^1$中的点对应于Galois群$\mathrm{Gal}\left(\bar{\mathbb{F}}_p/\mathbb{F}\right)$作用在$\mathbb{F}_p$上的轨道）。类似地，一般点$(0)$处的纤维是概形$\mathbb{A}_\mathbb{Q}^1=\spec \mathbb{Q}[x]$，$(f)\in\mathbb{A}_\zz^1$交$\mathbb{A}_\mathbb{Q}^1$于$f$在$\bar{\mathbb{Q}}$中的根对应的点。因此，图像如下：
 
 \begin{center}\includegraphics[scale=\scale,bb=0 0 670 491]{\PICDIR/18.png}\end{center}
-\label{p.2.18}
+\label{p:2.18}
 
 点$(p)\in\mathbb{A}_\zz^1$的闭包是点$(p)\in \spec \zz$处的纤维$\mathbb{A}_{\mathbb{F}_p}^1$. 其他非闭点，即上面的第三类点，的闭包更有趣。它们将包含点$(f)$本身，它在点$(0)$处的纤维$\mathbb{A}_\mathbb{Q}^1$中，以及所有点$(p,g)\in\mathbb{A}_\zz^2$，其中$g$是$\bar{\mathbb{F}}$上$f$的一个因子，即对$\mathbb{A}_\zz^1$的每一条纤维$\mathbb{A}_{\mathbb{F}_p}^1$，$\mathbb{A}_{\mathbb{F}_p}^1$中点的并对应于$f$模$p$后的根。
 
 \begin{exe}
-	在上图中打问号的点是上面？为什么点$(4x+1)$以及$(x-2)$的闭包是相切于点$(3,x-2)$且都横截$(3)$的闭包的那两条曲线？（一个答案见到Exercise \ref{e.2.44}前的讨论。）为什么点$(4x+1)$的闭包画出来在点$(2)\in\spec \zz$上有一个竖直的渐近线？
+	在上图中打问号的点是上面？为什么点$(4x+1)$以及$(x-2)$的闭包是相切于点$(3,x-2)$且都横截$(3)$的闭包的那两条曲线？（一个答案见到Exercise \ref{exe:2.44}前的讨论。）为什么点$(4x+1)$的闭包画出来在点$(2)\in\spec \zz$上有一个竖直的渐近线？
 \end{exe}
 
 另一个例子，考虑由一个单线性多项式生成的理想，比如$(5x-49)$. 为了继续$\spec \zz$与域上的仿射直线的类比，我们把该点的闭包想象成$\spec\zz$上函数$49/5$的图像，这是一个在点$(5)$处有一个单极点，在点$(7)$处有一个双重零点的函数。（这条曲线相切于$\mathbb{A}_K^1$的子概形$(x)$，正如下面事实所暗示的那样：$(x)$与子概形$(5x-49)$不止相交于点$(7,x)$，而且还包含一个非约化点，其支集是该点。）
@@ -109,7 +109,7 @@
 
 更一般地，概形$\mathbb{A}_\zz^n=\spec \zz[x_1$, $\dots$, $x_n]$最好通过自然映射$\mathbb{A}_\zz^n\to\spec \zz$来看，它的纤维是概形$\mathbb{A}_{\mathbb{F}_p}^n$以及$\mathbb{A}_{\mathbb{Q}}^n$.
 
-\subsection{\texorpdfstring{$\spec \mathbb{Z}$}{Spec Z}上的圆锥曲线}\label{sec:2.4.4}
+\subsection{\texorpdfstring{$\spec \mathbb{Z}$}{Spec Z}上的圆锥曲线}\label{s:2.4.4}
 
 我们的下一个例子给出了概形理论取得的几何与算术的深刻统一性的线索。我们考虑概形
 \[
@@ -174,7 +174,7 @@
 分类，(a) 支集为点$(7,x)\in\mathbb{A}_\zz^1$的度为$3$的子概形，以及(b) 支集为点$(2,x^2+x+1)$的度为$4$的子概形。
 \end{exe}
 
-\begin{exe}\label{e.2.44}
+\begin{exe}\label{exe:2.44}
 参照第\pageref{p.2.18}页的图，使用前面的讨论来证明曲线$(4x + 1)$和$(x-2)$相切，而曲线$(4x + 1)$和$(11)$横截。
 \end{exe}
 
