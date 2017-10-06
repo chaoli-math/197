@@ -28,7 +28,9 @@
 
 \def\scale{0.5}
 \def\wrapa{\begin{wrapfigure}[7]{r}{140pt}\vspace{-1.5em}\includegraphics[scale=\scale,bb=0 0 266 191]{chap_2/pics/7.png}\end{wrapfigure}}
-\def\wrapb{\begin{wrapfigure}[6]{r}{156pt}\vspace{-6.5em}\includegraphics[scale=\scale,bb=0 0 305 271]{chap_2/pics/9.png}\end{wrapfigure}}
+\def\wrapb{\begin{wrapfigure}[6]{r}{156pt}\vspace{-3em}\includegraphics[scale=\scale,bb=0 0 305 271]{chap_2/pics/9.png}\end{wrapfigure}}
+
+\includeonly{chap_1/chap_1,chap_2/chap_2,chap_3/chap_3,chap_6/chap_6}
 
 \begin{document}
 \begin{titlepage}
@@ -52,12 +54,12 @@
 \mainmatter
 \pagestyle{headings}
 	\input{intro}
-	\input{chap_1/chap_1}
-	\input{chap_2/chap_2}
-	\input{chap_3/chap_3}
-	% \input{chap_4/chap_4}
-	% \input{chap_5/chap_5}
-	% \input{chap_6/chap_6}
+	\include{chap_1/chap_1}
+	\include{chap_2/chap_2}
+	\include{chap_3/chap_3}
+	\include{chap_4/chap_4}
+	\include{chap_5/chap_5}
+	\include{chap_6/chap_6}
 \backmatter
 	\input{references}
 	\ThisULCornerWallPaper{1}{Pictures/0.png}
