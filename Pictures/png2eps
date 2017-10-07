@@ -1,7 +1,0 @@
-#!/bin/bash
-# Script follows here:
-for file in `find -name "*.png"`;do
-	convert "$file" "$file".pbm
-	potrace "$file".pbm -x 0.5 --opaque -o "$file".eps
-done
-rm *.pbm
