@@ -96,7 +96,7 @@ $\spec R$几乎不会是一个Hausdorff空间，它的开集太大了。实际�
 	\end{compactenum}
 \end{exe}
 
-为了完成$\spec R$的定义，我们必须描述\textit{结构层}或者说$X$上的\textit{正则函数层}。在做这个之前，我们将暂时离开主线给出一些层理论的基本定义以及证明一个以后必须的命题（Proposition \ref{pro:1.1.12}）。
+为了完成$\spec R$的定义，我们必须描述\textit{结构层}或者说$X$上的\textit{正则函数层}。在做这个之前，我们将暂时离开主线给出一些层理论的基本定义以及证明一个以后必须的命题（Proposition \ref{pro:1.12}）。
 
 \subsection{插曲：层理论}
 
@@ -238,7 +238,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 
 若对每一个$U\in\mathscr{B}$有群$\ff(U)$，以及对基中的包含$V\subset U$有映射$\res_{V,U}:\ff(V)\to \ff(U)$，满足对基本开集\footnote{译者注：似乎书中对拓扑基里面的元素都叫基本开集（basic open set）.}到基本开集的限制与基本开集的基本开集覆盖的层公理，我们称$\ff$是一个$\mathscr{B}$\hyp 层。（在定义中，$U_a$, $U_b\in\mathscr{B}$上的截面集限制在$U_a\cap U_b$相等需要改做，它们限制在任意包含于$U_a\cap U_b$的基本开集$V$上都相同。）
 
-\begin{pro} \label{pro:1.1.12}
+\begin{pro} \label{pro:1.12}
 	令$\mathscr{B}$是$X$的一个开集基。
 	\begin{compactitem}
 		\item[{\rm (i)}] 每个$\mathscr{B}$\hyp 层都可以唯一扩张为$X$上的一个层。
@@ -269,7 +269,7 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 
 第二个应用，其实是上一个应用的特例，就是说定义一个层只需在一个开覆盖的每个开集上给出一个层，如果这些层是相容的。
 
-\begin{coro}
+\begin{coro}\label{coro:1.14}
 令$\mathscr{U}$是$X$的一个开覆盖。如果$\ff_U$是$U\in\mathscr{U}$上的一个层，如果
 \[
 	\varphi_{UV}:\ff_U|_{U\cap V}\to \ff_V|_{U\cap V}
@@ -316,9 +316,9 @@ $\ff(U)$中的元素被称为\textit{$\ff$在$U$上的截面}，$\ff(X)$中的�
 % \footnote{译者注：这里并不直观。考虑乘性子集$S$，以及它其中元素的任意因子构成的集合$S'$，后者自然也是一个乘性子集。注意到，此时$S^{-1}R$与${S'}^{-1}R$是同构的。首先，从$S^{-1}R$到${S'}^{-1}R$有一个自然的单同态，他将$r/s$映作$r/s$. 对于满同态的部分，任取$r/s'\in {S'}^{-1}R$，由于$s'$是某个$s\in S$的因子，于是$s't'=s$，其中$t'\in S'$，所以$r/s'=rt'/(s't')=rt'/s$就是$r/s'$在$r/s$中的原像。
 
 % 在文中，注意到$g^n=af$，$S_g=\{1$, $\cdots$, $g^n$, $\cdots\}$包含$g^{n+1}=afg$，所以$S'_g$中包含$fg$，故$S'_{fg}\subset S'_g$，反过来，由于$g$是$fg$的一个因子，所以$S'_g\subset S'_{fg}$，综上$S'_g=S'_{fg}$，故而$R_g=R_{fg}$.}
-$R_f\to R_{fg}=R_g$. 由Proposition \ref{pro:1.1.12}，只要我们验证基本开集覆盖之间的层公理，这样就给出了一个层。在下面的Propostion \ref{pro:1.1.18}完成这个之前，我们先建立一个简单但是很基本的引理，它描述了仿射概形的基本开集的覆盖。
+$R_f\to R_{fg}=R_g$. 由Proposition \ref{pro:1.12}，只要我们验证基本开集覆盖之间的层公理，这样就给出了一个层。在下面的Propostion \ref{pro:1.18}完成这个之前，我们先建立一个简单但是很基本的引理，它描述了仿射概形的基本开集的覆盖。
 
-\begin{lem}\label{lem:1.1.16}
+\begin{lem}\label{lem:1.16}
 	令$X=\spec R$，以及$\{f_a\}$是一族$R$中的元素。于是开集族$X_{f_a}$是$X$的开覆盖当且仅当$\{f_a\}$生成单位理想。特别地，$X$是一个预紧拓扑空间。
 \end{lem}
 
@@ -332,7 +332,7 @@ $R_f\to R_{fg}=R_g$. 由Proposition \ref{pro:1.1.12}，只要我们验证基本�
 	如果$R$是一个Noether环，$\spec R$的每一个子集都是预紧的。
 \end{exe}
 
-\begin{pro}\label{pro:1.1.18}
+\begin{pro}\label{pro:1.18}
 令$X=\spec R$，并设$X_f$被开集$X_{f_a}\subset X_f$所覆盖。
 \begin{compactitem}
 \item[{\rm (a)}] 如果$g$, $h\in R_f$在每个$R_{f_a}$中相同，则$g=h$.
@@ -340,24 +340,24 @@ $R_f\to R_{fg}=R_g$. 由Proposition \ref{pro:1.1.12}，只要我们验证基本�
 \end{compactitem}
 \end{pro}
 
-等价地，如果$\mathscr{B}$是$\spec R$的一个基本开集族，如果我们置$\oo_X(\spec R_f):=R_f$，于是$\oo_X$是一个$\mathscr{B}$\hyp 层。由Proposition \ref{pro:1.1.12}，$\oo_X$将可以唯一扩张成$X$上的一个层。
+等价地，如果$\mathscr{B}$是$\spec R$的一个基本开集族，如果我们置$\oo_X(\spec R_f):=R_f$，于是$\oo_X$是一个$\mathscr{B}$\hyp 层。由Proposition \ref{pro:1.12}，$\oo_X$将可以唯一扩张成$X$上的一个层。
 
 \begin{defi}
 	上面一个命题中定义的层$\oo_X$被称为$X$的\textit{结构层}或者$X$上的\textit{正则函数层}。
 \end{defi}
 
-\begin{proof}[Proposition \ref{pro:1.1.18}的证明]
+\begin{proof}[Proposition \ref{pro:1.18}的证明]
 我们从$f=1$开始，此时，$R_f=R$以及$X_f=X$.
 
-对第一部分，观察到如果$g$和$h$在每一个$X_{f_a}$上相同，则$f_a$的某个幂乘上$g-h$为零。由Lemma \ref{lem:1.1.16}，我们可以假设这个开覆盖是有限的，这就意味着，存在一个正整数$N$使得所有$f_a^N$生成的理想都是$g-h$的零因子。但是，这个理想包含了所有$f_a$生成的理想的某个幂次%
+对第一部分，观察到如果$g$和$h$在每一个$X_{f_a}$上相同，则$f_a$的某个幂乘上$g-h$为零。由Lemma \ref{lem:1.16}，我们可以假设这个开覆盖是有限的，这就意味着，存在一个正整数$N$使得所有$f_a^N$生成的理想都是$g-h$的零因子。但是，这个理想包含了所有$f_a$生成的理想的某个幂次%
 % \footnote{译者注：假设指标$a$一共有$n$个，设$f_a$生成的理想是$\mathfrak{a}$，则$\mathfrak{a}^{nN}$中的元素由形如$f_1^{k_1}\cdots f_n^{k_n}$生成，并且满足$\sum_{i=1}^n k_i=nN$，因此至少有一个$k_i\geq N$，进而$\mathfrak{a}^{nN}(g-h)=0$.}
 ，而所有$f_a$生成单位理想，因此$g=h\in R$.
 
-对于(b)部分，我们将用一个类似于经典的单位分解的命题将局部的$g_a$拼成一个整体的$g\in R$. 对一个足够大的$N$，$f_a^Ng_a\in R_{f^a}$是某个$h_a\in R$的像，从Lemma \ref{lem:1.1.16}，我们可以假设覆盖$\{X_{f_a}\}$是有限覆盖，于是对所有的$a$都可以选一个相同的$N$. 接着，因为$g_a$和$g_b$在$X_{f_af_b}$中的像相同，则对足够大的$N$必有
+对于(b)部分，我们将用一个类似于经典的单位分解的命题将局部的$g_a$拼成一个整体的$g\in R$. 对一个足够大的$N$，$f_a^Ng_a\in R_{f^a}$是某个$h_a\in R$的像，从Lemma \ref{lem:1.16}，我们可以假设覆盖$\{X_{f_a}\}$是有限覆盖，于是对所有的$a$都可以选一个相同的$N$. 接着，因为$g_a$和$g_b$在$X_{f_af_b}$中的像相同，则对足够大的$N$必有
 \[
 	f_b^Nh_a=(f_af_b)^Ng_a=(f_af_b)^Ng_b=f_a^Nh_b.
 \]
-同样因为已经假设$\{X_{f_a}\}$是有限覆盖，所以对所有的指标，都可以选成一个$N$. 从Lemma \ref{lem:1.1.16}，$f_a\in R$生成单位理想，于是$f_a^N$也生成单位理想%\footnote{译者注：注意到$X_{f_a^N}=X_{f_a}$是$X$的一个覆盖。}
+同样因为已经假设$\{X_{f_a}\}$是有限覆盖，所以对所有的指标，都可以选成一个$N$. 从Lemma \ref{lem:1.16}，$f_a\in R$生成单位理想，于是$f_a^N$也生成单位理想%\footnote{译者注：注意到$X_{f_a^N}=X_{f_a}$是$X$的一个覆盖。}
 ，于是我们可以记
 \[
 	1=\sum_a e_a f_a^N,

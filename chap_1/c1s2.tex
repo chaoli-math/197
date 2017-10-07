@@ -227,10 +227,10 @@ $X_\text{red}$同样可以由拓扑空间$|X|$连同结构层$\oo_{X_\text{red}}
 \]
 与环同态$\varphi:R\to S$无异。下面是精确的结果，还略带改进，描述了从任意概形到仿射概形的映射。
 
-\begin{thm}
+\begin{thm}\label{thm:1.40}
 对任意的概形$X$以及任意的环$R$，态射
 \[
-	(\varphi,\varphi^\#):X\to \spec R
+	(\psi,\psi^\#):X\to \spec R
 \]
 一一对应于环同态
 \[
@@ -243,7 +243,19 @@ $X_\text{red}$同样可以由拓扑空间$|X|$连同结构层$\oo_{X_\text{red}}
 \end{thm}
 
 \begin{proof}
-\nottran
+我们下面描述反过来的对应，即对一个环同态，找一个概形态射。令$Y=\spec R$以及$\varphi:R\to \oo_X(X)$是交换环同态。设$p\in |X|$是一个点，则极大理想在复合$R\to \oo_X(X)\to \oo_{X,p}$下的原像是一个素理想，于是$\varphi$诱导了集合间的映射
+\[
+	\psi:|X|\to |Y|,
+\]
+不难检验在Zariski拓扑下这是连续的。接着，对每一个基本开集$U=\spec R_f\subset Y$，定义映射$\psi^\#:R_f=\oo_Y(U)\to (\psi_*\oo_X)(U)$是由局部化$\psi$得到的复合
+\[
+	R_f\to \oo_X(X)_{\varphi(f)}\to \oo_X(\psi^{-1}U).
+\]
+从Proposition \ref{pro:1.12}(ii)，我们只要定义层之间的态射即可。进一步局部化，我们看到如果$\psi(p)=q$，则$\psi^\#$定义了一个局部环之间的局部同态$R_q\to \oo_{X,p}$，因此$(\psi,\psi^\#)$是一个概形间的态射。很清楚，诱导映射满足
+\[
+	\psi^\#(Y)=\varphi,
+\]
+于是这个构造就是命题中对应的逆。
 \end{proof}
 
 当然，这个结果告诉我们，特别地，所有仿射概形范畴中的信息其实已经存在于交换环范畴中。
@@ -317,6 +329,17 @@ $X_\text{red}$同样可以由拓扑空间$|X|$连同结构层$\oo_{X_\text{red}}
 \[
 	\psi_{\beta\gamma}\circ \psi_{\alpha\beta}|_{(X_{\alpha\beta}\cap X_{\alpha\gamma})}=\psi_{\alpha\gamma}|_{(X_{\alpha\beta}\cap X_{\alpha\gamma})}.
 \]
+在那种情况下，我们可以以一种显然的方式将$X_\alpha$沿着$\psi_{\alpha\beta}$黏合起来定义一个概形，即，存在一个（唯一的）概形$X$，它由同构于$X_\alpha$的开子概形所覆盖，并且交$X_\alpha\cap X_\beta\subset X$上的恒等映射对应于同构$\psi_{\alpha\beta}$.
+
+这个构造比如能用来从仿射概形构造出射影概形。在环面簇（toric variety）理论中有另外的应用，比如见Kempf等[1973].
+
+在这些和几乎所有的应用中，我们实际上不需要明确地给出映射$\psi_{\alpha\beta}$：我们实际上是给出了一个拓扑空间$|X|$以及一族开集$|X_\alpha|$，每一个开集上都有一个仿射概形结构，即有一个结构层$\oo_{X_\alpha}$，此时$\oo_{X_\alpha}(X_\alpha\cap X_\beta)$\textit{自然地}等同于$\oo_{X_\beta}(X_\alpha\cap X_\beta)$. 比方说，它们可能同时作为一个固定集合的子集给出。在这种情况下，Corollary \ref{coro:1.14}的条件是立即满足的，于是存在$X$上唯一确定的层$\oo_X$延拓了所有的$\oo_{X_\alpha}$. 于是，偶对$(|X|,\oo_X)$是一个概形。
+
+也许最简单的例子是任意概形$S$上的\textit{仿射空间}$\mathbb{A}^n_S$. 首先，对任意仿射概形$X=\spec R$，我们定义$X$\text{上的仿射$n$-空间}为$\spec R[x_1$, $\dots$, $x_n]$，记作$\mathbb{A}_X^n$或$\mathbb{A}_R^n$. （仿射空间及其子概形的几何将在第 \ref{chap:2} 章重新捡起。）接着，注意到任意的仿射概形态射$X\to Y$诱导了自然的映射$\mathbb{A}_X^n\to \mathbb{A}_Y^n$. 于是，我们可以如下利用黏合构造：如果$S$是任意的概形，$U_\alpha=\spec R_\alpha$是其开覆盖，我们定义\textit{$S$上仿射空间$\mathbb{A}_S^n$}为仿射空间$\mathbb{A}_{U_\alpha}^n$沿着$U_\alpha\cap U_\beta$上的恒等映射黏起来得到的概形。
+
+我们后面将看到另外两种在任意概形$S$定义仿射空间$\mathbb{A}_S^n$的方法，见Exercise \ref{exe:1.47}和\ref{exe:1.54}.
+
+下面的习题展示了一些黏合构造的危险之处：我们能通过不合理（但合法）的黏合，构造出一些并不会在任何几何背景中出现的概形。
 
 \begin{exe}\label{exe:1.44}
 置$Y=\spec K[s]$以及$Z=\spec K[t]$. 令$U\subset Y$是开集$Y_s$，$V\subset Z$是开集$Z_t$. 令$\psi:V\to U$是将$s$变成$t$的映射
@@ -339,3 +362,22 @@ $X_\text{red}$同样可以由拓扑空间$|X|$连同结构层$\oo_{X_\text{red}}
 \]
 黏合而成。我们将从第 \ref{chap:3} 章开始主要展开射影概形，这里我们仅用作一个黏合的展示。
 
+这个构造与作为域上的簇的经典射影空间的构造很相似。尽管逻辑上不是必须的，但按如下工作也是方便的。首先，从$n+1$元的多项式环$R[X_0$, $\dots$, $X_n]$开集，然后取局部化
+\[
+	A:=R[X_0,X_0^{-1},\dots,X_n,X_n^{-1}].
+\]
+回忆，环$A$具有自然的\textit{分次}，即一个（作为交换群的）直和分解，分解为子群$A^{(n)}$，其中$n\in \zz$，使得
+\[
+	A^{(n)}A^{(m)}\subset A^{(m+n)};
+\]
+这里$A^{(n)}$由所有$n$次单项有理分式张成。特别地，$A^{(0)}$是$A$的子环。现在取我们仿射开覆盖的环为$A^{(0)}$的$R$-子代数，第$i$个子环是包含了所有的多项式$P/X_i^{\deg(P)}$的子代数$A_i$，其中$P$是一个$R[x_0$, $\dots$, $x_n]$中的齐次元素。很清楚，$A_i$在$R$上由$n$个代数无关元
+\[
+	X_0/X_i,\,\dots,\,\widehat{X_i/X_i},\,\dots,\,X_n/X_i
+\]
+生成，其中戴帽的意思如同往常一样就是说从这列中略去这项。$A_i$于是同构于$R$上面的$n$元多项式环。此外，对$i\neq j$，作为$A$的子集，我们有
+\[
+	A_i[(X_j/X_i)^{-1}]=A_j[(X_i/X_j)^{-1}].
+\]
+它们都能被描述为所有具有$X_i^aX_j^b$形式分母的$0$次元素的子代数。如果我们取恒等映射为黏合映射，则相容性条件是显然的。
+
+如果$X=\spec R$是一个仿射概形，我们时常用$\P^n_R$来记$\P^n_X$，并以此指代\textit{$X$上的射影空间}。因此，我们可以再一次应用黏合构造来定义\textit{任意概形$S$上的射影空间$\P_S^n$}. 这是直接的：如果$S$被仿射概形$U_\alpha=\spec R_\alpha$覆盖，我们定义射影空间$\P_S^n$为射影空间$\P_{U_\alpha}^n$沿着$U_\alpha\cap U_\beta$上的恒等映射黏起来得到的概形。
