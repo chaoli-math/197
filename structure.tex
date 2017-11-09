@@ -1,10 +1,13 @@
-\usepackage[b5paper, top=10mm, text={144mm, 208mm}, includehead, includefoot, hmarginratio=1:1, heightrounded]{geometry}
-	\pdfpagewidth=176truemm
-	\pdfpageheight=250truemm
+% \usepackage[b5paper, top=10mm, text={144mm, 208mm}, includehead, includefoot, hmarginratio=1:1, heightrounded]{geometry}
+\usepackage[a4paper, top=16mm, text={170mm, 246mm}, includehead, includefoot, hmarginratio=1:1, heightrounded]{geometry}
+	% \pdfpagewidth=176truemm
+	% \pdfpageheight=250truemm
+	\pdfpagewidth=210truemm
+	\pdfpageheight=297truemm
 \usepackage[explicit,clearempty]{titlesec}
 \usepackage{wallpaper,changepage,fancyhdr,tikz,indentfirst}
 \usepackage{amssymb,amsfonts,amsmath,amsthm,bm,mathrsfs}
-\def\pgfsysdriver{pgfsys-dvipdfm.def}
+% \def\pgfsysdriver{pgfsys-dvipdfm.def}
 \usepackage[all]{xy}
 \usetikzlibrary{shapes,positioning}
 \usepackage{hyperref}
@@ -57,8 +60,8 @@
 		at (current page.north east) {#1};
 	\end{tikzpicture}
 }
-\titlespacing*{\chapter}{0pt}{0pt}{100mm}
-\titlespacing*{name=\chapter,numberless}{0pt}{0pt}{50mm}
+\titlespacing*{\chapter}{0pt}{0pt}{120mm}
+\titlespacing*{name=\chapter,numberless}{0pt}{0pt}{60mm}
 
 %% Set the uniform width of the colour box
 %% displaying the page number in footer
