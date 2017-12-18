@@ -137,7 +137,7 @@
 	\end{compactenum}
 \end{exe}
 
-\begin{exe} （对那些熟悉Grassmannian的人。）上面的例子可能让人觉得同构于$X$的概形是那些同构于$Y$的概形的极限\footnote{译者注：大概是上面第二幅图的夹角逐渐减小吧。}。然而事实并不如人所愿，下面的例子刚好与其相反。令$\mathscr{H}$是一族$\mathbb{A}_K^2$中支于原点的度为$3$的有限子概形，$\mathscr{H}$可以通过六维矢量空间$K[x,y]/(x,y)^3$ 余维数为$3$的子空间们的Grassmannian的一个闭子概形自然地参数化。证明$\mathscr{H}$是一个曲面，其中一点对应于唯一的子概形$\spec K[x,y]/(x^2,xy,y^2)$，它同构于$Y$，其余的点对应于同构于$X$的子概形。证明，概形$\mathscr{H}$同构于$\mathbb{P}^3_K$中的一个二维立体圆锥，其顶点对应于$Y$.
+\begin{exe} （对那些熟悉Grassmann流形的人。）上面的例子可能让人觉得同构于$X$的概形是那些同构于$Y$的概形的极限\footnote{译者注：大概是上面第二幅图的夹角逐渐减小吧。}。然而事实并不如人所愿，下面的例子刚好与其相反。令$\mathscr{H}$是一族$\mathbb{A}_K^2$中支于原点的度为$3$的有限子概形，$\mathscr{H}$可以通过六维矢量空间$K[x,y]/(x,y)^3$ 余维数为$3$的子空间们的Grassmannian的一个闭子概形自然地参数化。证明$\mathscr{H}$是一个曲面，其中一点对应于唯一的子概形$\spec K[x,y]/(x^2,xy,y^2)$，它同构于$Y$，其余的点对应于同构于$X$的子概形。证明，概形$\mathscr{H}$同构于$\mathbb{P}^3_K$中的一个二维立体圆锥，其顶点对应于$Y$.
 \end{exe}
 
 \begin{exe}
@@ -374,7 +374,7 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 
 我们从比较具体的东西开始：$B$上的\textit{给定概形$A$的闭子概形族}是一个$B\times A$的闭子概形$X\subset B\times A$和限制在$X$上的投射映射$B\times A\to B$，于是$X$在点$b\in B$上的纤维自然是$B\times A$在$B$上的纤维$A_b$的闭子概形。
 
-令$B$是一个非奇异一维概形，典型地，我们对$R=K[t]$, $K[t]_{(t)}$或者$K[\![t]\!]$考虑$\spec R$，尽管任意的Dedekind整环（比如$\zz$或者$\zz_{(p)}$）也行。令$0\in B$是任意的闭点，即$B^*=B\setminus \{0\}$是$B$关于$\{0\}$的补。令$\mathbb{A}_B^n$和$\bba_{B^*}^n$分别是一般意义上$B$与$B^*$上的仿射$n$-空间。
+令$B$是一个非奇异一维概形，典型地，我们对$R=K[t]$, $K[t]_{(t)}$或者$K[\![t]\!]$考虑$\spec R$，尽管任意的Dedekind整环（比如$\zz$或者$\zz_{(p)}$）也行。令$0\in B$是任意的闭点，记$B^*=B\setminus \{0\}$是$B$关于$\{0\}$的补。令$\mathbb{A}_B^n$和$\bba_{B^*}^n$分别是一般意义上$B$与$B^*$上的仿射$n$-空间。
 
 考虑一个$\bba_{B^*}^n=\bba_\zz^n\times B^*$的闭子概形$\mathscr{X}^*$，我们可以将其看作一个由$B^*$参数化的闭仿射概形族，即，对每一个$b\in B^*$，令$X_b=\pi^{-1}(b)$是投影$\pi:\mathscr{X}^*\to \bba_{B^*}^n\to B^*$的纤维，以及将这些概形$X_b$看作一个族。（在$B=\spec R$，其中$R=K[t]$或者$K[t]_{(t)}$的情况中，我们能将$\mathscr{X}^*$看作“$\mathbb{A}_K^n$中随着参数$t$改变的子概形族”。）我们问这样一个基本的问题：概形$X_b$在$b$趋向于$0$时候的极限是什么？
 
@@ -386,22 +386,23 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 \[
 	I(\mathscr{X})=I(\mathscr{X}^*)\cap R[x_1,\,\dots,\,x_n].
 \]
-为了再具体些，若取$B=\spec K[t]$，极限概形$X_0\subset \bba_K^n$在概形$X_t$上为零的多项式的极限上为零\footnote{译者注：原文是``the limiting scheme $X_0\subset \bba_K^n$ is cut out by the limits of polynomials vanishing on the schemes $X_t$''.} ，换句话说，如果我们将理想$I(X_t)\subset K[x_1$, $\dots$, $x_n]$看作$K$\hyp 矢量空间$K[x_1$, $\dots$, $x_n]$的线性子空间，以及令$V\subset K[x_1$, $\dots$, $x_n]$是平面族$I(X_t)$的极限位置 ，则理想$I(X_0)$被$V$所生成。于是，这个极限的定义扩展了第 \ref{s:2.3.1} 节中用过的朴素极限概念。
+为了再具体些，若取$B=\spec K[t]$，极限概形$X_0\subset \bba_K^n$由在概形$X_t$上为零的多项式的极限确定%\footnote{译者注：原文是``the limiting scheme $X_0\subset \bba_K^n$ is cut out by the limits of polynomials vanishing on the schemes $X_t$''.} 
+，换句话说，如果我们将理想$I(X_t)\subset K[x_1$, $\dots$, $x_n]$看作$K$\hyp 矢量空间$K[x_1$, $\dots$, $x_n]$的线性子空间，以及令$V\subset K[x_1$, $\dots$, $x_n]$是平面族$I(X_t)$的极限位置 ，则理想$I(X_0)$被$V$所生成。于是，这个极限的定义扩展了第 \ref{s:2.3.1} 节中用过的朴素极限概念。
 
 举个例子，取$B=\spec K[t]$以及$B^*=B\setminus \{0\}=\spec K[t,t^{-1}]$，以及令$\bba_K^1$的子概形$X_t$包含两个点，坐标分别为$t$和$-t$，即，取$\mathscr{X}^*=V(x^2-t^2)\subset \spec K[t,t^{-1}][x]=\bba_{B^*}^1$. 于是，在$\bba_B^n$中，$\mathscr{X}^*$的闭包$\mathscr{X}$同样被$X=V(x^2-t^2)\subset \spec K[t][x]=\mathbb{A}_B^1$给出，以及$\mathscr{X}$在点$0\in B$的纤维$X_0$就是双重点$X_0=V(x^2)\subset\bba_K^1$.
 
-概形族$\mathscr{X}^*\subset \bba_{B^*}^n$的极限概念非常依赖于到$\bba_{B^*}^n$的嵌入，而不只依赖抽象族$\mathscr{X}^*\to B^*$. 于是，在上面的例子中，概形族$\mathscr{Y}^*=V(x^2-1)$以及概形族$\mathscr{Z}^*=V(x^2-t^{-2})\subset \spec K[t,t^{-1}][x]=\bba_{B^*}^1$作为$B^*$\hyp 概形是同构的，但是$\mathscr{Y}^*$的极限是两个约态点$V(x^2-1)\subset \bba^1_K$而$\mathscr{Z}^*$的极限是空集。
+概形族$\mathscr{X}^*\subset \bba_{B^*}^n$的极限概念非常依赖于到$\bba_{B^*}^n$的嵌入，而不只依赖抽象族$\mathscr{X}^*\to B^*$. 于是，在上面的例子中，概形族$\mathscr{Y}^*=V(x^2-1)$以及概形族$\mathscr{Z}^*=V(x^2-t^{-2})\subset \spec K[t,t^{-1}][x]=\bba_{B^*}^1$作为$B^*$-概形与$\mathscr{X}^*$是同构的，但是$\mathscr{Y}^*$的极限是两个约态点$V(x^2-1)\subset \bba^1_K$而$\mathscr{Z}^*$的极限是空集。
 
 \paragraph*{例子}\addcontentsline{toc}{subsubsection}{例子}
 现在我们遇到的极限的例子都是零维度概形的极限。这里有一些涉及正维的例子。 它们也是有启发性的，因为它们说明了嵌入点如何在簇的极限中自然地出现。
 
-第一个例子是$\mathbb{A}_K^3$中的三条穿过原点的直线，其中$K$是一个域。我们取三条坐标轴，转动其中一个到另两条直线的平面中，然后问这个族的极限是什么。明确地，在$\bba_K^3=\spec K[x,y,z]$中，我们令$L=V(y,z)$是$x$-轴，$M=V(x,z)$是$y$-轴以及$N_t$是直线
+第一个例子是$\mathbb{A}_K^3$中的三条穿过原点的直线，其中$K$是一个域。我们取三条坐标轴，转动其中一个到另两条直线的平面中，然后求这个族的极限是什么。明确地，在$\bba_K^3=\spec K[x,y,z]$中，我们令$L=V(y,z)$是$x$-轴，$M=V(x,z)$是$y$-轴以及$N_t$是直线
 \[
 	N_t=V(x-y,z-tx).
 \]
 对$t\neq 0$，我们令$X_t=L\cup M\cup N_t$. 曲线$\{X_t\}_{t\neq 0}$构成了基底$B^*=\spec K[t,t^{-1}]$上的一个族$\mathscr{X}^*\subset \bba_{B^*}^3$，我们即是在寻找这个族的极限$X_0$.
 
-这是直接的计算，尽管答案可能会让人在开始的时候惊讶一下。三个坐标轴的并的概形是$(xy$, $xz$, $yz)$，于是，对$t\neq 0$，概形$X_t$的理想是由线性型的乘积生成的：
+这是直接的计算，尽管刚看到这个答案可能会感到惊讶。三个坐标轴的并的概形是$(xy$, $xz$, $yz)$，于是，对$t\neq 0$，概形$X_t$的理想是由线性型的乘积生成的：
 \[
 	I(X_t)=(Q_1,Q_2,Q_3),
 \]
@@ -419,13 +420,13 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 \]
 最后，$X_t$的理想包含
 \[
-	x\frac{Q_1-Q_3}{t}-y\frac{Q_2-Q_3}{t}=txy(x-t),
+	x\frac{Q_1-Q_3}{t}-y\frac{Q_2-Q_3}{t}=txy(x-y),
 \]
 因此极限概形的理想包含$xy(x-y)$. 综上，我们有
 \[
-	I(X_0)\supset (xz,yz,z^2,xy(x-t)),
+	I(X_0)\supset (xz,yz,z^2,xy(x-y)),
 \]
-可以断言，实际上这还是一个等式。我们一会儿将验证这点，但在这之前，我们需要指出该极限的一个异乎寻常之处：\textit{概形族}$\{X_t=L\cup M\cup N_t\}_{t\neq 0}$\textit{的极限概形}$X_0$\textit{并不只是并}$L\cup M\cup N_0$. 事实上，并的理想是
+可以断言，这实际上还是一个等式。我们一会儿将验证这点，但在这之前，我们需要指出该极限的一个异乎寻常之处：\textit{概形族}$\{X_t=L\cup M\cup N_t\}_{t\neq 0}$\textit{的极限概形}$X_0$\textit{并不只是并}$L\cup M\cup N_0$. 事实上，并的理想是
 \[
 	I(L\cup M\cup N_0)=(z,xy(x-y)),
 \]
@@ -435,7 +436,7 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 \]
 换句话说，极限概形$X_0$在原点处有一个嵌入点。
 
-事实上，这点并不难直接看出，同时反过来也助我们证明等式$I(X_0)=(xz,yz,z^2,xy(x-y))$：所有的概形$X_t$都在原点$(0,0,0)\in\bba_K^3$处有一个三维Zariski切空间，试$X_0$必须也有一个，因为如果$\mathscr{X}\subset \bba_B^n$是任意的闭子概形以及$\sigma:B\to\mathscr{X}$是$\mathscr{X}\to B$的任意截面，Zariski切空间$T_{\sigma(b)}\mathscr{X}$的维数是$b\in B$的一个上半连续函数。这就转而给出了
+事实上，这点并不难直接看出，同时反过来也助我们证明等式$I(X_0)=(xz,yz,z^2,xy(x-y))$：所有的概形$X_t$都在原点$(0,0,0)\in\bba_K^3$处有一个三维Zariski切空间，所以$X_0$必须也有一个，因为如果$\mathscr{X}\subset \bba_B^n$是任意的闭子概形以及$\sigma:B\to\mathscr{X}$是$\mathscr{X}\to B$的任意截面，Zariski切空间$T_{\sigma(b)}\mathscr{X}$的维数是$b\in B$的一个上半连续函数。这就转而给出了
 \[
 	I(X_0)\subset I(L\cup M\cup N_0)\cap (x,y,z)^2=(xz,yz,z^2,xy(x-t)),
 \]
@@ -470,18 +471,18 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 注意，在上面的两个和在前面分析过的例子中，概形的并的极限真包含了它们极限的并。我们将在第 \ref{chap:5} 章回到这点上。
 \end{exe}
 
-取给定概形的单参子概形族的极限是代数几何中的一个基本的操作。在本书的后面出现的例子中，我们将通过ad-hoc\nottran 法来计算这样极限的理想，正如下面演示的那样。但是，这里有一个一般的算法来算这东西，当然最好由机器来算。比如，假设有基$B=\spec K[t]$以及一个理想$\mathscr{I}\subset K[t][x_1$, $\dots$, $x_n]$，同时对$\lambda \neq 0$，还有由理想
+取给定概形的单参子概形族的极限是代数几何中的一个基本的操作。在本书的后面出现的例子中，我们将见招拆招地计算这样极限的理想，正如这里所做的。但是，确实有一个一般的算法来算这东西，当然最好由机器来算。比如，假设有基$B=\spec K[t]$以及一个理想$\mathscr{I}\subset K[t][x_1$, $\dots$, $x_n]$，同时对$\lambda \neq 0$，还有由理想
 \[
 	I_\lambda=(\mathscr{I},t-\lambda)/(t-\lambda)\subset K[t][\text{$x_1$, $\dots$, $x_n$}]/(t-\lambda)\cong K[\text{$x_1$, $\dots$, $x_n$}].
 \]
-定义的概形$X_\lambda\subset \bba_K^n$. 接着我们定义理想$\mathscr{J}\subset K[t][x_1$, $\dots$, $x_n]$为
+定义的概形$X_\lambda\subset \bba_K^n$. 接着我们定义一个理想$\mathscr{J}\subset K[t][x_1$, $\dots$, $x_n]$为
 \[
 	\mathscr{J}=\bigcup_k (\mathscr{I}:t^k);
 \]
 即，$\mathscr{J}$是那些存在某个$k$使得$t^k f$成立的多项式$f(t$, $x_1$, $\dots$, $x_n)$构成的理想。这些可以由Gr\"{o}bner基来计算，见Eisenbud [1995, Chapter \uppercase\expandafter{\romannumeral15}].
 
 \paragraph*{平坦性}\addcontentsline{toc}{subsubsection}{平坦性}
-前面的讨论已经足够描述给定概形$A$（比如仿射或者射影空间）的，在非奇异一维基底上连续变化的子概形族的极限：称一个族$X\subset B\times A$是连续的，如果它的每一个纤维是附近那些纤维的极限。然而，这个概念依然太过限制了：比如他还不足以描述基$B$是非约态的这样一个已被证明是非常有用的情况。为了将概念扩展到最普遍的环境，Serre引入了以下概念：
+前面的讨论已经足够描述给定概形$A$（比如仿射或者射影空间）的，在非奇异一维基底上连续变化的子概形族的极限：称一个族$X\subset B\times A$是连续的，如果它的每一个纤维是附近那些纤维的极限。然而，这个概念依然太过限制了：比如他还不足以描述基$B$是非约态的这样一个已被证明是非常有用的情况。为了将概念推广到最普遍的环境中，Serre引入了以下概念：
 
 \begin{defi}
 	设$R$是一个环而模$M$是$R$\hyp 模，如果对任意的$R$\hyp 模单同态$A\to B$，诱导的映射$M\otimes_R A\to M\otimes_R B$依然是单同态的，则称$M$是平坦的。
@@ -493,7 +494,7 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 	一族概形间的态射$\pi:X\to B$是平坦的，如果对每一个$x\in X$，局部环$\mathscr{O}_{X,x}$通过映射$\pi^\#$作为$\mathscr{O}_{B,\pi(x)}$\hyp 模时是平坦的。
 \end{defi}
 
-这个概念已足够一般到包含给定度的平面曲线族，但也足够限制，使得平坦族中簇有很多共同点。这已足够令人满意，除了（第一眼看上去）它似乎不是一个非常“几何”的性质。 然而，这实际上是前面介绍的朴素极限概念的最自然的（ 事实上，这是唯一可能的）扩展！ 我们会建立这个事实，继而考虑其他平坦性的性质; 不错的技术讨论见Eisenbud [1995]; Matsumura [1986]; Hartshorne [1977]. \nottran
+这个概念已足够一般到包含给定度的平面曲线族，但也足够限制，使得平坦族中簇有很多共同点。这确实足以令人满意，除了（第一眼看上去）它似乎不是一个非常“几何”的性质。 然而，它实际上是前面介绍的朴素极限概念的最自然的（ 事实上，这是唯一可能的）推广！ 我们下面将建立这个事实，继而考虑平坦性的其他性质; 不错的技术讨论可以参见Eisenbud [1995]; Matsumura [1986]; Hartshorne [1977]. 
 
 首先，平坦性在前面已经考虑的例子中表现出了我们希冀的优良性质。
 
@@ -502,7 +503,7 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 	\begin{compactenum}[\((1)\)]
 		\item $\pi$在点$0$处平坦。
 		\item 纤维$X_0=\pi^{-1}(0)$是纤维族$X_b=\pi^{-1}(b)$在$b\to 0$时的极限。
-		\item $X$没有支集是$X_0$的不可约组分或者嵌入组分。
+		\item $X$没有支于$X_0$的不可约组分或者嵌入组分。
 	\end{compactenum}
 \end{pro}
 
@@ -516,7 +517,7 @@ $Y_1$是上面的概形$X$在$\bba_K^2$作为$\bba_K^3$中的$z=0$平面的嵌�
 为了看到(1)与(3)的等价，观察到$\oo_{\mathscr{X},x}$作为$\oo_{B,0}$\hyp 模对每一个$x\in X_0$是平坦的，当且仅当$\oo_{\mathscr{X}}(\mathscr{X})$作为$R$\hyp 模是自由的（见Bourbaki [1972, \uppercase\expandafter{\romannumeral1}.2.4, Porposition 3.\expandafter{\romannumeral2}]；这点不难从这里的环$R$都是主理想整环得到，见Matsumura [1986, Theorem 7.6以及在第50页的逆命题]或者Eisenbud [1995, Corollary 6.3]）。
 \end{proof}
 
-这个平坦性的解释有多一般呢？首先，平坦性条件在态射$\pi:\mathscr{X}\to B$的定义域\nottran 中是局部性的，所以$\mathscr{X}$和$B$是仿射概形的假设实际上并不失一般性。此外，如果还假设$\mathscr{X}$在$B$上是\textit{有限型}的，这是另一个温和的有限性条件，它将在第 \ref{s:3.1.1} 节描述，我们还可以进一步将问题约化到$\mathscr{X}$是$\bba_B^n$的一个闭子概形，而$\pi$是投射$\bba_B^n\to B$在$\mathscr{X}$上的限制。所有这些都是次要的假设，在应用到上面的结果中最紧要的限制是我们取$B$是一维非奇异的。然而，我们可以通过以下的引理来扩大这一范围，它刻画了有限型平坦族在约态基上的表现。
+这个平坦性的解释有多一般呢？首先，平坦性条件在态射$\pi:\mathscr{X}\to B$的定义域中是局部性的，所以假设$\mathscr{X}$和$B$是仿射概形实际上并不失一般性。此外，如果还假设$\mathscr{X}$在$B$上是\textit{有限型}的，这是另一个温和的有限性条件，它将在第 \ref{s:3.1.1} 节描述，我们还可以进一步将问题约化到$\mathscr{X}$是$\bba_B^n$的一个闭子概形，而$\pi$是投射$\bba_B^n\to B$在$\mathscr{X}$上的限制。所有这些都是次要的假设，在应用到上面的结果中最紧要的限制是我们取$B$是一维非奇异的。然而，我们可以通过以下的引理来扩大这一范围，它刻画了有限型平坦族在约态基上的表现。
 
 \begin{lem}\label{lem:2.30}
 	令$K$是一个域，$B$是一个约态$K$\hyp 概形，$b\in B$是一个闭点，而$\mathscr{X}\subset \bba_{B}^n$是一个闭子概形。 $\mathscr{X}$在点$b$处平坦当且仅当，对每一个非奇异一维$K$\hyp 概形$B'$，每一个闭点$0\in B'$以及任意将$0$变成$b$的态射$\varphi:B'\to B$，纤维$X_b$是纤维$X_{\varphi(b')}$在$b'$趋向于$0$时候的极限，即，对任意将$0$变成$b$的态射$\varphi:B'\to B$，拉回族
