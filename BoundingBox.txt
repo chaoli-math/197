@@ -49,7 +49,7 @@
 ./chap_3/pics/1.png
 %%BoundingBox: 0 0 562 68
 ./chap_3/pics/2.png
-%%BoundingBox: 0 0 670 491
+%%BoundingBox: 0 0 668 462
 ./chap_3/pics/3.png
 %%BoundingBox: 0 0 340 330
 ./chap_3/pics/4.png

@@ -50,9 +50,9 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \[
 	((\proj S)_f)_{(g/f)}=((\proj S)_g)_{(f/g)}.
 \]
-由第 \ref{s:1.2.4} 节中讨论的黏合，它们将$\proj S$变为了一个概形。
+正如第 \ref{s:1.2.4} 节中讨论的黏合构造，它们将$\proj S$变为了一个概形。
 
-\nottran
+在本节的剩余部分以及下节中，我们将展示一些射影概形的基本事实以及它们的闭子概形。因为这些事实以及它们的证明与簇的情况中的很类似，我们将它们留作习题。
 
 \begin{exe}\label{exe:3.6}
 \begin{compactenum}[(a)]
@@ -60,8 +60,60 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \[
 	(I\cdot S[f^{-1}])\cap S[f^{-1}]_0
 \]
-由
+由一族$I$的齐次生成元乘以合适的$f$的（负的）次幂生成（$f$是任意次的推广见 Exercise \ref{exe:3.10}）。于是，$S[f^{-1}]$的齐次素理想一一对应于$S[f^{-1}]$的$0$-次元构成的环的素理想。对应由$S[f^{-1}]$的素理想$\pp$变为$\mathfrak q=\pp\cap S[f^{-1}]_0$给出，其逆为将$S[f^{-1}]_0$的素理想$\mathfrak{q}$变为$\mathfrak qS[f^{-1}]$.
+
+\item 令$S=A[x_0$, $\dots$, $x_r]$为多项式环，而$U$是$\mathbb P_A^r=\proj S$的仿射开集$(\mathbb P_A^r)_{x_i}$. 由定义，
+\[
+	U=\spec S[x_i^{-1}]_0,
+\]
+证明
+\[
+	S[x_i^{-1}]_0=A[x'_0,\dots,x'_r]
+\]
+为生成元$x'_j=x_j/x_i$的多项式环。（注意$x'_i=1$，所以这是一个$r$变量的多项式环。）于是
+\[
+	(\mathbb P^r_A)_{x_i}=\mathbb A_A^r
+\]
+所以射影$r$-空间被$r+1$个仿射$r$-空间所覆盖，就像第 \ref{chap:1} 章中所描述的那样。
+
+\item 考虑一个映射$\alpha:S\to S[x_i^{-1}]_0$，他将$x_i$变为$1$以及对$j\neq i$将$x_j$变为$x'_j$. 从(a)证明如果$I$是$S$的一个齐次理想，于是
+\[
+	I':=I\cdot S[x_i^{-1}]\cap S[x_i^{-1}]_0=\alpha(I)'\cdot S[x_i^{-1}]_0.
+\]
+从$I$构造$I'$的过程被称为\textit{非齐次化}。像经典的那样，描述与其相反的过程，齐次化。
 \end{compactenum}
+\end{exe}
+
+\nottran
+
+\begin{center}\includegraphics[scale=\scale,bb=0 0 668 462]{\PICDIR/2.png}\end{center}
+
+\begin{exe}\label{exe:3.9}
+在上图中添入点$(4x_1-5x_0)$, $(2x_1-5x_0)$以及$(5)$的闭包（可以与第 \ref{s:2.4.3} 节中的$\mathbb A_{\mathbb Z}^2$的图相比较）。\textit{注意}：曲线$(4x_1-5x_0)$应该画得与“位于$\infty$的点”$(x_0)$相切，而曲线$(2x-5x_0)$不能。通俗地，我们可以说这是因为函数$5/4$在$(2)$处有一个双极点，而$5/2$只有一个单极点。（同样可见 Exercise \ref{exe:2.38} 中的讨论。）
+\end{exe}
+
+\begin{exe}\label{exe:3.10}
+按上面的记号，令$h$为$S$的一个正次齐次元。集合
+\[
+	(\proj S)_h:=\proj S-V(h)
+\]
+同前为$S$中不包含$h$的齐次素理想构成的集合。证明这个集合依然一一对应于$S[h^{-1}]_0$的素理想，所以实际上存在一个$\spec S[h^{-1}]_0$与$\proj S$的（仿射）开子概形的同构。同样证明，这样的仿射开集族
+\[
+	\{(\proj S)_h\}_{h\in H}
+\]
+是一个$\proj S$的开覆盖，当且仅当$H$的元素生成了一个根为$S+$的理想。
+\end{exe}
+
+\begin{exe}\label{exe:3.11}
+推广$\proj S$的定义到$S$不被$1$-次元所生成的情况，以及证明$\proj S$是一个射影概形。
+\end{exe}
+
+\begin{exe}\label{exe:3.12}
+令$S$是一个分次环，没必要是有$1$-次元生成的。对任意的正次$d$，定义$S$的$d$-次\textit{Veronese 子环}为分次环
+\[
+	S^{(d)}=\bigoplus_{\nu=1}^\infty S_{d\nu}
+\]
+证明$\proj S$同构于$\proj S^{(d)}$. 然而，证明如果$S=A[x,y]$，则$S^{(d)}$作为分次代数（甚至仅作为环）并不同构于$S$. 于是，就像在簇中那样，分次代数与射影概形的对应并不是一一的。
 \end{exe}
 
 \subsection{\texorpdfstring{$\proj R$}{Proj R}的闭子概形}\label{s:3.2.2}
