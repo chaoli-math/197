@@ -84,12 +84,22 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \end{compactenum}
 \end{exe}
 
-\nottran
+\begin{exe}\label{exe:3.7}
+如果$I$是一个分次环$S$的齐次理想，我们有一个底空间的包含
+\[
+	|\proj S/I|\subset |\proj S|.
+\]
+证明，这个子集与一个仿射开集$(\proj S)_f$的交集是$(\proj S)_f$的一个闭子集，所以$\proj S/I$能被看作$\proj S$的一个闭子概形。每个由$1$-次元有限生成的$A$-代数是某个多项式环$A[x_0$, $\dots$, $x_r]$模掉一个齐次理想得到的商环，所以我们看到\textit{每个$A$上的射影概形是一个$A$上的射影空间的闭子概形}。下面我们将在Exercise \ref{exe:3.15} 和 \ref{exe:3.16}具体看到环$S$的理想与$\proj S$的闭子概形之间的联系。
+\end{exe}
+
+\begin{exe}\label{exe:3.8}
+证明$\mathbb P_A^r$是开集$\mathbb A_A^{r-1}$与闭集$\mathbb P_A^{r-1}$的不交并。特别地，$\mathbb P^0_A=\spec A$. 所以比如，我们能将$\mathbb P_{\mathbb Z}^1$看成$\zz$上的仿射直线$\mathbb A_\zz^r$（如第 \ref{chap:2} 章的图）与一个同构于$\spec \zz$的“无穷远点”的并，如下图所示
 
 \begin{center}\includegraphics[scale=\scale,bb=0 0 668 462]{\PICDIR/2.png}\end{center}
+\end{exe}
 
 \begin{exe}\label{exe:3.9}
-在上图中添入点$(4x_1-5x_0)$, $(2x_1-5x_0)$以及$(5)$的闭包（可以与第 \ref{s:2.4.3} 节中的$\mathbb A_{\mathbb Z}^2$的图相比较）。\textit{注意}：曲线$(4x_1-5x_0)$应该画得与“位于$\infty$的点”$(x_0)$相切，而曲线$(2x-5x_0)$不能。通俗地，我们可以说这是因为函数$5/4$在$(2)$处有一个双极点，而$5/2$只有一个单极点。（同样可见 Exercise \ref{exe:2.38} 中的讨论。）
+在上图中添入点$(4x_1-5x_0)$, $(2x_1-5x_0)$以及$(5)$的闭包（可以与第 \ref{s:2.4.3} 节中的$\mathbb A_{\mathbb Z}^2$的图相比较）。\textit{注意}：曲线$(4x_1-5x_0)$应该画得与“无穷远点”$(x_0)$相切，而曲线$(2x-5x_0)$不能。通俗地，我们可以说这是因为函数$5/4$在$(2)$处有一个双极点，而$5/2$只有一个单极点。（同样可见 Exercise \ref{exe:2.38} 中的讨论。）
 \end{exe}
 
 \begin{exe}\label{exe:3.10}
@@ -120,13 +130,49 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 
 一个齐次理想$I\subset A[x_0$, $\dots$, $x_r]$确定了一个凝聚理想层$\tilde I\subset \mathscr O_{\mathbb P_A^r}$，因而一个$\mathbb P_A^r$的闭子概形。下面的习题建立了这些事实。
 
-\begin{exe}
+\begin{exe}\label{exe:3.13}
 对每个开集
 \[
 	U_i=(\mathbb P_A^r)_{x_i}=\spec A[x_0,\dots,x_r,x_i^{-1}]_0\cong \mathbb A_A^r,
 \]
-令$\tilde I(U_i)$为理想$I\cdot A[x_0,\dots,x_r,x_i^{-1}]\cap A[x_0,\dots,x_r,x_i^{-1}]_0$. 证明这个定义可以以唯一的方式拓展到其他开集$U$上使得$\tilde{I}$成为一个凝聚理想层。
+令$\tilde I(U_i)$为理想$I\cdot A[x_0,\dots,x_r,x_i^{-1}]\cap A[x_0,\dots,x_r,x_i^{-1}]_0$. 证明这个定义可以以唯一的方式拓展到其他开集$U$上使得$\tilde{I}$成为一个凝聚理想层。所以我们称$\mathbb P_A^r$的闭子概形$V(\tilde{I})$\textit{关联于一个齐次理想$I$}.
 \end{exe}
+
+\begin{exe}\label{exe:3.14}
+反之，给定一个$\mathbb P_A^r$的一个闭子概形，我们可以定义一个齐次理想$I(X)\subset A[x_0$, $\dots$, $x_r]$为齐次多项式$p(x_0,\dots,x_r)$生成的理想，其中齐次多项式需满足对每一个$i$，将其置于$1$后给出了元素
+\[
+	p(x_0,\dots,1,\dots,x_r)\in \mathscr I_X(U_i)\subset A[x_0,\dots,x_r,x_i^{-1}]_0.
+\]
+证明，如果$I=I(X)$，则$\tilde I=\mathscr I_X$.
+\end{exe}
+
+注意到连同 Exercise \ref{exe:3.7} ，它说明了每一个射影簇的闭子概形也是射影的：如果$I\subset S=A[x_0$, $\dots$, $x_r]$是一个齐次理想，则$V(\tilde{I})\subset \mathbb P^r_A$同构于概形$\proj S/I$.
+
+\begin{exe}\label{exe:3.15}
+子概形与理想的对应不再像仿射概形的情况是一一对应了。比如，证明在$\mathbb P_K^1$中，其中$K$是一个域，理想$I=(x_0)$和$I'=(x_0^2,x_0x_1)$都定义了同一个约态、单点子概形。更一般地，证明，如果$I\subset S=K[x_1$, $\dots$, $x_r]$是任意的齐次理想，以及对任意的整数$n_0$，通过
+\[
+	I'=\bigoplus_{n\geq n_0}I_n
+\]
+定义一个理想$I'\subset I$，则$I$和$I'$定义了$\mathbb P_K^r$的同一个子概形。
+\end{exe}
+
+\begin{exe}\label{exe:3.16}
+为了解决这点，定义一个齐次理想$J\subset S:=A[x_0$, $\dots$, $x_r]$的\textit{饱和化}为理想
+\[
+	I=\{F\in S\,:\, \text{对某个$n$，$F\cdot S_n\subset J$}\},
+\]
+以及，称一个齐次理想是饱和的，如果它等于它的饱和化。证明，存在一个$\mathbb P_A^r$的子概形与饱和理想之间的一一对应。
+\end{exe}
+
+\begin{exe}\label{exe:3.17}
+证明，Exercise \ref{exe:3.12} 中的同构定义了一个射影空间$\mathbb P_A^r$以及$\mathbb P_A^N$的一个闭子概形之间的同构，其中$N=\dim_A(A[x_0$, $\dots$, $x_r]_d)$.（这就是概形版的Veronese映射。）
+\end{exe}
+
+\begin{exe}\label{exe:3.18}
+证明，如果$R$是一个环$A=R_0$上的有限生成分次环（没必要是有其$1$-次元生成的），$\proj R$同构于某个射影空间$\mathbb P_A^r$的闭子概形。
+\end{exe}
+
+我们以一个定义和基本定理结束这一小节。
 
 \begin{defi}
 一个概形间态射$\varphi:X\to Y$被称为\textit{射影}的，如果他是一个闭嵌入$X\to \mathbb P_Y^n$和结构态射$\mathbb P_Y^n\to Y$的复合。
@@ -134,11 +180,15 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 
 注意到，如果$Y=\spec A$是仿射的，这相当于说$X$具有形式$\proj S$，其中$S$是一个有限生成$A$-代数。射影态射的基本事实前面已经说过了：
 
-\begin{thm}
+\begin{thm}\label{thm:3.20}
 射影态射是逆紧的。
 \end{thm}
 
 证明可见Hartshorne [1977, Theorem II.4.9].
+
+\begin{exe}\label{exe:3.21}
+证明\nottran 
+\end{exe}
 
 \subsection{整体\texorpdfstring{$\proj$}{Proj}} \label{s:3.2.3}
 \subsection{切空间和切锥} \label{s:3.2.4}
