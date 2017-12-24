@@ -38,10 +38,52 @@
 
 为使这些概念派上哪怕一点的作用，一个首先关键的事实就是函子$h_X$确实决定了概形$X$. 它来自于一个基础的范畴论事实。
 
-\begin{lem}[Yoneda引理]
+\begin{lem}[Yoneda引理]\label{lem:6.1}
 令$\scr C$是一个范畴，而$X$, $X'$是$\scr C$的对象。
 \begin{compactenum}[(\rm a)]
 \item 如果$F$是从$\scr C$到集合范畴的任意反变函子，则从$\Mor(-,X)$到$F$的自然变换自然对应于$F(X)$中的元素。
-\item 如果从$\scr C$到集合范畴的函子$\Mor(-,X)$和$\Mor(-,X')$是同构的，则$X\cong X'$
+\item 如果从$\scr C$到集合范畴的函子$\Mor(-,X)$和$\Mor(-,X')$是同构的，则$X\simeq X'$. 更一般地，从$\Mor(-,X)$到$\Mor(-,X')$的函子间的映射与从$X$到$X'$的映射相同，即，将$X$变为$h_X$的函子
+\[
+	h:\mathscr C\to \operatorname{Fun}(\mathscr C^\circ,(\text{sets}))
+\]
+是一个$\mathscr C$到函子范畴的一个满子范畴的等价。
 \end{compactenum}
 \end{lem}
+
+\begin{proof}
+对(a)，将映射$\alpha:\Mor(-,X)\to F$变为元素$\alpha(1_X)$，其中$1_X:X\to X$是恒等映射。其逆将$p\in F(X)$变为映射$\alpha$，它将$f\in \Mor(Y,X)$变为$F(f)(p)\in F(Y)$. 对(b)，我们能将(a)应用到函子$F=\Mor(-,Y)$.
+\end{proof}
+
+下一命题比 Lemma \ref{lem:6.1} 更进一步，说明了我们只需关注限制在仿射概形范畴的点函子，或者等价地，反箭头的交换环范畴$\text{(rings)}^\circ$，以及同样的事情在相对语境中也成立。
+
+\begin{pro}\label{pro:6.2}
+如果$R$是一个交换环，一个$R$-概形由其限制在仿射$R$-概形上的点函子所确定，实际上，
+\[
+	h:(\text{$R$-schemes})\to \operatorname{Fun}((\text{$R$-algebras}),(\text{sets}))
+\]
+是一个$R$-概形范畴与函子范畴的一个满子范畴的等价。
+\end{pro}
+
+当然，一个仿射概形范畴上的反变函子与环范畴上的协变函子相同，所以，我们可以一般地认为，我们的反变可表函子$h_X:(\text{schemes})^\circ \to (\text{sets})$是$R$-代数范畴上的协变函子。（如果我们需要标记这个差异，则用$h_X^*:(\text{rings})\to (\text{sets})$来标记函子$h_X^*(A)=h_X(\spec A)$，其中$A$是任意的$R$-代数。）
+
+\begin{proof}
+实际上，这个命题不过是在说概形由仿射概形所拼成。令$S=\spec R$. 记$h_X$为函子$\Mor_S(-,X)$在仿射$S$-概形范畴的限制。我们只要说明任何的自然变换$\varphi:h_X\to h_{X'}$来自于唯一的$S$-概形态射$f:X\to X'$. 为从$\varphi$构造$f$，令$\{U_\alpha\}$为$X$的一个仿射开覆盖，将$\varphi$应用到限制映射$U_\alpha\subset X$得到态射$U_\alpha\to X'$. 这些态射满足为定义所需态射$f$需要的相容性条件。唯一性来自于如下观察，两个$X$到$X'$的态射是不同的，则它们限制在某个$U_\alpha$上不同。
+\end{proof}
+
+\begin{exe}
+假设$X$（就像我们感兴趣的所有概形那样）是\textit{局部Noether的}，即，由Noether环的谱所覆盖。证明，$X$由$h_X$在Noether环范畴上的限制所确定。
+\end{exe}
+
+\subsection{开与闭子函子} \label{s:6.1.1}
+
+将概形看成函子的用处之一在于，我们可以将一些概形的几何的基本概念推广到函子上。我们下面将考虑一些例子。
+
+我们首先展示如何定义一个函子的开子函子
+\[
+	F\in \operatorname{Fun}((\text{rings}),(\text{sets})).
+\]
+我们称范畴$\mathscr C$到集合范畴的函子间的映射$\alpha:G\to F$是\textit{单}的，如果对每一个对象$X$，诱导的集合间映射$G(X)\to F(X)$是一个单射 \nottran
+
+
+\subsection{$K$-有理点} \label{s:6.1.2}
+\subsection{函子的切空间} \label{s:6.1.3}
