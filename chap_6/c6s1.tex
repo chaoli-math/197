@@ -78,11 +78,54 @@
 
 将概形看成函子的用处之一在于，我们可以将一些概形的几何的基本概念推广到函子上。我们下面将考虑一些例子。
 
-我们首先展示如何定义一个函子的开子函子
+我们首先展示如何定义一个函子
 \[
-	F\in \operatorname{Fun}((\text{rings}),(\text{sets})).
+	F\in \operatorname{Fun}((\text{rings}),(\text{sets}))
 \]
-我们称范畴$\mathscr C$到集合范畴的函子间的映射$\alpha:G\to F$是\textit{单}的，如果对每一个对象$X$，诱导的集合间映射$G(X)\to F(X)$是一个单射 \nottran
+的开子函子。我们称范畴$\mathscr C$到集合范畴的函子间的映射$\alpha:G\to F$是\textit{单}的，如果对每一个对象$X$，诱导的集合间映射$G(X)\to F(X)$是一个单射（这有关于一个标准的范畴论概念，不过我们这里并不需要）。此时，我们称$\alpha:G\to F$是一个$F$的子函子。比如，如果$U\subset X$是一个子概形，函子$h_U$就是$h_X$的一个子函子。
+
+我们想要定义一个函子$F$的开子函子为一个子函子，满足当限制到可表子函子$h_X\subset F$时，具有形式$h_U\subset h_X$，其中$U$是$X$的一个子概形。为实现它，我们需要引入函子的纤维积这个概念。
+
+\begin{defi} \label{defi:6.4}
+	如果$A$, $B$和$C$都是从一个范畴$\mathscr C$到集合范畴的函子，如果$f:A\to C$和$g:B\to C$都是函子间映射，则纤维积$A\times_C B$为一个从$\mathscr C$到集合范畴的函子，它将$\mathscr C$中的任意对象$Z$变为
+	\[
+		(A\times_C B)(Z)=\left\{(a,b)\in A(Z)\times B(Z)\;|\; f(a)=f(b)\text{ in } C(Z)\right\},
+	\]
+	对于态射的变换是显然的。
+\end{defi}
+
+\begin{defi} \label{defi:6.5}
+	一个$\operatorname{Fun}((\text{rings},\text{sets})$中的子函子$\alpha:G\to F$是一个\textit{开子函子}，如果对每一个由一个仿射概形$\spec R$表示的函子上的映射$\psi:h_{\spec R}\to F$，函子的纤维积
+	\[
+		\xymatrix{
+			G_\psi\ar[r]\ar[d]&h_{\spec R}\ar[d]^\psi\\
+			G\ar[r]^\alpha& F
+		}
+	\]
+	都产生一个映射$G_\psi\to h_{\spec R}$同构于，某个$\spec R$的开子概形表示的函子的单态射。
+\end{defi}
+
+\begin{exe} \label{exe:6.6}
+	令$X=\spec R$为一个仿射概形。证明，$h_X$的开子概形正是那些对某个理想$I\subset R$定义的子函子
+	\[
+		F(T)=\{\varphi\in h_X(T)\; | \; \varphi^*(I)T=T\}.
+	\]
+\end{exe}
+
+\begin{exe} \label{exe:6.7}
+	令$X$为域$K$上的概形。定义函子$F:(\text{schemes}/K)^\circ \to (\text{sets})$如下：对每一个$K$-概形$Y$，令$F(Y)$为$X\times_K Y$中在$Y$上平坦的闭子概形$Z$的集合，此外，每个$Z$还满足，在$Y$的任意闭点上的纤维都是$X$的度为$2$的子概形。令$G$是$F$的子函子，通过再加上要求，$Z$在$Y$的任意闭点上的纤维是约态的。证明$G\subset F$是开的。
+\end{exe}
+
+闭子函子的定义是类似的。一个$\operatorname{Fun}((\text{rings},\text{sets})$中的子函子$\alpha : G\to F$是\textit{闭的}，如果对每一个映射$\psi:h_{\spec R}\to F$，$\psi$和$\alpha$的纤维积是一个$h_{\spec R}$的子函子，其同构于$\spec R$的一个闭子概形所表示的函子。
+
+\begin{exe} \label{exe:6.8}
+	令$X=\spec R$为一个仿射概形。证明，$h_{\spec R}$的开与闭子函子正是那些由$\spec R$的开与闭子概形所表示的函子。（对任意概形，稍难一些，这也是对的。）
+\end{exe}
+
+如同往常，使用这些概形需要稍加小心。比如：
+
+\nottran
+
 
 
 \subsection{$K$-有理点} \label{s:6.1.2}
