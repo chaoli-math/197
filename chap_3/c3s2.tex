@@ -271,7 +271,18 @@ $
 
 \subsection{切空间和切锥} \label{s:3.2.4}
 \paragraph*{仿射与射影切空间}\addcontentsline{toc}{subsubsection}{仿射与射影切空间}
-一个概形的Zariski切空间是抽象矢量空间。但当一个$K$上的概形$X$被嵌入到一个环绕空间中，比如$K$上的仿射或射影空间，我们可以将$X$的一个剩余类域为$K$的点$p$关联于对应仿射或者射影空间的线性子簇，其被称为$X$在点$p$的\textit{仿射切空间}或\textit{射影切空间}。
+一个概形的Zariski切空间是抽象矢量空间。但当一个$K$上的概形$X$被嵌入到一个环绕空间中，比如$K$上的仿射或射影空间，我们可以将$X$的一个剩余类域为$K$的点$p$关联于对应仿射或者射影空间的线性子簇，其被称为$X$在点$p$的\textit{仿射切空间}或\textit{射影切空间}。在仿射概形$X=V(f_1,\dots,f_k)\subset \mathbb A_K^n$以及点$p=(a_1,\dots,a_n)\in X$的情况中，这是一个由
+\[
+	V\left(\left\{
+		\sum_i \frac{\partial f_\alpha}{\partial x_i}(\alpha_1,\dots,\alpha_n)\cdot (x_i-a_i)
+	\right\}_{\alpha=1,\dots,k}
+	\right)
+\]
+给出的子簇。为理解这个概形与Zariski切空间之间的关系，注意到域$K$上的一个矢量空间并不是仿射空间$\mathbb A_K^n$. 但是，给定$K$上的一个$n$-维矢量空间$V$，我们可以对$V$给出一个概形$\overline{V}$，它同构于仿射开集$\mathbb A_K^n$，所以$\overline{V}$中剩余类域为$K$的点自然地对应于$V$中的矢量：$\overline{V}$就是对偶空间对称代数的谱
+\[
+	\overline{V}=\spec (\operatorname{Sym}(V^*)).
+\]
+我们将称$\overline{V}$为\textit{关联于矢量空间$V$的概形}。
 
 \subsection{到射影空间的态射} \label{s:3.2.5}
 \subsection{分次模和层} \label{s:3.2.6}
