@@ -285,6 +285,95 @@ $
 我们将称$\overline{V}$为\textit{关联于矢量空间$V$的概形}。
 
 \subsection{到射影空间的态射} \label{s:3.2.5}
+
+与存在到仿射概形的态射的简单刻画（Theorem \ref{thm:1.40}）类似，
+对到射影空间的态射，用线丛，或者等价的，这节中将要引入的可逆层，
+我们也可以用简单的方式来看待它们。可逆层在Cartier除子中有着另一
+个几何实现，我们也将描述这层联系。更深入的信息可以参见
+Hartshorne [1977, Chapter II].
+
+一旦我们理解了到概形$\mathbb P_A^n$的态射，我们也将理解到任意射  
+影概形$Y\subset \mathbb P_A^n$的态射，因为一个到$Y$的态射就是一
+个可以经由$Y$分解的到$\mathbb P_A^n$的态射（一个局限\nottran 的例子见
+Exercise \ref{exe:3.45}）；于是我们将研究到射影空间的态射。
+
+为明白我们的处境，首先考虑一个$A$-概形范畴的态射
+$\varphi:X\to \mathbb P^n_A=\proj A[x_0,\dots,x_n]$，其中
+$X=\spec K$是一个域的谱。因为$X$只有一个点，这样一个态射的像$p$
+必然包含于某个开集
+\[
+	U_i=\left(\mathbb P_A^n\right)_{x_i}=\spec A\left[
+	\frac{x_0}{x_i},\dots,\frac{x_n}{x_i}\right]\cong \mathbb A_A^n
+\]
+中。于是，这个映射对应于一个标量$n$-元组$(a_0,\dots,\hat a_i,
+\dots,a_n)\in K^n$. 当然，$p$可能也包含于另一个开集$U_j$中；在
+$a_j\neq 0$的情况中，其在$U_j$中的坐标为
+\[
+	(b_0,\dots,\hat b_j,\dots,b_n)=\left(
+	\frac{a_0}{a_j},\dots,\frac{1}{a_j},\dots,\frac{a_n}{a_j}
+	\right).
+\]
+为将坐标不依赖于一个或者另一个$U_i$的选取地表示，我们可以称一个映射
+$\spec K\to \mathbb P_A^n$关联于一个$K$中元素的非零$(n+1)$-元组，
+并且两个这样的$(n+1)$-元组对应同一个映射当且仅当它们只差一个相乘
+标量。则上面的映射对应于$(n+1)$-元组$[\alpha_0=a_0,\dots,\alpha_i
+=1,\dots,\alpha_n=a_n]$，或者，等价地，$[\beta_0=b_0,\dots,
+\beta_j=1,\dots,\beta_n=b_n]$.
+
+说了这些，我们可以将同样的考虑拓展到态射$X\to \mathbb P^n_A$的情况，
+其中$X$是一个局部$A$-代数的谱。
+
+\begin{pro}\label{pro:3.36}
+如果$T$是一个局部$A$-代数，则（$A$-概形范畴的）态射$\spec T\to 
+\mathbb P_A^n$一一对应于$(n+1)$-元组$[\alpha_0,\dots,\alpha_n]
+\in T^{n+1}$，其中至少有一个$\alpha_i$是一个可逆元，且对任意可逆元
+$\alpha\in T$，成立等价关系$[\alpha_0,\dots,\alpha_n]\sim 
+[\alpha\alpha_0,\dots,\alpha\alpha_n]$.
+\end{pro}
+
+\begin{proof}
+记$\mathbb P_A^n=\proj A[x_0,\dots,x_n]$. 给定一个$(n+1)$-元组
+$[\alpha_0,\dots,\alpha_n]$，其中$\alpha_i$是可逆元，通过$A$-代数同态
+\begin{align*}
+\left[\frac{x_0}{x_i},\dots,\frac{x_n}{x_i}\right]&\longrightarrow T,\\
+\frac{x_j}{x_i}&\longmapsto \frac{\alpha_j}{\alpha_i},
+\end{align*}
+可以给出一个$\spec T$到$U_i=(\mathbb P_A^n)_{x_i}\subset \mathbb P_A^n$
+的态射。反过来，给定一个$A$-概形态射$\varphi:\spec T\to \mathbb P_A^n$，
+令$p\in \spec T$为唯一的闭点，并假设$\varphi(p)\in U_i$. 原像
+$\varphi^{-1}(U_i)$是$\spec T$中的一个包含$p$的开集，因此就是整个
+$\spec R$，换句话说，$\varphi(X)\subset U_i$. 映射$\varphi$因此由
+$A$-代数同态
+\[
+	\left[\frac{x_0}{x_i},\dots,\frac{x_n}{x_i}\right]\longrightarrow T
+\]
+给出，。于是我们可以将$\varphi$关联于一个$(n+1)$-元组
+\[
+	\left[\alpha_0=\frac{x_0}{x_i},\dots,\alpha_i=1,\dots,
+	\alpha_n=\frac{x_n}{x_i}\right].
+\]
+（如果像$\varphi(x)$也包含于$U_j$中，我们将得到$(n+1)$-元组
+\[
+	\left[\beta_0=\frac{x_0}{x_j},\dots,\beta_j=1,\dots,
+	\beta_n=\frac{x_n}{x_j}\right],
+\]
+其等于$[\alpha \alpha_0,\dots,\alpha\alpha_n]$，其中$\alpha=x_i/x_j$.）
+\end{proof}
+
+为进一步推广到仿射环或概形的情况，我们来寻找一个局部地可以约化
+到上面的情况的构造。
+
+\nottran
+
+\begin{thm}\label{thm:3.37}
+对任意的概形$X$，我们有自然的双射
+\begin{align*}
+\operatorname{Mor}&(X,\mathbb P_{\mathbb Z}^n)\\
+=&\;\{\text{局部为秩为$n$的子概形$K\subset \mathscr O_X^{n+1}$}\}\\
+=&\; \frac{\text{dd}}{\text{dd}}
+\end{align*}
+\end{thm}
+
 \subsection{分次模和层} \label{s:3.2.6}
 \subsection{Grassmann流形} \label{s:3.2.7}
 \subsection{全景超曲面} \label{s:3.2.8}
