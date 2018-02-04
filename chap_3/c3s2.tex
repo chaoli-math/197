@@ -347,7 +347,7 @@ $A$-代数同态
 \[
 	\left[\frac{x_0}{x_i},\dots,\frac{x_n}{x_i}\right]\longrightarrow T
 \]
-给出，。于是我们可以将$\varphi$关联于一个$(n+1)$-元组
+给出。于是我们可以将$\varphi$关联于一个$(n+1)$-元组
 \[
 	\left[\alpha_0=\frac{x_0}{x_i},\dots,\alpha_i=1,\dots,
 	\alpha_n=\frac{x_n}{x_i}\right].
@@ -361,18 +361,81 @@ $A$-代数同态
 \end{proof}
 
 为进一步推广到仿射环或概形的情况，我们来寻找一个局部地可以约化
-到上面的情况的构造。
+到上面的情况的构造。为此，我们可将命题中的$(n+1)$-元组
+$(\alpha_0,\dots,\alpha_n)$看成一个模同态
+\[
+	\alpha:T^{n+1}\to T.
+\]
+说$\alpha$是满的等价于说每个$\alpha_i$都是$T$中的可逆元。这样两个映射
+等价当且仅当它们只差一个模$T$的自同态的复合（即乘上一个可逆元）。等价
+地，核是一个$T^{n+1}$的秩为$n$的直和项
+\footnote{译者注：直和项就是direct summand，或者简单写作summand. 设$N$
+是$M$的一个子模，如果存在子模$N'$使得$M=N\oplus N'$，则$N$就是$M$的一
+个直和项。}
+。
 
-\nottran
+于是，前面一段可以推广来描述从$A$-概形$X$到$\mathbb P^n$的$A$-态射：
+它们关联于秩为$n$的子层$\mathscr E\subset \mathscr O_X^{n+1}$，
+其局部是$\mathscr O_X^{n+1}$的直和项；或者，等价地，关联于映射
+\[
+	\mathscr O_X^{n+1}\to P\to 0,
+\]
+其中$P$是一个局部同构于$\oo_X$的层（这样一个层被称为\textit{可逆层}，
+在下面的讨论中将会详细解释），模去$\oo_X$的单位，其作用于$P$上为自同
+构。
 
 \begin{thm}\label{thm:3.37}
 对任意的概形$X$，我们有自然的双射
 \begin{align*}
 \operatorname{Mor}&(X,\mathbb P_{\mathbb Z}^n)\\
-=&\;\{\text{局部为秩为$n$的子概形$K\subset \mathscr O_X^{n+1}$}\}\\
-=&\; \frac{\text{dd}}{\text{dd}}
+=&\;\{\text{局部为秩为$n$的直和项的子层$K\subset \mathscr O_X^{n+1}$}
+\}\\
+=&\; \frac{\{\text{$X$上的可逆层$P$，连同一个满态射$\mathscr O_X^{n+1}
+\to P$}\}}{\{\text{$\oo_X(X)$的单位，其作用于$P$上为自同构}\}}.
 \end{align*}
 \end{thm}
+
+这里“自然”的意思是，对任意的概形间态射$\varphi:X\to Y$，复合$\varphi$
+诱导的映射$\operatorname{Mor}(Y,\mathbb P_{\mathbb Z}^n)\to 
+\operatorname{Mor}(X,\mathbb P_{\mathbb Z}^n)$与可逆层的拉回与满态射
+可交换；换句话说，我们有一个概形范畴到集合范畴函子的同构。
+
+当然，如果$X\to B$是一个$B$-概形，我们将对如何描述从$X$到
+$\mathbb P_B^n$的$B$-态射感兴趣。但这并不需要引入新的想法：但多少令人
+惊讶地，对任意的$B$-概形$X\to B$，一个$B$-概形态射$X\to \mathbb P_B^n$
+和态射$X\to \mathbb P_{\mathbb Z}^n$是一样东西！这里的关键点在于，因为
+$\mathbb P_{B}^n$是$\mathbb P_{\mathbb Z}^n$与$B$的积，一个任意概形$X$
+到$\mathbb P_B^n$的态射可以由态射$X\to B$以及态射
+$X\to \mathbb P^n_{\mathbb Z}$唯一确定。
+\[
+	\xymatrix{
+		X\ar[d]\ar[drr]\ar@{.>}[rr]&&\mathbb P_B^n\ar[d]\ar[lld]\\
+		B\ar[dr]&&\mathbb P_{\mathbb Z}^n\ar[dl]\\
+		&\spec \mathbb Z&
+	}
+\]
+因此，在明确结构态射$\varphi:X\to B$后，我们将得到一个双射
+\[
+	\operatorname{Mor}(X,\mathbb P_{\mathbb Z}^n)\leftrightarrow
+	\operatorname{Mor}(X,\mathbb P_{B}^n).
+\]
+
+我们现在处理Theorem \ref{thm:3.37}的证明。因为等式中所有的项都在$X$上
+是局部定义的，所以定理可以简单约化到$X$是仿射概形的情况，这也是我们
+下面将实际证明的情况。首先，我们复习一下模的相关概念。一个不错的基础
+文献是Bourbaki [1972, Chap. II-5].
+
+回忆环$T$上的模$K$是秩为$m$的\textit{局部自由}模，如果对每个极大理想
+（或者，等价地，每个素理想）$\pp$，$T_\pp$-模$K_\pp$是秩为$m$的自由模。
+这和层相关的概念是相同的。
+
+\begin{exe}\label{exe:3.38}
+	令$K$是一个Noether环$T$上的有限生成模，再令$\tilde K$是$\spec T$上
+	相应的凝聚层。证明，$K$是上面说的局部自由模当且仅当$\tilde K$是一个
+	局部自由凝聚层，即存在一个$\spec T$的仿射覆盖$\spec T_{f_i}$使得
+	$\tilde K$在每个仿射开集上的限制是自由的（等价地，每个模
+	$K[f_i^{-1}]$在$T_{f_i}=T[f_i^{-1}]$上是自由的）。
+\end{exe}
 
 \subsection{分次模和层} \label{s:3.2.6}
 \subsection{Grassmann流形} \label{s:3.2.7}
