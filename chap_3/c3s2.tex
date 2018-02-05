@@ -2,11 +2,11 @@
 
 \subsection{\texorpdfstring{$\proj S$}{Proj S}的构造}\label{s:3.2.1}
 
-到目前为止，非仿射概形最重要的例子是在一个仿射概形$\spec A$上的\textit{射影}概形，其中$A$是任意一个交换环。（为简单起见，我们常常说一个概形在$A$上射影，而不说在$\spec A$上射影。）这样的一个概形来自于一个分次$A$-代数，而构造过程非常类似于从它的齐次坐标环构造一个射影簇。我们可以从一个分次$\oo_B$-代数层开始，定义在任意的基概形$\spec B$上射影的概形，这个拓展有重要的应用。但对这个理论中的大部分情况而言，我们都可以将情况约化到$B$是一个仿射概形，故而在这里，我们对一般性的追求也仅止于此。
+到目前为止，非仿射概形最重要的例子是在一个仿射概形$\spec A$上的\textit{射影}概形，其中$A$是任意一个交换环。（为简单起见，我们常常说一个概形在$A$上射影，而不说在$\spec A$上射影。）这样的一个概形来自于一个分次$A$-代数，而构造过程非常类似于从它的齐次坐标环构造一个射影簇。我们可以从一个分次$\oo_B$-代数层开始，定义在任意的基概形$\spec B$上射影的概形，这个推广有重要的应用。但对这个理论中的大部分情况而言，我们都可以将情况约化到$B$是一个仿射概形，故而在这里，我们对一般性的追求也仅止于此。
 
-为了描述这个构造，我们从一个正分次$A$-代数开始，其中$A$作为这个代数的$0$次部分，即一个$A$代数$S$具有分次
+为了描述这个构造，我们从一个正分次$A$-代数开始，其中$A$作为这个代数的$0$次部分，即一个$A$-代数$S$具有分次
 \[
-	S=\bigoplus_{\nu=0}^\infty S_\nu\quad \text{作为$A$-模}
+	S=\bigoplus_{\nu=0}^\infty S_\nu\quad \text{（作为$A$-模）}
 \]
 使得
 \[
@@ -111,7 +111,7 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \[
 	\{(\proj S)_h\}_{h\in H}
 \]
-是一个$\proj S$的开覆盖，当且仅当$H$的元素生成了一个根为$S+$的理想。
+是一个$\proj S$的开覆盖，当且仅当$H$的元素生成了一个根为$S_+$的理想。
 \end{exe}
 
 \begin{exe}\label{exe:3.11}
@@ -139,7 +139,7 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \end{exe}
 
 \begin{exe}\label{exe:3.14}
-反之，给定一个$\mathbb P_A^r$的一个闭子概形，我们可以定义一个齐次理想$I(X)\subset A[x_0$, $\dots$, $x_r]$为齐次多项式$p(x_0,\dots,x_r)$生成的理想，其中齐次多项式需满足对每一个$i$，将其置于$1$后给出了元素
+反之，给定一个$\mathbb P_A^r$的一个闭子概形，我们可以定义一个齐次理想$I(X)\subset A[x_0$, $\dots$, $x_r]$，它是齐次多项式$p(x_0,\dots,x_r)$生成的理想，其中齐次多项式需满足对每一个$i$，将其置于$1$后给出了元素
 \[
 	p(x_0,\dots,1,\dots,x_r)\in \mathscr I_X(U_i)\subset A[x_0,\dots,x_r,x_i^{-1}]_0.
 \]
@@ -264,9 +264,21 @@ $
 
 检查最简单的情况，令$V$是域$K$上的$n$-维矢量空间，看成单点概形$\spec K$上的一个矢量丛。$V$的射影化是一个$K$上的维数为$n$的射影空间，而$V^*$的射影化被称为$\mathbb PV$的\textit{对偶射影空间}。$\mathbb P(V)$的$K$-值点对应于$V$的一维商空间，或者等价地，$V$中的超平面。$\mathbb P(V^*)$的$K$-值点对应于$V$的一维子空间，这就是被经典地记作$\mathbb P^n$的射影空间。
 
-一般些，如果$\mathscr E$是一个秩为$n+1$的局部自由层，则$\mathbb P(\mathscr E)$为$B$上的一个\textit{射影丛}，
+一般些，如果$\mathscr E$是一个秩为$n+1$的局部自由层，则$\mathbb P(\mathscr E)$为$B$上的一个\textit{射影丛}，即对足够小的仿射开集$U\subset B$，$U$在$\mathbb P(\mathscr E)$中的原像作为$U$-概形同构于射影空间$\mathbb P_U^r$. （如果$\mathscr E$不是局部自由的，则概形$\mathbb P(\mathscr E)$是怎么样的就没那么清楚了。）当$B$是一个代数闭域$K$上的簇，而$\mathscr E$是一个$B$上的矢量丛$E$的截面层，则$\mathbb P(\mathscr E^*)$的$K$-值点对应于$\mathscr E$的纤维的一维子空间，而$\mathbb P(\mathscr E)$的$K$-值点对应于$\mathscr E$的纤维的一维商空间，或等价地，纤维中的超平面。
 
-\nottran
+注意到，任意闭子概形$X\subset \mathbb P_B^n$能被实现为$\proj(\mathscr F)$，其中$\mathscr F$是一个分次$\oo_B$-代数的拟凝聚理想层。更一般地，如果$\mathscr E$是任意凝聚层，则其射影化的任意闭子概形$X\subset \mathbb P(\mathscr E)$也可以如此实现。反之，如果$\mathscr F$是分次$\oo_B$-代数的任意拟凝聚理想层，由$\mathscr F_1$生成，则满射$\operatorname{Sym}(\mathscr F_1)\to \mathscr F$给出了嵌入$X=\proj \mathscr F\hookrightarrow \mathbb P(\mathscr F_1)$.
+
+\begin{exe}\label{exe:3.25}
+	令$K$是一个域，$\mathbb P_K^2=\proj K[X,Y,Z]$是$K$上的射影平面，$(\mathbb P_K^2)^*=\proj K[A,B,C]$是对偶射影平面。令$\Sigma$是$(\mathbb P_K^2)^*$上的万有直线，即
+	\[
+		\Sigma=V(AX+BY+CZ)\subset \mathbb P_K^2\times_K (\mathbb P_K^2)^*
+	\]
+	看作$(\mathbb P_K^2)^*$上的族。证明，$\Sigma\to (\mathbb P_K^2)^*$是$(\mathbb P_K^2)^*$上的秩为$2$的局部自由层$\mathscr E$，并描述$\mathscr E$.
+\end{exe}
+
+\begin{exe}\label{exe:3.26}
+	令$B$是任意概形，$\mathscr E$是一个$B$上的局部自由层，以及$E=\spec (\operatorname{Sym}\mathscr E^*)\to B$是$\mathscr E$对应的矢量丛的全空间。证明，我们可以将$E\to B$完备为一个$B$上的射影空间的从：确切地，证明，我们有一个$E$上的含入，到$\mathbb P(\mathscr E^*\oplus \oo_B)$作为其开子概形，补是一个超平面丛$\mathbb P(\mathscr E^*)\subset \mathbb P(\mathscr E^*\oplus \oo_B)$.
+\end{exe}
 
 
 \subsection{切空间和切锥} \label{s:3.2.4}
@@ -435,6 +447,49 @@ $X\to \mathbb P^n_{\mathbb Z}$唯一确定。
 	局部自由凝聚层，即存在一个$\spec T$的仿射覆盖$\spec T_{f_i}$使得
 	$\tilde K$在每个仿射开集上的限制是自由的（等价地，每个模
 	$K[f_i^{-1}]$在$T_{f_i}=T[f_i^{-1}]$上是自由的）。
+\end{exe}
+
+一个\textit{可逆}$T$-模是一个有限生成、秩为$1$的局部自由$T$-模。
+
+在交换代数中，局部自由模一般被叫做\textit{投射模}；它可以被如下性质
+刻画：如果$P$是一个局部自由$T$-模，则任意的满$T$-模同态
+$M\twoheadrightarrow P$可分裂（split）。于是，如果$K\subset T^{n+1}$是
+一个子模，则$K$是$T^{n+1}$的直和项当且仅当$T^{n+1}/K$是一个局部自由模；
+特别地，如果$K$是$T^{n+1}$的一个秩为$n$的直和项当且仅当$T^{n+1}/K$是一
+个可逆模。
+
+在给出Theorem \ref{thm:3.37}的证明之前，我们写一个结论，它可以直接应用
+定义给出。
+
+\begin{pro}\label{pro:3.39}
+	一个任意概形$X$到仿射空间$\mathbb P_{\mathbb Z}^r=\proj \mathbb Z
+	[x_0,\dots,x_r]$的态射可以由一族映射$\varphi_i:U_i\to 
+	(\mathbb P_{\mathbb Z}^r)_{x_i}$给出，其中$\{U_i\}$是$X$的一个开覆
+	盖，$(\mathbb P_{\mathbb Z}^r)_{x_i}\subset 
+	\mathbb P_{\mathbb Z}^r$是Exercise \ref{exe:3.6}中的开子集，以及映
+	射$\varphi_i$和$\varphi_j$诱导了相同的映射
+	$U_i\cap U_j\to (\mathbb P_{\mathbb Z}^r)_{x_i}\cap 
+	(\mathbb P_{\mathbb Z}^r)_{x_j}=\spec (\mathbb Z[x_0,\dots,x_r]
+	[x_i^{-1},x_j^{-1}])_0$.
+\end{pro}
+
+Theorem \ref{thm:3.37}的核心是下面的结论，是第一个等式的仿射版本。
+
+\begin{pro}\label{pro:3.40}
+	如果$T$是任意环，则
+	\[
+		\operatorname{Mor}(\spec T,\mathbb P_{\mathbb Z}^n)=\{K\subset
+		T^{n+1}\,|\,\text{$K$局部是$T^{n+1}$秩为$n$的直和项}\}
+	\]
+\end{pro}
+
+\begin{proof}
+	\nottran
+\end{proof}
+
+\begin{exe}\label{exe:3.41}
+	词“局部地”可以从命题中去掉，因为一个有限生成自由模的子模如果局部
+	是直和项则实际上它就是一个直和项。证明它。
 \end{exe}
 
 \subsection{分次模和层} \label{s:3.2.6}
