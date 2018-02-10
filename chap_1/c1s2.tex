@@ -339,11 +339,11 @@ $X_\text{red}$同样可以由拓扑空间$|X|$连同结构层$\oo_{X_\text{red}}
 
 这个构造比如能用来从仿射概形构造出射影概形。在环面簇（toric variety）理论中有另外的应用，比如见Kempf等[1973].
 
-在这些和几乎所有的应用中，我们实际上不需要明确地给出映射$\psi_{\alpha\beta}$：我们实际上是给出了一个拓扑空间$|X|$以及一族开集$|X_\alpha|$，每一个开集上都有一个仿射概形结构，即有一个结构层$\oo_{X_\alpha}$，此时$\oo_{X_\alpha}(X_\alpha\cap X_\beta)$\textit{自然地}等同于$\oo_{X_\beta}(X_\alpha\cap X_\beta)$. 比方说，它们可能同时作为一个固定集合的子集给出。在这种情况下，Corollary \ref{coro:1.14} 的条件是立即满足的，进而$X$上存在唯一确定的层$\oo_X$延拓了所有的$\oo_{X_\alpha}$. 于是，偶对$(|X|,\oo_X)$是一个概形。
+在这些，实际上也是几乎所有的应用中，我们并不需要明确地给出映射$\psi_{\alpha\beta}$：实际上，我们有一个拓扑空间$|X|$以及一族开集$|X_\alpha|$，每一个开集上都有一个仿射概形结构，即有一个结构层$\oo_{X_\alpha}$，此时$\oo_{X_\alpha}(X_\alpha\cap X_\beta)$\textit{自然地}等同于$\oo_{X_\beta}(X_\alpha\cap X_\beta)$. 比方说，它们可能同时作为一个固定集合的子集给出。在这种情况下，Corollary \ref{coro:1.14} 的条件是立即满足的，进而$X$上存在唯一确定的层$\oo_X$，其延拓了所有的$\oo_{X_\alpha}$. 此时，偶对$(|X|,\oo_X)$是一个概形。
 
-也许最简单的例子是任意概形$S$上的\textit{仿射空间}$\mathbb{A}^n_S$. 首先，对任意仿射概形$X=\spec R$，我们定义$X$\text{上的仿射$n$-空间}为$\spec R[x_1$, $\dots$, $x_n]$，记作$\mathbb{A}_X^n$或$\mathbb{A}_R^n$. （仿射空间及其子概形的几何将在第 \ref{chap:2} 章重新捡起。）接着，注意到任意的仿射概形态射$X\to Y$诱导了自然的映射$\mathbb{A}_X^n\to \mathbb{A}_Y^n$. 于是，我们可以如下利用黏合构造：如果$S$是任意的概形，$U_\alpha=\spec R_\alpha$是其开覆盖，我们定义\textit{$S$上仿射空间$\mathbb{A}_S^n$}为仿射空间$\mathbb{A}_{U_\alpha}^n$沿着$U_\alpha\cap U_\beta$上的恒等映射黏起来得到的概形。
+也许最简单的例子是任意概形$S$上的\textit{仿射空间}$\mathbb{A}^n_S$. 首先，对任意仿射概形$X=\spec R$，我们定义$X$\text{上的仿射$n$-空间}为$\spec R[x_1$, $\dots$, $x_n]$，记作$\mathbb{A}_X^n$或$\mathbb{A}_R^n$. （仿射空间及其子概形的几何将在第 \ref{chap:2} 章重新捡起。）接着，注意到任意的仿射概形态射$X\to Y$诱导了自然的映射$\mathbb{A}_X^n\to \mathbb{A}_Y^n$. 于是，我们可以如下利用黏合构造：如果$S$是任意的概形，$U_\alpha=\spec R_\alpha$是其开覆盖，我们定义~\textit{$S$上仿射空间$\mathbb{A}_S^n$}为仿射空间$\mathbb{A}_{U_\alpha}^n$沿着$U_\alpha\cap U_\beta$上的恒等映射黏起来得到的概形。
 
-我们后面将看到另外两种在任意概形$S$定义仿射空间$\mathbb{A}_S^n$的方法，见Exercise \ref{exe:1.47} 和\ref{exe:1.54}.
+我们后面将看到另外两种在任意概形$S$定义仿射空间$\mathbb{A}_S^n$的方法，见Exercise \ref{exe:1.47} 和 \ref{exe:1.54}.
 
 下面的习题展示了一些黏合构造的危险之处：我们能通过不合理（但合法）的黏合，构造出一些并不会在任何几何背景中出现的概形。
 
@@ -386,4 +386,4 @@ $X_\text{red}$同样可以由拓扑空间$|X|$连同结构层$\oo_{X_\text{red}}
 \]
 它们都能被描述为所有具有$X_i^aX_j^b$形式分母的$0$次元素的子代数。如果我们取恒等映射为黏合映射，则相容性条件是显然的。
 
-如果$X=\spec R$是一个仿射概形，我们时常用$\P^n_R$来记$\P^n_X$，并以此指代\textit{$X$上的射影空间}。因此，我们可以再一次应用黏合构造来定义\textit{任意概形$S$上的射影空间$\P_S^n$}. 这是直接的：如果$S$被仿射概形$U_\alpha=\spec R_\alpha$覆盖，我们定义射影空间$\P_S^n$为射影空间$\P_{U_\alpha}^n$沿着$U_\alpha\cap U_\beta$上的恒等映射黏起来得到的概形。
+如果$X=\spec R$是一个仿射概形，我们时常用$\P^n_R$来记$\P^n_X$，并以此指代~\textit{$X$上的射影空间}。因此，我们可以再一次应用黏合构造来定义\textit{任意概形$S$上的射影空间$\P_S^n$}. 这是直接的：如果$S$被仿射概形$U_\alpha=\spec R_\alpha$覆盖，我们定义射影空间$\P_S^n$为射影空间$\P_{U_\alpha}^n$沿着$U_\alpha\cap U_\beta$上的恒等映射黏起来得到的概形。

@@ -89,7 +89,7 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \[
 	|\proj S/I|\subset |\proj S|.
 \]
-证明，这个子集与一个仿射开集$(\proj S)_f$的交集是$(\proj S)_f$的一个闭子集，所以$\proj S/I$能被看作$\proj S$的一个闭子概形。每个由$1$-次元有限生成的$A$-代数是某个多项式环$A[x_0$, $\dots$, $x_r]$模掉一个齐次理想得到的商环，所以我们看到\textit{每个$A$上的射影概形是一个$A$上的射影空间的闭子概形}。下面我们将在Exercise \ref{exe:3.15} 和 \ref{exe:3.16}具体看到环$S$的理想与$\proj S$的闭子概形之间的联系。
+证明，这个子集与一个仿射开集$(\proj S)_f$的交集是$(\proj S)_f$的一个闭子集，所以$\proj S/I$能被看作$\proj S$的一个闭子概形。每个由$1$-次元有限生成的$A$-代数是某个多项式环$A[x_0$, $\dots$, $x_r]$模掉一个齐次理想得到的商环，所以我们看到\textit{每个$A$上的射影概形是一个$A$上的射影空间的闭子概形}。下面我们将在Exercise \ref{exe:3.15} 和 \ref{exe:3.16} 具体看到环$S$的理想与$\proj S$的闭子概形之间的联系。
 \end{exe}
 
 \begin{exe}\label{exe:3.8}
@@ -283,18 +283,52 @@ $
 
 \subsection{切空间和切锥} \label{s:3.2.4}
 \paragraph*{仿射与射影切空间}\addcontentsline{toc}{subsubsection}{仿射与射影切空间}
-一个概形的Zariski切空间是抽象矢量空间。但当一个$K$上的概形$X$被嵌入到一个环绕空间中，比如$K$上的仿射或射影空间，我们可以将$X$的一个剩余类域为$K$的点$p$关联于对应仿射或者射影空间的线性子簇，其被称为$X$在点$p$的\textit{仿射切空间}或\textit{射影切空间}。在仿射概形$X=V(f_1,\dots,f_k)\subset \mathbb A_K^n$以及点$p=(a_1,\dots,a_n)\in X$的情况中，这是一个由
+概形的Zariski切空间是抽象矢量空间，但当一个域$K$上的概形$X$被嵌入到一个环绕空间中，比如仿射或射影$K$-空间，我们可以将$X$的一个剩余类域为$K$的点$p$关联于对应仿射或者射影空间的一个线性子簇，其被称为$X$在点$p$的\textit{仿射切空间}或\textit{射影切空间}。在仿射概形$X=V(f_1,\dots,f_k)\subset \mathbb A_K^n$以及点$p=(a_1,\dots,a_n)\in X$的情况中，这是一个由
 \[
 	V\left(\left\{
 		\sum_i \frac{\partial f_\alpha}{\partial x_i}(\alpha_1,\dots,\alpha_n)\cdot (x_i-a_i)
 	\right\}_{\alpha=1,\dots,k}
 	\right)
 \]
-给出的子簇。为理解这个概形与Zariski切空间之间的关系，注意到域$K$上的一个矢量空间并不是仿射空间$\mathbb A_K^n$. 但是，给定$K$上的一个$n$-维矢量空间$V$，我们可以对$V$给出一个概形$\overline{V}$，它同构于仿射开集$\mathbb A_K^n$，所以$\overline{V}$中剩余类域为$K$的点自然地对应于$V$中的矢量：$\overline{V}$就是对偶空间对称代数的谱
+给出的子簇。为理解这个概形与Zariski切空间之间的关系，注意到域$K$上的一个矢量空间与仿射空间$\mathbb A_K^n$并不是同一个东西。但是，给定$K$上的一个$n$-维矢量空间$V$，我们可以对$V$给出一个概形$\overline{V}$，它同构于仿射开集$\mathbb A_K^n$，所以$\overline{V}$中剩余类域为$K$的点自然地对应于$V$中的矢量：$\overline{V}$就是对偶空间对称代数的谱
 \[
 	\overline{V}=\spec (\operatorname{Sym}(V^*)).
 \]
 我们将称$\overline{V}$为\textit{关联于矢量空间$V$的概形}。
+
+这告诉我们，与域$K$上的仿射空间$\mathbb A_K^n$在$K$-有理点$p\in \mathbb A^n_K$（即一个剩余类域为$\kappa(p)=K$的闭点）的Zariski切空间相关联的概形$\overline{T_p(\mathbb A^n_K)}$，可以自然等同于仿射空间本身，它将$T_p(\mathbb A_K^b)$的原点变成了$p$. 现在，假设$X\subset \mathbb A_K^n$是任意的子概形，$p\in X$是任意的$K$-有理点。含入$\iota:X\hookrightarrow \mathbb A_K^n$在点$p$处的微分$d\iota_p$将Zariski切空间$T_p(X)$表为一个矢量子空间
+\[
+	d\iota_p:T_p(X)\hookrightarrow T_p(\mathbb A_K^n).
+\]
+我们取概形的诱导含入
+\[
+	\overline{d\iota_p}:\overline{T_p(X)}\hookrightarrow
+	\overline{T_p(\mathbb A_K^n)}=\mathbb A_K^n
+\]
+复合上平移态射$t_p:\mathbb A^n_K\to \mathbb A^n_K$，它将原点映射为$p$，得到一个含入
+\[
+	t_p\cdot \overline{d\iota_p}:\overline{T_p(X)}\hookrightarrow
+	\mathbb A_K^n \longrightarrow \mathbb A_K^n.
+\]
+这个含入的像是$\mathbb A_K^n$的一个仿射子空间，我们将其称为$X$在点$p$的\textit{仿射切空间}。再一次注意到，这是一个概形不是一个矢量空间。
+
+对射影概形$X\subset \mathbb P_K^n$的剩余类域为$K$的点$p$，我们可以类似地关联于一个线性子空间$\mathbb T_p(X)\subset \mathbb P_K^n$. 一种实现它的方式是找一个包含$p$的开子集$U\cong \mathbb A_K^n\subset \mathbb P^n_K$，然后取$X\cap U$在点$p$的仿射切空间在$\mathbb P_K^n$中的闭包。但，我们也有另一种更内蕴的方式。首先，我们记环绕射影空间$\mathbb P_K^n$为关联于矢量空间$V$的射影空间$\mathbb PV$，即是
+\[
+	\mathbb P_K^n=\proj S
+\]
+其中
+\[
+	S=\operatorname{Sym}V^*
+\]
+是$V$的对偶空间的对称代数。因此，$S_1=V$的$(k+1)$-维线性子空间对应于$\mathbb P_K^n$中的$k$-平面。我们令
+\[
+	I=I(X)\subset S
+\]
+为$X\subset \mathbb P_K^n$的齐次理想，以及令$\mm=\mm_p\subset S$为在点$p\in X$为零的形式（form）构成的理想。令$J$是理想$I+\mm^2\subset S$的饱和化。我们定义$X$在点$p$的射影切空间$\mathbb T_p(X)$为$\mathbb P_K^n$的子空间
+\[
+	\mathbb T_p (X)=V(J\cap S_1)\subset \mathbb P^n_K.
+\]
+\nottran %p106
 
 \subsection{到射影空间的态射} \label{s:3.2.5}
 
@@ -432,7 +466,7 @@ $X\to \mathbb P^n_{\mathbb Z}$唯一确定。
 	\operatorname{Mor}(X,\mathbb P_{B}^n).
 \]
 
-我们现在处理Theorem \ref{thm:3.37}的证明。因为等式中所有的项都在$X$上
+我们现在处理Theorem \ref{thm:3.37} 的证明。因为等式中所有的项都在$X$上
 是局部定义的，所以定理可以简单约化到$X$是仿射概形的情况，这也是我们
 下面将实际证明的情况。首先，我们复习一下模的相关概念。一个不错的基础
 文献是Bourbaki [1972, Chap. II-5].
@@ -458,7 +492,7 @@ $M\twoheadrightarrow P$可分裂（split）。于是，如果$K\subset T^{n+1}$�
 特别地，如果$K$是$T^{n+1}$的一个秩为$n$的直和项当且仅当$T^{n+1}/K$是一
 个可逆模。
 
-在给出Theorem \ref{thm:3.37}的证明之前，我们写一个结论，它可以直接应用
+在给出Theorem \ref{thm:3.37} 的证明之前，我们写一个结论，它可以直接应用
 定义给出。
 
 \begin{pro}\label{pro:3.39}
@@ -466,14 +500,14 @@ $M\twoheadrightarrow P$可分裂（split）。于是，如果$K\subset T^{n+1}$�
 	[x_0,\dots,x_r]$的态射可以由一族映射$\varphi_i:U_i\to 
 	(\mathbb P_{\mathbb Z}^r)_{x_i}$给出，其中$\{U_i\}$是$X$的一个开覆
 	盖，$(\mathbb P_{\mathbb Z}^r)_{x_i}\subset 
-	\mathbb P_{\mathbb Z}^r$是Exercise \ref{exe:3.6}中的开子集，以及映
+	\mathbb P_{\mathbb Z}^r$是Exercise \ref{exe:3.6} 中的开子集，以及映
 	射$\varphi_i$和$\varphi_j$诱导了相同的映射
 	$U_i\cap U_j\to (\mathbb P_{\mathbb Z}^r)_{x_i}\cap 
 	(\mathbb P_{\mathbb Z}^r)_{x_j}=\spec (\mathbb Z[x_0,\dots,x_r]
 	[x_i^{-1},x_j^{-1}])_0$.
 \end{pro}
 
-Theorem \ref{thm:3.37}的核心是下面的结论，是第一个等式的仿射版本。
+Theorem \ref{thm:3.37} 的核心是下面的结论，是第一个等式的仿射版本。
 
 \begin{pro}\label{pro:3.40}
 	如果$T$是任意环，则
@@ -484,6 +518,22 @@ Theorem \ref{thm:3.37}的核心是下面的结论，是第一个等式的仿射�
 \end{pro}
 
 \begin{proof}
+	首先假设$K$是$T^{n+1}$的秩$n$的自由直和项，并记模$T^{n+1}/K$为$P$. 
+	模$P$是秩为$1$的局部自由模，且被$T^{n+1}$的$n+1$个生成元$e_i$的像生
+	成的。令$I_j$是$(P/Te_j)$的零因子构成的理想，再令$U_j$为$V(I_j)$在
+	$\spec T$中的补，则$U_j$构成了$\spec T$的一个开覆盖。将$T$-模看作
+	$\spec T$上的层。在$U_j$上，由$1\mapsto e_j$定义的映射$T\to P$是一个
+	同构。通过这个映射等同$P|_{U_j}$以及$T|_{U_j}$后，投射$T^{n+1}|_{U_j}
+	\to (T^{n+1}/K)|_{U_j}=P|_{U_j}=T|_{U_j}$的矩阵具有形式
+	$(t_{j_0},\dots,t_{jj}=1,\dots,t_{jn})$，其定义了$T^{n+1}_{U_j}$的一
+	个元素，因此也定义了一个态射$\spec T\to \mathbb A_{\zz}^n$. 这些态射
+	在交叠的地方相容，就像在Proposition \ref{pro:3.39}中那样，于是它们定
+	义了一个态射$\spec T\to \mathbb P_\zz^n$.
+
+	反之，假设我们已经给定了一个态射$\psi:\spec T\to \mathbb P_\zz^n$. 
+	因为$\mathbb P_\zz^n$被$n+1$个仿射$n$-空间所覆盖，$\psi$由 \nottran
+
+	为看到$K$局部是$T^{n+1}$的秩为$n$的直和项，注意到$T$的任意局部环
 	\nottran
 \end{proof}
 
