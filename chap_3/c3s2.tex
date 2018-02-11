@@ -328,7 +328,49 @@ $
 \[
 	\mathbb T_p (X)=V(J\cap S_1)\subset \mathbb P^n_K.
 \]
-\nottran %p106
+稍加解释：注意到$J$是$p$在$X$中的一阶邻域的理想，即为$X$与$p$的理想$\mm$的平方定义的“丰满点”$P\subset \mathbb P_K^n$的交。于是，射影切空间$\mathbb T_p(X)=V(J\cap S_1)$就是由这个一阶邻域$V(J)$张成的，即是包含$V(J)$的$\mathbb P_K^n$的最小线性子空间。
+
+\begin{exe}\label{exe:3.27}
+	证明这个定义与前面的一开始说的\naive 定义一致。
+\end{exe}
+
+因为射影概形$X$在$K$-有理点$p\in X$处的射影切空间$\mathbb T_p(X)$是一个环绕射影空间$\mathbb PV$的一个线性子空间，具有形式$\mathbb T_p(X)=\mathbb PW$，其中$W$是一个商矢量空间$V\to W\to 0$. 然后，我们可能问矢量空间$W$与Zariski切空间$T_p(X)$之间具有什么联系。在第 \ref{s:6.2.1} 节中，我们将看到答案是一个正合列
+\[
+	0\longrightarrow K\longrightarrow W^* \longrightarrow T_p(X)\longrightarrow 0.
+\]
+更明确一些，如果$V\to U\to 0$是$V$的一个$1$-维商空间，关联于点$p\in X\subset \mathbb PV$，则满射$V\to U$可以经由满射$\varphi:W\to U$分解，进而我们有一个自然的等同
+\[
+	T_p(X)=\Hom(\operatorname{Ker}\varphi,U).
+\]
+无论如何，注意到我们都有一个$\mathbb T_p(X)$中经过$p$的直线的集合与$T_p(X)$中经过原点的直线的集合之间的自然等同。
+
+\begin{exe}\label{exe:3.28}
+	令$X=V(F)\subset \mathbb P_K^n$是$\mathbb P_K^n$中的超平面，由齐次多项式$F(Z_0,\dots,Z_n)$给出，再令$p=[a_0,\dots,a_n]\in X$是任意一个剩余类域为$K$的点。证明，射影切空间$\mathbb T_p(X)$就是零点集$V(L)\subset \mathbb P_K^n$，其中$L$是线性多项式
+	\[
+		L(Z_0,\dots,Z_n)=\sum_{k=1}^n\frac{\partial F}{\partial Z_i}(a_0,\dots,a_n)\cdot Z_k.
+	\]
+\end{exe}
+
+\paragraph*{切锥}\addcontentsline{toc}{subsubsection}{切锥}
+对概形$X$在点$p\in X$的切向的表现的更准确描述是它的切锥。为定义它，令$X$为任意的概形，$p\in X$是一个点，$\mathscr O_{X,p}$是$X$在点$p$的局部环，以及$\mm=\mm_{X,p}\subset \mathscr O_{X,p}$是$\mathscr O_{X,p}$的极大理想。我们定义$X$在点$p$的\textit{切锥}$TC_p(X)$为概形
+\[
+	TC_p(X)=\spec \left(\bigoplus_{\alpha=0}^\infty \mm^\alpha/\mm^{\alpha+1}\right).
+\]
+这个构造的一些简单观察如下。首先，注意到分次环$B=\bigoplus (\mm^\alpha/\mm^{\alpha+1})$由它的$1$-次分次部分
+\[
+	B_1=\mm/\mm^2=(T_pX)^*
+\]
+所生成的，因此，$B$是环
+\[
+	A=\operatorname{Sym}((T_pX)^*)
+\]
+的商环。我们于是有了一个含入
+\[
+	TC_p(X)=\spec B\hookrightarrow \spec A=\overline{T_pX},
+\]
+或者说，$X$在点$p$的切锥自然地是$X$在点$p$的Zariski切空间$T_pX$对应的概形的子概形。
+
+\nottran %p.107
 
 \subsection{到射影空间的态射} \label{s:3.2.5}
 
