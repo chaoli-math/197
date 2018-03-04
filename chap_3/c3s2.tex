@@ -2,7 +2,7 @@
 
 \subsection{\texorpdfstring{$\proj S$}{Proj S}的构造}\label{s:3.2.1}
 
-到目前为止，非仿射概形最重要的例子是在一个仿射概形$\spec A$上的\textit{射影}概形，其中$A$是任意一个交换环。（为简单起见，我们常常说一个概形在$A$上射影，而不说在$\spec A$上射影。）这样的一个概形来自于一个分次$A$-代数，而构造过程非常类似于从它的齐次坐标环构造一个射影簇。我们可以从一个分次$\oo_B$-代数层开始，定义在任意的基概形$\spec B$上射影的概形，这个推广有重要的应用。但对这个理论中的大部分情况而言，我们都可以将情况约化到$B$是一个仿射概形，故而在这里，我们对一般性的追求也仅止于此。
+到目前为止，非仿射概形最重要的例子是在仿射概形$\spec A$上的\textit{射影}概形，其中$A$是任意一个交换环。（为简单起见，我们常常说一个概形在$A$上射影，而不说在$\spec A$上射影。）这样的一个概形来自于一个分次$A$-代数，而构造过程非常类似于从它的齐次坐标环构造一个射影簇。我们可以从一个分次$\oo_B$-代数层开始，定义在任意的基概形$\spec B$上射影的概形，这个推广有重要的应用。但对这个理论中的大部分情况而言，我们都可以将情况约化到$B$是一个仿射概形，故而在这里，我们对一般性的追求也仅止于此。
 
 为了描述这个构造，我们从一个正分次$A$-代数开始，其中$A$作为这个代数的$0$次部分，即一个$A$-代数$S$具有分次
 \[
@@ -169,7 +169,7 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \end{exe}
 
 \begin{exe}\label{exe:3.18}
-证明，如果$R$是一个环$A=R_0$上的有限生成分次环（没必要是有其$1$-次元生成的），$\proj R$同构于某个射影空间$\mathbb P_A^r$的闭子概形。
+证明，如果$R$是一个环$A=R_0$上的有限生成分次环（没必要是由其$1$-次元生成的），$\proj R$同构于某个射影空间$\mathbb P_A^r$的闭子概形。
 \end{exe}
 
 我们以一个定义和基本定理结束这一小节。
@@ -257,7 +257,7 @@ $
 整体$\proj$构造的一个更严肃的应用是定义概形$X$沿着闭子概形$Y\subset X$的\textit{爆破}，我们将在第 \ref{chap:5} 章中完整地讨论它。整体$\proj$另一个通常的应用是我们下面描述的矢量丛的射影化。
 
 \paragraph*{凝聚层\texorpdfstring{$\mathscr E$}{E}的射影化\texorpdfstring{$\mathbb P(\mathscr E)$}{P(E)}}\addcontentsline{toc}{subsubsection}{凝聚层\texorpdfstring{$\mathscr E$}{E}的射影化\texorpdfstring{$\mathbb P(\mathscr E)$}{P(E)}}
-我们在 Exercise \ref{exe:3.22} 中看到，概形$S$上的射影空间$\mathbb P_S^n$是$\proj(\operatorname{Sym}(\oo_S^{\oplus n+1}))$. 我们将对任意凝聚层$\mathscr E$做一个类似的构造，定义$\mathscr E$的\textit{射影化}$\mathbb P(\mathscr E)$为$B$-概形
+在 Exercise \ref{exe:3.22} 中看到，概形$S$上的射影空间$\mathbb P_S^n$是$\proj(\operatorname{Sym}(\oo_S^{\oplus n+1}))$. 我们将对任意凝聚层$\mathscr E$做一个类似的构造，定义$\mathscr E$的\textit{射影化}$\mathbb P(\mathscr E)$为$B$-概形
 \[
 	\mathbb P(\mathscr E)=\proj(\operatorname{Sym} \mathscr E)\to B.
 \]
@@ -394,7 +394,43 @@ $
 
 尽管，射影空间一般的子概形的度将在第 \ref{s:3.3.1} 节中才定义，我们将在这里提出一个可以由$X$在点$p$的射影化切锥定义的概形不变量：定义$X$在点$p$的\textit{重数}为射影化切锥$\mathbb PTC_p(X)\subset \mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的度。这个定义展现了另一个例子，告诉我们为何概形会在处理簇时自然出现且十分方便：在簇范畴我们依然可以定义切锥（是关联于我们的切锥的约态概形）以及射影化切锥，但是它们在族中表现得并不好。
 
-\nottran %p.108
+% p.108
+
+有许多非约态切锥的例子。比方说，考虑方程$C_t=\spec K[x,y]/(y^2-tx^2-x^3)$定义的平面三次曲线族（即，我们令$B=\mathbb A^1_K=\spec K[t]$，然后取我们的族为$\mathscr C=V(y^2-tx^2-x^3)\subset \mathbb A_B^2\to B$）。对每一个$t$，曲线$C_t$可以由$t\mapsto (\lambda^2-t,\lambda^3-t\lambda)$定义的映射
+\[
+	\mathbb A_K^1=\spec K[\lambda]\longrightarrow \mathbb A_K^2=\spec K[x,y]
+\]
+的像参数地给出。对$t\neq 0$，这个曲线在原点有一个结点，两个点$\lambda =\pm \sqrt t$都映为原点，这在切锥$\mathbb T_{(0,0)}C_t=V(y^2-tx^2)$也有所反应，它是两条直线$y=\pm \sqrt t x$的并。当$t=0$，我们看到曲线的结点退化为了一个尖点，而切锥现在是双重直线$\mathbb T_{(0,0)}C_0=V(y^2)$.
+
+更精妙的例子，考虑由
+\[
+	\nu_1:t\longmapsto (t^3,t^4,t^5)
+\]
+以及
+\[
+	\nu_1:t\longmapsto (t^3,t^5,t^7)
+\]
+给出的映射$v_i:\mathbb A_K^1\to \mathbb A_K^3$的像确定的曲线$C_1$, $C_2\subset \mathbb A_K^3$. 在每个例子中，令$p$是$C_i$的奇异点。
+
+\begin{exe}\label{exe:3.30}
+	\begin{compactenum}[(a)]
+		\item 证明，两条曲线的射影化切锥
+		\[
+			\mathbb PTC_p(C_i)\subset \mathbb P_K^2
+		\]
+		是一个度为$3$的曲线概形，即，同构于$\spec K[s]/(s^3)$，以及它们不被包含于任何$\mathbb P_K^2$的直线中。
+		\item 找一个例子，曲线$C\subset \mathbb A_K^3$在原点的射影化切锥同构于$\spec K[s]/(s^3)$以及包含于一条直线中。
+		\item 找一个例子，曲线$C\subset \mathbb A_K^3$在原点的射影化切锥同构于$\spec K[s,t]/(s^2,st,t^2)$.
+		\item 找一个例子，曲线$C\subset \mathbb A_K^3$在原点的射影化切锥包含于一条直线中，但Zariski切空间$T_0(C)$却是三维的。
+	\end{compactenum}
+\end{exe}
+
+对概形$X$在点$p\in X$的切锥有另一个几何的刻画：直接将切锥定义为，\textit{切锥是点$p$连同上直线$\overline{pq}$由点$q\neq p\in X$趋近点$p$的极限位置的轨迹。}为更准确地描述这个定义，首先假设$p\in X$的一个邻域被嵌入在$K$上的仿射空间$\mathbb A_K^n$中，令$T=\overline{T_p\mathbb A_K^n}$是$\mathbb A_K^n$在点$p$的Zariski切空间$T_p\mathbb A_K^n$对应的仿射空间，以及考虑关联对应
+\[
+	\Sigma = \left\{(v,q)\;:\;v\in \overline{T}_p(\overline{pq})\subset T\times (\mathbb A_K^n \setminus \{p\})\right\}.
+\]
+
+% p.109
 
 \subsection{到射影空间的态射} \label{s:3.2.5}
 
