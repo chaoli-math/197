@@ -2,9 +2,16 @@
 
 \subsection{\texorpdfstring{$\proj S$}{Proj S}的构造}\label{s:3.2.1}
 
-到目前为止，非仿射概形最重要的例子是在仿射概形$\spec A$上的\textit{射影}概形，其中$A$是任意一个交换环。（为简单起见，我们常常说一个概形在$A$上射影，而不说在$\spec A$上射影。）这样的一个概形来自于一个分次$A$-代数，而构造过程非常类似于从它的齐次坐标环构造一个射影簇。我们可以从一个分次$\oo_B$-代数层开始，定义在任意的基概形$\spec B$上射影的概形，这个推广有重要的应用。但对这个理论中的大部分情况而言，我们都可以将情况约化到$B$是一个仿射概形，故而在这里，我们对一般性的追求也仅止于此。
+到目前为止，非仿射概形最重要的例子是在仿射概形$\spec A$上的\textit{射影}概形，
+其中$A$是任意一个交换环。（为简单起见，我们常常说一个概形在$A$上射影，
+而不说在$\spec A$上射影。）这样的一个概形来自于一个分次$A$-代数，而构造过程
+非常类似于从它的齐次坐标环构造一个射影簇。我们同样可以从一个分次$\oo_B$-代数层
+开始，定义在任意的基概形$\spec B$上射影的概形，这个推广有重要的应用。
+但对这个理论中的大部分情况而言，我们都可以将情况约化到$B$是一个仿射概形，
+故而在这里，我们对一般性的追求也仅止于此。
 
-为了描述这个构造，我们从一个正分次$A$-代数开始，其中$A$作为这个代数的$0$次部分，即一个$A$-代数$S$具有分次
+为了描述这个构造，我们从一个正分次$A$-代数开始，其中$A$是这个代数的$0$次部分，
+即一个$A$-代数$S$具有分次
 \[
 	S=\bigoplus_{\nu=0}^\infty S_\nu\quad \text{（作为$A$-模）}
 \]
@@ -12,17 +19,27 @@
 \[
 	S_\nu S_\mu \subset S_{\nu+\mu}\quad \text{以及} \quad S_0=A.
 \]
-$S$中的一个元素如果处于$S_\nu$中，则它被称为$\nu$\textit{次齐次}的。我们将从$S$定义一个$A$-概形$X=\proj S$. 在$A$上射影的概形就被定义为具有形式$\proj S$的概形，其中$S$是一个有限生成$A$-代数。代数$S$被称为$X$的\textit{齐次坐标环}，尽管（类似于射影簇的齐次坐标环）实际上他并不由$X$所决定。
+$S$中的一个元素如果处于$S_\nu$中，则它被称为$\nu$-\textit{次齐次}的。我们
+将从$S$定义一个$A$-概形$X=\proj S$. 在$A$上射影的概形就被定义为具有形式
+$\proj S$的概形，其中$S$是一个有限生成$A$-代数。代数$S$被称为$X$的
+\textit{齐次坐标环}，尽管（类似于射影簇的齐次坐标环）实际上他并不由$X$所决定。
 
 当$S$是$A$上的多项式环
 \[
-	S=A[\text{$x_0$, $\dots$, $x_r$}],
+	S=A[\text{$x_0$, $\dots$, $x_r$}]
 \]
-具有如下分次：$A$中的元素是零次的，而每一个变量的分次都是$1$，则给出的概形$\proj S$被称为\textit{$A$上的射影$r$-空间}，记作$\mathbb{P}_A^r$.（后面的习题将说明这个概形与第 \ref{chap:1} 章中定义的概形$\mathbb{P}_A^r$是相同的。）在$A=K$是一个域的例子中，概形$\mathbb P_K^r$与$K$上的名为射影空间的簇之间的关系就类似于概形$\mathbb A_K^r$与名为仿射$r$-空间的簇之间的关系。
+时，它具有如下分次：$A$中的元素是零次的，而每一个变量的分次都是$1$，则给出的
+概形$\proj S$被称为\textit{$A$上的射影$r$-空间}，记作$\mathbb{P}_A^r$.
+（后面的习题将说明这个概形与第 \ref{chap:1} 章中定义的概形$\mathbb{P}_A^r$
+是相同的。）在$A=K$是一个域的例子中，概形$\mathbb P_K^r$与$K$上的
+名为射影空间的簇之间的关系就类似于概形$\mathbb A_K^r$与名为仿射$r$-空间
+的簇之间的关系。
 
-为方便起见，我们将假设代数$S$在$A$上被它的$1$-次元素所生成，类似于多项式环那样，一般的情况我们留做习题。（换个方向，如果$S$并没有假设在$A$上有限生成，下面我们说的绝大部分内容依然成立，但这种推广用得相对较少）。
+简单起见，我们将假设代数$S$在$A$上被它的$1$-次元素所生成，类似于多项式环那样，
+一般的情况我们留做习题。（换个推广方向，如果$S$并没有假设在$A$上有限生成，
+下面我们说的绝大部分内容依然成立，但这种推广用得相对较少）。
 
-$\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我们记
+$\proj S$可以如下定义：将$S$中的正次齐次元生成的理想记作
 \[
 	S_+=\bigoplus_{\mu=1}^\infty S_\mu.
 \]
@@ -36,13 +53,20 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \[
 	|\proj S|-V(f),
 \]
-所有不包含$f$的齐次素理想（于是也不包含$S_+$）。$U$中的点可以等同于$S[f^{-1}]$中的齐次素理想。另一方面，这些齐次素理想关联于环$S[f^{-1}]$中所有的$0$次素理想，我们将其记作$S[f^{-1}]_0$，见Exercise \ref{exe:3.6}(a). 于是，我们可以将$U$与$\spec S[f^{-1}]_0$的拓扑空间相等同，然后给他一个相应的仿射概形结构。我们将用$(\proj S)_f$来记这些$\proj S$的仿射开子概形。如果$1$-次元$x_0$, $x_1$, $\dots$们生成了一个理想，它的根是无关理想$S_+$，于是开集
+即所有不包含$f$的齐次素理想（于是也不包含$S_+$）。$U$中的点可以等同于
+$S[f^{-1}]$中的齐次素理想。另一方面，那些对应于环$S[f^{-1}]$中
+所有的$0$-次素理想的齐次素理想的集合，我们将其记作$S[f^{-1}]_0$，
+见Exercise \ref{exe:3.6}(a). 
+于是，我们可以将$U$与拓扑空间$\spec S[f^{-1}]_0$相等同，
+然后给他一个相应的仿射概形结构。我们将用$(\proj S)_f$来记这些
+$\proj S$的仿射开子概形。如果$1$-次元$x_0$, $x_1$, $\dots$们生成了一个理想，
+它的根是无关理想$S_+$，于是开集
 \[
 	(\proj S)_{x_i}:=\proj S-V(x_i)
 \]
 就构成了$\proj S$的一个仿射开覆盖。
 
-如果$g$是$S$的另一个$1$-次元，接着重叠部分$(\proj S)_f\cap (\proj S)_g$是$(\proj S)_f$的由
+如果$g$是$S$的另一个$1$-次元，则重叠部分$(\proj S)_f\cap (\proj S)_g$是$(\proj S)_f$的由
 \[
 	S[f^{-1}]_0[(g/f)^{-1}]=S[f^{-1},g^{-1}]_0
 \]
@@ -52,7 +76,11 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \]
 正如第 \ref{s:1.2.4} 节中讨论的黏合构造，它们将$\proj S$变为了一个概形。
 
-在本节的剩余部分以及下节中，我们将展示一些射影概形的基本事实以及它们的闭子概形。因为这些事实以及它们的证明与簇的情况中的很类似，我们将它们留作习题。
+在本节的剩余部分以及下节中，我们将展示一些射影概形的基本事实以及
+它们的闭子概形。因为这些事实以及它们的证明与簇的情况中的很类似，
+我们将它们留作习题。
+
+% proofread @ 2018.04.01
 
 \begin{exe}\label{exe:3.6}
 \begin{compactenum}[(a)]
@@ -60,9 +88,14 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \[
 	(I\cdot S[f^{-1}])\cap S[f^{-1}]_0
 \]
-由一族$I$的齐次生成元乘以合适的$f$的（负的）次幂生成（$f$是任意次的推广见 Exercise \ref{exe:3.10}）。于是，$S[f^{-1}]$的齐次素理想一一对应于$S[f^{-1}]$的$0$-次元构成的环的素理想。对应由$S[f^{-1}]$的素理想$\pp$变为$\mathfrak q=\pp\cap S[f^{-1}]_0$给出，其逆为将$S[f^{-1}]_0$的素理想$\mathfrak{q}$变为$\mathfrak qS[f^{-1}]$.
+由一族$I$的齐次生成元乘以合适的$f$的（负的）次幂生成
+（$f$是任意次的推广见 Exercise \ref{exe:3.10}）。
+于是，$S[f^{-1}]$的齐次素理想一一对应于$S[f^{-1}]$的$0$-次元构成的环的素理想。
+对应由$S[f^{-1}]$的素理想$\pp$变为$\mathfrak q=\pp\cap S[f^{-1}]_0$给出，
+其逆为将$S[f^{-1}]_0$的素理想$\mathfrak{q}$变为$\mathfrak qS[f^{-1}]$.
 
-\item 令$S=A[x_0$, $\dots$, $x_r]$为多项式环，而$U$是$\mathbb P_A^r=\proj S$的仿射开集$(\mathbb P_A^r)_{x_i}$. 由定义，
+\item 令$S=A[x_0$, $\dots$, $x_r]$为多项式环，
+而$U$是$\mathbb P_A^r=\proj S$的仿射开集$(\mathbb P_A^r)_{x_i}$. 由定义，
 \[
 	U=\spec S[x_i^{-1}]_0,
 \]
@@ -70,17 +103,22 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \[
 	S[x_i^{-1}]_0=A[x'_0,\dots,x'_r]
 \]
-为生成元$x'_j=x_j/x_i$的多项式环。（注意$x'_i=1$，所以这是一个$r$变量的多项式环。）于是
+为生成元$x'_j=x_j/x_i$的多项式环。（
+注意$x'_i=1$，所以这是一个$r$变量的多项式环。）于是
 \[
 	(\mathbb P^r_A)_{x_i}=\mathbb A_A^r
 \]
-所以射影$r$-空间被$r+1$个仿射$r$-空间所覆盖，就像第 \ref{chap:1} 章中所描述的那样。
+所以射影$r$-空间被$r+1$个仿射$r$-空间所覆盖，
+就像第 \ref{chap:1} 章中所描述的那样。
 
-\item 考虑一个映射$\alpha:S\to S[x_i^{-1}]_0$，他将$x_i$变为$1$以及对$j\neq i$将$x_j$变为$x'_j$. 从(a)证明如果$I$是$S$的一个齐次理想，于是
+\item 考虑一个映射$\alpha:S\to S[x_i^{-1}]_0$，
+他将$x_i$变为$1$以及对$j\neq i$将$x_j$变为$x'_j$. 
+从(a)证明如果$I$是$S$的一个齐次理想，于是
 \[
 	I':=I\cdot S[x_i^{-1}]\cap S[x_i^{-1}]_0=\alpha(I)'\cdot S[x_i^{-1}]_0.
 \]
-从$I$构造$I'$的过程被称为\textit{非齐次化}。像经典的那样，描述与其相反的过程，齐次化。
+从$I$构造$I'$的过程被称为\textit{非齐次化}。
+像经典的那样，描述与其相反的过程，齐次化。
 \end{compactenum}
 \end{exe}
 
@@ -89,17 +127,32 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \[
 	|\proj S/I|\subset |\proj S|.
 \]
-证明，这个子集与一个仿射开集$(\proj S)_f$的交集是$(\proj S)_f$的一个闭子集，所以$\proj S/I$能被看作$\proj S$的一个闭子概形。每个由$1$-次元有限生成的$A$-代数是某个多项式环$A[x_0$, $\dots$, $x_r]$模掉一个齐次理想得到的商环，所以我们看到\textit{每个$A$上的射影概形是一个$A$上的射影空间的闭子概形}。下面我们将在Exercise \ref{exe:3.15} 和 \ref{exe:3.16} 具体看到环$S$的理想与$\proj S$的闭子概形之间的联系。
+证明，这个子集与一个仿射开集$(\proj S)_f$的交集是$(\proj S)_f$的一个闭子集，
+所以$\proj S/I$能被看作$\proj S$的一个闭子概形。
+每个由$1$-次元有限生成的$A$-代数是某个多项式环
+$A[x_0$, $\dots$, $x_r]$模掉一个齐次理想得到的商环，
+所以我们看到\textit{每个$A$上的射影概形是一个$A$上的射影空间的闭子概形}。
+下面我们将在Exercise \ref{exe:3.15} 和 \ref{exe:3.16} 具体看到环$S$的理想
+与$\proj S$的闭子概形之间的联系。
 \end{exe}
 
 \begin{exe}\label{exe:3.8}
-证明$\mathbb P_A^r$是开集$\mathbb A_A^{r-1}$与闭集$\mathbb P_A^{r-1}$的不交并。特别地，$\mathbb P^0_A=\spec A$. 所以比如，我们能将$\mathbb P_{\mathbb Z}^1$看成$\zz$上的仿射直线$\mathbb A_\zz^r$（如第 \ref{chap:2} 章的图）与一个同构于$\spec \zz$的“无穷远点”的并，如下图所示
+证明$\mathbb P_A^r$是开集$\mathbb A_A^{r-1}$与闭集$\mathbb P_A^{r-1}$
+的不交并。特别地，$\mathbb P^0_A=\spec A$. 所以比如，
+我们能将$\mathbb P_{\mathbb Z}^1$看成$\zz$上的仿射直线$\mathbb A_\zz^r$
+（如第 \ref{chap:2} 章的图）与一个同构于$\spec \zz$的“无穷远点”的并，
+如下图所示
 
 \begin{center}\includegraphics[scale=\scale,bb=0 0 668 462]{\PICDIR/2.png}\end{center}
 \end{exe}
 
 \begin{exe}\label{exe:3.9}
-在上图中添入点$(4x_1-5x_0)$, $(2x_1-5x_0)$以及$(5)$的闭包（可以与第 \ref{s:2.4.3} 节中的$\mathbb A_{\mathbb Z}^2$的图相比较）。\textit{注意}：曲线$(4x_1-5x_0)$应该画得与“无穷远点”$(x_0)$相切，而曲线$(2x-5x_0)$不能。通俗地，我们可以说这是因为函数$5/4$在$(2)$处有一个双极点，而$5/2$只有一个单极点。（同样可见 Exercise \ref{exe:2.38} 中的讨论。）
+在上图中添入点$(4x_1-5x_0)$, $(2x_1-5x_0)$以及$(5)$的闭包
+（可以与第 \ref{s:2.4.3} 节中的$\mathbb A_{\mathbb Z}^2$的图相比较）。
+\textit{注意}：曲线$(4x_1-5x_0)$应该画得与“无穷远点”$(x_0)$相切，
+而曲线$(2x-5x_0)$不能。通俗地，我们可以说这是因为函数$5/4$在$(2)$
+处有一个双极点，而$5/2$只有一个单极点。
+（同样可见 Exercise \ref{exe:2.38} 中的讨论。）
 \end{exe}
 
 \begin{exe}\label{exe:3.10}
@@ -107,7 +160,9 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \[
 	(\proj S)_h:=\proj S-V(h)
 \]
-同前为$S$中不包含$h$的齐次素理想构成的集合。证明这个集合依然一一对应于$S[h^{-1}]_0$的素理想，所以实际上存在一个$\spec S[h^{-1}]_0$与$\proj S$的（仿射）开子概形的同构。同样证明，这样的仿射开集族
+同前为$S$中不包含$h$的齐次素理想构成的集合。
+证明这个集合依然一一对应于$S[h^{-1}]_0$的素理想，
+所以实际上存在一个$\spec S[h^{-1}]_0$与$\proj S$的（仿射）开子概形的同构。同样证明，这样的仿射开集族
 \[
 	\{(\proj S)_h\}_{h\in H}
 \]
@@ -119,11 +174,14 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \end{exe}
 
 \begin{exe}\label{exe:3.12}
-令$S$是一个分次环，没必要是有$1$-次元生成的。对任意的正次$d$，定义$S$的$d$-次\textit{Veronese 子环}为分次环
+令$S$是一个分次环，没必要是有$1$-次元生成的。
+对任意的正次$d$，定义$S$的$d$-次\textit{Veronese 子环}为分次环
 \[
 	S^{(d)}=\bigoplus_{\nu=1}^\infty S_{d\nu}
 \]
-证明$\proj S$同构于$\proj S^{(d)}$. 然而，证明如果$S=A[x,y]$，则$S^{(d)}$作为分次代数（甚至仅作为环）并不同构于$S$. 于是，就像在簇中那样，分次代数与射影概形的对应并不是一一的。
+证明$\proj S$同构于$\proj S^{(d)}$. 
+然而，证明如果$S=A[x,y]$，则$S^{(d)}$作为分次代数（甚至仅作为环）并不同构于$S$. 
+于是，就像在簇中那样，分次代数与射影概形的对应并不是一一的。
 \end{exe}
 
 \subsection{\texorpdfstring{$\proj R$}{Proj R}的闭子概形}\label{s:3.2.2}
@@ -187,21 +245,41 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 证明可见Hartshorne [1977, Theorem II.4.9].
 
 \begin{exe}\label{exe:3.21}
-证明，有限态射$\varphi:X\to Y$是逆紧的且局部射影的，所谓局部射影即指，$Y$可以被开集族$U\subset Y$所覆盖，使得限制$\varphi:V=\varphi^{-1}U\to U$是射影的。（我们采用了 Hartshorn [1977, Section II.4] 中射影态射的定义，而在 Grothendieck [1961, EGA II, 5.5] 中，射影是指我们这里被叫做局部射影的性质。）
+证明，有限态射$\varphi:X\to Y$是逆紧的且局部射影的，所谓局部射影即指，
+$Y$可以被开集族$U\subset Y$所覆盖，使得限制$\varphi:V=\varphi^{-1}U\to U$
+是射影的。（我们采用了 Hartshorn [1977, Section II.4] 中射影态射的定义，
+而在 Grothendieck [1961, EGA II, 5.5] 中，
+射影是指我们这里被叫做局部射影的性质。）
 \end{exe}
 
 \subsection{整体\texorpdfstring{$\proj$}{Proj}} \label{s:3.2.3}
 
-\paragraph*{分次\texorpdfstring{$\oo_X$}{OX}-代数的层的\texorpdfstring{$\proj$}{Proj}}\addcontentsline{toc}{subsubsection}{分次\texorpdfstring{$\oo_X$}{OX}-代数的层的\texorpdfstring{$\proj$}{Proj}}
-分次环$S$的$\proj$的构造给出了一个概形$X=\proj S$以及一个结构态射$X\to B=\spec(S_0)$. 因为$\proj S$与$S$的关联是函子性的，所以存在一个更一般的构造，给出概形$X$以及结构态射$X\to B$，其中$B$是任意概形，使得当$B$是仿射的时候将回到$\proj$：我们只需对一般的$B$，用$\oo_B$上的代数层代替分次$S_0$-代数$S$.
+\paragraph*{分次\texorpdfstring{$\oo_X$}{OX}-代数层的\texorpdfstring{$\proj$}{Proj}}\addcontentsline{toc}{subsubsection}{分次\texorpdfstring{$\oo_X$}{OX}-代数层的\texorpdfstring{$\proj$}{Proj}}
+分次环$S$的$\proj$的构造给出了一个概形$X=\proj S$以及一个结构态射
+$X\to B=\spec(S_0)$. 因为$\proj S$与$S$的关联是函子性的，
+所以存在一个更一般的构造，给出概形$X$以及结构态射$X\to B$，
+其中$B$是任意概形，使得当$B$是仿射的时候将回到$\proj$：对一般的$B$，
+我们只需用$\oo_B$上的代数层代替分次$S_0$-代数$S$.
 
-为实现这个构造，令$B$为任意概形，一个\textit{拟凝聚分次$\oo_B$-代数层}是指一个$B$上的拟凝聚代数层$\mathscr F$，具有一个分次
+为实现这个构造，令$B$为任意概形，一个\textit{拟凝聚分次$\oo_B$-代数层}
+是指一个$B$上的拟凝聚代数层$\mathscr F$，具有一个分次
 \[
 	\mathscr F=\bigoplus_{\nu=0}^\infty \mathscr F_\nu
 \]
-使得$\mathscr F_\nu \mathscr F_\mu\subset \mathscr F_{\mu+\nu}$以及$\mathscr F_0=\oo_B$. 因此，对每一个仿射开集$U\subset B$，其坐标环为$A=\oo_B(U)$，环$\mathscr{F}(U)$是一个分次$A$-代数，其$0$次部分为$\mathscr F(U)_0=A$. 
+使得$\mathscr F_\nu \mathscr F_\mu\subset \mathscr F_{\mu+\nu}$
+以及$\mathscr F_0=\oo_B$. 因此，对每一个仿射开集$U\subset B$，
+其坐标环为$A=\oo_B(U)$，环$\mathscr{F}(U)$是一个分次$A$-代数，
+其$0$-次部分为$\mathscr F(U)_0=A$. 
 
-给定这样一个层$\mathscr F$，对每个仿射开集$U\subset B$，我们令$X_U\to U$为概形$X_U=\proj \mathscr F(U)$及结构态射$\proj \mathscr F(U)\to \spec A=U$. 对每个$B$的开子集的含入$U\subset V$，限制映射$\mathscr F(V)\to \mathscr F(U)$是一个分次环的同态，其$0$次部分为限制映射$\oo_B(V)\to \oo_B(U)$，所以诱导了一个映射$X_U\to X_V$与结构态射$X_U\to U$和$X_V\to V$以及含入$U\hookrightarrow V$可交换。我们于是可以将概形$X_U$粘起来得到概形$X$，其具有结构态射$X\to B$，记作$\proj \mathscr F$，而$X$的构造则被称为\textit{整体$\proj$}.
+给定这样一个层$\mathscr F$，对每个仿射开集$U\subset B$，
+我们令$X_U\to U$为概形$X_U=\proj \mathscr F(U)$及结构态射
+$\proj \mathscr F(U)\to \spec A=U$. 对每个$B$的开子集的含入$U\subset V$，
+限制映射$\mathscr F(V)\to \mathscr F(U)$是一个分次环的同态，
+其$0$-次部分为限制映射$\oo_B(V)\to \oo_B(U)$，
+所以诱导了一个映射$X_U\to X_V$与结构态射$X_U\to U$和$X_V\to V$以及
+含入$U\hookrightarrow V$可交换。我们于是可以将概形$X_U$粘起来得到概形
+$X$，其具有结构态射$X\to B$，记作$\proj \mathscr F$，
+而$X$的构造则被称为\textit{整体$\proj$}.
 
 就像在普通的$\proj$中一样，大部分情况下代数层$\mathscr F$由其$1$-次部分$\mathscr F_1$所生成，以及$\mathscr F_1$是凝聚的（或者，某种程度上更一般地，对某个$d>0$，Veronese 子层
 \[
@@ -210,7 +288,7 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 由$\mathscr F_{d\nu}$所生成，而$\mathscr F_{d\nu}$是凝聚的
 ）。在这个假设下，同样如同普通的$\proj$，态射$\proj \mathscr F\to B$是逆紧的。
 
-整体$\proj$最简单的例子给了我们任意概形$S$上的射影空间的另一个构造。回忆在第 \ref{chap:1} 章，任意概形$S$上的射影空间是黏合构造而成的：如果$S$被仿射概形族$U_\alpha=\spec R_\alpha$所覆盖，我们定义射影空间$\mathbb P_S^n$为射影空间$\mathbb P_{U_\alpha}^n$的并，并通过$U_\alpha\cap U_\beta$上的恒等映射诱导的黏合映射粘起来。我们也可以通过乘积来定义它：
+整体$\proj$最简单的例子给了我们任意概形$S$上的射影空间的另一个构造。回忆在第 \ref{chap:1} 章，任意概形$S$上的射影空间是黏合构造而成的：如果$S$被仿射概形族$U_\alpha=\spec R_\alpha$所覆盖，我们定义射影空间$\mathbb P_S^n$为射影空间$\mathbb P_{U_\alpha}^n$的并，并通过$U_\alpha\cap U_\beta$上的恒等映射诱导的黏合映射粘起来。此外，我们也可以通过乘积来定义它：
 \[
 	\mathbb P_S^n=\mathbb P_{\mathbb Z}^n\times_{\spec \mathbb Z}S.
 \]
@@ -223,7 +301,7 @@ $\proj S$可以如下定义：对$S$中的正次齐次元生成的理想，我�
 \]
 \end{exe}
 
-特别地，在纤维积外，我们可以将给定概形$S$上的射影空间的乘积同构整体$\proj$实现：如果我们记$\oo_{\mathbb P_S^r}[X_0$, $\dots$, $X_m]$为分次$\oo_{\mathbb P_S^n}$-代数层$\operatorname{Sym}\left(\oo_{\mathbb P_S^n}^{\oplus m+1}\right)$，则
+特别地，在纤维积外，我们可以将给定概形$S$上的射影空间的乘积通过整体$\proj$实现：如果我们记$\oo_{\mathbb P_S^r}[X_0$, $\dots$, $X_m]$为分次$\oo_{\mathbb P_S^n}$-代数层$\operatorname{Sym}\left(\oo_{\mathbb P_S^n}^{\oplus m+1}\right)$，则
 \[
 	\mathbb P^n_S\times_S \mathbb P^m_S=\proj \oo_{\mathbb P^n_S}[X_0,\dots,X_m].
 \]
@@ -635,8 +713,13 @@ Theorem \ref{thm:3.37} 的核心是下面的结论，是第一个等式的仿射
 	反之，假设我们已经给定了一个态射$\psi:\spec T\to \mathbb P_\zz^n$. 
 	因为$\mathbb P_\zz^n$被$n+1$个仿射$n$-空间所覆盖，$\psi$由 \nottran
 
-	为看到$K$局部是$T^{n+1}$的秩为$n$的直和项，注意到$T$的任意局部环
-	\nottran
+	为看到$K$局部是$T^{n+1}$的秩为$n$的直和项，注意到$T$的任意局部环都是
+	某个$U_j$的局部环，所以将序列$0\to K\to T^{n+1}\to T^{n+1}/K\to 0$
+	在任意素理想$\pp$处局部化后是一个形如
+	\[
+		0\to K_\pp\to T^{n+1}_\pp \to T_p\to 0
+	\]
+	的序列，这个序列当然是可分裂的。
 \end{proof}
 
 \begin{exe}\label{exe:3.41}
@@ -644,6 +727,46 @@ Theorem \ref{thm:3.37} 的核心是下面的结论，是第一个等式的仿射
 	是直和项则实际上它就是一个直和项。证明它。
 \end{exe}
 
+\begin{coro}\label{coro:3.42}
+如果$T$是任意环，则
+\[
+	\Mor(\spec T,\mathbb P_\zz^n)=\frac{\{\text{\rm 有一个满同态
+	$T^{n+1}\to P$的可逆$T$-模$P$}\}}{\{\text{\rm 同构}\}},
+\]
+其中从$\varphi:T^{n+1}\to P$到$\varphi':T^{n+1}\to P$的同构是一个
+同构$\alpha:P\to P'$满足$\alpha\varphi=\varphi'$. 
+注意到，这样的同构的集合要么是空的，要么（没那么自然地）
+一一对应于$T$中的单位。
+\end{coro}
+
+\begin{thm}\label{thm:3.44}
+对任意的$B$概形$\varphi:X\to B$以及$B$上的凝聚层，存在一个自然的双射
+\[
+	\Mor_B(X,\mathbb P(\mathscr E))=\frac{\{\text{\rm $X$上的可逆层$P$，
+	连同一个满态射$\varphi^*\mathscr E\to P$}\}}{\{\text{\rm 同构}\}},
+\]
+其中的同构如同Corollary \ref{coro:3.42}中那样定义。
+\end{thm}
+
 \subsection{分次模和层} \label{s:3.2.6}
-\subsection{Grassmann流形} \label{s:3.2.7}
+
+\subsection{Grassmannian} \label{s:3.2.7}
+
+Grassmannian%
+\footnote{译者注：Grassmannian一般被翻译为Grassmann流形或者Grassmann簇，
+但这里显然不是一个流形也不是簇，虽然翻译成Grassmann概形似乎是合适的，但
+我们还是先将这个名词按住不动，也不会变为复数形式等。}%
+在概形范畴中存在，同时表现得非常类似于经典代数几何中的Grassmannian.
+更精确地说，对任意的概形$S$，正整数$n$以及$k\leq n$，存在一个概形
+$G_S(k,n)$被称为$S$上的\textit{Grassmannian}. 这个构造对$S$是函子性的，
+即对任意的态射$T\to S$，Grassmannian $G_T(k,n)$就是纤维积
+$G_S(k,n)\times_S T$. （特别地，存在一个概形$G_\zz(k,n)$，即$\spec \zz$
+上的Grassmannian，使得任意的Grassmannian可以被实现为
+$G_S(k,n)=G_\zz(k,n)\times S$.）此外，当$S=\spec K$是一个代数闭域的谱时，
+概形$G_S(k,n)$就对应于经典的$K$上的Grassmann簇$G(k,n)$. 实际上，下面我们
+将会简单描述的构造，非常类似于经典的Grassmannian的标准构造。当然，类似
+射影空间的例子，作为概形，Grassmannian的新的、不同的地方就是它的子概形，
+我们将在下面讨论\textit{Fano概形}时展示这点。
+
+% p. 120
 \subsection{全景超曲面} \label{s:3.2.8}
