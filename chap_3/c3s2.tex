@@ -588,7 +588,7 @@ $\spec K\to \mathbb P_A^n$关联于一个$K$中元素的非零$(n+1)$-元组，
 =1,\dots,\alpha_n=a_n]$，或者，等价地，$[\beta_0=b_0,\dots,
 \beta_j=1,\dots,\beta_n=b_n]$.
 
-说了这些，我们可以将同样的考虑拓展到态射$X\to \mathbb P^n_A$的情况，
+说了这些，我们可以将同样的考虑推广到态射$X\to \mathbb P^n_A$的情况，
 其中$X$是一个局部$A$-代数的谱。
 
 \begin{pro}\label{pro:3.36}
@@ -615,7 +615,7 @@ $A$-代数同态
 \[
 	\left[\frac{x_0}{x_i},\dots,\frac{x_n}{x_i}\right]\longrightarrow T
 \]
-给出。于是我们可以将$\varphi$关联于一个$(n+1)$-元组
+给出。于是我们可以将$\varphi$对应于一个$(n+1)$-元组
 \[
 	\left[\alpha_0=\frac{x_0}{x_i},\dots,\alpha_i=1,\dots,
 	\alpha_n=\frac{x_n}{x_i}\right].
@@ -628,13 +628,13 @@ $A$-代数同态
 其等于$[\alpha \alpha_0,\dots,\alpha\alpha_n]$，其中$\alpha=x_i/x_j$.）
 \end{proof}
 
-为进一步推广到仿射环或概形的情况，我们来寻找一个局部地可以约化
+为进一步推广到仿射环或概形的情况，我们来寻找一个构造，使得局部可以约化
 到上面的情况的构造。为此，我们可将命题中的$(n+1)$-元组
 $(\alpha_0,\dots,\alpha_n)$看成一个模同态
 \[
 	\alpha:T^{n+1}\to T.
 \]
-说$\alpha$是满的等价于说每个$\alpha_i$都是$T$中的可逆元。这样两个映射
+称$\alpha$是满的等价于说某个$\alpha_i$是$T$中的可逆元。这样两个映射
 等价当且仅当它们只差一个模$T$的自同态的复合（即乘上一个可逆元）。等价
 地，核是一个$T^{n+1}$的秩为$n$的直和项
 \footnote{译者注：直和项就是direct summand，或者简单写作summand. 设$N$
@@ -643,8 +643,8 @@ $(\alpha_0,\dots,\alpha_n)$看成一个模同态
 。
 
 于是，前面一段可以推广来描述从$A$-概形$X$到$\mathbb P^n$的$A$-态射：
-它们关联于秩为$n$的子层$\mathscr E\subset \mathscr O_X^{n+1}$，
-其局部是$\mathscr O_X^{n+1}$的直和项；或者，等价地，关联于映射
+它们对应于秩为$n$的子层$\mathscr E\subset \mathscr O_X^{n+1}$，
+其局部是$\mathscr O_X^{n+1}$的直和项；或者，等价地，对应于映射
 \[
 	\mathscr O_X^{n+1}\to P\to 0,
 \]
@@ -752,9 +752,18 @@ Theorem \ref{thm:3.37} 的核心是下面的结论，是第一个等式的仿射
 	义了一个态射$\spec T\to \mathbb P_\zz^n$.
 
 	反之，假设我们已经给定了一个态射$\psi:\spec T\to \mathbb P_\zz^n$. 
-	因为$\mathbb P_\zz^n$被$n+1$个仿射$n$-空间所覆盖，$\psi$由 \nottran
-
+	因为$\mathbb P_\zz^n$被$n+1$个仿射$n$-空间所覆盖，$\psi$由定义对应于
+	一个开覆盖$\spec T=\bigcup_{i=0,\dots,n}U_i$，以及对每个$j$，一个
+	$T^{n+1}|_{U_j}$的元素$(t_{j0},\dots,t_{jj}=1,\dots,t_{jn})$，
+	使得$t_{ij}$在$U_i\cap U_j$上是一个可逆元，以及$t_{il}=t_{ij}t_{jl}$
+	在$T|_{U_i\cap U_j}$对所有$i$, $j$, $l$都成立。两个这样的$T$-值点
+	相同当且仅当对每个$j$，$T^{n+1}|_{U_j}$中相应的元素是相同的。%
 	% p.114
+	令$K_j$是由矩阵$(t_{j0},\dots,t_{jj}=1,\dots,t_{jn})$定义的映射
+	$T^{n+1}|_{U_j}\to T|_{U_j}$的核，再令
+	\[
+	K=\{a\in T^{n+1}\;:\; \text{对每个$j$，}\, a|_{U_j}\in K_j\}.
+	\]
 
 	为看到$K$局部是$T^{n+1}$的秩为$n$的直和项，注意到$T$的任意局部环都是
 	某个$U_j$的局部环，所以将序列$0\to K\to T^{n+1}\to T^{n+1}/K\to 0$
@@ -770,14 +779,16 @@ Theorem \ref{thm:3.37} 的核心是下面的结论，是第一个等式的仿射
 	是直和项则实际上它就是一个直和项。证明它。
 \end{exe}
 
-为导出可逆模版，我们应用如下事实，$K\subset T^{n+1}$是一个秩为$n$的直和项当且仅当$T^{n+1}/K$是一个可逆模，
-\nottran
-两个满射$\alpha$, $\beta:T^{n+1}\to P$具有相同的核，当且仅当，存在
-一个自同构$\sigma:P\to P$使得$\beta=\sigma\alpha$. 但是如果$P$是一个
-可逆$T$-模，则$\Hom_T(P,P)=T$（原因：自然映射$\alpha:T\to \Hom_T(P,P)$
-将$1$变成了恒等映射，其局部与自然映射$T\to \Hom_T(T,T)$相同，
-这是一个同构，于是$\alpha$是一个同构）。
-因此，$P$的自同构可以等同于$T$中的可逆元，于是我们得到了如下引理：
+为导出可逆模版的等式，我们应用如下事实，$K\subset T^{n+1}$是一个秩为$n$的直和项当且仅当$T^{n+1}/K$是一个可逆模，然后等同
+Proposition \ref{pro:3.40} 中等式的右侧的集合与$T^{n+1}$的可逆商模的集合。
+我们可以用使之为商的满射来分离商的等价类，即与满射$T^{n+1}\to P$一起看
+可逆$T$-模$P$. 两个满射$\alpha$, $\beta:T^{n+1}\to P$具有相同的核，
+当且仅当，存在一个自同构$\sigma:P\to P$使得$\beta=\sigma\alpha$. 
+但是如果$P$是一个可逆$T$-模，则$\Hom_T(P,P)=T$
+（原因：自然映射$\alpha:T\to \Hom_T(P,P)$将$1$变成了恒等映射，
+其局部与自然映射$T\to \Hom_T(T,T)$相同，这是一个同构，
+于是$\alpha$是一个同构）。因此，$P$的自同构可以等同于$T$中的可逆元，
+于是我们得到了如下引理：
 
 \begin{coro}\label{coro:3.42}
 如果$T$是任意环，则
@@ -792,11 +803,52 @@ Theorem \ref{thm:3.37} 的核心是下面的结论，是第一个等式的仿射
 \end{coro}
 
 在域$K$上的簇$\mathbb P_K^n$这个经典的例子中，我们可以将$\mathbb P_K^n$
-点用一个$K$中元素的$(n+1)$-元组，组中元素不全为零。（在概形
-$\mathbb P_K^n$中，当前，也存在其他非闭点。）类似地，对任意的环$A$，
-一个$(n+1)$-元组 \nottran
+点用一个$K$中元素的$(n+1)$-元组表示，组中元素不全为零。（在概形
+$\mathbb P_K^n$中，当然，也存在其他非闭点。）类似地，对任意的环$A$，
+一个$(n+1)$-元组$(a_0,\dots,a_n)$，其中$a_i\in A$，如果生成了单位理想，
+则其定义了一个$A$-模满射$A^{n+1}\to A$，因此也定义了一个$\mathbb P_A^n$
+的一个$A$-值点。
 
 % p.115
+
+\begin{exe}\label{exe:3.43}
+\begin{compactenum}[(a)]
+\item 证明，在集合
+$
+	\left\{\text{能生成单位理想的$A$中元素的$(n+1)$-元组}\right\}
+$
+与集合
+\[
+	\left\{
+		\parbox{25em}{
+			映射$\spec A\to \mathbb P_A^n$使得复合
+			$\spec A\to \mathbb P_A^n\to \spec A$是恒同
+			（在$A$-概形范畴中的$\mathbb P_A^n$的$A$-值点）
+		}
+	\right\}
+\]
+之间存在双射。
+\item 证明，对应于$(n+1)$-元祖$(a_0,\dots,a_n)$的态射
+$\spec A\to \mathbb P_A^n$的像是闭子概形
+\[
+	V(\{a_iX_j-a_jX_i\}_{0\leq i,j\leq n}).
+\]
+如果$A$是一个整环，证明$(\{a_iX_j-a_jX_i\}_{0\leq i,j\leq n})$
+是一个素理想。
+\end{compactenum}
+\end{exe}
+
+如果$A$是一个整环，Exercise \ref{exe:3.43} 说明了像是$\mathbb P_A^n$的
+一个约态不可约闭子概形，特别地，对应于$|\mathbb P_A^n|$的一点。
+$\mathbb P_\zz^1$中对应于$(2,5)$的点的例子已在上面的Exercise \ref{exe:3.9}
+中处理过了。注意到，$\spec \zz$-值点$(2,5)$不是$\mathbb P_\zz^1$的
+标准仿射开覆盖$\mathbb P_\zz^1=\mathbb A_\zz^1\cup \mathbb A_\zz^1$
+中任意一个开集的$\spec \zz$-值点，尽管点$(2x_1-5x_0)\in |\mathbb P_\zz^1|$
+同时处于两个开集中！
+
+最后，如果我们在$B$-概形范畴工作，我们可能会寻求上面结果的一个推广来
+描述从一个给定$B$-概形$X$到一个射影丛的映射。为陈述这个结果，令
+$\mathscr E$为$B$上的任意凝聚层，于是我们有：
 
 \begin{thm}\label{thm:3.44}
 对任意的$B$概形$\varphi:X\to B$以及$B$上的凝聚层，存在一个自然的双射
@@ -806,6 +858,8 @@ $\mathbb P_K^n$中，当前，也存在其他非闭点。）类似地，对任�
 \]
 其中的同构如同Corollary \ref{coro:3.42}中那样定义。
 \end{thm}
+
+我们不会在这里证明这个定理；\nottran
 
 \subsection{分次模和层} \label{s:3.2.6}
 
