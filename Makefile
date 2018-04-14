@@ -6,17 +6,17 @@ xe :
 	xelatex main.tex
 
 ap : 
-	aplatex -synctex=1 main.tex
+	aplatex --shell-escape --synctex=1 main.tex
 	
-pic :
-	xelatex main.tex
-	zhmakeindex -q -s indexstyle.mst main
-	xelatex main.tex
+# pic :
+# 	xelatex main.tex
+# 	zhmakeindex -q -s indexstyle.mst main
+# 	xelatex main.tex
 
 main : 
-	aplatex -synctex=1 main.tex
+	aplatex --shell-escape --synctex=1 main.tex
 	zhmakeindex -q -s indexstyle.mst main
-	aplatex -synctex=1 main.tex
+	aplatex --shell-escape --synctex=1 main.tex
 
 cmain :
 	xelatex cmain.tex

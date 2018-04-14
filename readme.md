@@ -16,13 +16,13 @@ Makefile 是某人写着玩的，写得超烂，不要在意。
 
 编译指南：
 
-直接运行 `xelatex main.tex` 或者 `xelatex cmain.tex` 即可得到相关的 pdf，为了索引或者引用等，所以建议进行多次编译。索引格式文件 `indexstyle.mst` 已经提供，生成中文索引的工具请使用 [zhmakeindex](https://www.ctan.org/pkg/zhmakeindex?lang=en).
+直接运行 `xelatex cmain.tex` 或者 `xelatex main.tex` 即可得到相关的 pdf，为了索引或者引用等，所以建议进行多次编译。索引格式文件 `indexstyle.mst` 已经提供，生成中文索引的工具请使用 [zhmakeindex](https://www.ctan.org/pkg/zhmakeindex?lang=en).
 
-总之，一次完整的编译流程如下：先在根目录运行一次 `xelatex main` 得到 `idx` 文件，然后运行 `zhmakeindex main` 来得到 `ind` 文件，最后再运行一次 `xelatex main`.
+总之，一次完整的编译流程如下：先在根目录运行一次 `xelatex cmain` 得到 `idx` 文件，然后运行 `zhmakeindex cmain` 来得到 `ind` 文件，最后再运行一次 `xelatex cmain`.
 
-主目录下，已经给出了 Makefile. 所以在有 GNU make 软件的环境中，可以直接运行 `make pic` 使用XeLaTex生成 `main.pdf`，运行 `make color` 使用 XeLaTex 生成 `cmain.pdf`，默认的 `make` 留给了ApLaTeX引擎。
+主目录下，已经给出了 Makefile. 所以在有 GNU make 软件的环境中，可以直接运行 `make color` 使用 XeLaTeX 生成 `cmain.pdf`，默认的 `make` 留给了 ApLaTeX 引擎。
 
-p.s 1. 推荐的编译环境为 Linux 下的 TeXLive，之所以选用 Linux，是因为编译比 Windows 下的快不少。同时，本文档默认的字体是开源字体 Fandol，至少 TeXLive 2016 之后，这是包含在整个TeXLive 中的。
+p.s 1. 推荐的编译环境为 Linux 下的 TeXLive，之所以选用 Linux，是因为编译比 Windows 下的快不少。同时，本文档默认的字体是开源字体 Fandol，至少 TeXLive 2016 之后，这是包含在整个 TeXLive 中的。
 
 p.s 2. 由于 zhmakeindex 已知的问题，无法很好地处理多音字，所以最终版的编译在使用 zhmakeindex 生成了 `ind` 文件后应该手动进行修改。
 
@@ -38,9 +38,23 @@ p.s 2. 由于 zhmakeindex 已知的问题，无法很好地处理多音字，所
 
 ----
 
+插图相关：
+
+正文插图只要无脑用 `\inclugra{*.png}` 即可，其中 `*.png` 是在对应章节 `pics` 文件夹中的插图的文件名。
+
+插图一度采用硬编码 bb 的方法，后来还是放弃了这点，因而编译速度肯定就变慢了（而且图越多越慢）。
+
+p.s. 对于 XeLaTeX 用户，在编译 `main.tex` 的时候，需注释掉
+```latex
+\usepackage[dvipdfmx]{graphicx}
+```
+否则可能出现编译错误。
+
+----
+
 字体相关：
 
-虽然Windows自带字体是可以免费使用（乃至商用），但是，使用开源字体可以保证足够的跨平台性，在不同的平台上可以自由传播、安装、使用。本文默认使用开源字体 [Fandol](https://www.ctan.org/tex-archive/fonts/fandol?lang=en)，如果使用 TeXLive 2016 以及更新的版本，这个字体是包含其中的。
+虽然 Windows 自带字体是可以免费使用（部分字体乃至商用），但是，使用开源字体可以保证足够的跨平台性，在不同的平台上可以自由传播、安装、使用。本文默认使用开源字体 [Fandol](https://www.ctan.org/tex-archive/fonts/fandol?lang=en)，如果使用 TeXLive 2016 以及更新的版本，这个字体是包含其中的。
 
 同时，在 `main.tex` 与 `cmain.tex` 中，我们给出了如何替换字体的一个范例（默认注释）如下：
 
@@ -51,10 +65,8 @@ p.s 2. 由于 zhmakeindex 已知的问题，无法很好地处理多音字，所
 ]{SourceHanSerifSC-Regular}
 ```
 
-默认替换的宋体是Adobe于2017年4月正式推出的 [Source Han Serif](https://source.typekit.com/source-han-serif/cn/)，即中文名为思源宋体的多字重宋体。这里用到 Regular 和 Bold 两个字重。而替换的楷体是 [Adobe 楷体](https://typekit.com/fonts/adobe-kaiti)，比起 Fandol 的楷体，他更加适配思源宋体。这里默认使用或替换的字体都是开源字体。
+默认替换的宋体是 Adobe 于2017年4月正式推出的 [Source Han Serif](https://source.typekit.com/source-han-serif/cn/)，即中文名为思源宋体的多字重宋体。这里用到 Regular 和 Bold 两个字重。而替换的楷体是 [Adobe 楷体](https://typekit.com/fonts/adobe-kaiti)，比起 Fandol 的楷体，他更加适配思源宋体。这里默认使用或替换的字体都是开源字体。
 
 使用字体需要先安装字体。安装字体，一是可以直接将字体文件放到项目的主目录，然后使用 `xelatex` 编译。同时也可以将其安装到系统，在使用 `fc-cache -fv` 刷新字体缓存后，使用 `xelatex` 编译。
 
-----
-
-p.s. 增加了 moha 的字体，见 [这里](https://github.com/chaoxu/naivemoha). 代码有所魔改。
+p.s. 增加了 moha 的字体，见[这里](https://github.com/chaoxu/naivemoha). 代码有所魔改。

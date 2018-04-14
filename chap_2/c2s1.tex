@@ -31,12 +31,12 @@
 长得就像它的经典对应，同样被叫做仿射直线的仿射簇。在仿射直线上，每一个$\lambda\in K$都对应有一个闭点，闭点构成的集合上的Zariski拓扑也与仿射簇上的经典的Zariski拓扑相同：开集是有限集的补。概形$\mathbb{A}^1_K$与簇不同的地方只在于它多了一个点，这个点被称为\textit{一般点}\index{一般!点}%
 \footnote{译者注：作者后面才会给出明确的定义，这里事先给一下：如果$Y=\overline{\{x\}}$，则称$x$是$Y$的一个一般点。一般而言，一般点可能不存在，也可能不唯一。}%
 ，对应于零理想$(0)$。
-\vspace{-1ex}\begin{center}\includegraphics[scale=\scale,bb=0 0 447 81]{\PICDIR/1.png}\end{center}
-\vspace{-2ex}点$(0)$的闭包是整个$\mathbb{A}^1_K$，因此，$\mathbb{A}^1_K$的闭子集就是$\mathbb{A}^1_K-\{(0)\}$的有限子集。
+\vspace{-1ex}\inclugra{1.png}\vspace{-2ex}
+点$(0)$的闭包是整个$\mathbb{A}^1_K$，因此，$\mathbb{A}^1_K$的闭子集就是$\mathbb{A}^1_K-\{(0)\}$的有限子集。
 
 仿射平面$\mathbb{A}^2_K=\spec K[x,y]$同样与它的经典对应相似，但现在就多了许多点，同时也表现得更加有趣。像之前一样，我们有来自于极大理想$(x-\lambda,y-\mu)$的闭点，对应于寻常平面中的$(\lambda,\mu)$. 但现在却有两类非闭点。首先，对每一个不可约多项式$f(x,y)\in K[x,y]$，有一点$p$对应于素理想$(f)\subset K[x,y]$，它的闭包包含$p$本身以及所有使得$f(\lambda,\mu)=0$的闭点$(\lambda,\mu)$，点$(f)$被称为该集合的一般点。一般地，概形中的每一个点都被称为该点闭包的一般点。比起簇$\mathbb{A}^2_K$，在概形$\mathbb{A}^2_K$中，对每一条不可约平面曲线，我们都需要加入一点，这个点属于这条曲线的闭包，且该点的闭包等于曲线的闭包。最后，正如在$\mathbb{A}^1_K$中，我们还需加入一个对应于零理想的点，即$\mathbb{A}^2_K$的一般点，它的闭包是整个$\mathbb{A}^2_K$.
 
-\begin{center}\includegraphics[scale=\scale,bb=0 0 688 413]{\PICDIR/2.png}\end{center}
+\inclugra{2.png}
 
 因为$K[x,y]=K[x]\otimes_K K[y]$，从定义有
 \[
@@ -53,7 +53,7 @@
 \begin{exe} \label{exe:2.2}
 设$\varphi:K[x]\to K[x]$是一个环同态，他将$x$变成$x^2$，考虑$\varphi$诱导的$\spec K[x]$到自身的映射。证明，在概形意义上，点$0$的纤维是由$(x^2)$定义的子概形。
 
-\begin{center}\includegraphics[scale=\scale,bb=0 0 507 309]{\PICDIR/3.png}\end{center}
+\inclugra{3.png}
 \end{exe}
 
 在所有的概形中，代数闭域上仿射簇的相伴概形被如下性质的环$R$的谱所刻划，
@@ -92,7 +92,7 @@
 \]
 所以概形$\spec  K[\![x,y]\!]/(y^2-x^3-x^2)$是可约的。（见下图。）
 
-\begin{center}\includegraphics[scale=\scale,bb=0 0 600 444]{\PICDIR/4.png}\end{center}
+\inclugra{4.png}
 
 当然，为使这样的事是可行的，$Y$必然比$X$有“更多”曲线，下面的习题补充了这点。
 
