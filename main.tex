@@ -4,7 +4,8 @@
 \usepackage[fontset=fandol]{ctex}
 	% \CTEXoptions[today=old]
 	% \CTEXoptions[contentsname=Table of Contents]
-\usepackage{graphicx,wrapfig,paralist}
+\usepackage[dvipdfmx]{graphicx} % ApLaTeX use dvipdfmx
+\usepackage{wrapfig,paralist}
 	\setlength{\pltopsep}{3pt}
 	\setlength{\plpartopsep}{3pt}
 \usepackage{titletoc,makeidx}
@@ -26,8 +27,10 @@
 % \setCJKsansfont{Microsoft YaHei}
 
 \def\scale{0.6}
-\def\wrapa{\begin{wrapfigure}[8]{r}{164pt}\vspace{-1em}\includegraphics[scale=\scale,bb=0 0 266 191]{chap_2/pics/7.png}\end{wrapfigure}}
-\def\wrapb{\begin{wrapfigure}[9]{r}{188pt}\vspace{-1em}\includegraphics[scale=\scale,bb=0 0 305 271]{chap_2/pics/9.png}\end{wrapfigure}}
+\def\PICDIR{.}
+\newcommand{\inclugra}[1]{\begin{center}\includegraphics[scale=\scale]{\PICDIR/#1}\end{center}}
+\def\wrapa{\begin{wrapfigure}[8]{r}{164pt}\vspace{-1em}\includegraphics[scale=\scale]{chap_2/pics/7.png}\end{wrapfigure}}
+\def\wrapb{\begin{wrapfigure}[9]{r}{188pt}\vspace{-1em}\includegraphics[scale=\scale]{chap_2/pics/9.png}\end{wrapfigure}}
 \newcommand{\ThisULCornerWallPaper}[2]{}
 
 \begin{document}

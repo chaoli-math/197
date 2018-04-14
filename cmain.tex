@@ -2,8 +2,8 @@
 \documentclass[11pt,svgnames]{book}
 \input{structure}
 \setlength{\headheight}{13pt}
-\usepackage[fontset=windows]{ctex}
-% \usepackage[fontset=fandol]{ctex}
+% \usepackage[fontset=windows]{ctex}
+\usepackage[fontset=fandol]{ctex}
 	% \CTEXoptions[today=old]
 	% \CTEXoptions[contentsname=Table of Contents]
 \usepackage{paralist,wrapfig}
@@ -28,10 +28,10 @@
 \setCJKsansfont{Microsoft YaHei}
 
 \def\scale{0.6}
-% \def\wrapa{\begin{wrapfigure}[7]{r}{140pt}\vspace{-1.5em}\includegraphics[scale=\scale,bb=0 0 266 191]{chap_2/pics/7.png}\end{wrapfigure}}
-% \def\wrapb{\begin{wrapfigure}[3]{r}{156pt}\vspace{-7em}\includegraphics[scale=\scale,bb=0 0 305 271]{chap_2/pics/9.png}\end{wrapfigure}}
-\def\wrapa{\begin{wrapfigure}[8]{r}{164pt}\vspace{-1em}\includegraphics[scale=\scale,bb=0 0 266 191]{chap_2/pics/7.png}\end{wrapfigure}}
-\def\wrapb{\begin{wrapfigure}[6]{r}{188pt}\vspace{-6em}\includegraphics[scale=\scale,bb=0 0 305 271]{chap_2/pics/9.png}\end{wrapfigure}}
+\def\PICDIR{.}
+\newcommand{\inclugra}[1]{\begin{center}\includegraphics[scale=\scale]{\PICDIR/#1}\end{center}}
+\def\wrapa{\begin{wrapfigure}[8]{r}{164pt}\vspace{-1em}\includegraphics[scale=\scale]{chap_2/pics/7.png}\end{wrapfigure}}
+\def\wrapb{\begin{wrapfigure}[6]{r}{188pt}\vspace{-6em}\includegraphics[scale=\scale]{chap_2/pics/9.png}\end{wrapfigure}}
 
 % \includeonly{chap_1/chap_1,chap_2/chap_2,chap_3/chap_3,chap_6/chap_6}
 

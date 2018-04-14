@@ -6,7 +6,7 @@
 
 我们从最明显的例子开始，概形$\spec \zz$. 环$\zz$的素理想当然是$(p)$，其中$p$是素数，以及$(0)$，前者对应于$\spec \zz$的闭点，剩余类域是$\mathbb{F}_p$，后者是一个“一般”点，闭包是整个$\spec \zz$而剩余类域是$\mathbb{Q}$. 图像如下：
 
-\begin{center}\includegraphics[scale=\scale,bb=0 0 589 74]{\PICDIR/15.png}\end{center}
+\inclugra{15.png}
 
 \noindent 这与域上的直线$\mathbb{A}_K^1$在形式上是相似的，事实上，这只是一系列类比的开始，因此在看下面的例子时应将其铭记在心。然而，这种类比也有着它的不足：尽管$\spec \zz$表现得很像$\mathbb{A}_K^1$，但比如$\mathbb{A}_K^1$是$\mathbb{P}_K^1$的稠密开子概形，而$\spec \zz$不是任何一个概形的稠密开子概形。
 
@@ -50,7 +50,7 @@
 
 在每个例子中，纤维的坐标环作为$\mathbb{F}_p$\hyp 代数，维数都是2. 这是因为$A$是一个秩为2的自由$\zz$\hyp 模。这里感兴趣的类比是，映射$\spec A\to \spec \zz$与Riemann面的一个分支覆盖（或者更一般地，一个代数闭域，比如$\cc$上的一维概形）。 基本上，我们能将$\spec A$想象成$\spec \zz$的两层覆盖然后在“分岔”素数上分支，比如就像，$\spec \cc[z]$是$\spec \cc[z^2]$的一个双重覆盖，它在原点处分支。对于$\spec \zz$处的点，一个明显的不同是，分岔点处我们有两个不同的重数为1的点，但在不同于分岔点的点$(p)\in \spec \zz$处，我们只有一个重数为1的点，其剩余类域是$\mathbb{F}_p$的二次扩张，这样的点在下图中我们以均匀的灰色点表示：
 
-\begin{center}\includegraphics[scale=\scale,bb=0 0 649 141]{\PICDIR/16.png}\end{center}
+\inclugra{16.png}
 
 一个具有更丰富内容的类比是非代数闭域上的一维概形之间的有限映射。比如考虑映射
 \[
@@ -60,7 +60,7 @@
 
 我们通过观察概形$\spec B$，其中$B\subset A\subset K$是数域的一个序，即$K$中的整数环的子环也有着分式域$K$，来进一步深入上面这个类比。举个例子，$A=\zz[\sqrt 3]$以及$B=\zz[11\sqrt 3]$. 上面描述的映射$\spec A\to \spec \zz$现在可以分解为$\spec A\to \spec B\to \spec \zz$，事实上，映射$\spec A\to \spec B$除了两个点$(4+3\sqrt 3)$和$(4-3\sqrt 3)\in \spec A$同时映到$(11,11\sqrt 3)\in\spec B$之外，它就是一个同构。我们于是将$\spec B$画成一种“结点曲线”，即，$\spec A$到$\spec \zz$的双重覆盖中的两点在这里重合了。
 
-\begin{center}\includegraphics[scale=\scale,bb=0 0 651 153]{\PICDIR/17.png}\end{center}
+\inclugra{17.png}
 
 或者，考虑$A=\zz[\sqrt 3]$以及$B=\zz[2\sqrt 3]$的情况。这里映射$\spec A\to\spec B$是一对一的但不是一个同构，点$[(1+\sqrt 3)]$映到了$[(2,2\sqrt{3})]$.
 
@@ -86,8 +86,7 @@
 
 可能图像化$\mathbb{A}_\zz^1$的最好方式是通过映射$\mathbb{A}_\zz^1\to\zz$（依然是平坦映射！）。在这个映射下， 上面的第二第四类便被映射成$(p)\in\spec \zz$，而第一第三类点将被映射成$\spec \zz$的一般点$(0)$. 实际上，这个映射在点$(p)$的纤维同构于$\mathbb{A}_{\mathbb{F}_p}^1=\spec \mathbb{F}_p$，点$(p,f)\in\mathbb{A}_\zz^1$将对应于多项式$f$在代数闭包$\bar{\mathbb{F}}_p$中的根给出的$\mathbb{A}_{\mathbb{F}_p}^1$中的点（回忆，$\mathbb{A}_{\mathbb{F}_p}^1$中的点对应于Galois群$\mathrm{Gal}\left(\bar{\mathbb{F}}_p/\mathbb{F}\right)$作用在$\mathbb{F}_p$上的轨道）。类似地，一般点$(0)$处的纤维是概形$\mathbb{A}_\mathbb{Q}^1=\spec \mathbb{Q}[x]$，$(f)\in\mathbb{A}_\zz^1$交$\mathbb{A}_\mathbb{Q}^1$于$f$在$\bar{\mathbb{Q}}$中的根对应的点。因此，图像如下：
 
-\begin{center}\includegraphics[scale=\scale,bb=0 0 670 491]{\PICDIR/18.png}\end{center}
-\label{p:2.18}
+\inclugra{18.png}\label{p:2.18}
 
 点$(p)\in\mathbb{A}_\zz^1$的闭包是点$(p)\in \spec \zz$处的纤维$\mathbb{A}_{\mathbb{F}_p}^1$. 其他非闭点，即上面的第三类点，的闭包更有趣。它们将包含点$(f)$本身，它在点$(0)$处的纤维$\mathbb{A}_\mathbb{Q}^1$中，以及所有点$(p,g)\in\mathbb{A}_\zz^2$，其中$g$是$\bar{\mathbb{F}}$上$f$的一个因子，即对$\mathbb{A}_\zz^1$的每一条纤维$\mathbb{A}_{\mathbb{F}_p}^1$，$\mathbb{A}_{\mathbb{F}_p}^1$中点的并对应于$f$模$p$后的根。
 
@@ -99,7 +98,7 @@
 
 点$(x^2-3)$的闭包长得稍微有点不一样，如下图所示：
 
-\begin{center}\includegraphics[scale=\scale,bb=0 0 655 235]{\PICDIR/19.png}\end{center}
+\inclugra{19.png}
 
 \noindent 它的闭包是上面描述过的概形$\spec \zz[x]/(x^2-3)=\spec \zz[\sqrt 3]$，这里被实现为$\mathbb{A}_\zz^1$的一个子概形。
 
@@ -135,9 +134,11 @@
 \]
 于是$(2)$处的纤维是一条二重直线，而$(5)$处的纤维是两条直线的并（于是特别地，有两个非闭点映射到点$(5)$，而只有一个这样的点映射到其他的$(p)\in \spec \zz$）。
 
-\begin{center}\includegraphics[scale=\scale,bb=0 0 637 123]{\PICDIR/20.png}\end{center}
+\inclugra{20.png}
 
-\begin{wrapfigure}{r}{160pt}\includegraphics[scale=0.5,bb=0 0 293 290]{\PICDIR/21.png}\end{wrapfigure}
+\begin{wrapfigure}{r}{160pt}
+\includegraphics[scale=0.5]{\PICDIR/21.png}
+\end{wrapfigure}
 \noindent\textbf{Exercise\hspace{0.38em}{\addtocounter{thm}{1}}\thethm.}（这题需要有一定的射影几何知识。）设$(p)\in\spec\zz$满足$p\neq 5$且$p\equiv 1\text{ mod } (4)$，则$X$在点$(p)$上的纤维是一个双曲线，即，它相交于纤维$\mathbb{A}_{\mathbb{F}_p}^2$中“无穷远直线”的两个点，此二点的剩余类域是$\mathbb{F}_p$以及同构于$\mathbb{A}_{\mathbb{F}_p}^1-\{0\}$. 举个例子，若$(p)$上的纤维是曲线$x^2+y^2-5=0$，则它在$\mathbb{F}_p$上的投射平面上的闭包具有方程$X^2+Y^2-5Z^2=0$，于是它在无穷远处交直线$Z=0$于两点$[1,\alpha,0]$，其中$\alpha^2=p-1\text{ mod } (p)$. 证明，与此不同，若$p\equiv 3\text{ mod } (4)$，则纤维是一个椭圆，即，它与无穷远直线相交于一个点，该点处的剩余类域是$\mathbb{F}_{p^2}$. \vspace{0.5em}
 
 上述图像非常符合其几何类比，一个纤维于一条曲线的曲面。比如，曲面$V(x^2-y^2-z)\subset \spec K[x$, $y$, $z]$纤维于$z$-直线$\spec K[z]$。纤维于一条曲线的曲面将具有有限个奇异纤维，正如右边的经典图片所示。
