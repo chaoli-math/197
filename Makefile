@@ -8,10 +8,10 @@ xe :
 ap : 
 	aplatex --shell-escape --synctex=1 main.tex
 	
-# pic :
-# 	xelatex main.tex
-# 	zhmakeindex -q -s indexstyle.mst main
-# 	xelatex main.tex
+pic :
+	xelatex main.tex
+	zhmakeindex -q -s indexstyle.mst main
+	xelatex main.tex
 
 main : 
 	aplatex --shell-escape --synctex=1 main.tex

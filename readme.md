@@ -16,11 +16,11 @@ Makefile 是某人写着玩的，写得超烂，不要在意。
 
 编译指南：
 
-直接运行 `xelatex cmain.tex` 或者 `xelatex main.tex` 即可得到相关的 pdf，为了索引或者引用等，所以建议进行多次编译。索引格式文件 `indexstyle.mst` 已经提供，生成中文索引的工具请使用 [zhmakeindex](https://www.ctan.org/pkg/zhmakeindex?lang=en).
+直接运行 `xelatex main.tex` 或者 `xelatex cmain.tex` 即可得到相关的 pdf，为了索引或者引用等，所以建议进行多次编译。索引格式文件 `indexstyle.mst` 已经提供，生成中文索引的工具请使用 [zhmakeindex](https://www.ctan.org/pkg/zhmakeindex?lang=en).
 
 总之，一次完整的编译流程如下：先在根目录运行一次 `xelatex cmain` 得到 `idx` 文件，然后运行 `zhmakeindex cmain` 来得到 `ind` 文件，最后再运行一次 `xelatex cmain`.
 
-主目录下，已经给出了 Makefile. 所以在有 GNU make 软件的环境中，可以直接运行 `make color` 使用 XeLaTeX 生成 `cmain.pdf`，默认的 `make` 留给了 ApLaTeX 引擎。
+主目录下，已经给出了 Makefile. 所以在有 GNU make 软件的环境中，可以直接运行 `make pic` 使用 XeLaTeX 生成 `main.pdf`，或者运行 `make color` 使用 XeLaTeX 生成 `cmain.pdf`，默认的 `make` 留给了 ApLaTeX 引擎。
 
 p.s 1. 推荐的编译环境为 Linux 下的 TeXLive，之所以选用 Linux，是因为编译比 Windows 下的快不少。同时，本文档默认的字体是开源字体 Fandol，至少 TeXLive 2016 之后，这是包含在整个 TeXLive 中的。
 
@@ -42,13 +42,7 @@ p.s 2. 由于 zhmakeindex 已知的问题，无法很好地处理多音字，所
 
 正文插图只要无脑用 `\inclugra{*.png}` 即可，其中 `*.png` 是在对应章节 `pics` 文件夹中的插图的文件名。
 
-插图一度采用硬编码 bb 的方法，后来还是放弃了这点，因而编译速度肯定就变慢了（而且图越多越慢）。
-
-p.s. 对于 XeLaTeX 用户，在编译 `main.tex` 的时候，需注释掉
-```latex
-\usepackage[dvipdfmx]{graphicx}
-```
-否则可能出现编译错误。
+插图一度采用硬编码 bb 的方法，后来还是放弃了这点，转而用 extractbb 先生成一次 Bounding Box（且以后不用再生成）再编译，这使得我们可以引入上面的 `\inclugra` 而编译速度变慢不多。
 
 ----
 
