@@ -3,7 +3,7 @@
 \input{structure}
 \setlength{\headheight}{13pt}
 % \usepackage[fontset=windows]{ctex}
-\usepackage[fontset=fandol]{ctex}
+\usepackage{ctex}
 	% \CTEXoptions[today=old]
 	% \CTEXoptions[contentsname=Table of Contents]
 \usepackage{paralist,wrapfig}
@@ -36,9 +36,8 @@
 % \includeonly{chap_1/chap_1,chap_2/chap_2,chap_3/chap_3,chap_6/chap_6}
 
 \begin{document}
+\pagenumbering{gobble}
 \begin{titlepage}
-\setcounter{page}{-1}
-\thispagestyle{empty}
 	\begin{flushright}
 	{\Huge\bfseries 概形的几何}\\[\baselineskip]
 	% {{\scshape In\:}\Large {\itshape a simple} {\scshape Way}} \\

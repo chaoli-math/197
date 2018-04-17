@@ -2,7 +2,7 @@
 \documentclass[11pt]{book}
 
 \usepackage[book]{header}
-\usepackage[fontset=fandol]{ctex}
+\usepackage{ctex}
 	% \CTEXoptions[today=old]
 	% \CTEXoptions[contentsname=Table of Contents]
 \usepackage{graphicx,wrapfig,paralist}
@@ -34,9 +34,8 @@
 \newcommand{\ThisULCornerWallPaper}[2]{}
 
 \begin{document}
+\pagenumbering{gobble}
 \begin{titlepage}
-\setcounter{page}{-1}
-\thispagestyle{empty}
 	\begin{flushright}
 	{\Huge\bfseries 概形的几何}\\[\baselineskip]
 	% {{\scshape In\:}\Large {\itshape a simple} {\scshape Way}} \\
@@ -50,7 +49,6 @@
 \end{titlepage}
 \clearpage
 \thispagestyle{empty}
-
 \frontmatter
 \tableofcontents
 \mainmatter
