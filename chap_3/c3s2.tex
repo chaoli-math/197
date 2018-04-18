@@ -82,7 +82,7 @@ $\proj S$的仿射开子概形。如果$1$-次元$x_0$, $x_1$, $\dots$们生成�
 
 % proofread @ 2018.04.01
 
-\begin{exe}\label{exe:3.6}
+\begin{exe}~\label{exe:3.6}
 \begin{compactenum}[(a)]
 \item 对$S$任意的齐次理想$I$，以及$1$-次齐次元$f$，交集
 \[
@@ -490,7 +490,7 @@ $
 \]
 给出的映射$v_i:\mathbb A_K^1\to \mathbb A_K^3$的像确定的曲线$C_1$, $C_2\subset \mathbb A_K^3$. 在每个例子中，令$p$是$C_i$的奇异点。
 
-\begin{exe}\label{exe:3.30}
+\begin{exe}~\label{exe:3.30}
 	\begin{compactenum}[(a)]
 		\item 证明，两条曲线的射影化切锥
 		\[
@@ -517,9 +517,9 @@ $
 切锥$TC_p X$是$\overline{\Gamma}$在点$p\in X$处的纤维。
 \end{pro}
 
-这个命题（模掉$TC_p X$中在原点处可能的嵌入组分）将在第 \ref{chap:4} 章中证明。这个命题相当于说，$TC_p X$的射影化是$X$在点$p$的爆破的exceptional divisor. \nottran
+这个命题（模掉$TC_p X$中在原点处可能的嵌入组分）将在第 \ref{chap:4} 章中证明。这个命题相当于说，$TC_p X$的射影化是$X$在点$p$的爆破的例外除子（exceptional divisor）。
 
-Proposition \ref{pro:3.31}相当有用，比方说在做下面的Exercise \ref{exe:3.32}-\ref{exe:3.34} 的时候。
+Proposition \ref{pro:3.31} 相当有用，比方说在做下面的Exercise \ref{exe:3.32}--\ref{exe:3.34} 的时候。
 
 \begin{exe}\label{exe:3.32}
 令$V$是$\mathbb P_K^1=\proj K[X,Y]$上的$n$-次多项式构成的矢量空间，即，以$X$和$Y$为变量的$n$-次齐次多项式构成的矢量空间，再令$\mathbb P V^*\cong \mathbb P_K^n$为由$V$的一维子空间所参数化的射影空间。令$\Delta\subset \mathbb P_K^n$为判别式超平面，即具有一个重复因子的多项式们的零点集，并赋以一个约态概形结构（我们将在第 \ref{chap:5} 章中看到如何给出$\Delta$的方程，因此也自然给出了$\Delta$的概形结构）。如果
@@ -534,7 +534,11 @@ Proposition \ref{pro:3.31}相当有用，比方说在做下面的Exercise \ref{e
 \end{exe}
 
 \begin{exe}\label{exe:3.34}
-这是一个来自于经典几何的习题。假设$C\subset \mathbb P_K^n$是一个非奇异曲线。$C$的射影切线的并是一个曲线$S\subset \mathbb P_K^n$的支集，被称为$C$的\textit{tangent developable}, 这个曲面沿着$C$可能会奇异（例子可见Harris [1995]）。它的切锥在$C$的一点$p\in C$处的支集是什么？（注意到，如果我们取$C$为$\mathbb P_K^n$中的旋转正规曲线%
+这是一个来自于经典几何的习题。假设$C\subset \mathbb P_K^n$是一个非奇异曲线。
+$C$的射影切线的并是一个曲线$S\subset \mathbb P_K^n$的支集，
+被称为$C$的\textit{tangent developable}，这个曲面沿着$C$可能会奇异
+（例子可见Harris [1995]）。它的切锥在$C$的一点$p\in C$处的支集是什么？
+（注意到，如果我们取$C$为$\mathbb P_K^n$中的旋转正规曲线%
 \footnote{译者注：定义见\href{https://en.wikipedia.org/wiki/Rational_normal_curve}{维基百科}。}）%
 ，即$n$-次Veronese映射$\mathbb P_K^1\to\mathbb P_K^n$的像，则这是上面的Exercise \ref{exe:3.33}的一个特例。）
 \end{exe}
@@ -550,7 +554,7 @@ Proposition \ref{pro:3.31}相当有用，比方说在做下面的Exercise \ref{e
 \end{compactenum}
 \end{exe}
 
-我们将在讨论爆破的时候再次遇到切锥：已指出过，概形$X$在点$p\in X$的射影化切锥$\mathbb PTC_p(X)$是$X$在点$p$的爆破$\operatorname{Bl}_p(X)$的excepetional divisor. 特别地，在第 \ref{s:4.2.4} 节，算术概形的切锥将以这种方式再次出现。
+我们将在讨论爆破的时候再次遇到切锥：已指出过，概形$X$在点$p\in X$的射影化切锥$\mathbb PTC_p(X)$是$X$在点$p$的爆破$\operatorname{Bl}_p(X)$的例外除子。特别地，在第 \ref{s:4.2.4} 节，算术概形的切锥将以这种方式再次出现。
 
 \subsection{到射影空间的态射} \label{s:3.2.5}
 
@@ -748,7 +752,7 @@ Theorem \ref{thm:3.37} 的核心是下面的结论，是第一个等式的仿射
 	\to (T^{n+1}/K)|_{U_j}=P|_{U_j}=T|_{U_j}$的矩阵具有形式
 	$(t_{j_0},\dots,t_{jj}=1,\dots,t_{jn})$，其定义了$T^{n+1}_{U_j}$的一
 	个元素，因此也定义了一个态射$\spec T\to \mathbb A_{\zz}^n$. 这些态射
-	在交叠的地方相容，就像在Proposition \ref{pro:3.39}中那样，于是它们定
+	在交叠的地方相容，就像在Proposition \ref{pro:3.39} 中那样，于是它们定
 	义了一个态射$\spec T\to \mathbb P_\zz^n$.
 
 	反之，假设我们已经给定了一个态射$\psi:\spec T\to \mathbb P_\zz^n$. 
@@ -812,7 +816,7 @@ $\mathbb P_K^n$中，当然，也存在其他非闭点。）类似地，对任�
 
 % p.115
 
-\begin{exe}\label{exe:3.43}
+\begin{exe}~\label{exe:3.43}
 \begin{compactenum}[(a)]
 \item 证明，在集合
 $
@@ -865,7 +869,7 @@ $\mathscr E$为$B$上的任意凝聚层，于是我们有：
 可以经由相应含入$\mathbb P(\mathscr B)\hookrightarrow \mathbb P_B^n$
 分解的从$X$到$\mathbb P_B^n$的态射构成的子集给出。
 
-\begin{exe}\label{exe:3.45}
+\begin{exe}~\label{exe:3.45}
 \begin{compactenum}[(a)]
 \item 假设$Y\subset \mathbb P_A^n$是一个由齐次方程$\{F_i\}$给出的
 闭子概形。如果$T$是一个局部$A$-代数，于是就像我们上面展示的，
@@ -881,7 +885,56 @@ $\spec T\to \P_A^n$可以经由$X$分解，当且仅当，对$T$所有的素理�
 
 % p.116
 
+在刻画了到射影空间的概形态射后，回过头看其他具有类似刻画的几何理论
+是有益的。回忆，在拓扑中，$(n+1)$-维矢量空间$\cc^{n+1}$的$n$-维
+子空间的空间$\P^n_\cc$是秩为$n+1$的平凡丛的秩$n$子丛的分类空间
+（$\P_{\mathbb R}^n$也类似）。这意味着，对所有的空间$X$，映射
+$X\to \mathbb P_\cc^n$对应于$X$上的平凡丛的秩$n$子丛。这个对应很
+容易描述：一个平凡丛$\mathscr V=\cc^{n+1}\times X$的
+秩$n$子丛$\mathscr J$对应于映射$X\to \P_\cc^n$，他将点$p\in X$
+映射到$\mathbb P_\cc^n$中对应于
+\[
+	\mathscr J_p\subset \mathscr V_p=\cc^n\times \{p\}=\cc^n
+\]
+的点。其他等价的描述也存在，用秩$1$的商丛$\mathscr V/\mathscr J$
+或者秩$1$的子丛$(\mathscr V/\mathscr J)^*\subset \mathscr V^*$
+来描述可能会更加熟悉。
+
+类似的结果在复解析空间以及映射构成的范畴和代数簇和正则映射
+构成的范畴也成立（相应地将子层取作复解析的或代数的）。
+在这节中，我们给出了一个对概形的对应。在代数几何中，主要的不同
+在于，我们传统地用$Y$上的矢量丛来代替它们的截面层。
+
+为看看这些层是什么样子，首先考虑如果$\mathscr E$是概形$X$上
+秩为$1$的平凡矢量丛，那么$\mathscr E$的截面就是$X$上的函数，
+因此$\mathscr E$的截面曾应该是$\mathscr O_X$.
+取直和，我们可以看到，秩$m$的平凡矢量丛的截面层是凝聚层，自由
+$\oo_X$-模$\oo_X^m$. 一般来说，由于矢量丛由定义局部平凡，
+它们的截面曾是有限秩的局部自由$\oo_X$-模层，局部自由凝聚层。
+反过来，从一个局部自由凝聚层得到一个矢量丛也并不困难。
+
+既然有了矢量丛和局部自由凝聚层的等价，为什么要用局部自由层呢？
+这与用概形代替簇的理由是类似的，即使我们主要感兴趣的是簇：
+局部自由凝聚层自然地活在更大的凝聚层范畴中，在更大的范畴中工作
+给了我们更大的弹性。在较小范畴中的标准构造（比如取一个概形态射的
+纤维，或取一个局部自由层同态的余核），在较大范畴中才能最自然地诠释。
+
+就像对应的线丛，秩为$1$的局部自由层起来非常重要的作用且有一个
+特别的名字：它们被称为\textit{可逆层}。这个属于来自于数论：
+一个整环$T$上的可逆模是一个商域的有限生成子模$I$，使得对商域的某个
+有限生成子模$J$（称之为逆）有$IJ=T$是单位理想。%
+% p.117
+在概形$\spec T$上，它对应的层是一个可逆层。更一般地，给出任意概形$X$
+上的任意一个可逆层$\mathscr I$，层
+$\mathscr I^*=\Hom(\mathscr I,\oo_X)$依然是可逆的，且自然映射
+$\mathscr I\otimes \mathscr I^*\to \oo_X$是一个同构（局部检查之）。
+因此，$\mathscr I^*$被称为$\mathscr I$的\textit{逆}。
+
 \subsection{分次模和层} \label{s:3.2.6}
+
+留心的读者可能已经注意到，Theorem \ref{thm:3.37} 给出了$\P_\zz^n$
+上的可区分可逆层的存在性，即对应于恒等映射的那个。在这节中，我们将
+给出这个层的描述，其在射影几何中起了基础的作用。
 
 \subsection{Grassmannian} \label{s:3.2.7}
 
