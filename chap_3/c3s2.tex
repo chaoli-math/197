@@ -861,7 +861,7 @@ $\mathscr E$为$B$上的任意凝聚层，于是我们有：
 	\Mor_B(X,\mathbb P(\mathscr E))=\frac{\{\text{\rm $X$上的可逆层$P$，
 	连同一个满态射$\varphi^*\mathscr E\to P$}\}}{\{\text{\rm 同构}\}},
 \]
-其中的同构如同Corollary \ref{coro:3.42}中那样定义。
+其中的同构如同Corollary \ref{coro:3.42} 中那样定义。
 \end{thm}
 
 我们不会在这里证明这个定理；这个证明可以通过
@@ -903,24 +903,24 @@ $X\to \mathbb P_\cc^n$对应于$X$上的平凡丛的秩$n$子丛。这个对应�
 类似的结果在复解析空间以及映射构成的范畴和代数簇和正则映射
 构成的范畴也成立（相应地将子层取作复解析的或代数的）。
 在这节中，我们给出了一个对概形的对应。在代数几何中，主要的不同
-在于，我们传统地用$Y$上的矢量丛来代替它们的截面层。
+在于，传统地，我们用$Y$上的矢量丛来代替它们的截面层。
 
-为看看这些层是什么样子，首先考虑如果$\mathscr E$是概形$X$上
+为看看这些层是什么样子，首先考虑$\mathscr E$是概形$X$上
 秩为$1$的平凡矢量丛，那么$\mathscr E$的截面就是$X$上的函数，
-因此$\mathscr E$的截面曾应该是$\mathscr O_X$.
+因此$\mathscr E$的截面层应该是$\mathscr O_X$.
 取直和，我们可以看到，秩$m$的平凡矢量丛的截面层是凝聚层，自由
 $\oo_X$-模$\oo_X^m$. 一般来说，由于矢量丛由定义局部平凡，
-它们的截面曾是有限秩的局部自由$\oo_X$-模层，局部自由凝聚层。
+它们的截面层是有限秩的局部自由$\oo_X$-模层，局部自由凝聚层。
 反过来，从一个局部自由凝聚层得到一个矢量丛也并不困难。
 
-既然有了矢量丛和局部自由凝聚层的等价，为什么要用局部自由层呢？
-这与用概形代替簇的理由是类似的，即使我们主要感兴趣的是簇：
-局部自由凝聚层自然地活在更大的凝聚层范畴中，在更大的范畴中工作
+既然有了矢量丛和局部自由凝聚层的等价，那为什么要用局部自由层呢？
+这的理由与用概形代替簇是类似的，即使我们主要感兴趣的是簇：
+局部自由凝聚层自然地活在更大的凝聚层范畴中，而在更大的范畴中工作
 给了我们更大的弹性。在较小范畴中的标准构造（比如取一个概形态射的
 纤维，或取一个局部自由层同态的余核），在较大范畴中才能最自然地诠释。
 
-就像对应的线丛，秩为$1$的局部自由层起来非常重要的作用且有一个
-特别的名字：它们被称为\textit{可逆层}。这个属于来自于数论：
+就像对应的线丛，秩为$1$的局部自由层起着非常重要的作用，它有一个
+特别的名字：\textit{可逆层}。这个术语来自于数论：
 一个整环$T$上的可逆模是一个商域的有限生成子模$I$，使得对商域的某个
 有限生成子模$J$（称之为逆）有$IJ=T$是单位理想。%
 % p.117
@@ -930,11 +930,114 @@ $\mathscr I^*=\Hom(\mathscr I,\oo_X)$依然是可逆的，且自然映射
 $\mathscr I\otimes \mathscr I^*\to \oo_X$是一个同构（局部检查之）。
 因此，$\mathscr I^*$被称为$\mathscr I$的\textit{逆}。
 
+知道线丛对应的可逆层，初看不见得对将它们与几何联系起来是
+有益的。然而，就像在经典代数几何中，
+从概形$X$到射影空间的态射实际上可以用\textit{有效Cartier除子}
+的相关概念在几何上刻画。有效Cartier除子是一个子概形$D\subset X$，
+使得在每一点$x\in X$，$D$在局部环$\oo_{X,x}$中对应的理想是主理想，
+由一个非零因子生成。按传统，我们定义
+\textit{对应于$D$的可逆层$\oo_X(D)$}为逆
+\[
+	\oo_X(D)=\mathscr I_D^*.
+\]
+可逆层们构成了一个群$\operatorname{Pic} X$，群运算是张量积，
+同时在合理的情况下，比如说对域上的射影空间的子概形，
+每个可逆层可以写作
+$\oo_X(D)\otimes \mathscr I_E=\oo_X(D)\otimes \oo_X(E)^*$，其中
+$D$, $E$是有效Cartier除子。
+
+注意，这有一个不幸的但本质上无歧义的记号：如果$U$是$X$的一个开集，
+则$\oo(U)$是层$\oo_X$在$U$上的截面构成的环，然而如果$D$是一个
+Cartier除子，$\oo(D)$就是上面的层。当然，我们也可能会操作这种
+怪物$\oo_X(D)(U)$....
+
+我们可以如下深化可逆层与有效Cartier除子之间的联系：如果$D$是
+一个有效Cartier除子，则含入$\mathscr I_D\hookrightarrow \oo_X$
+是$\Hom(\mathscr I_D,\oo_X)=\oo_X(D)$的一个整体截面。这个界面是
+\textit{正则的}，即对每个开集$U\subset X$，$\oo_X(U)$中没有非零
+元素限制在$U$上为零（原因：$\mathscr I_D(U)$在$\oo_X(U)$中的像
+包含一个非零因子。）因此，一个有效Cartier除子给出了一个可逆层
+与它的一个整体截面。
+
+反之，给出一个可逆层$\mathscr L$和一个整体截面$\sigma$，我们可以
+定义截面的零点集为商$\mathscr L/\oo_X\sigma$的支集。欲知道这说了
+什么，选$X$的一个开覆盖，使得其中每个开集$U$有$\mathscr L|_{U}
+\cong \oo_U$. $\sigma$在$U$中的零点集于是就是$\oo_U$中对应元素的
+零点集。如果截面是正则的，则零点集是一个有效Cartier除子。注意到，
+与$\sigma$只差一个$\oo_X(X)$的可逆元的截面将给出相同的Cartier除子。
+所以，我们有双射
+\[
+	\begin{array}{c}
+	\{\text{有效Cartier除子}\}\\
+	\updownarrow \\
+	\{\text{可逆层与选定的一个截面，截面可差一个可逆元}\}.
+	\end{array}
+\]
+
+读者可能会在意“有效”的含义。一个有效Cartier除子$D$可以被如下定义：
+在$X$的开覆盖的每个开集$U$上给一个非零因子$f_U\in \oo_X(U)$，其中%
+% p.118
+$f_U$可以差一个$\oo_X(U)$的可逆元。因此，$D$给出了可逆有理函数层
+模掉可逆正则函数的一个整体截面，即层$\mathscr M_X^*/\oo_X^*$，其中
+$*$标记的是乘法可逆元的层，而$\mathscr M$是预层
+$U\mapsto \oo_X(U)[S_U^{-1}]$的层化，其中$S_U$是环$\oo_X(U)$中
+在每个$x\in U$处都是非零因子的元素构成的乘性子集。（关于这个略微
+精巧的定义，通常唯一需要知道的是，如果$U=\spec A$是一个
+Noether环$A$的谱，则$\mathscr M_X(U)$就是
+将$A$中所有非零因子都变得可逆%
+\footnote{译者注：这里的意思依然是考虑分式环，乘性子集是%
+所有非零因子的集合。}% 
+。更一般的情况比较微妙，比如可参考 Kleiman [1979].）
+我们定义一般的Cartier除子为层$\mathscr M_X^*/\oo_X^*$的一个截面。
+$X$上的Cartier除子构成的群被称为$\operatorname{Div} X$，而对应
+$D\mapsto \oo_X(D)$定义了一个同态
+$\operatorname{Div} X\to \operatorname{Pic} X$.
+
+有效Cartier除子构成了$\operatorname{Div} X$中的幺半群，再次，
+在合理的情况下，比如说对域上的射影空间的子概形，有效Cartier除子
+的幺半群以一种最自由的方式生成了$\operatorname{Div} X$：
+$\operatorname{Div} X$也可以被实现为幺半群的Grothendieck群。
+于是，有效Cartier除子就是“有效地”定义子概形的Cartier除子。
+
 \subsection{分次模和层} \label{s:3.2.6}
 
 留心的读者可能已经注意到，Theorem \ref{thm:3.37} 给出了$\P_\zz^n$
-上的可区分可逆层的存在性，即对应于恒等映射的那个。在这节中，我们将
-给出这个层的描述，其在射影几何中起了基础的作用。
+上的一个特殊的可逆层的存在性，即对应于恒等映射的那个。在这节中，
+我们将给出这个层的描述，其在射影几何中起了基础的作用。
+
+我们从构造形如$\proj \mathscr A$的概形上的层的一个一般思路开始，
+这个构造类似于从$A$上的模构造$\spec A$上的层。令$B$为一个概形，
+再令$\mathscr A=\mathscr A_0\oplus\mathscr A_1\oplus\cdots$
+为一个拟凝聚分次$\oo_B$-代数层。令$\P=\proj \mathscr A$. 令
+$\mathscr M$是一个$B$上的你凝聚层，其还有一个分次
+$\mathscr A$-模层结构，即，我们有直和分解
+$\mathscr M=\cdots\oplus \mathscr M_i\oplus \mathscr M_{i+1}
+\oplus \cdots$，以及映射$\mathscr A_i\otimes \mathscr M_j
+\to \mathscr M_{i+j}$满足通常的公理（结合律、存在单位元等等）。
+我们可以对每个$\mathscr M$给出一个$\P$上的拟凝聚层
+$\tilde{\mathscr M}$如下：\nottran
+
+
+% p.119
+
+\begin{exe}\label{exe:3.46}
+假设代数$\mathscr I$由$1$-次元生成。证明，所有的层$\oo_\P (n)$
+都是可逆的。证明，$\oo_\P(n)\otimes \oo_\P(m)=\oo_\P(n+m)$，
+特别地，$\oo_\P(n)^{-1}=\oo_\P(n)^*=\oo_\P(-n)$.
+\end{exe}
+
+\begin{exe}\label{exe:3.47}
+令$\pi:\proj \mathscr A\to \spec \mathscr A_0$为结构映射。证明，
+对$\spec \mathscr A_0$上任意的拟凝聚层$\mathscr N$，拉回
+$\pi^*(\mathscr N)$就是
+$\mathscr A\otimes_{\mathscr A_0}\mathscr N$对应的层。
+\end{exe}
+
+\begin{exe}\label{exe:3.48}
+令$K$是一个域，考虑射影空间$\P_K^n=\proj K[x_0,\dots,x_n]$. 令
+$H$为一个超平面。证明，$H$是一个$\P_K^n$上的Cartier除子，其对应的
+可逆层为$\oo_{\P^n_K}(1)$.
+\end{exe}
 
 \subsection{Grassmannian} \label{s:3.2.7}
 
