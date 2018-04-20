@@ -1009,16 +1009,55 @@ $\operatorname{Div} X$也可以被实现为幺半群的Grothendieck群。
 这个构造类似于从$A$上的模构造$\spec A$上的层。令$B$为一个概形，
 再令$\mathscr A=\mathscr A_0\oplus\mathscr A_1\oplus\cdots$
 为一个拟凝聚分次$\oo_B$-代数层。令$\P=\proj \mathscr A$. 令
-$\mathscr M$是一个$B$上的你凝聚层，其还有一个分次
+$\mathscr M$是一个$B$上的拟凝聚层，其还有一个分次
 $\mathscr A$-模层结构，即，我们有直和分解
 $\mathscr M=\cdots\oplus \mathscr M_i\oplus \mathscr M_{i+1}
 \oplus \cdots$，以及映射$\mathscr A_i\otimes \mathscr M_j
 \to \mathscr M_{i+j}$满足通常的公理（结合律、存在单位元等等）。
 我们可以对每个$\mathscr M$给出一个$\P$上的拟凝聚层
-$\tilde{\mathscr M}$如下：\nottran
+$\widetilde{\mathscr M}$如下：令$U$是$B$的一个仿射开集，考虑
+分次环$\mathscr A(U)$. 对$\mathscr A(U)$的每个齐次元$f$，
+我们有一个$\P$的仿射开集
+$\P_{U,f}:=(\proj \mathscr A(U))_f=\spec (\mathscr A(U)_f)_0$，
+概形$\P_{U,f}$构成了一个$\P$的一个仿射开覆盖。
+$U$上的截面$\mathscr M(U)$构成了分次环$\mathscr A(U)$
+上的分次模。令$\mathscr M_{U,f}$为$(\mathscr A(U)_f)_0$-模
+$\mathscr M_{U,f}=(\mathscr M(U)
+\otimes_{\mathscr A(U)}\mathscr A(U)[f^{-1}])_0$，
+再令$\widetilde{\mathscr M}_{U,f}$为仿射概形$\P_{U,f}$上对应的层。
+将它们拼起来就定义了一个$\P$上的拟凝聚层，
+我们记作$\widetilde{\mathscr M}$.
 
+实际上，每个$\proj \mathscr A$上的拟凝聚层以这种方式
+对应一个分次$\mathscr A$-模层。
+但是不像环上的模与这个环的谱上的拟凝聚层的对应，% p.119
+这个对应不是双射。
+比如，读者可以简单检查，模$\mathscr M$和截断的模
+$\mathscr M'=\oplus_{n\geq n_0}\mathscr M_n$
+对应的层是相同的，其中$n_0$任意。但是，在良好的条件下，
+这是唯一的失败：比如，对应
+$\mathscr M\mapsto \widetilde{\mathscr M}$给出了一个双射
+\[
+	\begin{array}{c}
+	\{\text{有限生成分次$\mathscr A$-模层，可差一个截断}\}\\
+	\updownarrow \\
+	\{\text{$\P$上的拟凝聚层}\}.
+	\end{array}
+\]
 
-% p.119
+从最简单的例子开始，如果取$\mathscr M=\mathscr A$，
+我们得到了结构层$\oo_{\P}$.
+更有趣的例子是由将分次移动$1$这个看似简单的修改得到的。
+一般地，如果$\mathscr M=\bigoplus_i \mathscr M_i$，
+则我们定义$\mathscr M$的\textit{$n$-次扭曲}
+（\textit{$n$-th twist}）
+$\mathscr M(n)$，这是同一个模，但是分次移动了$n$，即
+\[
+	\mathscr M(n)_i=\mathscr M_{n+i}.
+\]
+我们定义$\oo_\P(n)$为对应于分次模$\mathscr A(n)$的层
+$\widetilde{\mathscr A(n)}$. 这些层中最重要的是$\oo_{\P}(1)$，
+被称为$\P$上的\textit{重言}（\textit{tautological}）层。
 
 \begin{exe}\label{exe:3.46}
 假设代数$\mathscr I$由$1$-次元生成。证明，所有的层$\oo_\P (n)$
@@ -1059,3 +1098,116 @@ $G_S(k,n)=G_\zz(k,n)\times S$.）此外，当$S=\spec K$是一个代数闭域的
 
 % p.120
 \subsection{全景超曲面} \label{s:3.2.8}
+
+\begin{defi}\label{defi:3.50}
+令$S$为任意概形。一个$d$-次\textit{超曲面}指一个$\P_S^n$上
+的闭子概形$X\subset \P_S^n$，其局部在$S$上是一个$d$-次
+齐次多项式的零点集：即，对每个点$p\in S$，
+都存在$S$中的$p$的一个仿射开集$U=\spec A$以及
+元素$\{a_I\in A\}$使得$a_I$生成了$A$的单位理想，且
+\[
+	\textstyle{X\cap \P_U^n=V\left(
+		{\sum}a_I x_0^{i_0}\cdots x_n^{i_n}
+	\right)\subset \P_U^n=\proj A[x_0,\dots,x_n].}
+\]
+\end{defi}
+
+% p.123
+
+一个超平面$X\subset \P_S^n$在$S$上平坦（$a_I$生成$A$
+的单位理想的条件意味着它们在$S$中没有公共零点，于是
+$X\to S$的纤维的维数处处为$n-1$），其在$\P_S^n$中的
+纯余维数为$1$. 注意到，$X\to S$的纤维没有嵌入点。
+
+概形$S$上的\textit{平面曲线}指一个$\P_S^2$中的超曲面。
+
+现在，我们可以引入代数几何的基本对象了：
+$\P^n_S$中$d$-次超平面的\textit{全景族}。定义非常
+直截了当：对任意的正数$d$和$n$，我们置
+$N=\binom{d+n}{n}-1$，然后令
+\[
+	\P^N_S=\proj \oo_S[\{a_I\}]
+\]
+为$S$上的$N$-维射影空间，齐次坐标$a_I$由$n+1$元
+$(x_0,\dots,x_n)$的$d$-次首一多项式所标记。我们接着
+引入由一个双齐次多项式
+\[
+	\mathscr X=V\left(\sum_I a_I x^I\right)
+\]
+给出的子概形$\mathscr X=\mathscr X_{d,n}
+\subset \P_S^N\times_S \P_S^n$. 概形
+$\mathscr X\subset \P_S^N\times_S \P_S^n$可以看作
+$\P_S^n$的一族由$\P_S^N$参数化的闭子概形，被称为
+$\P_S^n$中次数为$d$的\textit{全景超曲面}。由
+Proposition \ref{pro:2.32}，$\mathscr X$在$\P_S^N$上
+平坦。
+
+注意到，如果$S=\spec K$为一个代数闭域的谱，则每个
+$d$-次超曲面$X\subset \P_K^n$是$\mathscr X\to \P_K^n$
+的一条纤维。实际上，我们还可以更进一步：我们将在
+第 \ref{chap:6} 章看到，如果$B$是任意的$S$-概形，而
+$\mathscr Y\subset \P_B^n$是任意的在$B$上平坦的闭子概形，
+其纤维是$d$-次超曲面，于是存在一个唯一的$S$-概形态射
+$\varphi:B\to \P_S^n$使得
+$\mathscr Y=\mathscr X\times_{\P_S^n}B$. （这就是“全景”
+的意思。）
+
+全景超曲面是代数几何的基本对象，会在许多上下文中出现。
+在接下来的章节中，我们将看到这些对象的许多例子，
+并将在第 \ref{s:5.1.2} 节还有在下面关于结式和判别式
+的讨论中更加详细地描述他们。我们这里将展示一些稍简单的
+例子，以及相关的构造。
+
+我们从一些概念和记号开始。首先我们将一直假设$S$是不可约的
+（一般点为$Q$），于是$\P_S^N$也是不可约的（大部分情况中，
+我们可以认为$S$是一个域$K$的谱，虽然存在取$S=\spec \zz$
+更方便的情况）。令$P\in \P_S^N$为一般点，而$L=\kappa(P)$
+为其剩余类域，即，$S$的函数域$K=\kappa(Q)$上的$N$元
+函数域。令$X_P\subset \P_L^N$为$\mathscr X\to \P_S^N$
+在一般点$P=\spec L$处的纤维；$X_P$有时被叫做$d$-次
+\textit{一般超平面}。按习惯，我们将记$\mathscr X(L)
+=X_L(L)$为$\mathscr X$中的$L$-值点的集合，或等价地，
+$X_p$的$L$-有理点集。几何地，% p.124
+这是定义在某个开子集$U\subset \P_S^N$上的截面
+$\mathscr X\to \P_S^N$；代数地，它们就是方程
+$\sum_I a_Ix^I$的解$x_i=f_i(a)$，其中$x_i$是$a_I$的有理
+函数。
+
+我们从一个基础的事实开始：
+
+\begin{exe}\label{exe:3.51}
+证明$\mathscr X$是一个不可约光滑$S$-概形。（提示：
+考虑投影$\mathscr X\subset \P_S^N\times_S \P_S^n
+\to \P_S^n$.）特别地，推出$X_L\subset \P^n_L$是一个
+光滑$L$-概形。
+\end{exe}
+
+现在是一些例子：
+
+\begin{exe}\label{exe:3.52}
+如果$d=1$，于是$\P_S^N=(\P^n_S)^*$，概形$\mathscr X
+\subset \P_S^n\times_S (\P^n_S)^*$非常自然地被叫做
+\textit{全景超平面}。证明，这是$\P_S^n$上的一个射影丛。
+\end{exe}
+
+\begin{exe}\label{exe:3.53}
+现在假设$d$是任意的而$n=1$，于是$N=d$而概形
+$\mathscr X\subset \P_S^d\times_S \P^1_S$在$\P_S^d$上
+是$d$-次有限的。证明，一般纤维$X_L$是一个约态点$R$，
+其剩余类域是$\P_K^d$的函数域$L$的$d$-次扩张。
+\end{exe}
+
+最后的习题稍微难一些。
+
+\begin{exe}\label{exe:3.54}
+现在假设$S$是一个域$K$的谱，取$d=n=2$，证明
+$\mathscr X(L)\neq \varnothing$.
+
+\textit{提示}：证明我们可以约化到对应于多项式
+$aX^2+bY^2+cZ^2$的$\P^N_K=\P^5_K$的子空间的原像的情况；
+或者见Proposition \ref{pro:4.84} 的论证。
+\end{exe}
+
+实际上，对所有$n$和$d$，$\mathscr X(L)\neq \varnothing$
+当且仅当$d=1$，这可以由Lefschetz超平面定理应用到
+$\mathscr X\subset \P_K^N\times_K \P_K^n$上看到。
