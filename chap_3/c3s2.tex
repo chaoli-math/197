@@ -1081,22 +1081,84 @@ $H$为一个超平面。证明，$H$是一个$\P_K^n$上的Cartier除子，其�
 \subsection{Grassmannian} \label{s:3.2.7}
 
 Grassmannian%
-\footnote{译者注：Grassmannian一般被翻译为Grassmann流形或者Grassmann簇，
-但这里显然不是一个流形也不是簇，虽然翻译成Grassmann概形似乎是合适的，但
-我们还是先将这个名词按住不动，也不会变为复数形式等。}%
-在概形范畴中存在，同时表现得非常类似于经典代数几何中的Grassmannian.
-更精确地说，对任意的概形$S$，正整数$n$以及$k\leq n$，存在一个概形
-$G_S(k,n)$被称为$S$上的\textit{Grassmannian}. 这个构造对$S$是函子性的，
-即对任意的态射$T\to S$，Grassmannian $G_T(k,n)$就是纤维积
-$G_S(k,n)\times_S T$. （特别地，存在一个概形$G_\zz(k,n)$，即$\spec \zz$
+\footnote{译者注：Grassmannian一般被翻译为Grassmann流形
+或者Grassmann簇，但这里显然不是一个流形也不是簇，虽然翻译成
+Grassmann概形似乎是合适的，但我们还是先将这个名词按住不动，
+也不会变为复数形式等。}%
+在概形范畴中存在，同时表现得非常类似于经典代数几何
+中的Grassmannian. 更精确地说，对任意的概形$S$，
+正整数$n$以及$k\leq n$，存在一个概形
+$G_S(k,n)$被称为$S$上的\textit{Grassmannian}. 
+这个构造对$S$是函子性的，即对任意的态射$T\to S$，
+Grassmannian $G_T(k,n)$就是纤维积$G_S(k,n)\times_S T$. 
+（特别地，存在一个概形$G_\zz(k,n)$，即$\spec \zz$
 上的Grassmannian，使得任意的Grassmannian可以被实现为
-$G_S(k,n)=G_\zz(k,n)\times S$.）此外，当$S=\spec K$是一个代数闭域的谱时，
-概形$G_S(k,n)$就对应于经典的$K$上的Grassmann簇$G(k,n)$. 实际上，下面我们
-将会简单描述的构造，非常类似于经典的Grassmannian的标准构造。当然，类似
-射影空间的例子，作为概形，Grassmannian的新的、不同的地方就是它的子概形，
+$G_S(k,n)=G_\zz(k,n)\times S$.）此外，当$S=\spec K$是一个
+代数闭域的谱时，概形$G_S(k,n)$就对应于经典的$K$上的
+Grassmann簇$G(k,n)$. 实际上，下面我们将简短描述的构造，
+非常类似于经典的Grassmannian的标准构造。%
+% p.120
+当然，类似射影空间的例子，作为概形，
+Grassmannian的新的、不同的地方就是它的子概形，
 我们将在下面讨论\textit{Fano概形}时展示这点。
 
-% p.120
+我们从对仿射概形$S=\spec A$的Grassmannian $G_S(k,n)$的构造
+开始（这也被称为在$A$上的Grassmannian，记作$G_A(k,n)$）。
+构造完后，我们将看到，这个构造是自然的，即对任意
+仿射概形态射$T\to S$，有
+\[
+	G_T(k,n)=G_S(k,n)\times_S T.
+\]
+于是，我们可以构造任意概形$S$上的Grassmannian，通过将$S$
+的仿射开覆盖$U_\alpha$上的Grassmannian $G_{U_\alpha}(k,n)$
+黏起来。或者，我们可以先构造出$\spec\zz$上的Grassmannian
+$G_{\zz}(k,n)$，然后对任意概形$S$定义
+$G_S(k,n)=S\times G_\zz(k,n)$.
+
+经典地，有两种构造作为域$K$上的簇的Grassmannian $G_K(k,n)$
+的方式。抽线来说，我们可以将$G_K(k,n)$描述为一族开集的并，
+它们每个同构于仿射空间$\A^{k(n-k)}_K$. 或者，我们可以将其
+直接描述为射影空间$\P^N_K$由Pl\"{u}cker方程给出的闭子簇。
+这两个构造都可以直接推广到概形范畴，它们将给出同一个对象。
+此外，用概形语言，存在第三种方式刻画Grassmannian：作为
+Hilbert概形，或者更准确地说，作为表示一个给定矢量空间的
+子空间族的函子。我们将在第 \ref{s:6.2.1} 节讨论第三种构造。
+在许多方面，这是Grassmannian的最合适的刻画：他避免了
+外加的坐标，立刻给出了任意概形$Z$到$G_K(k,n)$的描述，
+以及，给了我们一个Grassmannian的子概形，
+诸如Fano概形以及更一般的Hilbert概形，的方程的自然的定义。
+
+我们将从回顾作为域上的簇的Grassmannian的黏合构造开始。首先，
+域$K$上的$n$-维矢量空间$K^n$的$k$-维子空间集$\Lambda$
+可以刻画为秩为$k$的$k\times n$矩阵$M$的集合模掉左乘一个
+$k\times k$可逆矩阵。对大小为$k$的每个子集
+$I\subset \{1,2,\dots,n\}$，我们可以对
+
+% p.122
+
+另一种更内蕴的描述理想$J$的方式为：我们令$\varphi$为映射
+\begin{align*}
+A[\dots,X_I,\dots]&\longrightarrow 
+A[x_{1,1},\dots,x_{k,n}]\\
+X_I &\longmapsto 
+\begin{vmatrix}
+x_{1,i_1}&\cdots & x_{1,i_k}\\
+\vdots &&\vdots\\
+x_{k,i_1}&\cdots & x_{k,i_k}
+\end{vmatrix}
+\end{align*}
+它将$A[\dots,X_I,\dots]$的每个生成元映成了矩阵$(x_{i,j})$
+的对应子式，然后令$J=\ker \varphi$. 不管在哪个情况中，
+定义Grassmannian $G_S(k,n)$为射影概形
+\[
+	G_S(k,n)=\proj A[\dots,X_I,\dots]/J
+	\subset \proj A[\dots,X_I,\dots]=\P_S^{\binom nk -1}.
+\]
+
+\begin{exe}\label{exe:3.49}
+证明这两种构造给出了相同的概形$G_S(k,n)$.
+\end{exe}
+
 \subsection{全景超曲面} \label{s:3.2.8}
 
 \begin{defi}\label{defi:3.50}
