@@ -1131,8 +1131,34 @@ Hilbert概形，或者更准确地说，作为表示一个给定矢量空间的
 我们将从回顾作为域上的簇的Grassmannian的黏合构造开始。首先，
 域$K$上的$n$-维矢量空间$K^n$的$k$-维子空间集$\Lambda$
 可以刻画为秩为$k$的$k\times n$矩阵$M$的集合模掉左乘一个
-$k\times k$可逆矩阵。对大小为$k$的每个子集
-$I\subset \{1,2,\dots,n\}$，我们可以对
+$k\times k$可逆矩阵。对每个大小为$k$的子集
+$I\subset \{1,2,\dots,n\}$，我们可以对任意第$I$个子式
+非零的矩阵$M$，乘以其第$I$个子矩阵$M_I$的逆，进而得到了
+矩阵$M'$，其第$I$个子矩阵为恒等矩阵。这样，我们可以将
+与由基$\{e_i\}_{i\not\in I}$张成的$K^n$的子空间互补的
+平面$\Lambda$的子集$U_I\subset G_K(k,n)$等同于
+仿射空间$\A_K^{k(n-k)}$，仿射空间的坐标是$M'$中其他的
+元素。因此，对簇$G_K(k,n)$，我们就有了如下制法：
+
+令$W\cong \A_K^{kn}$为$k\times n$矩阵的空间，对每个
+长为$k$的子集$I\subset \{1,2,\dots,n\}$，令$W_I\subset W$
+为第$I$个子矩阵等于恒等矩阵的矩阵构造的闭子集。%
+% p.121
+对每个$I$和$J\neq I$，令$W_{I,J}\subset W_I$为第$J$个
+子式非零的矩阵构成的开集；令$\varphi_{I,J}:W_{I,J}\to
+W_{J,I}$为左乘$M_J\cdot M_I^{-1}$得到的同构。我们接着定义
+Grassmannian $G_K(k,n)$为所有仿射空间
+$W_I\cong \A_K^{k(n-k)}$的并模掉
+由$\varphi_{I,J}$给出的$W_{I,J}$和$W_{J,I}$的等同得到的
+抽象簇。
+
+这个构造同样适用于定义任意仿射概形$S=\spec A$上的
+Grassmannian $G_S(k,n)$，用第 \ref{s:1.2.4} 节中的黏合构造：
+令
+\[
+	W=\spec A[\dots,x_{i,j},\dots]\cong \A_S^{kn},
+\]
+其中
 
 % p.122
 
@@ -1159,7 +1185,34 @@ x_{k,i_1}&\cdots & x_{k,i_k}
 证明这两种构造给出了相同的概形$G_S(k,n)$.
 \end{exe}
 
-\subsection{全景超曲面} \label{s:3.2.8}
+这种$G_S(k,n)$的描述允许我们内蕴地描述作为
+域$K$的$n$-维矢量空间的子空间族的Grassmannian
+$G(k,V)$，进而可以更一般地定义了Grassmannian
+$G(k,\mathscr E)$，为给定基概形$S$上的局部自由层
+的$k$-维子空间族。在更一般的情况下，我们取层映射
+\[
+	\mathscr E^{\otimes k}=
+	\mathscr E\otimes\mathscr E\otimes\cdots\otimes
+	\mathscr E\longrightarrow \wedge^k\mathscr E,
+\]
+它由$\sigma_1\otimes \cdots\otimes \sigma_k\mapsto
+\sigma_1\wedge \cdots\wedge \sigma_k$给出，再
+令$\varphi$为其在对称代数上诱导的映射
+\[
+	\varphi:\operatorname{Sym}\left(\wedge^k 
+	\mathscr E\right)^* \longrightarrow \operatorname{Sym}
+	\left(\mathscr E^{\otimes k}\right)^*.
+\]
+我们于是定义$G(k,\mathscr E)$为由理想层$\ker(\varphi)$
+给出的$\P(\mathscr E^*)=\proj \operatorname{Sym}
+\left(\wedge^k \mathscr E\right)^*$的子概形。
+
+一个值得注意到的约定：因为Grassmannian在某些地方来自于
+矢量空间的子空间族，或者是射影空间的子空间族，我们将记
+$G_S(k,n)$为上面描述的概形，而$\mathbb G_S(k,n)=
+G_S(k+1,n+1)$.
+
+\subsection{万有超曲面} \label{s:3.2.8}
 
 \begin{defi}\label{defi:3.50}
 令$S$为任意概形。一个$d$-次\textit{超曲面}指一个$\P_S^n$上
@@ -1184,7 +1237,7 @@ $X\to S$的纤维的维数处处为$n-1$），其在$\P_S^n$中的
 概形$S$上的\textit{平面曲线}指一个$\P_S^2$中的超曲面。
 
 现在，我们可以引入代数几何的基本对象了：
-$\P^n_S$中$d$-次超平面的\textit{全景族}。定义非常
+$\P^n_S$中$d$-次超平面的\textit{万有族}。定义非常
 直截了当：对任意的正数$d$和$n$，我们置
 $N=\binom{d+n}{n}-1$，然后令
 \[
@@ -1200,7 +1253,7 @@ $(x_0,\dots,x_n)$的$d$-次首一多项式所标记。我们接着
 \subset \P_S^N\times_S \P_S^n$. 概形
 $\mathscr X\subset \P_S^N\times_S \P_S^n$可以看作
 $\P_S^n$的一族由$\P_S^N$参数化的闭子概形，被称为
-$\P_S^n$中次数为$d$的\textit{全景超曲面}。由
+$\P_S^n$中次数为$d$的\textit{万有超曲面}。由
 Proposition \ref{pro:2.32}，$\mathscr X$在$\P_S^N$上
 平坦。
 
@@ -1211,10 +1264,10 @@ $d$-次超曲面$X\subset \P_K^n$是$\mathscr X\to \P_K^n$
 $\mathscr Y\subset \P_B^n$是任意的在$B$上平坦的闭子概形，
 其纤维是$d$-次超曲面，于是存在一个唯一的$S$-概形态射
 $\varphi:B\to \P_S^n$使得
-$\mathscr Y=\mathscr X\times_{\P_S^n}B$. （这就是“全景”
+$\mathscr Y=\mathscr X\times_{\P_S^n}B$. （这就是“万有”
 的意思。）
 
-全景超曲面是代数几何的基本对象，会在许多上下文中出现。
+万有超曲面是代数几何的基本对象，会在许多上下文中出现。
 在接下来的章节中，我们将看到这些对象的许多例子，
 并将在第 \ref{s:5.1.2} 节还有在下面关于结式和判别式
 的讨论中更加详细地描述他们。我们这里将展示一些稍简单的
@@ -1249,7 +1302,7 @@ $\sum_I a_Ix^I$的解$x_i=f_i(a)$，其中$x_i$是$a_I$的有理
 \begin{exe}\label{exe:3.52}
 如果$d=1$，于是$\P_S^N=(\P^n_S)^*$，概形$\mathscr X
 \subset \P_S^n\times_S (\P^n_S)^*$非常自然地被叫做
-\textit{全景超平面}。证明，这是$\P_S^n$上的一个射影丛。
+\textit{万有超平面}。证明，这是$\P_S^n$上的一个射影丛。
 \end{exe}
 
 \begin{exe}\label{exe:3.53}
