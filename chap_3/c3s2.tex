@@ -1154,11 +1154,52 @@ $W_I\cong \A_K^{k(n-k)}$的并模掉
 
 这个构造同样适用于定义任意仿射概形$S=\spec A$上的
 Grassmannian $G_S(k,n)$，用第 \ref{s:1.2.4} 节中的黏合构造：
-令
+对每个子集$I=(i_1,\dots,i_k)\subset \{1,2,\dots,n\}$，令
 \[
 	W=\spec A[\dots,x_{i,j},\dots]\cong \A_S^{kn},
 \]
-其中
+令$W_I\subset W$为对应于第$I$个$k\times k$子矩阵等于
+恒等矩阵的闭子概形，即，是理想$(\dots,x_{\alpha,i_\beta}
+-\delta_{\alpha,\beta},\dots)$的零点集。对每个$I$和
+$J\neq I$，我们像之前一样定义开子概形
+$W_{I,J}=(W_I)_{\det M_j}\subset W_I$以及同构
+$\varphi_{I,J}:W_{I,J}\to W_{J,I}$，进而我们定义Grassmannian
+$G_S(k,n)$为将仿射空间$W_I\cong \A_S^{k(m-k)}$
+沿着$\varphi_{I,J}$粘合起来得到的$S$-概形。
+
+Grassmannian $G_S(k,n)$的另一种构造是由Pl\"{u}cker方程给出的
+射影空间$\P_S^N$的子概形，其中$N=\binom{n}{k}-1$. 同样，
+如果我们只是谨慎地转录古典构造，它也适用于这种新的情况。
+
+为构造它，从$A$上的$\binom{n}{k}$个变量的多项式环
+$A[\dots,X_I,\dots]$开始，其中变量用一个子集
+$I=(i_1<\cdots<i_k)\subset \{1,\dots,n\}$来标记。
+我们可以将变量$X_I$想作$k\times n$矩阵$M$的对应的极大子式。
+如果我们进一步将$M$的第一个$k\times k$子矩阵取作恒等矩阵，
+即$M$具有形式$(I_k,B)$，其中$B$是一个$k\times (n-k)$矩阵，
+那么这些将依次给出矩阵$B$的所有大小的子式的符号。比方说，
+$B$的第$(i,l)$个矩阵元是$M$的第$I$个子式，其中
+$I=(1,2,\dots,\hat i,\dots, k,k+l)$；而$B$的第
+$((i,j),(l,m))$个子式就是$M$的第$I$个子式，其中
+$I=(1,2,\dots,\hat i,\dots,\hat j,\dots,k,k+l,k+m)$；
+其他也类似。
+
+若用这种$k\times (n-k)$矩阵$A$的所有大小的子式
+来刻画坐标$X_I$，则\textit{Pl\"{u}cker关系}就是由
+用余子矩阵的余子式的乘积展开这些子矩阵的行列式得到的
+$X_I$的齐次多项式。比如，Cramer规则将$A$的一个$l\times l$
+子矩阵的行列式表为矩阵元和$(l-1)\times (l-1)$子矩阵的
+行列式的乘积的和，特别地，在上面等同的基下，我们有关系
+\begin{align*}
+	-X_{(1,2,\dots,\hat{i},\dots,\hat{j},\dots,k,k+l,k+m)}
+	& X_{1,2,\dots,k}\\
+	= & X_{(1,2,\dots,\hat i,\dots,k,k+l)}
+	X_{(1,2,\dots,\hat j,\dots,k,k+m)}-
+	X_{(1,2,\dots,\hat i,\dots,k,k+m)}
+	X_{(1,2,\dots,\hat j,\dots,k,k+l)}.
+\end{align*}
+我们取\textit{Pl\"{u}cker理想}$J\subset A[\dots,X_I,\dots]$
+为由Pl\"{u}cker关系生成的理想。
 
 % p.122
 
@@ -1174,7 +1215,7 @@ x_{k,i_1}&\cdots & x_{k,i_k}
 \end{vmatrix}
 \end{align*}
 它将$A[\dots,X_I,\dots]$的每个生成元映成了矩阵$(x_{i,j})$
-的对应子式，然后令$J=\ker \varphi$. 不管在哪个情况中，
+的对应子式，然后令$J=\Ker \varphi$. 不管在哪个情况中，
 定义Grassmannian $G_S(k,n)$为射影概形
 \[
 	G_S(k,n)=\proj A[\dots,X_I,\dots]/J
@@ -1203,11 +1244,11 @@ $G(k,\mathscr E)$，为给定基概形$S$上的局部自由层
 	\mathscr E\right)^* \longrightarrow \operatorname{Sym}
 	\left(\mathscr E^{\otimes k}\right)^*.
 \]
-我们于是定义$G(k,\mathscr E)$为由理想层$\ker(\varphi)$
+我们于是定义$G(k,\mathscr E)$为由理想层$\Ker(\varphi)$
 给出的$\P(\mathscr E^*)=\proj \operatorname{Sym}
 \left(\wedge^k \mathscr E\right)^*$的子概形。
 
-一个值得注意到的约定：因为Grassmannian在某些地方来自于
+一个值得注意的约定：因为Grassmannian在某些地方来自于
 矢量空间的子空间族，或者是射影空间的子空间族，我们将记
 $G_S(k,n)$为上面描述的概形，而$\mathbb G_S(k,n)=
 G_S(k+1,n+1)$.
