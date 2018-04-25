@@ -1,22 +1,36 @@
-在本书第一章的最后，我们讨论一种将概形范畴嵌入到更大的从概形范畴到集合范畴的反变态射函子构成的范畴的法子。
+在本书第一章的最后，我们讨论一种将概形范畴嵌入到更大的从
+概形范畴到集合范畴的反变态射函子构成的范畴的法子。
 
 这种嵌入至少在三个方面是有用的：
 
 \begin{compactenum}[(1)]
-\item 使用点函子来描述的话，许多基础的构造（比如积）的实现要比在概形上方便很多。
-\item 为构造出一个特定的概形，如果这个概形存在，构造一个这个概形的点函子往往更加方便，而构造问题此时则约化到证明这个函子是否可表以及使用Yoneda引理（\ref{s:6.1}）。这个过程非常类似于分析中对于分布的使用：在那里，当尝试证明一个给定微分方程的函数解的存在性的时候，我们会首先证明分布解的存在性，然后留下的就是\textit{正则性}问题（可能会更便利），证明这个分布是由一个函数的积分所表示的。
-\item 概形几何的许多方面都可以拓展到函子范畴中去，所以有时忘掉函子的表示，直接在范畴里面工作是方便的。
+\item 使用点函子来描述的话，许多基础的构造（比如积）
+的实现要比在概形上方便很多。
+\item 为构造出一个特定的概形，如果这个概形存在，构造一个
+这个概形的点函子往往更加方便，而构造问题此时则约化到证明
+这个函子是否可表以及使用Yoneda引理（\ref{s:6.1}）。这个
+过程非常类似于分析中对于分布的使用：在那里，当尝试证明
+一个给定微分方程的函数解的存在性的时候，我们会首先证明分
+布解的存在性，然后留下的就是\textit{正则性}问题
+（可能会更便利），证明这个分布是由一个函数的积分所表示的。
+\item 概形几何的许多方面都可以拓展到函子范畴中去，所以有
+时忘掉函子的表示，直接在范畴里面工作是方便的。
 \end{compactenum}
 
-在这章中，我们将展示这三个方面，首先会引入一些基本构造，然后是一些例子，它们来自于对参数化概形族的尝试。我们将在第 \ref{s:6.2.4} 节中看到，很多时候它们引出的函子并不是真的概形，尽管它们确实是闭的。
+在这章中，我们将展示这三个方面，首先会引入一些基本构造，
+然后是一些例子，它们来自于对参数化概形族的尝试。
+我们将在第 \ref{s:6.2.4} 节中看到，很多时候它们引出的函子
+并不是真的概形，尽管它们确实是闭的。
 
 \section{点函子}\label{s:6.1}
 
-我们从第 \ref{chap:1} 章的最后留下的东西开始。回忆，概形$X$的\textit{点函子}是一个函子
+我们从第 \ref{chap:1} 章的最后留下的东西开始。回忆，
+概形$X$的\textit{点函子}是一个函子
 \[
 	h_X:(\text{scheme})^\circ \to (\text{sets})
 \]
-其中$(\text{scheme})^\circ$和$(\text{sets})$分别代表箭头反过来的函子范畴以及集合范畴。$h_X$将概形$Y$变成集合
+其中$(\text{scheme})^\circ$和$(\text{sets})$分别代表箭头
+反过来的函子范畴以及集合范畴。$h_X$将概形$Y$变成集合
 \[
 	h_X(Y)=\Mor(Y,Z),
 \]
@@ -24,109 +38,209 @@
 \[
 	h_X(Z)\to h_X(Y),
 \]
-它将$g\in h_X(Z)=\Mor(Z,X)$变成复合$g\circ f\in \Mor(Y,x)$. 我们称一个函子$F:(\text{scheme})^\circ \to (\text{sets})$是\textit{可表的}，如果它具有$h_X$的形式，其中$X$是一个概形。从下面的Yoneda引理，$X$如果存在则是唯一的，此时我们会称$X$\textit{表示}了$F$. 集合$h_X(Y)$被称为$X$的$Y$-值点的集合（如果$Y=\spec T$是仿射的，我们经常会以$h_X(T)$来记$h_X(\spec T)$，然后称之为$X$的$T$-值点的集合）。
+它将$g\in h_X(Z)=\Mor(Z,X)$变成复合$g\circ f\in \Mor(Y,x)$.
+我们称一个函子$F:(\text{scheme})^\circ \to (\text{sets})$
+是\textit{可表的}，如果它具有$h_X$的形式，其中$X$是一个概形。
+从下面的Yoneda引理，$X$如果存在则是唯一的，此时我们会称
+$X$\textit{表示}了$F$. 集合$h_X(Y)$被称为$X$的$Y$-值点的
+集合（如果$Y=\spec T$是仿射的，我们经常会以$h_X(T)$来记
+$h_X(\spec T)$，然后称之为$X$的$T$-值点的集合）。
 
 同样回忆，这个构造定义了一个函子
 \[
-	h:(\text{scheme})\to \mathrm{Fun}((\text{scheme})^\circ ,(\text{sets}))
+	h:(\text{scheme})\to \mathrm{Fun}
+	((\text{scheme})^\circ ,(\text{sets}))
 \]
 （其中函子范畴的态射是自然变换），将
 \[
 	X\mapsto h_X
 \]
-以及对每一个态射$f:X\to X'$给出一个自然变换$h_X\to h_{X'}$，使得对任意概形$Y$，它将$g\in h_X(Y)=\Mor(Y,X)$变成复合$f\circ g\in h_{X'}(Y)=\Mor(Y,X')$.
+以及对每一个态射$f:X\to X'$给出一个自然变换
+$h_X\to h_{X'}$，使得对任意概形$Y$，它将
+$g\in h_X(Y)=\Mor(Y,X)$变成复合
+$f\circ g\in h_{X'}(Y)=\Mor(Y,X')$.
 
-为使这些概念派上哪怕一点的作用，一个首先关键的事实就是函子$h_X$确实决定了概形$X$. 它来自于一个基础的范畴论事实。
+为使这些概念派上哪怕一点的作用，一个首先关键的事实就是
+函子$h_X$确实决定了概形$X$. 它来自于一个基础的范畴论事实。
 
 \begin{lem}[Yoneda引理]\label{lem:6.1}
 令$\scr C$是一个范畴，而$X$, $X'$是$\scr C$的对象。
 \begin{compactenum}[(\rm a)]
-\item 如果$F$是从$\scr C$到集合范畴的任意反变函子，则从$\Mor(-,X)$到$F$的自然变换自然对应于$F(X)$中的元素。
-\item 如果从$\scr C$到集合范畴的函子$\Mor(-,X)$和$\Mor(-,X')$是同构的，则$X\simeq X'$. 更一般地，从$\Mor(-,X)$到$\Mor(-,X')$的函子间的映射与从$X$到$X'$的映射相同，即，将$X$变为$h_X$的函子
+\item 如果$F$是从$\scr C$到集合范畴的任意反变函子，
+则从$\Mor(-,X)$到$F$的自然变换自然对应于$F(X)$中的元素。
+\item 如果从$\scr C$到集合范畴的函子$\Mor(-,X)$和
+$\Mor(-,X')$是同构的，则$X\simeq X'$. 更一般地，
+从$\Mor(-,X)$到$\Mor(-,X')$的函子间的映射与从
+$X$到$X'$的映射相同，即，将$X$变为$h_X$的函子
 \[
-	h:\mathscr C\to \operatorname{Fun}(\mathscr C^\circ,(\text{sets}))
+	h:\mathscr C\to \operatorname{Fun}
+	(\mathscr C^\circ,(\text{sets}))
 \]
 是一个$\mathscr C$到函子范畴的一个满子范畴的等价。
 \end{compactenum}
 \end{lem}
 
 \begin{proof}
-对(a)，将映射$\alpha:\Mor(-,X)\to F$变为元素$\alpha(1_X)$，其中$1_X:X\to X$是恒等映射。其逆将$p\in F(X)$变为映射$\alpha$，它将$f\in \Mor(Y,X)$变为$F(f)(p)\in F(Y)$. 对(b)，我们能将(a)应用到函子$F=\Mor(-,Y)$.
+对(a)，将映射$\alpha:\Mor(-,X)\to F$变为元素$\alpha(1_X)$，
+其中$1_X:X\to X$是恒等映射。其逆将$p\in F(X)$变为
+映射$\alpha$，它将$f\in \Mor(Y,X)$变为$F(f)(p)\in F(Y)$. 
+对(b)，我们能将(a)应用到函子$F=\Mor(-,Y)$.
 \end{proof}
 
-下一命题比 Lemma \ref{lem:6.1} 更进一步，说明了我们只需关注限制在仿射概形范畴的点函子，或者等价地，反箭头的交换环范畴$\text{(rings)}^\circ$，以及同样的事情在相对语境中也成立。
+下一命题比 Lemma \ref{lem:6.1} 更进一步，说明了我们只需
+关注限制在仿射概形范畴的点函子，或者等价地，反箭头的
+交换环范畴$\text{(rings)}^\circ$，以及同样的事情在相对
+语境中也成立。
 
 \begin{pro}\label{pro:6.2}
-如果$R$是一个交换环，一个$R$-概形由其限制在仿射$R$-概形上的点函子所确定，实际上，
+如果$R$是一个交换环，一个$R$-概形由其限制在仿射$R$-概形
+上的点函子所确定，实际上，
 \[
-	h:(\text{$R$-schemes})\to \operatorname{Fun}((\text{$R$-algebras}),(\text{sets}))
+	h:(\text{$R$-schemes})\to \operatorname{Fun}
+	((\text{$R$-algebras}),(\text{sets}))
 \]
 是一个$R$-概形范畴与函子范畴的一个满子范畴的等价。
 \end{pro}
 
-当然，一个仿射概形范畴上的反变函子与环范畴上的协变函子相同，所以，我们可以一般地认为，我们的反变可表函子$h_X:(\text{schemes})^\circ \to (\text{sets})$是$R$-代数范畴上的协变函子。（如果我们需要标记这个差异，则用$h_X^*:(\text{rings})\to (\text{sets})$来标记函子$h_X^*(A)=h_X(\spec A)$，其中$A$是任意的$R$-代数。）
+当然，一个仿射概形范畴上的反变函子与环范畴上的协变函子
+相同，所以，我们可以一般地认为，我们的反变可表函子
+$h_X:(\text{schemes})^\circ \to (\text{sets})$是$R$-代数
+范畴上的协变函子。（如果我们需要标记这个差异，则用
+$h_X^*:(\text{rings})\to (\text{sets})$来标记函子
+$h_X^*(A)=h_X(\spec A)$，其中$A$是任意的$R$-代数。）
 
 \begin{proof}
-实际上，该命题不过是在说概形由仿射概形所拼成。令$S=\spec R$. 记$h_X$为函子$\Mor_S(-,X)$在仿射$S$-概形范畴的限制。我们只要说明任何的自然变换$\varphi:h_X\to h_{X'}$来自于唯一的$S$-概形态射$f:X\to X'$. 为从$\varphi$构造$f$，令$\{U_\alpha\}$为$X$的一个仿射开覆盖，将$\varphi$应用到限制映射$U_\alpha\subset X$得到态射$U_\alpha\to X'$. 这些态射满足为定义所需态射$f$需要的相容性条件。唯一性来自于如下观察，两个$X$到$X'$的态射是不同的，则它们限制在某个$U_\alpha$上不同。
+实际上，该命题不过是在说概形由仿射概形所拼成。
+令$S=\spec R$. 记$h_X$为函子$\Mor_S(-,X)$在仿射$S$-概形
+范畴的限制。我们只要说明任何的自然变换
+$\varphi:h_X\to h_{X'}$来自于唯一的$S$-概形态射
+$f:X\to X'$. 为从$\varphi$构造$f$，令$\{U_\alpha\}$
+为$X$的一个仿射开覆盖，将$\varphi$应用到限制映射
+$U_\alpha\subset X$得到态射$U_\alpha\to X'$. 这些态射
+满足为定义所需态射$f$需要的相容性条件。唯一性来自于如下
+观察，两个$X$到$X'$的态射是不同的，则它们限制在某个
+$U_\alpha$上不同。
 \end{proof}
 
 \begin{exe}
-假设$X$（就像我们感兴趣的所有概形那样）是\textit{局部Noether的}，即，由Noether环的谱所覆盖。证明，$X$由$h_X$在Noether环范畴上的限制所确定。
+假设$X$（就像我们感兴趣的所有概形那样）是
+\textit{局部Noether的}，即，由Noether环的谱所覆盖。
+证明，$X$由$h_X$在Noether环范畴上的限制所确定。
 \end{exe}
 
 \subsection{开与闭子函子} \label{s:6.1.1}
 
-将概形看成函子的用处之一在于，我们可以将一些概形的几何的基本概念推广到函子上。我们下面将考虑一些例子。
+将概形看成函子的用处之一在于，我们可以将一些概形的几何的
+基本概念推广到函子上。我们下面将考虑一些例子。
 
 我们首先展示如何定义一个函子
 \[
 	F\in \operatorname{Fun}((\text{rings}),(\text{sets}))
 \]
-的开子函子。我们称范畴$\mathscr C$到集合范畴的函子间的映射$\alpha:G\to F$是\textit{单}的，如果对每一个对象$X$，诱导的集合间映射$G(X)\to F(X)$是一个单射（这有关于一个标准的范畴论概念，不过我们这里并不需要）。此时，我们称$\alpha:G\to F$是一个$F$的子函子。比如，如果$U\subset X$是一个子概形，函子$h_U$就是$h_X$的一个子函子。
+的开子函子。我们称范畴$\mathscr C$到集合范畴的函子间的
+映射$\alpha:G\to F$是\textit{单}的，如果对每一个对象$X$，
+诱导的集合间映射$G(X)\to F(X)$是一个单射
+（这有关于一个标准的范畴论概念，不过我们这里并不需要）。
+此时，我们称$\alpha:G\to F$是一个$F$的子函子。比如，
+如果$U\subset X$是一个子概形，函子$h_U$就是$h_X$的一个
+子函子。
 
-我们想要定义一个函子$F$的开子函子为一个子函子，满足当限制到可表子函子$h_X\subset F$时，具有形式$h_U\subset h_X$，其中$U$是$X$的一个子概形。为实现它，我们需要引入函子的纤维积这个概念。
+我们想要定义一个函子$F$的开子函子为一个子函子，满足当限制
+到可表子函子$h_X\subset F$时，具有形式$h_U\subset h_X$，
+其中$U$是$X$的一个子概形。为实现它，我们需要引入函子的
+纤维积这个概念。
 
 \begin{defi} \label{defi:6.4}
-	如果$A$, $B$和$C$都是从一个范畴$\mathscr C$到集合范畴的函子，如果$f:A\to C$和$g:B\to C$都是函子间映射，则纤维积$A\times_C B$为一个从$\mathscr C$到集合范畴的函子，它将$\mathscr C$中的任意对象$Z$变为
+	如果$A$, $B$和$C$都是从一个范畴$\mathscr C$到集合范畴
+	的函子，如果$f:A\to C$和$g:B\to C$都是函子间映射，
+	则纤维积$A\times_C B$为一个从$\mathscr C$到集合范畴的
+	函子，它将$\mathscr C$中的任意对象$Z$变为
 	\[
-		(A\times_C B)(Z)=\left\{(a,b)\in A(Z)\times B(Z)\;|\; f(a)=f(b)\text{ in } C(Z)\right\},
+		(A\times_C B)(Z)=\left\{(a,b)\in A(Z)\times B(Z)
+		\;|\; f(a)=f(b)\text{ in } C(Z)\right\},
 	\]
 	对于态射的变换是显然的。
 \end{defi}
 
 \begin{defi} \label{defi:6.5}
-	一个$\operatorname{Fun}((\text{rings},\text{sets})$中的子函子$\alpha:G\to F$是一个\textit{开子函子}，如果对每一个由一个仿射概形$\spec R$表示的函子上的映射$\psi:h_{\spec R}\to F$，函子的纤维积
-	\[
-		\xymatrix{
-			G_\psi\ar[r]\ar[d]&h_{\spec R}\ar[d]^\psi\\
-			G\ar[r]^\alpha& F
-		}
-	\]
-	都产生一个映射$G_\psi\to h_{\spec R}$同构于，某个$\spec R$的开子概形表示的函子的单态射。
+一个$\operatorname{Fun}((\text{rings}),(\text{sets}))$中
+的子函子$\alpha:G\to F$是一个\textit{开子函子}，
+如果对每一个由一个仿射概形$\spec R$表示的函子上的映射
+$\psi:h_{\spec R}\to F$，函子的纤维积
+\[
+	\xymatrix{
+		G_\psi\ar[r]\ar[d]&h_{\spec R}\ar[d]^\psi\\
+		G\ar[r]^\alpha& F
+	}
+\]
+都产生一个映射$G_\psi\to h_{\spec R}$同构于，某个
+$\spec R$的开子概形表示的函子的单态射。
 \end{defi}
 
 \begin{exe} \label{exe:6.6}
-	令$X=\spec R$为一个仿射概形。证明，$h_X$的开子概形正是那些对某个理想$I\subset R$定义的子函子
-	\[
-		F(T)=\{\varphi\in h_X(T)\; | \; \varphi^*(I)T=T\}.
-	\]
+令$X=\spec R$为一个仿射概形。证明，$h_X$的开子概形
+正是那些对某个理想$I\subset R$定义的子函子
+\[
+	F(T)=\{\varphi\in h_X(T)\; | \; \varphi^*(I)T=T\}.
+\]
 \end{exe}
 
 \begin{exe} \label{exe:6.7}
-	令$X$为域$K$上的概形。定义函子$F:(\text{schemes}/K)^\circ \to (\text{sets})$如下：对每一个$K$-概形$Y$，令$F(Y)$为$X\times_K Y$中在$Y$上平坦的闭子概形$Z$的集合，此外，每个$Z$还满足，在$Y$的任意闭点上的纤维都是$X$的度为$2$的子概形。令$G$是$F$的子函子，通过再加上要求，$Z$在$Y$的任意闭点上的纤维是约态的。证明$G\subset F$是开的。
+令$X$为域$K$上的概形。定义函子
+$F:(\text{schemes}/K)^\circ \to (\text{sets})$如下：
+对每一个$K$-概形$Y$，令$F(Y)$为$X\times_K Y$中在$Y$上
+平坦的闭子概形$Z$的集合，此外，每个$Z$还满足，在$Y$的
+任意闭点上的纤维都是$X$的度为$2$的子概形。令$G$是$F$
+的子函子，通过再加上要求，$Z$在$Y$的任意闭点上的纤维
+是约态的。证明$G\subset F$是开的。
 \end{exe}
 
-闭子函子的定义是类似的。一个$\operatorname{Fun}((\text{rings},\text{sets})$中的子函子$\alpha : G\to F$是\textit{闭的}，如果对每一个映射$\psi:h_{\spec R}\to F$，$\psi$和$\alpha$的纤维积是一个$h_{\spec R}$的子函子，其同构于$\spec R$的一个闭子概形所表示的函子。
+闭子函子的定义是类似的。一个
+$\operatorname{Fun}((\text{rings}),(\text{sets}))$中的
+子函子$\alpha : G\to F$是\textit{闭的}，如果对每一个
+映射$\psi:h_{\spec R}\to F$，$\psi$和$\alpha$的纤维积
+是一个$h_{\spec R}$的子函子，其同构于$\spec R$的一个
+闭子概形所表示的函子。
 
 \begin{exe} \label{exe:6.8}
-	令$X=\spec R$为一个仿射概形。证明，$h_{\spec R}$的开与闭子函子正是那些由$\spec R$的开与闭子概形所表示的函子。（对任意概形，稍难一些，这也是对的。）
+	令$X=\spec R$为一个仿射概形。证明，$h_{\spec R}$的
+	开与闭子函子正是那些由$\spec R$的开与闭子概形所表示
+	的函子。（对任意概形，稍难一些，这也是对的。）
 \end{exe}
 
 如同往常，使用这些概形需要稍加小心。比如：
 
 \nottran
 
+% p.256
 
+\subsection{\texorpdfstring{$K$}{K}-有理点}
+\label{s:6.1.2}
 
-\subsection{\texorpdfstring{$K$}{K}-有理点} \label{s:6.1.2}
+如果$X$是一个域$K$上的概形，$X$在$K$上的$K$-值点是
+映射$\spec K\to X$，其复合上自然映射$X\to \spec K$
+将得到恒同。我们断言，这样的映射一一对应于$X$的
+\textit{在$K$上有理}（或\textit{$K$-有理}）的闭点，
+即剩余类域$\kappa(p)$为$K$的点（通过$K$到$X$在点$p$
+的局部环的含入映射）。实际上，因为$\spec K$没有
+非平凡的开覆盖，一个从$\spec K$到$X$的映射将印入$X$
+的某个仿射开子概形$\spec T$中，于是，这样一个映射由
+一个$K$-代数映射$T\to K$确定，即由一个$T$的剩余类域
+为$K$极大理想确定。反过来，我们可以把构造倒过来，
+则任意$K$-有理闭点$p$给出了一个唯一的$K$-概形态射
+$\spec K\to X$.
+
+我们再次警告，以前选择在$S$-概形范畴而不在全部概形
+范畴工作的理由这里也是适用。比如，当在复代数簇上工作，
+可能会期待$h_{\spec \zz}(\spec \cc)$为一个单点
+（恒等元），这对$\cc$-概形范畴是对的，
+但对任意概形的范畴，这个集合非常大！
+
+\begin{exe}\label{exe:6.12}
+令$X=\spec \cc$，将其考虑为一个抽象概形，即一个$\zz$
+上的概形。描述$\spec \cc$的所有$\cc$-值点的集合
+$h_X(\spec \cc)$.
+\end{exe}
+
 \subsection{函子的切空间} \label{s:6.1.3}
+\subsection{群概形} \label{s:6.1.4}

@@ -641,7 +641,7 @@ $d+1$. 这证明了$X$的同构类依赖于$d$，如前所言。
 亏格是$3$，甚至在亏格大于等于$7$的时候，有这样双重直线的连续族。
 这些对象在研究非奇异曲线的时候会自然出现：当一个非奇异非椭圆曲线
 退化为超椭圆曲线，这是一个古典的簇理论中众所周知的现象，
-光滑曲线的典范模型趋向于射影双重直线 \nottran 
+一个典型的光滑曲线趋向于射影双重直线 \nottran 
 （更多细节见Bayer以及Eisenbud [1995]和Fong [1993]）。
 
 \begin{exe}\label{exe:3.64}
@@ -689,11 +689,52 @@ $q=q(x,y,u,v)$，我们有$qp\in I$当且仅当$q\in (x,y)$. 因此
 
 \begin{exe}\label{exe:3.66}
 计算下面的$\P_K^3$的子概形的Hilbert多项式：
+\begin{compactenum}[(a)]
+\item 两条异面直线的并。
+\item 两条相交直线的并。
+\item 一个底空间是两条交于一个度为$1$的嵌入点的直线的子概形，
+且其并不处于这两条直线张成的平面上。同样，证明对双重直线$X_0$
+上（活在上面的任意双重直线上）的任意点$p$，存在唯一的$\P_K^3$
+的子概形包含$X_0$，在点$p$处有一个度为$1$的嵌入点，再计算这个
+子概形的Hilbert多项式。
+\end{compactenum}
+\end{exe}
+
+\begin{exe}\label{exe:3.67}
+验证平坦极限$Y_0$就是双重直线$X_1$. （通过比较Hilbert多项式，
+证明包含在一个方向就足够了。）\nottran
+\end{exe}
+
+
+\begin{exe}\label{exe:3.68}
+对上面的$L$和$M_t$，证明在$t\to 0$时，$L\cup M$的平坦极限是
+双重直线$x^2=y=0$，其在点$[0,0,1,0]$处有一个度为$1$的嵌入点。
 \end{exe}
 
 % p.140
 
+\begin{exe}\label{exe:3.69}
+令$L$, $M$和$N_t\subset \P_K^3$分别为直线$u=v=0$, $y=v=0$以及
+$y+u=ty+(1-t)v=0$；令$Z_t$为它们在$\P_K^3$中的并。找到$Z_t$
+和$Z_0$的Hilbert多项式。在上面讨论的意义下，概形$Z_t\subset 
+\P_K^3$在$t\to 0$的极限是什么？
+\end{exe}
+
 \inclugra{9.png}
+
+最后，存在上面三个例子的算术对应。比方说，考虑下面三族$\P_\zz^3$
+的子概形（它们都在$\spec \zz$上平坦）：
+\begin{compactenum}[(a)]
+\item 令$\mathscr L\subset \P_\zz^3$为常直线$x=y=0$，再令
+$\mathscr M\subset \P_\zz^3$为直线$x=7v$, $y=-7u$；令$\mathscr U$
+为这两个子概形的并。
+\item 令$\mathscr L\subset \P_\zz^3$为常直线$x=y=0$，再令
+$\mathscr M\subset \P_\zz^3$为直线$x=7v$, $y=-49u$；令$\mathscr U$
+为这两个子概形的并。
+\item 令$\mathscr L$, $\mathscr M$和$\mathscr N\subset \P_\zz^3$
+分别为由$u=v=0$, $y=v=0$和$y+u=7y-6v=0$定义的子概形，令$\mathscr U$
+为它们的并。
+\end{compactenum}
 
 \begin{exe}\label{exe:3.70}
 对上面的每个子概形$\mathscr U\subset \P_\zz^3$，找到
@@ -704,7 +745,7 @@ $\mathscr U$在点$(7)\in\spec \zz$处的纤维。
 \subsection{B\texorpdfstring{\'{e}}{é}zout定理}
 \label{s:3.3.5}
 
-B\'ezout最经典的形式是在说，如果由次数为$d$和$e$的
+B\'ezout定理最经典的形式是在说，如果由次数为$d$和$e$的
 平面曲线$C$, $C'\subset \P_K^2$相交于有限点，其交点的个数
 最多为$de$，如果两条曲线横截相交且$K$是代数闭的，则取等号。
 这个重要的结果经历了一系列推广。特别是，概形的语言允许我们
