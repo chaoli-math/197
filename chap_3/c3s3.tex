@@ -768,10 +768,7 @@ B\'ezout定理，但这将并不比域上的概形的B\'ezout定理携带更多
 B\'ezout定理的陈述非常简单。回忆，对域$K$上的射影空间
 $\P_K^n=\proj K[X_0,\dots,X_n]$中的\textit{超曲面}，
 我们并不指任意的$\P_K^n$的$(n-1)$-维子概形，而是指
-一个齐次多项式$F$的零点集$V(F)$. 特别地，纯维数%
-\footnote{译者注：纯维数是pure dimension，意思是，这个
-概形的不可约分支都有着相同的维数，这个维数就是该概形的
-pure dimension.}%
+一个齐次多项式$F$的零点集$V(F)$. 特别地，纯维数
 为$n-1$（比如可见Eisenbud [1995]）；尽管它可能是非约态的
 （如果$F$有重复的因子），但它将没有嵌入组分。
 回忆，域$K$上的射影空间的子概形$X\subset \P_K^n$的次数
@@ -794,7 +791,36 @@ $\Gamma=\bigcap Z_i$的维度为$n-r$，则
 “$\deg(\Gamma)\leq de$”，以及等式成立当且仅当$\Gamma$是约态的
 且$\Gamma$的每个点的剩余类域都是$K$.
 
+更一般地，我们可以从Theorem \ref{thm:3.71} 中得到，代数闭域
+上的对完全相交情形的经典的B\'ezout定理的等式命题的一般形式，
+其中，我们将超曲面的次数的积$\prod d_i$表为
+约态概形$\Gamma_{\text{red}}$的不可约分支$\Gamma_i$的次数的
+线性组合，其系数被称为\textit{交$Z_1\cap \dots\cap Z_r$沿着
+$\Gamma_i$的重数}，来自于非约态结构。用这个形式，我们可以
+进一步推广B\'ezout定理到射影空间中任意恰当的相交上去
+（即，两个纯余维数分别为$k$和$l$的子概形$X$, 
+$Y\subset \P_K^n$使得其交$X\cap Y$的余维数为$k+l$）；但是，
+为做这个，我们同样需要一般地定义两个概形的交沿着一个分支的
+重数。这还有对完全相交情形的经典的B\'ezout定理的证明我们
+以后再说，以方便读者去尝试一些例子。
+
+\begin{exe}\label{exe:3.72}
+令$C\subset \P_{\mathbb R}^2$为有
+\[
+	C=\proj \mathbb R[X,Y,Z]/(X^2+Y^2-Z^2)
+	\subset \proj \mathbb R[X,Y,Z]
+\]
+给出的圆锥曲线，再令$L_1$, $L_2$和$L_3$分别为由$X$, $X-Z$和
+$X-2Z$给出的直线。证明，概形$C\cap L_i$两两不同构，但是，
+它们作为$\mathbb R$上的概形，次数都为$2$.
+\end{exe}
+
 % p.142
+
+以下四个习题描述了非代数闭域上的B\'ezout定理会自然出现的情况：
+概形乘积上的万有曲线的交，其中概形参数化了这些曲线。
+这种情况经常发生，且作为“一般”交点的一个例子而富有意趣
+（除了它作为B\'ezout定理的例子的价值之外）。
 
 \begin{exe}\label{exe:3.73}
 令$K$是一个域，再令
@@ -822,13 +848,79 @@ $\Gamma=\bigcap Z_i$的维度为$n-r$，则
 证明$\mathscr C_1\cap \mathscr C_2$是一个不可约$K$-概形。
 \end{exe}
 
+\begin{exe}\label{exe:3.74}
+\nottran
+\end{exe}
+
+\begin{exe}\label{exe:3.75}
+\nottran
+\end{exe}
+
 % p.143
+
+\begin{exe}\label{exe:3.76}
+\nottran
+\end{exe}
+
 % p.144
 % p.145
 % p.146
 
+我们可以记
+\begin{align*}
+P_{d_1,\dots,d_r}(\nu)&=n(n-1)\cdots (n-r+1)d_1d_2\cdots
+	d_r\frac 1{n!} \nu^{n-r}+O(\nu^{n-r-1})\\
+&=\frac{d_1d_2\cdots d_r}{(n-r)!}\nu^{n-r}+O(\nu^{n-r-1}).
+\end{align*}
+因此，
+\[
+	\deg(\Gamma)=d_1d_2\cdots d_r,
+\]
+这就是我们所需要的。
+
+我们也可以特化地避免上面证明中最后的计算：
+通过使用一开始就建立的事实，
+即给定多重次数的完全交集都具有相同的Hilbert多项式，
+我们可以对每个偶对$(i,j)$选取一个一般线性型$L_{i,j}$，
+其中$1\leq i\leq r$和$1\leq j\leq d_i$，再对每个$i$令
+$Z_i=V(F_i)$，其中
+\[
+	F_i=\prod_{j=1}^{d_i}L_{i,j}.
+\]
+则交$\Gamma=\bigcap Z_i$为$\P_K^n$中
+$\prod d_i$个约态线性子空间的并，因此有着次数$\prod d_i$.
+所以，我们得到了，所有多重次数$(d_1,\dots,d_r)$的完全交集
+的次数为$\prod d_i$.
+
+\begin{exe}\label{exe:3.77}
+另一种特化，考虑$Z_i\subset \P_K^n$为由
+$F_i(X_0,\dots,X_n)=X_i^{d_i}$定义的子概形。
+直接证明，交$\bigcap Z_i$的次数为$\prod d_i$. 
+（提示：你可以将它约化到$r=n$的情况。）
+\end{exe}
+
 \paragraph*{交点的重数}
 \addcontentsline{toc}{subsubsection}{交点的重数}
+对完全相交情形的B\'ezout定理（Theorem \ref{thm:3.71}）
+给出了超曲面完全交集的次数，但是，在实际中，
+我们往往对射影空间更一般的子簇或子概形感兴趣。因为我们
+已经定义了射影开集的任意子概形的次数，所以很自然会问，
+是否两个子概形$X$, $Y\subset \P_K^n$的交的次数就是两个
+子概形次数的乘积呢，这里假设相交是恰当的，即有着期待的
+余维数。一般来说，这是错的，但在我们对相交的概形的
+奇性做出了一些假设后，这是对的：如果$X$和$Y$是$\P_K^n$
+的\textit{局部完全相交子概形}，或更一般的
+\textit{Cohen-Macaulay子概形}，我们有：
+
+\begin{thm}[对Cohen-Macaulay子概形的B\'ezout定理]
+\label{thm:3.78}
+令$X$和$Y\subset \P_K^n$分别为$\P_K^n$中纯余维数
+为$k$和$l$的Cohen-Macaulay子概形。如果交$X\cap Y$
+余维数为$k+l$，则
+\[
+	\deg(X\cap Y)=\deg X\deg Y.
+\]
+\end{thm}
 
 % p.147
 % p.148
