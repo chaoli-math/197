@@ -275,7 +275,7 @@ $1< i < d$成立（以及这个上同调群在$i>d$恒为零），于是$X$的�
 对应于给定多项式的\textit{Hilbert 概形}. 比方说，任意Hilbert
 多项式为$P(\nu)=\binom{\kappa+\nu}{k}$（即一个$k$-平面
 的Hilbert多项式）的子概形$X\subset \mathbb P_K^r$实际上就是一个
-$k$-平面，因此所有这样的子概形的Hilbert概形就是Grassmannian%
+$k$-平面，因此所有这样的子概形的Hilbert概形就是Grassmannian %
 % p.130
 $\mathbb G(k,r)=G(k+1,r+1)$. 然而，可以在几何上理解的
 Hilbert概形的其他情况并不多见！我们将在最后一章的
@@ -320,10 +320,10 @@ Hilbert多项式是一个常数。在点的情况中，我们可以容易地证�
 它以及更多。
 
 \begin{pro}\label{pro:3.59}
-  一个次数为$\delta$的$\mathbb P_K^r$的零维子概形的Hilbert
-  函数对所有的$\nu$满足
-  \[H(X,\nu)\leq \delta,\]
-  且对大$\nu$上式取等号。因此，$P(X,\nu)\equiv \delta$.
+	一个次数为$\delta$的$\mathbb P_K^r$的零维子概形的Hilbert
+	函数对所有的$\nu$满足
+	\[H(X,\nu)\leq \delta,\]
+	且对大$\nu$上式取等号。因此，$P(X,\nu)\equiv \delta$.
 \end{pro}
 
 \begin{proof}
@@ -443,12 +443,12 @@ Betti数：$b_{ij}$就是$A$的子式的次数，而$b_{2j}$就是$b_{1j}$
 $I(X)$可以由两个元素所生成，它们当然可被取作$L$和$I$中
 一个不能被$L$整除的最小可能次数的型。
 
-\inclugra{5.png} 
+\inclugra{5.png}
 
 已经说过，这个最小可能的次数为$4$，故我们可比如取$F$为一个
 包含四条直线的四次方程，每一条穿过$X$的一个点。
 % p.134
-\inclugra{6.png} 
+\inclugra{6.png}
 
 因为$L$和$P$没有公共因子，我们看到，$S/I(X)$的极小自由分解
 具有形式
@@ -466,7 +466,7 @@ $I(X)$可以由两个元素所生成，它们当然可被取作$L$和$I$中
 接着，考虑四点中只有三点在一条直线$L$上的情况。现在，$I(X)$
 中没有一次型了，所以$H(X,1)=3$.
 
-\inclugra{7.png} 
+\inclugra{7.png}
 
 所有包含$L$上的三个点的二次型都必须，如之前的断言，包含$L$，
 所以任意包含$X$的二次型是$L$和一条穿过第四个点的直线的并。
@@ -488,9 +488,9 @@ $I(X)$并不由其包含的两个独立二次型所生成，因为它们有一�
 其生成元的次数由下图给出（至多差一个行和列的重排）
 \[
 	\begin{pmatrix}
-	1&2\\
-	1&2\\
-	0&1
+		1&2\\
+		1&2\\
+		0&1
 	\end{pmatrix}.
 \]
 （当然，次数为$0$的元素必须就是$0$，因为所有的元素都必须包含于
@@ -518,12 +518,12 @@ $I(X)$并不由其包含的两个独立二次型所生成，因为它们有一�
 其中
 \[
 	B=\begin{pmatrix}
-	q_1&q_2
+		q_1&q_2
 	\end{pmatrix}
 	\quad
 	A=\begin{pmatrix}
-	-q_2\\
-	q_2
+		-q_2\\
+		q_2
 	\end{pmatrix}.
 \]
 
@@ -532,15 +532,15 @@ $I(X)$并不由其包含的两个独立二次型所生成，因为它们有一�
 生成，而$X$对应于两个包含它的锥的交。
 
 总之，我们看到所有三个例子从Hilbert多项式角度来看都是相同的，
-前两个例子由它们的Hilbert函数所区分，而后两个例子在Hilbert
-函数上看是相同的，但是可以由它们的分次Betti数区分。对长度为
-$4$的子概形$X$，可以由概形的不变量所区分，而不依赖于嵌入
-的例子也是不难找到的。比方说，概形$\spec K[x]/(x^4)$可以
+前两个例子可由它们的Hilbert函数所区分，而后两个例子在Hilbert
+函数上看是相同的，但是可由它们的分次Betti数区分。对长度为
+$4$的子概形$X$，不难找到可以由概形的不变量所区分而不依赖于嵌入
+的例子。比方说，概形$\spec K[x]/(x^4)$可以
 被嵌入到$\P_K^2$中使得有着上面的任意一个Hilbert函数和Betti数
 （比方说，就像由理想$(x_0,x_1^4)$, 
 $(x_0x_2^2-x_1^3,x_0x_1,x_0^2)$和$(x_0x_2-x_1^2,x_0^2)$
 分别定义的子概形，由$(x_0^2,x_1^2)$定义的子概形
-将永远有着第三种情况中的分次Betti数和Hilbert函数）。\nottran
+将永远有着第三种情况中的分次Betti数和Hilbert函数）。
 
 \begin{exe}\label{exe:3.63}
 找到平面上所有长度为$3$的子概形的Hilbert多项式、Hilbert函数以及
@@ -639,12 +639,13 @@ $d+1$. 这证明了$X$的同构类依赖于$d$，如前所言。
 算术亏格的定义见第 \ref{s:3.3.3} 节。事实证明，每个亏格为$-d$
 的射影双重直线，其中$d\geq 0$，都同构于$X$.
 
-同样，正的算术亏格的双重直线也存在，最简单的例子是
+同样，具有正算术亏格的双重直线也存在，最简单的例子是
 \textit{双重圆锥曲线} $\proj K[x,y,z]/(xy-z^2)^2$，它的
-亏格是$3$，甚至在亏格大于等于$7$的时候，有这样双重直线的连续族。
-这些对象在研究非奇异曲线的时候会自然出现：当一个非奇异非椭圆曲线
-退化为超椭圆曲线，这是一个古典的簇理论中众所周知的现象，
-一个典型的光滑曲线趋向于射影双重直线 \nottran 
+亏格是$3$，甚至在亏格大于等于$7$的时候，这样双重直线的连续族
+也存在。这些对象在研究非奇异曲线的时候会自然出现：
+当一个非奇异非椭圆曲线退化为超椭圆曲线，
+这是一个经典簇理论中众所周知的现象，
+一个典型的光滑曲线趋向于射影双重直线
 （更多细节见Bayer以及Eisenbud [1995]和Fong [1993]）。
 
 \begin{exe}\label{exe:3.64}
@@ -702,6 +703,8 @@ $q=q(x,y,u,v)$，我们有$qp\in I$当且仅当$q\in (x,y)$. 因此
 子概形的Hilbert多项式。
 \end{compactenum}
 \end{exe}
+
+\nottran
 
 \begin{exe}\label{exe:3.67}
 验证平坦极限$Y_0$就是双重直线$X_1$. （通过比较Hilbert多项式，
@@ -848,22 +851,73 @@ $X-2Z$给出的直线。证明，概形$C\cap L_i$两两不同构，但是，
 证明$\mathscr C_1\cap \mathscr C_2$是一个不可约$K$-概形。
 \end{exe}
 
-\begin{exe}\label{exe:3.74}
-\nottran
+\begin{exe}~\label{exe:3.74}
+\begin{compactenum}[(a)]
+	\item $\mathscr C_1$, $\mathscr C_2$同上，证明交
+	$\mathscr C_1\cap \mathscr C_2$一般是约态的，通过证明
+	\[
+		\pi_1:\mathcal C_1\cap \mathcal C_2\subset \P_B^2
+		\longrightarrow B=\A_K^{12}
+	\]
+	有一个包含四个不同（因此是约态且$K$-有理的）点的纤维。
+	\item 尽管(a)对下面习题的应用已然足够，\nottran
+	或者，通过直接的切空间计算来证明这是非奇异的。
+\end{compactenum}
 \end{exe}
 
 \begin{exe}\label{exe:3.75}
-\nottran
+令$L=K(a,b,c,d,e,f,g,h,i,j,k,l)$为$K$上的有$12$个变量的有理
+函数域（即$B=\A_K^{12}$的函数域）。令
+\[
+	C_1=V(aX^2+bY^2+cZ^2+dXY+eXZ+fYZ)\subset \P_L^2
+\]
+以及
+\[
+	C_2=V(gX^2+hY^2+iZ^2+jXY+kXZ+lYZ)\subset \P_L^2;
+\]
+即，$C_1$和$C_2$为$\mathscr C_1$和$\mathscr C_2$在$\A_K^{12}$
+的一般点处的纤维。从上两个习题，给出交$C_1\cap C_2$为一个奇异、
+约态点$P$.
 \end{exe}
 
 % p.143
 
 \begin{exe}\label{exe:3.76}
-\nottran
+保持前面习题的记号，证明，如B\'ezout所料，交$C_1\cap C_2$作为
+$L$上的概形，度为$4$，即点$P=C_1\cap C_2$的剩余类域
+$\kappa(P)$是一个$L$的四次扩张。
+
+\textit{提示}：在$\P_L^2$的一个开子集上引入仿射坐标
+$x=X/Z$和$y=Y/Z$，将$\kappa(P)$表为
+\[
+	\kappa(P)=L[x]/(R(x)),
+\]
+其中$R(x)$是\nottran
 \end{exe}
 
 % p.144
 % p.145
+
+现在，因为
+\[
+	\nu^m-(\nu-\alpha)^m=m\alpha\nu^{m-1}+O(\nu^{m-2})
+\]
+（这里，从分析学家的记号，我们用$O(\nu^{m-2})$来记一些次数
+至多为$m-2$的项的和）我们看到，如果$f(\nu)$为任意多项式，
+写作
+\[
+	f(\nu)=c_m\nu^m+O(\nu^{m-1}),
+\]
+于是
+\[
+	f(\nu)-f(\nu-\alpha)=m\alpha c_m\nu^{m-1}+O(\nu^{m-2}).
+\]
+因为射影空间本身的Hilbert多项式为
+\[
+	P(\P_K^n,\nu)=\binom{\nu+n}{n}=\frac{1}{n!}\nu^n+
+	O(\nu^{n-1}),
+\]
+
 % p.146
 
 我们可以记
@@ -928,4 +982,83 @@ $F_i(X_0,\dots,X_n)=X_i^{d_i}$定义的子概形。
 
 \subsection{Hilbert级数}\label{s:3.3.6}
 
+作为我们关于Hilbert方程、Hilbert多项式和自由分解的最后
+注记，我们来谈谈一个子概形$X\subset \P_K^n$的
+\textit{Hilbert级数}，或更一般地，一个$\P_K^n$的坐标环
+$S$上的分次模$M$的Hilbert级数。这是一个非常有用的轮子
+来表达Hilbert多项式的信息；作为演示，我们可以以一种
+更清楚的方式来写出一个完全交的Hilbert多项式。
+
+模$M$的Hilbert级数$H_M(t)$是容易定义的：如果$P(M,\nu)$
+为$M$的Hilbert方程，我们令$H_M(t)$为Laurent级数
+\[
+	H_M(t)=\sum_{\nu=-\infty}^\infty P(M,\nu)t^\nu.
+\]
+我们定义一个子概形$X\subset \P_K^n$的\textit{Hilbert级数}
+为其坐标环$S_X=S/I(X)$的Hilbert级数。第一件可以注意到的
+事是，射影空间本身的Hilbert级数很简单：我们有
+\[
+	H_{\P^n_K}(t)=H_S(t)=\frac{1}{(1-t)^{n+1}}.
+\]
+类似地，$S$任意的扭曲$S(d)$为
+\[
+	H_{S(d)}(t)=\frac{t^d}{(1-t)^{n+1}}.
+\]
+
+给任意一个分次$S$-模的正合列
+\[
+	0\longrightarrow M_r\longrightarrow M_{r-1}
+	\longrightarrow \cdots \longrightarrow M_2
+	\longrightarrow M_1 \longrightarrow M_0
+	\longrightarrow 0,
+\]
+我们看到，它们的Hilbert级数满足关系
+\[
+	\sum_{k=0}^r(-1)^k H_{M_k}(t)=0.
+\]
+因此，如果我们有概形$X\subset \P_K^n$的一个自由分解
+\[
+	\cdots \longrightarrow \bigoplus_{i=1}^{k_2}
+	S(-a_{2i})\longrightarrow \bigoplus_{i=1}^{k_1}
+	S(-a_{1i})\longrightarrow S\longrightarrow S_X
+	\longrightarrow 0,
+\]
+我们看到，Hilbert级数为
+\[
+	H_X(t)=\frac{\sum (-1)^i t^{a_{i,j}}}{(1-t)^{n+1}}.
+\]%
 % p.150
+（这里我们采用约定$k_0=1$以及$a_{01}=0$）。从这里，我们
+可以看到一个事实，\textit{任意射影空间的子概形的Hilbert
+级数是一个$t$的有理函数}。
+
+\begin{exe}\label{exe:3.83}
+	证明，如果$X\subset \P_K^n$是一个$m$-维子概形，于是
+	有理函数$H_X(t)$，约到最低项，具有分子
+	\[
+		\tilde{H}_X(t)=(1-t)^{m+1}H_X(t);
+	\]
+	特别地，这是一个$t$的多项式。证明，它在$1$的值为
+	\[
+		\tilde{H}_X(1)=\deg(X).
+	\]
+\end{exe}
+
+现在，假设$X\subset \P_K^n$为$r$个次数为$d_1$, $\dots$, 
+$d_r$的超曲面的完全交。从上面的Koszul分解，我们看到
+Hilbert级数为
+\[
+	H_X(t)=\frac{\sum (-1)^{|I|}t^{|I|}}{(1-t)^{n+1}}.
+\]
+我们可以因式分解它，然后消去因子，写作
+\[
+	H_X(t)=\frac{\prod (1-t^{d_i})}{(1-t)^{n+1}}
+	=\frac{\prod (1+t+\cdots+t^{d_{i}-1})}{(1-t)^{n-r+1}}.
+\]
+因此
+\[
+	\tilde{H}_X(t)=(1-t)^{\dim(X)+1}H_X(t)=
+	\prod (1+t+\cdots+t^{d_{i}-1}).
+\]
+因为这个多项式在$t=1$的值为$\prod d_i$，我们就得到了
+B\'ezout定理。
