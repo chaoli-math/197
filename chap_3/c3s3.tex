@@ -728,6 +728,12 @@ $\mathscr Y$在$\A_K^1$原点处的纤维$Y_0$. 当然，$Y_0$的支集
 
 \nottran
 
+一个关于上面构造的有趣技巧是考虑一族稍微不同的斜线对：我们
+令$L$和上面一样，再令$M_t$是由$x=tv$, $y=-t^2u$给出的直线。
+第一眼看上去，并$Y_t=L\cup M_t$的平坦极限是由$(x^2=y=0)$给出的
+双重直线，他同构于上面的双重直线$X_0$，但这并不对，因为
+它们的Hilbert多项式并不相同。下面的习题给出了真实的情况。
+
 \begin{exe}\label{exe:3.68}
 对上面的$L$和$M_t$，证明在$t\to 0$时，$L\cup M$的平坦极限是
 双重直线$x^2=y=0$，其在点$[0,0,1,0]$处有一个度为$1$的嵌入点。
@@ -925,9 +931,75 @@ $x=X/Z$和$y=Y/Z$，将$\kappa(P)$表为
 $q\in \varphi^{-1}(p)$，则存在$\gamma$到$\varphi^{-1}(U)$的
 唯一提升$\tilde\gamma:[0,1]\to \varphi^{-1}(U)$，其满足
 $\tilde\gamma(0)=q$，我们定义作用的结果为$\tilde\gamma$的终点。
+没那么形式地，
+设想我们允许两条圆锥曲线$C_1(t)$, $C_2(t)\subset \mathbb P_\cc^2$
+随着一个实参数$t\in [0,1]$改变，并保持它们在任何时候都横截相交。
+当$t$改变时，$C_1(t)\cap C_2(t)$的四个交点也随之变化，当
+曲线回到它们原来的位置，即$C_i(0)=C_i(1)$，我们发现交集
+$C_1(0)\cap C_2(0)=C_1(1)\cap C_2(1)$中的四个点各自并不回到
+它们原来的位置，则置换这四点的群就被称为单值群。这就给出了我们
+开始问题的答案，即$\kappa(P)$在$L$上的Galois normalization
+的Galois群，就是这四个点的单值群，可以从几何刻画看到这个群就是
+四个字母的对称群。
+
 \nottran
 
 % p.144
+
+首先，我们引入超曲面$Z_i$的定义方程，记
+\[
+	Z_i=\proj K[X_0,\dots,X_n]/(F_i)\subset 
+	\proj K[X_0,\dots,X_n],
+\]
+于是
+\[
+	\Gamma=\proj K[X_0,\dots,X_n]/(F_1,\dots,F_r).
+\]
+现在我们描述齐次坐标环$S_\Gamma$的一个分解如下。首先，对任意子集
+\[
+	I=\{i_1,i_2,\dots,i_k\}\subset \{1,2,\dots,r\},
+\]
+我们将记$|I|=k$为$I$的元素个数，
+\[
+	d_I=\sum_{\alpha=1}^k d_{i_\alpha}
+\]
+为对应多项式的次数之和。于是我们置
+\[
+	M_k=\bigoplus_{|I|=k}S(-d_I)
+\]
+其中$S=K[X_0,\dots,X_n]$如同往常为多项式环。当存在唯一的$I$
+满足$|I|=0$，我们置$M_0=S$. 我们将用一族多项式$\{G_I\}$
+来记$M_k$中的元素，其中$I$跑遍所有大小为$k$的多重指标，
+由我们的定义，$\{G_I\}$是$d$-次齐次的，如果对每个$I$都有
+$\deg(G_I)=d-d_I$.
+
+我们现在定义一个复形
+\[
+	0\longrightarrow M_r\longrightarrow M_{r-1}
+	 \longrightarrow \dots \longrightarrow M_2
+	 \longrightarrow M_1\longrightarrow M_0=S.
+\]
+映射$\varphi_k:M_k\to M_{k-1}$可以通过置$\varphi_k(\{G_I\})$
+等于多项式族$\{H_J\}$给出，其中
+\[
+	H_J=\sum_{\alpha\not\in J}\pm F_\alpha\cdot 
+	G_{J\cup \{\alpha\}},
+\]
+而符号依赖于$J$的元素个数小于$\alpha$.
+
+注意到$\varphi_1:M_1\to M_0=S$的像就是$\Gamma$的理想。
+实际上，\textit{这个序列是坐标环$S_\Gamma$的一个自由分解}。
+这是一个一般的现象：当我们由一族环$S$中的元素
+$F_1$, $\dots$, $F_r$，我们能这样构造一个序列，其被称为
+\textit{Koszul复形}。由一个标准的定理说，
+当族$F_1$, $\dots$, $F_r$十一个正规族时，
+相应的Koszul复形是一个分解（比如可见Eisenbud [1995, Chapter 17]）。
+在这里，多项式$F_i$都是齐次的，关于$\Gamma$维数的假设连同
+多项式环$S$是一个Cohen-Macaulay环告诉我们多项式$F_1$, $\dots$,
+$F_r$构成一个$S$中的正规列（如同局部的情况），于是上面的序列
+是一个分解。
+
+\nottran
 % p.145
 
 现在，因为
@@ -1007,6 +1079,10 @@ $F_i(X_0,\dots,X_n)=X_i^{d_i}$定义的子概形。
 	\deg(X\cap Y)=\deg X\deg Y.
 \]
 \end{thm}
+
+\begin{exe}\label{exa:3.79}
+\nottran 
+\end{exe}
 
 % p.147
 % p.148
