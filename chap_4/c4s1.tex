@@ -40,10 +40,44 @@ $p$所处的$\mathbb T_pC\cap C$的分支的次数，
 则$C$的拐点有限，并且，如果辅以合适的重数来数，则拐点数应为
 $3d(d-2)$.
 
-\nottran 
+这个简单的定义可被推广到奇异曲线，比如可见Coolidge [1931]，
+尽管这个定义和现代标准定义比并不总是精确的。这个定义在
+我们考虑非代数闭域或有限特征的域$K$
+上的曲线$C\subset \mathbb P_K^2$时会出问题，此外还有考虑
+包含直线或者一个多次分支的曲线时。
 
-% p.152
+我们将在这里做的是给任意概形$S$上的平面曲线$C\subset \mathbb P_S^2$
+一个统一的拐点的定义。首先回忆第 \ref{s:3.2.8} 节，概形$S$上的
+$d$次\textit{平面曲线}是指子概形$C\subset \mathbb P_S^2$，其局部地
+在$S$上，是一个$d$-次齐次多项式
+\[
+	F(X,Y,Z)=\sum_{i+j+k=d}a_{ijk}X^iY^jZ^k
+\]
+的零点集$V(F)$，其中系数$a_{ijk}$是$S$上的正则函数，它们并不同时为零。
+再回忆，如果$S$是一个仿射概形，则我们可以扔掉“局部”，即，如果$S=\spec A$，
+一个$S$上的平面曲线$C$具有形式
+\[
+	C=\proj A[X,Y,Z]/(F)
+\]
+其中$F$是一个多项式。
 
+现在，给定$S$上的一条平面曲线$C\subset \mathbb P_S^2$，我们将定义一个
+闭子概形$\mathscr F=\mathscr F_C\subset C$，我们将称之为$C$上的
+\textit{拐点概形}。他将与基变换$S'\to S$可交换（即，如果
+$C'=S'\times_S C\subset \mathbb P_{S'}^2$，则$\mathscr F_{C'}=(\pi_2)^{-1}(\mathscr F_C)$）以及$\mathscr F$将在至少一个$S$的开集上是有限且平坦的，次数为$3d(d-2)$，其中$\mathscr F$在这个开集上的相对维数为$0$. 
+这个闭子概形的重要性在于，如果我们有一族平面曲线，则一般纤维的拐点的极限
+是一个特殊纤维的拐点（即，$\mathscr F$是闭的），% p.153
+且当$\mathscr F$相对维数为$0$（$\mathscr F$是平坦的）时候反过来也成立。
+此外，在经典语境中，即如果$C$是一个特征为零的代数闭域的谱$S=\spec K$
+上的非奇异曲面曲线，$\mathscr F$的底空间将是$C$经典定义的该店的集合
+（因此，在一般的情况中，如果$s\in S$是任意的剩余类域$\kappa(s)$为代数闭
+且特征零的点，则$\mathscr F$在点$s$的纤维$\mathscr F_s$的底空间将是$C_s$
+的拐点的集合）。
+
+为启发我们一般的定义，回忆经典代数几何中的一个最早的结论：对一个
+代数闭域$K$上非奇异平面曲线$C=V(F)\subset \mathbb P_K^2$，
+由多项式$F(X,Y,Z)$的零点集给出，则$C$的拐点为其与它的\textit{Hessian}
+的交点，Hessian由多项式
 \[\CenteredArraystretch{1.7}
 	H(X,Y,Z)=
 	\begin{vmatrix}
@@ -52,16 +86,44 @@ $3d(d-2)$.
 		\ppfrac FZX&\ppfrac FZY&\pfrac{^2F}{Z^2}
 	\end{vmatrix}
 \]
+的零点集定义。我们将这个事实的证明留作一个习题：
+\begin{exe}\label{exe:5.1}
+	令$K$是一个特征为零的代数闭域，$C\subset \mathbb P_K^2$是一个平面曲线，
+	$p\in C$是$C$的一个非奇异点。证明，射影切线$\mathbb T_pC$
+	与$C$在点$p$交于三次或以上当且仅当$H(p)=0$.
 
-\[
-	x=\frac XZ,\quad y=\frac YZ
-\]
-
-\[\CenteredArraystretch{1.7}
+	\textit{提示}：在$\mathbb P_K^2$的相应子集上引入仿射坐标
+	\[
+	x=\frac XZ,\quad y=\frac YZ,
+	\]
+	然后利用Euler关系来看到Hessian行列式的非齐次化$h(x,y)=H(x,y,1)$
+	（在相差一个相乘因子下）为
+	\[\CenteredArraystretch{1.7}
 	h(x,y)=
 	\begin{vmatrix}
 		f&\pfrac fx &\pfrac fy\\
 		\pfrac fx&\pfrac{^2f}{x^2}&\ppfrac fxy\\
 		\pfrac fy&\ppfrac fxy&\pfrac{^2f}{y^2}
-	\end{vmatrix}
+	\end{vmatrix},
+	\]
+	其中$f(x,y)=F(x,y,1)$为$F$的非齐次化。
+\end{exe}
+
+为定义一般情况下任意平面曲线$C\subset \mathbb P_S^2$的拐点概形，
+我们可以简单地推广Hessian \nottran：假设在一些仿射开集
+$U=\spec R\subset S$中，曲线
+\[
+	C\cap \mathbb P_U^2=\proj R[X,Y,Z]
+\]%
+% p.154
+是多项式$F\in R[X,Y,Z]$零点集。我们定义\textit{Hessian行列式}为多项式
+\[\CenteredArraystretch{1.7}
+	H(X,Y,Z)=
+	\begin{vmatrix}
+		\pfrac{^2F}{X^2}&\ppfrac FXY &\ppfrac FXZ\\
+		\ppfrac FYX&\pfrac{^2F}{Y^2}&\ppfrac FYZ\\
+		\ppfrac FZX&\ppfrac FZY&\pfrac{^2F}{Z^2}
+	\end{vmatrix}.
 \]
+
+\nottran
