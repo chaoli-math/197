@@ -1,0 +1,67 @@
+在这章中，我们将展示如何在概形理论中给出一些经典代数几何中的几何构造。
+我们将在所有例子中看到，这种崭新的语言是如何允许我们扩大定义的范围
+（以及我们对该对象可能问的问题），如何让我们能够给出经典问题的精确表述，
+以及在一些情况中，如何帮助我们解决他们。
+
+\section{平面曲线的拐点}\label{s:4.1}
+
+在这节中，我们将描述代数闭域$K$上的非奇异平面曲线
+$C\subset \mathbb P_K^2$的\textit{拐点}的经典定义。然后指出
+这个定义是如何推广到概形语境中的，并展示这个推广是如何阐明拐点
+的集合的，即使是在经典情形中。
+
+\subsection{定义}\label{s:4.1.1}
+
+我们需要一个预备定义。令$K$是任意域，再令$C$, $D\subset C\subset \mathbb P_K^2$是没有公共分支的两条平面曲线，$p\in C\cap D$是一个交点。
+我们定义$C$和$D$在点$p$的\textit{相交重数}为$p$所处的概形$C\cap D$
+的分支$\Gamma$的重数，记作$\mu_p(C\cdot D)$. 因为平面曲线是
+Cohen-Macaulay的，这和在第 \ref{s:3.3.5} 节中引入的相交重数的概念
+是相合的。%
+% p.152
+同样注意次数的概念的联系：$\Gamma$作为$\mathbb P_K^2$的子概形的次数
+是相交重数$\mu_p(C\cdot D)$乘以剩余类域作为$K$的扩张的
+次数$(\kappa(p):K)$. 因此，比如平面曲线的
+B\'ezout定理（\ref{thm:3.71}）告诉我们
+\[
+	\deg C\deg D=\sum_{p\in C\cap D}
+	(\kappa(p):K)\mu_p(C\cdot D).
+\]
+
+话说回来，经典代数几何中平面曲线的拐点是直接且几何的：如果
+$C\subset \mathbb P_{\mathbb C}^2$是一个复数域上的
+次数为$d$的非奇异平面曲线，点$p\in C$被称为一个\textit{拐点}，
+如果射影切线$\mathbb T_pC\subset \mathbb P_{\mathbb C}^2$
+在点$p$处交$C$三次或以上，或者用现代的语言，如果
+$\mathbb T_pC$和$C$在点$p$的相交重数$\mu_p(C\cdot \mathbb T_pC)$
+至少为三。（这里，因为我们在代数闭域上工作，相交重数等于
+$p$所处的$\mathbb T_pC\cap C$的分支的次数，
+即$\dim_{\mathbb C}(\mathscr O_{\mathbb T_pC\cap C,p})$.）
+有一个经典的定理（我们将在后面建立之），如果$C$不是一条直线，
+则$C$的拐点有限，并且，如果辅以合适的重数来数，则拐点数应为
+$3d(d-2)$.
+
+\nottran 
+
+% p.152
+
+\[\CenteredArraystretch{1.7}
+	H(X,Y,Z)=
+	\begin{vmatrix}
+		\pfrac{^2F}{X^2}&\ppfrac FXY &\ppfrac FXZ\\
+		\ppfrac FYX&\pfrac{^2F}{Y^2}&\ppfrac FYZ\\
+		\ppfrac FZX&\ppfrac FZY&\pfrac{^2F}{Z^2}
+	\end{vmatrix}
+\]
+
+\[
+	x=\frac XZ,\quad y=\frac YZ
+\]
+
+\[\CenteredArraystretch{1.7}
+	h(x,y)=
+	\begin{vmatrix}
+		f&\pfrac fx &\pfrac fy\\
+		\pfrac fx&\pfrac{^2f}{x^2}&\ppfrac fxy\\
+		\pfrac fy&\ppfrac fxy&\pfrac{^2f}{y^2}
+	\end{vmatrix}
+\]
