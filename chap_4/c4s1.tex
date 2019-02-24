@@ -225,7 +225,9 @@ $C_s\subset \mathbb P_{\kappa(s)}^2$的拐点概形。
 
 令$\mathscr F'$为$\mathscr F^*$在$\mathbb P_B^2$中的闭包，$F'_0$为$\mathscr F'$在原点处的纤维。因为$B$是一维非奇异的，$\mathscr F'$在$B$上处处平坦，于是特别地，$F'_0\subset C_0\subset \mathbb P_K^2$在$K$上维数为零，次数为$24$. 我们可以将$F'_0$想做附近非奇异曲线$C_\mu$的$24$个拐点随着$\mu$趋于零的“极限位置”。因此，\naive 问题“当一个四次曲线退化到一个双重二次曲线时，拐点如何变化？”就转为下面这个精确的问题：确定平坦极限$F'_0$，特别地，其底空间。
 
-\nottran
+这个问题的难点在于概形$F'_0$并不是$\mathscr F$在原点的纤维。反之，$\mathscr F$有两个分支：其一，$\mathscr F^*$的闭包$\mathscr F'$，其包含“真正的”拐点和它们的极限，另一个，其底空间为二次曲线$V(t,U)$，在$\mathbb P_B^2$的特殊纤维$\pi^{-1}((t))=\mathbb P_K^2$中。于是，我们并不能希望通过仅观察曲线$C_0$来得到简单地回答这个问题的任意线索（实际上，因为$\mathscr P_K^2$将$C_0$变到本身的自同构群在二次曲线$(C_0)_{\text{red}}$的闭点上的作用是可迁的，可见答案必然依赖于族$\mathscr C$）。
+
+为回答这个问题，我们首先写下概形$\mathscr F$的理想$I$（在一个放射开集$\spec K[t][x,y]\cong \mathbb A_B^2\subset \mathbb P_B^2$），然后$\mathscr F^*$的理想$I^*=I\cdot K[t,t^{-1}][x,y]$，然后闭包$\mathscr F'$的理想$I'=I^*\cap K[t][x,y]$，最后是$\mathscr F'$在原点$(t)\in B$的纤维$\mathscr F'_0$理想$I'_0=(I',t)$. 为了说明如何完成这些计算，我们将详细执行这些步骤。（可能直到你有类似的问题要解决的时候，你可能才希望看到这些细节！）
 
 首先，如果$u(x,y)=U(X,Y,1)$以及$g(x,y)=G(X,Y,1)$分别为$U$和$G$在仿射开集$\spec K[t][x,y]\cong \mathbb A_B^2\subset \mathbb P_B^2$的非齐次型，理想$I$从定义由两个元素所生成，方程$u^2+tg$以及仿射Hessian
 \[
@@ -335,7 +337,7 @@ $C_s\subset \mathbb P_{\kappa(s)}^2$的拐点概形。
 	\end{aligned}
 \]
 
-\nottran
+现在，我们已经看到理想$I'\supset (u^2+tg,H',J)$. 限制到$B$的原点处的纤维，即置$t=0$，我们看到$\mathscr F'$的纤维$\mathscr F'_0$理想$I'_0=(I',t)$包含
 \[
 	\begin{aligned}
 		u^2+tg \equiv u^2 &\quad \text{ mod } (t),\\
@@ -364,6 +366,26 @@ $C_s\subset \mathbb P_{\kappa(s)}^2$的拐点概形。
 	\end{aligned}
 \]
 
+特别地，由于$V(U)$和$V(G)$横截相交，$\nu$不能在$u=g=0$的点处为零。我们可因此识出理想$(t,u^2,ug,8\mu g^2+2\nu u)$是特殊纤维$C_0$的一个子概形的理想，底空间为二次曲线$U=0$和四次曲线$G=0$在平面$t=0$处的八个点，且在每一点处次数为$3$. 因为$8\times 3=24$，纤维$F'_0$不能比这还要小，所以必然取到等号，即
 \[
 	I'_0=(t,u^2,ug,8\mu g^2+2\nu u).
 \]
+换而言之：
+
+\begin{pro}\label{pro:4.10}
+	概形$F'_0$的底空间是二次曲线$V(U)$和四次曲线$V(G)$在平面$V(t)$上由$t=U=G=0$给出的八个点。在每个点处，它包含一个次数为$3$的曲线概形，与二次曲线$V(U)$相切，但不包含于$V(U)$中。
+\end{pro}
+
+此答案之一端为，约态曲线$(C_0)_{\text{red}}$的任何闭点可以是一族合适的非奇异曲线$C_\mu$的拐点随着趋于$C_0$的极限。这是一个一般的现象，实际上，曲线的多重分支的每个点都是附近的非奇异曲线的拐点的极限。
+
+该示例中描述的现象相当普遍。下面的习题给出了两个推广。
+
+\begin{exe}\label{exe:4.11}
+	\nottran
+\end{exe}
+
+\begin{exe}\label{exe:4.12}
+	\nottran
+\end{exe}
+
+\nottran
