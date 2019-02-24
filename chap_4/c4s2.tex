@@ -1,0 +1,232 @@
+\section{爆破}\label{s:4.2}
+
+\subsection{定义与构造}\label{s:4.2.1}
+
+% p.163
+
+\[
+	\begin{aligned}
+		(\varphi')^\#:K[x,y]&\longrightarrow K[x',y']&\quad \text{and}\qquad (\varphi'')^\#:K[x,y]&\longrightarrow K[x'',y'']\\
+		x&\longmapsto x'& x&\longmapsto x''y''\\
+		x&\longmapsto x'y'& y&\longmapsto y''.
+	\end{aligned}
+\]
+
+\[
+	U'_x=\spec K[x',y',{x'}^{-1}]\quad \text{and}\quad 
+	U_x=\spec K[x,y,x^{-1}],
+\]
+
+\[
+	U'_{xy}=\spec K[x',y',{x'}^{-1},{y'}^{-1}]\quad \text{and}\quad 
+	U''_{xy}=\spec K[x'',y'',{x''}^{-1},{y''}^{-1}]
+\]
+
+\[
+	Z=U'\cup U''=\spec K[x',y']\bigcup_{U'_{xy}\cong U''_{xy}}\spec K[x'',y''],
+\]
+
+\[
+	\begin{aligned}
+		K[x',y',{x'}^{-1},{y'}^{-1}]&\longrightarrow 
+		K[x'',y'',{x''}^{-1},{y''}^{-1}]\\
+		x'&\longmapsto x''y''\\
+		y'&\longmapsto {x''}^{-1}.
+	\end{aligned}
+\]
+
+% p.164
+
+\inclugra{1.png}
+
+% p.165
+
+\[
+	U_i=\spec T_i\cong \mathbb A_A^n,
+\]
+其中
+\[
+	T_i=A\left[\frac{x_1}{x_i},\dots,\frac{x_n}{x_i},x_i\right]
+\]
+
+\[
+	(U_i)_{x_j}\cong (U_j)_{x_i}.
+\]
+
+% p.166
+
+\[
+	\alpha_{(x_1,\dots,x_n)}:U\to \mathbb P_A^{n-1}
+\]
+
+\[
+	\begin{aligned}
+		\mathscr O_U^n & \longrightarrow \mathscr O_U,\\
+		(a_1,\dots,a_n)&\longmapsto \sum a_ix_i.
+	\end{aligned}
+\]
+
+\[
+	\alpha_{(x_1,\dots,x_n)}|_{(U_i)_{x_i}}:(U_i)_{x_i}\to (\mathbb P_A^{n-1})_{x_i}=\spec \left[\frac{x_1}{x_i},\dots,\frac{x_n}{x_i}\right]
+\]
+
+\[
+	\varphi:Z\setminus E\xrightarrow{\sim}\mathbb A_A^n\setminus V(x_1,\dots,x_n)
+\]
+
+\begin{pro}\label{pro:4.18}
+	态射$\varphi:Z\to \mathbb A_A^n$是$\mathbb A_A^n$沿着子概形$V(x_1,\dots,x_n)$的爆破。
+\end{pro}
+
+% p.167
+
+\[
+	\alpha:W\to U_i\hookrightarrow Z
+\]
+
+\[
+	\begin{aligned}
+		A\left[\frac{x_1}{x_i},\dots,\frac{x_n}{x_i},x_i\right] & \longrightarrow R,\\
+		\frac{x_i}{x_j}&\longmapsto \nu_j.
+	\end{aligned}
+\]
+
+\[
+	X=V(x)\subset Y=\spec K[x,y]/(xy,y^2).
+\]
+
+% p.168
+
+% p.169
+
+\[
+	\tilde g:T\to X'\times_X \operatorname{Bl}_Y X
+\]
+
+\[
+	\alpha_{(f_1,\dots,f_n)}:U=X\setminus V(f_1,\dots,f_n)\longrightarrow \mathbb P_A^{n-1};
+\]
+
+\[
+	Y=V(f_1,\dots,f_n)\subset X
+\]
+
+\[
+	\alpha_{(f_1,\dots,f_n)}:X\setminus Y\longrightarrow \mathbb P_A^{n-1}.
+\]
+
+\[
+	\begin{aligned}
+		A\left[x_1,\dots,x_n\right] & \longrightarrow A,\\
+		x_i &\longmapsto f_i.
+	\end{aligned}
+\]
+
+\[
+	\alpha_{(x_1,\dots,x_n)}:\mathbb A_A^n\setminus V(x_1,\dots,x_n)\longrightarrow \mathbb P_A^{n-1}.
+\]
+
+% p.170
+
+\[
+	\mathscr A=\bigoplus_{n=0}^\infty \mathscr I^n=\mathscr O_X\oplus \mathscr I\oplus \mathscr I^2\oplus \cdots
+\]
+
+\[
+	\mathscr O_X[t]=\bigoplus_{n=0}^\infty t^n\mathscr O_X,
+\]
+记
+\[
+	\mathscr A=\mathscr O_X\oplus t\mathscr I\oplus t^2\mathscr I^2\oplus \cdots.
+\]
+
+\[
+	\varphi:B=\proj(\mathscr A)\to X
+\]
+
+\[
+	\begin{aligned}
+	\mathscr I\mathscr A&=\mathscr I\cdot \mathscr O_B\oplus \mathscr I\cdot \mathscr I\oplus \mathscr I\cdot \mathscr I^2 \oplus \cdots\\
+	&=\mathscr I\oplus \mathscr I^2 \oplus \mathscr I^3\oplus \cdots
+	\end{aligned}
+\]
+
+\[
+	\mathscr A(1)=\mathscr O\oplus \mathscr I \oplus \mathscr I^2\oplus \cdots
+\]
+
+% p.171
+
+\[
+	f^*\mathscr I=\mathscr I\otimes_{\mathscr O_X}\mathscr O_Z\to \mathscr I\cdot \mathscr O_Z
+\]
+
+\[
+	\mathscr A=\bigoplus_{n=0}^\infty t^n\mathscr I_{Y,X}^n\subset \mathscr O_X[t]
+\]
+
+% p.172
+
+\[
+	B=A[xt,yt]\subset A[t].
+\]
+
+\[
+	B\cong A[X,Y]/(yX-xY)
+\]
+
+\[
+	\begin{aligned}
+		A[x^{-1}][X',Y] & \longrightarrow A[x^{-1}][t],\\
+		X' &\longmapsto t,\\
+		Y  &\longmapsto yt.
+	\end{aligned}
+\]
+
+\[
+	M:=\frac{(yX-xY):(x)}{(yX-xY)}=0,
+\]
+
+\[
+	0\xrightarrow{\qquad\quad\quad} A \xrightarrow{
+	\begin{pmatrix}
+		-x\\ yX-xY
+	\end{pmatrix}}A^2
+	\xrightarrow{\begin{pmatrix}
+		yX-xY& x
+	\end{pmatrix}}A.
+\]
+
+\[
+	\frac{(x):(yX-xY)}{(x)},
+\]
+
+% p.173
+
+\[
+	A\oplus I \oplus I^2\oplus \cdots
+\]
+
+\[
+	\operatorname{Sym}_A(I)
+\]
+
+\[
+	\begin{pmatrix}
+		x&y\\
+		X&Y
+	\end{pmatrix}.
+\]
+
+\[
+	A\oplus I \oplus I^2\oplus \cdots\cong A[X_1,\dots,X_n]/J
+\]
+
+\[
+	\begin{pmatrix}
+		x_1&\dots&x_n\\
+		X_1&\dots&X_n
+	\end{pmatrix}.
+\]
+
+\subsection{一些经典爆破构造}\label{s:4.2.2}
