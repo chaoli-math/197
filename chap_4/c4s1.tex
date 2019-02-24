@@ -176,23 +176,194 @@ $C_s\subset \mathbb P_{\kappa(s)}^2$的拐点概形。
 \end{exe}
 
 \begin{exe}\label{exe:4.6}
-	假设我们想要移去 Theorem \ref{thm:4.4} 中关于$K$是代数闭的假设。我们要怎么定义一个拐点$p\in C$的重数呢？这里，$p$的剩余类域是一个$K$的有限扩张$L$，以便保证我们还能得到$X$有$3d(d-2)$个拐点？
+	假设我们想要移去 Theorem \ref{thm:4.4} 中关于$K$是代数闭的假设。我们要怎么去定义一个拐点$p\in C$的重数，这里，$p$处的剩余类域$L$是$K$的有限扩张，以便保证我们还能得到$X$有$3d(d-2)$个拐点？
 \end{exe}
 
-\section{奇异曲线上的拐点}\label{s:4.1.2}
+\subsection{奇异曲线上的拐点}\label{s:4.1.2}
 
 当我们考虑奇异曲线时，有趣的新问题出现了。首先，每个奇异点都是一个拐点：
 \begin{exe}\label{exe:4.7}
 	令$C\subset \mathbb P_K^2$为一个平面曲线。证明$C$的每个奇异点都是拐点。
 
-	\textit{提示：}\nottran
+	\textit{提示：}可以找一条直线穿过$C$的奇异点$p$使得相交重数大于等于$3$，这可以通过看$C$在点$p$的切锥（即，在点$p$附近展开$f$，然后取二次项的零点集的一个分支）；或者用 Exerciese \ref{exe:4.2} 证明Hessian在点$p$为零，注意到$X$乘以Hessian行列式的首列加上$Y$乘以第二列加上$Z$乘以第三列，在点$p$处为零。
 \end{exe}
-
-\nottran
 
 % p.156
 
+关于奇异曲线的拐点，有两类问题。其一，我们可以考虑具有孤立奇点且没有直线分支的曲线$C$，这样Hessian $C'$ 仍将交$C$于一个零维概形$\Gamma$中，故此$C$将具有有限拐点；我们求支于$C$的非奇异点的拐点数。为找到这个数，我们仅需找到概形$\Gamma$其底空间包含于奇异分支$C_{\text{sing}}$的那部分的次数，然后用$3d(d-2)$减去它。在特定情况下，它有一个很好的答案，其中两种情况表于下面的练习中。
 
-关于奇异曲线的拐点有两种问题。首先，我们可以考虑具有孤立奇点且没有直线分支的曲线$C$，这样Hessian $C'$ 仍将交$C$于一个零维概形$\Gamma$，故此$C$将具有有限拐点；我们问$C$在非奇异点的拐点数。
+\begin{exe}\label{exe:4.8}
+	令$C\subset \mathbb P_K^2$为约态不可约曲线，Hessian为$C'$. 往书后翻见Definition \ref{defi:5.31}，令$p\in C$为$C$的任意寻常结点（这里“寻常”指没有$C$的分支在点$p$交于其射影切线三次或以上）。
+	证明，交$C\cap C'$支于点$p$的分支$\Gamma_p$在点$p$的剩余类域$\kappa(p)$上次数为$6$. 同样，证明，在$C$的尖点处的分支的次数为$8$. 那$C$的一个寻常切点处的次数呢？（结点、尖点、切点的严格定义见Definition \ref{defi:5.31}）。
+\end{exe}
+
+因此，在代数闭域上，一条不含任意直线的$d$-次平面曲线，若奇异点为$\delta$寻常结点与$\kappa$个尖点，则非奇异拐点数为
+\[
+	3d(d-2)-6\delta -8\kappa.
+\]
+这是经典的平面曲线的\textit{Pl\"ucker公式}的一个例子。
+
+\begin{exe}\label{exe:4.9}
+	验证，如果$C$是可约的（再次假设$C$没有分支是直线），我们可以通过单独地考虑$C$的分支得到相同的答案。
+\end{exe}
+
+\subsection{具有多重分支的曲线}\label{s:4.1.3}
+
+当我们考虑具有多重分支的曲线，比如由一个多项式$G(X,Y,Z)$的幂次$F=G^m$定义的曲线时，一类非常不同的问题出现了。当然，对这样的曲线$C$，拐点概形$\mathscr F_C$维数为正，故往往并不有趣。相反，当我们考虑特化\footnote{译者注：原文是``Rather, the interesting questions arise when we consider families of curves specializing to such a multiple curve.''，这里specializing我们译作特化，其大概可以理解为包含于族中，或是极限为这个曲线，或其他类似含义。具体情况见下面例子。}这样一个多重曲线的曲线族时，有趣的问题出现了。我们问：在这样一个曲线族中，拐点会跑到哪里去？
+
+为给出这样的问题的一个例子，我们下面考虑一个非奇异四次平面曲线，它在一个线性族中退化到一个双重的二次曲线。令$K$是一个特征为零的代数闭域，然后考虑概形$B=\mathbb A_K^1=\spec K[t]$上的曲线$\mathscr C$. 假设$U=U(X,Y,Z)$是一个不可约四次多项式，而$G=G(X,Y,Z)$是任意使得曲线$V(U)$和$V(G)\subset \mathbb P_K^2$横截相交的多项式。
+% p.157
+考虑四次平面曲线族$\pi:\mathscr C\to \mathbb A_K^1$，其由方程$F=U^2+tG=0$给出，故$\pi$即概形
+\[
+	\begin{aligned}
+	\pi:\mathscr C&=\proj K[t][X,Y,Z]/\bigl(U(X,Y,Z)^2+tG(X,Y,Z)\bigr)\\
+	&\subset \proj K[t][X,Y,Z]=\mathbb P_B^2\longrightarrow B.
+	\end{aligned}
+\]
+
+令$\mathscr F$为曲线$\mathscr C\subset \mathbb P_B^2$的拐点概形。令$\mathscr F^*\subset \mathbb P_{B^*}^2$为挖洞直线$B^*=\spec K[t,t^{-1}]\subset B$在$\mathscr F$中的原像，$\mathscr F'$为$\mathscr F^*$在$\mathbb P_B^2$中的闭包。概形$\mathscr F^*$在$B^*$上平坦且有限，且易刻画如下：若$C_\mu\subset \mathbb P_K^2$为$\mathscr C$在点$(t-\mu)\in B=\mathbb A_K^1$处的纤维，则对$\mu\neq 0$，$\mathscr F$在点$(t-\mu)$处的纤维$F_\mu$将是$C_\mu$的$3d(d-2)=24$个拐点。换言之，原点$(t)\in B=\mathbb A_K^1$外，曲线$C_\mu$的拐点概形构成了一个平坦族。
+
+令$\mathscr F'$为$\mathscr F^*$在$\mathbb P_B^2$中的闭包，$F'_0$为$\mathscr F'$在原点处的纤维。因为$B$是一维非奇异的，$\mathscr F'$在$B$上处处平坦，于是特别地，$F'_0\subset C_0\subset \mathbb P_K^2$在$K$上维数为零，次数为$24$. 我们可以将$F'_0$想做附近非奇异曲线$C_\mu$的$24$个拐点随着$\mu$趋于零的“极限位置”。因此，\naive 问题“当一个四次曲线退化到一个双重二次曲线时，拐点如何变化？”就转为下面这个精确的问题：确定平坦极限$F'_0$，特别地，其底空间。
 
 \nottran
+
+首先，如果$u(x,y)=U(X,Y,1)$以及$g(x,y)=G(X,Y,1)$分别为$U$和$G$在仿射开集$\spec K[t][x,y]\cong \mathbb A_B^2\subset \mathbb P_B^2$的非齐次型，理想$I$从定义由两个元素所生成，方程$u^2+tg$以及仿射Hessian
+\[
+	\begin{vmatrix}
+		u^2+tg & 2uu_x+tg_x & 2uu_y+tg_y\\
+		2uu_x+tg_x&2uu_{xx}+2u_x^2+tg_{xx}&2uu_{xy}+2u_xu_y+tg_{xy}\\
+		2uu_y+tg_y&2uu_{xy}+2u_xu_y+tg_{xy}&2uu_{yy}+2u_y^2+tg_{yy}
+	\end{vmatrix}
+\]
+% p.158
+因此，$I=(u^2+tg,H)$，其中
+\[
+	H=
+	\begin{vmatrix}
+		0 & 2uu_x+tg_x & 2uu_y+tg_y\\
+		2uu_x+tg_x&2uu_{xx}+2u_x^2+tg_{xx}&2uu_{xy}+2u_xu_y+tg_{xy}\\
+		2uu_y+tg_y&2uu_{xy}+2u_xu_y+tg_{xy}&2uu_{yy}+2u_y^2+tg_{yy}
+	\end{vmatrix}.
+\]
+
+我们可以展开$H$，以$t$的幂次整理得到：
+\[
+\begin{aligned}
+	H=\ &8u^2\bigl(-u_x^2(uu_{yy}+u_y^2)+2u_xu_y(uu_{xy}+u_xu_y)-u_y^2(uu_x+u_x^2))\\
+	&+8tu\bigl(
+		-g_xu_x(uu_{yy}+u_y^2)+g_xu_y(uu_{xy}+u_xu_y)\\
+	&\qquad\quad +g_yu_x(uu_{xy}+u_xu_y)-g_yu_y(uu_{xx}+u_x^2)\bigr)\\
+	&+4tu^2\bigl(-u_x^2g_{yy}+u_xu_yg_{xy}-u_y^2g_{xx}\bigr)\\
+	&+2t^2\bigl(-g_x^2(uu_{yy}+u_y^2)+2g_xg_y(uu_{xy}+u_xu_y)-g_y^2(uu_{xx}+u_x^2)\bigr)\\
+	&+4t^2u(-g_xu_xg_{yy}+g_xu_yg_{xy}+g_yu_xg_{xy}-g_yu_yg_{xx})\\
+	&+t^3\bigl(-g_x^2g_{yy}+g_xg_yg_{xy}-g_y^2g_{xx}\bigr).
+\end{aligned}
+\]
+
+右侧的前两项可以化简，得到
+\[
+\begin{aligned}
+	H=\ &8u^3\bigl(-u_x^2 u_{yy}+u_xu_y u_{xy}-u_y^2 u_x)\\
+	&+8tu^2 (
+		-g_xu_x u_{yy}+g_xu_y u_{xy}
+		+g_yu_x u_{xy}-g_yu_y u_{xx})\\
+	&+4tu^2\bigl(-u_x^2g_{yy}+u_xu_yg_{xy}-u_y^2g_{xx}\bigr)\\
+	&+2t^2\bigl(-g_x^2(uu_{yy}+u_y^2)+2g_xg_y(uu_{xy}+u_xu_y)-g_y^2(uu_{xx}+u_x^2)\bigr)\\
+	&+4t^2u(-g_xu_xg_{yy}+g_xu_yg_{xy}+g_yu_xg_{xy}-g_yu_yg_{xx})\\
+	&+t^3\bigl(-g_x^2g_{yy}+g_xg_yg_{xy}-g_y^2g_{xx}\bigr).
+\end{aligned}
+\]
+
+现在，模掉$I$的另一个生成元$u^2+tg$，我们可以用$-tg$替换表达式中的$u^2$得到一个可被$t$整除的多项式。因此，$I^*=I(\mathscr F^*)=I\cdot K[t,t^{-1}][x,y]\subset K[t,t^{-1}][x,y]$，于是$I'=I(\mathscr F')=I^*\cap K[t][x,y]\subset K[t][x,y]$，也包含元素
+\[
+	\begin{aligned}
+		H'=\ &-8ug\bigl(-u_x^2 u_{yy}+u_xu_y u_{xy}-u_y^2 u_x)\\
+		&-8tg (
+			-g_xu_x u_{yy}+g_xu_y u_{xy}
+			+g_yu_x u_{xy}-g_yu_y u_{xx})\\
+		&-4tg\bigl(-u_x^2g_{yy}+u_xu_yg_{xy}-u_y^2g_{xx}\bigr)\\
+		&+2t\bigl(-g_x^2(uu_{yy}+u_y^2)+2g_xg_y(uu_{xy}+u_xu_y)-g_y^2(uu_{xx}+u_x^2)\bigr)\\
+		&+4tu(-g_xu_xg_{yy}+g_xu_yg_{xy}+g_yu_xg_{xy}-g_yu_yg_{xx})\\
+		&+t^2\bigl(-g_x^2g_{yy}+g_xg_yg_{xy}-g_y^2g_{xx}\bigr).
+	\end{aligned}
+\]
+
+此外，如果我们将这个$I^*$的生成元乘以$u$，然后再将$u^2$换成$-tg$，我们再一次得到了一个可以由$t$整除的多项式，于是理想$I^*$和$I'$也包含
+% p.159
+\[
+	\begin{aligned}
+		J=\ &8g^2\bigl(-u_x^2 u_{yy}+u_xu_y u_{xy}-u_y^2 u_x)\\
+		&-8gu (
+			-g_xu_x u_{yy}+g_xu_y u_{xy}
+			+g_yu_x u_{xy}-g_yu_y u_{xx})\\
+		&-4gu\bigl(-u_x^2g_{yy}+u_xu_yg_{xy}-u_y^2g_{xx}\bigr)\\
+		&+2u\bigl(-g_x^2(uu_{yy}+u_y^2)+2g_xg_y(uu_{xy}+u_xu_y)-g_y^2(uu_{xx}+u_x^2)\bigr)\\
+		&-4tg(-g_xu_xg_{yy}+g_xu_yg_{xy}+g_yu_xg_{xy}-g_yu_yg_{xx})\\
+		&+tu\bigl(-g_x^2g_{yy}+g_xg_yg_{xy}-g_y^2g_{xx}\bigr).
+	\end{aligned}
+\]
+
+为继续这个分析，我们需用如下事实，对任意齐次四次多项式$U(X,Y,Z)$，Hessian
+\[\CenteredArraystretch{1.7}
+	\begin{vmatrix}
+		\pfrac{^2U}{X^2}&\ppfrac UXY &\ppfrac UXZ\\
+		\ppfrac UYX&\pfrac{^2U}{Y^2}&\ppfrac UYZ\\
+		\ppfrac UZX&\ppfrac UZY&\pfrac{^2U}{Z^2}
+	\end{vmatrix}.
+\]
+是一个标量$\mu=\mu(U)$，当$U$是不可约时非零（即，当$V(U)\subset \mathbb P^2$非奇异），此外为零。于是
+\[\CenteredArraystretch{1.7}
+	\begin{vmatrix}
+		u&\pfrac ux &\pfrac uy\\
+		\pfrac ux&\pfrac{^2u}{x^2}&\ppfrac uxy\\
+		\pfrac uy&\ppfrac uxy&\pfrac{^2u}{y^2}
+	\end{vmatrix}
+	=-u_x^2u_{yy}+u_xu_yu_{xy}-u_y^2u_{xx}=\lambda u+\mu,
+\]
+其中$\lambda$是标量。在$J$中减去这项，我们有
+\[
+	\begin{aligned}
+		J=\ &8\mu g^2\\
+		&+8\lambda g^2 u\\
+		&-8gu (
+			-g_xu_x u_{yy}+g_xu_y u_{xy}
+			+g_yu_x u_{xy}-g_yu_y u_{xx})\\
+		&-4gu\bigl(-u_x^2g_{yy}+u_xu_yg_{xy}-u_y^2g_{xx}\bigr)\\
+		&+2u\bigl(-g_x^2(uu_{yy}+u_y^2)+2g_xg_y(uu_{xy}+u_xu_y)-g_y^2(uu_{xx}+u_x^2)\bigr)\\
+		&-4tg(-g_xu_xg_{yy}+g_xu_yg_{xy}+g_yu_xg_{xy}-g_yu_yg_{xx})\\
+		&+tu\bigl(-g_x^2g_{yy}+g_xg_yg_{xy}-g_y^2g_{xx}\bigr).
+	\end{aligned}
+\]
+
+\nottran
+\[
+	\begin{aligned}
+		u^2+tg \equiv u^2 &\quad \text{ mod } (t),\\
+		H' \equiv ug &\quad \text{ mod } (t,u^2),
+	\end{aligned}
+\]
+% p.160
+以及
+\[
+	J\equiv 8\mu g^2-2\nu u\quad \text{ mod } (t,u^2,ug),
+\]
+其中
+\[
+	\nu=g_x^2(uu_{yy}+u_y^2)-2g_xg_y(uu_{xy}+u_xu_y)+g_y^2(uu_{xx}+u_x^2).
+\]
+
+从这里，我们看到$I'_0\supset (t,u^2,ug,8\mu g^2+2\nu u)$. 现在，我们可以记
+\[
+	\begin{aligned}
+		\nu &=g_x^2(uu_{yy}+u_y^2)-2g_xg_y(uu_{xy}+u_xu_y)+g_y^2(uu_{xx}+u_x^2)\\
+		&\equiv (g_xu_y-g_yu_x)^2\quad \text{ mod } (u)\\
+		&\equiv \begin{vmatrix}
+			g_x&g_y\\
+			u_x&u_y
+		\end{vmatrix}^2.
+	\end{aligned}
+\]
+
+\[
+	I'_0=(t,u^2,ug,8\mu g^2+2\nu u).
+\]
