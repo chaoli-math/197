@@ -17,59 +17,93 @@
 \paragraph*{例子：平面的爆破}\addcontentsline{toc}{subsubsection}{例子：平面的爆破}
 
 \begin{exa}\label{exa:4.14}
-	我们从 \nottran
-\end{exa}
-
-\[
+	我们从域$K$上的仿射平面$\mathbb A_K^2=\spec K[x,y]$的原点的爆破$Z$开始。它可以由最多两个开集的并所描述，其中每个都同构于$\mathbb A_K^2$：我们令$U'=\spec K[x',y']$和$U''=\spec K[x'',y'']$，然后考虑与映射$\varphi':U'\to \mathbb A_K^2$和$\varphi'':U''\to \mathbb A_K^2$对偶的环同态
+	\[
 	\begin{aligned}
 		(\varphi')^\#:K[x,y]&\longrightarrow K[x',y']&\quad \text{and}\qquad (\varphi'')^\#:K[x,y]&\longrightarrow K[x'',y'']\\
 		x&\longmapsto x'& x&\longmapsto x''y''\\
 		x&\longmapsto x'y'& y&\longmapsto y''.
 	\end{aligned}
-\]
-
-\[
+	\]
+	映射$\varphi'$给出了开集
+	\[
 	U'_x=\spec K[x',y',{x'}^{-1}]\quad \text{and}\quad 
-	U_x=\spec K[x,y,x^{-1}],
-\]
-
-\[
+	U_x=\spec K[x,y,x^{-1}]
+	\]
+	之间的同构，类似地，$\varphi''$给出了开子集$U''_y=\spec K[x',y',1/y']$和$U_y=\spec K[x,y,y^{-1}]$之间的同构。特别地，它们给出了
+	交集$U_{xy}=U_x\cap U_y=\spec K[x,y,x^{-1},y^{-1}]$的原像
+	\[
 	U'_{xy}=\spec K[x',y',{x'}^{-1},{y'}^{-1}]\quad \text{and}\quad 
 	U''_{xy}=\spec K[x'',y'',{x''}^{-1},{y''}^{-1}]
-\]
-
-\[
-	Z=U'\cup U''=\spec K[x',y']\bigcup_{U'_{xy}\cong U''_{xy}}\spec K[x'',y''],
-\]
-
-\[
+	\]
+	之间的同构。我们于是能等同开集$U'_{xy}\subset U'$和$U''_{xy}\subset U''$，然后将$U'$和$U''$粘起来得到一个概形
+	\[
+		Z=U'\cup U''=\spec K[x',y']\bigcup_{U'_{xy}\cong U''_{xy}}\spec K[x'',y''],
+	\]
+	其中同构$U'_{xy}\cong U''_{xy}$由环同态
+	\[
 	\begin{aligned}
 		K[x',y',{x'}^{-1},{y'}^{-1}]&\longrightarrow 
 		K[x'',y'',{x''}^{-1},{y''}^{-1}]\\
 		x'&\longmapsto x''y''\\
-		y'&\longmapsto {x''}^{-1}.
+		y'&\longmapsto {x''}^{-1}
 	\end{aligned}
-\]
+	\]
+	给出。我们称并$Z$，连同结构态射$\varphi:Z\to \mathbb A_K^2$，为$\mathbb A_K^2$在原点的\textit{爆破}。原点的原像$E=\varphi^{-1}(0,0)\subset Z$同构于$\mathbb P_K^1$（这被称为这个爆破的\textit{例外除子}），而$\varphi$除此之外是一个同构，即$Z\setminus E\cong \mathbb A_K^2\setminus \{(0,0)\}$.
+\end{exa}
 
 % p.164
 
+一种理解这个构造的方式是去观察到，爆破的开集的坐标环被扩大了以分别加入$y'=y/x$和$x''=x/y$. 这导致了一系列结果。首先，$\mathbb A_K^2$上的函数对$x$, $y$在原点的补集上定义了一个映射$f:\mathbb A_K^2\setminus \{(0,0)\}\to \mathbb P_K^1$：在经典语言中，这是映射$(a,b)\mapsto [a,b]$，或者用更现代的语言，这是对应于由$(f,g)\mapsto xf+yg$给出的满射$\mathscr O\oplus \mathscr O\to \mathscr O$. 这个映射并不能延拓为$\mathbb A_K^2$上的一个正则映射，但是如果我们复合$f$与同构$Z\setminus E\cong \mathbb A_K^2\setminus \{(0,0)\}$，我们看到其确实延拓为了整个$Z$上的一个正则函数。这是因为由函数$x$和$y$（的拉回）生成的理想，在$Z$上是局部主理想（有一个非零因子生成），于是$x$和$y$有公共零点，进而我们可以将齐次矢量$[x,y]$出意它们的公共因子来延拓这个映射。在爆破中扩大坐标环的另一好处是其分离了穿过原点的曲线。即，如果$L$和$L'$是穿过$\mathbb A_K^2$原点的不同曲线，则$L\setminus \{(0,0)\}$和$L'\setminus \{(0,0)\}$的原像有着不同的闭包，如图所示（这些都是映射$f$的纤维）。
 \inclugra{1.png}
+同样地，如果我们有一条曲线$C\subset \mathbb A_K^2$在原点有一个结点，则$C$中原点的补集的原像在$Z$中非奇异，且交例外除子于两点。
+
+\paragraph*{一般的爆破的定义}\addcontentsline{toc}{subsubsection}{一般的爆破的定义}
+我们将用这些观察作为出发点来推广一个任意概形沿着任意子概形的爆破的定义。基本的事实如下，在一个$X$沿着子概形$Y\subset X$的爆破$\varphi:\Bl_Y(X)\to X$中，$Y$的原像是局部主的。为形式化这点，我们从一个定义开始：
 
 % p.165
 
-\[
-	U_i=\spec T_i\cong \mathbb A_A^n,
-\]
-其中
-\[
-	T_i=A\left[\frac{x_1}{x_i},\dots,\frac{x_n}{x_i},x_i\right]
-\]
+\begin{defi}\label{defi:4.15}
+	令$X$为任意概形，$Y\subset X$是一个子概形。我们成$Y$是一个$X$中的\textit{Cartier子概形}，如果其局部是单个非零因子的零点集，即，对任意的$p\in X$，$X$中存在一个$p$的仿射邻域$U=\spec A$和存在某个非零因子$f\in A$使得$Y\cap U=V(f)\subset U$. 更一般地，我们称$Y$是一个\textit{正则子概形}，如果其局部是$X$上函数的一个正则列\footnote{
+		译者注：设$R$是一个交换环，则一族元素$f_1$, $\dots$, $f_r$被称为一个正则列，如果对每个$i$，$f_i$都是$R/(f_1,\dots,f_{i-1})$中的非零因子，且$R/(f_1,\dots,f_{r})\neq 0$.
+	}%
+	（regular sequence）的零点集。
+\end{defi}
 
-\[
-	(U_i)_{x_j}\cong (U_j)_{x_i}.
-\]
+\begin{defi}\label{defi:4.16}
+	令$X$为任意概形，$Y\subset X$是一个子概形。\textit{$X$沿着$Y$的爆破}，记作$\varphi:\Bl_Y(X)\to X$，是一个由下面几个性质刻画的态射：
+	\begin{compactenum}[(1)]
+		\item $Y$的原像$\varphi^{-1}(Y)$是$\Bl_Y(X)$中的一个Cartier子概形。
+		\item $\varphi:\Bl_Y(X)\to X$具有万有性质；即，如果$f:W\to X$是任意的态射使得$f^{-1}(Y)$是一个$Z$中的Cartier子概形，则存在一个态射$g:W\to \Bl_Y(X)$使得$f=\varphi\circ g$.
+	\end{compactenum}
+	在爆破$\Bl_YX$中$Y$原像$E=\varphi^{-1}(Y)$被称为爆破的\textit{例外除子}，而$Y$是爆破的\textit{中心}。
+\end{defi}
+
+很清楚，这些性质唯一刻画了概形沿着一个子概形的爆破$\varphi:\Bl_Y(X)\to X$. 但并不清楚的是爆破的存在性，但我们下面会看到这确实存在。
+
+仿射情形的爆破可以以态射的图的闭包这种简单的方式来实现，我们将首先描述这个构造。我们从推广Example \ref{exa:4.14} 的构造到任意环上的仿射空间对原点的爆破开始。
+
+\begin{exa}\label{exa:4.17}
+	令$A$为任意环，再令$\mathbb A_A^n=\spec A[x_1,\dots,x_n]$. 考虑概形
+	\[
+	U_i=\spec T_i\cong \mathbb A_A^n,
+	\]
+	其中
+	\[
+		T_i=A\left[\frac{x_1}{x_i},\dots,\frac{x_n}{x_i},x_i\right]
+	\]
+	是$T=A[x_1,x_1^{-1},\dots,x_n,x_n^{-1}]$在$A$上由函数$x_j/x_i$和$x_i$生成的子代数。环$(T_{i})_{x_j}$和$(T_j)_{x_i}$作为$T$的子环是相同的，于是我们有交换同构
+	\[
+		(U_i)_{x_j}\cong (U_j)_{x_i}.
+	\]
+	因此我们可以构造一个概形$Z$，其是$U_i$的并且上面的开集被等同了。注意到，对应于含入$A[x_1,\dots,x_n]\hookrightarrow T_i$的态射$U_i\to \mathbb A_A^n$在交叠部分相容给出了一个自然的结构态射$\varphi:Z\to \mathbb A_A^n$.
+\end{exa}
+
+这个例子展现了诸多 Example \ref{exa:4.14} 中描述的经典爆破的特性：
 
 % p.166
+
+\nottran
 
 \[
 	\alpha_{(x_1,\dots,x_n)}:U\to \mathbb P_A^{n-1}
@@ -94,6 +128,20 @@
 	态射$\varphi:Z\to \mathbb A_A^n$是$\mathbb A_A^n$沿着子概形$V(x_1,\dots,x_n)$的爆破。
 \end{pro}
 
+\begin{proof}
+	\[
+		(x_1,\dots,x_n)R=(\gamma),
+	\]
+
+	\[
+		\gamma=\alpha_1 x_1+\cdots +\alpha_n x_n
+	\]
+
+	\[
+		\gamma=\sum_i \alpha_i x_i=\sum_i \alpha_i \beta_i \gamma
+	\]
+\end{proof}
+
 % p.167
 
 \[
@@ -110,6 +158,10 @@
 \[
 	X=V(x)\subset Y=\spec K[x,y]/(xy,y^2).
 \]
+
+\begin{lem}\label{lem:4.19}
+	如果$X\subset Y$是一个概形的Cartier子概形，则$Y\setminus X$在$Y$中稠密（作为概形而不仅仅是拓扑空间）。
+\end{lem}
 
 % p.168
 
