@@ -100,60 +100,69 @@
 \end{exa}
 
 这个例子展现了诸多 Example \ref{exa:4.14} 中描述的经典爆破的特性：
-
 % p.166
-
-\nottran
-
-\[
-	\alpha_{(x_1,\dots,x_n)}:U\to \mathbb P_A^{n-1}
-\]
-
-\[
-	\begin{aligned}
-		\mathscr O_U^n & \longrightarrow \mathscr O_U,\\
-		(a_1,\dots,a_n)&\longmapsto \sum a_ix_i.
-	\end{aligned}
-\]
-
-\[
-	\alpha_{(x_1,\dots,x_n)}|_{(U_i)_{x_i}}:(U_i)_{x_i}\to (\mathbb P_A^{n-1})_{x_i}=\spec \left[\frac{x_1}{x_i},\dots,\frac{x_n}{x_i}\right]
-\]
-
-\[
-	\varphi:Z\setminus E\xrightarrow{\sim}\mathbb A_A^n\setminus V(x_1,\dots,x_n)
-\]
+\begin{compactenum}[(1)]
+	\item 令$U=\mathbb A_A^n\setminus V(x_1,\dots,x_n)$为$V(x_1,\dots,x_n)$（“原点”）在$\mathbb A_A^n$中的补。我们有一个由函数$(x_1,\dots,x_n)$给出的态射
+	\[
+		\alpha_{(x_1,\dots,x_n)}:U\to \mathbb P_A^{n-1},
+	\]
+	或者，更形式地，由满射
+	\[
+		\begin{aligned}
+			\mathscr O_U^n & \longrightarrow \mathscr O_U,\\
+			(a_1,\dots,a_n)&\longmapsto \sum a_ix_i.
+		\end{aligned}
+	\]
+	给出的，则$Z$是\textit{$\alpha$的图像在$\mathbb A_A^n\times_A \mathbb P_A^{n-1}=\mathbb P_A^{n-1}$中的闭包}。为看到这点，我们我们观察到$(U_i)_{x_i}\subset Z$为映射
+	\[
+		\alpha_{(x_1,\dots,x_n)}|_{(U_i)_{x_i}}:(U_i)_{x_i}\to (\mathbb P_A^{n-1})_{x_i}=\spec \left[\frac{x_1}{x_i},\dots,\frac{x_n}{x_i}\right]
+	\]
+	的图像，而开集$(U_i)_{x_i}$在$Z$中稠密。
+	\item $V(x_1,\dots,x_n)\subset \mathbb A_A^n$的原像$E=\varphi^{-1}V(x_1,\dots,x_n)\subset Z$在结构映射$\varphi:Z\to \mathbb A_A^n$同构于$\mathbb P_A^{n-1}$，而
+	\[
+		\varphi:Z\setminus E\xrightarrow{\sim}\mathbb A_A^n\setminus V(x_1,\dots,x_n)
+	\]
+	是一个同构。
+	\item 因子$(x_1,\dots,x_n)T_i=(x_i)T_i$，$V(x_1,\dots,x_n)\subset \mathbb A_A^n$的原像$E\subset Z$是局部由单一方程定义的。
+\end{compactenum}
 
 \begin{pro}\label{pro:4.18}
 	态射$\varphi:Z\to \mathbb A_A^n$是$\mathbb A_A^n$沿着子概形$V(x_1,\dots,x_n)$的爆破。
 \end{pro}
 
 \begin{proof}
+	我们以及看到$Z\to \mathbb A_A^n$满足Definition \ref{defi:4.16}的条件(1)，还需证明，如果$\psi:W\to \mathbb A_A^n$是任意态射使得$\psi^{-1}V(x_1,\dots,x_n)$为Cartier的，则$\psi$可经由$\varphi$分解，即，存在一个映射$\alpha:W\to Z$满足$\psi=\varphi\circ\alpha$.
+
+	我们首先对$W=\spec R$且$R$是一个局部环的情况证明。通过映射$\varphi^\#:A[x_1,\dots,x_n]\to R$将$R$看作$A[x_1,\dots,x_n]$上的代数。因为理想$(x_1,\dots,x_n)R$是主理想，Nakayama引理（Eisenbud [1995, Corollary 4.8]）告诉我们它是由某个$x_i$生成的。更准确地说，如果
 	\[
 		(x_1,\dots,x_n)R=(\gamma),
 	\]
-
+	则我们可以记
 	\[
 		\gamma=\alpha_1 x_1+\cdots +\alpha_n x_n
 	\]
-
+	对某些$\alpha_i\in R$，类似地，$x_i=\beta_i\gamma$. 于是
 	\[
-		\gamma=\sum_i \alpha_i x_i=\sum_i \alpha_i \beta_i \gamma
+		\gamma=\sum_i \alpha_i x_i=\sum_i \alpha_i \beta_i \gamma,
 	\]
-\end{proof}
+	从这里，我们看到至少有一个$\beta_i$是$R$中的单位元，即$(x_1,\dots,x_n)R=(\gamma)=(x_i)$对某个$i$成立。
 
 % p.167
-
-\[
-	\alpha:W\to U_i\hookrightarrow Z
-\]
-
-\[
+	我们现在可以对每个$j$记$x_j=\nu_j x_i$（其中$\nu_j=\beta_j\beta_i^{-1}$），于是可以定义想要的映射
+	\[
+		\alpha:W\to U_i\hookrightarrow Z
+	\]
+	作为环同态
+	\[
 	\begin{aligned}
 		A\left[\frac{x_1}{x_i},\dots,\frac{x_n}{x_i},x_i\right] & \longrightarrow R,\\
-		\frac{x_i}{x_j}&\longmapsto \nu_j.
+		\frac{x_i}{x_j}&\longmapsto \nu_j
 	\end{aligned}
-\]
+	\]
+	的对偶。
+	\nottran
+\end{proof}
+
 
 \[
 	X=V(x)\subset Y=\spec K[x,y]/(xy,y^2).
@@ -229,6 +238,8 @@
 	f^*\mathscr I=\mathscr I\otimes_{\mathscr O_X}\mathscr O_Z\to \mathscr I\cdot \mathscr O_Z
 \]
 
+\paragraph*{沿着正则子概形的爆破}\addcontentsline{toc}{subsubsection}{沿着正则子概形的爆破}
+
 \[
 	\mathscr A=\bigoplus_{n=0}^\infty t^n\mathscr I_{Y,X}^n\subset \mathscr O_X[t]
 \]
@@ -298,3 +309,72 @@
 \]
 
 \subsection{一些经典爆破构造}\label{s:4.2.2}
+
+\[
+	Q=\spec K[x,y,z]/(xy-z^2)\subset \spec K[x,y,z]=\mathbb A_K^3.
+\]
+
+\[
+	\varphi:\tilde A_K^3=\proj K[x,y,z][A,B,C]/(xB-yA,xC-zA,yC-zB)\longrightarrow \spec K[x,y,z]=\mathbb A_K^3.
+\]
+
+\[
+	U_A=\spec K[x,y,z][b,c]/(xb-y,xc-z)=\spec K[x,b,c]
+\]
+
+\[
+	\varphi^\# (xy-z^2)=x^2b-x^2c^2=x^2(b-c^2)
+\]
+
+\[
+	\varphi^{-1}(Q)=V((x,y,z)^2)\cup V(AB-C^2)
+\]
+
+\[
+	\varphi:\tilde Q=\proj K[x,y,z][A,B,C]/(xB-yA,xC-zA,yC-zB,AB-C^2)\longrightarrow \spec K[x,y,z]/(xy-z^2)=Q.
+\]
+
+\inclugra{2.png}
+
+\[
+	\varphi:\Bl_L \mathbb A_K^3=\proj K[x,y,z][A,B]/(xB-zA)\longrightarrow \spec K[x,y,z]=\mathbb A_K^3
+\]
+
+\[
+	X=V(xw-yz)\subset \spec K[x,y,z,w]=\mathbb A_K^4.
+\]
+
+\[
+\Lambda_{1,\mu}=V(x-\mu z,y-\mu w)
+\]
+
+\[
+\Lambda_{2,\mu}=V(x-\mu y,z-\mu w)
+\]
+
+\inclugra{3.png}
+
+\[
+	M=\Hom(V,W)=\left\{\begin{pmatrix}x&y\\z&w\end{pmatrix}\right\}.
+\]
+
+\[
+	\begin{aligned}
+		X&=\{A:V\to W\,|\,\operatorname{rank}A\leq 1\}\subset \mathbb A_K^4,\\
+		X_1&=\{(A,L)\,|\,L\subset \operatorname{Ker}A\}\subset \mathbb A_K^4\times \mathbb PV^*,\\
+		X_2&=\{(A,L')\,|\,\operatorname{Im}A\subset L'\}\subset \mathbb A_K^4\times \mathbb PW^*,\\
+		\tilde X&=\{(A,L,M)\,|\, L\subset \operatorname{Ker}A\text{ and }\operatorname{Im}A\subset M\}\subset \mathbb A_K^4\times \mathbb PV^*\times \mathbb PW^*.
+	\end{aligned}
+\]
+
+\[
+	\hat{\mathscr O}_{X,p}\cong K[\![x_1,\dots,x_n]\!]/(x_1^2+x_2^2+\cdots+x_n^2).
+\]
+
+\[
+	\dim (\pi^{-1}(\Gamma))\leq \frac{\dim(\Gamma)+\dim(X)-1}2
+\]
+
+\subsection{沿着非约态概形的爆破}\label{s:4.2.3}
+
+\paragraph*{一个双重点的爆破}\addcontentsline{toc}{subsubsection}{一个双重点的爆破}
