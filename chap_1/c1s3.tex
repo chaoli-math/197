@@ -154,7 +154,7 @@ $X\times_S Y$与投射是唯一的“最有效的”选择，意即，给定上�
 
 \subsection{\texorpdfstring{$S$}{S}- 概形范畴}\label{s:1.3.2}
 
-就像在集合范畴里面一样，我们能用纤维积得到绝对积，通过取$S$为概形范畴的终对象，终对象是一个概形$S$，每一个概形到$S$都有且只有一个态射。由Exercise \ref{exe:1.42}，概形范畴的终对象是$\spec \zz$. 然而，绝对积有着许多更加惊奇的性质。我们已经在Exercise \ref{exe:1.46}(d) 中看到，（当$m$和$n$互素时）两个非空集合的积可能是空的！概形的积同样还有其他奇怪的特性：比如，一个不可约概形的维度能被定义为其任意仿射开集的坐标环的Krull维度。我们可能希望两个概形的积
+就像在集合范畴里面一样，我们能用纤维积得到绝对积，通过取$S$为概形范畴的终对象，终对象是一个概形$S$，每个概形到$S$都有且只有一个态射。由Exercise \ref{exe:1.42}，概形范畴的终对象是$\spec \zz$. 然而，绝对积有着许多更加惊奇的性质。我们已经在Exercise \ref{exe:1.46}(d) 中看到，（当$m$和$n$互素时）两个非空集合的积可能是空的！概形的积同样还有其他奇怪的特性：比如，一个不可约概形的维度能被定义为其任意仿射开集的坐标环的Krull维度。我们可能希望两个概形的积
 \[
 	X\times Y=X\times_{\spec \zz} Y
 \]
@@ -176,7 +176,7 @@ $X\times_S Y$与投射是唯一的“最有效的”选择，意即，给定上�
 
 此外，此时$\spec K$的维度为$0$，大家可以检查，对有限生成$K$-代数的谱的概形，几个对象的积的维度等于各个对象的维度的和，如所应是。
 
-为了容纳概形族，我们将这个概念拓展得更远一些。一个$\oo_X(X)$上的$K$-代数构造不过是一个环同态$K\to \oo_X(X)$，那么从Theorem \ref{thm:1.40}，他等价于给出映射$X\to \spec K$. 将$\spec K$换成任意概形，我们就定义了$S$\textit{上的概形}，或者称为$S$-\textit{概形}，是一个概形$X$连同一个态射$X\to S$. 我们可以没那么严谨地将$S$上的概形想象为一族“由$S$中的点参数化的”概形，即对每一个$S$上的点，我们都有该点处的纤维。一个~\textit{$S$上的概形的态射}（或称为~\textit{$S$-态射}）是一个交换图
+为了容纳概形族，我们将这个概念拓展得更远一些。一个$\oo_X(X)$上的$K$-代数构造不过是一个环同态$K\to \oo_X(X)$，那么从Theorem \ref{thm:1.40}，他等价于给出映射$X\to \spec K$. 将$\spec K$换成任意概形，我们就定义了$S$\textit{上的概形}，或者称为$S$-\textit{概形}，是一个概形$X$连同一个态射$X\to S$. 我们可以没那么严谨地将$S$上的概形想象为一族“由$S$中的点参数化的”概形，即对每个$S$上的点，我们都有该点处的纤维。一个~\textit{$S$上的概形的态射}（或称为~\textit{$S$-态射}）是一个交换图
 \[
 	\xymatrix{
 	X\ar[rr]\ar[rd]&&Y\ar[ld]\\
@@ -197,7 +197,7 @@ $X\times_S Y$与投射是唯一的“最有效的”选择，意即，给定上�
 
 如果$S=\spec R$是一个仿射概形，一个仿射$S$-概形不过是一个$R$-代数的谱。我们现在将这个构造推广，以描述$S$-概形范畴中的类似物，其中$S$是一个任意概形。
 
-首先，对任意概形$S$，我们定义\textit{拟凝聚$\oo_S$-代数层}。可以预想到，这是一个$\oo_S$-代数层$\mathscr F$，对每一个仿射开集$U=\spec R\subset S$以及一个基本开集$U'=\spec R_f\subset U$，作为$R=\oo_S(U)$-代数，我们有
+首先，对任意概形$S$，我们定义\textit{拟凝聚$\oo_S$-代数层}。可以预想到，这是一个$\oo_S$-代数层$\mathscr F$，对每个仿射开集$U=\spec R\subset S$以及一个基本开集$U'=\spec R_f\subset U$，作为$R=\oo_S(U)$-代数，我们有
 \[
 	\mathscr F(U')=\mathscr F(U)\otimes_R \oo_S(U')=\mathscr F(U)\otimes_R R_f.
 \]
@@ -205,7 +205,7 @@ $X\times_S Y$与投射是唯一的“最有效的”选择，意即，给定上�
 
 有很多方式来实现这个，一种是直接再用一次黏合构造：我们用仿射开集$U_\alpha=\spec R_\alpha$来覆盖$S$，定义$X$是概形$\spec \mathscr F(U_\alpha)$的并，黏合映射由限制映射$\mathscr F(U_\alpha)\to \mathscr F(U_\alpha\cap U_\beta)$诱导出来。这是可行的，但验证黏合出来的$\spec \mathscr F$与选取的覆盖无关也是一件麻烦的事情，更甚者，描述$\spec \mathscr F$的点集并不方便。我们这里将给出另一个构造。
 
-从一个定义开始：对给定的拟凝聚$\oo_S$-代数层$\mathscr F$，我们定义$\mathscr F$中的一个\textit{素理想层}为一个拟凝聚理想层$\mathscr I \subsetneq \mathscr F$，使得对每一个仿射开集$U\subset S$，理想$\mathscr I(U)\subset \mathscr F(U)$或者是素理想或者是单位理想。（观察对任意的仿射概形$X$，$X$的点就是$\oo_X$上的素理想层。）现在，我们将分三步定义$X=\spec \mathscr F$，就像我们对环的谱做的那样。首先，作为集合，$X$是$\mathscr F$中的素理想层的集合。其次，作为拓扑空间：对任意开集$U\subset S$（不一定是仿射的）以及截面$\sigma \in \mathscr F(U)$，令$V_{U,\sigma}\subset X$是满足$\sigma\not\in \mathscr P(U)$的素理想层$\mathscr P \subset \mathscr F$的集合，将它们取作拓扑基。最后，我们定义基本开集上的结构层$\oo_X$通过置
+从一个定义开始：对给定的拟凝聚$\oo_S$-代数层$\mathscr F$，我们定义$\mathscr F$中的一个\textit{素理想层}为一个拟凝聚理想层$\mathscr I \subsetneq \mathscr F$，使得对每个仿射开集$U\subset S$，理想$\mathscr I(U)\subset \mathscr F(U)$或者是素理想或者是单位理想。（观察对任意的仿射概形$X$，$X$的点就是$\oo_X$上的素理想层。）现在，我们将分三步定义$X=\spec \mathscr F$，就像我们对环的谱做的那样。首先，作为集合，$X$是$\mathscr F$中的素理想层的集合。其次，作为拓扑空间：对任意开集$U\subset S$（不一定是仿射的）以及截面$\sigma \in \mathscr F(U)$，令$V_{U,\sigma}\subset X$是满足$\sigma\not\in \mathscr P(U)$的素理想层$\mathscr P \subset \mathscr F$的集合，将它们取作拓扑基。最后，我们定义基本开集上的结构层$\oo_X$通过置
 \[
 	\oo_X(V_{U,\sigma})=\mathscr F(U)[\sigma^{-1}].
 \]
