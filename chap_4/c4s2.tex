@@ -131,7 +131,7 @@
 \end{pro}
 
 \begin{proof}
-	我们以及看到$Z\to \mathbb A_A^n$满足Definition \ref{defi:4.16}的条件(1)，还需证明，如果$\psi:W\to \mathbb A_A^n$是任意态射使得$\psi^{-1}V(x_1,\dots,x_n)$为Cartier的，则$\psi$可经由$\varphi$分解，即，存在一个映射$\alpha:W\to Z$满足$\psi=\varphi\circ\alpha$.
+	我们已经看到$Z\to \mathbb A_A^n$满足Definition \ref{defi:4.16} 的条件(1)，还需证明，如果$\psi:W\to \mathbb A_A^n$是任意态射使得$\psi^{-1}V(x_1,\dots,x_n)$为Cartier的，则$\psi$可经由$\varphi$分解，即，存在一个映射$\alpha:W\to Z$满足$\psi=\varphi\circ\alpha$.
 
 	我们首先对$W=\spec R$且$R$是一个局部环的情况证明。通过映射$\varphi^\#:A[x_1,\dots,x_n]\to R$将$R$看作$A[x_1,\dots,x_n]$上的代数。因为理想$(x_1,\dots,x_n)R$是主理想，Nakayama引理（Eisenbud [1995, Corollary 4.8]）告诉我们它是由某个$x_i$生成的。更准确地说，如果
 	\[
@@ -148,7 +148,7 @@
 	从这里，我们看到至少有一个$\beta_i$是$R$中的单位元，即$(x_1,\dots,x_n)R=(\gamma)=(x_i)$对某个$i$成立。
 
 % p.167
-	我们现在可以对每个$j$记$x_j=\nu_j x_i$（其中$\nu_j=\beta_j\beta_i^{-1}$），于是可以定义想要的映射
+	我们现在可以对每个$j$记$x_j=\nu_j x_i$（其中$\nu_j=\beta_j\beta_i^{-1}$），进而定义想要的映射
 	\[
 		\alpha:W\to U_i\hookrightarrow Z
 	\]
@@ -159,51 +159,108 @@
 		\frac{x_i}{x_j}&\longmapsto \nu_j
 	\end{aligned}
 	\]
-	的对偶。
-	\nottran
+	的对偶。现在假设$W$为任意概形，$\psi:W\to \mathbb A_A^n$是一个态射且$\psi^{-1}V(x_1,\dots,x_n)$是Cartier的。对每点$w\in W$，上面的结论产生了一个映射$\alpha:\spec \mathscr O_{W,w}\to Z$，其像包含于某个覆盖$Z$的仿射开集$U_i\cong \mathbb A_A^n\subset Z$. 这样一个映射可以延拓到$w\in W$的Zariski开领域上，在上面像$a^\#(x_j/x_i)$是正则的，于是我们可以找到$W$的一个开覆盖$W_k$以及态射$\alpha_k:W_k\to Z$使得$\varphi\circ \alpha_k=\psi|_{W_k}$.
+
+	我们将证明映射$\alpha_k$在交叠$W_i\cap W_j$上相容，进而定义了一个整个$W$上的态射，这就完成了我们的证明。
+
+	因为$\varphi$的限制$Z\setminus E\to \mathbb A_A^n\setminus V(x_1,\dots,x_n)$是一个同构，所以证明原像$\psi^{-1}(\mathbb A_A^n\setminus V(x_1,\dots,x_n))$在$W$中稠密就够了。但是从假设，$\psi^{-1}V(x_1,\dots,x_n)$在$W$中是一个Cartier除子。因此下面的引理就完成了证明。
+
+	\begin{lem}\label{lem:4.19}
+		如果$X\subset Y$是一个概形的Cartier子概形，则$Y\setminus X$在$Y$中稠密（作为概形而不仅仅是拓扑空间）。
+	\end{lem}
+
+	\begin{proof}
+		我们可以假设$Y$是仿射的，记$Y=\spec A$，于是$X=V(f)$，其中$f\in A$是一个非零因子。说存在一个逆紧闭子概形$Y'$包含$Y\setminus X$，就是说局部化映射$A\to A_f$经由$A/I(Y')$分解。但因为$f$是一个非零因子，局部化映射是一个单射。
+	\end{proof}
+	\let\qed\relax
 \end{proof}
 
+\begin{exe}\label{exe:4.20}
+	\begin{compactenum}[(a)]
+		\item 证明Lemma \ref{lem:4.19} 的结论对
+		\[
+			X=V(x)\subset Y=\spec K[x,y]/(xy,y^2)
+		\]
+		失效。
+		\item 更一般地证明，其在$Y$的所有局部主子概形中刻画了Cartier字概形。
+		\item 证明$\Bl_Y=\varnothing$ 当且仅当$\operatorname{supp} Y=\operatorname{supp} X$.
+	\end{compactenum}
+\end{exe}
 
-\[
-	X=V(x)\subset Y=\spec K[x,y]/(xy,y^2).
-\]
+Proposition \ref{pro:4.18} 的构造将产生所有仿射概形的爆破，只要我们理解了爆破是如何作用在子概形上，或更一般地，在拉回下。这直接来自于定义：
 
-\begin{lem}\label{lem:4.19}
-	如果$X\subset Y$是一个概形的Cartier子概形，则$Y\setminus X$在$Y$中稠密（作为概形而不仅仅是拓扑空间）。
-\end{lem}
+\begin{pro}\label{pro:4.21}
+	令$X$为任意概形，$Y\subset X$是一个子概形，而$\varphi:\Bl_Y(X)\to X$为$X$沿着$Y$的爆破。令$\nu:X'\to X$为任意态射，$Y'=\nu^{-1}(Y)\subset X'$. 如果$W$是原像$\pi_1^{-1}(X'\setminus Y')$在纤维积$X'\times_X \Bl_Y X$中的闭包，则$\pi_1:W\to X'$是$X'$沿着$Y'$的爆破。
+\end{pro}
 
 % p.168
+
+这个引理在$X'=X$的情况下已然足够有趣了，它断言了 \textit{$X\setminus Y$在$\Bl_Y X$中的原像是稠密的}。
+
+Proposition \ref{pro:4.21} 最经常应用于$X'\subset X$是一个闭子概形的情况。此时，$W$就是$\Bl_Y X$中原像$\varphi^{-1}(X'\setminus (X'\cap Y))$的闭包。这被称作$X'$在$\Bl_Y X$中的\textit{严格变换}或者\textit{真变换}. （完整的原像$\varphi^{-1}(X')\subset \Bl_Y X$被称作\textit{全变换}.）因此我们可以说，在爆破$\Bl_p \mathbb A_K^2$中，穿过原点$p\in \mathbb A_K^2$的直线们的真变换是不交的（注意到，直线的真变换同构于线本身，它们本该如此，因为原点是每条线上的一个Cartier子概形），以及，一个有结的曲线在结点的爆破在结点拉开的点上都是非奇异的。
+
+当$X'\subset X$是一个开子概形，Proposition \ref{pro:4.21} 就说明了爆破与基变换可交换，即
+\[
+	\varphi^{-1}(X')\cong \Bl_{X'\cap Y}X'\to X'.
+\]
+但正确的不止于此：因为$\varphi^{-1}(X'\setminus Y)$是稠密的，在$X$上\textit{只有一个}这样的同构。作为结论，如果$\pi:Z\to X$是一个态射，且我们假设有一个$X$的开覆盖，其中开集$U$在$X$上满足$\pi^{-1}U\cong \Bl_{U\cap Y}U$，则$Z\cong \Bl_Y X$. 简而言之：爆破是由局部确定的。
+
+\begin{proof}[Proposition \ref{pro:4.21} 的证明]
+	我们首先检查$Y'$的原像
+	\[
+		E'=\pi_1^{-1}(Y')\subset W
+	\]
+	是$W$的一个Cartier子概形。他当然是主的：其原像$E=\varphi^{-1}(Y)\subset \Bl_Y X$在$\Bl_Y X$中是局部主的，同时$E'\subset W$就是 \nottran
+
+	\[
+		h=\nu\circ f:T\to X
+	\]
 
 % p.169
 
 \[
 	\tilde g:T\to X'\times_X \operatorname{Bl}_Y X
 \]
+\end{proof}
+
+\nottran 
 
 \[
 	\alpha_{(f_1,\dots,f_n)}:U=X\setminus V(f_1,\dots,f_n)\longrightarrow \mathbb P_A^{n-1};
 \]
 
+\begin{pro}\label{pro:4.22}
+令$X=\spec A$是一个仿射概形，再令
 \[
 	Y=V(f_1,\dots,f_n)\subset X
 \]
-
+是一个闭子概形。$Y$在$X$中的爆破是态射
 \[
-	\alpha_{(f_1,\dots,f_n)}:X\setminus Y\longrightarrow \mathbb P_A^{n-1}.
+	\alpha_{(f_1,\dots,f_n)}:X\setminus Y\longrightarrow \mathbb P_A^{n-1}
 \]
+的图像在$X\times_A \mathbb P_A^{n-1}=\mathbb P_A^{n-1}$中的闭包。
+\end{pro}
 
-\[
-	\begin{aligned}
-		A\left[x_1,\dots,x_n\right] & \longrightarrow A,\\
-		x_i &\longmapsto f_i.
-	\end{aligned}
-\]
 
-\[
-	\alpha_{(x_1,\dots,x_n)}:\mathbb A_A^n\setminus V(x_1,\dots,x_n)\longrightarrow \mathbb P_A^{n-1}.
-\]
+\begin{proof}
+	
+	\[
+		\begin{aligned}
+			A\left[x_1,\dots,x_n\right] & \longrightarrow A,\\
+			x_i &\longmapsto f_i.
+		\end{aligned}
+	\]
+	
+	\[
+		\alpha_{(x_1,\dots,x_n)}:\mathbb A_A^n\setminus V(x_1,\dots,x_n)\longrightarrow \mathbb P_A^{n-1}.
+	\]
+
+\end{proof}
+
 
 % p.170
+
+\paragraph*{作为$\proj$的爆破}\addcontentsline{toc}{subsubsection}{作为Proj的爆破}
 
 \[
 	\mathscr A=\bigoplus_{n=0}^\infty \mathscr I^n=\mathscr O_X\oplus \mathscr I\oplus \mathscr I^2\oplus \cdots
