@@ -210,24 +210,28 @@ Proposition \ref{pro:4.21} 最经常应用于$X'\subset X$是一个闭子概形�
 	\[
 		E'=\pi_1^{-1}(Y')\subset W
 	\]
-	是$W$的一个Cartier子概形。他当然是主的：其原像$E=\varphi^{-1}(Y)\subset \Bl_Y X$在$\Bl_Y X$中是局部主的，同时$E'\subset W$就是 \nottran
+	是$W$的一个Cartier子概形。他当然是主的：其原像$E=\varphi^{-1}(Y)\subset \Bl_Y X$在$\Bl_Y X$中是局部主的，同时$E'\subset W$就是它对投影$\pi_2:W\to \Bl_Y X$的原像。此外，因为$W$相伴素理想们正是$X'$并不包含$Y'$的理想的相伴素理想们，则$E$在$\Bl_Y X$中的局部方程并不能拉回到$W$上的一个零因子。
 
+	接着，我们必须验证$W$有万有性质。假设$T$为任意概形，$f:T\to X'$是任意态射使得$Y'$在$T$中的原像$f^{-1}(Y')$是一个Cartier子概形。特别地，因为$f^{-1}(Y')\subset T$是Cartier的，没有$T$的分支或嵌入分支映射到$Y'$，因此$f^{-1}(X'\setminus Y')$在$T$的闭包是整个$T$.
+
+	我们须证明，$f$可以提升为一个态射$g:T\to W$（即，存在一个态射$g:T\to W$使得满足复合$\pi_1\circ g=f$）。分三步来。首先，令
 	\[
 		h=\nu\circ f:T\to X
 	\]
-
+	为$f$与态射$\nu:X'\to X$的复合，因为原像$h^{-1}(Y)=f^{-1}(Y')$是Cartier的，从爆破$\Bl_Y X\to X$的万有性质，$h$可以提升为一个态射$\tilde h:T\to \Bl_Y X$.
 % p.169
-
-\[
-	\tilde g:T\to X'\times_X \operatorname{Bl}_Y X
-\]
+	接着，映射$f:T\to X'$和$\tilde h:T\to \Bl_Y X$给出了映射
+	\[
+		\tilde g:T\to X'\times_X \operatorname{Bl}_Y X,
+	\]
+	其与投影$\pi_1:X'\times_X \Bl_Y X\to X'$的复合为$f$. 最后，因为$\tilde g$将原像$f^{-1}(X'\setminus Y')$映射到$W$，$f^{-1}(X'\setminus Y')$在$T$中的闭包就是$T$，于是映射$\tilde g:T\to X'\times_X \operatorname{Bl}_Y X$经由$W$在$X'\times_X \Bl_Y X$的含入映射分解，其给出了想要的映射$g:T\to W$.
 \end{proof}
 
-\nottran 
-
+我们现在已经到了沿着任意闭子概形爆破一个仿射概形的地方了。若$X=\spec A$以及$f_1,\dots,f_n\in A$，则$(f_1,\dots,f_n)$定义了一个态射
 \[
 	\alpha_{(f_1,\dots,f_n)}:U=X\setminus V(f_1,\dots,f_n)\longrightarrow \mathbb P_A^{n-1};
 \]
+更准确地，$(f_1,\dots,f_n)$定义了一个映射$\mathscr O_X^n\to \mathscr O_X$，其将$(a_1,\dots,a_n)$映射为$\sum a_if_i$，正为一个$U$上的满射。
 
 \begin{pro}\label{pro:4.22}
 令$X=\spec A$是一个仿射概形，再令
@@ -241,43 +245,54 @@ Proposition \ref{pro:4.21} 最经常应用于$X'\subset X$是一个闭子概形�
 的图像在$X\times_A \mathbb P_A^{n-1}=\mathbb P_A^{n-1}$中的闭包。
 \end{pro}
 
-
 \begin{proof}
-	
+	考虑由环同态
 	\[
 		\begin{aligned}
 			A\left[x_1,\dots,x_n\right] & \longrightarrow A,\\
-			x_i &\longmapsto f_i.
+			x_i &\longmapsto f_i
 		\end{aligned}
 	\]
-	
+	给出的嵌入$X\hookrightarrow \mathbb A_A^n=\spec A[x_1,\dots,x_n]$.
+	注意到在这个嵌入下我们有$X\cap V(x_1,\dots,x_n)=Y$. 从Proposition \ref{pro:4.21}, $X$沿着$Y$的爆破是一个$X$在$\mathbb A_A^n$沿着$V(x_1,\dots,x_n)$的爆破$Z$中的真变换。从Proposition \ref{pro:4.18}，另一方面，$Z$$\mathbb A_A^n$沿着$V(x_1,\dots,x_n)$的爆破$Z$是映射
 	\[
-		\alpha_{(x_1,\dots,x_n)}:\mathbb A_A^n\setminus V(x_1,\dots,x_n)\longrightarrow \mathbb P_A^{n-1}.
+		\alpha_{(x_1,\dots,x_n)}:\mathbb A_A^n\setminus V(x_1,\dots,x_n)\longrightarrow \mathbb P_A^{n-1}
 	\]
-
+	的图像$\Gamma$的闭包。因为$\alpha_{(f_1,\dots,f_n)}$的图像就是$\Gamma$与$X\subset \mathbb A_A^n$的原像的交，其闭包为$X\subset \mathbb A_A^n$在$Z$中的真变换，于是得到了结论。
 \end{proof}
 
+在这个命题中，我们限制了子概形$Y\subset X$是由有限多函数$f_i$所定义的，但这并不必要。读者可以检查所有的事情对无限集也成立（尽管态射映到了无限维射影空间）。
 
 % p.170
 
-\paragraph*{作为$\proj$的爆破}\addcontentsline{toc}{subsubsection}{作为Proj的爆破}
+\paragraph*{作为$\proj$的爆破}\addcontentsline{toc}{subsubsection}{作为Proj的爆破} 我们已经证明了一个仿射概形沿着一个闭子概形的爆破的存在性。我们已然可以用黏合去推出一般情况下爆破的存在性。然而，通过全局$\proj$，存在一个更优雅的方式来定义爆破，一步到位。
 
-\[
+\begin{thm}\label{thm:4.23}
+	令$X$为一个概形，$Y\subset X$是一个闭子概形。令$\mathscr I=\mathscr I_{Y,X}\subset \mathscr O_X$为$Y$在$X$中的理想层。若$\mathscr A$是分次$\mathscr O_X$-代数层
+	\[
 	\mathscr A=\bigoplus_{n=0}^\infty \mathscr I^n=\mathscr O_X\oplus \mathscr I\oplus \mathscr I^2\oplus \cdots
-\]
+	\]
+	（其中第$k$个直和项去做$\mathscr A$的$k$-次分次部分），则概形$\proj(\mathscr A)\to X$是$X$沿着$Y$的爆破。
+\end{thm}
 
+\paragraph*{注记：}这个构造时常导致记号上的混淆：若$f\in \mathbb O_X(U)$实在$Y$上为零的正则函数，记号``$f$''既可以被用来标记$\mathscr A_0=\mathscr O_X$的截面或$\mathscr A_1=\mathscr I$的截面，它们是$\mathscr A$两个不同的截面。为避免这点，我们将经常将$\mathscr A$实现为层
 \[
 	\mathscr O_X[t]=\bigoplus_{n=0}^\infty t^n\mathscr O_X,
 \]
-记
+的一个子层，记
 \[
 	\mathscr A=\mathscr O_X\oplus t\mathscr I\oplus t^2\mathscr I^2\oplus \cdots.
 \]
+我们将在下面的证明中用这个记号。
 
+\begin{proof}
+	我们必须证明态射
 \[
 	\varphi:B=\proj(\mathscr A)\to X
 \]
+满足刻画爆破的两个性质：$Y$在$B$中的原像$\varphi^{-1}Y$是Cartier的，以及任意态射$f:Z\to X$使得$f^{-1}Y$是Cartier的都可以唯一地经由$B$分解。我们将记$\mathscr I$为$Y$在$X$中的理想层$\mathscr I_Y$.
 
+\nottran
 \[
 	\begin{aligned}
 	\mathscr I\mathscr A&=\mathscr I\cdot \mathscr O_B\oplus \mathscr I\cdot \mathscr I\oplus \mathscr I\cdot \mathscr I^2 \oplus \cdots\\
@@ -295,6 +310,12 @@ Proposition \ref{pro:4.21} 最经常应用于$X'\subset X$是一个闭子概形�
 	f^*\mathscr I=\mathscr I\otimes_{\mathscr O_X}\mathscr O_Z\to \mathscr I\cdot \mathscr O_Z
 \]
 
+\end{proof}
+
+\begin{exe}\label{exe:4.24}
+	证明一个概形$X$在一个点$p\in X$的爆破$\Bl_p(X)$中的例外除子就是$X$在点$p$的射影化切锥$\mathbb PTC_p(X)$.
+\end{exe}
+
 \paragraph*{沿着正则子概形的爆破}\addcontentsline{toc}{subsubsection}{沿着正则子概形的爆破}
 
 \[
@@ -303,39 +324,47 @@ Proposition \ref{pro:4.21} 最经常应用于$X'\subset X$是一个闭子概形�
 
 % p.172
 
-\[
-	B=A[xt,yt]\subset A[t].
-\]
+\begin{pro}\label{pro:4.25}
+令$A$是一个Noether环，$x$, $y\in A$，令$B$是Rees代数
+	\[
+		B=A[xt,yt]\subset A[t].
+	\]
+若$x$, $y\in A$是一个正则列，则
+	\[
+		B\cong A[X,Y]/(yX-xY)
+	\]
+通过映射$X\mapsto xt$, $Y\mapsto yt$.
+\end{pro}
 
-\[
-	B\cong A[X,Y]/(yX-xY)
-\]
+\begin{proof}
 
-\[
-	\begin{aligned}
-		A[x^{-1}][X',Y] & \longrightarrow A[x^{-1}][t],\\
-		X' &\longmapsto t,\\
-		Y  &\longmapsto yt.
-	\end{aligned}
-\]
+	\[
+		\begin{aligned}
+			A[x^{-1}][X',Y] & \longrightarrow A[x^{-1}][t],\\
+			X' &\longmapsto t,\\
+			Y  &\longmapsto yt.
+		\end{aligned}
+	\]
+	
+	\[
+		M:=\frac{(yX-xY):(x)}{(yX-xY)}=0,
+	\]
+	
+	\[
+		0\xrightarrow{\qquad\quad\quad} A \xrightarrow{
+		\begin{pmatrix}
+			-x\\ yX-xY
+		\end{pmatrix}}A^2
+		\xrightarrow{\begin{pmatrix}
+			yX-xY& x
+		\end{pmatrix}}A.
+	\]
+	
+	\[
+		\frac{(x):(yX-xY)}{(x)},
+	\]	
 
-\[
-	M:=\frac{(yX-xY):(x)}{(yX-xY)}=0,
-\]
-
-\[
-	0\xrightarrow{\qquad\quad\quad} A \xrightarrow{
-	\begin{pmatrix}
-		-x\\ yX-xY
-	\end{pmatrix}}A^2
-	\xrightarrow{\begin{pmatrix}
-		yX-xY& x
-	\end{pmatrix}}A.
-\]
-
-\[
-	\frac{(x):(yX-xY)}{(x)},
-\]
+\end{proof}
 
 % p.173
 
