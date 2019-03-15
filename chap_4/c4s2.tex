@@ -254,7 +254,7 @@ Proposition \ref{pro:4.21} 最经常应用于$X'\subset X$是一个闭子概形�
 		\end{aligned}
 	\]
 	给出的嵌入$X\hookrightarrow \mathbb A_A^n=\spec A[x_1,\dots,x_n]$.
-	注意到在这个嵌入下我们有$X\cap V(x_1,\dots,x_n)=Y$. 从Proposition \ref{pro:4.21}, $X$沿着$Y$的爆破是一个$X$在$\mathbb A_A^n$沿着$V(x_1,\dots,x_n)$的爆破$Z$中的真变换。从Proposition \ref{pro:4.18}，另一方面，$Z$$\mathbb A_A^n$沿着$V(x_1,\dots,x_n)$的爆破$Z$是映射
+	注意到在这个嵌入下我们有$X\cap V(x_1,\dots,x_n)=Y$. 从Proposition \ref{pro:4.21}, $X$沿着$Y$的爆破是一个$X$在$\mathbb A_A^n$沿着$V(x_1,\dots,x_n)$的爆破$Z$中的真变换。从Proposition \ref{pro:4.18}，另一方面，$\mathbb A_A^n$沿着$V(x_1,\dots,x_n)$的爆破$Z$是映射
 	\[
 		\alpha_{(x_1,\dots,x_n)}:\mathbb A_A^n\setminus V(x_1,\dots,x_n)\longrightarrow \mathbb P_A^{n-1}
 	\]
@@ -292,35 +292,47 @@ Proposition \ref{pro:4.21} 最经常应用于$X'\subset X$是一个闭子概形�
 \]
 满足刻画爆破的两个性质：$Y$在$B$中的原像$\varphi^{-1}Y$是Cartier的，以及任意态射$f:Z\to X$使得$f^{-1}Y$是Cartier的都可以唯一地经由$B$分解。我们将记$\mathscr I$为$Y$在$X$中的理想层$\mathscr I_Y$.
 
-\nottran
+为看到$Y$在$B$中的原像是Cartier的，回忆第 \ref{s:1.3.1} 节，$\varphi^{-1}Y$是$B$的由理想层$\mathscr I\mathscr O_B$定义的子概形。因为结构层$\mathscr O_B$是关联于分次$\mathscr A$-模层$\mathscr A$的层，我们看到$\mathscr I\mathscr O_B$是关联于分次$\mathscr A$-模
 \[
 	\begin{aligned}
 	\mathscr I\mathscr A&=\mathscr I\cdot \mathscr O_B\oplus \mathscr I\cdot \mathscr I\oplus \mathscr I\cdot \mathscr I^2 \oplus \cdots\\
 	&=\mathscr I\oplus \mathscr I^2 \oplus \mathscr I^3\oplus \cdots
 	\end{aligned}
 \]
-
+的层，其中$d$-次分量为$\mathscr I\cdot \mathscr I^d=\mathscr I^{d+1}$. 这是分次模层
 \[
 	\mathscr A(1)=\mathscr O\oplus \mathscr I \oplus \mathscr I^2\oplus \cdots
 \]
+的截断（同样，$d$-次分量为$\mathscr I^{d+1}$）因此，从 Exercise \ref{exe:3.46}，$\mathscr I\mathscr O_B=\mathscr O_B(1)$是可逆层。
 
 % p.171
 
+剩下还需证明，若$f:Z\to X$是一个映射使得$f^{-1}Y$是Cartier的，则$f$可以经由$B$唯一分解。简单起见，我们将假设$\mathscr I$是凝聚层。我们下面将$B$实现为$\mathbb P(\mathscr I)=\proj \operatorname{Sym}(\mathscr I)$，然后通过给出一个$Z$到$\mathbb P(\mathscr I)$的映射，其像包含于$B$中，来产生希望的$Z$到$B$的映射。
+
+映射$\operatorname{Sym}_d(\mathscr I)\to \mathscr I^d$给出了一个满射$\operatorname{Sym}(\mathscr I)\to \mathscr A$. 它的核是$\mathscr A$的一个分次理想层，于是就像第 \ref{s:3.2.2} 中那样，可将$B=\proj \mathscr A$与$\mathbb P(\mathscr I)$的一个闭子概形等同。
+
+因为$f^{-1}Y$是Cartier的，其理想层$\mathscr I\cdot \mathscr O_Z$是可逆的。因此，自然的满射
 \[
 	f^*\mathscr I=\mathscr I\otimes_{\mathscr O_X}\mathscr O_Z\to \mathscr I\cdot \mathscr O_Z
 \]
+如同Therorem \ref{thm:3.44} 中那样对应于一个映射$\alpha:Z\to \mathbb P(\mathscr I)$. 再者，从 Lemma \ref{lem:4.19}，$f^{-1}Y$的补集在$Z$中稠密。因为$\varphi$是$\varphi^{-1}Y$上的一个同构，于是$\alpha(Z\setminus f^{-1}Y)$被包含于$B$中，进而因此$\alpha(Z)$整个就被包含在$B$中。因为$\alpha$因此就是希望的从$Z$到$B$的映射。
 
+$f=\varphi\alpha$以及$\alpha$的唯一性都来自于$Z\setminus f^{-1}Y$在$Z$中稠密，以及Exercise \ref{exe:3.24} 的最后一句话。
 \end{proof}
+
+简单起见，我们假设了理想层$\mathscr I$是凝聚的（而不仅仅拟凝聚），拟凝聚的情况可以用 \ref{thm:3.44} 的一个直接推广来处理。
+
+爆破给了我们另一种方式来将射影化切锥解释为一个概形，我们将在本节后面讨论。
 
 \begin{exe}\label{exe:4.24}
 	证明一个概形$X$在一个点$p\in X$的爆破$\Bl_p(X)$中的例外除子就是$X$在点$p$的射影化切锥$\mathbb PTC_p(X)$.
 \end{exe}
 
-\paragraph*{沿着正则子概形的爆破}\addcontentsline{toc}{subsubsection}{沿着正则子概形的爆破}
-
+\paragraph*{沿着正则子概形的爆破}\addcontentsline{toc}{subsubsection}{沿着正则子概形的爆破} 正如我们在Theorem \ref{thm:4.23} 前面提到过的，在实践中，爆破的构造可能不像它看起来那么明确。理由是，即使给定了概形$X$和子概形$Y$的显示的方程，用明确的生成元和关系来表达\textit{Rees代数}
 \[
 	\mathscr A=\bigoplus_{n=0}^\infty t^n\mathscr I_{Y,X}^n\subset \mathscr O_X[t]
 \]
+可能也并不显然。（生成元是清楚的，若我们局部地知道了理想层$\mathscr I_{Y,X}$的生成元；当我们已经知道所有关系时，它们可能是麻烦的，这是心照不宣的。）但是，当子概形$Y\subset X$是一个正则子概形，Rees代数有一个很好的描述。我们将首先陈述$Y$的余维数为$2$的情况。
 
 % p.172
 
@@ -368,31 +380,37 @@ Proposition \ref{pro:4.21} 最经常应用于$X'\subset X$是一个闭子概形�
 
 % p.173
 
+上面的证明的核心是，若$I$由一个长度为$2$的正则列所生成，则Rees代数
 \[
 	A\oplus I \oplus I^2\oplus \cdots
 \]
-
+同构于对称代数
 \[
 	\operatorname{Sym}_A(I)
 \]
-
+而这又由$2\times 2$矩阵
 \[
 	\begin{pmatrix}
 		x&y\\
 		X&Y
-	\end{pmatrix}.
+	\end{pmatrix}
 \]
+的行列式所定义。类似的命题在对更大的正则列的时候也对：
 
+\begin{exe}\label{exe:4.26}
+	若$I=(x_1,\dots,x_n)\subset A$由一个正则列所生成，则
 \[
 	A\oplus I \oplus I^2\oplus \cdots\cong A[X_1,\dots,X_n]/J
 \]
-
+其中$J$有矩阵
 \[
 	\begin{pmatrix}
 		x_1&\dots&x_n\\
 		X_1&\dots&X_n
-	\end{pmatrix}.
+	\end{pmatrix}
 \]
+的$2\times 2$子式所生成。
+\end{exe}
 
 \subsection{一些经典爆破构造}\label{s:4.2.2}
 
@@ -464,3 +482,141 @@ Proposition \ref{pro:4.21} 最经常应用于$X'\subset X$是一个闭子概形�
 \subsection{沿着非约态概形的爆破}\label{s:4.2.3}
 
 \paragraph*{一个双重点的爆破}\addcontentsline{toc}{subsubsection}{一个双重点的爆破}
+
+\[
+	A=K[x,y]\oplus I\oplus I^2\oplus \cdots
+\]
+
+\[
+	Z=\proj K[x,y][A,B]/(yA-x^2B)
+\]
+
+\[
+	U_A=\spec K[x,y][b]/(y-x^2b)
+\]
+
+\[
+	U_B=\spec K[x,y][a]/(ya-x^2)
+\]
+
+\begin{pro}\label{pro:4.40}
+	$Z=\Bl_\Gamma(\mathbb A_K^2)$在其奇异点$P$的爆破$Z'$是$Z_2$.
+\end{pro}
+
+\inclugra{4.png}
+
+\[
+	\Bl_{f_1^{-1}(Y_2)}Z_1 \cong \Bl_{f_2^{-1}(Y_1)}Z_2
+\]
+
+\[
+	\Gamma=V(x^3,xy,y^2)
+\]
+
+\[
+	X=\proj K[x,y][A,B,C]/I
+\]
+
+\[
+	I=(yA-x^2B,yB-xC,AC-xB^2)
+\]
+
+\[
+	I_n=(x^{n+1},x^{n-1}y,x^{n-2}y^2,\dots,xy^{n-1},y^n)=
+	(x,y)^n\cap (x^{n+1},y).
+\]
+
+\[
+	y^2=x^3+ax+b
+\]
+
+\[
+	j(C_{a,b})=1728\frac{4a^3}{4a^3+27b^2}
+\]
+
+\[
+	\begin{aligned}
+		j:\mathbb A_K^2\setminus \{Q\}&\longrightarrow \mathbb P_K^1 \\
+		(a,b)&\longmapsto j(C_{a,b})
+	\end{aligned}
+\]
+
+\[
+	\varphi_2:Z_2=\Bl_{\Omega_2}(\mathbb A_K^2)\to \mathbb A_K^2
+\]
+
+\[
+	y^2=x^3+\alpha tx+\beta t.
+\]
+
+\subsection{算术概形的爆破}\label{s:4.2.4}
+
+\[
+	\bigoplus_{n=0}^\infty I^n=(\zz[x])[A,B]/(xA-3B).
+\]
+
+\[
+	W_A=\spec \zz[x][b]/(x-3b)=\spec \zz[b]=\mathbb A_\zz^1,
+\]
+
+\[
+	W_B=\spec \zz[x][a]/(ax-3),
+\]
+
+\[
+	Z'=U_X\cup W_A=\spec \zz[y]\bigcup_{\spec \zz[y,\frac 1y,\frac 13]=\spec \zz[b,\frac 1b,\frac 13]}\spec \zz[b]
+\]
+
+\[
+	C=\proj \zz[S,T,U]/(ST-3U^2)\subset \mathbb P_\zz^2=\proj \zz[S,T,U].
+\]
+
+\inclugra{5.png}
+
+\[
+	U_X=\spec \zz[y]\longrightarrow U_T=\spec \zz \left[\frac ST,\frac UT\right]\bigg / \left(\frac ST-3\left(\frac UT\right)^2\right)=\spec \zz \left[\frac UT\right]
+\]
+
+\[
+	W_A=\spec \zz[b]\longrightarrow U_S=\spec \zz \left[\frac TS,\frac US\right]\bigg / \left(\frac TS-3\left(\frac US\right)^2\right)=\spec \zz \left[\frac US\right]
+\]
+
+\[
+	W_B=\spec \zz[a,x]/(ax-3)\longrightarrow U_U=\spec \zz[\frac SU,\frac TU]\bigg / \left(\frac SU \frac TU-3\right)
+\]
+
+\[
+	\Gamma = V(9,X)\subset \mathbb P_\zz^1=\proj \zz[X,Y]
+\]
+
+\[
+	\Omega=V(3,X^2)\subset \mathbb P_\zz^1=\proj \zz[X,Y].
+\]
+
+\[
+	Z=\{[a,b,c,d]\,:\,\operatorname{rank}\begin{pmatrix}
+		a&c&3d\\ b&d&a
+	\end{pmatrix}\leq 1\}\subset \mathbb P_\zz^3;
+\]
+
+\[
+	A\longrightarrow B\longrightarrow C.
+\]
+
+\[
+	d\pi_P:T_P(A)\longrightarrow T_{(11,11\sqrt 3)}(B)
+\]
+
+\[
+	d\pi_Q:T_Q(A)\longrightarrow T_{(11,11\sqrt 3)}(B)
+\]
+
+\[
+	d\eta_P:T_P(A)\longrightarrow T_{(11,121\sqrt 3)}(B)
+\]
+
+% p.189
+
+\[
+	d\eta_Q:T_Q(A)\longrightarrow T_{(11,121\sqrt 3)}(B)
+\]
