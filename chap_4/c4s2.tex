@@ -451,23 +451,67 @@ $f=\varphi\alpha$以及$\alpha$的唯一性都来自于$Z\setminus f^{-1}Y$在$Z
 
 \inclugra{2.png}
 
-\[
-	\varphi:\Bl_L \mathbb A_K^3=\proj K[x,y,z][A,B]/(xB-zA)\longrightarrow \spec K[x,y,z]=\mathbb A_K^3
-\]
+现在，那$Q$沿着$L$的爆破$\Bl_L Q\to Q$是什么呢？首先，注意到$L$除了在点$p$，处处都是$Q$的Cartier子概形（$p$是$Q$的一个奇异点，但不是$L$的）。于是，爆破$\Bl_L Q\to Q$在$Q\setminus \{p\}$将是个同构，但本身不是同构。再者，因为$L$在关于点$p$的爆破$\tilde Q=\Bl_pQ\to B$中的原像$\psi^{-1}(L)\subset \tilde Q$是Cartier的，映射$\psi:\tilde Q\to Q$必须经由爆破$\Bl_L Q\to Q$分解。
+到目前为止，读者还不会惊讶地发现，事实上，这两个爆破是相同的！我们将验证留作以下习题。
 
-\[
+\begin{exe}\label{exe:4.28}
+	证明，$\bba^3_K$沿着$L$的爆破$\Bl_L\bba_K^3$可以实现为映射
+	\[
+		\varphi:\Bl_L \mathbb A_K^3=\proj K[x,y,z][A,B]/(xB-zA)\longrightarrow \spec K[x,y,z]=\mathbb A_K^3
+	\]
+	（我们可以将其图像为，$\bba_K^3$中包含$L$的平面的不交并。）使用这个来描述爆破$\Bl_L Q\to Q$，然后证明作为$Q$-概形，其与$\Bl_p Q\to Q$同构。
+\end{exe}
+
+另一个令人惊喜的内涵丰富的例子是三维二次锥的爆破。
+
+\begin{exa}\label{exa:4.29}
+	现在考虑二次超平面
+	\[
 	X=V(xw-yz)\subset \spec K[x,y,z,w]=\mathbb A_K^4.
-\]
+	\]
+	$X$是一个非奇异二次曲面$Q=V(xw-yz)\subset \proj K[x,y,z,w]=\bbp_K^3$上的锥。我们想要考虑$X$沿着三个子簇的爆破：点$p=(0,0,0,0)$；平面$\Lambda_1=V(x=y=0)\subset X$；平面$\Lambda_2=V(x=z=0)\subset X$. 有趣的是，尽管三个爆破都是$X\setminus \{p\}$上的同构，但他们是三个不同的$X$-概形，此外爆破$\Bl_{\Lambda_1}X$和$\Bl_{\Lambda_1}X$虽然是同构的概形，但是作为$X$-概形并不同构。
+\end{exa}
 
-\[
-\Lambda_{1,\mu}=V(x-\mu z,y-\mu w)
-\]
+首先，令$\varphi:\tilde X\to X$为$X$在点$p$的爆破。这可以沿着与前一例子中的二次曲面在一点处的爆破大致相同的路线来描述：所有$X$上穿过点$p$的直线都变得不交了；$\tilde X$是非奇异的；例外除子是一个非奇异二次曲面，可以自然地等同于$Q\subset \bbp_K^3$.
 
-\[
-\Lambda_{2,\mu}=V(x-\mu y,z-\mu w)
-\]
+$X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 
-\inclugra{3.png}
+\begin{exe}\label{exe:4.30}
+	令$\varphi:X_1=\Bl_{\Lambda_1}X\to X$为$X$沿着平面$\Lambda_1$的爆破。证明下面的断言。
+	\begin{compactenum}[(a)]
+		\item 概形$X_1$非奇异。
+		\item 映射$\varphi_1$在$X\setminus \{p\}$上是一个同构。
+		\item $X_1$在点$p$的纤维$C=\varphi_1^{-1}(p)$同构于$\bba_K^1$.
+		\item 例外除子$E=\varphi_1^{-1}(\Lambda_1)$，其同样也是$\Lambda_1$在$X_1$中的真变换，同构于$\Lambda_1\cong \bba_K^2$在点$p$的爆破。
+		\item 更一般地，平面
+			\[
+				\Lambda_{1,\mu}=V(x-\mu z,y-\mu w)
+			\]
+			的真变换$\tilde \Lambda_{1,\mu}$，由$X$的顶点$p$和与$Q$的一条直线相交的直线们张成，与他们的总变换一致；他们同构于$\Lambda_{1,\mu}$在点$p$的爆破，并沿着曲线$C$两两相交。\nottran
+		\item 相反地，平面
+			\[
+				\Lambda_{2,\mu}=V(x-\mu y,z-\mu w)
+			\]
+			的原像$\varphi^{-1}(\Lambda_{2,\mu})$，由$X$的顶点$p$和与$Q$的另一条直线相交的直线们张成，它有两个不可约分支：真变换$\tilde \Lambda_{2,\mu}$和曲线$C$.（特别地，它们都不是$X$的Cartier子概形。）真变换$\tilde \Lambda_{2,\mu}$同构地映到平面$\Lambda_{2,\mu}$，它与$X_1$不交；因此我们可以尝试通过使得平面们$\Lambda_{2,\mu}$不交来图像化$X_1$. \nottran
+
+			\inclugra{3.png}
+	\end{compactenum}
+\end{exe}
+
+因为平面$\Lambda_1$和$\Lambda_2$的原像都是$\tilde X$的Cartier子概形（它们都在非奇异概形$\tilde X$中纯余维数$1$），爆破$\tilde X=\Bl_pX\to X$经由每个爆破$X_i=\Bl_{\Lambda_i}X\to X$分解。实际上：
+
+\begin{exe}\label{exe:4.31} 
+	\begin{compactenum}[(a)]
+		\item 证明作为$X$概形，$\tilde X=X_1\times_X X_2$.
+		\item 证明诱导的映射$\psi_i:\tilde X\to X_i$就是$X_i$沿着曲线$C$的爆破。
+	\end{compactenum}
+\end{exe}
+
+概形$X_i$们作为$X$-概形当然并不同构，因为$\Lambda_2$在$X_1$的原像并不是Cartier的，反之亦然，虽然它们作为$K$-概形同构（$X$有一个自同构交换平面$\Lambda_1$和$\Lambda_2$）。类似地，它们并不与$\tilde X$作为$X$-概形同构，因为$\Lambda_1$和$\Lambda_2$的原像都在$\tilde X$中是Cartier的。
+
+\begin{exe}\label{exe:4.32} 
+	证明实际上$X_1$和$X_2$作为$K$-概形也不同构于$\tilde X$.（提示：一种法子是去证明$X_i$并不包含在$K$上逆紧的二维子概形。）
+\end{exe}
 
 \[
 	M=\Hom(V,W)=\left\{\begin{pmatrix}x&y\\z&w\end{pmatrix}\right\}.
@@ -630,4 +674,33 @@ $f=\varphi\alpha$以及$\alpha$的唯一性都来自于$Z\setminus f^{-1}Y$在$Z
 
 \[
 	d\eta_Q:T_Q(A)\longrightarrow T_{(11,121\sqrt 3)}(B)
+\]
+
+\[
+	\begin{aligned}
+		&C_1=\proj \zz[X,Y,Z]/(XY-3Z^2),&&C_2=\proj \zz[X,Y,Z]/(XY-9Z^2)\\
+		&C_3=\proj \zz[X,Y,Z]/(XY-27Z^2),&&C_4=\proj \zz[X,Y,Z]/(XY-81Z^2)
+	\end{aligned}
+\]
+
+\[
+	S=\spec \zz[\frac 13]=\spec \zz\setminus\{(3)\}\subset \spec \zz
+\]
+
+% p.190
+
+\[
+	C_n=\proj \zz[X,Y,Z]/(XY-3^nZ^2).
+\]
+
+\subsection{企划：作为爆破的三次和四次曲面}\label{s:4.2.5}
+
+\[
+	Q_1=V(X^2+Y^2-Z^2-W^2)\quad \text{和}\quad Q_2=V(X^2+Y^2+Z^2-W^2)
+\]
+
+% p.191
+
+\[
+	\bbp_K^2\setminus \Gamma\to \bbp_K^3,
 \]
