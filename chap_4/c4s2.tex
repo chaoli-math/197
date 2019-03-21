@@ -12,12 +12,12 @@
 
 % p.163
 
-下面，我们将假设读者熟悉经典语境中的经典的爆破，即簇沿着一个非奇异子簇的爆破。（这个材料在许多文本中被详细地讨论了，比如Harria [1995], Hartshorn [1977, Chapter 1]和Shafarevich [1974].）在最简单的情况中，比如对一个代数闭域$K$上的仿射平面中的一个约态点爆破，爆破映射将与经典的情形一模一样。我们从复习一个例子开始，对平面上原点的爆破，来看如何将通过粘起来定义的经典的爆破同样带到域上的概形范畴。推广这个到任意概形$X$沿着任意闭子概形$Y\subset X$的爆破只是以足够自然的方式表达这种标准构造的问题。在下面的小节中，我们将给出几个一般的爆破的刻画：一个定义、两个构造以及一个在一些特殊例子中的描述，比如一个概形沿着一个正则子概形的爆破（Definition \ref{defi:4.15}）。
+下面，我们将假设读者熟悉经典语境中的经典的爆破，即簇沿着一个非奇异子簇的爆破。（这个材料在许多文本中被详细地讨论了，比如Harria [1995], Hartshorn [1977, Chapter 1]和Shafarevich [1974].）在最简单的情况中，比如对一个代数闭域$K$上的仿射平面中的一个约态点爆破，爆破映射将与经典的情形一模一样。我们从复习一个例子开始，对平面上原点的爆破，来看如何将通过粘起来定义的经典的爆破同样带到域上的概形范畴。将此推广到任意概形$X$沿着任意闭子概形$Y\subset X$的爆破只是以足够自然的方式表达这种标准构造的问题。在下面的小节中，我们将给出几个一般的爆破的刻画：一个定义、两个构造以及一个在一些特殊例子中的描述，比如一个概形沿着一个正则子概形的爆破（Definition \ref{defi:4.15}）。
 
 \paragraph*{例子：平面的爆破}\addcontentsline{toc}{subsubsection}{例子：平面的爆破}
 
 \begin{exa}\label{exa:4.14}
-	我们从域$K$上的仿射平面$\mathbb A_K^2=\spec K[x,y]$的原点的爆破$Z$开始。它可以由最多两个开集的并所描述，其中每个都同构于$\mathbb A_K^2$：我们令$U'=\spec K[x',y']$和$U''=\spec K[x'',y'']$，然后考虑与映射$\varphi':U'\to \mathbb A_K^2$和$\varphi'':U''\to \mathbb A_K^2$对偶的环同态
+	我们从域$K$上的仿射平面$\mathbb A_K^2=\spec K[x,y]$对原点的爆破$Z$开始。它可以由最多两个开集的并所描述，其中每个都同构于$\mathbb A_K^2$：我们令$U'=\spec K[x',y']$和$U''=\spec K[x'',y'']$，然后考虑与映射$\varphi':U'\to \mathbb A_K^2$和$\varphi'':U''\to \mathbb A_K^2$对偶的环同态
 	\[
 	\begin{aligned}
 		(\varphi')^\#:K[x,y]&\longrightarrow K[x',y']&\quad \text{and}\qquad (\varphi'')^\#:K[x,y]&\longrightarrow K[x'',y'']\\
@@ -54,7 +54,7 @@
 
 % p.164
 
-一种理解这个构造的方式是去观察到，爆破的开集的坐标环被扩大了以分别加入$y'=y/x$和$x''=x/y$. 这导致了一系列结果。首先，$\mathbb A_K^2$上的函数对$x$, $y$在原点的补集上定义了一个映射$f:\mathbb A_K^2\setminus \{(0,0)\}\to \mathbb P_K^1$：在经典语言中，这是映射$(a,b)\mapsto [a,b]$，或者用更现代的语言，这是对应于由$(f,g)\mapsto xf+yg$给出的满射$\mathscr O\oplus \mathscr O\to \mathscr O$. 这个映射并不能延拓为$\mathbb A_K^2$上的一个正则映射，但是如果我们复合$f$与同构$Z\setminus E\cong \mathbb A_K^2\setminus \{(0,0)\}$，我们看到其确实延拓为了整个$Z$上的一个正则函数。这是因为由函数$x$和$y$（的拉回）生成的理想，在$Z$上是局部主理想（有一个非零因子生成），于是$x$和$y$有公共零点，进而我们可以将齐次矢量$[x,y]$出意它们的公共因子来延拓这个映射。在爆破中扩大坐标环的另一好处是其分离了穿过原点的曲线。即，如果$L$和$L'$是穿过$\mathbb A_K^2$原点的不同曲线，则$L\setminus \{(0,0)\}$和$L'\setminus \{(0,0)\}$的原像有着不同的闭包，如图所示（这些都是映射$f$的纤维）。
+一种理解这个构造的方式是去观察到，爆破的开集的坐标环被扩大了以分别加入$y'=y/x$和$x''=x/y$. 这导致了一系列结果。首先，$\mathbb A_K^2$上的函数对$x$, $y$在原点的补集上定义了一个映射$f:\mathbb A_K^2\setminus \{(0,0)\}\to \mathbb P_K^1$：在经典语言中，这是映射$(a,b)\mapsto [a,b]$，或者用更现代的语言，这是对应于由$(f,g)\mapsto xf+yg$给出的满射$\mathscr O\oplus \mathscr O\to \mathscr O$. 这个映射并不能延拓为$\mathbb A_K^2$上的一个正则映射，但是如果我们复合$f$与同构$Z\setminus E\cong \mathbb A_K^2\setminus \{(0,0)\}$，我们看到其确实延拓为了整个$Z$上的一个正则函数。这是因为由函数$x$和$y$（的拉回）生成的理想，在$Z$上是局部主理想（有一个非零因子生成），于是$x$和$y$有公共零点，进而我们可以将齐次矢量$[x,y]$除以它们的公共因子来延拓这个映射。在爆破中扩大坐标环的另一好处是其分离了穿过原点的曲线。即，如果$L$和$L'$是穿过$\mathbb A_K^2$原点的不同曲线，则$L\setminus \{(0,0)\}$和$L'\setminus \{(0,0)\}$的原像有着不同的闭包，如图所示（这些都是映射$f$的纤维）。
 \inclugra{1.png}
 同样地，如果我们有一条曲线$C\subset \mathbb A_K^2$在原点有一个结点，则$C$中原点的补集的原像在$Z$中非奇异，且交例外除子于两点。
 
@@ -64,7 +64,7 @@
 % p.165
 
 \begin{defi}\label{defi:4.15}
-	令$X$为任意概形，$Y\subset X$是一个子概形。我们成$Y$是一个$X$中的\textit{Cartier子概形}，如果其局部是单个非零因子的零点集，即，对任意的$p\in X$，$X$中存在一个$p$的仿射邻域$U=\spec A$和存在某个非零因子$f\in A$使得$Y\cap U=V(f)\subset U$. 更一般地，我们称$Y$是一个\textit{正则子概形}，如果其局部是$X$上函数的一个正则列\footnote{
+	令$X$为任意概形，$Y\subset X$是一个子概形。我们称$Y$是一个$X$中的\textit{Cartier子概形}，如果其局部是单个非零因子的零点集，即，对任意的$p\in X$，$X$中存在一个$p$的仿射邻域$U=\spec A$和存在某个非零因子$f\in A$使得$Y\cap U=V(f)\subset U$. 更一般地，我们称$Y$是一个\textit{正则子概形}，如果其局部是$X$上函数的一个正则列\footnote{
 		译者注：设$R$是一个交换环，则一族元素$f_1$, $\dots$, $f_r$被称为一个正则列，如果对每个$i$，$f_i$都是$R/(f_1,\dots,f_{i-1})$中的非零因子，且$R/(f_1,\dots,f_{r})\neq 0$.
 	}%
 	（regular sequence）的零点集。
@@ -81,7 +81,7 @@
 
 很清楚，这些性质唯一刻画了概形沿着一个子概形的爆破$\varphi:\Bl_Y(X)\to X$. 但并不清楚的是爆破的存在性，但我们下面会看到这确实存在。
 
-仿射情形的爆破可以以态射的图的闭包这种简单的方式来实现，我们将首先描述这个构造。我们从推广Example \ref{exa:4.14} 的构造到任意环上的仿射空间对原点的爆破开始。
+仿射情形的爆破可以以态射的图像的闭包来简单地实现，下面将首先描述这个构造。我们从推广Example \ref{exa:4.14} 的构造到任意环上的仿射空间对原点的爆破开始。
 
 \begin{exa}\label{exa:4.17}
 	令$A$为任意环，再令$\mathbb A_A^n=\spec A[x_1,\dots,x_n]$. 考虑概形
@@ -96,7 +96,7 @@
 	\[
 		(U_i)_{x_j}\cong (U_j)_{x_i}.
 	\]
-	因此我们可以构造一个概形$Z$，其是$U_i$的并且上面的开集被等同了。注意到，对应于含入$A[x_1,\dots,x_n]\hookrightarrow T_i$的态射$U_i\to \mathbb A_A^n$在交叠部分相容给出了一个自然的结构态射$\varphi:Z\to \mathbb A_A^n$.
+	因此我们可以构造一个概形$Z$，其是$U_i$的并且上面的开集被等同了。注意到，对应含入$A[x_1,\dots,x_n]\hookrightarrow T_i$的态射$U_i\to \mathbb A_A^n$在交叠部分相容给出了一个自然的结构态射$\varphi:Z\to \mathbb A_A^n$.
 \end{exa}
 
 这个例子展现了诸多 Example \ref{exa:4.14} 中描述的经典爆破的特性：
@@ -113,7 +113,7 @@
 			(a_1,\dots,a_n)&\longmapsto \sum a_ix_i.
 		\end{aligned}
 	\]
-	给出的，则$Z$是\textit{$\alpha$的图像在$\mathbb A_A^n\times_A \mathbb P_A^{n-1}=\mathbb P_A^{n-1}$中的闭包}。为看到这点，我们我们观察到$(U_i)_{x_i}\subset Z$为映射
+	给出的，则$Z$是 \textit{$\alpha$的图像在$\mathbb A_A^n\times_A \mathbb P_A^{n-1}=\mathbb P_A^{n-1}$中的闭包}。为看到这点，我们我们观察到$(U_i)_{x_i}\subset Z$为映射
 	\[
 		\alpha_{(x_1,\dots,x_n)}|_{(U_i)_{x_i}}:(U_i)_{x_i}\to (\mathbb P_A^{n-1})_{x_i}=\spec \left[\frac{x_1}{x_i},\dots,\frac{x_n}{x_i}\right]
 	\]
@@ -163,7 +163,7 @@
 
 	我们将证明映射$\alpha_k$在交叠$W_i\cap W_j$上相容，进而定义了一个整个$W$上的态射，这就完成了我们的证明。
 
-	因为$\varphi$的限制$Z\setminus E\to \mathbb A_A^n\setminus V(x_1,\dots,x_n)$是一个同构，所以证明原像$\psi^{-1}(\mathbb A_A^n\setminus V(x_1,\dots,x_n))$在$W$中稠密就够了。但是从假设，$\psi^{-1}V(x_1,\dots,x_n)$在$W$中是一个Cartier除子。因此下面的引理就完成了证明。
+	因为$\varphi$的限制$Z\setminus E\to \mathbb A_A^n\setminus V(x_1,\dots,x_n)$是一个同构，所以证明原像$\psi^{-1}(\mathbb A_A^n\setminus V(x_1,\dots,x_n))$在$W$中稠密足矣。但是从假设，$\psi^{-1}V(x_1,\dots,x_n)$在$W$中是一个Cartier除子。因此下面的引理就完成了证明。
 
 	\begin{lem}\label{lem:4.19}
 		如果$X\subset Y$是一个概形的Cartier子概形，则$Y\setminus X$在$Y$中稠密（作为概形而不仅仅是拓扑空间）。
@@ -315,7 +315,7 @@ Proposition \ref{pro:4.21} 最经常应用于$X'\subset X$是一个闭子概形�
 \[
 	f^*\mathscr I=\mathscr I\otimes_{\mathscr O_X}\mathscr O_Z\to \mathscr I\cdot \mathscr O_Z
 \]
-如同Therorem \ref{thm:3.44} 中那样对应于一个映射$\alpha:Z\to \mathbb P(\mathscr I)$. 再者，从 Lemma \ref{lem:4.19}，$f^{-1}Y$的补集在$Z$中稠密。因为$\varphi$是$\varphi^{-1}Y$上的一个同构，于是$\alpha(Z\setminus f^{-1}Y)$被包含于$B$中，进而因此$\alpha(Z)$整个就被包含在$B$中。因为$\alpha$因此就是希望的从$Z$到$B$的映射。
+如同Therorem \ref{thm:3.44} 中那样对应一个映射$\alpha:Z\to \mathbb P(\mathscr I)$. 再者，从 Lemma \ref{lem:4.19}，$f^{-1}Y$的补集在$Z$中稠密。因为$\varphi$是$\varphi^{-1}Y$上的一个同构，于是$\alpha(Z\setminus f^{-1}Y)$被包含于$B$中，进而因此$\alpha(Z)$整个就被包含在$B$中。因为$\alpha$因此就是希望的从$Z$到$B$的映射。
 
 $f=\varphi\alpha$以及$\alpha$的唯一性都来自于$Z\setminus f^{-1}Y$在$Z$中稠密，以及Exercise \ref{exe:3.24} 的最后一句话。
 \end{proof}
@@ -487,12 +487,12 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 			\[
 				\Lambda_{1,\mu}=V(x-\mu z,y-\mu w)
 			\]
-			的真变换$\tilde \Lambda_{1,\mu}$，由$X$的顶点$p$和与$Q$的一条直线相交的直线们张成，与他们的总变换一致；他们同构于$\Lambda_{1,\mu}$在点$p$的爆破，并沿着曲线$C$两两相交。\nottran
+			的真变换$\tilde \Lambda_{1,\mu}$，由$X$的顶点$p$和与$Q$的一条直纹相交的直线们张成，与他们的总变换一致；他们同构于$\Lambda_{1,\mu}$在点$p$的爆破，并沿着曲线$C$两两相交。\nottran
 		\item 相反地，平面
 			\[
 				\Lambda_{2,\mu}=V(x-\mu y,z-\mu w)
 			\]
-			的原像$\varphi^{-1}(\Lambda_{2,\mu})$，由$X$的顶点$p$和与$Q$的另一条直线相交的直线们张成，它有两个不可约分支：真变换$\tilde \Lambda_{2,\mu}$和曲线$C$.（特别地，它们都不是$X$的Cartier子概形。）真变换$\tilde \Lambda_{2,\mu}$同构地映到平面$\Lambda_{2,\mu}$，它与$X_1$不交；因此我们可以尝试通过使得平面们$\Lambda_{2,\mu}$不交来图像化$X_1$. \nottran
+			的原像$\varphi^{-1}(\Lambda_{2,\mu})$，由$X$的顶点$p$和与$Q$的另一条直纹相交的直线们张成，它有两个不可约分支：真变换$\tilde \Lambda_{2,\mu}$和曲线$C$.（特别地，它们都不是$X$的Cartier子概形。）真变换$\tilde \Lambda_{2,\mu}$同构地映到平面$\Lambda_{2,\mu}$，它与$X_1$不交；因此我们可以尝试通过使得平面们$\Lambda_{2,\mu}$不交来图像化$X_1$. \nottran
 
 			\inclugra{3.png}
 	\end{compactenum}
@@ -513,46 +513,77 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 	证明实际上$X_1$和$X_2$作为$K$-概形也不同构于$\tilde X$.（提示：一种法子是去证明$X_i$并不包含在$K$上逆紧的二维子概形。）
 \end{exe}
 
-\[
+\begin{exe}\label{exe:4.33} 
+	这里有一个有趣的方式来实现上面提到的所有三种爆破。将$\mathbb A_K^4$等同于$2\times 2$矩阵的矢量空间的对应的仿射空间，这个矢量空间也是由在两个二维$K$-矢量空间间的线性映射$A:V\to W$们所构成的：
+	\[
 	M=\Hom(V,W)=\left\{\begin{pmatrix}x&y\\z&w\end{pmatrix}\right\}.
-\]
-
-\[
+	\]
+	令$\bbp V^*$为$V^*$的一维商空间的射影空间，即$V$的一维子空间们，类似地，令$\bbp W^*$为$W$的一维子空间构成的射影空间。证明$X$以及爆破$X_1$, $X_2$和$\tilde X$分别是下面的簇对应的概形
+	\[
 	\begin{aligned}
 		X&=\{A:V\to W\,|\,\operatorname{rank}A\leq 1\}\subset \mathbb A_K^4,\\
 		X_1&=\{(A,L)\,|\,L\subset \operatorname{Ker}A\}\subset \mathbb A_K^4\times \mathbb PV^*,\\
 		X_2&=\{(A,L')\,|\,\operatorname{Im}A\subset L'\}\subset \mathbb A_K^4\times \mathbb PW^*,\\
 		\tilde X&=\{(A,L,M)\,|\, L\subset \operatorname{Ker}A\text{ and }\operatorname{Im}A\subset M\}\subset \mathbb A_K^4\times \mathbb PV^*\times \mathbb PW^*.
 	\end{aligned}
-\]
+	\]
+\end{exe}
 
-\[
-	\hat{\mathscr O}_{X,p}\cong K[\![x_1,\dots,x_n]\!]/(x_1^2+x_2^2+\cdots+x_n^2).
-\]
+实际上，Example \ref{exa:4.27} 以及 Example \ref{exa:4.29} 的结果不仅仅可以用到二次锥上，也可以用到局部长得像它们的概形上。这是后续习题的内容，而这需要一个进一步的定义：
+
+\begin{defi}\label{defi:4.34}
+	令$K$为一个特征不为$2$的代数闭域，而$X$是一个$K$上的概形。我们称点$p\in X$是一个\textit{寻常二重点}，若局部环$\mathscr O_{X,p}$的完备化是
+	\[
+		\hat{\mathscr O}_{X,p}\cong K[\![x_1,\dots,x_n]\!]/(x_1^2+x_2^2+\cdots+x_n^2).
+	\]
+\end{defi}
+
+% p.178
+
+比方说，曲线的寻常二重点常被我们称为结点。更一般地，一个$n$-维概形$X$的寻常二重点$p$可以被刻画为，$X$在点$p$的射影化切锥是一个在$\bbp T_pX\cong \bbp_K^n$中的非奇异二次超曲面。
+
+\begin{exe}\label{exe:4.35}
+	假若$X$为二维的而$p\in X$是一个寻常二重点。令$\tilde X=\Bl_p X\to X$为$X$在点$p$的爆破。证明Example \ref{exa:4.29} 的结论同样可以用在$X$上：$X$是非奇异的；例外除子$E\subset \tilde X$是$\bbp T_pX\cong \bbp_K^2$中的一个二次曲线，以及若$C\subset X$是在点$p$非奇异的任意曲线，则作为$X$-概形$\Bl_C X\cong \tilde X$.
+\end{exe}
+
+\nottran
 
 \[
 	\dim (\pi^{-1}(\Gamma))\leq \frac{\dim(\Gamma)+\dim(X)-1}2
 \]
 
+% p.178
+
+\nottran
+
 \subsection{沿着非约态概形的爆破}\label{s:4.2.3}
 
-\paragraph*{一个双重点的爆破}\addcontentsline{toc}{subsubsection}{一个双重点的爆破}
+至今，我们还仅处理了 \nottran
 
+\paragraph*{一个二次点的爆破}\addcontentsline{toc}{subsubsection}{一个二次点的爆破} 
+令$X=\bba_K^2=\spec K[x,y]$，以及令$\Gamma\subset \bba_K^2$为由理想$I=(x^2,y)$给出的子概形。爆破$Z=\Bl_\Gamma(\bba_K^2)$将是$\proj A$，其中$A$为环
 \[
 	A=K[x,y]\oplus I\oplus I^2\oplus \cdots
 \]
-
+由Proposition \ref{pro:4.25}，我们可以同样将$Z$写作
 \[
 	Z=\proj K[x,y][A,B]/(yA-x^2B)
 \]
-
+其被开集
 \[
 	U_A=\spec K[x,y][b]/(y-x^2b)
 \]
-
+和
 \[
 	U_B=\spec K[x,y][a]/(ya-x^2)
 \]
+所覆盖，其中$a=A/B$而$b=B/A$.
+
+我们立刻看到这个概形与寻常的$\mathbb A_K^2$在原点的爆破之间的不同。其中，尽管两者在原点处的纤维都同构于$\mathbb A_K^1$，概形$Z=\Bl_\Gamma(\bba_K^2)$在其中一点$P$（$U_B$中的点$a=x=y=0$）处奇异，而寻常的爆破是非奇异的。
+
+% p.180 
+
+\nottran
 
 \begin{pro}\label{pro:4.40}
 	$Z=\Bl_\Gamma(\mathbb A_K^2)$在其奇异点$P$的爆破$Z'$是$Z_2$.
@@ -563,6 +594,9 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 \[
 	\Bl_{f_1^{-1}(Y_2)}Z_1 \cong \Bl_{f_2^{-1}(Y_1)}Z_2
 \]
+
+\paragraph*{多次点的爆破}\addcontentsline{toc}{subsubsection}{多次点的爆破}
+% p.182
 
 \[
 	\Gamma=V(x^3,xy,y^2)
@@ -580,6 +614,8 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 	I_n=(x^{n+1},x^{n-1}y,x^{n-2}y^2,\dots,xy^{n-1},y^n)=
 	(x,y)^n\cap (x^{n+1},y).
 \]
+
+\paragraph*{$j$-函数}\addcontentsline{toc}{subsubsection}{$j$-函数}
 
 \[
 	y^2=x^3+ax+b
