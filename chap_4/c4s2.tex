@@ -487,7 +487,7 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 			\[
 				\Lambda_{1,\mu}=V(x-\mu z,y-\mu w)
 			\]
-			的真变换$\tilde \Lambda_{1,\mu}$，由$X$的顶点$p$和与$Q$的一条直纹相交的直线们张成，与他们的总变换一致；他们同构于$\Lambda_{1,\mu}$在点$p$的爆破，并沿着曲线$C$两两相交。\nottran
+			的真变换$\tilde \Lambda_{1,\mu}$，由$X$的顶点$p$和与$Q$的一条直纹相交的直线们张成，与他们的全变换一致；他们同构于$\Lambda_{1,\mu}$在点$p$的爆破，并沿着曲线$C$两两相交。\nottran
 		\item 相反地，平面
 			\[
 				\Lambda_{2,\mu}=V(x-\mu y,z-\mu w)
@@ -546,19 +546,33 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 	假若$X$为二维的而$p\in X$是一个寻常二重点。令$\tilde X=\Bl_p X\to X$为$X$在点$p$的爆破。证明Example \ref{exa:4.29} 的结论同样可以用在$X$上：$X$是非奇异的；例外除子$E\subset \tilde X$是$\bbp T_pX\cong \bbp_K^2$中的一个二次曲线，以及若$C\subset X$是在点$p$非奇异的任意曲线，则作为$X$-概形$\Bl_C X\cong \tilde X$.
 \end{exe}
 
+\begin{exe}\label{exe:4.36}
+	遵循Exercise \ref{exe:4.35}，现在假设$X$的维数为$3$而$x\in X$是一个普通的二次点。令$\tilde X=\Bl_p X\to X$为$X$在$p$处的爆破。证明，Example \ref{exa:4.29}的结论对$X$同样使用：$\tilde X$非奇异，例外除子$E\subset \tilde X$是一个非奇异二次曲面$Q\subset \mathbb PT_pX\cong \mathbb P_K^3$，以及，如果$S\subset X$是任意在点$p$处非奇异的曲面，则爆破$\Bl_SX$在点$p$处的纤维同构于$\mathbb P_K^1$（特别地，其不同构于$\tilde X$）。此外，证明，如果$S$和$S'\subset X$是两个这样的曲面，则爆破$\Bl_SX$与$\Bl_{S'}X$作为$X$-概形同构当且仅当射影化切平面$\mathbb PT_pS$和$\mathbb PT_pS'\subset \mathbb PT_pX$同属于二次曲面$Q$相同的直纹中。
+\end{exe}
+
 \nottran
 
 \[
 	\dim (\pi^{-1}(\Gamma))\leq \frac{\dim(\Gamma)+\dim(X)-1}2
 \]
 
+\begin{exe}\label{exe:4.37}
+	令$K$是一个域，$\mathbb A_K^3=\spec K[x,y,z]$. 令$L$和$M\subset \mathbb A_K^3$为直线$V(x,y)$和$V(z,x)$，$N=L\cup M=V(x,yz)$为他们的并。描述爆破$x=\Bl_N \mathbb A_K^3\to \mathbb A_K^3$，特别地，证明$X$在$N$上的每个点的纤维都同构于$\mathbb P_K^1$，但并却是奇异的：它在$\mathbb A_K^3$的原点处有着通常的二次点$p$.
+\end{exe}
+
 % p.178
 
-\nottran
+\begin{exe}\label{exe:4.38}
+	记号同上题，令$Y\to \mathbb A_K^3$为$\mathbb A_K^3$沿着直线$L$的爆破，$\tilde M\subset Y$为$M$在$Y$中的真变换，$X'\to Y$为$Y$沿着$\tilde M$的爆破。证明，复合$X'\to Y\to \mathbb A_K^3$经由爆破$X=\Bl_N \mathbb A_K^3\to \mathbb A_K^3$分解，诱导的映射$X'\to X$是一个通常的二次点$p\in X$的小消解。
+\end{exe}
+
+\begin{exe}\label{exe:4.39}
+	\nottran
+\end{exe}
 
 \subsection{沿着非约态概形的爆破}\label{s:4.2.3}
 
-至今，我们还仅处理了 \nottran
+至今，我们还仅处理了一些爆破$\Bl_Y X\to X$的例子，例子中涉及的三个对象，概形$X$、子概形$Y$和爆破$\Bl_YX$都是簇。在这节的剩下两个部分中，我们将考虑更一般概形的爆破，首先给出沿着非约态概形的爆破的例子，然后是算术概形的爆破。我们这里将从给出一些簇沿着非约态子概形的爆破的例子开始。
 
 \paragraph*{一个二次点的爆破}\addcontentsline{toc}{subsubsection}{一个二次点的爆破} 
 令$X=\bba_K^2=\spec K[x,y]$，以及令$\Gamma\subset \bba_K^2$为由理想$I=(x^2,y)$给出的子概形。爆破$Z=\Bl_\Gamma(\bba_K^2)$将是$\proj A$，其中$A$为环
@@ -583,6 +597,8 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 
 % p.180 
 
+若是$Z$约化中心的爆破表，我们可以看到更多。粗略地说，\nottran
+
 \nottran
 
 \begin{pro}\label{pro:4.40}
@@ -591,11 +607,24 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 
 \inclugra{4.png}
 
-\[
-	\Bl_{f_1^{-1}(Y_2)}Z_1 \cong \Bl_{f_2^{-1}(Y_1)}Z_2
-\]
+% p.181
 
-\paragraph*{多次点的爆破}\addcontentsline{toc}{subsubsection}{多次点的爆破}
+我们从\nottran
+
+\begin{lem}\label{lem:4.41}
+	令$X$为一个概形，$Y_1$和$Y_2\subset X$为其闭子概形。若$f_i:Z_i=\Bl_{Y_i}X\to X$为$X$沿着$Y_1$和$Y_2$的爆破，则作为$X$-概形，
+	\[
+		\Bl_{f_1^{-1}(Y_2)}Z_1 \cong \Bl_{f_2^{-1}(Y_1)}Z_2.
+	\]
+\end{lem}
+
+\begin{proof}
+	\nottran
+\end{proof}
+
+比较这个引理与Exercise \ref{exe:4.37} 到 \ref{exe:4.39}，其中我们看到，若我们用“全变换”替换“真变换”，顺序确实是重要的。
+
+\paragraph*{多次点的爆破}\addcontentsline{toc}{subsubsection}{多次点的爆破} 我们这里将考虑一些平面沿着支于一点的子概形的爆破的例子。
 % p.182
 
 \[
@@ -641,6 +670,8 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 \]
 
 \subsection{算术概形的爆破}\label{s:4.2.4}
+
+因为我们已经如此一般地定义了爆破，我们可以用这个构造取联系大量算术概形，如下面的例子与习题所示。
 
 \[
 	\bigoplus_{n=0}^\infty I^n=(\zz[x])[A,B]/(xA-3B).

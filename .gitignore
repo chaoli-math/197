@@ -237,7 +237,7 @@ pip-log.txt
 *.fdb_latexmk
 *.nav
 *.snm
-*.synctex.gz*
+*.synctex*
 
 # visual studio code file
 .vscode/
