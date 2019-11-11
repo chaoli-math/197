@@ -550,11 +550,12 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 	遵循Exercise \ref{exe:4.35}，现在假设$X$的维数为$3$而$x\in X$是一个普通的二次点。令$\tilde X=\Bl_p X\to X$为$X$在$p$处的爆破。证明，Example \ref{exa:4.29}的结论对$X$同样使用：$\tilde X$非奇异，例外除子$E\subset \tilde X$是一个非奇异二次曲面$Q\subset \mathbb PT_pX\cong \mathbb P_K^3$，以及，如果$S\subset X$是任意在点$p$处非奇异的曲面，则爆破$\Bl_SX$在点$p$处的纤维同构于$\mathbb P_K^1$（特别地，其不同构于$\tilde X$）。此外，证明，如果$S$和$S'\subset X$是两个这样的曲面，则爆破$\Bl_SX$与$\Bl_{S'}X$作为$X$-概形同构当且仅当射影化切平面$\mathbb PT_pS$和$\mathbb PT_pS'\subset \mathbb PT_pX$同属于二次曲面$Q$相同的直纹中。
 \end{exe}
 
-\nottran
-
+用人话来讲，对有一个普通的二次点$p$的三维概形$X$，通过（在$p$局部）沿着一个在$p$处非奇异的曲面的爆破得到的概形$X'\to P$被称为$X$在点$p$处的\textit{小消解}。一般地，一个奇点消解$\pi:X'\to X$，即一个双有理态射是的$X'$非奇异，被称为\textit{小的}，如果对任意的子簇$\Gamma\subset X$，原像$\pi^{-1}(\Gamma)$的维数至多
 \[
-	\dim (\pi^{-1}(\Gamma))\leq \frac{\dim(\Gamma)+\dim(X)-1}2
+	\dim (\pi^{-1}(\Gamma))\leq \frac{\dim(\Gamma)+\dim(X)-1}2 .
 \]
+
+有一个普通的二次点$p$的三维概形$X$的两个小消解的双有理同构被称为一个\textit{flop}，见Clemens等 [1988]. \nottran
 
 \begin{exe}\label{exe:4.37}
 	令$K$是一个域，$\mathbb A_K^3=\spec K[x,y,z]$. 令$L$和$M\subset \mathbb A_K^3$为直线$V(x,y)$和$V(z,x)$，$N=L\cup M=V(x,yz)$为他们的并。描述爆破$x=\Bl_N \mathbb A_K^3\to \mathbb A_K^3$，特别地，证明$X$在$N$上的每个点的纤维都同构于$\mathbb P_K^1$，但并却是奇异的：它在$\mathbb A_K^3$的原点处有着通常的二次点$p$.
@@ -563,11 +564,11 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 % p.178
 
 \begin{exe}\label{exe:4.38}
-	记号同上题，令$Y\to \mathbb A_K^3$为$\mathbb A_K^3$沿着直线$L$的爆破，$\tilde M\subset Y$为$M$在$Y$中的真变换，$X'\to Y$为$Y$沿着$\tilde M$的爆破。证明，复合$X'\to Y\to \mathbb A_K^3$经由爆破$X=\Bl_N \mathbb A_K^3\to \mathbb A_K^3$分解，诱导的映射$X'\to X$是一个通常的二次点$p\in X$的小消解。
+	记号同上题，令$Y\to \mathbb A_K^3$为$\mathbb A_K^3$沿着直线$L$的爆破，$\tilde M\subset Y$为$M$在$Y$中的真变换，$X'\to Y$为$Y$沿着$\tilde M$的爆破。证明，复合$X'\to Y\to \mathbb A_K^3$经由爆破$X=\Bl_N \mathbb A_K^3\to \mathbb A_K^3$分解，诱导的映射$X'\to X$是一个寻常二重点$p\in X$的小消解。
 \end{exe}
 
 \begin{exe}\label{exe:4.39}
-	\nottran
+	现在令$Z\to \mathbb A_K^3$为$ \mathbb A_K^3$沿着直线$M$的爆破，$\tilde{L}\subset Y$是$L$在$Z$中的真变换，$X''\to Z$是$Z$沿着$\tilde L$的爆破。证明，复合$X''\to Y\to X$也经由爆破$X\to \mathbb A_K^3$分解，且诱导的映射$X'\to X$是来自于$X'\to X$的寻常二重点$p\in X$\textit{反}小消解。为直接看到$X'\to X$和$X''\to X$不是同构的$X$-概形，令$N'$和$N''$是$L\setminus \{0\}$在$X'$和$X''$中的原像，然后直接比较$N'$和$N''$在$0\in \mathbb A_K^3$上的纤维。\nottran
 \end{exe}
 
 \subsection{沿着非约态概形的爆破}\label{s:4.2.3}
@@ -597,9 +598,7 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 
 % p.180 
 
-若是$Z$约化中心的爆破表，我们可以看到更多。粗略地说，\nottran
-
-\nottran
+若我们以具有约化中心的爆破来表$Z$，我们可以看到更多。粗略地说，在经典语言中，$Z$的“”为（见下图）：首先，令$Z_1$为$\mathbb A_K^2$在原点处的爆破，令$E\subset Z_1$为例外除子，即原点的原像。令$P$为$E$在$x$-轴的真变换中的点，及$x$-轴在$Z_1\setminus E$中原像的闭包。令$Z_2$为$Z_1$在点$P$的爆破，令$F\subset Z_2$为这个爆破的例外除子，以及（稍微混用一下记号）$E\subset Z_2$为$E$在$Z_2$中的真变换。于是，在经典语言中，$Z=\operatorname{Bl}_\Gamma (\mathbb A_K^2)$是由$Z_2$ 吹倒 $E$ 得到的，换句话说：\nottran
 
 \begin{pro}\label{pro:4.40}
 	$Z=\Bl_\Gamma(\mathbb A_K^2)$在其奇异点$P$的爆破$Z'$是$Z_2$.
@@ -626,6 +625,11 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 
 \paragraph*{多次点的爆破}\addcontentsline{toc}{subsubsection}{多次点的爆破} 我们这里将考虑一些平面沿着支于一点的子概形的爆破的例子。
 % p.182
+
+\begin{exe}\label{exe:4.42}
+	\nottran
+\end{exe}
+
 
 \[
 	\Gamma=V(x^3,xy,y^2)
@@ -673,17 +677,25 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 
 因为我们已经如此一般地定义了爆破，我们可以用这个构造取联系大量算术概形，如下面的例子与习题所示。
 
+我们从爆破$\mathbb P_{\mathbb Z}^1$中的一个约态点开始：我们令$P$为约态点$P=(3,X)\in P_{\mathbb Z}^1$，然后考虑$\mathbb P_{\mathbb Z}^1$在点$P$的爆破$Z=\Bl_P(\mathbb P_{\mathbb Z}^1)$. 这是直接的，像之前一样，唯一的问题就是记号。因为概形$\mathbb P_{\mathbb Z}^1=\proj \zz[X,Y]$并不仿射，我们用仿射开集$U_X=\spec \zz[y]\cong \mathbb A_{\mathbb Z}^1$和$U_Y=\spec \zz[x]\cong \mathbb A_{\mathbb Z}^1$覆盖之，其中$y=Y/X$, $x=X/Y$. 因为需爆破的点在$U_X$的补中，$U_X$在$Z$中的原像即$U_X$.
+
+接着，我们描述$U_Y$的爆破。明晰起见，我们记$A$和$B$为$P\in U_Y=\spec \zz[x]$的理想$I=(3,x)$的两个生成元$3$和$x$，于是我们可将环$\zz[x]\oplus I\oplus I^2\oplus \dots$表为
 \[
 	\bigoplus_{n=0}^\infty I^n=(\zz[x])[A,B]/(xA-3B).
-\]
-
+\]%
+% p. 185
+我们可描述这个环的$\proj$为两个开集$W_A$和$W_B$的并。前者更简单些：置$b=B/A$，我们有
 \[
 	W_A=\spec \zz[x][b]/(x-3b)=\spec \zz[b]=\mathbb A_\zz^1,
 \]
+因此开集$W_A\cong \mathbb A_{\mathbb Z}^1$，但映射$W_A\to U_Y\cong \mathbb A_\zz^1\subset \mathbb P_\zz^1$并不是同构，而是对偶于将$x$变为$3b$的环同态的映射$\spec \zz[b]\to \spec \zz[x]$.
 
+对另一个开集，我们有
 \[
 	W_B=\spec \zz[x][a]/(ax-3),
 \]
+
+\nottran
 
 \[
 	Z'=U_X\cup W_A=\spec \zz[y]\bigcup_{\spec \zz[y,\frac 1y,\frac 13]=\spec \zz[b,\frac 1b,\frac 13]}\spec \zz[b]
