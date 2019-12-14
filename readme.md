@@ -63,4 +63,4 @@ p.s 2. 由于 zhmakeindex 已知的问题，无法很好地处理多音字，所
 
 使用字体需要先安装字体。安装字体，一是可以直接将字体文件放到项目的主目录，然后使用 `xelatex` 编译。同时也可以将其安装到系统，在使用 `fc-cache -fv` 刷新字体缓存后，使用 `xelatex` 编译。
 
-p.s. 增加了 moha 的字体，见[这里](https://github.com/chaoxu/naivemoha). 代码有所魔改。
+~~p.s. 增加了 moha 的字体，见[这里](https://github.com/chaoxu/naivemoha). 代码有所魔改。~~
