@@ -328,7 +328,40 @@ Zariski切空间中的元素。}
 \to K$ 诱导的含入映射$\iota :\spec K\to \spec K[\epsilon]/
 (\epsilon^2)$，态射$\spec K[\epsilon]/(\epsilon^2)\to X$
 确定了一个态射$\spec K\to X$，进而一个$X$的闭$K$-有理点$p$.
+这样一个态射$\spec K\to X$的扩张包含包含一个$K$-代数同态
+$\mathscr O_{X,p}\to \kappa(p)=K$到一个（局部）同态
+$\mathscr O_{X,p}\to K[\varepsilon]/(\varepsilon^2)$的提升。
+这样一个同态诱导了一个从极大理想$\mm_{X,p}$到$K[\varepsilon]/
+(\varepsilon^2)$的极大理想$(\varepsilon)$的映射，因为$(\varepsilon^2)
+=0$，这个映射可以经由一个映射$t:\mm_{X,p}/\mm_{X,p}^2\to (\varepsilon)
+\cong K$分解。这个映射$t$是$(\mm_{X,p}/\mm_{X,p}^2)^*$，
+$X$在$p$的Zariski切空间，的一个元素。
 
+反过来，给定一个$K$-有理点$p\in X$以及$t:\mm_{X,p}/\mm_{X,p}^2\to
+(\varepsilon)\cong K$，我们可以从映射$\pi:\mathscr O_{X,p}\to 
+\kappa(p)=K$构造一个映射
+$\mathscr O_{X,p}\to K[\varepsilon]/(\varepsilon^2)$如下：
+$\pi$和$K$-代数结构映射$K\to \mathscr O_{X,p}$定义了一个$K$-矢量空间
+$\mathscr O_{X,p}/\mm_{X,p}^2$的分解$K\oplus \mm_{X,p}/\mm_{X,p}^2$；
+并且，我们用$K$的恒同映射以及$\mm_{X,p}/\mm_{X,p}^2$上的映射$t$定义
+映射
+\[
+	\mathscr O_{X,p}/\mm_{X,p}^2\to K[\varepsilon]/(\varepsilon^2),
+\]
+其复合上投影给出映射$\mathscr O_{X,p}\to K[\varepsilon]/
+(\varepsilon^2)$. 这个映射确定了想要的概形态射
+$\spec K[\varepsilon]/(\varepsilon^2)\to K$.
+
+在第 \ref{s:4.2.1} 节，我们将看到概形的这个切矢量的刻画是如何被用来
+给出射影空间的切矢量的一个内蕴描述的，这完善了我们在第 \ref{s:4.2.4}
+节中的讨论。
+
+现在如果$F$是一个从$K$-代数范畴到集合范畴的函子，以及$p\in F(K)$，
+我们可以定义$F$在点$p$的切空间$T_pF$为$F(K[\varepsilon] /
+(\varepsilon^{2})) \to F(K)$在点$p$处的纤维。这定义带出了一个对象，
+作为集合的切空间，而不是$K$-矢量空间。至少我们可以$K$的标量乘法：
+如果$a\in K$，则映射$\varepsilon\mapsto a\varepsilon$诱导了代数
+$K[\varepsilon]/(\varepsilon^2)$的一个自同构，使得如下图
 \[
 	\xymatrix{
 	\varepsilon \ar@{|->}[rr] &  & a\varepsilon\\
@@ -336,9 +369,15 @@ Zariski切空间中的元素。}
 	& K &
 	}
 \]
+交换；而这又到出了一个映射$T_pF\to T_pF$，即我们想要的乘标量$a$.
+为使$T_pF$是一个矢量空间，我们现在需要定义一个加法映射
+$T_pF \times T_pF \to T_pF$. 一般地，似乎好像没法做到，但对那些
+保持纤维积的函子，比如可表函子，我们可以做到。
 
+为此，考虑概形$\spec K\left[\varepsilon', \varepsilon''\right] /
+\left(\varepsilon', \varepsilon''\right)^{2}$，即平面上一点的极大理想
+的平反给出的闭子概形。由投影给出的交换图%
 % p.258
-
 \[
 	\xymatrix{
 	& K[\varepsilon']/(\varepsilon')^2 \ar[rd] &\\
@@ -346,13 +385,26 @@ Zariski切空间中的元素。}
 	& K[\varepsilon'']/(\varepsilon'')^2 \ar[ru] &
 	}
 \]
-
+将$\spec K[\varepsilon', \varepsilon''] /(\varepsilon', \varepsilon'')
+^{2}$表为$K$上$\spec K[\varepsilon'] /(\varepsilon')^{2}$和
+$\spec K[\varepsilon''] /(\varepsilon'')^{2}$的纤维积。
+另一方面，这有第三个映射
+$\sigma: K[\varepsilon', \varepsilon''] /(\varepsilon', \varepsilon''
+)^{2} \to K[\varepsilon] /(\varepsilon^{2})$将$\varepsilon'$和
+$\varepsilon''$都映到$\varepsilon$. 因此，如果$F$保持代数范畴的纤维积，
+或者甚至仅上面的纤维积，我们可以做出图
 \[
 	\xymatrix{
 	F(K[\varepsilon']/(\varepsilon')^2)\times_{F(K)} F(K[\varepsilon'']/(\varepsilon'')^2)\ar[rd]\ar@{=}[r]&F(K[\varepsilon',\varepsilon'']/(\varepsilon',\varepsilon'')) \ar[r]^-{F(\sigma)}\ar[d]& F(K[\varepsilon]/(\varepsilon)^2)\ar[ld]\\
 	& F(K) &
 	}
 \]
+然后取$p\in F(K)$处的纤维，我们就得到了想要的加法映射。
+
+\begin{exe}
+	验证这些映射将$T_pF$变成了一个$K$-矢量空间，且当$F$是一个可表函子
+	时，这就是原先的矢量空间结构。
+\end{exe}
 
 \subsection{群概形} \label{s:6.1.4}
 
