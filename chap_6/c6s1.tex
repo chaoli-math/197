@@ -1,7 +1,8 @@
+% !TeX root = ../main.tex
 在本书第一章的最后，我们讨论一种将概形范畴嵌入到更大的从
-概形范畴到集合范畴的反变态射函子构成的范畴的法子。
+概形范畴到集合范畴的反变态射函子构成的范畴的方法。
 
-这种嵌入至少在三个方面是有用的：
+至少在以下三个方面，这种嵌入很有用的：
 
 \begin{compactenum}[(1)]
 \item 使用点函子来描述的话，许多基础的构造（比如积）
@@ -17,10 +18,12 @@
 时忘掉函子的表示，直接在范畴里面工作是方便的。
 \end{compactenum}
 
-在这章中，我们将展示这三个方面，首先会引入一些基本构造，
+在这章中，我们将展示这三点，首先会引入一些基本构造，
 然后是一些例子，它们来自于对参数化概形族的尝试。
 我们将在第 \ref{s:6.2.4} 节中看到，很多时候它们引出的函子
 并不是真的概形，尽管它们确实是闭的。
+
+% p.252
 
 \section{点函子}\label{s:6.1}
 
@@ -32,7 +35,7 @@
 其中$(\text{scheme})^\circ$和$(\text{sets})$分别代表箭头
 反过来的函子范畴以及集合范畴。$h_X$将概形$Y$变成集合
 \[
-	h_X(Y)=\Mor(Y,Z),
+	h_X(Y)=\Mor(Y,X),
 \]
 而将态射$f:Y\to Z$变成集合间映射
 \[
@@ -60,7 +63,7 @@ $h_X\to h_{X'}$，使得对任意概形$Y$，它将
 $g\in h_X(Y)=\Mor(Y,X)$变成复合
 $f\circ g\in h_{X'}(Y)=\Mor(Y,X')$.
 
-为使这些概念派上哪怕一点的作用，一个首先关键的事实就是
+为使这些概念派上哪怕一点的作用，首先关键的事实就是
 函子$h_X$确实决定了概形$X$. 它来自于一个基础的范畴论事实。
 
 \begin{lem}[Yoneda引理]\label{lem:6.1}
@@ -80,6 +83,8 @@ $X$到$X'$的映射相同，即，将$X$变为$h_X$的函子
 \end{compactenum}
 \end{lem}
 
+% p.253
+
 \begin{proof}
 对(a)，将映射$\alpha:\Mor(-,X)\to F$变为元素$\alpha(1_X)$，
 其中$1_X:X\to X$是恒等映射。其逆将$p\in F(X)$变为
@@ -89,7 +94,7 @@ $X$到$X'$的映射相同，即，将$X$变为$h_X$的函子
 
 下一命题比 Lemma \ref{lem:6.1} 更进一步，说明了我们只需
 关注限制在仿射概形范畴的点函子，或者等价地，反箭头的
-交换环范畴$\text{(rings)}^\circ$，以及同样的事情在相对
+交换环范畴$\text{(rings)}^\circ$，则同样的事情在相对
 语境中也成立。
 
 \begin{pro}\label{pro:6.2}
@@ -128,6 +133,8 @@ $U_\alpha$上不同。
 证明，$X$由$h_X$在Noether环范畴上的限制所确定。
 \end{exe}
 
+% p.254
+
 \subsection{开与闭子函子} \label{s:6.1.1}
 
 将概形看成函子的用处之一在于，我们可以将一些概形的几何的
@@ -145,7 +152,7 @@ $U_\alpha$上不同。
 如果$U\subset X$是一个子概形，函子$h_U$就是$h_X$的一个
 子函子。
 
-我们想要定义一个函子$F$的开子函子为一个子函子，满足当限制
+我们想要将一个函子$F$的开子函子定义为一个子函子，满足当限制
 到可表子函子$h_X\subset F$时，具有形式$h_U\subset h_X$，
 其中$U$是$X$的一个子概形。为实现它，我们需要引入函子的
 纤维积这个概念。
@@ -174,7 +181,7 @@ $\psi:h_{\spec R}\to F$，函子的纤维积
 	}
 \]
 都产生一个映射$G_\psi\to h_{\spec R}$同构于，某个
-$\spec R$的开子概形表示的函子的单态射。
+$\spec R$的开子概形所表函子的单态射。
 \end{defi}
 
 \begin{exe} \label{exe:6.6}
@@ -195,12 +202,14 @@ $F:(\text{schemes}/K)^\circ \to (\text{sets})$如下：
 是约态的。证明$G\subset F$是开的。
 \end{exe}
 
+% p.255
+
 闭子函子的定义是类似的。一个
 $\operatorname{Fun}((\text{rings}),(\text{sets}))$中的
 子函子$\alpha : G\to F$是\textit{闭的}，如果对每一个
 映射$\psi:h_{\spec R}\to F$，$\psi$和$\alpha$的纤维积
 是一个$h_{\spec R}$的子函子，其同构于$\spec R$的一个
-闭子概形所表示的函子。
+闭子概形所表的函子。
 
 \begin{exe} \label{exe:6.8}
 	令$X=\spec R$为一个仿射概形。证明，$h_{\spec R}$的
@@ -208,11 +217,59 @@ $\operatorname{Fun}((\text{rings}),(\text{sets}))$中的
 	的函子。（对任意概形，稍难一些，这也是对的。）
 \end{exe}
 
-如同往常，使用这些概形需要稍加小心。比如：
+如同往常，使用这些概念需要稍加小心。比如：
 
-\nottran
+\begin{exe} \label{exe:6.9}
+	假设$f$是从范畴$\mathscr C$到集合范畴的函子，$G$是$F$
+	的一个子函子。证明对应$C\mapsto F(C)\setminus G(C)$
+	可能不能定义一个函子。现在，假设$\mathscr C$是环范畴，
+	$F$由概形$X$所表，而$G$被$X$的闭子概形$Y$所表，函子$H$
+	表示了开子概形$X\setminus Y$. 你能用$G$和$F$来表示$H$吗？
+\end{exe}
+
+\begin{exe} \label{exe:6.10}
+	令$X$是域$K$上的概形。定义函子$F:(\text{scheme}/K)^\circ
+	\to (\text{sets})$
+	同 Exercise \ref{exe:6.7}，且定义$F$的一个
+	子函子$H$通过对任意$K$-概形$Y$，令$H(Y)$为闭子概形$Z
+	\subset X\times Y$，其在$Y$上平坦，且$Z$的任意在$Y$的
+	闭点处的纤维都是$X$支于单点的次数为$2$的子概形。证明
+	$H$一般不是$F$的一个闭子函子。
+\end{exe}
+
+我们下面将使用函子的\textit{开覆盖}这个概念。
+这是一族开子函子，当我们拉回到一个可表函子时，其产生了
+概形的一个开覆盖。更准确地，令$F:(\text{schemes})^\circ
+\to (\text{sets})$
+为一个函子%
+\footnote{译者注：原书为$F:(\text{schemes})
+\to (\text{sets})$，应该是笔误。}%
+，考虑$\{G_i\to F\}$为$F$为开子函子族。对
+每个从可表函子$h_X$到$F$的映射$h_X\to F$，存在开子概形
+$U_i\subset X$使得纤维积$h_X\times_F G_i$为$h_{U_i}$.
+我们称$\{G_i\to F\}$是一个开覆盖，如果对任意映射
+$h_X\to F$，对应的开子概形们$U_i\subset X$覆盖了$X$.
+
+注意：如果$\{G_i\to F\}$是$F$的一个开覆盖，其无需
+对任意概形$T$满足$F(T)=\bigcup G_i(T)$. （比如，考虑
+\[
+	F=h_{\spec \zz},\quad G_1=h_{\spec \zz[1/p]},
+	\quad G_2=h_{\spec \zz[1/q]},
+\]
+其中$p$和$q$为不同的素数。于是$\{G_i\to F\}$是一个
+开覆盖，但$F(\spec \zz)$只包含一个点（恒等映射），
+而对$i=1,2$都有$G_i(\spec \zz)=\varnothing$.）然而，
+对足够局部平坦的概形$T$，开覆盖$\{G_i\to F\}$产生了
+覆盖$F(T)=\bigcup G_i(T)$. 比如：
 
 % p.256
+
+\begin{exe} \label{exe:6.11}
+	令$\{G_i\to F\}$为函子$F:(\text{schemes})^\circ
+	\to (\text{sets})$的一族开子概形。证明，
+	这是一个开覆盖当且仅当对任意域$K$都有
+	$F(\spec K)=\bigcup G_i(\spec K)$.
+\end{exe}
 
 \subsection{\texorpdfstring{$K$}{K}-有理点}
 \label{s:6.1.2}
@@ -243,4 +300,80 @@ $h_X(\spec \cc)$.
 \end{exe}
 
 \subsection{函子的切空间} \label{s:6.1.3}
+
+有时候，比起概形的方程，其点函子，在计算它的几何信息
+时会更方便！一个典型的例子出现在Zariski切空间。（我们
+将看到这将应用到第 \ref{s:6.2.3} 节。）
+
+我们将在给定域$K$上的概形上工作，所有的态射都是$K$上的
+态射。
+
+回忆，若$X$是一个概形，则对任意$K$-有理点$p\in X$，
+其上的Zariski切空间为$\Hom_K(\mm/\mm^2,K)$，其中
+$\mm=\mm_{X,p}$为$X$在点$p$的局部环的极大理想，而
+$K=\kappa(p)=\mathscr O_{X,p}/\mm_{X,p}$为$X$在点$p$的
+剩余类域。现在令$X$是$K$-概形%
+% 令$X$为仿射概形$\spec K[\varepsilon]/(\varepsilon)^2$. 
+\footnote{译者注：原文这里还有一句，“Let $X$ be the
+affine scheme $\spec K[\varepsilon]/(\varepsilon)^2$”.
+不明所以。}。%
+我们断言，
+\textit{$X$的一个$K[\varepsilon]/(\varepsilon)^2$-值点
+等价于$X$的一个$K$-有理闭点$p$连同一个$X$在点$p$处的
+Zariski切空间中的元素。}
+
+% p.257
+
+为验证这个断言，首先注意到由代数映射$K[\epsilon]/(\epsilon^2)
+\to K$ 诱导的含入映射$\iota :\spec K\to \spec K[\epsilon]/
+(\epsilon^2)$，态射$\spec K[\epsilon]/(\epsilon^2)\to X$
+确定了一个态射$\spec K\to X$，进而一个$X$的闭$K$-有理点$p$.
+
+\[
+	\xymatrix{
+	\varepsilon \ar@{|->}[rr] &  & a\varepsilon\\
+	K[\varepsilon]/(\varepsilon)^2 \ar[rr]\ar[rd]& & K[\varepsilon]/(\varepsilon)^2 \ar[ld]\\
+	& K &
+	}
+\]
+
+% p.258
+
+\[
+	\xymatrix{
+	& K[\varepsilon']/(\varepsilon')^2 \ar[rd] &\\
+	K[\varepsilon',\varepsilon'']/(\varepsilon',\varepsilon'')^2 \ar[ru]\ar[rd]& & K\\
+	& K[\varepsilon'']/(\varepsilon'')^2 \ar[ru] &
+	}
+\]
+
+\[
+	\xymatrix{
+	F(K[\varepsilon']/(\varepsilon')^2)\times_{F(K)} F(K[\varepsilon'']/(\varepsilon'')^2)\ar[rd]\ar@{=}[r]&F(K[\varepsilon',\varepsilon'']/(\varepsilon',\varepsilon'')) \ar[r]^-{F(\sigma)}\ar[d]& F(K[\varepsilon]/(\varepsilon)^2)\ar[ld]\\
+	& F(K) &
+	}
+\]
+
 \subsection{群概形} \label{s:6.1.4}
+
+点函子在给概形上指定额外的结构时尤其方便，通过给其
+指定结构。比方说，我们可以定义\textit{群概形}为概形$G$
+以及函子$h_G:(\text{ring})\to (\text{sets})$的一个经由
+遗忘函子$(\text{groups})\to (\text{sets})$的分解，即
+一个群概形是一个概形，以及对任意$X$，还有一种自然将
+$\Mor(X,G)$看作一个群的方式。
+
+从Yoneda引理（\ref{s:6.1}），这等同于给出映射
+\[
+	G\times G\to G,\quad G\to G\quad \text{and}
+	\quad \spec K\to G,
+\]
+分别代表乘法、逆和恒等元，同时满足一般的规则（结合律等），
+但常常会更简单些。比如，$\operatorname{GL}_n$可被定义为
+可逆整$n\times n$矩阵的仿射概形，
+\[
+	\spec \zz[x_{ij}][\det (x_{ij})^{-1}],
+\]
+但是一般大家会将其想做一个函子，对每个环$T$给出群
+$\operatorname{GL}_n(T)$. 这里有趣的地方在于，这族群已经
+指明了概形的结构已经附加的结构映射！
