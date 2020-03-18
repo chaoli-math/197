@@ -457,7 +457,7 @@ $
 	f(x_1,\dots,x_n)=f_m(x_1,\dots,x_n)+f_{m+1}(x_1,\dots,x_n)+\cdots,
 \]
 其中$f_l(x_1,\dots,x_n)$是$l$次齐次多项式以及$f_m\neq 0$；首个非零项$f_m(x_1,\dots,x_n)$被称为$f$的\textit{领头项}%
-\footnote{译者注：英文是leading term，大概也可以称为首项？好像不太合适}%
+%\footnote{译者注：英文是leading term，大概也可以称为首项？好像不太合适}%
 。于是，我们有如下诠释：
 
 \begin{exe}\label{exe:3.29}
@@ -517,7 +517,7 @@ $
 切锥$TC_p X$是$\overline{\Gamma}$在点$p\in X$处的纤维。
 \end{pro}
 
-这个命题（模掉$TC_p X$中在原点处可能的嵌入组分）将在第 \ref{chap:4} 章中证明。这个命题相当于说，$TC_p X$的射影化是$X$在点$p$的爆破的例外除子（exceptional divisor）。
+这个命题（模掉$TC_p X$中在原点处可能的嵌入分支）将在第 \ref{chap:4} 章中证明。这个命题相当于说，$TC_p X$的射影化是$X$在点$p$的爆破的例外除子（exceptional divisor）。
 
 Proposition \ref{pro:3.31} 相当有用，比方说在做下面的Exercise \ref{exe:3.32}--\ref{exe:3.34} 的时候。
 
@@ -930,8 +930,8 @@ $\mathscr I^*=\Hom(\mathscr I,\oo_X)$依然是可逆的，且自然映射
 $\mathscr I\otimes \mathscr I^*\to \oo_X$是一个同构（局部检查之）。
 因此，$\mathscr I^*$被称为$\mathscr I$的\textit{逆}。
 
-知道线丛对应的可逆层，初看不见得对将它们与几何联系起来是
-有益的。然而，就像在经典代数几何中，
+知道线丛对应的可逆层，乍看下无益于将其与几何联系。
+然而，就像在经典代数几何中，
 从概形$X$到射影空间的态射实际上可以用\textit{有效Cartier除子}
 的相关概念在几何上刻画。有效Cartier除子是一个子概形$D\subset X$，
 使得在每一点$x\in X$，$D$在局部环$\oo_{X,x}$中对应的理想是主理想，
@@ -960,8 +960,8 @@ Cartier除子，$\oo(D)$就是上面的层。当然，我们也可能会操作�
 与它的一个整体截面。
 
 反之，给出一个可逆层$\mathscr L$和一个整体截面$\sigma$，我们可以
-定义截面的零点集为商$\mathscr L/\oo_X\sigma$的支集。欲知道这说了
-什么，选$X$的一个开覆盖，使得其中每个开集$U$有$\mathscr L|_{U}
+定义截面的零点集为商$\mathscr L/\oo_X\sigma$的支集。欲知所言，
+选$X$的一个开覆盖，使得其中每个开集$U$有$\mathscr L|_{U}
 \cong \oo_U$. $\sigma$在$U$中的零点集于是就是$\oo_U$中对应元素的
 零点集。如果截面是正则的，则零点集是一个有效Cartier除子。注意到，
 与$\sigma$只差一个$\oo_X(X)$的可逆元的截面将给出相同的Cartier除子。
@@ -985,7 +985,7 @@ $U\mapsto \oo_X(U)[S_U^{-1}]$的层化，其中$S_U$是环$\oo_X(U)$中
 精巧的定义，通常唯一需要知道的是，如果$U=\spec A$是一个
 Noether环$A$的谱，则$\mathscr M_X(U)$就是
 将$A$中所有非零因子都变得可逆%
-\footnote{译者注：这里的意思依然是考虑分式环，乘性子集是%
+\footnote{译者注：这里的意思是考虑环的局部化，乘性子集是
 所有非零因子的集合。}% 
 。更一般的情况比较微妙，比如可参考 Kleiman [1979].）
 我们定义一般的Cartier除子为层$\mathscr M_X^*/\oo_X^*$的一个截面。
@@ -1116,7 +1116,7 @@ $G_{\zz}(k,n)$，然后对任意概形$S$定义
 $G_S(k,n)=S\times G_\zz(k,n)$.
 
 经典地，有两种构造作为域$K$上的簇的Grassmannian $G_K(k,n)$
-的方式。抽线来说，我们可以将$G_K(k,n)$描述为一族开集的并，
+的方式。抽象地说，我们可以将$G_K(k,n)$描述为一族开集的并，
 它们每个同构于仿射空间$\A^{k(n-k)}_K$. 或者，我们可以将其
 直接描述为射影空间$\P^N_K$由Pl\"{u}cker方程给出的闭子簇。
 这两个构造都可以直接推广到概形范畴，它们将给出同一个对象。
