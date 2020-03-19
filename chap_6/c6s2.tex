@@ -12,6 +12,162 @@
 来证明这个函子可表，下面我们给出这样一个判据。
 
 \subsection{概形间函子的刻画}\label{s:6.2.1}
+
+为定义或构造首先作为函子的概形，我们遇到了一个基本的问题，即确定什么
+时候一个函子是来自于一个概形。这里有一个刻画。
+
+我们称$F:(\text{rings})\to (\text{sets})$是一个\textit{Zariski拓扑
+上的层}，如果对任意的环$R$和$X=\spec R$的任意基本开集的开覆盖
+$U_i=\spec R_{f_i}$，函子$F$满足开覆盖$\bigcup U_i=X$的层公理。
+即，对任意一族元素$\alpha_i\in F(R_{f_i})$，$\alpha_i$和$\alpha_j$
+都映射到$F(R_{f_if_j})$中的相同元素，则存在唯一的$\alpha\in F(R)$使得
+它映射到每个$F(R_{f_i})$中为$\alpha_i$.
+
+在实操中，这是一个相当容易检验的性质。实际上，这也足够保证$F$来自于
+一个概形，若我们已经知道$F$在如下意义下被仿射概形所覆盖。
+读者可以证明如下定理。
+
+\begin{thm}\label{thm:6.14}
+函子$F:(\textrm{ring})\to (\textrm{sets})$具有形式$h_Y$，其中$Y$是一个
+概形，当且仅当
+\begin{compactenum}[(1)]
+\item $F$是Zariski拓扑下的层，以及
+\item 存在环$R_i$以及开子函子
+\[
+    \alpha_i:h_{R_i}\to F
+\]
+使得，对任意的域$K$，$F(K)$是$h_{R_i}(K)$在映射$\alpha_i$下的像的并。
+\end{compactenum}
+\end{thm}
+
+% p.260
+
+一个简单的应用，我们可以用这个定理来证明纤维积的存在性。在概形范畴中
+纤维积的构造，其已在第 \ref{chap:1} 章中阐述，是具有基本性意义的，
+但这同时出乎意料地笨拙。使用函子的视角，我们至少可以通过给出其点函子
+来描述两个概形的纤维积。若$X\to S$和$Y\to S$是两个概形间的态射，纤维积
+$X\times_S Y$可以确定为其点函子为函子的纤维积$h_X\times_{h_S} h_Y$
+的概形。而存在性建立于如下习题。
+
+\begin{exe}\label{exe:6.15}
+\begin{compactenum}[(a)]
+\item 证明，若$f:A\to C$和$g:B\to C$是函子同态，且函子都是Zariski拓扑
+    上的层，则纤维积$A\times_C B$也是Zariski拓扑上的层。
+\item 用第 \ref{chap:1} 章中所建议的纤维积的开覆盖以及上面的定理来证明
+    概形范畴中纤维积的存在性。
+\end{compactenum}
+\end{exe}
+
+下面的例子给出了到射影空间的映射的另一种看法。Theorem \ref{thm:3.37}
+可以直接翻译为我们的新语言：
+
+\begin{thm}\label{thm:6.16}
+若$Y=\mathbb P_{\mathbb Z}^n$，则
+\begin{align*}
+h_Y(X)=&
+\;\{\text{局部为秩$n$直和项的局部自由子层$\mathscr F\subset 
+\mathscr O_X^{n+1}$}\}\\
+=&\; \frac{\{\text{$X$上的可逆层$P$，连同一个满态射$\mathscr O_X^{n+1}
+\to P$}\}}{\{\text{同构}},
+\end{align*}
+其中同构定义同Corollary \ref{coro:3.42} 中那样。
+\end{thm}
+
+作为应用，我们将到射影空间的映射的这个描述与在第 \ref{s:6.1.3} 节描述
+的作为$\spec K[\varepsilon]/(\varepsilon^2)$到$X$的映射的$X$上的切矢量
+相结合，来计算$\mathbb P_K^n$在$K$-值点上的Zariksi切空间。由我们曾曰，
+一个$\mathbb P_K^n$的$K$-值点是一个秩$n$的直和项$F\subset K^{n+1}$，
+令$L$是商$L=K^{n+1}/F$. 在这个点的切空间$T$就是所有直和项$F'\subset 
+(K[\varepsilon]/(\varepsilon)^2)^{n+1}$，它们模掉$\varepsilon$后是$F$.
+我们断言，存在一个自然同构
+\[
+T\cong \Hom_K(F,L).   
+\]
+为得之，选一个分解$K^{n+1}=F\oplus L$，一个$F$的一组基$e_i$. 
+任何$(K[\varepsilon]/(\varepsilon)^2)^{n+1}$的直和项$F'$模掉
+$\varepsilon$后可以得到$F$，有一组基形如
+$\{e_i+\varepsilon s_i+\varepsilon t_i\}$，其中$s_i\in F$, $t_i\in L$.
+我们对$K'$定义一个映射$\alpha:F\to L$将$e_i$映为$t_i$. 反之，给定任意
+映射$\alpha$，我们可以定义$F'$为由元素$e_i+\varepsilon\alpha(e_i)$
+张成的模。
+
+\begin{exe}\label{exe:6.17}
+证明这些定义都不依赖于选取。
+\end{exe}
+
+最后，Theorem \ref{thm:6.14} 同样可用来从函子描述证明 Grassmannian
+概形的存在性。
+
+% p.261
+\begin{exe}\label{exe:6.18}
+对$0<k<n$，令
+\[
+g=g(k,n):(\text{rings})\to (\text{sets})    
+\]
+为Grassmannian函子，即，由
+\[
+    g(T)=\{\text{$T^n$的秩$k$直和项}\}
+\]
+给出的函子。证明这是射影空间$\mathbb P_{\mathbb Z}^r$的闭子概形
+$G_{\mathbb Z}(k,n)$的点函子，如下。
+
+首先，令$r= {n \choose k}-1$，令$\mathbb P_{\mathbb Z}^r
+=\proj \mathbb Z[\dots X_I \dots]$为齐次坐标为$X_I$的射影空间，指标
+对应为$\{1,2,\dots,n\}$的长度为$n-k$的子集。通过将直和项$M\subset T^n$
+映到$\bigwedge^k M\subset \bigwedge^k T^n$定义一个自然变换
+$g\to h_{\mathbb P_{\mathbb Z}^r}$. 用寻常的仿射开子概形
+$U_I\cong \mathbb A_{\mathbb Z}^r$来覆盖$\mathbb P_{\mathbb Z}^r$，
+证明这些子概形有下面的子函子来表示
+\[
+    U_I(T)=\{\text{$T^{r+1}$的秩$r$直和项使得$T^{r+1}$的第$I$个基矢量
+    生成了余核}\},
+\]
+以及$U_I$和$g$的交（纤维积）为函子
+\[
+    (U_I\cap g)(T)=\{\text{$T^{n}$的秩$r$直和项$M$使得$T^{n}$的基矢量
+    $e_{i_1},\dots,e_{i_{n-k}}$生成了余核}\}.
+\]
+验证交$U_I\cap g$可以由一个仿射概形表示。证明$g$是Zariski拓扑上的层，
+然后推出$g$由一个概形所表示。
+\end{exe}
+
+此外，注意到我们并没有$g(T)=\bigcup (U_I\cap g)(T)$，除了在局部环上。
+
+\begin{exe}\label{exe:6.19}
+证明，这样给出的Grassmannian的定义与之前在第 \ref{s:3.2.7} 节给出的
+定义相同。
+\end{exe}
+
+\begin{exe}\label{exe:6.20}
+    对一个域$K$，给出Grassmannnian $G_K(k,n)$类似的定义，然后证明
+    这与积$G_{\mathbb Z}(k,n)\times \spec K$相同。
+\end{exe}
+
+我们将在下节中看到这个定理的其他应用。函子观点在Damazure\& Grabriel
+[1970]中有被深入细致发展，感兴趣的读者可以参考。
+
+Grothendieck在概形上的工作的一个主要目标是通过不强且一般的性质，它们
+常容易被验证，来找到一个概形函子的刻画，然后推出许多代数几何中的
+存在性定理（就像同伦范畴中的Brown定理，见Spanier [1966, Chapter 7.7]）。
+一开始，这个程序似乎看上去完全失败了，概形函子确实非常特殊，
+比如见Hironaka [1962]. 然而，Artin发现了一个意想不到的近似定理，其表明%
+% p.262
+了有一个仅仅比概形函子范畴“大一点”的函子$\mathscr F$的范畴，它可以被
+不强且一般的性质所刻画。几何地，函子$\mathscr F$就像将仿射概形
+通过“\'etale等价关系”分开然后黏起来得到的空间。他将其叫做
+\emph{代数空间}（一个它们会出现的典型场景，见第 \ref{s:6.2.4} 节）。
+细节可见Artin [1971]和Knutson [1971].
+
 \subsection{参数空间}\label{s:6.2.2}
+
+\paragraph*{Hilbert概形}
+\addcontentsline{toc}{subsubsection}{Hilbert概形}
+
+\paragraph*{Hilbert概形的例子}
+\addcontentsline{toc}{subsubsection}{Hilbert概形的例子}
+
+\paragraph*{Hilbert概形构造的一些变化}
+\addcontentsline{toc}{subsubsection}{Hilbert概形构造的一些变化}
+
 \subsection{用点函子表示的切空间}\label{s:6.2.3}
 \subsection{模空间}\label{s:6.2.4}
