@@ -568,7 +568,7 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 \end{exe}
 
 \begin{exe}\label{exe:4.39}
-	现在令$Z\to \mathbb A_K^3$为$ \mathbb A_K^3$沿着直线$M$的爆破，$\tilde{L}\subset Y$是$L$在$Z$中的真变换，$X''\to Z$是$Z$沿着$\tilde L$的爆破。证明，复合$X''\to Y\to X$也经由爆破$X\to \mathbb A_K^3$分解，且诱导的映射$X'\to X$是来自于$X'\to X$的寻常二重点$p\in X$\textit{反}小消解。为直接看到$X'\to X$和$X''\to X$不是同构的$X$-概形，令$N'$和$N''$是$L\setminus \{0\}$在$X'$和$X''$中的原像，然后直接比较$N'$和$N''$在$0\in \mathbb A_K^3$上的纤维。\nottran
+	现在令$Z\to \mathbb A_K^3$为$\mathbb A_K^3$沿着直线$M$的爆破，$\tilde{L}\subset Y$是$L$在$Z$中的真变换，$X''\to Z$是$Z$沿着$\tilde L$的爆破。证明，复合$X''\to Y\to X$也经由爆破$X\to \mathbb A_K^3$分解，且诱导的映射$X'\to X$是来自于$X'\to X$的寻常二重点$p\in X$\textit{反}小消解。为直接看到$X'\to X$和$X''\to X$不是同构的$X$-概形，令$N'$和$N''$是$L\setminus \{0\}$在$X'$和$X''$中的原像，然后直接比较$N'$和$N''$在$0\in \mathbb A_K^3$上的纤维。
 \end{exe}
 
 \subsection{沿着非约态概形的爆破}\label{s:4.2.3}
@@ -598,7 +598,7 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 
 % p.180 
 
-若我们以具有约化中心的爆破来表$Z$，我们可以看到更多。粗略地说，在经典语言中，$Z$的“”为（见下图）：首先，令$Z_1$为$\mathbb A_K^2$在原点处的爆破，令$E\subset Z_1$为例外除子，即原点的原像。令$P$为$E$在$x$-轴的真变换中的点，及$x$-轴在$Z_1\setminus E$中原像的闭包。令$Z_2$为$Z_1$在点$P$的爆破，令$F\subset Z_2$为这个爆破的例外除子，以及（稍微混用一下记号）$E\subset Z_2$为$E$在$Z_2$中的真变换。于是，在经典语言中，$Z=\operatorname{Bl}_\Gamma (\mathbb A_K^2)$是由$Z_2$ 吹倒 $E$ 得到的，换句话说：\nottran
+若我们以具有约化中心的爆破来表$Z$，我们可以看到更多。粗略地说，在经典语言中，$Z$的“recipe”\nottran 为（见下图）：首先，令$Z_1$为$\mathbb A_K^2$在原点处的爆破，令$E\subset Z_1$为例外除子，即原点的原像。令$P$为$E$在$x$-轴的真变换中的点，即$x$-轴在$Z_1\setminus E$中原像的闭包。令$Z_2$为$Z_1$在点$P$的爆破，令$F\subset Z_2$为这个爆破的例外除子，以及（稍微混用一下记号）$E\subset Z_2$为$E$在$Z_2$中的真变换。于是，在经典语言中，$Z=\operatorname{Bl}_\Gamma (\mathbb A_K^2)$是由$Z_2$吹倒$E$ 得到的，换句话说：
 
 \begin{pro}\label{pro:4.40}
 	$Z=\Bl_\Gamma(\mathbb A_K^2)$在其奇异点$P$的爆破$Z'$是$Z_2$.
@@ -608,7 +608,26 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 
 % p.181
 
-我们从\nottran
+我们从这个描述看到，在平面上穿过原点的直线并没有变得不交，就像他们在
+$\mathbb A_K^2$关于约态原点的爆破的情况中那样：它们在第一个爆破里分开了，
+但当我们吹倒$E\subset Z_2$后，它们又接着交在了一起。另一方面，
+与$x$-轴相切着穿过原点的具有不同曲率的非奇异曲线被分开了：在序列中的
+第一个爆破后，它们横截相交于点$P$，然后它们又被第二个爆破分开了，且不会
+被吹到影响。
+
+\begin{proof}[Proposition \ref{pro:4.40} 的证明]
+由Exercise \ref{exe:4.35}，$Z$在其奇异点处的爆破与$Z$在
+对应于$Z=\Bl_\Gamma (\mathbb A_K^2)\to \mathbb A_K^2$的例外除子的
+约态概形$F$处的爆破相同。这个概形$F$是$Z$中$\mathbb A_K^2$中（约态）原点
+的真变换，就像我们直接从方程看到的那样。
+
+另一方面，我们断言，$Z_2$可以从下面的操作得到，首先爆破$\mathbb A_K^2$
+的约态原点来得到$Z_1$，然后爆破$\Gamma$在$Z_1$中的真变换 ------
+前面过程的逆。\nottran 为看到这点，首先观察到$\Gamma$在$Z_1$中的理想的方程是
+$E\subset Z_1$的理想和点$P$的理想的乘积；因为$E$是Cartier的，于是
+$\Bl_{\Gamma'}Z_1=\Bl_P Z_1$.
+
+有了这些评注，现在我们只要应用下面的这个引理：
 
 \begin{lem}\label{lem:4.41}
 	令$X$为一个概形，$Y_1$和$Y_2\subset X$为其闭子概形。若$f_i:Z_i=\Bl_{Y_i}X\to X$为$X$沿着$Y_1$和$Y_2$的爆破，则作为$X$-概形，
@@ -618,8 +637,21 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 \end{lem}
 
 \begin{proof}
-	\nottran
+令$W_1=\Bl_{f_1^{-1}(Y_2)}Z_1$，再令$g_1:W_1\to Z_1$为爆破映射，类似
+定义$W_2$和$g_2$. 置$h_i=f_i\circ g_i:W_i\to X$. 因为
+$h_1^{-1}(Y_2)=g_1^{-1}(f_1^{-1}(Y_2))\subset W_1$是Cartier的，结构
+映射$h_1:W_1\to X$经由$Z_2$分解，即，存在一个映射$g_1:W_1\to Z_2$使得
+$h_1=f_2\circ j_1$. 类似地，因为$j_1^{-1}(f_2^{-1}(Y_1))=
+h_1^{-1}(Y_1)=g_1^{-1}(f_1^{-1}(Y_1))\subset W_1$同样也是Cartier的，
+映射$j_1:W_1\to Z_2$经由$W_2=\Bl_{f_2^{-1}(Y_1)}Z_2$分解，诱导了一个
+映射$k_1:W_1\to W_2$使得$h_1=h_2\circ k_1$. 另一方向，我们可以类似
+获得一个映射$k_2:W_2\to W_1$. 因为$W_1$作为一个$X$-概形没有自同态，
+$k_2\circ k_1$为恒同，特别地，$k_1$为同构。
+\renewcommand{\qedsymbol}{}
 \end{proof}
+
+\renewcommand{\qedsymbol}{$\square\hspace{-1.9ex}\square$}
+\end{proof}\renewcommand{\qedsymbol}{$\square$}
 
 比较这个引理与Exercise \ref{exe:4.37} 到 \ref{exe:4.39}，其中我们看到，若我们用“全变换”替换“真变换”，顺序确实是重要的。
 

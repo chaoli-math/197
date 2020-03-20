@@ -163,6 +163,66 @@ Grothendieck在概形上的工作的一个主要目标是通过不强且一般�
 \paragraph*{Hilbert概形}
 \addcontentsline{toc}{subsubsection}{Hilbert概形}
 
+点函子的概念产生最大影响的一个领域可能是参数空间的构成和描述。我们已经
+在第 \ref{s:3.3.3} 节看到，比如，域$K$上射影空间的具有给定Hilbert多项
+式$P$的子概形构成一个概形，我们将其叫做$\mathscr H_P$. 这样一个命题并
+没有歧异看上去是有点惊奇的。尽管这些对象的\emph{集合}可能构成一个簇的
+一些点是符合直觉的，难道它们不能以不同的方式构成簇吗？那它们又以
+什么意义构成一个概形？
+
+答案将通过明确我们希望子概形集合与$\mathscr H_P$的点的集合之间的对应关
+系的性质而获得。具体地，注意到如果$\mathscr X\subset \mathbb P_K^n
+\times B\to B$是任意$\mathbb P_K^n$的平坦子概形族，具有Hilbert多项式
+$P$，我们得到了一个从$B$剩余类域为$K$的点的集合到$\mathscr H_P$的点的
+集合的映射，其将$b\in B$映射到$\mathscr H_P$中对应%
+\footnote{译者注：原文是``..., sending a point 
+$b\in B$ to the point of $\mathscr H_P$ corresponding to the fiber
+$X_b$ of $\mathscr H_P$ over $b$.'' 这里第二个$\mathscr H_P$应该是一个
+笔误，实为$\mathscr X$.}%
+$\mathscr X$在$b$处的纤维$X_b$的点。
+自然，我们会问，这个映射是否来自于一个正则映射$B\to \mathscr H_P$？
+再进一小步，我们希望$\mathscr H_P$具有如下性质，对任意$K$上的概形$B$，
+由$B$所参数化的具有Hilbert多项式$P$的$\mathbb P_K^n$的平坦子概形族的
+集合，可以自然等同于所有从$B$到$\mathscr H_P$的映射的集合。最后，因为
+如何参数化具有给定Hilbert多项式的$\mathbb P_K^n$的子概形族的问题某种
+程度上对所有$K$都相同，我们想要在$\spec \mathbb Z$上做这件事，即
+（就在像Grassmannian的情况中那样，实际上这是一个Hilbert概形的特殊情况）
+对每个$P$在$\spec \mathbb Z$上定义一个对象$\mathscr H_P$使得对任意的
+$K$，积$\mathscr H_P\times \spec K$参数化了$\mathbb P_K^n$的具有Hilbert
+多项式$P$的子概形族。
+
+稍微说得不一样些，我们定义：
+
+\begin{defi}\label{defi:6.21}
+\emph{Hilbert函子}$h_P$，叫做“具有Hilbert多项式$P$的
+$\mathbb P_{\mathbb Z}^n$中的概形平坦族的函子”，为函子
+\[
+    h_P:(\text{scheme})^\circ \to (\text{sets}),
+\]
+其对任意$B$给出了一个在$B$上平坦的子概形$\mathscr X\subset \mathbb P_B^n$
+的集合，其在$B$上的点处的纤维具有Hilbert多项式$P$.
+\end{defi}
+
+我们接着想要取Hilbert概形$\mathscr H_P$为表示了$h_P$的概形：换句话说，
+点函子为$h_P$的概形。由Yoneda引理 \eqref{lem:6.1}，这确定了概形
+$\mathscr H_P$，如果其存在，因此核心定理如下：
+
+% p.263
+
+\begin{thm}\label{thm:6.22}
+存在一个概形$\mathscr H_P$，其点函子为函子$h_P$.
+\end{thm}
+
+注意到，对任意概形$S$，我们可以在$S$-概形范畴类似定义函子
+$h_{P,S}:(\text{$S$-schemes})^\circ \to (\text{sets})$，且如果
+$\mathscr H_P$为表示了上面函子$h_P$的概形，则$h_{P,S}$是由$S$-概形
+$\mathscr H_P\times S$所表的函子。
+
+实际上，$\mathscr H_P\times \spec K$确实经常是一个概形，但\emph{并不是}
+一个簇。我们将从 Exercise \ref{exe:6.35} 到 \ref{exe:6.37} 描述
+Mumford [1962]的一个Hilbert概形的经典例子，其甚至在对应非奇异不可约
+射影簇的点处都是非约态的。
+
 \paragraph*{Hilbert概形的例子}
 \addcontentsline{toc}{subsubsection}{Hilbert概形的例子}
 
