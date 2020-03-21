@@ -223,11 +223,105 @@ $\mathscr H_P\times S$所表的函子。
 Mumford [1962]的一个Hilbert概形的经典例子，其甚至在对应非奇异不可约
 射影簇的点处都是非约态的。
 
+Theorem \ref{thm:6.22} 有另一个经常用的诠释：称函子$h_P$可表等价于说
+存在一个\emph{万有族}，即一个概形$\mathscr H$和一个在$\mathscr H$上平坦
+的、具有Hilbert多项式$P$的子概形$\mathscr X\subset \mathbb 
+P_{\mathbb Z}^n\times \mathscr H$，使得任意在$B$上平坦的具有Hilbert
+多项式$P$的子概形$Y\subset \mathbb P_{\mathbb Z}^n\times B$等于
+$Y=\mathscr X\times_{\mathscr H}B\subset \mathbb P_{\mathbb Z}^n\times B$
+和一个唯一的态射$B\to \mathscr H$的纤维积。显然，如果一个万有族
+$\mathscr X\subset \mathbb P_{\mathbb Z}^n\times \mathscr H$存在，
+则$\mathscr H$表示了函子$h_P$. 反过来，如果一个概形$\mathscr H$表示了
+$h_P$，则对应于恒等映射的
+子概形$\mathscr X\subset \mathbb P_{\mathbb Z}^n \times \mathscr H$
+为上面意义下的万有族。
+
+我们将不会给出Theorem \ref{thm:6.22} 的证明，但是会指出如何处理，
+更多的细节我们推荐读者去读Mumford [1966] 或者 Koll\'ar [1996].
+
+想法是容易总结的：首先约化到射影空间$\mathbb P_B^n$的子概形$X$
+的情况，这里基具有形式$B=\spec R$，而$R$是一个局部环。这样一个概形
+$X$由其理想$I(X)\subset S=R[X_0,\dots,X_n]$确定，于是对足够大的$m$
+（某种程度上仅依赖$P$），其被其次数为$m$的分量$I(X)_m\subset S_m$
+确定。置$M={{m+n}\choose n}$和$q=P(m)$，它们对应了Grassmannian
+$G_B(q,M)$中的一个点，这个Grassmannian参数了自由$R$-模$S_m\cong R^M$
+中余维数为$P(m)$的直和项。这样，$\mathscr H_{P,B}$变成了这样平面的
+Grassmannian $G_B(q,M)$的一个子概形。
+
+\nottran 
+
+% p.264
+
 \paragraph*{Hilbert概形的例子}
 \addcontentsline{toc}{subsubsection}{Hilbert概形的例子}
+我们将主要以习题的形式来提到一些Hilbert概形的例子。首先，Grassmannian
+$\mathbb G_S(k,n)$是一个Hilbert概形：它参数化了射影空间$\mathbb P_S^n$
+中维数为$k$且次数为$1$的子概形。下面的习题处理了其中最简单的情况，
+一般的命题（和证明）只在数值上有一些改动。
+
+\begin{exe}\label{exe:6.23}
+令$P(m)=m+1$为一条直线的Hilbert多项式。证明，$\mathbb P_{\mathbb Z}^3$
+中具有Hilbert多项式$P$的子概形的Hilbert概形为在Exercise \ref{exe:6.20}
+中所引入的Grassmannian.
+\end{exe}
+
+另一个直接的例子是超曲面。这是一个标准的观察，域$K$上射影空间
+$\mathbb P_K^n$中次数为$d$的超曲面的集合可以等同于$n+1$个变量下的$d$-次
+齐次多项式的集合。实际上，这个射影空间变成了这样的超曲面的Hilbert概形。
+同上面的例子，下面的习题处理了一个典型的例子。
+
+% p.265
+
+\begin{exe}\label{exe:6.24}
+令$P(m)=2m+1$为一条二次曲线的Hilbert多项式。证明$\mathbb P_{\mathbb Z}^2$
+中具有Hilbert多项式$P$的子概形的Hilbert多项式$\mathscr H_P$为
+$\mathbb P_{\mathbb Z}^5$.
+\end{exe}
+
+这些例子外，Hilbert概形的几何的了解并没有那么多。甚至，参数化了
+域上的射影空间$\mathbb P_K^n$中的零维子概形的Hilbert多项式仍然神秘：
+比如，Iarrobino [1985] 证明了（除去一些\naive 的例外），
+这样的Hilbert概形一般不是不可约的。在$\mathbb P_K^2$的情况，这里
+它们实际是不可约且非奇异的，但是它们的整体几何展示了许多问题：
+比如可见Collino [1988]. 一个在这里我们可以给出描述的例子是下面的习题。
+
+\begin{exe}\label{exe:6.25}
+令$P$是一个常多项式$2$. 证明参数化了$\mathbb P_{\mathbb Z}^2$中具有
+Hilbert多项式$P$的子概形的Hilbert多项式$\mathscr H_P$可以通过沿着
+对角线爆破$\mathbb P_{\mathbb Z}^2\times \mathbb P_{\mathbb Z}^2$，
+然后通过取交换因子的对合的商得到。\nottran
+\end{exe}
+
+一般情况中，我们关于Hilbert概形的知识非常少。比如，域$K$上的
+射影空间$\mathbb P_K^3$中的曲线的情况，这是参数了纯正维数但不是
+超曲面的概形的Hilbert概形的最简单的例子，我们甚至对$\mathscr H_P$
+的分支的数量、维数、光滑性或奇异性都没有一个猜测。对这个例子的一个
+讨论，见Harris \& Eisenbud [1982].
 
 \paragraph*{Hilbert概形构造的一些变化}
 \addcontentsline{toc}{subsubsection}{Hilbert概形构造的一些变化}
+我们已经定义了参数化射影空间中具有给定Hilbert多项式$P$的子概形的
+Hilbert概形。实际上，无需太多气力，我们就可以大幅推广它。
+
+首先，我们注意到，如果$X\subset \mathbb P_S^n$是任意的闭子概形，我们
+可以定义一个函子
+\[
+    h_{P,X}:(\text{$S$-schemes})^\circ \to (\text{sets})    
+\]
+将任意的$S$-概形$B$映到$X$中具有Hilbert多项式$P$的子概形族的集合，即
+\[
+    h_{P,X}(B)=\{\mathscr{X} \subset B \times_{S} X \subset B 
+    \times_{S} \mathbb{P}_{S}^{n}=\mathbb{P}_{B}^{n}, 
+    \text{ 在$B$上平坦，且具有Hilbert多项式$P$}.    
+    \}
+\]
+
+不难建立的关键事实如下：
+
+\begin{exe}\label{exe:6.26}
+证明$h_{P,X}$为$h_P$的一个闭子概形。
+\end{exe}
+
 
 \subsection{用点函子表示的切空间}\label{s:6.2.3}
 \subsection{模空间}\label{s:6.2.4}
