@@ -634,7 +634,10 @@ $A$-代数同态
 
 为进一步推广到仿射环或概形的情况，我们来寻找一个构造，使得局部可以约化
 到上面的情况的构造。为此，我们可将命题中的$(n+1)$-元组
-$(\alpha_0,\dots,\alpha_n)$看成一个模同态
+$(\alpha_0,\dots,\alpha_n)$看成一个模同态%
+\footnote{译者注：从下面的证可知，这里的莫同台即$\alpha$的矩阵为
+$(\alpha_0,\dots,\alpha_n)$. 再换句话说，
+$\alpha(t)=\sum_{i=0}^n\alpha_i t_i$.}%
 \[
 	\alpha:T^{n+1}\to T.
 \]
@@ -750,7 +753,7 @@ Theorem \ref{thm:3.37} 的核心是下面的结论，是第一个等式的仿射
 	$\spec T$上的层。在$U_j$上，由$1\mapsto e_j$定义的映射$T\to P$是一个
 	同构。通过这个映射等同$P|_{U_j}$以及$T|_{U_j}$后，投射$T^{n+1}|_{U_j}
 	\to (T^{n+1}/K)|_{U_j}=P|_{U_j}=T|_{U_j}$的矩阵具有形式
-	$(t_{j_0},\dots,t_{jj}=1,\dots,t_{jn})$，其定义了$T^{n+1}_{U_j}$的一
+	$(t_{j0},\dots,t_{jj}=1,\dots,t_{jn})$，其定义了$T^{n+1}_{U_j}$的一
 	个元素，因此也定义了一个态射$\spec T\to \mathbb A_{\zz}^n$. 这些态射
 	在交叠的地方相容，就像在Proposition \ref{pro:3.39} 中那样，于是它们定
 	义了一个态射$\spec T\to \mathbb P_\zz^n$.
@@ -948,8 +951,8 @@ $D$, $E$是有效Cartier除子。
 
 注意，这有一个不幸的但本质上无歧义的记号：如果$U$是$X$的一个开集，
 则$\oo(U)$是层$\oo_X$在$U$上的截面构成的环，然而如果$D$是一个
-Cartier除子，$\oo(D)$就是上面的层。当然，我们也可能会操作这种
-怪物$\oo_X(D)(U)$....
+Cartier除子，$\oo(D)$就是上面的层。当然，我们也可能会操作
+$\oo_X(D)(U)$这种怪物....
 
 我们可以如下深化可逆层与有效Cartier除子之间的联系：如果$D$是
 一个有效Cartier除子，则含入$\mathscr I_D\hookrightarrow \oo_X$
