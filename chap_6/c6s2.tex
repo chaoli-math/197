@@ -68,7 +68,7 @@ h_Y(X)=&
 \;\{\text{局部为秩$n$直和项的局部自由子层$\mathscr F\subset 
 \mathscr O_X^{n+1}$}\}\\
 =&\; \frac{\{\text{$X$上的可逆层$P$，连同一个满态射$\mathscr O_X^{n+1}
-\to P$}\}}{\{\text{同构}},
+\to P$}\}}{\{\text{同构}\}},
 \end{align*}
 其中同构定义同Corollary \ref{coro:3.42} 中那样。
 \end{thm}
@@ -248,9 +248,48 @@ $G_B(q,M)$中的一个点，这个Grassmannian参数了自由$R$-模$S_m\cong R^
 中余维数为$P(m)$的直和项。这样，$\mathscr H_{P,B}$变成了这样平面的
 Grassmannian $G_B(q,M)$的一个子概形。
 
-\nottran 
+关键在于，我们可以选一个统一的$m$使得对Hilbert多项式为$P$的任意子概形
+$X$都有如下性质成立：存在一个$m_0$使得$m\geq m_0$且$X$是$\mathbb P_K^n$
+的Hilbert多项式为$P$的子概形时，$I(X)_{l\geq m}$是由$I(X)_m$所生成的，
+且$I(X)_m$在$S_m$里的余维数为$P_X(m)$. 审查我们的证明，
+因为Hilbet多项式是一个多项式，我们看到只要证明
+$I(X)$的极小自由分解中的自由模的生成元的次数可以被$X$的Hilbert多项式
+所限制就够了。这由$X$的\emph{Castelnuovo正规化}所完成，更加完整的描述
+将带我们离开太远。
 
 % p.264
+
+因此，对任意的基$B=\spec R$上的平坦族$\mathscr X\subset \mathbb P_B^n$，
+即一个$h_P(\spec R)$中的元素，我们有一个$R^M$中余维数为$q$的直和项，即
+一个$g(q,M)(R)$中的元素，其中$g=g(q,M)$是在Exercise \ref{exe:6.18} 中
+所定义的Grassmannian函子。这个对应可以推广为一个从$h_P^*$到$g(q,M)$的
+自然变换，其中$h_P^*:(\text{rings})\to (\text{sets})$为函子$h_P^*=
+h_P(\spec R)$，于是也推广为一个从Hilbert函子$h_P$到由Grassmannian
+$G=G_{\mathbb Z}(q,M)$所表的函子的自然变换。
+
+未完成论证，我们必须证明，存在一个子概形$\mathscr H_P\subset G$使得
+态射$\varphi:B\to G$以这种方式来源于一个具有Hilbert多项式$P$的平坦族
+$\mathscr X\subset \mathbb P_B^n$，当且仅当$\varphi$经由$\mathscr H_P$
+分解。这里，我们将满足于描述$\mathscr H_P$，作为$G$的一个闭子概形，的
+方程。令$\mathscr Y$为$G$上的万有子丛。我们将有一个乘法映射：
+\[
+    \operatorname{mult}_{k}: \mathscr{Y} \otimes S_{k} \to S_{k+m},
+\]
+其中$S=\mathbb Z[X_0,\dots,X_n]$，以及我们可以取$\mathscr H_P$为
+$G_{\mathbb Z}(q,M)$的由 
+\[
+    \operatorname{rank}(\operatorname{mult}_{k}) \leq \dim S_{k+m}-P(m+k)
+\]
+对所有$k\geq 0$都成立所定义的“行列式”子丛。
+
+瞬间就可以知道，想要的映射$\varphi$都经由该子概形所分解。
+给定这个子概形中的任何点$p$，证明（因为$m$可以选得足够大），由$S_m$的
+相应线性子空间生成的理想定义了一个具有Hilbert多项式$P$的概形。
+这为我们提供了一个具有Hilbert多项式$P$的概形们的$\mathscr H_P$上的
+“重言族”。给定概形$B$到$\mathscr H_P$的任何映射，
+可以使用纤维积来“拉回”该族得到一个$B$上的族，并且将映射$\varphi$与
+该族对应。一旦所有这些都得到验证，对$\mathscr H_P$的点函子的描述就可以
+确保$\mathscr H_P$不依赖于$m$的选择。
 
 \paragraph*{Hilbert概形的例子}
 \addcontentsline{toc}{subsubsection}{Hilbert概形的例子}
@@ -312,8 +351,8 @@ Hilbert概形。实际上，无需太多气力，我们就可以大幅推广它�
 \[
     h_{P,X}(B)=\{\mathscr{X} \subset B \times_{S} X \subset B 
     \times_{S} \mathbb{P}_{S}^{n}=\mathbb{P}_{B}^{n}, 
-    \text{ 在$B$上平坦，且具有Hilbert多项式$P$}.    
-    \}
+    \text{ 在$B$上平坦，且具有Hilbert多项式$P$}
+    \}.
 \]
 
 不难建立的关键事实如下：
@@ -321,6 +360,20 @@ Hilbert概形。实际上，无需太多气力，我们就可以大幅推广它�
 \begin{exe}\label{exe:6.26}
 证明$h_{P,X}$为$h_P$的一个闭子概形。
 \end{exe}
+
+% p.266
+
+从中可知，存在一个闭子概形$\mathscr H_{P,X}\subset \mathscr H_P$其
+点函子为$h_{P,X}$，此概形我们称为\emph{$X$的具有Hilbert多项式$P$的子
+概形的Hilbert概形}。
+
+作为一个重要的例子，如果我们取$P(m)={{k+m}\choose k}$为一个$k$-平面的
+Hilbert多项式，我们将在下面的第 \ref{s:6.2.3} 节中看到，得到的概形
+$\mathscr H_{P,X}$即$X$上$k$-平面的Fano概形，其定义在第 \ref{s:4.3} 节。 
+这也不是一个空洞的观察：除了给出更自然的定义之外，Fano概形的这种刻画
+将使我们能够确定它们的切空间。
+
+\nottran
 
 
 \subsection{用点函子表示的切空间}\label{s:6.2.3}
