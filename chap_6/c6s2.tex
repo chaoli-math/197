@@ -491,8 +491,178 @@ K[\varepsilon]/(\varepsilon^2))$. 令$A=\oo_Y(U)$为$U$的坐标环，而
 $I=I(V)$为$V$在$A$中的理想，于是层$\mathscr N_{X/Y}$在$V$上的限制为
 $A$-模$\Hom(I,A/I)$的相伴层。
 
-\nottran
+$U\times \spec K[\varepsilon]/(\varepsilon^2)$的坐标环为$A\otimes 
+K[\varepsilon]/(\varepsilon^2)$，我们记这个环的一个元素为
+$f+\varepsilon g$，其中$f$, $g\in A(U)$. 特别地，我们可以记
+$\mathscr V$的理想$I(\mathscr V)$为
+\[
+    I(\mathscr{V})=\left(f_{1}+\varepsilon g_{1}, 
+    f_{2}+\varepsilon g_{2}, \dots, f_{k}+\varepsilon g_{k}\right)
+\]
+其中的元素$f_i\in A$从假设生成了理想$I$. 我们现在断言，\emph{存在一个
+$A$-模同态$\varphi:I\to A/I$将$f_i$变成了$g_i$当且仅当$\mathscr V
+\to \spec K[\varepsilon]/(\varepsilon^2)$是平坦的}（注意到如果$\varphi$
+存在，则是唯一的）。从这个断言可以立即得到定理：一个方向上，
+如果族$\mathscr X\to \spec K[\varepsilon]/(\varepsilon^2)$是平坦的，
+则从唯一性，同态$\varphi$黏起来的得到了层$\mathscr N_{X/Y}$的一个截面。
+反过来，如果给定了一个$\mathscr N_{X/Y}$的整体截面，我们可以简单取
+$\mathscr X$为局部由理想
+\[
+    \{f+\varepsilon \cdot \varphi(f): f \in I(V)\}
+\]
+给出的子概形。
+
+为证明这个断言，首先注意到，一个$K[\varepsilon]/(\varepsilon^2)$-模
+$M$是平坦的当且仅当，我们将$K[\varepsilon]/(\varepsilon^2)$-模的
+短正合列
+\[
+    0 \to (\varepsilon) \to  K[\varepsilon] /(\varepsilon^{2})
+    \to  K \to  0
+\]
+张量积上$M$后依然是正和的。将此应用到$\mathscr V$的坐标环
+$B=\oo_{\mathscr X}(\mathscr B)$上，我们看到$\mathscr V$在
+$\spec K[\varepsilon]/(\varepsilon^2)$平坦当且仅当映射
+\[
+    (\varepsilon)\otimes B\to B
+\]
+是单射，即当且仅当，对任何的$f\in A$,
+\[
+    \varepsilon \cdot f \in I(\mathscr{V}) \Rightarrow f \in I(V).
+\]
+
+% p.269
+
+现在假设$f\in A$和$\varepsilon\cdot f\in I(\mathscr V)$. 我们可以记
+\[
+    \varepsilon \cdot f=\sum(a_{i}+\varepsilon b_{i}) 
+    \cdot(f_{i}+\varepsilon g_{i})=\sum a_{i} f_{i}+
+    \varepsilon \cdot \sum(a_{i} g_{i}+b_{i} f_{i}).
+\]
+我们知道右边第一项为零，因为等式的其他两项都可以整除$\varepsilon$.
+现在，如果存在一个$A$-模同态$\varphi:I\to A/I$使得$\varphi(f_i)=g_i$，
+则我们可以记
+\[
+    \sum a_{i} \cdot g_{i}=\sum a_{i} \cdot \varphi\left(f_{i}\right)=
+    \varphi\left(\sum a_{i} f_{i}\right)=0,
+\]
+于是将$f_i$变成$g_i$的模同态$\varphi$的存在性可以推出族$\mathscr V$
+是平坦的。
+
+反之，假设$\mathscr V\to \spec K[\varepsilon]/(\varepsilon^2)$是平坦的。
+则对任意的一组$a_i\in A$使得$\sum a_if_i=0$，我们有
+\[
+    \varepsilon \cdot \sum a_{i} \cdot g_{i}=\sum a_{i} \cdot (f_{i}
+    +\varepsilon g_{i}) \in I(\mathscr{V}) \Longrightarrow 
+    \sum a_{i} \cdot g_{i} \in I(V).
+\]
+因此，我们可以定义一个$A$-模同态$\varphi:I\to A/I$通过将，对任意的
+$a_1,\dots,a_k\in A$，$\sum a_if_i\in I$映射到$\sum a_ig_i\in A/I$，
+通过上面最后的继续，这是良定的。
 \end{proof}
 
+下面是这个定理一个平凡但有用的结果。
+
+\begin{coro}\label{coro:6.30}
+Hilbert概形的任意不可约分支$\Sigma$的维数至多为任意概形$X$的法层的
+截面空间的维数，其中$[X]\in \Sigma$.
+\end{coro}
+
+实际上，这个Hilbert概形的分支的维数的先验估计往往能给出正确答案，特别
+当应用到$\mathscr H_P$的分支的一个一般的点$[X]$上时。下面的习题给出了
+例子。
+
+\begin{exe}\label{exe:6.31}
+    令$\Sigma$是Hilbert概形的一个分支，其一般的元素是$k$个次数为$d$的
+    超曲面的完全交$X\subset \P_K^n$. 计算$\mathscr N_X$的整体截面的
+    空间的维数，然后证明这等于$\Sigma$的维数。
+\end{exe}
+
+\begin{exe}\label{exe:6.32}
+    推广上面的习题到Hilbert概形的分支，其一般的元素是次数为$d_1$,
+    $\dots$, $d_k$的超曲面的完全交$X\subset \P_K^n$的情况。（这可能
+    有点复杂，你可以先考虑$k=2$的情况，这足以知其走向。）
+\end{exe}
+
+\begin{exe}\label{exe:6.33}
+    令$P(m)$为多项式$3m+1$，而$\Sigma$是$\P_K^3$的子概形的Hilbert概形
+    $\mathscr H_P$的分支，其一般的元素为一个扭三次曲线$C$. 证明，
+    $\Sigma$的维数为$12$，且它等于$\mathscr N_C$的截面空间的维数。
+    \nottran
+\end{exe}
+
+% p.270
+
+\nottran
+
+% p.274
 
 \subsection{模空间}\label{s:6.2.4}
+
+类似情形在我们想要构造几何对象的模空间（moduli space）时候也会出现。
+比如，我们想要将所有域$K$上的亏格为$g$的非奇异射影曲线的集合等同于
+一个“模概形”$\mathscr M_g$的闭点集。为避免非必要的麻烦，我们只考虑
+$\operatorname{char}(K)=0$的情况。同样，表达我们想要东西的方式为
+引入\emph{亏格为$g$的非奇异曲线的函子}：这个函子
+\[
+    \mathscr M_g^{\text{fun}}:(\text{$K$-schemes})^\circ \to 
+    (\text{sets})
+\]
+将任意的$K$-概形$B$映到平坦族$\pi:\mathscr X\to B$的集合（模掉所有
+$B$-概形的同构$\mathscr X\cong \mathscr X'$），这些
+平坦族的纤维为亏格为$g$的非奇异曲线。我们定义$\mathscr M_g$为（任何）
+表示了函子$\mathscr M_g^{\text{fun}}$的概形。
+
+因为概形唯一由其点函子确定，上面的“定义”的唯一难点即是否这样的概形存在，
+即是否这些函子可表。在$\mathscr H_P$的情况里，答案是肯定的，且实际如
+我们指出，$\mathscr H_P$作为表示了函子$h_P$的概形这个刻画对证明存在性
+非常重要。
+
+% p.275
+
+然后，在$\mathscr M_g$的情况中，答案是否定的！比如，即使在$\mathbb C$
+上的亏格为$1$的非奇异曲线的例子中，也不存在这个意义上的模空间
+$\mathscr M_1$. 为看到这点，只需证明不存在一个万有族即可，换句话说，
+一个纤维为亏格为$1$的非奇异曲线的平坦族$\pi:\mathscr C\to \mathscr M$
+使得对任意纤维为亏格为$1$的非奇异曲线的族$\mathscr Y\to B$，
+都存在唯一的态射$\varphi:B\to \mathscr M$
+和$\Phi:\mathscr Y\to \mathscr C$构成纤维积的交换图：
+\[
+    \xymatrix{
+        \mathscr Y\ar[r]^\Phi \ar[d]_\eta & \mathscr C\ar[d]^\pi\\
+        B \ar[r]^\varphi & \mathscr M
+    }
+\]
+实际上，甚至都不存在一个重言族，即一个态射$\mathscr C\to\mathscr M$
+和一个$\mathscr M$的闭点集和亏格为$1$的非奇异曲线的同构类的集合间的
+双射，使得$p\in \mathscr M$处的纤维在对应于点$p$的同构类中。我们将
+列出万有族的存在性的两类障碍，一个是局部的，一个是整体的。
+
+对局部障碍，回忆$\mathbb C$上的亏格为$1$的曲线由它们的\emph{$j$-不变量}
+所分类：我们可以记这样的曲线为平面三次曲线
+\[
+    y^2=x(x-1)(x-\lambda)
+\]
+其中复数$\lambda \neq 0,1$，两个这样的曲线$C_\lambda$和$C_{\lambda'}$
+是同构的当且仅当$j$-不变量$j(\lambda)$和$j(\lambda')$相等，其中
+\[
+    j(\lambda)=256\cdot \frac{(\lambda^2-\lambda+1)^3}
+    {\lambda^2(\lambda-1)^2};
+\]
+比如可见Silberman [1986, Chapter III, Proposition 1.7]. 可以证明，
+给定一个非奇异基$B$上的亏格为$1$的非奇异曲线族$\mathscr X\to B$，
+函数$j$是一个$B$上的正则函数，局部在点$b\in B$附近，$\lambda$也可以
+被定义为一个正则函数（即使不唯一）。于是，如果存在一个重言族，则
+必须存在一个族其基为坐标%
+\footnote{译者注：即$\mathbb A_{\mathbb C}^1$的坐标环为$\mathbb C[j]$.}%
+为$j$的仿射直线$\mathbb A_{\mathbb C}^1$.
+但是，这样的族并不存在，因为在点$j=0$处，函数$\lambda^2-\lambda+1$
+将为零，故$j$将三次为零。没那么显然地，因为$j'(-1)=0$，于是
+$j$只能允许取值$1728$时具有偶数重数。（注意到值$j=0$和$1728$对应于
+具有“额外自同构”的椭圆曲线，即，其自同构群包含一般的椭圆曲线的自同构群
+作为指数%
+\footnote{译者注：怕读者忘记（主要是我），指数即陪集的个数。}%
+分别为$3$和$2$的子群。）
+
+% p.276 
+
+% p.277 (final page)
