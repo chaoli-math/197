@@ -49,13 +49,14 @@ $\proj S$可以如下定义：将$S$中的正次齐次元生成的理想记作
 \]
 的集合，其中$I$是$S$的齐次理想。
 
-我们将在开集基的每一个元素上明确$|\proj S|$的概形结构。为此，令$f$是$S$的任意$1$-次齐次元素，以及$U$是开集
+我们将在开集基的每一个元素上明确$|\proj S|$的概形结构。为此，令$f$是$S$
+的任意$1$-次齐次元素，以及$U$是开集
 \[
 	|\proj S|-V(f),
 \]
 即所有不包含$f$的齐次素理想（于是也不包含$S_+$）。$U$中的点可以等同于
-$S[f^{-1}]$中的齐次素理想。另一方面，那些对应于环$S[f^{-1}]$中
-所有的$0$-次素理想的齐次素理想的集合，我们将其记作$S[f^{-1}]_0$，
+$S[f^{-1}]$中的齐次素理想。另一方面，这些齐次素理想对应于环$S[f^{-1}]$
+中所有的$0$-次元素的环，记作$S[f^{-1}]_0$，的素理想；
 见Exercise \ref{exe:3.6}(a). 
 于是，我们可以将$U$与拓扑空间$\spec S[f^{-1}]_0$相等同，
 然后给他一个相应的仿射概形结构。我们将用$(\proj S)_f$来记这些
@@ -66,7 +67,8 @@ $\proj S$的仿射开子概形。如果$1$-次元$x_0$, $x_1$, $\dots$们生成�
 \]
 就构成了$\proj S$的一个仿射开覆盖。
 
-如果$g$是$S$的另一个$1$-次元，则重叠部分$(\proj S)_f\cap (\proj S)_g$是$(\proj S)_f$的由
+如果$g$是$S$的另一个$1$-次元，则重叠部分$(\proj S)_f\cap (\proj S)_g$
+是$(\proj S)_f$的由
 \[
 	S[f^{-1}]_0[(g/f)^{-1}]=S[f^{-1},g^{-1}]_0
 \]
@@ -361,7 +363,7 @@ $
 
 \subsection{切空间和切锥} \label{s:3.2.4}
 \paragraph*{仿射与射影切空间}\addcontentsline{toc}{subsubsection}{仿射与射影切空间}
-概形的Zariski切空间是抽象矢量空间，但当一个域$K$上的概形$X$被嵌入到一个环绕空间中，比如仿射或射影$K$-空间，我们可以将$X$的一个剩余类域为$K$的点$p$关联于一个对应仿射或者射影空间的线性子簇，其被称为$X$在点$p$的\textit{仿射切空间}或\textit{射影切空间}。在仿射概形$X=V(f_1,\dots,f_k)\subset \mathbb A_K^n$以及点$p=(a_1,\dots,a_n)\in X$的情况中，这是一个由
+概形的Zariski切空间是抽象矢量空间，但当一个域$K$上的概形$X$被嵌入到一个背景空间中，比如仿射或射影$K$-空间，我们可以将$X$的一个剩余类域为$K$的点$p$关联于一个对应仿射或者射影空间的线性子簇，其被称为$X$在点$p$的\textit{仿射切空间}或\textit{射影切空间}。在仿射概形$X=V(f_1,\dots,f_k)\subset \mathbb A_K^n$以及点$p=(a_1,\dots,a_n)\in X$的情况中，这是一个由
 \[
 	V\left(\left\{
 		\sum_i \frac{\partial f_\alpha}{\partial x_i}(\alpha_1,\dots,\alpha_n)\cdot (x_i-a_i)
@@ -372,9 +374,9 @@ $
 \[
 	\overline{V}=\spec (\operatorname{Sym}(V^*)).
 \]
-我们将称$\overline{V}$为\textit{关联于矢量空间$V$的概形}。
+我们将称$\overline{V}$为\textit{对应于矢量空间$V$的概形}。
 
-这告诉我们，与域$K$上的仿射空间$\mathbb A_K^n$在$K$-有理点$p\in \mathbb A^n_K$（即一个剩余类域为$\kappa(p)=K$的闭点）的Zariski切空间相关联的概形$\overline{T_p(\mathbb A^n_K)}$，可以自然等同于仿射空间本身，它将$T_p(\mathbb A_K^b)$的原点变成了$p$. 现在，假设$X\subset \mathbb A_K^n$是任意的子概形，$p\in X$是任意的$K$-有理点。含入$\iota:X\hookrightarrow \mathbb A_K^n$在点$p$处的微分$d\iota_p$将Zariski切空间$T_p(X)$表为一个矢量子空间
+这告诉我们，与域$K$上的仿射空间$\mathbb A_K^n$在$K$-有理点$p\in \mathbb A^n_K$（即一个剩余类域为$\kappa(p)=K$的闭点）的Zariski切空间相对应的概形$\overline{T_p(\mathbb A^n_K)}$，可以自然等同于仿射空间本身，它将$T_p(\mathbb A_K^b)$的原点变成了$p$. 现在，假设$X\subset \mathbb A_K^n$是任意的子概形，$p\in X$是任意的$K$-有理点。含入$\iota:X\hookrightarrow \mathbb A_K^n$在点$p$处的微分$d\iota_p$将Zariski切空间$T_p(X)$表为一个矢量子空间
 \[
 	d\iota_p:T_p(X)\hookrightarrow T_p(\mathbb A_K^n).
 \]
@@ -390,7 +392,7 @@ $
 \]
 这个含入的像是$\mathbb A_K^n$的一个仿射子空间，我们将其称为$X$在点$p$的\textit{仿射切空间}。再一次注意到，这是一个概形不是一个矢量空间。
 
-对射影概形$X\subset \mathbb P_K^n$的剩余类域为$K$的点$p$，我们可以类似地关联于一个线性子空间$\mathbb T_p(X)\subset \mathbb P_K^n$. 一种实现它的方式是找一个包含$p$的开子集$U\cong \mathbb A_K^n\subset \mathbb P^n_K$，然后取$X\cap U$在点$p$的仿射切空间在$\mathbb P_K^n$中的闭包。但，我们也有另一种更内蕴的方式。首先，我们记环绕射影空间$\mathbb P_K^n$为关联于矢量空间$V$的射影空间$\mathbb PV$，即是
+对射影概形$X\subset \mathbb P_K^n$的剩余类域为$K$的点$p$，我们可以类似地对应于一个线性子空间$\mathbb T_p(X)\subset \mathbb P_K^n$. 一种实现它的方式是找一个包含$p$的开子集$U\cong \mathbb A_K^n\subset \mathbb P^n_K$，然后取$X\cap U$在点$p$的仿射切空间在$\mathbb P_K^n$中的闭包。但，我们也有另一种更内蕴的方式。首先，我们记背景射影空间$\mathbb P_K^n$为对应于矢量空间$V$的射影空间$\mathbb PV$，即是
 \[
 	\mathbb P_K^n=\proj S
 \]
@@ -402,7 +404,7 @@ $
 \[
 	I=I(X)\subset S
 \]
-为$X\subset \mathbb P_K^n$的齐次理想，以及令$\mm=\mm_p\subset S$为在点$p\in X$为零的形式（form）构成的理想。令$J$是理想$I+\mm^2\subset S$的饱和化。我们定义$X$在点$p$的射影切空间$\mathbb T_p(X)$为$\mathbb P_K^n$的子空间
+为$X\subset \mathbb P_K^n$的齐次理想，以及令$\mm=\mm_p\subset S$为在点$p\in X$为零的齐次多项式构成的理想。令$J$是理想$I+\mm^2\subset S$的饱和化。我们定义$X$在点$p$的射影切空间$\mathbb T_p(X)$为$\mathbb P_K^n$的子空间
 \[
 	\mathbb T_p (X)=V(J\cap S_1)\subset \mathbb P^n_K.
 \]
@@ -412,11 +414,11 @@ $
 	证明这个定义与前面的一开始说的\naive 定义一致。
 \end{exe}
 
-因为射影概形$X$在$K$-有理点$p\in X$处的射影切空间$\mathbb T_p(X)$是一个环绕射影空间$\mathbb PV$的一个线性子空间，具有形式$\mathbb T_p(X)=\mathbb PW$，其中$W$是一个商矢量空间$V\to W\to 0$. 然后，我们可能问矢量空间$W$与Zariski切空间$T_p(X)$之间具有什么联系。在第 \ref{s:6.2.1} 节中，我们将看到答案是一个正合列
+因为射影概形$X$在$K$-有理点$p\in X$处的射影切空间$\mathbb T_p(X)$是一个背景射影空间$\mathbb PV$的一个线性子空间，具有形式$\mathbb T_p(X)=\mathbb PW$，其中$W$是一个商矢量空间$V\to W\to 0$. 然后，我们可能问矢量空间$W$与Zariski切空间$T_p(X)$之间具有什么联系。在第 \ref{s:6.2.1} 节中，我们将看到答案是一个正合列
 \[
 	0\longrightarrow K\longrightarrow W^* \longrightarrow T_p(X)\longrightarrow 0.
 \]
-更明确一些，如果$V\to U\to 0$是$V$的一个$1$-维商空间，关联于点$p\in X\subset \mathbb PV$，则满射$V\to U$可以经由满射$\varphi:W\to U$分解，进而我们有一个自然的等同
+更明确一些，如果$V\to U\to 0$是$V$的一个$1$-维商空间，对应于点$p\in X\subset \mathbb PV$，则满射$V\to U$可以经由满射$\varphi:W\to U$分解，进而我们有一个自然的等同
 \[
 	T_p(X)=\Hom(\operatorname{Ker}\varphi,U).
 \]
@@ -470,7 +472,7 @@ $
 
 回到一般的情况，注意到因为环$B=\bigoplus (\mm^\alpha/\mm^{\alpha+1})$是分次的，我们可以同样对$(X,p)$关联一个几何对象$\proj B$. 这是$X$在点$p$的Zariski切空间对应的射影空间$\mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的一个子概形，称作在$X$在点$p$的\textit{射影化切锥}，记作$\mathbb PTC_p(X)$. 在许多情况中，处理作为射影概形以及比切锥少一维的射影化切锥会更方便，但一般来说，他比切锥所包含的信息稍少一些（就像下面的Exercise \ref{exe:3.30} 将展示的，切锥$TC_p(X)$可能在原点有一个嵌入点，而射影化切锥没有）。
 
-尽管，射影空间一般的子概形的次数将在第 \ref{s:3.3.1} 节中才定义，我们将在这里提出一个可以由$X$在点$p$的射影化切锥定义的概形不变量：定义$X$在点$p$的\textit{重数}为射影化切锥$\mathbb PTC_p(X)\subset \mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的次数。这个定义展现了另一个例子，告诉我们为何概形会在处理簇时自然出现且十分方便：在簇范畴我们依然可以定义切锥（是关联于我们的切锥的约态概形）以及射影化切锥，但是它们在族中表现得并不好。
+尽管，射影空间一般的子概形的次数将在第 \ref{s:3.3.1} 节中才定义，我们将在这里提出一个可以由$X$在点$p$的射影化切锥定义的概形不变量：定义$X$在点$p$的\textit{重数}为射影化切锥$\mathbb PTC_p(X)\subset \mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的次数。这个定义展现了另一个例子，告诉我们为何概形会在处理簇时自然出现且十分方便：在簇范畴我们依然可以定义切锥（是对应于我们的切锥的约态概形）以及射影化切锥，但是它们在族中表现得并不好。
 
 % p.108
 
@@ -517,7 +519,7 @@ $
 切锥$TC_p X$是$\overline{\Gamma}$在点$p\in X$处的纤维。
 \end{pro}
 
-这个命题（模掉$TC_p X$中在原点处可能的嵌入分支）将在第 \ref{chap:4} 章中证明。这个命题相当于说，$TC_p X$的射影化是$X$在点$p$的爆破的例外除子（exceptional divisor）。
+这个命题（模掉$TC_p X$中在原点处可能的嵌入分支）将在第 \ref{chap:4} 章中证明。这个命题相当于说，$TC_p X$的射影化是$X$在点$p$的爆破的例外除子。
 
 Proposition \ref{pro:3.31} 相当有用，比方说在做下面的Exercise \ref{exe:3.32}--\ref{exe:3.34} 的时候。
 
@@ -535,11 +537,11 @@ Proposition \ref{pro:3.31} 相当有用，比方说在做下面的Exercise \ref{
 
 \begin{exe}\label{exe:3.34}
 这是一个来自于经典几何的习题。假设$C\subset \mathbb P_K^n$是一个非奇异曲线。
-$C$的射影切线的并是一个曲线$S\subset \mathbb P_K^n$的支集，
-被称为$C$的\textit{tangent developable}，这个曲面沿着$C$可能会奇异
+$C$的射影切线的并是一个曲面$S\subset \mathbb P_K^n$的支集，
+被称为$C$的\textit{切可展曲面}，这个曲面沿着$C$可能会奇异
 （例子可见Harris [1995]）。它的切锥在$C$的一点$p\in C$处的支集是什么？
-（注意到，如果我们取$C$为$\mathbb P_K^n$中的旋转正规曲线%
-\footnote{译者注：定义见\href{https://en.wikipedia.org/wiki/Rational_normal_curve}{维基百科}。}）%
+（注意到，如果我们取$C$为$\mathbb P_K^n$中的有理正规曲线%
+%\footnote{译者注：定义见\href{https://en.wikipedia.org/wiki/Rational_normal_curve}{维基百科}。}）%
 ，即$n$-次Veronese映射$\mathbb P_K^1\to\mathbb P_K^n$的像，则这是上面的Exercise \ref{exe:3.33}的一个特例。）
 \end{exe}
 
@@ -956,7 +958,7 @@ $\oo_X(D)(U)$这种怪物....
 
 我们可以如下深化可逆层与有效Cartier除子之间的联系：如果$D$是
 一个有效Cartier除子，则含入$\mathscr I_D\hookrightarrow \oo_X$
-是$\Hom(\mathscr I_D,\oo_X)=\oo_X(D)$的一个整体截面。这个界面是
+是$\Hom(\mathscr I_D,\oo_X)=\oo_X(D)$的一个整体截面。这个截面是
 \textit{正则的}，即对每个开集$U\subset X$，$\oo_X(U)$中没有非零
 元素限制在$U$上为零（原因：$\mathscr I_D(U)$在$\oo_X(U)$中的像
 包含一个非零因子。）因此，一个有效Cartier除子给出了一个可逆层
