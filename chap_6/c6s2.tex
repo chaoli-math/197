@@ -663,37 +663,100 @@ $\mathscr C\subset \Sigma\times \P_K^r\to \Sigma$为$\Sigma$上的万有
 $\spec L$上的纤维。证明，$C_L\cong \P_L^1$当且仅当$r$是奇数。
 \end{exe}
 
-\nottran
-
 \paragraph*{Fano概形的切空间}
 \addcontentsline{toc}{subsubsection}{Fano概形的切空间}
+在许多方式中由其点函子最好地刻画的概形的一个特别好的例子是
+概形$X\subset \P_S^n$的Fano概形$F_k(X)\subset \mathbb G_S(k,n)$，
+其描述于第 \ref{s:4.3} 节。比如，我们将看到第 \ref{s:6.1.3} 节中
+给出的函子的切空间的描述允许我们比起从第 \ref{s:4.3} 节中引入的显性
+方程更轻松地去计算Fano概形的Zariski切空间，进而这也将允许我们在很多
+情况中说是否一个线性空间$\Lambda\subset X$对应于$F_k(X)$的一个奇异或
+非奇异点。（为了下面的讨论，我们将引入一些记号：对平面$W\subset K^{n+1}$
+和对应的线性子空间$\Gamma\subset \P_K^n$，我们将记$\Gamma=[W]$和
+$W=\tilde \Gamma$.）
 
+Fano概形的刻画是直接的：我们可以将子概形$X\subset \P_S^n$的
+Fano概形$F_k(X)$就定义为$X$的具有Hilbert多项式$P(m)={k+m \choose k}$的
+子概形的Hilbert概形$\mathscr H_{P,X}$，即函子
 \[
     f_k(X):(\text{$S$-schemes})^\circ \to 
     (\text{sets})
 \]
-
-% p.272
+其将任意的$S$-概形$B$变为包含于$X\times_S B$的$k$-平面族的集合，即
 \[
-    f_{k}(X)(B) \longrightarrow \operatorname{Mor}_{S}(B, F_{k}(X))
+    f_k(X)(B)=\biggl\{\text{\parbox{22em}{\begin{center}%
+    $\Sigma\subset B\times_S X\subset B\times \P_S^n=\P_B^n$
+    在$B$上平坦，使得对任意的$b\in B$，
+    $\Sigma_b\subset \P_{\kappa(b)}^n$是一个$k$-平面%
+    \end{center}}}\biggr\}.
 \]
+接着我们有：
+\begin{pro}\label{pro:6.39}
+函子$f_k(X)$由在第 \ref{s:4.3} 节引入的Fano概形$F_k(X)$所表示。
+\end{pro}
+% p.272
 
+\begin{proof}
+为此，我们需要建立一个函子同构
+\[
+    f_{k}(X)(B) \longrightarrow \operatorname{Mor}_{S}(B, F_{k}(X)),
+\]
+即对任意的$S$-概形$B$，这两个集合间的一个自然双射，两个集合分别是
+包含于$X$中的$k$-平面的族$\Sigma\subset B\times_S X\subset B\times 
+\P_S^n=\P_B^n$的集合，以及从$B$到$F_k(X)$的$S$-概形态射。实际上，
+大头已经搞定了：映射的定义和证明这是一个双射并不困难，从我们已经刻画的
+作为表示了$\P_S^n$里面的$k$-平面族的函子的概形Grassmanniann 
+$\mathbb G_S(k,n)$.
+
+关键点在于，我们已经有了一个函子同构
 \[
     g_{S}(n+1, k+1) \longrightarrow \operatorname{Mor}_{S}
-    (B, G_{S}(k+1, n+1))
+    (B, G_{S}(k+1, n+1)),
 \]
-
+其中$g_S(n+1,k+1)$为第 \ref{s:6.2.1} 节引入的Grassmannian函子，这里是
+在$S$-概形范畴中。即，我们对任意族$\Sigma\subset B\times \P_S^n
+=\P_B^n$，其在$B$上平坦、纤维为$k$-平面，关联了一个$S$-概形态射
+$\varphi_\Sigma:B\to \mathbb G_S(k,n)$. 现在，全部我们需要接茬的就是
+子集$f_k(X)(B)\subset g(n+1,k+1)(B)$被映入子集$\operatorname{Mor}_S(B,
+F_k(X))\subset \operatorname{Mor}_S(B,G_S(k+1,n+1))$，即
 \[
     \Sigma \subset B \times_{S} X \subset B \times \mathbb{P}_{S}^{n} \Longleftrightarrow 
-    \varphi_{\Sigma}(B) \subset F_{k}(X) \subset G_{S}(k+1, n+1)
+    \varphi_{\Sigma}(B) \subset F_{k}(X) \subset G_{S}(k+1, n+1).
 \]
+这是直接的，从第 \ref{s:4.3} 节中$F_k(X)$的定义方程的描述。
+\end{proof}
 
+如承诺过的，由其点函子刻画的Fano概形的描述允许我们轻松地确定其切空间，
+并特别地，给出了我们一个Fano概形光滑性和/或奇异性的判据。
+
+下面，$K$将是一个代数闭域，$X\subset \P_K^n$将是$K$上任意的射影概形，
+$F_k(X)\subset G_K(k+1,n+1)$为$X$中的$k$-平面的Fano概形，$\Lambda\in
+F_k(X)$是一个$F_k(X)$的$K$-值点。记概形$\spec K[\epsilon]/(\epsilon^2)$
+为$\Delta$，约态点$\Delta_{\text{red}}\cong \spec K\subset \Delta$为
+$0\in \Delta$. 从我们对$F_k(X)$的刻画，其表示了$X$中的$k$-平面族的函子，
+点$\Gamma$处的切空间将为
+\[
+    T_\Lambda(F_k(X))=\{\text{在$\Delta$上平坦的子概形
+    $\Sigma\subset \Delta\times_K X$，使得
+    $\Sigma\cap (0\times_K X)=\Lambda$}\}.
+\]
+现在我们将看到如何将其描述为
 \[
     T_{\Lambda}(G_{K}(k+1, n+1))=\operatorname{Hom}
     (\tilde{\Lambda}, K^{n+1} / \tilde{\Lambda})
 \]
+的一个子空间。
+
+可能做这件事最快的方式就是取观察平面$\Lambda\subset \P_K^n$的一阶形变，
+即在$\Delta$上平坦的子概形$\Sigma\subset \Delta\times_K \P_K^n$且
+使得$\Sigma\cap (0\times_K X)=\Lambda$，是其切矢量的并，可看成
+$\Sigma$的同构于$\Delta$的子概形。换句话说，$\Sigma$将被包含于
+子概形$\Delta\times_K X\subset \Delta\times_K \P_K^n$当且仅当
+每个$\Sigma$的切矢量为$\Delta\times_K X$的切矢量。
 
 % p.273
+
+现在，\nottran
 
 \[
     \nu(\tilde p)\subset \varphi(\tilde \Lambda).
