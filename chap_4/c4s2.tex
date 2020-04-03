@@ -20,20 +20,20 @@
 	我们从域$K$上的仿射平面$\mathbb A_K^2=\spec K[x,y]$对原点的爆破$Z$开始。它可以由最多两个开集的并所描述，其中每个都同构于$\mathbb A_K^2$：我们令$U'=\spec K[x',y']$和$U''=\spec K[x'',y'']$，然后考虑与映射$\varphi':U'\to \mathbb A_K^2$和$\varphi'':U''\to \mathbb A_K^2$对偶的环同态
 	\[
 	\begin{aligned}
-		(\varphi')^\#:K[x,y]&\longrightarrow K[x',y']&\quad \text{and}\qquad (\varphi'')^\#:K[x,y]&\longrightarrow K[x'',y'']\\
+		(\varphi')^\#:K[x,y]&\longrightarrow K[x',y']&\quad \text{和}\qquad (\varphi'')^\#:K[x,y]&\longrightarrow K[x'',y'']\\
 		x&\longmapsto x'& x&\longmapsto x''y''\\
-		x&\longmapsto x'y'& y&\longmapsto y''.
+		y&\longmapsto x'y'& y&\longmapsto y''.
 	\end{aligned}
 	\]
 	映射$\varphi'$给出了开集
 	\[
-	U'_x=\spec K[x',y',{x'}^{-1}]\quad \text{and}\quad 
+	U'_x=\spec K[x',y',{x'}^{-1}]\quad \text{和}\quad 
 	U_x=\spec K[x,y,x^{-1}]
 	\]
 	之间的同构，类似地，$\varphi''$给出了开子集$U''_y=\spec K[x',y',1/y']$和$U_y=\spec K[x,y,y^{-1}]$之间的同构。特别地，它们给出了
 	交集$U_{xy}=U_x\cap U_y=\spec K[x,y,x^{-1},y^{-1}]$的原像
 	\[
-	U'_{xy}=\spec K[x',y',{x'}^{-1},{y'}^{-1}]\quad \text{and}\quad 
+	U'_{xy}=\spec K[x',y',{x'}^{-1},{y'}^{-1}]\quad \text{和}\quad 
 	U''_{xy}=\spec K[x'',y'',{x''}^{-1},{y''}^{-1}]
 	\]
 	之间的同构。我们于是能等同开集$U'_{xy}\subset U'$和$U''_{xy}\subset U''$，然后将$U'$和$U''$粘起来得到一个概形
@@ -54,7 +54,7 @@
 
 % p.164
 
-一种理解这个构造的方式是去观察到，爆破的开集的坐标环被扩大了以分别加入$y'=y/x$和$x''=x/y$. 这导致了一系列结果。首先，$\mathbb A_K^2$上的函数对$x$, $y$在原点的补集上定义了一个映射$f:\mathbb A_K^2\setminus \{(0,0)\}\to \mathbb P_K^1$：在经典语言中，这是映射$(a,b)\mapsto [a,b]$，或者用更现代的语言，这是对应于由$(f,g)\mapsto xf+yg$给出的满射$\mathscr O\oplus \mathscr O\to \mathscr O$. 这个映射并不能延拓为$\mathbb A_K^2$上的一个正则映射，但是如果我们复合$f$与同构$Z\setminus E\cong \mathbb A_K^2\setminus \{(0,0)\}$，我们看到其确实延拓为了整个$Z$上的一个正则函数。这是因为由函数$x$和$y$（的拉回）生成的理想，在$Z$上是局部主理想（有一个非零因子生成），于是$x$和$y$有公共零点，进而我们可以将齐次矢量$[x,y]$除以它们的公共因子来延拓这个映射。在爆破中扩大坐标环的另一好处是其分离了穿过原点的曲线。即，如果$L$和$L'$是穿过$\mathbb A_K^2$原点的不同曲线，则$L\setminus \{(0,0)\}$和$L'\setminus \{(0,0)\}$的原像有着不同的闭包，如图所示（这些都是映射$f$的纤维）。
+一种理解这个构造的方式是去观察到，爆破的开集的坐标环被扩大了以分别加入$y'=y/x$和$x''=x/y$. 这导致了一系列结果。首先，$\mathbb A_K^2$上的函数对$x$, $y$在原点的补集上定义了一个映射$f:\mathbb A_K^2\setminus \{(0,0)\}\to \mathbb P_K^1$：在经典语言中，这是映射$(a,b)\mapsto [a,b]$，或者用更现代的语言，这是对应于由$(f,g)\mapsto xf+yg$给出的满射$\mathscr O\oplus \mathscr O\to \mathscr O$. 这个映射并不能延拓为$\mathbb A_K^2$上的一个正则映射，但是如果我们复合$f$与同构$Z\setminus E\cong \mathbb A_K^2\setminus \{(0,0)\}$，我们看到其确实延拓为了整个$Z$上的一个正则函数。这是因为由函数$x$和$y$（的拉回）生成的理想，在$Z$上是局部主理想（有一个非零因子生成），于是在$x$和$y$有公共零点的地方，我们可以简单地将齐次矢量$[x,y]$除以它们的公共因子来延拓这个映射。在爆破中扩大坐标环的另一好处是其分离了穿过原点的曲线。即，如果$L$和$L'$是穿过$\mathbb A_K^2$原点的不同曲线，则$L\setminus \{(0,0)\}$和$L'\setminus \{(0,0)\}$的原像有着不同的闭包，如图所示（这些都是映射$f$的纤维）。
 \inclugra{1.png}
 同样地，如果我们有一条曲线$C\subset \mathbb A_K^2$在原点有一个结点，则$C$中原点的补集的原像在$Z$中非奇异，且交例外除子于两点。
 
@@ -524,7 +524,7 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 		X&=\{A:V\to W\,|\,\operatorname{rank}A\leq 1\}\subset \mathbb A_K^4,\\
 		X_1&=\{(A,L)\,|\,L\subset \operatorname{Ker}A\}\subset \mathbb A_K^4\times \mathbb PV^*,\\
 		X_2&=\{(A,L')\,|\,\operatorname{Im}A\subset L'\}\subset \mathbb A_K^4\times \mathbb PW^*,\\
-		\tilde X&=\{(A,L,M)\,|\, L\subset \operatorname{Ker}A\text{ and }\operatorname{Im}A\subset M\}\subset \mathbb A_K^4\times \mathbb PV^*\times \mathbb PW^*.
+		\tilde X&=\{(A,L,M)\,|\, L\subset \operatorname{Ker}A\text{ 且 }\operatorname{Im}A\subset M\}\subset \mathbb A_K^4\times \mathbb PV^*\times \mathbb PW^*.
 	\end{aligned}
 	\]
 \end{exe}
@@ -561,7 +561,7 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 	令$K$是一个域，$\mathbb A_K^3=\spec K[x,y,z]$. 令$L$和$M\subset \mathbb A_K^3$为直线$V(x,y)$和$V(z,x)$，$N=L\cup M=V(x,yz)$为他们的并。描述爆破$x=\Bl_N \mathbb A_K^3\to \mathbb A_K^3$，特别地，证明$X$在$N$上的每个点的纤维都同构于$\mathbb P_K^1$，但并却是奇异的：它在$\mathbb A_K^3$的原点处有着通常的二次点$p$.
 \end{exe}
 
-% p.178
+% p.179
 
 \begin{exe}\label{exe:4.38}
 	记号同上题，令$Y\to \mathbb A_K^3$为$\mathbb A_K^3$沿着直线$L$的爆破，$\tilde M\subset Y$为$M$在$Y$中的真变换，$X'\to Y$为$Y$沿着$\tilde M$的爆破。证明，复合$X'\to Y\to \mathbb A_K^3$经由爆破$X=\Bl_N \mathbb A_K^3\to \mathbb A_K^3$分解，诱导的映射$X'\to X$是一个寻常二重点$p\in X$的小消解。
@@ -653,32 +653,62 @@ $k_2\circ k_1$为恒同，特别地，$k_1$为同构。
 \renewcommand{\qedsymbol}{$\square\hspace{-1.9ex}\square$}
 \end{proof}\renewcommand{\qedsymbol}{$\square$}
 
-比较这个引理与Exercise \ref{exe:4.37} 到 \ref{exe:4.39}，其中我们看到，若我们用“全变换”替换“真变换”，顺序确实是重要的。
+比较这个引理与Exercise \ref{exe:4.37} 到 \ref{exe:4.39}，其中我们看到，
+若我们用“全变换”替换“真变换”，顺序确实是重要的。
 
-\paragraph*{多次点的爆破}\addcontentsline{toc}{subsubsection}{多次点的爆破} 我们这里将考虑一些平面沿着支于一点的子概形的爆破的例子。
+\paragraph*{多次点的爆破}\addcontentsline{toc}{subsubsection}{多次点的爆破}
+我们这里将考虑一些平面沿着支于一点的子概形的爆破的例子。
 % p.182
 
 \begin{exe}\label{exe:4.42}
-	\nottran
+	另一个例子，令$\Omega_1\subset \A_K^2$为由理想$(y,x^3)\subset K[x,y]$
+	定义的子概形，而$\Omega_2$为理想$(y^2,x^3)\subset K[x,y]$定义的子概形。
+	考虑平面在这两个子概形处的爆破$\varphi_i:Z_i=\Bl_{\Omega_i}(\A_K^2)
+	\to \A_K^2$. 证明，在两种情况中，概形$Z_i$都是奇异的，原点
+	$P=(x,y)\in \A_K^2$处的纤维$\varphi_i^{-1}(P)$同构于$\P_K^1$. 同样
+	证明，在两种情况中，爆破映射都可以经由三个爆破的序列再接着两个收缩
+	分解，即，存在一个概形$W_i$，其由$\A_K^2$连续爆破三个约态点得到，以及
+	一个映射$W_i\to Z_i$，其在前两个爆破的例外除子上常值，且在它们的补
+	上是同构。两个例子中被爆破的点的序列的区别是什么？
 \end{exe}
 
+为不至于给出一个错误的印象，我们需要指出，爆破的纤维，即使是非奇异簇，
+也不必是射影空间。（当然，若已断言任意逆紧双有理态射都是一个爆破，
+则可以看到很难如此。）下面习题的主题即一个其他行为的简单例子。
 
+\begin{exe}\label{exe:4.43}
+令$\A_K^2=\spec K[x,y]$为在代数闭域$K$上的仿射平面，$\Gamma\subset \A_K^2$
+为由
 \[
 	\Gamma=V(x^3,xy,y^2)
 \]
-
+给出的子概形。令$X$为爆破$X=\Bl_\Gamma(\A_K^2)$. 证明$X$由
 \[
 	X=\proj K[x,y][A,B,C]/I
 \]
-
+给出，其中理想$I$为
 \[
-	I=(yA-x^2B,yB-xC,AC-xB^2)
+	I=(yA-x^2B,yB-xC,AC-xB^2).
 \]
+\emph{提示}：沿着正则子概形$V(z-xy,x^3,y^2)$爆破$\A_K^3=\spec [x,y,z]$，
+然后考虑平面$V(z)$的真变换。
+\end{exe}
+
+\begin{exe}\label{exe:4.44}
+	证明，上面习题中的概形$X$是非奇异的，点$(x,y)\in\A_K^2$处的纤维
+	是两个交于一点的$\P_K^1$的并。（实际上，$X$为Proposition 
+	\ref{pro:4.40} 中的概形$Z_2$.）
+\end{exe}
+
+\nottran 
+
+% p.183
 
 \[
 	I_n=(x^{n+1},x^{n-1}y,x^{n-2}y^2,\dots,xy^{n-1},y^n)=
 	(x,y)^n\cap (x^{n+1},y).
 \]
+
 
 \paragraph*{$j$-函数}\addcontentsline{toc}{subsubsection}{$j$-函数}
 
