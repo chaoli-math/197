@@ -747,7 +747,7 @@ $0\in \Delta$. 从我们对$F_k(X)$的刻画，其表示了$X$中的$k$-平面�
 \]
 的一个子空间。
 
-可能做这件事最快的方式就是取观察平面$\Lambda\subset \P_K^n$的一阶形变，
+也许做这件事最快的方式就是取观察平面$\Lambda\subset \P_K^n$的一阶形变，
 即在$\Delta$上平坦的子概形$\Sigma\subset \Delta\times_K \P_K^n$且
 使得$\Sigma\cap (0\times_K X)=\Lambda$，是其切矢量的并，可看成
 $\Sigma$的同构于$\Delta$的子概形。换句话说，$\Sigma$将被包含于
@@ -756,22 +756,44 @@ $\Sigma$的同构于$\Delta$的子概形。换句话说，$\Sigma$将被包含�
 
 % p.273
 
-现在，\nottran
-
+现在，假设平面$\Lambda$的一阶形变$\Sigma$对应于一个同态
+$\varphi:\tilde \Lambda\to K^{n+1}/\tilde \Lambda$. $\Sigma$在点$p$
+处（更准确地，$0\times_K \{p\}$处）的切矢量将为对应于同态$\nu:\tilde p
+\to K^{n+1}/\tilde p$的$\Delta\times_K \P_K^n$的切矢量，使得
 \[
     \nu(\tilde p)\subset \varphi(\tilde \Lambda).
 \]
-
+类似地，称对应于这样一个同态$\nu$的切矢量切于$\Delta\times_K X$，即称
 \[
     \nu(\tilde{p}) \subset \widetilde{\mathbb{T}_{p} X}+
     \tilde{\Lambda}.
 \]
-
+因此，称对应于同态$\varphi$的Grassmannian的切矢量位于Fano概形$F_k(X)$
+在点$\Lambda$的切空间中，即称$\varphi$的像包含于$X$在每点的切空间中，即
 \[
-    \gamma: L \longrightarrow \mathbb{P}(K^{4} / \tilde{L}) 
-    \cong \mathbb{P}_{K}^{1}
+    T_\Lambda(F_k(X))=\{%
+        \text{$\varphi\in \Hom(\tilde p,K^{n+1}/\tilde \Lambda)$，使得
+        $\varphi(v)\in \widetilde{\mathbb{T}_{p} X}+
+        \tilde{\Lambda}$对所有的$v\in \tilde \Lambda$成立}
+    \}.
 \]
 
+作为应用，考虑可能最简单的例子，在一个曲面$S\subset \P_K^3$上的直线的
+Fano概形$F_1(S)\subset \mathbb G_K(1,3)=G_K(2,4)$. 令$L\subset S$为
+一条直线，且我们将假设其并不包含于$S$的奇异点集中（若是，则Fano概形
+$F_1(S)$将在$L$处具有四维切空间，换句话说，其将非常奇异！）。
+对一个一般的点$p\in L$，我们可以关联一个射影切空间$\widetilde{\mathbb T_p
+S}$，其将是$\P_K^3$中包含$L$的一个平面，因此，我们得到了一个（有理）映射
+\[
+    \gamma: L \longrightarrow \mathbb{P}(K^{4} / \tilde{L}) 
+    \cong \mathbb{P}_{K}^{1}.
+\]
+这个映射由$S$的定义多项式的偏导给出，因此如果$S$沿着$L$非奇异，即所有
+偏导没有公共零点，则$\gamma$的次数将是$d-1$. 如果$S$在$L$上有任何
+奇异点，反之，次数将会减少。
+
+实际上，$\gamma$的次数即确定了$F_1(S)$在$L$处的切空间的维度。这并不难
+看到：如果$\varphi:\tilde L\to K^4/\tilde L$为任意的同态，诱导的映射
 \[
     \begin{aligned}
         \bar{\varphi}: L &\longrightarrow \mathbb{P}(K^{4}/\tilde{L})
@@ -779,8 +801,41 @@ $\Sigma$的同构于$\Delta$的子概形。换句话说，$\Sigma$将被包含�
         p &\longmapsto[\varphi(\tilde{p})+\tilde{L}]
     \end{aligned}
 \]
+在$\varphi$的秩为$2$时次数为$1$，秩为$1$时次数为$0$. 因此，如果$\gamma$
+的次数$\deg(\gamma)\geq 2$，则$F_1(S)$在$L$处的切空间将是零维的；如果
+$\gamma$的次数为$1$，则将是一维的；如果$\gamma$是常数，则将是二维的。
+我们得到了下面的推论：
+
+\begin{itemize}
+\item $\P_K^3$中的非奇异二次曲面上的直线的Fano概形是非奇异的，而
+在二次锥面上的直线的Fano概形是处处非约态的。
+\item 任何平面曲线上的$\P_K^3$中的锥面%
+\footnote{译者注：我觉得大概就是把椭圆锥面的椭圆换成其他平面曲线。}%
+的Fano概形都是非约态的。  
+\item $\P_K^3$中的次数$d\geq 3$的非奇异曲面上的直线的Fano概形包含一个
+孤立的约态点。
+\end{itemize}
 
 % p.274
+
+还有一个推论依赖于一个关于超曲面的Fano概形的事实：如果$X\subset \P_B^n$
+是任意次数为$d$的超曲面，即一个$\P_B^n$的一个闭子概形，其在$S$上平坦，
+其在$B$的每一点$b\in B$处的纤维为$\P_{\kappa(b)}^n$中的一个次数为$d$
+的超曲面，则$X$上的$k$-平面的Fano概形$F_k(X)\subset G_B(k+1,n+1)$在$B$
+的具有期待的纤维维数$(k+1)(n-k)-{k+d\choose k}$的开子集上平坦。
+因为$F_k(X)$可以被描述为$G_B(k,n)$上的一个局部自由层的一个截面的零点集，
+这是完全交平坦这个事实的推广，但这超出了这本书的范畴。然而，若已知它，
+我们有下面的结论：
+
+\begin{itemize}
+\item 所有仅包含有限条直线的三次曲面在合理意义下都包含相同个数的直线，
+即它们的Fano概形的次数都是$27$.
+\end{itemize}
+
+一般地，我们关于Fano概形$F_k(X)$的切空间的描述允许我们用平面
+$\Lambda\subset X$的法层来确定将$F_k(X)$在点$\Lambda$处的维数，
+但很少见它由$X$沿着$\Lambda$的奇异点们确定。实际上，只要我们来到
+超曲面$X\subset \P_K^n$，其中$n\geq 4$，我们将看到反例。
 
 \begin{exe}\label{exe:6.40}
     用这个Fano概形的切空间的刻画，来给出一个非奇异曲面$X\subset \P_K^n$
