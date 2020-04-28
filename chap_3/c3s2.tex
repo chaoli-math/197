@@ -209,7 +209,7 @@ $A[x_0$, $\dots$, $x_r]$模掉一个齐次理想得到的商环，
 注意到连同 Exercise \ref{exe:3.7} ，它说明了每一个射影簇的闭子概形也是射影的：如果$I\subset S=A[x_0$, $\dots$, $x_r]$是一个齐次理想，则$V(\tilde{I})\subset \mathbb P^r_A$同构于概形$\proj S/I$.
 
 \begin{exe}\label{exe:3.15}
-子概形与理想的对应不再像仿射概形的情况是一一对应了。比如，证明在$\mathbb P_K^1$中，其中$K$是一个域，理想$I=(x_0)$和$I'=(x_0^2,x_0x_1)$都定义了同一个约态、单点子概形。更一般地，证明，如果$I\subset S=K[x_1$, $\dots$, $x_r]$是任意的齐次理想，以及对任意的整数$n_0$，通过
+子概形与理想的对应不再像仿射概形的情况是一一对应了。比如，证明在$\mathbb P_K^1$中，其中$K$是一个域，理想$I=(x_0)$和$I'=(x_0^2,x_0x_1)$都定义了同一个既约、单点子概形。更一般地，证明，如果$I\subset S=K[x_1$, $\dots$, $x_r]$是任意的齐次理想，以及对任意的整数$n_0$，通过
 \[
 	I'=\bigoplus_{n\geq n_0}I_n
 \]
@@ -472,11 +472,11 @@ $
 
 回到一般的情况，注意到因为环$B=\bigoplus (\mm^\alpha/\mm^{\alpha+1})$是分次的，我们可以同样对$(X,p)$关联一个几何对象$\proj B$. 这是$X$在点$p$的Zariski切空间对应的射影空间$\mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的一个子概形，称作在$X$在点$p$的\textit{射影化切锥}，记作$\mathbb PTC_p(X)$. 在许多情况中，处理作为射影概形以及比切锥少一维的射影化切锥会更方便，但一般来说，他比切锥所包含的信息稍少一些（就像下面的Exercise \ref{exe:3.30} 将展示的，切锥$TC_p(X)$可能在原点有一个嵌入点，而射影化切锥没有）。
 
-尽管，射影空间一般的子概形的次数将在第 \ref{s:3.3.1} 节中才定义，我们将在这里提出一个可以由$X$在点$p$的射影化切锥定义的概形不变量：定义$X$在点$p$的\textit{重数}为射影化切锥$\mathbb PTC_p(X)\subset \mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的次数。这个定义展现了另一个例子，告诉我们为何概形会在处理簇时自然出现且十分方便：在簇范畴我们依然可以定义切锥（是对应于我们的切锥的约态概形）以及射影化切锥，但是它们在族中表现得并不好。
+尽管，射影空间一般的子概形的次数将在第 \ref{s:3.3.1} 节中才定义，我们将在这里提出一个可以由$X$在点$p$的射影化切锥定义的概形不变量：定义$X$在点$p$的\textit{重数}为射影化切锥$\mathbb PTC_p(X)\subset \mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的次数。这个定义展现了另一个例子，告诉我们为何概形会在处理簇时自然出现且十分方便：在簇范畴我们依然可以定义切锥（是对应于我们的切锥的既约概形）以及射影化切锥，但是它们在族中表现得并不好。
 
 % p.108
 
-有许多非约态切锥的例子。比方说，考虑方程$C_t=\spec K[x,y]/(y^2-tx^2-x^3)$定义的平面三次曲线族（即，我们令$B=\mathbb A^1_K=\spec K[t]$，然后取我们的族为$\mathscr C=V(y^2-tx^2-x^3)\subset \mathbb A_B^2\to B$）。对每一个$t$，曲线$C_t$可以由$t\mapsto (\lambda^2-t,\lambda^3-t\lambda)$定义的映射
+有许多非既约切锥的例子。比方说，考虑方程$C_t=\spec K[x,y]/(y^2-tx^2-x^3)$定义的平面三次曲线族（即，我们令$B=\mathbb A^1_K=\spec K[t]$，然后取我们的族为$\mathscr C=V(y^2-tx^2-x^3)\subset \mathbb A_B^2\to B$）。对每一个$t$，曲线$C_t$可以由$t\mapsto (\lambda^2-t,\lambda^3-t\lambda)$定义的映射
 \[
 	\mathbb A_K^1=\spec K[\lambda]\longrightarrow \mathbb A_K^2=\spec K[x,y]
 \]
@@ -524,7 +524,7 @@ $
 Proposition \ref{pro:3.31} 相当有用，比方说在做下面的Exercise \ref{exe:3.32}--\ref{exe:3.34} 的时候。
 
 \begin{exe}\label{exe:3.32}
-令$V$是$\mathbb P_K^1=\proj K[X,Y]$上的$n$-次多项式构成的矢量空间，即，以$X$和$Y$为变量的$n$-次齐次多项式构成的矢量空间，再令$\mathbb P V^*\cong \mathbb P_K^n$为由$V$的一维子空间所参数化的射影空间。令$\Delta\subset \mathbb P_K^n$为判别式超平面，即具有一个重复因子的多项式们的零点集，并赋以一个约态概形结构（我们将在第 \ref{chap:5} 章中看到如何给出$\Delta$的方程，因此也自然给出了$\Delta$的概形结构）。如果
+令$V$是$\mathbb P_K^1=\proj K[X,Y]$上的$n$-次多项式构成的矢量空间，即，以$X$和$Y$为变量的$n$-次齐次多项式构成的矢量空间，再令$\mathbb P V^*\cong \mathbb P_K^n$为由$V$的一维子空间所参数化的射影空间。令$\Delta\subset \mathbb P_K^n$为判别式超平面，即具有一个重复因子的多项式们的零点集，并赋以一个既约概形结构（我们将在第 \ref{chap:5} 章中看到如何给出$\Delta$的方程，因此也自然给出了$\Delta$的概形结构）。如果
 \[
 	F(X,Y)=\prod (a_i X+b_i Y)^{m_i}
 \]
@@ -849,7 +849,7 @@ $\spec A\to \mathbb P_A^n$的像是闭子概形
 \end{exe}
 
 如果$A$是一个整环，Exercise \ref{exe:3.43} 说明了像是$\mathbb P_A^n$的
-一个约态不可约闭子概形，特别地，对应于$|\mathbb P_A^n|$的一点。
+一个既约不可约闭子概形，特别地，对应于$|\mathbb P_A^n|$的一点。
 $\mathbb P_\zz^1$中对应于$(2,5)$的点的例子已在上面的Exercise \ref{exe:3.9}
 中处理过了。注意到，$\spec \zz$-值点$(2,5)$不是$\mathbb P_\zz^1$的
 标准仿射开覆盖$\mathbb P_\zz^1=\mathbb A_\zz^1\cup \mathbb A_\zz^1$
@@ -1360,7 +1360,7 @@ $\sum_I a_Ix^I$的解$x_i=f_i(a)$，其中$x_i$是$a_I$的有理
 \begin{exe}\label{exe:3.53}
 现在假设$d$是任意的而$n=1$，于是$N=d$而概形
 $\mathscr X\subset \P_S^d\times_S \P^1_S$在$\P_S^d$上
-是$d$-次有限的。证明，一般纤维$X_L$是一个约态点$R$，
+是$d$-次有限的。证明，一般纤维$X_L$是一个既约点$R$，
 其剩余类域是$\P_K^d$的函数域$L$的$d$-次扩张。
 \end{exe}
 
