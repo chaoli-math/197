@@ -39,7 +39,7 @@ Fano簇的经典定义，这里唯一的不同之处在于我们不用再取根�
 的时定义$F_k(X)$. 我们将用第 \ref{s:3.2.7} 节中将$\mathbb G$看成
 仿射空间$W_I\cong \mathbb A_S^{(k+1)(n-k)}$的并的刻画来描述它。
 
-回忆，在这个构造中，我命令
+回忆，在这个构造中，我们令
 \[
 	W=\spec R[\dots,x_{i,j},\dots]\cong \bba_S^{(k+1)(n+1)}
 \]
@@ -77,10 +77,42 @@ $u_k$的、次数为$d$的多项式。
 
 % p.194
 
+为完成这个定义，我们必须检查一些事情：这些$W_I$的子概形在相交的地方
+相容，且它们定义的子概形$F_k(X)\subset \mathbb G$并不依赖于坐标的选取
+（若我们选择第二种生成$F_k(X)\cap W_I$的理想，则会简单些，但当然我们也
+得证明两种方式产生了相同的理想）。最后，我们应当检查这个构造是自然的，
+即如果$T\to S$为任意的态射，$X_T=X\times_S T\subset \mathbb P_T^n$，
+则Fano概形$F_k(X_T)=F_k(X)\times_S T\subset \mathbb G_S(k,n)\times_S T
+=\mathbb G_{T}(k,n)$. 这个最后的条件实际上保证了，给定一个任意
+（可能非仿射）的基$S$上的射影概形$X\subset \P_S^n$，我们可以
+通过限制到$S$的仿射开子概形上然后粘起来定义Fano
+概形$F_k(X)\subset \mathbb G_S(k,n)$. 所有这些声明都可以直接从定义出发
+验证，但是从第 \ref{s:6.2.2} 节中给出的Grassmannian和Fano概形的内蕴刻画
+得到会更加容易。
+
 \subsection{二次曲面上的直线}\label{s:4.3.2}
 
-\paragraph*{代数闭域上的光滑二次曲面上的直线}\addcontentsline{toc}{subsubsection}{代数闭域上的光滑二次曲面上的直线}
+为展示Fano概形的定义，我们将考虑一个简单的例子：在一个任意代数闭域
+$K$上的二次曲面$Q=V(X^2+Y^2+Z^2+W^2)\subset \P_K^3$上的直线们。
+方便起见，我们假设$K$的特征不为$2$（若我们只考虑光滑二次曲面，
+则特征$2$的情况也是一样的）。甚至，在这个例子中，我们将看到一些非常
+有趣的现象，还有我们也将考虑在非代数闭域上的一些例子。
 
+\paragraph*{代数闭域上的光滑二次曲面上的直线}
+\addcontentsline{toc}{subsubsection}{代数闭域上的光滑二次曲面上的直线}
+如上所建议的，我们将首先在一个开集$W_I\subset \mathbb G=
+\mathbb G_K(1,3)$中写下$F_1(Q)$的方程，此例中的剩下情况由对称性给出。
+比如，取$W_{X,Y}=W_{1,2}$为$\mathbb G$对应于不平行于直线$X=Y=0$的直线们
+的子集，我们可以将其等同于仿射空间$\A_K^4=\spec K[a,b,c,d]$，其对应于
+具有如下形式的矩阵的空间
+\begin{equation}
+	\begin{pmatrix}
+		1&0&a&b\\
+		0&1&c&d
+	\end{pmatrix}.
+\end{equation}
+我们接着记多项式$G(X,Y,Z,W)=(X^2+Y^2+Z^2+W^2)$在此矩阵行的线性组合
+$u_0(1,0,a,b)+u_1(0,1,c,d)$上的限制$H$为
 \[
 	\begin{aligned}
 		H_G(u_0,u_1)&=G(u_0,u_1,u_0a+u_1c,u_0b+u_1d)\\
@@ -88,49 +120,79 @@ $u_k$的、次数为$d$的多项式。
 		&=(1+a^2+b^2)u_0^2+2(ac+bd)u_0u_1+(1+c^2+d^2)u_1^2.
 	\end{aligned}
 \]
-
+在$W_{X,Y}\cong \A_K^4$中的Fano概形$F_1(Q)$被定义为$H_G$的系数的零点集，
+其中系数看作$u_0$和$u_1$的多项式，即
 \[
 	F_1(Q)\cap W_{X,Y}=V(1+a^2+b^2,ac+bd,1+c^2+d^2)\subset \spec K[a,b,c,d].
 \]
 
 % p.195
 
+这些方程定义的$\A_K^4$的子概形并不难描述。它是既约的，有一个（不可约）
+分支位于平面$a=d$, $b=c$上，另一个在平面$a=-d$, $b=c$上。每个分支都
+通过投影同构于平面二次曲线$\spec K[c,d]/(c^2+d^2+1)\subset \A_K^2
+=\spec K[c,d]$.
+
+我们可以用这个以$\mathbb G\subset \P_K^5$上的齐次坐标来写下$F_1(Q)$
+的方程。为此，首先回忆$\P_K^5$上的齐次坐标对应于一个$2\times 4$矩阵的
+$2\times 2$子式，我们可以用$\Pi_{XY}$, $\Pi_{XZ}$, $\Pi_{XW}$, $\Pi_{YZ}$,
+$\Pi_{YW}$和$\Pi_{ZW}$来标记它们。开集$W_{X,Y}\subset \mathbb G$为
+$\mathbb G$和仿射开子集$\Pi_{XY}\neq 0$的交，而$W_{X,Y}\cong \A_K^4$
+上面的坐标函数$a$, $b$, $c$和$d$为下面分式的限制
 \[
 	\begin{aligned}
 		a&=-\Pi_{YZ}/\Pi_{XY},&b&=-\Pi_{YW}/\Pi_{XY},\\
 		c&=\Pi_{XZ}/\Pi_{XY},&d&=\Pi_{XW}/\Pi_{XY}.
 	\end{aligned}
 \]
-
+此外，
 \[
 	ad-bc=\Pi_{ZW}/\Pi_{XY},
 \]
-
+由此我们可以得到$\mathbb G\subset \P_K^5$的定义方程
 \[
 	\mathbb G=V(\Pi_{ZW}\Pi_{XY}+\Pi_{YZ}\Pi_{XW}-\Pi_{XZ}\Pi_{YW}).
 \]
 
+现在，从上面的$F_1(Q)\cap W_{X,Y}$的方程，我们可以看到Fano概形$F_1(Q)$
+包含于
 \[
 	V(\Pi_{XY}^2+\Pi_{YZ}^2+\Pi_{YW}^2,\Pi_{YZ}\Pi_{XZ}+\Pi_{YW}\Pi_{XW},\Pi_{XY}^2+\Pi_{XZ}^2+\Pi_{XW}^2)
 \]
-
+中。对另五个$\P^5$的仿射开集做同样的事情将产生一个$F_1(Q)\subset \P^5$
+的定义方程的完整集合。从方程的对称性，我们不难得到$F_1(Q)$具有如下表示
 \[
-\begin{array}{l}{V\left(\Pi_{Y Z}^{2}-\Pi_{X W}^{2},\left(\Pi_{Y Z}+\Pi_{X W}\right)\left(\Pi_{Y W}+\Pi_{X Z}\right),\left(\Pi_{Y Z}+\Pi_{X W}\right)\left(\Pi_{Z W}-\Pi_{X Y}\right)\right.} \\ {\Pi_{Y W}^{2}-\Pi_{X Z}^{2},\left(\Pi_{Y W}-\Pi_{X Z}\right)\left(\Pi_{Y Z}-\Pi_{X W}\right),\left(\Pi_{Y W}-\Pi_{X Z}\right)\left(\Pi_{Z W}-\Pi_{X Y}\right)} \\ {\Pi_{Z W}^{2}-\Pi_{X Y}^{2},\left(\Pi_{Z W}+\Pi_{X Y}\right)\left(\Pi_{Y Z}-\Pi_{X W}\right),\left(\Pi_{Z W}+\Pi_{X Y}\right)\left(\Pi_{Y W}+\Pi_{X Z}\right)} \\ {\Pi_{X Y}^{2}+\Pi_{Y Z}^{2}+\Pi_{Y W}^{2}, \Pi_{X Y}^{2}+\Pi_{X Z}^{2}+\Pi_{X W}^{2} )}\end{array}
+\begin{array}{l}{V\left(\Pi_{Y Z}^{2}-\Pi_{X W}^{2},\left(\Pi_{Y Z}+\Pi_{X W}\right)\left(\Pi_{Y W}+\Pi_{X Z}\right),\left(\Pi_{Y Z}+\Pi_{X W}\right)\left(\Pi_{Z W}-\Pi_{X Y}\right)\right.} \\ {\Pi_{Y W}^{2}-\Pi_{X Z}^{2},\left(\Pi_{Y W}-\Pi_{X Z}\right)\left(\Pi_{Y Z}-\Pi_{X W}\right),\left(\Pi_{Y W}-\Pi_{X Z}\right)\left(\Pi_{Z W}-\Pi_{X Y}\right)} \\ {\Pi_{Z W}^{2}-\Pi_{X Y}^{2},\left(\Pi_{Z W}+\Pi_{X Y}\right)\left(\Pi_{Y Z}-\Pi_{X W}\right),\left(\Pi_{Z W}+\Pi_{X Y}\right)\left(\Pi_{Y W}+\Pi_{X Z}\right)} \\ {\Pi_{X Y}^{2}+\Pi_{Y Z}^{2}+\Pi_{Y W}^{2}, \Pi_{X Y}^{2}+\Pi_{X Z}^{2}+\Pi_{X W}^{2} )}.\end{array}
 \]
 
+若我们整理地更好些可能更容易理解，上面关于$F_1(Q)\cap W_{X,Y}$的描述
+给了我们方向。令$\Gamma_1$和$\Gamma_2\cong \P_K^2\subset \P_K^5$
+为两个由方程
 \[
 	\Lambda_{1}=V\left(\Pi_{Y Z}+\Pi_{X W}, \Pi_{Y W}-\Pi_{X Z}, \Pi_{Z W}+\Pi_{X Y}\right)
 \]
-
+和
 \[
 	\Lambda_{2}=V\left(\Pi_{Y Z}-\Pi_{X W}, \Pi_{Y W}+\Pi_{X Z}, \Pi_{Z W}-\Pi_{X Y}\right)
 \]
-
+定义的不交$2$-平面。则作为概形，我们有很简单的
 \[
-	F_{1}(Q)=\left(\Lambda_{1} \cup \Lambda_{2}\right) \cap \mathbb{G} \subset \mathbb{P}^{5}
-\]
-
+	F_{1}(Q)=\left(\Lambda_{1} \cup \Lambda_{2}\right) \cap \mathbb{G} \subset \mathbb{P}^{5}.
+\]%
+%
 % p.196
+%
+每个平面$\Lambda_i$交$\mathbb G$于一个非奇异平面二次曲线$C_i$，于是
+我们看到$F_1(Q)$即为两个二次曲线在互补平面中的并。（特别地，$F_1(Q)$
+即为两个仿射二次曲线在上面的$F_1(Q)\cap W_{X,Y}$中的闭包。）
+这对应于一个二次曲面的两条直纹的经典图像。\nottran
+
+\inclugra{6.png}
+
+\paragraph*{二次锥上的直线}
+\addcontentsline{toc}{subsubsection}{二次锥上的直线}
+
+\nottran
 
 \[
 	\mathscr{Q}=V\left(t X^{2}+Y^{2}+Z^{2}+W^{2}\right) \subset \operatorname{Proj} K[t][X, Y, Z, W]=\mathbb{P}_{B}^{3}
