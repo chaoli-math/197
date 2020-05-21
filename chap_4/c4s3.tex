@@ -191,48 +191,113 @@ $\mathbb G$和仿射开子集$\Pi_{XY}\neq 0$的交，而$W_{X,Y}\cong \A_K^4$
 
 \paragraph*{二次锥上的直线}
 \addcontentsline{toc}{subsubsection}{二次锥上的直线}
-
-\nottran
-
+接着，我们考虑一个随着二次曲面变化的其上的直线的Fano概形的变化，特别
+当其退化到一个奇异二次曲面时。令我们的族的基为$B=\spec K[t]\cong
+\A_K^1$，然后首先考虑二次曲面的族$\mathscr Q\subset \P_B^3$，其由
 \[
 	\mathscr{Q}=V\left(t X^{2}+Y^{2}+Z^{2}+W^{2}\right) \subset \operatorname{Proj} K[t][X, Y, Z, W]=\mathbb{P}_{B}^{3}
 \]
+给出。我们将$\mathscr Q$在点$(t-\mu)\in B=\A_K^1$上的纤维为$Q_\mu
+\subset \P_K^3$. Fano概形$F_1(\mathscr Q)$同样是$\mathbb G_B(1,3)$的
+子概形，其在点$(t-\mu)\in B=\A_K^1$上的纤维为在二次曲面$Q_\mu\subset 
+\P_K^3$上的直线的Fano概形$F_1(Q_\mu)\subset \mathbb G_K(1,3)$.
 
+同前，取$W_{X,Y}$为$\mathbb G_{B}(1,3)$对应于不平行于直线$X=Y=0$的
+直线们的子集，并将其等同于关联于具有形式 \theequation 的矩阵的空间的
+仿射空间$\A_B^4=\spec K[t][a,b,c,d]$.
+
+记$H$为多项式$G(X,Y,Z,W)=(tX^2+Y^2+Z^2+W^2)$限制到行的线性组合上的
+多项式
 \[
-\begin{aligned} H_{G}(a, x) &=G\left(u_{0}, u_{1}, u_{0} a+u_{1} c, u_{0} b+u_{1} d\right) \\ &=t u_{0}^{2}+u_{1}^{2}+\left(u_{0} a+u_{1} c\right)^{2}+\left(u_{0} b+u_{1} d\right)^{2} \\ &=\left(t+a^{2}+b^{2}\right) u_{0}^{2}+2(a c+b d) u_{0} u_{1}+\left(1+c^{2}+d^{2}\right) u_{1}^{2} \end{aligned}
+\begin{aligned} 
+	H_{G}(a, x) &=G\left(u_{0}, u_{1}, u_{0} a+u_{1} c, u_{0} b+u_{1} d\right) \\ &=t u_{0}^{2}+u_{1}^{2}+\left(u_{0} a+u_{1} c\right)^{2}+\left(u_{0} b+u_{1} d\right)^{2} \\ &=\left(t+a^{2}+b^{2}\right) u_{0}^{2}+2(a c+b d) u_{0} u_{1}+\left(1+c^{2}+d^{2}\right) u_{1}^{2}. 
+\end{aligned}
 \]
-
+在$W_{X,Y}\cong \A^4$中的Fano概形$F_1(\mathscr Q)$为系数的零点集，即
 \[
-	F_{1}(\mathscr{Q}) \cap W_{X, Y}=V\left(t+a^{2}+b^{2}, a c+b d, 1+c^{2}+d^{2}\right) \subset \spec K[t][a, b, c, d]
+	F_{1}(\mathscr{Q}) \cap W_{X, Y}=V\left(t+a^{2}+b^{2}, a c+b d, 1+c^{2}+d^{2}\right) \subset \spec K[t][a, b, c, d].
 \]
 
 % p.197
 
-\[
-	F_{1}\left(Q_{0}\right) \cap W_{X, Y}=V\left(a^{2}+b^{2}, a c+b d, 1+c^{2}+d^{2}\right) \subset \mathbb{A}_{K}^{4}
-\]
+对任意固定的非零标量$\mu\neq 0\in K$，在$(t-\mu)$处$F_1(\mathscr Q)
+\cap W_{X,Y}$的纤维为$\A_K^4$的子概形，其同构于上面描述的子概形$F_1(Q)
+\cap W_{X,Y}\subset \A_K^4$（必然如此，因为$Q_\mu$通过一个$\P_K^3$的
+自同构射影等价，此自同构作用在$\mathbb G_K(1,3)$上保持$W_{X,Y}$不变）。
+这是既约的，一个分支位于平面$a=\sqrt{\mu}d$, $b=-\sqrt{\mu}c$上，
+另一个位于平面$a=-\sqrt{\mu}d$, $b=\sqrt{\mu}c$上。每个分支通过投影
+同构于平面二次曲线$\spec K[c,d]/(c^2+d^2+1)\subset \A_K^2=\spec K[c,d]$.
 
+现在考虑$F_1(\mathscr Q)\cap W_{X,Y}$在$(t)$上的纤维，即
+二次锥$Q_0$的Fano概形$F_1(Q_0)$的开子集$F_1(Q_0)\cap W_{X,Y}$. 它的
+方程为
+\[
+	F_{1}\left(Q_{0}\right) \cap W_{X, Y}=V\left(a^{2}+b^{2}, a c+b d, 1+c^{2}+d^{2}\right) \subset \mathbb{A}_{K}^{4}.
+\]
+并不难看到$F_1(Q_0)\cap W_{X,Y}$的支集为一个平面二次曲线，位于平面
+$a=b=0$上，由方程$c^2+d^2=1$给出。但是$F_1(Q_0)$不是既约的！相反，
+在每一点，切空间是二维的，由在平面$a=b=0$中的既约二次曲线$c^2+d^2+1=0$
+的切线，和另一个并不位于此平面的向量一起张成：
+\inclugra{7.png}
+
+当我们考虑整个Fano概形$F_1(\mathscr Q)\subset \mathbb G_B(1,3)$和
+其在$(t-\mu)\in B$处的纤维$F_1(Q_\mu)\subset \mathbb G_K(1,3)$时，
+同样的图像照样成立。令$\Lambda_1(\mu)$和$\Lambda_2(\mu)\cong \P_K^2
+\subset \P_K^5$为由下面方程
 \[
 	\Lambda_{1}=V\left(\Pi_{Y Z}+\sqrt{\mu} \Pi_{X W}, \Pi_{Y W}-\sqrt{\mu} \Pi_{X Z}, \Pi_{Z W}+\sqrt{\mu} \Pi_{X Y}\right)
 \]
-
+和
 \[
 	\Lambda_{2}=V\left(\Pi_{Y Z}-\sqrt{\mu} \Pi_{X W}, \Pi_{Y W}+\sqrt{\mu} \Pi_{X Z}, \Pi_{Z W}-\sqrt{\mu} \Pi_{X Y}\right)
 \]
-
+所定义的不交$2$-平面。接着，对$\mu\neq 0$，作为概形有
 \[
-	F_{1}\left(Q_{\mu}\right)=\left(\Lambda_{1}(\mu) \cup \Lambda_{2}(\mu)\right) \cap \mathbb{G}_{K}(1,3) \subset \mathbb{P}_{K}^{5}
-\]
-
+	F_{1}\left(Q_{\mu}\right)=\left(\Lambda_{1}(\mu) \cup \Lambda_{2}(\mu)\right) \cap \mathbb{G}_{K}(1,3) \subset \mathbb{P}_{K}^{5}.
+\]%
+%
 % p.198
-
+%
+同前，每个平面$\Lambda_i(\mu)$交$\mathbb G_K(1,3)$于一个非奇异平面
+二次曲线$C_i(\mu)$. 但现在当$\mu$趋于$0$，两个平面曲线$\Lambda_i(\mu)$
+具有相同的极限位置，平面
 \[
-	\Lambda=V\left(\Pi_{Y Z}, \Pi_{Y W}, \Pi_{Z W}\right)
+	\Lambda=V\left(\Pi_{Y Z}, \Pi_{Y W}, \Pi_{Z W}\right).
 \]
+如下面的习题所展示的，概形$\Lambda(\mu)=\Lambda_1(\mu)\cup \Lambda_2(\mu)$
+的平坦极限$\Lambda(0)$为支于平面$\Lambda$上的概形，但具有重数$2$.
 
+\begin{exe}\label{exe:4.65}
+	证明，概形$\Lambda(\mu)=\Lambda_1(\mu)\cup \Lambda_2(\mu)$
+	和$\Lambda(0)$对$\mu\neq 0$构成了一个平坦族，即在
+	$B^*=B\setminus \{0\}=\spec K[t,t^{-1}]$上平坦的概形
 \[
-	\mathscr{L}^{*} \subset \mathbb{P}_{B^{*}}^{5}=\operatorname{Proj} K\left[t, t^{-1}\right]\left[\Pi_{X Y}, \Pi_{X Z}, \Pi_{X W}, \Pi_{Y Z}, \Pi_{Y W}, \Pi_{Z W}\right]
+	\mathscr{L}^{*} \subset \mathbb{P}_{B^{*}}^{5}=\operatorname{Proj} K\left[t, t^{-1}\right]\left[\Pi_{X Y}, \Pi_{X Z}, \Pi_{X W}, \Pi_{Y Z}, \Pi_{Y W}, \Pi_{Z W}\right],
 \]
+	其在$(t-\mu)\in B^*$处的纤维为$\Lambda(\mu)$. 找到$\mathscr L^*$在
+	$\P_{B^*}^5$中的方程，找到$\mathscr L^*$的闭包在$\P_B^n$中的方程，
+	也因此概形$\Lambda(\mu)$的极限$\Lambda(0)$的方程。最后，证明
+	Fano概形$F_1(Q_\mu)$的极限就是$Q_0$的Fano概形$F_1(Q_0)$.
+\end{exe}
+
+\begin{exe}\label{exe:6.66}
+	证明，$F_1(Q_0)\subset \P_K^5$并不包含于一个超平面中。
+\end{exe}
+
+\begin{exe}\label{exe:6.67}
+	令$Q\subset \P_K^3$为一个非奇异二次曲线上的锥，$F_1(Q)\subset 
+	\mathbb G_K(1,3)\subset \P_K^5$为其上直线的Fano概形。证明，
+	$F_1(Q)$同构于一个二次曲面上的双重直线，即在第 \ref{s:3.3.4} 节
+	中所描述的双重曲线$X_1$.
+\end{exe}
+
+利用第 \ref{s:6.2.3} 节中所给出的$F_1(Q)$的描述，我们可以更直接地看到
+一个二次锥的Fano概形不是既约的。
+
+\nottran 
+
+\paragraph*{一个退化到两个平面的二次曲线}
+\addcontentsline{toc}{subsubsection}{一个退化到两个平面的二次曲线}
 
 % p.199
 
@@ -248,9 +313,15 @@ $\mathbb G$和仿射开子集$\Pi_{XY}\neq 0$的交，而$W_{X,Y}\cong \A_K^4$
 	F_{1}\left(Q_{0,0}\right) \cap W_{X, Y}=V\left(a^{2}+b^{2}, a c+b d, c^{2}+d^{2}\right) \subset \mathbb{A}_{K}^{4}
 \]
 
-\[
-\begin{array}{l}{\Gamma_{1}=V(a+\sqrt{-1} b, c-\sqrt{-1} d)} \\ {\Gamma_{2}=V(a-\sqrt{-1} b, c+\sqrt{-1} d)}\end{array}
-\]
+
+\begin{align*}
+	\Gamma_{1}&=V(a+\sqrt{-1} b, c-\sqrt{-1} d),\\
+	\Gamma_{2}&=V(a-\sqrt{-1} b, c+\sqrt{-1} d).
+\end{align*}
+
+\begin{exe}\label{exe:6.68}
+	证明，一个秩为$2$的二次曲面的Fano概形$F_1(Q_{0,0})$是既约的。
+\end{exe}
 
 \[
 	\mathscr{Q}_{\alpha, \beta}=V\left(\alpha u X^{2}+\beta u Y^{2}+Z^{2}+W^{2}\right) \subset \operatorname{Proj} K[u][X, Y, Z, W]
@@ -270,6 +341,8 @@ $\mathbb G$和仿射开子集$\Pi_{XY}\neq 0$的交，而$W_{X,Y}\cong \A_K^4$
 	P_{1}=[\sqrt{-1} \sqrt{\beta},-\sqrt{\alpha}, 0,0]
 \]
 
+\inclugra{8.png}
+
 \[
 	\mathscr{Q}=V\left(t X^{2}+t Y^{2}+t Z^{2}+W^{2}\right) \subset \mathbb{P}_{B}^{3}
 \]
@@ -283,3 +356,5 @@ $\mathbb G$和仿射开子集$\Pi_{XY}\neq 0$的交，而$W_{X,Y}\cong \A_K^4$
 \[
 \begin{aligned} \mathscr{Q}_{1} &=V\left(7 X^{2}+7 Y^{2}+Z^{2}+W^{2}\right) \\ \mathscr{Q}_{2} &=V\left(7 X^{2}+14 Y^{2}+Z^{2}+W^{2}\right) \\ \mathscr{Q}_{3} &=V\left(7 X^{2}+49 Y^{2}+Z^{2}+W^{2}\right) \end{aligned}
 \]
+
+\subsection{三次曲面上的直线}
