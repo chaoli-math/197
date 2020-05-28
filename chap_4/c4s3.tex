@@ -346,27 +346,43 @@ $F_1(\mathscr Q)$在原点$(s,t)\in B$处的纤维在$W_{X,Y}$中有
 	证明，一个秩为$2$的二次曲面的Fano概形$F_1(Q_{0,0})$是既约的。
 \end{exe}
 
-\nottran
-
+现在让我们考虑这个双参数族的子族。首先，固定两个非零标量$\alpha$和
+$\beta\in K$，然后考虑我们的族在穿过$B=\A_K^2$的原点的直线
+$V(\beta s-\alpha t)$的直线，斜率为$\beta/\alpha$；即，由
 \[
 	\mathscr{Q}_{\alpha, \beta}=V\left(\alpha u X^{2}+\beta u Y^{2}+Z^{2}+W^{2}\right) \subset \operatorname{Proj} K[u][X, Y, Z, W]
 \]
-
+给出的族$\mathscr Q_{\alpha,\beta}$，基为$B'=\spec K[u]$.
+同样的理由告诉我们，Fano概形$F_1(\mathscr Q_{\alpha,\beta})$在$B'$上并不平坦。
+这里不同的是，在$B'$的原点的补上的Fano概形\emph{有}一个平坦极限。实际上，
+$F_1(\mathscr Q_{\alpha,\beta})$是既约的，有$F_1(\mathscr Q_{0,0})$
+这一分支，而若我们去掉那个分支，剩下的就是平坦的。为看到这点，
+我们写下$F_1(\mathscr Q_{\alpha,\beta})$在$\mathbb G_B(1,3)$的开子集
+$W_{X,Y}$中的方程：
 \[
-\begin{aligned} F_{1}\left(\mathscr{Q}_{\alpha, \beta}\right) \cap W_{X, Y} &=V\left(\alpha u+a^{2}+b^{2}, a c+b d, \beta u+c^{2}+d^{2}\right) \\ & \subset \operatorname{Spec} K[\alpha, \beta][a, b, c, d] \end{aligned}
+\begin{aligned} F_{1}\left(\mathscr{Q}_{\alpha, \beta}\right) \cap W_{X, Y} &=V\left(\alpha u+a^{2}+b^{2}, a c+b d, \beta u+c^{2}+d^{2}\right) \\ & \subset \operatorname{Spec} K[\alpha, \beta][a, b, c, d]. \end{aligned}
 \]
-
+令$\Phi(\gamma)\subset \A_K^2$为右下
 \[
 	\Phi(\gamma)=V(a-\gamma d, b+\gamma c)
 \]
+给出的$2$-平面，且令$\Psi(\gamma)$为$\Phi(\gamma)$和$\Phi(-\gamma)$
+的不交并。
 
 % p.200
+
+\nottran
 
 \[
 	P_{1}=[\sqrt{-1} \sqrt{\beta},-\sqrt{\alpha}, 0,0]
 \]
 
 \inclugra{8.png}
+
+族$\mathscr Q_{\alpha,\beta}$的平坦极限随着斜率$\beta/\alpha$变化
+而变化。特别地，它们的并在$F_1(Q_{0,0})$中稠密。这说明了，
+整个族的Fano概形$F_1(\mathscr Q)\to B$是不可约的，也因此$F_1(\mathscr Q)$
+在原点$(s,t)\in B$的补上的限制并没有一个平坦极限。
 
 \begin{exe}\label{exe:6.69}
 考虑趋于一个双重平面的二次曲面的单参族，其方程为
@@ -402,10 +418,29 @@ Fano概形$F_1(Q_3)$是两个不同构于$\P_{\mathbb R}^1$的平面二次曲线
 最后，是一个算数类比：
 
 \begin{exe}\label{exe:4.72}
-\nottran
+考虑下面给出的二次曲面$\mathscr Q_1$, $\mathscr Q_2$和$\mathscr Q_3\subset \P_\zz^3$，
 \[
-\begin{aligned} \mathscr{Q}_{1} &=V\left(7 X^{2}+7 Y^{2}+Z^{2}+W^{2}\right) \\ \mathscr{Q}_{2} &=V\left(7 X^{2}+14 Y^{2}+Z^{2}+W^{2}\right) \\ \mathscr{Q}_{3} &=V\left(7 X^{2}+49 Y^{2}+Z^{2}+W^{2}\right) \end{aligned}
+\begin{aligned} \mathscr{Q}_{1} &=V\left(7 X^{2}+7 Y^{2}+Z^{2}+W^{2}\right) \\ \mathscr{Q}_{2} &=V\left(7 X^{2}+14 Y^{2}+Z^{2}+W^{2}\right) \\ \mathscr{Q}_{3} &=V\left(7 X^{2}+49 Y^{2}+Z^{2}+W^{2}\right).\end{aligned}
 \]
+描述每个情况中的Fano概形$F_1(\mathscr Q_i)\subset \mathbb G_\zz(1,3)$.
+特别地，描述在$\spec \zz$上优势%
+\footnote{
+	译者注：这里在$\spec \zz$上优势原文是`dominating $\spec \zz$'，
+	应该是指这个分支到$\spec \zz$的态射是优势的，即其在
+	$\spec \zz$中的像是稠密的。
+}%
+的$F_1(\mathscr Q_i)$的分支，而它与
+$\mathbb G_\zz(1,3)$的纤维$\mathbb G_{\zz/(7)}$交于点$(7)\in \spec \zz$.
 \end{exe}
 
 \subsection{三次曲面上的直线}
+
+在下面的一系列习题中，我们将建立一些参数化了三次曲面$S\subset \P_K^3$
+上的直线的Fano概形$F_1(S)$的有趣事实。首先，下面两个系统建立了
+所有非奇异三次曲面包含相同数目的直线的事实（除了推出这是$27$）。
+
+% p.202
+
+% p.203
+
+% p.204
