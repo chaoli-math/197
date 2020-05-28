@@ -742,24 +742,53 @@ $j$-函数有一定的知晓。
 	j(C_{a,b})=1728\frac{4a^3}{4a^3+27b^2}.
 \]
 正如读者可能知道，两个这样的曲线$C_{a,b}$和$C_{a',b'}$是同构的当且仅当
-它们的$j$-函数相同。
-
-\nottran 
-
+它们的$j$-函数相同。因此，多少有些趣味去理解从$\A_K^2=\spec K[a,b]$
+到$\A_K^1=\spec K[j]$的有理映射的行为，换句话说，曲线$C_{a,b}$的模在
+其变成奇异的时候有什么表现。大部分时候，这是清楚的：如果点$(a,b)$
+趋向于曲线$4a^3+27b^2=0$的除了原点$Q=(a,b)\subset \spec K[a,b]$外的
+任意点，则$j(C_{a,b})$趋向于无穷。而$C_{a,b}$得到一个尖点时的行为则
+更加微妙。换句话说，我们有一个态射
 \[
 	\begin{aligned}
 		j:\mathbb A_K^2\setminus \{Q\}&\longrightarrow \mathbb P_K^1 \\
 		(a,b)&\longmapsto j(C_{a,b})
 	\end{aligned}
 \]
+我们将尝试去理解在$Q$的一个邻域中的它。
 
+答案并不难找到：映射$j:\A_K^2\setminus \{Q\}\to \P_K^1$的图像在
+$\A_K^2\times \P_K^1$中的闭包$\Gamma$就是平面沿着理想由上面的$j(C_{a,b})$
+的表达式的分子和分母生成的子概形的爆破
 \[
-	\varphi_2:Z_2=\Bl_{\Omega_2}(\mathbb A_K^2)\to \mathbb A_K^2
+	\varphi_2:Z_2=\Bl_{\Omega_2}(\mathbb A_K^2)\to \mathbb A_K^2.
 \]
+我们也可以用经典的爆破将其如下描述：
 
+% p.184
+
+\begin{exe}\label{exe:4.46}
+将投影$\Gamma\to \A_K^2$分解为如下在既约点的爆破和吹倒：具体地，证明
+映射$j$首先爆破了原点，然后是例外除子和$x$-轴的真变换的交点，然后是两个
+例外除子的交，最后吹倒前两个例外除子。
+\end{exe}
+
+从上述描述，我们可以看到许多事情。比如，考虑一\emph{束}三次曲线，其
+特化了一个尖点；即，限制上面的族到一条平面$\spec K[a,b]$上穿过原点
+的直线上。等价地，考虑对偶对$\alpha$, $\beta$，由
 \[
-	y^2=x^3+\alpha tx+\beta t.
+	y^2=x^3+\alpha tx+\beta t
 \]
+给出的曲线族$C_t$. $j(C_t)$随着$t$趋向于$0$的时候的极限总是$j=0$，
+用模空间$\mathscr M_1$的语言，曲线族将趋于$y^2=x^3+1$，无论$\beta/\alpha$
+的值，只要$\beta\neq 0$. 反之，如果我们想要描述一族平面三次曲线获取
+一个尖点，但其$j$-不变量趋于$0$或者$\infty$之外的值，我们必须
+去找穿过平面$\spec K[a,b]$的原点的曲线，其在平面的三重爆破$W_2$中的
+真变换与前两个例外除子分离，三重爆破描述于Exercise \ref{exe:4.46}.
+
+在这个例子中，因为$j$-函数已被显式地给出，我们几乎不需要几何分析。但是
+定性的图像还是非常重要的：一族任意亏格的曲线获得一个尖点时的一般图像
+是相同的。比如，如果一束平面曲线获得到了一个尖点，则稳定极限将总有
+一个$j$-不变量为$0$或$\infty$的椭圆尾巴（elliptic tail）。
 
 \subsection{算术概形的爆破}\label{s:4.2.4}
 
@@ -782,6 +811,10 @@ $j$-函数有一定的知晓。
 \[
 	W_B=\spec \zz[x][a]/(ax-3),
 \]
+此即曰，$W_B$是一个仿射平面二次曲线。对素数$p\neq 3$，$W_B$在$(p)\in \spec \zz$
+处的纤维为单点在$\A_{\zz/(p)}^1$中的补$\spec \zz/(p)[x,\frac 1x]$（或
+等价地，$\P_{\zz/(p)}^1$中两个点的补）。另一方面，$W_B$在$(3)$处的纤维
+是两个$\A_{\zz/(3)}^1$的并，它们交于一点。
 
 \nottran
 
@@ -789,27 +822,44 @@ $j$-函数有一定的知晓。
 	Z'=U_X\cup W_A=\spec \zz[y]\bigcup_{\spec \zz[y,\frac 1y,\frac 13]=\spec \zz[b,\frac 1b,\frac 13]}\spec \zz[b]
 \]
 
+
+\begin{pro}\label{pro:4.47}
+$\P_\zz^1$在点$P=(3,X)$处的爆破$Z=\Bl_P(\P_\zz^1)$同构于平面二次曲线
 \[
 	C=\proj \zz[S,T,U]/(ST-3U^2)\subset \mathbb P_\zz^2=\proj \zz[S,T,U].
 \]
-
+% p.186
 \inclugra{5.png}
+\end{pro}
 
+% p.187
+
+\begin{proof}
+我们已将$Z$描述为上述的两个开集的并，后面是容易的：
+我们就简单地建立开集与$C$的相应开集间的同构，然后检查它们在交集上
+相容。首先
 \[
 	U_X=\spec \zz[y]\longrightarrow U_T=\spec \zz \left[\frac ST,\frac UT\right]\bigg / \left(\frac ST-3\left(\frac UT\right)^2\right)=\spec \zz \left[\frac UT\right]
 \]
-
+通过将$y$变成$U/T$同构，接着
 \[
 	W_A=\spec \zz[b]\longrightarrow U_S=\spec \zz \left[\frac TS,\frac US\right]\bigg / \left(\frac TS-3\left(\frac US\right)^2\right)=\spec \zz \left[\frac US\right]
 \]
-
+通过将$b$变成$U/S$同构，最后
 \[
 	W_B=\spec \zz[a,x]/(ax-3)\longrightarrow U_U=\spec \zz[\frac SU,\frac TU]\bigg / \left(\frac SU \frac TU-3\right)
 \]
+通过将$a$变成$S/U$，$x$变成$T/U$同构。
+\end{proof}
 
+\begin{exe}\label{exe:4.48}
+用类似的术语描述$\P_\zz^1$在非既约子概形
 \[
 	\Gamma = V(9,X)\subset \mathbb P_\zz^1=\proj \zz[X,Y]
 \]
+处的爆破。用这个描述来联系这个爆破与
+$\P_zz^2$中由$ST-9U^2$给出的二次曲线，其中$\P_\zz^2=\spec \zz[S,T,U]$.
+\end{exe}
 
 \[
 	\Omega=V(3,X^2)\subset \mathbb P_\zz^1=\proj \zz[X,Y].
