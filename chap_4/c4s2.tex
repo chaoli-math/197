@@ -816,12 +816,30 @@ $\A_K^2\times \P_K^1$中的闭包$\Gamma$就是平面沿着理想由上面的$j(
 等价地，$\P_{\zz/(p)}^1$中两个点的补）。另一方面，$W_B$在$(3)$处的纤维
 是两个$\A_{\zz/(3)}^1$的并，它们交于一点。
 
-\nottran
-
+我们已经看到，爆破$Z$是三个仿射开集的并：两个同构于$\mathbb A_\zz^1$，
+$U_X=\spec \zz[y]$和$W_A=\spec \zz[b]$，第三个$W_B$是$\A_\zz^2$中的
+平面二次曲线。这些集合间的等同是容易描述的。比如说，开集
+$U_{3y}=\spec \zz[y,\frac 1y,\frac 13]\subset \spec \zz[y]$等同于开集
+$U_{3b}=\spec \zz[b,\frac 1b,\frac 13]\subset \spec \zz[b]$通过对偶于
+环态射$y$到$1/3b$的映射给出，这产生了概形
 \[
-	Z'=U_X\cup W_A=\spec \zz[y]\bigcup_{\spec \zz[y,\frac 1y,\frac 13]=\spec \zz[b,\frac 1b,\frac 13]}\spec \zz[b]
+	Z'=U_X\cup W_A=\spec \zz[y]\bigcup_{\spec \zz[y,\frac 1y,\frac 13]=\spec \zz[b,\frac 1b,\frac 13]}\spec \zz[b],
 \]
+其在$(p)\in \spec \zz$上的纤维，$p\neq 3$，是$\P_{\zz/(p)}^1$（实际上，
+$\spec \zz\setminus\{(3)\}=\spec \zz[\frac 13]$在$Z'$中的原像同构于
+$\P^1_{\spec \zz[\frac 13]}$），而在$(3)$上的纤维是两个仿射直线的不交并。
 
+最后，我们粘上第三个开集$W_B=\spec \zz[x][a]/(ax-3)$，通过等同$W_B$中
+单点$(3,a,x)$的补与$Z'$中对应的开集（这是开集$U_y=\spec \zz[y,\frac 1y]
+\subset U_X=\spec \zz[y]$与$U_b=\spec \zz[b,\frac 1b]
+\subset U_X=\spec \zz[b]$在$Z'$中的像的并）。这加上了最后一个点：
+$W_B$在$(3)$上的纤维的两个分支，都同构于$\A_{\zz/(3)}^1$，
+粘到$Z'$在$(3)$上的纤维的对应分支上产生了两个$\P_{\zz/(3)}^1$，
+它们交于一点。总之，$Z$在$(p)$上的纤维，对$p\neq 3$是$\P_{\zz/(p)}^1$，
+对$p=3$，则是两个$\P_{\zz/(3)}^1$交于一点，如下图所示。
+
+存在另一种方式来描述这个概形，其避免了黏合构造（尽管我们将需要通过
+爆破的黏合描述来看到这确实是一个爆破）。其被标为下述结果：
 
 \begin{pro}\label{pro:4.47}
 $\P_\zz^1$在点$P=(3,X)$处的爆破$Z=\Bl_P(\P_\zz^1)$同构于平面二次曲线
@@ -861,15 +879,49 @@ $\P_\zz^1$在点$P=(3,X)$处的爆破$Z=\Bl_P(\P_\zz^1)$同构于平面二次曲
 $\P_zz^2$中由$ST-9U^2$给出的二次曲线，其中$\P_\zz^2=\spec \zz[S,T,U]$.
 \end{exe}
 
+在一个域上的仿射平面的情况中，沿着支于原点的次数为$2$的子概形的爆破
+看起来都差不多，因为$\A_K^2$的自同构群可迁地作用在非零的切矢量上，
+也因此在次数为$2$的子概形上。然而，类似的命题对$\A_\zz^1$并不成立。
+就像我们在第 \ref{s:2.4.5} 节中所看到的，存在两类在这样的一个点上
+次数为$2$的子概形，纵向的和横向的（或更准确地，非纵向的）。它们可以由
+它们的坐标环区分，分别是$\zz/(p)[x]/(x^2)$和$\zz/(p^2)$. 如下面的习题
+所示（连同上面的习题），它们同样可以被它们的爆破所区分。
+
+\begin{exe}\label{exe:4.49}
+考虑$\P_{\zz}^1$在非既约子概形
 \[
 	\Omega=V(3,X^2)\subset \mathbb P_\zz^1=\proj \zz[X,Y].
 \]
+上的爆破$Z=\Bl_{\Omega}(\P_\zz^1)$. 证明，$Z$在$(3)\in \spec \zz$
+上的纤维具有两个分支，其中一个是处处非既约的。特别地，用此证明
+$Z$并不同构于$\P_\zz^2$中的任意二次曲线。
+\end{exe}
 
+% p.188
+
+\begin{exe}\label{exe:4.50}
+找到一个曲线$C\subset \P_\zz^3$同构于上面习题中的概形$Z$.
+
+\emph{提示：}首先将$Z$表为一个$\P_\zz^1\times \P_\zz^1$的子概形，
+然后将$\P_\zz^1\times \P_\zz^1$通过Segre嵌入嵌入到$\P_\zz^3$中。
+一个可能的答案是
 \[
 	Z=\{[a,b,c,d]\,:\,\operatorname{rank}\begin{pmatrix}
 		a&c&3d\\ b&d&a
 	\end{pmatrix}\leq 1\}\subset \mathbb P_\zz^3;
 \]
+即$\P_\zz^3=\proj Z[a,b,c,d]$中矩阵
+\(
+	\begin{pmatrix}
+		a&c&3d\\
+		b&d&a
+	\end{pmatrix}
+\)
+的$2\times 2$的子式的零点集。
+\end{exe}
+
+\nottran
+
 
 \[
 	A\longrightarrow B\longrightarrow C.
@@ -893,6 +945,7 @@ $\P_zz^2$中由$ST-9U^2$给出的二次曲线，其中$\P_\zz^2=\spec \zz[S,T,U]
 	d\eta_Q:T_Q(A)\longrightarrow T_{(11,121\sqrt 3)}(B)
 \]
 
+\begin{exa}\label{exa:4.54}
 \[
 	\begin{aligned}
 		&C_1=\proj \zz[X,Y,Z]/(XY-3Z^2),&&C_2=\proj \zz[X,Y,Z]/(XY-9Z^2)\\
@@ -903,6 +956,11 @@ $\P_zz^2$中由$ST-9U^2$给出的二次曲线，其中$\P_\zz^2=\spec \zz[S,T,U]
 \[
 	S=\spec \zz[\frac 13]=\spec \zz\setminus\{(3)\}\subset \spec \zz
 \]
+\end{exa}
+
+\begin{exe}\label{exe:4.55}
+证明$C_1$是非奇异的，而$C_2$, $C_3$, $C_4$中$P$都是唯一的奇异点。
+\end{exe}
 
 % p.190
 
