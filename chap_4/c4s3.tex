@@ -367,15 +367,29 @@ $W_{X,Y}$中的方程：
 	\Phi(\gamma)=V(a-\gamma d, b+\gamma c)
 \]
 给出的$2$-平面，且令$\Psi(\gamma)$为$\Phi(\gamma)$和$\Phi(-\gamma)$
-的不交并。
-
+的不交并。%
+%
 % p.200
+%
+从这些方程中，我们可以看到，对任意$\nu\neq 0\in K$，$F_1(\mathscr Q_{\alpha,\beta})$
+在$(u-\mu)\in B'$上的纤维被包含于概形$\Psi(\sqrt{\alpha/beta})$中，
+\emph{并不依赖于$\mu$}，且在$\Psi(\sqrt{\alpha/\beta})$上由进一步的方程
+$\beta u+c^2+d^2=0$切出。于是，Fano概形$F_1(Q_{\alpha u,\beta u})$
+在$u$趋向于$0$时的平坦极限为$\Psi(\sqrt{\alpha/\beta})$与两个超平面
+$V(c+\sqrt{-1}d)$和$V(c-\sqrt{-1}d)$的并$V(c^2+d^2)$的交。这是四条直线
+的并。
 
-\nottran
-
+为将此几何地表出，注意到这些直线其一是平面$H_1=V(Z+\sqrt{-1}W)$上穿过
+点
 \[
 	P_{1}=[\sqrt{-1} \sqrt{\beta},-\sqrt{\alpha}, 0,0]
 \]
+的直线对应的Grassmannian $\mathbb G_K(1,3)$的子概形，
+其二对应$H_1$上穿过点$P_2=[\sqrt{-1}\sqrt\beta,\sqrt\alpha,0,0]$的直线们，
+其三对应$H_2=V(Z-\sqrt{-1}W)$上穿过点$P_1$的直线们，最后一个对应
+$H_2$上穿过$P_2$的直线们。注意到这里的点$P_1$和$P_2$可以被刻画为
+二次曲面$Q_0$的双重直线$M=H_1\cap H_2$与另一个束中的二次曲面
+$Q_{\alpha \mu,\beta\mu}$的交。
 
 \inclugra{8.png}
 
@@ -412,7 +426,14 @@ Fano概形$F_1(Q_3)$是两个不同构于$\P_{\mathbb R}^1$的平面二次曲线
 下面是一个函数域上的例子：
 
 \begin{exe}\label{exe:4.71}
-\nottran
+令$B=\P_K^9$为参数化了$\P_K^3$中二次曲面的射影空间，$L$为其函数域。
+令$\mathscr Q_B\subset \P_B^3$为$B$上的万有二次曲面。令$Q_L\subset \P_L^3$
+为$\mathscr Q$在$B$的一般点$\spec L$处的纤维，$F_L=F_1(Q_L)\subset 
+\mathbb G_L(1,3)$为直线的Fano概形。描述$F_L$. 特别地，证明他与上面例子
+中的行为不同，其中Fano概形同构于两个$\P_M^1$，$M$是$L$的一个四次扩张，
+并不是任何的二次扩张。（实际上，存在一个$L$的二次扩张$L'$，在上面
+$F_L$变得既约了，但是$F_L\times_L\spec L'$的分支是$\P_{L'}^1$的型
+（型见第 \ref{s:4.4} 节），并不同构于$\P_{L'}^1$.）
 \end{exe}
 
 最后，是一个算数类比：
