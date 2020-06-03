@@ -6,9 +6,7 @@ main 是一个普通书本样式，实现由 `header.sty` 负责，默认 A4.
 
 cmain 是一个每章开头带图的样式，实现由 `structure.tex` 负责，默认 A4. 由于一些技术原因，得到最终版需要编译多次，直到得到的pdf文件不变为止。
 
-所有的图片，包括题图（出于某人的喜好全都选了 im@s cgss 中的图），都在 `197.zip` 文件夹中，解压到相应文件夹即可。
-
-Makefile 是某人写着玩的，写得超烂，不要在意。
+所有的图片，包括 cmain 中每章开始的题图（出于某些原因全都选了 im@s cgss 中的图），都在 `197.zip` 文件夹中，解压到相应文件夹即可。
 
 其他还没想好。
 
@@ -19,8 +17,6 @@ Makefile 是某人写着玩的，写得超烂，不要在意。
 直接运行 `xelatex main.tex` 或者 `xelatex cmain.tex` 即可得到相关的 pdf，为了索引或者引用等，所以建议进行多次编译。索引格式文件 `indexstyle.mst` 已经提供，生成中文索引的工具请使用 [zhmakeindex](https://www.ctan.org/pkg/zhmakeindex?lang=en).
 
 总之，一次完整的编译流程如下：先在根目录运行一次 `xelatex cmain` 得到 `idx` 文件，然后运行 `zhmakeindex cmain` 来得到 `ind` 文件，最后再运行一次 `xelatex cmain`.
-
-主目录下，已经给出了 Makefile. 所以在有 GNU make 软件的环境中，可以直接运行 `make pic` 使用 XeLaTeX 生成 `main.pdf`，或者运行 `make color` 使用 XeLaTeX 生成 `cmain.pdf`，默认的 `make` 留给了 ApLaTeX 引擎。
 
 p.s 1. 推荐的编译环境为 Linux 下的 TeXLive，之所以选用 Linux，是因为编译比 Windows 下的快不少。同时，本文档默认的字体是开源字体 Fandol，至少 TeXLive 2016 之后，这是包含在整个 TeXLive 中的。
 
@@ -42,7 +38,7 @@ p.s 2. 由于 zhmakeindex 已知的问题，无法很好地处理多音字，所
 
 正文插图只要无脑用 `\inclugra{*.png}` 即可，其中 `*.png` 是在对应章节 `pics` 文件夹中的插图的文件名。
 
-插图一度采用硬编码 bb 的方法，后来还是放弃了这点，转而用 extractbb 先生成一次 Bounding Box（且以后不用再生成）再编译，这使得我们可以引入上面的 `\inclugra` 而编译速度变慢不多。
+插图一度采用硬编码 bb 的方法（为兼容一些引擎），后来还是放弃了这点，转而用 extractbb 先生成一次 Bounding Box（且以后不用再生成）再编译，这使得我们可以引入上面的 `\inclugra` 而编译速度变慢不多。
 
 ----
 
@@ -63,4 +59,4 @@ p.s 2. 由于 zhmakeindex 已知的问题，无法很好地处理多音字，所
 
 使用字体需要先安装字体。安装字体，一是可以直接将字体文件放到项目的主目录，然后使用 `xelatex` 编译。同时也可以将其安装到系统，在使用 `fc-cache -fv` 刷新字体缓存后，使用 `xelatex` 编译。
 
-~~p.s. 增加了 moha 的字体，见[这里](https://github.com/chaoxu/naivemoha). 代码有所魔改。~~
+p.s. 增加了 moha 的字体，见[这里](https://github.com/chaoxu/naivemoha). 代码有所魔改。
