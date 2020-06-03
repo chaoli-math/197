@@ -470,9 +470,9 @@ $
 	是由所有多项式$f\in I$的领头项的零点集定义的子概形。
 \end{exe}
 
-回到一般的情况，注意到因为环$B=\bigoplus (\mm^\alpha/\mm^{\alpha+1})$是分次的，我们可以同样对$(X,p)$关联一个几何对象$\proj B$. 这是$X$在点$p$的Zariski切空间对应的射影空间$\mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的一个子概形，称作在$X$在点$p$的\textit{射影化切锥}，记作$\mathbb PTC_p(X)$. 在许多情况中，处理作为射影概形以及比切锥少一维的射影化切锥会更方便，但一般来说，他比切锥所包含的信息稍少一些（就像下面的Exercise \ref{exe:3.30} 将展示的，切锥$TC_p(X)$可能在原点有一个嵌入点，而射影化切锥没有）。
+回到一般的情况，注意到因为环$B=\bigoplus (\mm^\alpha/\mm^{\alpha+1})$是分次的，我们可以同样对$(X,p)$关联一个几何对象$\proj B$. 这是$X$在点$p$的Zariski切空间对应的射影空间$\mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的一个子概形，称作在$X$在点$p$的\textit{射影切锥}，记作$\mathbb PTC_p(X)$. 在许多情况中，处理作为射影概形以及比切锥少一维的射影切锥会更方便，但一般来说，他比切锥所包含的信息稍少一些（就像下面的Exercise \ref{exe:3.30} 将展示的，切锥$TC_p(X)$可能在原点有一个嵌入点，而射影切锥没有）。
 
-尽管，射影空间一般的子概形的次数将在第 \ref{s:3.3.1} 节中才定义，我们将在这里提出一个可以由$X$在点$p$的射影化切锥定义的概形不变量：定义$X$在点$p$的\textit{重数}为射影化切锥$\mathbb PTC_p(X)\subset \mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的次数。这个定义展现了另一个例子，告诉我们为何概形会在处理簇时自然出现且十分方便：在簇范畴我们依然可以定义切锥（是对应于我们的切锥的既约概形）以及射影化切锥，但是它们在族中表现得并不好。
+尽管，射影空间一般的子概形的次数将在第 \ref{s:3.3.1} 节中才定义，我们将在这里提出一个可以由$X$在点$p$的射影切锥定义的概形不变量：定义$X$在点$p$的\textit{重数}为射影切锥$\mathbb PTC_p(X)\subset \mathbb P(T_p X)\cong \mathbb P^n_{\kappa(p)}$的次数。这个定义展现了另一个例子，告诉我们为何概形会在处理簇时自然出现且十分方便：在簇范畴我们依然可以定义切锥（是对应于我们的切锥的既约概形）以及射影切锥，但是它们在族中表现得并不好。
 
 % p.108
 
@@ -494,14 +494,14 @@ $
 
 \begin{exe}~\label{exe:3.30}
 	\begin{compactenum}[(a)]
-		\item 证明，两条曲线的射影化切锥
+		\item 证明，两条曲线的射影切锥
 		\[
 			\mathbb PTC_p(C_i)\subset \mathbb P_K^2
 		\]
 		是一个次数为$3$的曲线概形，即，同构于$\spec K[s]/(s^3)$，以及它们不被包含于任何$\mathbb P_K^2$的直线中。
-		\item 找一个例子，曲线$C\subset \mathbb A_K^3$在原点的射影化切锥同构于$\spec K[s]/(s^3)$以及包含于一条直线中。
-		\item 找一个例子，曲线$C\subset \mathbb A_K^3$在原点的射影化切锥同构于$\spec K[s,t]/(s^2,st,t^2)$.
-		\item 找一个例子，曲线$C\subset \mathbb A_K^3$在原点的射影化切锥包含于一条直线中，但Zariski切空间$T_0(C)$却是三维的。
+		\item 找一个例子，曲线$C\subset \mathbb A_K^3$在原点的射影切锥同构于$\spec K[s]/(s^3)$以及包含于一条直线中。
+		\item 找一个例子，曲线$C\subset \mathbb A_K^3$在原点的射影切锥同构于$\spec K[s,t]/(s^2,st,t^2)$.
+		\item 找一个例子，曲线$C\subset \mathbb A_K^3$在原点的射影切锥包含于一条直线中，但Zariski切空间$T_0(C)$却是三维的。
 	\end{compactenum}
 \end{exe}
 
@@ -556,7 +556,7 @@ $C$的射影切线的并是一个曲面$S\subset \mathbb P_K^n$的支集，
 \end{compactenum}
 \end{exe}
 
-我们将在讨论爆破的时候再次遇到切锥：已指出过，概形$X$在点$p\in X$的射影化切锥$\mathbb PTC_p(X)$是$X$在点$p$的爆破$\operatorname{Bl}_p(X)$的例外除子。特别地，在第 \ref{s:4.2.4} 节，算术概形的切锥将以这种方式再次出现。
+我们将在讨论爆破的时候再次遇到切锥：已指出过，概形$X$在点$p\in X$的射影切锥$\mathbb PTC_p(X)$是$X$在点$p$的爆破$\operatorname{Bl}_p(X)$的例外除子。特别地，在第 \ref{s:4.2.4} 节，算术概形的切锥将以这种方式再次出现。
 
 \subsection{到射影空间的态射} \label{s:3.2.5}
 
