@@ -329,7 +329,7 @@ $F_1(Q_{0,0})$，其肉眼可见是二维的，支于两个平面的并。为看
 我们写下方程。同上，我们从$F_1(\mathscr Q)$在$\mathbb G_B(1,3)$的开子集
 $W_{X,Y}$中的方程开始，我们有
 \[
-	F_{1}(\mathscr{Q}) \cap W_{X, Y}=V\left(t+a^{2}+b^{2}, a c+b d, s+c^{2}+d^{2}\right) \subset \operatorname{Spec} K[s, t][a, b, c, d].
+	F_{1}(\mathscr{Q}) \cap W_{X, Y}=V\left(t+a^{2}+b^{2}, a c+b d, s+c^{2}+d^{2}\right) \subset \spec K[s, t][a, b, c, d].
 \]
 $F_1(\mathscr Q)$在原点$(s,t)\in B$处的纤维在$W_{X,Y}$中有
 \[
@@ -360,7 +360,7 @@ $F_1(\mathscr Q_{\alpha,\beta})$是既约的，有$F_1(\mathscr Q_{0,0})$
 我们写下$F_1(\mathscr Q_{\alpha,\beta})$在$\mathbb G_B(1,3)$的开子集
 $W_{X,Y}$中的方程：
 \[
-\begin{aligned} F_{1}\left(\mathscr{Q}_{\alpha, \beta}\right) \cap W_{X, Y} &=V\left(\alpha u+a^{2}+b^{2}, a c+b d, \beta u+c^{2}+d^{2}\right) \\ & \subset \operatorname{Spec} K[\alpha, \beta][a, b, c, d]. \end{aligned}
+\begin{aligned} F_{1}\left(\mathscr{Q}_{\alpha, \beta}\right) \cap W_{X, Y} &=V\left(\alpha u+a^{2}+b^{2}, a c+b d, \beta u+c^{2}+d^{2}\right) \\ & \subset \spec K[\alpha, \beta][a, b, c, d]. \end{aligned}
 \]
 令$\Phi(\gamma)\subset \A_K^2$为右下
 \[
@@ -462,6 +462,76 @@ $\mathbb G_\zz(1,3)$的纤维$\mathbb G_{\zz/(7)}$交于点$(7)\in \spec \zz$.
 
 % p.202
 
+\begin{exe}\label{exe:4.73}
+令$K$是一个域，$S \subset \mathbb{P}_{K}^{3}$为一个非奇异三次曲面，
+而$F=F_{1}(S) \subset \mathbb{G}_{K}(1,3)$为$S$上的直线的Fano概形。 
+证明$F$是既约的。
+
+\emph{提示}: 取$L \in F_{1}(S)$为由$X=Y=0$给出的直线，记定义$S$的三次
+多项式为$X Q(Z, W)+Y P(Z, W)$模掉$(X, Y)^{2}$；证明，切空间
+$T_{[L]} F_{1}(S)$有正维数的条件为$P$和$Q$有一个公共零点在$L$上。
+(比较这个与第 \ref{s:4.2.3} 节中的讨论。)
+\end{exe}
+
+\begin{exe}\label{exe:4.74}
+令$\mathbb{P}_{K}^{19}$为参数化 $\mathbb{P}_{K}^{3}$ 中三次曲面的
+射影空间，$U \subset \mathbb{P}_{K}^{19}$ 为上面只有有限条直线的
+曲面对应的开集（即除了锥面和柱面）。令
+$\mathscr{S}_{U} \subset \mathbb{P}_{U}^{3}$为$U$上的射影$3$-空间
+中的万有三次曲面，而$\mathscr{F}_{U}=$ $F_{1}\left(\mathscr{S}_{U}\right) \subset \mathbb{G}_{U}(1,3)$为其上直线的Fano概形。证明投影映射
+$\pi: \mathscr{F}_{U} \rightarrow U$平坦。
+
+\emph{提示}：使用如下事实，三次曲面$S \subset \mathbb{P}_{K}^{3}$上
+直线的Fano概形$F_{1}(S)$是一个局部完全交，以及Proposition \ref{pro:2.32}.
+\end{exe}
+
+\nottran
+
 % p.203
 
+\nottran
+
+\begin{exe}\label{exe:4.78}
+取$S_0$为一个非奇异二次曲面$Q$和一个平面$H$的并，它们交于一个非奇异
+二次曲线$C$. 令$\{P_1,\dots,P_6\}=C\cap S$为$C$上的束的基点。
+证明，当$\lambda$趋于$0$时，Fano概形$F_1(S_\lambda)$的平坦极限是既约的，
+次数为$27$，由$Q$上包含某个$P_i$的$12$条直线，与$H$上包含某两个
+$P_i$的$15$条直线组成。
+\end{exe}
+
+\begin{exe}\label{exe:4.79}
+现在取$S_0$为处于一般位置的三个平面$H_1$, $H_2$, $H_3$的并。 
+再，当$\lambda$趋于$0$时，Fano概形$F_1(S_\lambda)$平坦极限是什么？
+\end{exe}
+
+\begin{exe}\label{exe:4.80}
+同样的问题，但现在取$S_0$为一个非奇异平面三次曲线上的锥。
+\end{exe}
+
+最后，一个万有三次曲面上的直线的有趣例子。
+
+\begin{exe}\label{exe:4.81}
+令$B=\mathbb{P}_{K}^{19}$为参数化了$\mathbb{P}_{K}^{3}$中三次曲面的
+射影空间，$L$为$B$的函数域，$\mathscr{S}_{B} \subset \mathbb{P}_{B}^{3}$
+为$K$上的射影$3$-空间中的万有三次曲面，而$\mathscr{S}_{L}$
+为$\mathscr{S}$在$B$的一般点$\spec L$处的纤维。令
+$\mathscr{F}_{L}=F_{1}\left(\mathscr{S}_{L}\right) \subset \mathbb{G}_{L}(1,3)$ 
+为其上直线的Fano概形。证明，$\mathscr{F}_{L}$由一个既约点构成，
+其剩余类域是$L$的$27$次扩张。
+
+\emph{提示}：这来自于如下事实，万有Fano簇$\mathscr{F}=\mathscr{F}_{1}(\mathscr{S}) \subset \mathbb{G}_{B}(1,3)=\mathbb{P}_{K}^{19} \times_{K} \mathbb{G}_{K}(1,3)$不可约，
+这又来自于如下事实，到第二个因子的投影将$\mathscr F$表为了$\mathbb{G}_{K}(1,3)$
+上的$\mathbb{P}_{K}^{19}$-丛。
+\end{exe}
+
 % p.204
+
+\begin{exe}\label{exe:4.82}
+现在考虑实数上的非奇异三次曲面$S \subset \mathbb{P}_{\mathbb{R}}^{3}$. 
+正如我们已经看到的，$S_{\mathbb{C}}=S \times_{\spec \mathbb{R}}\spec \mathbb{C}$ 
+的Fano概形$F_{1}\left(S_{\mathbb{C}}\right) \subset \mathbb{G}_{\mathbb{C}}(1,3)$
+由$27$个既约点组成。于是，对于满足$a+2 b=27$的整数对$a$和$b$，
+$F_{1}(S) \subset \mathbb{G}_{\mathbb{R}}(1,3)$将由$a$个剩余类域为
+$\mathbb{R}$的既约点和$b$个剩余类域为$\mathbb{C}$的既约点组成。
+证明$a$可以为$3$, $7$, $15$或$27$，而其他的值是不可能的。（见Segre [1942].）
+\end{exe}
