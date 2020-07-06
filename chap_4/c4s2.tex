@@ -492,7 +492,7 @@ $X$沿着平面$\Lambda_i$的爆破$X_i$由下面的习题描述：
 			\[
 				\Lambda_{2,\mu}=V(x-\mu y,z-\mu w)
 			\]
-			的原像$\varphi^{-1}(\Lambda_{2,\mu})$，由$X$的顶点$p$和与$Q$的另一条直纹相交的直线们张成，它有两个不可约分支：真变换$\tilde \Lambda_{2,\mu}$和曲线$C$.（特别地，它们都不是$X$的Cartier子概形。）真变换$\tilde \Lambda_{2,\mu}$同构地映到平面$\Lambda_{2,\mu}$，它与$X_1$不交；因此我们可以尝试通过使得平面们$\Lambda_{2,\mu}$不交来图像化$X_1$. \nottran
+			的原像$\varphi^{-1}(\Lambda_{2,\mu})$，由$X$的顶点$p$和与$Q$的另一条直纹相交的直线们张成，它有两个不可约分支：真变换$\tilde \Lambda_{2,\mu}$和曲线$C$.（特别地，它们都不是$X$的Cartier子概形。）真变换$\tilde \Lambda_{2,\mu}$同构地映到平面$\Lambda_{2,\mu}$，它们在$X_1$中不交；因此我们可以尝试通过使平面们$\Lambda_{2,\mu}$不交来图像化$X_1$. 
 
 			\inclugra{3.png}
 	\end{compactenum}
@@ -1046,7 +1046,7 @@ $\mathscr O_{C_n,P}$（或等价的局部概形$\spec \mathscr O_{C_n,P}$）
 并不互相同构。
 
 
-\subsection{企划：作为爆破的二次和三次曲面}\label{s:4.2.5}
+\subsection{课题：作为爆破的二次和三次曲面}\label{s:4.2.5}
 
 一个经典的事实如下，一个非奇异二次曲面 
 $Q \subset \mathbb{P}_{\mathbb{C}}^{3}$ 同构于 
@@ -1065,12 +1065,92 @@ $S \subset \mathbb{P}_{\mathbb{C}}^{2}$ 同构于沿着六个点爆破的平面�
 转而爆破一个次数为$2$、维数为$0$的非既约概形$\Gamma \subset \mathbb{P}_{K}^{2}$
 然后吹倒包含这点的唯一的直线，我们将得到什么？此问题的答案如下：
 
+\begin{exe}\label{exe:4.59}
+令$K$为一个代数闭域，$Q \subset \mathbb{P}_{K}^{3}$是一个不可约二次曲面，
+而$p \in Q$为任意非奇异闭点。证明$Q$在$p$处的爆破同构于
+平面$\mathbb{P}_{K}^{2}$在一个零维次数为$2$的子概形
+$\Gamma \subset \mathbb{P}_{K}^{2}$处的爆破，且$\Gamma$既约当且仅当
+$Q$非奇异。
+\end{exe}
+
+非代数闭域的情况如下面两个习题所示。
+
+\begin{exe}\label{exe:4.60}
+令$\mathbb{P}_{\mathbb{R}}^{3}=\operatorname{Proj} \mathbb{R}[X, Y, Z, W]$为
+实数域上的射影$3$-空间，考虑两个二次曲面由零点集
 \[
 	Q_1=V(X^2+Y^2-Z^2-W^2)\quad \text{和}\quad Q_2=V(X^2+Y^2+Z^2-W^2)
 \]
-
+给出的二次曲面$Q_{1}, Q_{2} \subset \mathbb{P}_{\mathbb{R}}^{3}$.
+%
 % p.191
+%
+证明，$Q_i$在任意剩余类域为$\mathbb R$的闭点处的爆破，同构于平面
+$\P_{\mathbb R}^2$在一个零维次数为$2$的子概形$\Gamma_i\subset 
+\P_{\mathbb R}^2$处的爆破，其中
+\[
+	\Gamma_1\cong \spec(\mathbb R\times \mathbb R)
+	\quad \text{和}\quad \Gamma_2\cong \spec(\mathbb C).
+\]
+换句话说，$\Gamma_1$由两个剩余类域为$\mathbb R$的点构成的，而
+$\Gamma_2$由一个剩余类域为$\mathbb C$的点构成。
+\end{exe}
 
+我们将在下面的Exercise \ref{exe:4.70}回看这个。
+
+\begin{exe}\label{exe:4.61}
+	更一般地，令$K$为任意的域，$Q\subset \P_K^3$是一个非奇异二次曲面，
+$p\in Q$为任意剩余类域为$K$的点。证明$Q$在点$p$的爆破同构于平面
+$\P_K^2$在一个零维次数为$2$的字概形$\Gamma \subset \P_K^2$. 此外，
+证明$\Gamma$由两个剩余类域为$K$的点构成，当且仅当$Q$包含了一条直线
+$L\cong \P_K^1\subset Q\subset \P_K^3$，且此时$Q\cong \P_K^1\times_K
+\P_K^1$.
+\end{exe}
+
+我们下面转向三次曲面。如同对二次曲面，我们问：如果任意的代数闭域$K$
+上的非奇异三次曲面$S\subset \P_K^3$同构于平面$\P_K^2$在六个点处的爆破。
+实际上，如果$\Gamma\subset \P_K^2$是六个点，其中没有三点共线且六点
+并不都在一个二次曲线上，则存在一个在$\Gamma$上为零的三次曲面的四维
+矢量空间。这给出了一个态射
 \[
 	\bbp_K^2\setminus \Gamma\to \bbp_K^3,
 \]
+且从Proposition \ref{pro:4.22}，$\P^2$在$\Gamma$处的爆破
+$S=\Bl_\Gamma \P_K^2$为这个态射在$\P_K^2\times_K \P_K^2$中的图像的闭包。
+曲面$S=\subset \P_K^2\times_K \P_K^3$同构地投影到$\P_K^3$，其像是一个
+光滑三次曲面，反之，每个光滑三次曲面$S\subset \P_K^3$都可以这样得到。
+
+那当$\Gamma$的点聚在一起的时候会发生什么呢？完整的答案在这里自然将更加
+复杂，我们将简单地择出部分可能的情况。下面习题的需要对光滑三次曲面的
+经典理论有一定的了解，比如可见Griffiths \& Harris [1978]或者Mumford [1976].
+
+我们始终假设$K$是一个代数闭域。
+
+\begin{exe}\label{exe:4.62}
+令$\Gamma$为任意由四个既约点和一个二次点构成的次数为六的子概形，要求
+$\Gamma$并不包含于一个二次曲线中且$\Gamma$的任意三次子概形也并不包含于
+一条直线中。证明，爆破$\Bl_\Gamma \P_K^2$同构于具有一个寻常二次点的
+三次曲面（在第\ref{s:4.2.2} 中所定义），并反过来任意的具有一个寻常
+二次点的三次曲面都可以这样实现。（使用Proposition \ref{pro:4.40} 中
+的爆破的刻画。）这样一个三次曲面可以包含多少条直线？
+\end{exe}
+
+\begin{exe}\label{exe:4.63}
+这次令$\Gamma \subset \P_K^2$为任意包含三个既约点和一个曲线的%
+\footnote{
+	译者注：定义见Exercise \ref{exe:2.18}.
+}%
+三次点，同样要求$\Gamma$并不包含于一个二次曲线中且$\Gamma$的任意三次
+子概形也并不包含于一条直线中。证明，爆破$\Bl_\Gamma \P_K^2$同构于
+具有一个二次点但这次并不寻常的三次曲面。（这个二次点处的切锥是什么？）
+这样一个三次曲面可以包含多少条直线？
+\end{exe}
+
+% p.192
+
+\begin{exe}\label{exe:4.64}
+对一个只有一条直线的三次曲面的例子，令$\Gamma\subset \P_K^2$为
+任意支于一点的次数为六的曲线子概形。假设次数为三的（唯一的）子概形
+$\Gamma$被包含于一条直线中，但是次数为$4$的并不。证明，爆破
+$\Bl_\Gamma \P_K^2$同构于仅包含一条直线的三次曲面。
+\end{exe}
