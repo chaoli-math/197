@@ -51,8 +51,9 @@ p.s 2. 由于 zhmakeindex 已知的问题，无法很好地处理多音字，所
 ```latex
 \setCJKmainfont[
  	ItalicFont = AdobeKaitiStd-Regular ,
- 	BoldFont = SourceHanSerifSC-Bold ,
-]{SourceHanSerifSC-Regular}
+ 	BoldFont = SourceHanSerifCN-Bold ,
+]{SourceHanSerifCN-Regular}
+\setCJKsansfont{Source Han Sans CN}
 ```
 
 默认替换的宋体是 Adobe 于2017年4月正式推出的 [Source Han Serif](https://source.typekit.com/source-han-serif/cn/)，即中文名为思源宋体的多字重宋体。这里用到 Regular 和 Bold 两个字重。而替换的楷体是 [Adobe 楷体](https://typekit.com/fonts/adobe-kaiti)，比起 Fandol 的楷体，他更加适配思源宋体。这里默认使用或替换的字体都是开源字体。
