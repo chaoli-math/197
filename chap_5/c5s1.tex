@@ -1,7 +1,204 @@
-\section{像}
+\section{像}\label{s:4.1}
 
-\subsection{概形的态射的像}
+% p.209
 
-\subsection{万有族}
+这节中我们关心一个基本的概念：概形范畴中态射的\textit{像}。如将所见，我们希求像有如下两种基本的性质，
+\textit{推-拉性}和\textit{在基变换下不变}，而此二者却不兼容。我们将相应给出两个定义，一个直接些，另一个
+稍不，但他们都在相应的情况下非常有用。
 
-\subsection{Fitting理想和Fitting像}
+\subsection{概形的态射的像}\label{s:4.1.1}
+
+假设$\varphi:X\to Y$是概形间的态射。$\varphi$的\textit{集合学式像}当然地如下定义：他是$Y$中的点$y\in Y$
+使得存在点$x\in X$满足$\varphi(x)=y$. 此像可以是也可以不是闭子集：比如，如果$X$是在
+$\mathbb{A}_K^2=\spec K[x, y]$中由理想$(xy-1)\subset K[x,y]$定义的仿射概形，那么$X$到
+$\mathbb{A}_K^1=\spec K[x]$的投影的像就是原点的补集，是一个开子集。某种意义上来说，这是因为我们“忘掉”了
+源概形的一些点：如果我们将此态射从$X$延拓到$X$在$\mathbb{A}_K^1 \times_K \mathbb{P}_K^1$的闭包上，则
+他的像将是整个射影直线。
+
+这是两个典型的例子。这种情况可以总结为下面的定理。为描述之，首先会议拓扑空间的子集$V$是\textit{可构造}的，
+如果他是一族局部闭\footnote{译者注：局部闭子集是指他可以写成一个开子集与一个闭子集的交。}%
+子集$V_i$的有限并。
+
+% p.210
+
+\begin{thm}\label{thm:5.1}
+    如果Noether概形间态射$\varphi: X\to Y$是有限型的，则$\varphi$在$Y$中的集合学式像是可构造的。如果$\varphi$
+    是射影的，则$\varphi$的集合学式像是闭的。
+\end{thm}
+
+前半个命题来自于Chevalley. 注意，$\varphi$是有限型的假设是必要的：多项式环到其局部化的含入同态诱导的态射
+\[
+    \spec K\left[x_1, \ldots, x_n\right]_{\left(x_1, \ldots, x_n\right)} \longrightarrow 
+    \spec K\left[x_1, \ldots, x_n\right]
+\]
+对任意的$n$都没有可构造的像。后半个命题有点古老，一般被叫做消元理论主定理。
+逆紧性，其强化了定理的结论，本质上就是为了表达这种性质而做出的（见第 \ref{s:3.1} 节）。定理 \ref{thm:5.1} 的
+证明和簇的经典情况完全相同，比如可见Harris [1995] 或 Hartshorne [1977]. 我们这里就不重复了。
+
+稍新一点的是，像的闭包具有一个自然的概形结构，这是我们在这节的后面要探讨的。
+
+现在，若我们想要将态射$\varphi:X\to Y$的像定义为一个概形。最理想地，尽管如下所见是不可能的，就是将$\varphi(X)$
+取做$Y$中最小的原像是整个$X$的子概形。换句话说，我们想要用\textit{推-拉性}刻画$\varphi(X)$：对任意的子概形
+$Z\subset Y$，
+\[
+    Z \supset \varphi(X) \quad \Longleftrightarrow \quad \varphi^{-1}(Z)=X.
+\]
+但事实上，$Y$并不需要存在这样的子概形，如下例：由将$x$映为$s$, $y$映为$st$的环同态
+$\varphi^{\#}: K[x, y] \rightarrow K[s, t]$诱导的态射
+\[
+    \varphi: X=\mathbb{A}_K^2 \longrightarrow Y=\mathbb{A}_K^2.
+\]
+
+\inclugra{1.png}
+
+% p.211
+
+对任意的$\lambda\in K$，令$Y_\lambda$是$Y$中点$(0,\lambda)$的补。对$\lambda \neq 0$，$Y_\lambda$的原像是整个$X$.
+因此，如果存在一个子概形$\varphi(X)\subset Y$满足$Z=Y$的推-拉性质，则$\varphi(X)$的底空间应该包含于集合
+$I=\bigcap_{\lambda\neq 0}Y_\lambda$，其是点$(0,0)$与$x$-轴的补的并。此外，从$\varphi^{-1}\varphi(X)=X$，
+$\varphi(X)$的底空间应该包含$I$，故$\operatorname{supp}\varphi(X)=I$. 但是$I$并不是一个$Y$的局部闭子集，
+因此也不能是任何$Y$的子概形的底空间。
+
+然而，我们离我们想要的也并不远：确实存在一个$Y$的极小\textit{闭}子概形，其原像就是整个$X$，且这个子概形也对
+闭子概形$Z\subset Y$满足推-拉性质。
+
+\begin{defi}\label{defi:5.2}
+若$\varphi:X\to Y$是一个有限型态射，则\textit{概形学式的像}，写作$\bar\varphi(X)$，是$Y$中的闭子概形，其理想层
+为$Y$的开子集上的由$\varphi^\#$拉回到$0$的正则函数的层，即，
+\[
+    \bar{\varphi}(X)=V\left(\ker
+    \left(\varphi^{\#}: \mathscr{O}_Y \rightarrow \varphi_* \mathscr{O}_X\right)\right) \subset Y.
+\]
+我们称$\varphi$是\textit{支配}的，如果$\bar\varphi(X)=Y$，或等价地，如果拉回映射$\varphi^\#$是单的。
+\end{defi}
+
+态射要支配的条件并\textit{不}仅是个拓扑空间间的条件：比如，含入$\varphi:\spec K\hookrightarrow 
+\spec K[\epsilon]/(\epsilon^2)$是底空间间的一个满射，但其像是一个真闭子概形，拉回$\varphi^\#$并不是单的，
+于是态射并不是支配的。
+
+\begin{pro}\label{pro:5.3}
+若$\varphi:X\to Y$是一个概形间的态射，则集合学式像的闭包是$\bar\varphi(x)_{\text{red}}$.
+\end{pro}
+
+\begin{proof}
+我们可以立即约化到仿射的情况，然后证明，如果$\varphi^\#:B\to A$是一个环同态，则$B$中所有
+可以写作$Q=(\varphi^\#)^{-1}(P)$的素理想（其中$P$是某个$A$的素理想）的交$J$是$\ker(\varphi^\#)$的根
+（见第 \ref{s:1.2.1} 节）。令$I\subset A$为$A$的幂零根，我们有 
+\[
+    J=\bigcap_{\text { 素理想 } P \subset A}\left(\varphi^{\#}\right)^{-1}(P)=\left(\varphi^{\#}\right)^{-1}(I) .
+\]
+因此，如果$f\in J$，则$\varphi^\#(f)\in I$是幂零的，于是$f\in \operatorname{rad}(\ker \varphi^\#)$. 反方向的包含
+是立即的。
+\end{proof}
+
+有时用明显更一般的形式会很方便：若$\varphi: X\to Y$是任何态射，$X'\subset X$是一个闭子概形，则我们可以定义$X'$的
+\textit{概形学式的像}$\bar\varphi(X')$为由理想层$I$所以定义的子概形，其中
+\[
+    I(U)=\left\{f \in \mathscr{O}_Y(U) \mid \varphi^{\#}(f) \in I_{X^{\prime}}\left(\varphi^{-1}(U)\right)\right\}.
+\]%
+% p.212
+但这个“推广”实际上仅描述了一种特殊情况，因为$\bar\varphi(X')$为复合态射$X'\to X\to Y$的概形学式的像。
+
+如果两个概形$X$和$Y$是仿射的，且态射$\varphi$是支配的，则$X'\subset X$的像的理想可以很简单得到：
+我们可以将$A(Y)$看成$A(X)$的一个子环，而$\bar\varphi(X')$是由理想$I_{X'}\cap A(Y)$定义的$Y$的子概形。
+我们将主要关注这种情况，因为他已经包含了所有的新现象。
+
+考虑往第一个坐标的线性投影
+\[
+    \varphi: X=\mathbb{A}_K^2=\spec K[x, y] \longrightarrow Y=\mathbb{A}_K^1=\spec K[x].
+\]
+令$X'$和$X''$为由理想$I'=(x,y^2)$和$I''=(x^2,y)$给出的（抽象来说是同构的）零维子概形。$X'$的像为
+由$(x,y^2)\cap K[x]=(x)$定义的既约概形，而$X''$的像却由$(x^2,y)\cap K[x]=(x^2)$给出。更一般地，
+“丰满点”$V(x^2,xy,y^2)\subset \mathbb A_K^2$的像为双重点$V(x^2)\subset \mathbb A_K^1$，而双重点
+$V(x^2,xy,y^2,\alpha x+\beta y)\subset \mathbb A_K^2$的像在$\beta\neq 0$时为双重点$V(x^2)\subset \mathbb A_K^1$，
+在$[\alpha,\beta]=[1,0]$时候为既约点$V(x)$. 可从此例看出，像的概形结构依赖于子概形与态射$\varphi$的纤维的关系。
+
+\inclugra{2.png}
+
+\begin{exe}\label{exe:5.4}
+    现在考虑一“族”这样的双重点的投影：取$B=\spec K[t]=\mathbb A_K^1$，然后考虑态射
+    \[
+        \varphi: X=\mathbb{A}_B^2=\spec K[x, y, t] \longrightarrow Y=\mathbb{A}_B^1=\spec K[x, t].
+    \]
+    令$X'\subset X$为在第 \ref{s:2.3.5} 节中描述过的双重直线
+    \[
+        X^{\prime}=V\left(x^2, x y, y^2, x+t y\right) \subset \mathbb{A}_B^2.
+    \]
+    证明，$X'$的概形学式的像$\bar\varphi(X')$为双重直线$V(x^2)\subset Y$，尽管
+    $X'$在原点$(t)\in B$处的纤维的像为$Y$在$(t)$处的纤维中的既约点$V(x)$.
+    实际上，如我们将在下面章节中所解释的，这是许多有趣并发现象的起源。
+\end{exe}
+
+% p.213
+
+\begin{exe}\label{exe:5.5}
+    证明，如果$\varphi:X\to Y$是一个态射，$X'\subset X$是一个既约子概形，则$\bar\varphi(X')$是既约的。
+    （提示：将问题约化到证明，一个根式理想在环同态下的原像依然是一个根式理想。）
+\end{exe}
+
+\subsection{万有族}\label{s:4.1.2}
+
+% p.214
+\inclugra{3.png}
+
+\[
+    I_a=\ker\left(K[x] \rightarrow K[x, y] /\left(y^2-y, x+a y\right)\right)= 
+    \begin{cases}
+        (x^2+a x) & \text{ 若 } a \neq 0, \\
+        (x) & \text{ 若 } a=0.
+    \end{cases}
+\]
+
+\[
+    \begin{aligned}
+        K[t, x, y] /\left(y^2-y, y x+\right. & \left.y t, y x-x, x^2+t x\right) \\
+        & \rightarrow K\left[t, t^{-1}, x, y\right] /\left(y^2-y, y x+y t, y x-x, x^2+t x\right) \\
+        & =K\left[t, t^{-1}, x\right] /\left(x^2+t x\right)
+    \end{aligned}
+\]
+
+% p.215
+
+\[
+    \varphi: X=\mathbb{A}_B^2=\spec K[x, y, t] \longrightarrow Y=\mathbb{A}_B^1=\spec K[x, t].
+\]
+
+\[
+    X=V\left(x^2, x y, y^2\right) \cap V(t y+x)=V\left(t y+x, y^2\right).
+\]
+
+\inclugra{4.png}
+
+% p.216
+
+\[
+    K[x, y] /\left(a y+x, y^2\right)= 
+    \begin{cases}K[x] /\left(x^2\right) & \text { 若 } a \neq 0 \\ 
+        K[x, y] /\left(x, y^2\right) & \text { 若 } a=0\end{cases}
+\]
+
+\[
+    I_a=\ker\left(K[x] \rightarrow K[x, y] /\left(a y+x, y^2\right)\right)= 
+    \begin{cases}\left(x^2\right) & \text { 若 } a \neq 0 \\ 
+        (x) & \text { 若 } a=0\end{cases}
+\]
+
+\[
+    K[t, x, y] /\left(t y+x, y^2\right) \rightarrow K\left[t, t^{-1}, x, y\right] /
+    \left(t y+x, y^2\right)=K\left[t, t^{-1}, x\right] /\left(x^2\right)
+\]
+
+\[
+    \xymatrix{
+        X\ar[rr]^\varphi\ar[rd]&&Y\ar[ld]\\
+        &B&
+    }
+\]
+
+\[
+    \bar{\varphi}\left(X_b\right) \subset \bar{\varphi}(X)_b.
+\]
+
+% p.217
+
+\subsection{Fitting理想和Fitting像}\label{s:4.1.3}
