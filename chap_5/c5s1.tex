@@ -66,7 +66,7 @@ $\varphi(X)$的底空间应该包含$I$，故$\operatorname{supp}\varphi(X)=I$. 
 若$\varphi:X\to Y$是一个有限型态射，则\textit{概形学式的像}，写作$\bar\varphi(X)$，是$Y$中的闭子概形，其理想层
 为$Y$的开子集上的由$\varphi^\#$拉回到$0$的正则函数的层，即，
 \[
-    \bar{\varphi}(X)=V\left(\ker
+    \bar{\varphi}(X)=V\left(\Ker
     \left(\varphi^{\#}: \mathscr{O}_Y \rightarrow \varphi_* \mathscr{O}_X\right)\right) \subset Y.
 \]
 我们称$\varphi$是\textit{支配}的，如果$\bar\varphi(X)=Y$，或等价地，如果拉回映射$\varphi^\#$是单的。
@@ -82,12 +82,12 @@ $\varphi(X)$的底空间应该包含$I$，故$\operatorname{supp}\varphi(X)=I$. 
 
 \begin{proof}
 我们可以立即约化到仿射的情况，然后证明，如果$\varphi^\#:B\to A$是一个环同态，则$B$中所有
-可以写作$Q=(\varphi^\#)^{-1}(P)$的素理想（其中$P$是某个$A$的素理想）的交$J$是$\ker(\varphi^\#)$的根
+可以写作$Q=(\varphi^\#)^{-1}(P)$的素理想（其中$P$是某个$A$的素理想）的交$J$是$\Ker(\varphi^\#)$的根
 （见第 \ref{s:1.2.1} 节）。令$I\subset A$为$A$的幂零根，我们有 
 \[
     J=\bigcap_{\text { 素理想 } P \subset A}\left(\varphi^{\#}\right)^{-1}(P)=\left(\varphi^{\#}\right)^{-1}(I) .
 \]
-因此，如果$f\in J$，则$\varphi^\#(f)\in I$是幂零的，于是$f\in \operatorname{rad}(\ker \varphi^\#)$. 反方向的包含
+因此，如果$f\in J$，则$\varphi^\#(f)\in I$是幂零的，于是$f\in \operatorname{rad}(\Ker \varphi^\#)$. 反方向的包含
 是立即的。
 \end{proof}
 
@@ -172,7 +172,7 @@ $V(x^2,xy,y^2,\alpha x+\beta y)\subset \mathbb A_K^2$的像在$\beta\neq 0$时�
     \inclugra{3.png}
     我们看到
     \[
-        I_a=\ker\left(K[x] \rightarrow K[x, y] /\left(y^2-y, x+a y\right)\right)= 
+        I_a=\Ker\left(K[x] \rightarrow K[x, y] /\left(y^2-y, x+a y\right)\right)= 
         \begin{cases}
             (x^2+a x) & \text{ 若 } a \neq 0, \\
             (x) & \text{ 若 } a=0.
@@ -216,27 +216,35 @@ $\bar\varphi(X)$的方程$x^2+tx$在当我们将$t$取做任何$a\neq 0$时给�
 \[
     X=V\left(x^2, x y, y^2\right) \cap V(t y+x)=V\left(t y+x, y^2\right)
 \]
-给出的闭子概形$X\subset \mathbb A_B^2=\mathbb A_K^3$. 
-
-\nottran
+给出的闭子概形$X\subset \mathbb A_B^2=\mathbb A_K^3$. 作为$\mathbb A_{B}^2=\mathbb A_{K}^3$的一个
+子概形，这是$t$-轴的一阶无穷小邻域与绕轴缠绕的螺旋面的交集；它是底空间为$t$-轴的双重直线。
+如前，我们可以将$X$想做一个平面上的双重点的族，每个点都有其在$y$-轴上的投影：对每个标量$a\in K$
+我们令$X_a\subset \mathbb A_K^2$为$X$在点$(t-a)\in B$处的纤维，$Y_a\cong \mathbb A_K^1$为
+$\mathbb A_B^1$在点$(t-a)$处的纤维，以及$\varphi_a: X_a \to Y_a$为$\varphi$在$X_a$上的限制。
 
 \inclugra{4.png}
 
 % p.216
 
+对每个标量值$t=a\in K$，集合学式像$\varphi(X_a)$是点$x=0$. 概形学式的像$\bar\varphi(X_a)$由
+$I_a:=K[x]\cap (ay+x,y^2)$定义。因为
 \[
     K[x, y] /\left(a y+x, y^2\right)= 
     \begin{cases}K[x] /\left(x^2\right) & \text { 若 } a \neq 0 \\ 
         K[x, y] /\left(x, y^2\right) & \text { 若 } a=0\end{cases}
 \]
-
+可见
 \[
-    I_a=\ker\left(K[x] \rightarrow K[x, y] /\left(a y+x, y^2\right)\right)= 
+    I_a=\Ker\left(K[x] \rightarrow K[x, y] /\left(a y+x, y^2\right)\right)= 
     \begin{cases}\left(x^2\right) & \text { 若 } a \neq 0 \\ 
         (x) & \text { 若 } a=0\end{cases}
 \]
-
+因此，概形学式的像$\bar\varphi(X_a)$对$a\neq 0$为一个双重点，而对$a=0$是一个单重点。
 \end{exa}
+
+
+\nottran
+
 
 \[
     K[t, x, y] /\left(t y+x, y^2\right) \rightarrow K\left[t, t^{-1}, x, y\right] /
@@ -255,5 +263,68 @@ $\bar\varphi(X)$的方程$x^2+tx$在当我们将$t$取做任何$a\neq 0$时给�
 \]
 
 % p.217
+
+\begin{pro}\label{pro:5.1.8}
+    如果
+    \[
+    \xymatrix{
+        X'=X\times_Y Y'\ar[r]^-{\psi'}\ar[d]_{\varphi'}&X\ar[d]^\varphi\\
+        Y'\ar[r]_{\psi}&Y
+    }
+    \]
+    是概形态射的拉回图，则$\bar\varphi'(X')\subset \psi^{-1}\bar\varphi(X)$.
+    如果态射$\varphi$是有限的，这两个概形由相同的底空间，闭包$\overline{\varphi'(X')}$
+    是集合学式像。特别地，当$\varphi$有限时，集合学式像是闭的。如果$\psi$是平坦的，
+    则$\bar\varphi'(X')=\psi^{-1}\bar\varphi(X)$.
+\end{pro}
+
+注意到，在之前的例子中，$Y'=Y_b$是态射$Y\to B$的纤维，但一般地我们并不需要假设这点。
+
+\begin{proof}
+我们可以立刻约化到仿射的情况，然后考虑交换环的交换图：
+\[
+    \xymatrix{
+        A'=A\otimes_B B'&A\ar[l]_-{{\psi'}^\#}\\
+        B'\ar[u]^{{\varphi'}^\#}&B\ar[l]^-{\psi^\#}\ar[u]_{\varphi^\#}
+    }
+\]
+此时，第一个断言变成了包含
+\[
+    \Ker({\varphi'}^\#) \supset \psi^{\#}(\Ker(\varphi^{\#})) B'
+\]
+这从交换图是直接的。
+
+\nottran
+\end{proof}
+
+\[
+    \xymatrix{
+        (A \otimes_B B') \otimes B_{P'}' / P_{P'}'=A \otimes_B B_P / P_P \otimes_{B_P / P_P} B_{P^{\prime}}^{\prime} / P_{P^{\prime}}^{\prime}&A \otimes_B B_P / P_P\ar[l]\\
+        B_{P'}' / P_{P'}'\ar[u]&B_P / P_P\ar[l]\ar[u]
+    }
+\]
+
+\[
+    0 \longrightarrow \Ker(\varphi^{\#}) \longrightarrow B \longrightarrow \im(\varphi^{\#}) \longrightarrow 0
+\]
+
+\[
+    B' \otimes_B \Ker(\varphi) \rightarrow B' \otimes_B B=B'
+\]
+
+
+\[
+    \xymatrix{
+        0 & K(t)\ar[l]\\
+        K\ar[u]&K[t]\ar[l]_{0 \mapsfrom t}\ar[u]
+    }
+\]
+
+\[
+    X_0 \stackrel{\varphi_0}{\longrightarrow} Y_0 \stackrel{\pi}{\longrightarrow} B
+\]
+\[
+    X=(\pi \varphi_0)^{-1}(b) \stackrel{\varphi}{\longrightarrow} Y=\pi^{-1}(b)
+\]
 
 \subsection{Fitting理想和Fitting像}\label{s:5.1.3}

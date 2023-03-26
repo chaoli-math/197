@@ -2,12 +2,34 @@
 
 % p.204
 
-令$S$为任意概形，而$X$为任意$S$-概形。我们称$S$-概形$Y$是$X$上的一个\textit{型}，若对每一点$p\in S$，$S$中存在一个$p$的开邻域$U$以及一个平坦满同态$T\to U$使得$Y\times_S T\cong X\times_S T$作为$T$-概形同构。
+令$S$为任意概形，而$X$为任意$S$-概形。我们称$S$-概形$Y$是$X$上的一个\textit{型}，若对每一点$p\in S$，
+$S$中存在一个$p$的开邻域$U$以及一个平坦满同态$T\to U$使得$Y\times_S T\cong X\times_S T$作为$T$-概形同构。
 
-从一个经典的例子开始，考虑一个实射影平面$\bbp_\rr^2$上由方程$X^2+Y^2+Z^2=0$给出的二次曲线，即曲线$C=\proj \rr[X,Y,Z]/(X^2+Y^2+Z^2)$. 曲线没有定义在$\rr$上的点，即剩余类域为$\rr$的点，于是并不能同构于射影直线$\bbp_\rr^1$. 然而，将基域推广到$\rr$的代数闭域$\cc$后，$C\times_{\spec \rr}\spec \cc\cong \proj \cc[X,Y,Z]/(X^2+Y^2+Z^2)\cong \bbp_\cc^1$. 因此，$C$是一个$\bbp_\rr^1$在$\spec \rr$上的型，或者更简明地，一个射影直线的$\rr$-型。
+从一个经典的例子开始，考虑一个实射影平面$\bbp_\rr^2$上由方程$X^2+Y^2+Z^2=0$给出的二次曲线，即曲线
+$C=\proj \rr[X,Y,Z]/(X^2+Y^2+Z^2)$. 曲线没有定义在$\rr$上的点，即剩余类域为$\rr$的点，于是并不能同构于
+射影直线$\bbp_\rr^1$. 然而，将基域推广到$\rr$的代数闭域$\cc$后，
+$C\times_{\spec \rr}\spec \cc\cong \proj \cc[X,Y,Z]/(X^2+Y^2+Z^2)\cong \bbp_\cc^1$. 因此，$C$是一个
+$\bbp_\rr^1$在$\spec \rr$上的型，或者更简明地，一个射影直线的$\rr$-型。
 
-另一个例子，读者可以检查，域扩张$\spec \mathbb Q[x]/(x^2+1)$在$\spec \mathbb Q$上是一个包含两个不同的点的概形的型，然而$\spec \zz/(2)[x]/(x^2+1)$在$\spec \zz/(2)$上是一个二次点的型。
+另一个例子，读者可以检查，域扩张$\spec \mathbb Q[x]/(x^2+1)$在$\spec \mathbb Q$上是一个包含两个不同的
+点的概形的型，然而$\spec \zz/(2)[x]/(x^2+1)$在$\spec \zz/(2)$上是一个二次点的型。
 
-\nottran
+在数论中，观察在给定曲线的型的族中有理点集的变化是有意思的。我们给出一个例子，对任意的$t\in \mathbb Q$，
+\textit{Pell方程}
+\[
+    ty^2=x^2-1
+\]
+的有理点$(x,y)$的集合是曲线$C_t=\spec \mathbb Q[x,y]/(ty^2-x^2+1)$上的$\mathbb Q$-有理点集。这些曲线$C_t$
+是$\spec \mathbb Q$上的$\mathbb P^1$的型。类似地，曲线$E_t=\spec \mathbb Q[x,y]/(ty^2-x^3+1)$的$j$-不变量
+都为零，因此曲线$E_1\subset \mathbb P_{\mathbb Q}^2$的型都由$y^2=x^3-1$给出（间上面的第 \ref{s:4.2.3} 节和
+下面的第 \ref{s:6.2.4} 节），但具有变化的算数性质。
+
+在上面的各个例子中，容易看到，给出的曲线是互相的型，曲线$E_t\times_{\spec \mathbb Q}\spec \mathbb Q[\sqrt{t}]$
+和$E_1\times_{\spec \mathbb Q}\spec \mathbb Q[\sqrt{t}]$是明显同构的，没那么显然但也不难可以看到，他们并不是
+全部同构的。（实际上，最\naive 的猜想是$E_t\cong E_1$当且仅当$t\in (\mathbb Q^*)^2$，即，$t$是一个非零有理数的
+平凡，这个猜想是对的，但证明他是个并不平凡习题。）
 
 % p.205
+
+
+\nottran
