@@ -27,9 +27,61 @@ $\bbp_\rr^1$在$\spec \rr$上的型，或者更简明地，一个射影直线的
 在上面的各个例子中，容易看到，给出的曲线是互相的型，曲线$E_t\times_{\spec \mathbb Q}\spec \mathbb Q[\sqrt{t}]$
 和$E_1\times_{\spec \mathbb Q}\spec \mathbb Q[\sqrt{t}]$是明显同构的，没那么显然但也不难可以看到，他们并不是
 全部同构的。（实际上，最\naive 的猜想是$E_t\cong E_1$当且仅当$t\in (\mathbb Q^*)^2$，即，$t$是一个非零有理数的
-平凡，这个猜想是对的，但证明他是个并不平凡习题。）
+平凡，这个猜想是对的，但证明他是个并不平凡的习题。）
 
 % p.205
 
+射影空间$\mathbb P^n$（对任何$n$）的$S$-型的同构类以自然的方式构成了一个群，
+叫做$S$的\textit{Brauer群}（或，当$S=\spec K$为一个域的谱时，$K$的Brauer群），
+其中射影空间$\mathbb P_S^n$为恒等元。这个群可以由Galois上同调计算，见
+Serre [1975]. 下面是一个联系到数论的一个Brauer群的构造的。
+
+\[
+    \left\{a \in M_d(K) \mid \operatorname{Im}(a) \subset W\right\}
+\]
+
+\[
+    S \otimes A_G \subset A_G \otimes A_G \xrightarrow{\text { multiplication }}
+     A \longrightarrow A / S
+\]
+
+
+% p.206
+
+\begin{pro}\label{pro:4.84}
+    $C_U$是$U$上的$\mathbb P_U^1$的一个非平凡型，$C_L$是
+    $L$上的$\mathbb P_L^1$的一个非平凡型。
+\end{pro}
+
+这里的关键在于，尽管每个$\mathbb P_K^2$中的光滑二次曲线是有理的，
+但并没有一种方式可以在一个$U$的Zariski开子集一致地对每个光滑二次曲线
+选取一个有理的参数化。
+
+\[
+    V=C_U \backslash\left(C_U \cap(U \times M)\right) \subset U \times \mathbb{P}_K^2 .
+\]
+
+\[
+    C_V=V \times_U C_U \subset U \times \mathbb{P}_K^2 \times \mathbb{P}_K^2
+\]
+
+
+\[
+    \varphi:(C, p ; q) \longmapsto(C, p ; \overline{p, q} \cap M)
+\]
+
+% p.207
+
+\[
+    1+a F^2+b G^2+c F+d G+e F G=0 .
+\]
+
+\[
+    1+a \cdot\left(\frac{f(a, b)}{h(a, b)}\right)^2+b \cdot\left(\frac{g(a, b)}{j(a, b)}\right)^2=0
+\]
+
+\[
+    h(a, b)^2 j(a, b)^2+a \cdot f(a, b)^2 j(a, b)^2+b \cdot g(a, b)^2 h(a, b)^2=0 .
+\]
 
 \nottran

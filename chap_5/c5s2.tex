@@ -1,16 +1,332 @@
 % p.222
 \section{结式}\label{s:5.2}
 \subsection{结式的定义}\label{s:5.2.1}
-我们前两个小节中所引入的思想的最古老，但依然是最重要的，应用为\textit{两个一元多项式的结式}。给定两个多项式
+我们前两个小节中所引入的思想的最古老、但依然是最重要的应用之一为
+\textit{两个一元多项式的结式}。给定两个多项式
 \[
 \begin{aligned}
     &f(x)=a_0x^m+\cdots+a_m,
     &g(x)=b_0x^n+\cdots+b_n,
 \end{aligned}
 \]
-其中$a_i$, $b_i$为属于域$K$的系数。我们将描述系数$a_i$, $b_i$满足何种条件时$f(x)$和$g(x)$有共同的因子，即
-在$K$的代数闭包中有相同的根。在应用中，很自然去看多项式族的情况。即，我们将$a_i$, $b_i$取做一个基概形$B$
-上的正则函数，于是，我们可以将$f$和$g$想作“由$B$参数化的一元多项式族”，以及我们将试图描述$B$中轨迹使得$f$和$g$
-有共同的因子。更精确地，我们想要描述 --- 某种意义下的！--- 概形$V(f,g)\subset \mathbb A_B^1$在$B$中的像。
+其中$a_i$, $b_i$为属于域$K$的系数。我们将描述系数$a_i$, $b_i$满足何种条件时
+$f(x)$和$g(x)$有共同的因子，即在$K$的代数闭包中有相同的根。在应用中，很自然地也
+会去研究多项式族的情况。即，我们将$a_i$, $b_i$取做一个基概形$B$上的正则函数，
+于是，我们可以将$f$和$g$想作“由$B$参数化的一元多项式族”，以及我们将试图描述$B$
+中使得$f$和$g$有共同的因子的点们。更精确地，我们想要描述（某种意义下的！）概形
+$V(f,g)\subset \mathbb A_B^1$在$B$中的像。
+
+粗略地说，有四种方式来描述这个问题：我们可以去问如下理想以何种系数$a_i$ $b_i$
+的方程生成的公式：
+\begin{compactenum}
+\item $V(f,g)$的既约像，即与其概形学式像关联的既约概形；
+\item $V(f,g)$的概形学式像；
+\item $V(f,g)$的 Fitting 像；
+\item 像关于一个合适的万有族的拉回。
+\end{compactenum}
+
+如前面的例子 \ref{exa:5.6} 和 \ref{exa:5.7} 所示，前两个意义上的像的公式可能
+并不存在。我们会从经典的方法开始，然后证明（在适当选取的“万有族”）其给出了
+第三和第四个意义上的像的公式，已经其与基变换可交换。
+
+对经典的进路，我们从选择万有族开始。我们将在不仅仅一个域，而是任意的环$S$上
+工作。令$A$为多项式环，
+\[
+    A=S[a_0,\dots,a_m,b_0,\dots,b_n].
+\]
+对上面定义的$f$和$g$，我们记
+\[
+    X:=V(f,g)\subset \mathbb A_A^1,
+\]
+再令
+\[
+    \varphi:X\subset \mathbb A_A^1=\spec A\times_S \mathbb A_S^1
+    \to \spec A=:Y.
+\]%
+% p.223
+因为$X$由两个多项式所定义，我们可能会期待其在$\mathbb A_A^1$中的余维数为$2$.
+在这个例子中，假设映射“一般地有限”（即在某些开集上是有限的），其像可能在
+$\spec A$中的余维数为$1$. 在经典的情况中，$S$是一个域，$A$于是是唯一分解整环，
+像的闭包可以由一个方程所描述，叫做$f$和$g$的\textit{结式}。
+
+事实证明，这个启发性论证的结论是正确的。我们会在适当的时候看到，
+$\varphi$的概形学式像$\bar\varphi(X)$是既约的，并且与Fitting像一致；
+因此，在这个万有族的情况下，$X$像的含义是明确的。
+
+可能写下方程最直接的方法如下。考虑环$\tilde A\subset A[a_0^{-1},b_0^{-1}]$,
+定义为
+\[
+    \tilde A=A\biggl[
+        \frac{a_1}{a_0},\dots,\frac{a_m}{a_0},
+        \frac{b_1}{b_0},\dots,\frac{b_n}{b_0}
+    \biggr].
+\]
+再令
+\[
+    B=\tilde A[\alpha_1,\dots,\alpha_m,\beta_1,\dots,\beta_n]/I,
+\]
+其中理想$I$由如下$m+n$个元素所生成
+\[
+    (-1)^i\sigma_i(\alpha)-\frac{a_i}{a_0}
+    \quad \text{和}\quad 
+    (-1)^i\sigma_i(\beta)-\frac{b_i}{b_0},
+\]
+其中$\sigma_i$为第$i$个基础对称函数。我们可以直观地将 $B$ 描述为从 $A$ 通过
+加上多项式$f$和$g$的根而得到的环。注意到$\tilde A\subset B$，因为基础对称函数
+是代数独立的。
+
+表达式
+\[
+    \mathscr R=\prod_{i,j}(\alpha_i-\beta_j)
+\]
+是一个对$\alpha_i$以及$\beta_j$各自的对称函数。因为$(-1)^ia_i/a_0$为
+$\alpha_i$的第$i$次基本对称函数，而$(-1)^jb_j/b_0$为$\beta_j$的第$j$次基本
+对称函数，因此$\mathscr R$是一个$\tilde A$中的元素。每个$\alpha_i$都在
+$\mathscr R$中出现$n$次，于是$\mathscr R$是$a_i/a_0$和$b_j/b_0$的双齐次多项式，
+其次数分别为$n$和$m$. 因此
+\[
+    R_{m,n}(f,g):=a_0^nb_0^m \mathscr R=\prod_{i,j}(\alpha_i-\beta_j),
+\]
+在$A$中；这是一个双齐次多项式，对$a_i$是$n$次的而对$b_j$是$m$次的，叫做
+$f$和$g$的\textit{结式}。
+
+% p.224
+
+一般地，如果$f_0$和$g_0$为$S$-代数$S_0$上的$m$和$n$次多项式，我们记
+$R_{m,n}(f_0,g_0)\in S_0$为代入$f_0$和$g_0$的系数到$R_{m,n}(f,g)$得到的结果，
+即$R_{m,n}(f,g)$在如下同态下的像，
+\[
+    A=S[a_0, \ldots, a_m, b_0, \ldots, b_n] \to S_0,
+\]
+其将$a_i$和$b_j$映作$f_0$和$g_0$的系数。我们称$R_{m,n}(f_0,g_0)$为
+$f_0$和$g_0$的\textit{结式}。当我们将$S_0$看成不同的环$S$上的代数时，
+结式并不依赖于$S$；特别地，通过取$S=\mathbb Z$，我们将对任意的$S_0$得到相同的
+结果。因此，对每个$m$和$n$，我们可以说“结式”$R_{m,n}$为环$\mathbb Z
+[a_0,\dots,a_m,b_0,\dots,b_n]$的一个元素，而“两个多项式$f$和$g\in S[x]$的结式”
+为$R_{m,n}$在相应的同态下的像
+\[
+    \mathbb{Z}[a_0, \ldots, a_m, b_0, \ldots, b_n] \to S.
+\]
+
+如果$f_0$和$g_0$的领头系数并不为零，即多项式的次数确实如说的那样，则
+$R_{m,n}(f_0,g_0)=0$当且仅当$f_0$和$g_0$有共同的因子，原始经典的目标就已达成了。
+我们也可以看到，这个对至多一个领头系数为零的情况也是正确的；但这就是说
+$R_{m,n}(f,g)$包含于理想$(a_0,b_0)$中，于是其恒为零若两个多项式的领头系数都为零。
+实际上，映射$\varphi$在这个情况中并不有限，因为在$\mathbb A_S^{m+n+2}$的原点处的
+纤维为一条仿射直线，其集合论式的像并不是闭的。
 
 \subsection{Sylvester行列式}\label{s:5.2.2}
+
+我们下面将两个多项式的结式的零点集和他们共同零点集的Fitting像联系起来。
+我们从计算定义的Fitting像$\varphi_{\text{Fitt}}(X)$的方程开始。为此，令$S$
+为任何的环，而$f,g\in S[x]$为两个多项式，其次数分别为$m$和$n$. 为定义
+$X=V(f,g)\subset \mathbb A_S^1$在投影$\pi:\mathbb A_S^1\to \spec S$下的
+Fitting像，我们必须假设这个映射是有限的，或者等价地，理想$(f,g)\subset S[x]$
+包含了一个首一多项式，见Eisenbud [1995, Proposition 4.1]. 方便起见，我们可以
+假设$f$是首一的。
+
+为计算定义了$X$的Fitting像的理想$\operatorname{Fitt}_0 \pi_*(\mathscr{O}_X)$，
+我们首先将$\pi_*(\mathscr O_X)$为$S$-模$S[x]/(f,g)$. 这个模是同态
+\[
+    S[x] \oplus S[x] \stackrel{(f, g)}{\longrightarrow} S[x]
+\]
+的余核，而同态的两侧都被认作（无限生成的）自由$S$-模。但是，为计算Fitting理想，
+我们需要一个有限表示。因为，我们已经假设了$f$是一个次数为$m$的首一多项式，
+而$S$-子模
+\[
+    S[x]_{<m}=S \oplus S x \oplus S x^2 \oplus \cdots \oplus S x^{m-1} 
+    \subset S[x]
+\]
+满映到$S[x]/(f,g)$上；而因为$S[x]_{<m}$作为$S$-模同构于$S$-代数$S[x]/(f)$,
+我们可以将其实现为$S[x]/(f,g)$为乘$g$诱导的同态的余核：
+\[
+    G: S^m \cong S[x]_{<m} \cong S[x] /(f) \stackrel{\times g}{\longrightarrow} 
+    S[x] /(f) \cong S[x]_{<m} \cong S^m.
+\]
+因此Fitting理想$\operatorname{Fitt}_0 \pi_*(\mathscr{O}_X)$由一个
+表示了映射$G:S^m\to S^m$的$m\times m$矩阵的行列式所生成。
+% p.225
+
+现在，并不难直接写出$G$的矩阵表示，而这给出了Fitting像的公式。但是，如果
+如果我们用从\textit{任意}自由表示出发计算Fitting理想的自由度，我们可以得到一个
+更保持$f$, $g$对称性的图像。
+
+为此，考虑自由模
+\[
+    S[x]_{<m+n}=S \oplus S x \oplus \cdots \oplus S x^{m+n-1} \cong S^{m+n} .
+\]
+其显然映满到$S[x]/(f,g)$，这个映射的核为在$(f,g)\subset S[x]$中的
+至多为$m+n-1$次的多项式$h\in S[x]$. 我们断言，对任意这样的
+$h \in S[x]_{<m+n} \cap(f, g)$可以表为线性组合
+\[
+    h=a \cdot f+b \cdot g
+\]
+其中$a$为至多$n-1$次的多项式而$b$为至多$m-1$次多项式。为看到这点，首先我们必须有
+\[
+    h=a^{\prime} \cdot f+b^{\prime} \cdot g
+\]
+其中$a',b'\in S[x]$. 现在，因为$f$为次数为$m$的首一多项式，
+我们可以将$b'$除以$f$，写作
+\[
+    b^{\prime}=q f+b
+\]
+其中$b$是一个至多为$m-1$次的多项式。将表达式
+\[
+    0=(q g) \cdot f-(q f) \cdot g
+\]
+加上去，我们可以得到$h$的另一表示：
+\[
+    h=\left(a^{\prime}+q g\right) \cdot f+b \cdot g.
+\]
+再记$a=a'+pg$即可。因为$h$和$bg$都至多为$m+n-1$次，$af$的次数也至多为$m+n-1$，
+再因为$f$是$m$次首一多项式，于是$a$的次数至多为$n-1$，如前所断言。
+
+% p.226
+
+于是，模$S[x]/(f,g)$为映射
+\[
+    \begin{aligned}
+        S[x]_{<n} \oplus S[x]_{<m} & \longrightarrow S[x]_{<m+n} \\
+        (a, b) & \longmapsto a f+b g 
+    \end{aligned}
+\]
+的余核。很容易写下这个映射的矩阵表示。在显然的基下，他就是为
+\textit{Sylvester矩阵}
+\[
+    \operatorname{Syl}_{(m, n)}(f, g)=
+    \begin{pmatrix}
+        a_0 & a_1 & \ldots & \ldots & a_{m-1} & a_m & 0 & \ldots & 0 \\
+        0 & a_0 & a_1 & \ldots & \ldots & a_{m-1} & a_m & \ldots & 0 \\
+        \vdots & \ddots & \ddots & \ddots & & & \ddots & \ddots & \\
+        0 & \ldots & 0 & a_0 & a_1 & \ldots & \ldots & a_{m-1} & a_m \\
+        b_0 & b_1 & \ldots & b_{n-1} & b_n & 0 & \ldots & \ldots & 0 \\
+        0 & b_0 & b_1 & \ldots & b_{n-1} & b_n & \ldots & \ldots & 0 \\
+        \vdots & \ddots & \ddots & \ddots & & \ddots & \ddots & & \\
+        \vdots & & \ddots & \ddots & \ddots & & \ddots & \ddots & \\
+        0 & \ldots & & 0 & b_0 & b_1 & \ldots & b_{n-1} & b_n
+    \end{pmatrix},
+\]
+其中有$n$行$a$和$m$行$b$.
+
+下个结果表明，结式的零点集实际上恰好对上上面的多项式偶对的万有族的Fitting像。
+
+\begin{thm}\label{thm:5.15}
+    令
+    \[
+        A=\mathbb{Z}\left[a_0, \ldots, a_m, b_0, \ldots, b_n\right],
+    \]
+    再令
+    \[
+        f=a_0 x^m+\cdots+a_m
+    \]
+    以及
+    \[
+        g=b_0 x^n+\cdots+b_n \in A[x]
+    \]
+    为两个次数为$m$和$n$的一元多项式。令$\varphi:\mathbb A_A^1\to \spec A$
+    为投影态射。则$X=V(f,g)\subset \mathbb A_A^1$在$\varphi$的概形学式像
+    的定义理想由$R_{m,n}(f,g)$生成，其也等于Sylvester行列式
+    $\operatorname{det}\left(\operatorname{Syl}_{m, n}(f, g)\right)$.
+\end{thm}
+
+\begin{proof}
+为简化记号，令$R'=\operatorname{det}\left(\operatorname{Syl}_{m, n}(f, g)\right)
+\in A$, 再令$R=R_{m,n}(f,g)$. 在代数的语言中，我们需要证明$R$等于$R'$以及
+生成了理想$A\cap (f,g)A[x]$.
+
+首先，我们证明$R'\in (f,g)A[x]$. 如果我们对$\operatorname{Syl}_{m, n}(f, g)$的
+列进行操作，对$t=1,\dots,m+n-1$，将第$t$列乘以$x^{m+n-t}$后加到最后一列，
+因为总共有$m+n$列，我们得到了一个新的矩阵，有着相同的行列式$R'$. 而新矩阵的
+最后一列为
+\[
+    \begin{pmatrix}
+        x^{n-1} f \\
+        \vdots \\
+        f \\
+        x^{m-1} g \\
+        \vdots \\
+        g
+    \end{pmatrix},
+\]
+于是行列式如所需的在$(f,g)A[x]$中。
+
+% p.227
+
+下面假设$P\in A$处于$(f,g)A[x]$中，我们下面证明$P$在$A$中可以被$R$整除。
+注意到$f$和$g$是双齐次的：他们分别对$a_i$和$b_j$齐次。 于是，任何$(f,g)$
+中的多项式的双齐次分量依然在$(f,g)$中，于是我们可以假设$P$也是双齐次的，
+具有次数$(d,e)$. （注意到$R'$自己也是双齐次的，次数为$(n,m)$.）
+
+为分析情况，我们将$A$嵌入到更大的多项式环中。
+令$B_0=\mathbb Z[\alpha_1,\dots,\alpha_m,\beta_1,\dots,\beta_n]$和
+$B=B_0[a_0,b_0]$. 我们将$A$映到$B$, 通过将$a_i$映到多项式
+\[
+    f^{\prime}=a_0 \prod_{j=1}^m(x-\alpha_j)
+\]
+的系数，而将$b_i$映到多项式$g^{\prime}=b_0 \prod_{j=1}^n(x-\beta_j)$的系数。
+$f'$的系数也即$\pm a_0\sigma_i(\alpha)$, 其中$\sigma_i$为第$i$个基本对称函数，
+而$g'$也类似。因为$a_0$, $b_0$以及$\alpha_i$和$\beta_j$的基本对称函数都是代数
+独立的，于是
+\[
+    a_0, a_0 \sigma_1(\alpha), \ldots, a_0 \sigma_m(\alpha), b_0, 
+    b_0 \sigma_1(\beta), \ldots, b_0 \sigma_m(\beta),
+\]
+也代数独立，于是映射$A\to B$确实是一个嵌入。回忆，$R$被定义为元素
+$a_0^n b_0^m \prod_{i, j}\left(\alpha_i-\beta_j\right) \in B$, 其确实处于
+子环$A$中。
+
+我们现在回到多项式$P \in A \cap(f, g) A[x]$. 因为$P$是对
+$a_i= \pm a_0 \sigma_i(\alpha)$和$b_j= \pm b_0 \sigma_j(\beta)$是双齐次的，
+次数为$(d,e)$, 我们可以记$P=a_0^d b_0^e h$，其中$h\in B_0$. 因为基本对称函数
+$\sigma_i(\alpha)$对每个$\alpha_i$是一个线性多项式，$\beta_j$也类似，我们见到
+$h$对每个$\alpha_i$的次数$\leq d$，而对每个$\beta_j$的次数$\leq e$.
+
+\nottran
+
+% p.228
+\end{proof}
+
+我们并不能直接应用Proposition \ref{pro:5.8} 到Theorem \ref{thm:5.15} 的情况，
+因为正如我们说过的，态射$V(f,g)\to \spec A$并不有限。然而，若我们首先限制到
+$A$的一个开子集上，而此时态射是有限的，则：
+
+\begin{coro}\label{coro:5.16}
+    \nottran
+\end{coro}
+
+\[
+    f=a_0 x^m+\cdots+a_m \quad \text { and } \quad g=b_0 x^n+\cdots+b_n \in B[x]
+\]
+
+\begin{coro}\label{coro:5.17}
+令$S$是一个环，而$f,g\in S[x]$为$S$上的一元多项式。若
+$f(x)=a_0 \prod_{i=1}^m(x-\alpha_i)$在$S$上完全分解成线性因子，则
+\[
+    R_{m, n}(f, g)=a_0^n \prod_{i=1}^m g(\alpha_i).
+\]
+\end{coro}
+
+\begin{proof}
+结式即如下式子的特化（自多项式 $f,g$ 定义所处的环和因子）：
+\[
+    a_0^n b_0^m \prod_{i, j}(\alpha_i-\beta_j)=a_0^n \prod_i g(\alpha_i).
+    \qedhere
+\]
+\end{proof}
+
+% p.229
+
+\begin{exa}\label{exa:5.18}
+    \nottran
+\end{exa}
+
+\begin{exe}\label{exe:5.19}
+    \nottran
+\[
+    0 \to(R_{m, n}(f, g)) \to A \to A /(R_{m, n}(f, g)) \to 0
+\]
+\end{exe}
+
+\begin{exe}\label{exe:5.20}
+    \nottran
+\end{exe}

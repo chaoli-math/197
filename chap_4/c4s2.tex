@@ -163,7 +163,7 @@
 
 	我们将证明映射$\alpha_k$在交叠$W_i\cap W_j$上相容，进而定义了一个整个$W$上的态射，这就完成了我们的证明。
 
-	因为$\varphi$的限制$Z\setminus E\to \mathbb A_A^n\setminus V(x_1,\dots,x_n)$是一个同构，所以证明原像$\psi^{-1}(\mathbb A_A^n\setminus V(x_1,\dots,x_n))$在$W$中稠密足矣。但是从假设，$\psi^{-1}V(x_1,\dots,x_n)$在$W$中是一个Cartier除子。因此下面的引理就完成了证明。
+	因为$\varphi$的限制$Z\setminus E\to \mathbb A_A^n\setminus V(x_1,\dots,x_n)$是一个同构，故证明原像$\psi^{-1}(\mathbb A_A^n\setminus V(x_1,\dots,x_n))$在$W$中稠密足矣。但是从假设，$\psi^{-1}V(x_1,\dots,x_n)$在$W$中是一个Cartier除子。因此下面的引理就完成了证明。
 
 	\begin{lem}\label{lem:4.19}
 		如果$X\subset Y$是一个概形的Cartier子概形，则$Y\setminus X$在$Y$中稠密（作为概形而不仅仅是拓扑空间）。
@@ -438,13 +438,16 @@ $f=\varphi\alpha$以及$\alpha$的唯一性都来自于$Z\setminus f^{-1}Y$在$Z
 \[
 	\varphi^\# (xy-z^2)=x^2b-x^2c^2=x^2(b-c^2)
 \]
-我们额可以将这点整体地表为
+我们可以将这点整体地表为
 \[
 	\varphi^{-1}(Q)=V((x,y,z)^2)\cup V(AB-C^2),
 \]
 则从 Proposition \ref{pro:4.21} 我们额可以得到$Q$在点$p$的爆破$\Bl_p Q$是$\varphi$在零点集$V(AB-C^2)\subset \tilde{\mathbb A}_K^3$上的限制，即
 \[
-	\varphi:\tilde Q=\proj K[x,y,z][A,B,C]/(xB-yA,xC-zA,yC-zB,AB-C^2)\longrightarrow \spec K[x,y,z]/(xy-z^2)=Q.
+	\begin{aligned}
+	\varphi:\tilde Q=\proj K[x,y,z][A,B,C]/(xB-yA,& xC-zA,yC-zB,AB-C^2)\\
+	&\longrightarrow \spec K[x,y,z]/(xy-z^2)=Q.
+	\end{aligned}
 \]
 
 我们可以用$Q$中穿过$p$的直线的（真变换的）不交并来给出$\tilde Q$的图像：
@@ -933,7 +936,7 @@ $(11)$的爆破是平凡的。）类似地，证明$A$是概形$B'=\spec \zz[2\s
 \end{exe}
 
 在上面的例子中，概形$B$和$B'$的正规化与爆破相同，这适用于我们说的概形，
-分别是具有一个单节点和尖点的曲线的类似物。为看到一个并不如此的例子，
+分别是具有一个单结点和尖点的曲线的类似物。为看到一个并不如此的例子，
 我们自然的看向了具有一个“互自切点”（``tacnode''）的曲线。
 我们将在下面两个习题中研究一个这样的概形。
 
@@ -948,7 +951,7 @@ $C$在支于这点的一个非既约概形的爆破。
 \end{exe}
 
 \begin{exe}\label{exe:4.53}
-为看出$B$, $C$与具有一个单结点和互自切点的曲线的相似性，考虑从$A$
+为看出$B$, $C$与具有一个结点和互自切点的曲线的相似性，考虑从$A$
 出发的态射$\pi:A\to B$和$\eta:A\to C$. 令$P=(4+3\sqrt 3)$和$Q=(4-3\sqrt 3)\in A$
 为两个位于奇异点$(11,11\sqrt 3)\in B$和$(11,121\sqrt 3)\in B$上的点。
 证明，微分

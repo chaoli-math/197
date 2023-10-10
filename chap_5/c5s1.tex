@@ -2,7 +2,7 @@
 
 % p.209
 
-这节中我们关心一个基本的概念：概形范畴中态射的\textit{像}。如将所见，我们希求像有如下两种基本的性质，
+这节中我们关注一个基本的概念：概形范畴中态射的\textit{像}。如将所见，我们希求像有如下两种基本的性质，
 \textit{推-拉性}和\textit{在基变换下不变}，而此二者却不兼容。我们将相应给出两个定义，一个直接些，另一个
 稍不，但他们都在相应的情况下非常有用。
 
@@ -15,7 +15,7 @@ $\mathbb{A}_K^1=\spec K[x]$的投影的像就是原点的补集，是一个开�
 源概形的一些点：如果我们将此态射从$X$延拓到$X$在$\mathbb{A}_K^1 \times_K \mathbb{P}_K^1$的闭包上，则
 他的像将是整个射影直线。
 
-这是两个典型的例子。这种情况可以总结为下面的定理。为描述之，首先会议拓扑空间的子集$V$是\textit{可构造}的，
+这两个例子是典型的，此情况可以总结为下面的定理。为描述它，首先回忆拓扑空间的子集$V$是\textit{可构造}的，
 如果他是一族局部闭\footnote{译者注：局部闭子集是指他可以写成一个开子集与一个闭子集的交。}%
 子集$V_i$的有限并。
 
@@ -26,13 +26,13 @@ $\mathbb{A}_K^1=\spec K[x]$的投影的像就是原点的补集，是一个开�
     是射影的，则$\varphi$的集合学式像是闭的。
 \end{thm}
 
-前半个命题来自于Chevalley. 注意，$\varphi$是有限型的假设是必要的：多项式环到其局部化的含入同态诱导的态射
+前半个命题归于Chevalley. 注意，$\varphi$是有限型的假设是必要的：多项式环到其局部化的含入同态诱导的态射
 \[
     \spec K\left[x_1, \ldots, x_n\right]_{\left(x_1, \ldots, x_n\right)} \longrightarrow 
     \spec K\left[x_1, \ldots, x_n\right]
 \]
-对任意的$n$都没有可构造的像。后半个命题有点古老，一般被叫做消元理论主定理。
-紧合性，其强化了定理的结论，本质上就是为了表达这种性质而做出的（见第 \ref{s:3.1} 节）。定理 \ref{thm:5.1} 的
+对任意的$n$都没有可构造像。后半个命题有点古老，一般被叫做消元理论主定理。
+紧合性的定义，其强化了定理的结论，本质上就是为了表达这种性质而做出的（见第 \ref{s:3.1} 节）。定理 \ref{thm:5.1} 的
 证明和簇的经典情况完全相同，比如可见Harris [1995] 或 Hartshorne [1977]. 我们这里就不重复了。
 
 稍新一点的是，像的闭包具有一个自然的概形结构，这是我们在这节的后面要探讨的。
@@ -43,7 +43,7 @@ $Z\subset Y$，
 \[
     Z \supset \varphi(X) \quad \Longleftrightarrow \quad \varphi^{-1}(Z)=X.
 \]
-但事实上，$Y$并不需要存在这样的子概形，如下例：由将$x$映为$s$, $y$映为$st$的环同态
+但事实上，$Y$并不需要存在这样的子概形，如下例：由将$x$映为$s$且$y$映为$st$的环同态
 $\varphi^{\#}: K[x, y] \rightarrow K[s, t]$诱导的态射
 \[
     \varphi: X=\mathbb{A}_K^2 \longrightarrow Y=\mathbb{A}_K^2.
@@ -59,7 +59,7 @@ $I=\bigcap_{\lambda\neq 0}Y_\lambda$，其是点$(0,0)$与$x$-轴的补的并。
 $\varphi(X)$的底空间应该包含$I$，故$\operatorname{supp}\varphi(X)=I$. 但是$I$并不是一个$Y$的局部闭子集，
 因此也不能是任何$Y$的子概形的底空间。
 
-然而，我们离我们想要的也并不远：确实存在一个$Y$的极小\textit{闭}子概形，其原像就是整个$X$，且这个子概形也对
+然而，我们离想要的也并不遥远：确实存在一个$Y$的极小\textit{闭}子概形，其原像就是整个$X$，且这个子概形也对
 闭子概形$Z\subset Y$满足推-拉性质。
 
 \begin{defi}\label{defi:5.2}
@@ -77,7 +77,7 @@ $\varphi(X)$的底空间应该包含$I$，故$\operatorname{supp}\varphi(X)=I$. 
 于是态射并不是支配的。
 
 \begin{pro}\label{pro:5.3}
-若$\varphi:X\to Y$是一个概形间的态射，则集合学式像的闭包是$\bar\varphi(x)_{\text{red}}$.
+若$\varphi:X\to Y$是一个概形间的态射，则集合学式像的闭包是$\bar\varphi(x)_{\rm{red}}$.
 \end{pro}
 
 \begin{proof}
@@ -94,7 +94,7 @@ $\varphi(X)$的底空间应该包含$I$，故$\operatorname{supp}\varphi(X)=I$. 
 有时用明显更一般的形式会很方便：若$\varphi: X\to Y$是任何态射，$X'\subset X$是一个闭子概形，则我们可以定义$X'$的
 \textit{概形学式的像}$\bar\varphi(X')$为由理想层$I$所以定义的子概形，其中
 \[
-    I(U)=\left\{f \in \mathscr{O}_Y(U) \mid \varphi^{\#}(f) \in I_{X^{\prime}}\left(\varphi^{-1}(U)\right)\right\}.
+    I(U)=\left\{f \in \mathscr{O}_Y(U) \mid \varphi^{\#}(f) \in I_{X'}\left(\varphi^{-1}(U)\right)\right\}.
 \]%
 % p.212
 但这个“推广”实际上仅描述了一种特殊情况，因为$\bar\varphi(X')$为复合态射$X'\to X\to Y$的概形学式的像。
@@ -122,7 +122,7 @@ $V(x^2,xy,y^2,\alpha x+\beta y)\subset \mathbb A_K^2$的像在$\beta\neq 0$时�
     \]
     令$X'\subset X$为在第 \ref{s:2.3.5} 节中描述过的双重直线
     \[
-        X^{\prime}=V\left(x^2, x y, y^2, x+t y\right) \subset \mathbb{A}_B^2.
+        X'=V\left(x^2, x y, y^2, x+t y\right) \subset \mathbb{A}_B^2.
     \]
     证明，$X'$的概形学式的像$\bar\varphi(X')$为双重直线$V(x^2)\subset Y$，尽管
     $X'$在原点$(t)\in B$处的纤维的像为$Y$在$(t)$处的纤维中的既约点$V(x)$.
@@ -138,13 +138,13 @@ $V(x^2,xy,y^2,\alpha x+\beta y)\subset \mathbb A_K^2$的像在$\beta\neq 0$时�
 
 \subsection{通用公式}\label{s:5.1.2}
 
-是否存在一个态射像的闭包的“公式”？如果存在，那是什么？以不同的语言表述的这个问题，曾花费了数学家们的大量的时间，
+是否存在一个态射像的闭包的“公式”？如果存在，那是什么？以不同语言表述的这个问题，曾花费了数学家们大量的时间，
 因而相关的理论也非常丰富。在许多的特殊情况中，人们发现了一些集合学式像的漂亮且有用的公式；他们给出的公式通常
-由所谓的\textit{结式}给出，一个我们下面会讨论的概念。概形学式的像则明显更复杂：
-对基本问题进行某种合理的解释下，可能就根本不存在一个概形学式像的公式！我们将接着解释这个现象以及其什么时候会
-发生。我们不会那么严格地讨论这些，但他可以由第 \ref{s:2.3.4} 节中给出的概形族来刻画。
+会归于所谓的\textit{结式}，这是一个我们下面会讨论的概念。概形学式的像则明显更复杂：
+在基本问题的某种合理的表述下，可能就根本不存在一个概形学式像的公式！我们将接着解释这个现象以及其什么时候会
+发生。我们不会那么严格地讨论这些内容，但它们可以由第 \ref{s:2.3.4} 节中给出的概形族来严格刻画。
 
-考虑一个这样的通用公式存在的可能后果：他将在基变换下不变，或置于更非正式些的情况，在变量代换下不变，
+考虑一个这样的通用公式存在的可能结果：他将在基变换下不变，或更粗略地说，在变量代换下不变，
 下面一些例子呈现了这点。
 
 \begin{exa}\label{exa:5.6}
@@ -156,17 +156,17 @@ $V(x^2,xy,y^2,\alpha x+\beta y)\subset \mathbb A_K^2$的像在$\beta\neq 0$时�
     \mathbb{A}_K^1=\spec K[x]$的族，其由$t\in K$所参数化。首先考虑有两个不交直线$V(y,x)$以及$V(y-1,x+t)$的并
     给出的闭子概形$X \subset \mathbb{A}_B^2=\mathbb{A}_K^3$，即
     \[
-        X=V\left(y^2-y, y x+y t, y x-x, x^2+t x\right).
+        X=V(y^2-y, y x+y t, y x-x, x^2+t x).
     \]
     我们可以将$X$视作$(x,y)$-平面上的点对的族，由$t$所参数化，以及他们在$x$-轴上的投影：对每个标量$a\in K$，
     我们令$X_a\subset \mathbb A_K^2$为$X$在点$(t-a)\in B$处的纤维，$Y_a\cong \mathbb A_K^1$为$\mathbb A_B^1$
     在$(t-a)$处的纤维，以及$\varphi_a:X_a\to Y_a$为$\varphi$在$X_a$上的限制。
 
     对每个非零标量$a\neq 0\in K$，集合学式像$\varphi(X_a)$为两个点$x=0$和$x=-a$的并，而对$a=0$，他就是原点。
-    而概形学式像$\bar\varphi(X_a)$则是$\spec K[x]$的由理想$I_a:=K[x] \cap\left(y^2-y, y x+a y, y x-x, x^2+a x\right)$
+    而概形学式像$\bar\varphi(X_a)$则是$\spec K[x]$的由理想$I_a:=K[x] \cap(y^2-y, y x+a y, y x-x, x^2+a x)$
     给出的子概形。因为
     \[
-        K[x, y] /\left(y^2-y, y x+a y, y x-x, x^2+a x\right)=K[x, y] /\left(y^2-y, x+a y\right),
+        K[x, y] /(y^2-y, y x+a y, y x-x, x^2+a x)=K[x, y] /(y^2-y, x+a y),
     \]%
     % p.214
     \inclugra{3.png}
@@ -207,14 +207,14 @@ $\bar\varphi(X)$的方程$x^2+tx$在当我们将$t$取做任何$a\neq 0$时给�
 而对$a=0$，这个理想给出了一个比起$\bar\varphi(X_0)$稍大的概形。如下将描述的，
 这种概形学式的像的定义方程的“近似”是结式。
 
-\begin{exa}\label{exa:5.7}
-为看到一个有相同现象的包含非既约概形的例子，令$K$, $B=\spec K[t]=\mathbb A_K^1$，以及如前
+\begin{exa}[见下图]\label{exa:5.7}
+为看到一个有相同现象的包含非既约概形的例子，令$K$是一个域，$B=\spec K[t]=\mathbb A_K^1$，以及如前
 \[
     \varphi: X=\mathbb{A}_B^2=\spec K[x, y, t] \longrightarrow Y=\mathbb{A}_B^1=\spec K[x, t],
 \]
-并考虑有
+并考虑由
 \[
-    X=V\left(x^2, x y, y^2\right) \cap V(t y+x)=V\left(t y+x, y^2\right)
+    X=V(x^2, x y, y^2) \cap V(t y+x)=V(t y+x, y^2)
 \]
 给出的闭子概形$X\subset \mathbb A_B^2=\mathbb A_K^3$. 作为$\mathbb A_{B}^2=\mathbb A_{K}^3$的一个
 子概形，这是$t$-轴的一阶无穷小邻域与绕轴缠绕的螺旋面的交集；它是底空间为$t$-轴的双重直线。
@@ -242,25 +242,43 @@ $I_a:=K[x]\cap (ay+x,y^2)$定义。因为
 因此，概形学式的像$\bar\varphi(X_a)$对$a\neq 0$为一个双重点，而对$a=0$是一个单重点。
 \end{exa}
 
-
-\nottran
-
-
+就像上个例子中那样，我们看到概形学式像$\bar\varphi(X_a)$不是任何$B$上
+$\mathbb A_B^1$的闭子概形的纤维。特别的，整个族的概形学式像
+$\bar{\varphi}(X) \subset \spec K[x, t]$由理想$K[t, x] \cap(t y+x, y^2)$
+所定义，其已经看到就是$(x^2)$（如前，这来自于局部化映射
 \[
-    K[t, x, y] /\left(t y+x, y^2\right) \rightarrow K\left[t, t^{-1}, x, y\right] /
-    \left(t y+x, y^2\right)=K\left[t, t^{-1}, x\right] /\left(x^2\right)
+    K[t, x, y] /(t y+x, y^2) \to K[t, t^{-1}, x, y] /
+    (t y+x, y^2)=K[t, t^{-1}, x] /(x^2)
 \]
+是单的）。因此，我们看到原点$(t)\in B$处的纤维的概形学式的像$\bar\varphi(X_0)$
+真包含于$\bar\varphi(X)$在原点的纤维$\bar\varphi(X)_0$中，于是，任何包含
+$a\neq 0$的$\bar\varphi(X_a)$的$\mathbb A_B^1$的闭子概形的纤维将真包含
+$\bar\varphi(X_0)$. 所以再一次看到，概形学式的像$\bar\varphi(X_a)$并不能构成一个
+概形族。
 
+也注意到，概形学式的像$\bar\varphi(X)$的方程$x^2$对$a\neq 0$给出了
+$\bar\varphi(X_a)$“正确的”定义理想，而对$a=0$，其给出的理想定义的概形
+比$\bar\varphi(X_0)$稍大一些。同样，纤维$\bar\varphi(X)_a$的方程$x^2$也是一个
+结式的例子。
+
+我们可以推广这个看到的现象，即对任何的态射族
 \[
     \xymatrix{
         X\ar[rr]^\varphi\ar[rd]&&Y\ar[ld]\\
         &B&
     }
 \]
-
+其中$B$为参数空间，而$b\in B$为闭点，我们有包含关系
 \[
-    \bar{\varphi}\left(X_b\right) \subset \bar{\varphi}(X)_b.
+    \bar{\varphi}(X_b) \subset \bar{\varphi}(X)_b，
 \]
+而其没必要是相等的：换句话说，\textit{像的纤维可以真包含纤维的像}。
+这有时候会被叫做概形学式的像并不一定与\textit{基变换可交换}。
+（这个问题中的基变换为含入$\{b\}\hookrightarrow B$的拉回，
+而对任何态射$B'\to B$都可能会遇到相同的问题。）
+注意到，集合学式像恰好相反，它是与基变换可交换，这仅仅是集合论的事实。
+上述断言的一个更一般的形式如下：
+
 
 % p.217
 
@@ -273,8 +291,9 @@ $I_a:=K[x]\cap (ay+x,y^2)$定义。因为
     }
     \]
     是概形态射的拉回图，则$\bar\varphi'(X')\subset \psi^{-1}\bar\varphi(X)$.
-    如果态射$\varphi$是有限的，这两个概形由相同的底空间，闭包$\overline{\varphi'(X')}$
-    是集合学式像。特别地，当$\varphi$有限时，集合学式像是闭的。如果$\psi$是平坦的，
+    如果态射$\varphi$是有限的，这两个概形有相同的底空间，集合学式像的闭包
+    $\overline{\varphi'(X')}$. 
+    特别地，当$\varphi$有限时，集合学式像是闭的。如果$\psi$是平坦的，
     则$\bar\varphi'(X')=\psi^{-1}\bar\varphi(X)$.
 \end{pro}
 
@@ -294,12 +313,11 @@ $I_a:=K[x]\cap (ay+x,y^2)$定义。因为
 \]
 这从交换图是直接的。
 
-\nottran
-\end{proof}
+% p.
 
 \[
     \xymatrix{
-        (A \otimes_B B') \otimes B_{P'}' / P_{P'}'=A \otimes_B B_P / P_P \otimes_{B_P / P_P} B_{P^{\prime}}^{\prime} / P_{P^{\prime}}^{\prime}&A \otimes_B B_P / P_P\ar[l]\\
+        (A \otimes_B B') \otimes B_{P'}' / P_{P'}'=A \otimes_B B_P / P_P \otimes_{B_P / P_P} B_{P'}' / P_{P'}'&A \otimes_B B_P / P_P\ar[l]\\
         B_{P'}' / P_{P'}'\ar[u]&B_P / P_P\ar[l]\ar[u]
     }
 \]
@@ -312,19 +330,203 @@ $I_a:=K[x]\cap (ay+x,y^2)$定义。因为
     B' \otimes_B \Ker(\varphi) \rightarrow B' \otimes_B B=B'
 \]
 
+\nottran
+\end{proof}
 
+一般来说，上述命题的第二个断言（“等式”）是不对的，比如说在对应于环同态
+交换图
 \[
     \xymatrix{
         0 & K(t)\ar[l]\\
         K\ar[u]&K[t]\ar[l]_{0 \mapsfrom t}\ar[u]
     }
 \]
+的仿射概形的纤维积中。然而，该等式当态射$\varphi$是射影的时候是成立的，
+该事实的证明会将我们扯离太远，可以用如下的深刻事实再次约化为Nakayama引理：
+当$\varphi$是射影的时候，$\varphi_*(\mathscr O_X)$为一个有限$\mathscr O_Y$-模，
+可见Hartshorne [1977], Corollary II.5.20.
 
+% p.219
+
+尽管概形学式的像的公式并不存在，但如我们已提到的，依然有许多公式给出了
+集合学式像的方程，而他们给出了概形会包含概形学式的像，如上个命题所示。
+一种产生这样的公式的方法是去挑选一个万有模型，一个由概形$B$所参数化的态射族，即
 \[
     X_0 \stackrel{\varphi_0}{\longrightarrow} Y_0 \stackrel{\pi}{\longrightarrow} B
 \]
+使得我们感兴趣的态射表现为拉回，即
 \[
     X=(\pi \varphi_0)^{-1}(b) \stackrel{\varphi}{\longrightarrow} Y=\pi^{-1}(b)
 \]
+其中$\varphi$为$\varphi_0$的限制。然后我们取$\varphi_0$的概形学式的像然后限制
+到$Y$上。我们称$\varphi_0$的概形学式的像的定义方程为\textit{结式}。由
+Proposition \ref{pro:5.1.8}，这些方程定义了$Y$中的一个概形，包含了概形学式的像，
+以及在一些情况中，比如当$\varphi_0$是有限的，它们定义了一个概形，其底空间
+为集合学式像的闭包。
+
+结式经常能被方便地表示为一个行列式。在看到这点之前，我们将讨论一个
+这些行列式会出现的更一般的语境。
 
 \subsection{Fitting理想和Fitting像}\label{s:5.1.3}
+
+至少在一个更限制的语境中，概形间态射$\varphi:X\to Y$的另一个像的概念是存在的，
+我们将其叫做\textit{Fitting像}，并记作$\varphi_{\fitt}(X)$. 它
+基变换可交换，但并没有推-拉性质（因为我们将在下面看到，Fitting像
+$\varphi_{\fitt}(X)$可以严格包含概形学式的像$\bar\varphi(X)$）。
+
+\paragraph*{Fitting理想} 这里我们需要层版本的Fitting引理。令$X$为一个概形，
+$\mathscr F$为$X$上的一个凝聚层，再令
+\[
+    \mathscr{E}_1 \stackrel{\Psi}{\longrightarrow} \mathscr{E}_0 \longrightarrow \mathscr{F} \longrightarrow 0
+\]
+为一个正和列，且$\mathscr E_0\cong \mathscr O_X^n$和
+$\mathscr{E}_1 \cong \mathscr{O}_X^m$是自由层。（这里我们允许$m$为无限。）
+对任意的整数$l$，我们定义$\Psi$的\textit{$l\times l$子式理想层}为由
+$\Psi$的矩阵表示的所有$l\times l$子式生成的理想构成的层
+$I_l(\Psi)\subset \mathscr O_X$. 这个定义与选取的同构
+$\mathscr E_0\cong \mathscr O_X^n$和
+$\mathscr{E}_1 \cong \mathscr{O}_X^m$无关，且可以仅定义到$\mathscr{E}_0$
+和$\mathscr{E}_1$都拟凝聚的情况，因为他同时可以被定义为由$\Psi$诱导的
+自然态射
+\[
+    \bigwedge^l \mathscr{E}_1 \otimes \bigwedge^l \mathscr{E}_0^* \longrightarrow \mathscr{O}_X
+\]
+的像。关于此理想层$I_l(\Psi)$的一个关键事实为Fitting引理。证明可见
+Eisenbud [1995, 第 497 页].
+
+\begin{lem}[Fitting引理]\label{lem:5.9}
+若
+\[
+    \mathscr{E} \stackrel{\Psi}{\longrightarrow} \mathscr{O}_X^n \longrightarrow \mathscr{F} \longrightarrow 0
+\]
+和
+\[
+    \mathscr{E}' \stackrel{\Psi'}{\longrightarrow} \mathscr{O}_X^{n'} \longrightarrow \mathscr{F} \longrightarrow 0
+\]
+正和，则对$k\in \mathbb Z$，有
+\[
+    I_{n-k}(\Psi)=I_{n'-k}(\Psi').
+\]
+\end{lem}
+
+以该引理，我们给出如下定义：
+
+\begin{defi}\label{defi:5.10}
+    层$\mathscr F$的第$k$个Fitting理想$\fitt_k\mathscr F$局部为
+    $I_{n-k}(\Psi)$，这里从上知可选任何$\mathscr F$的表示。零点子概形
+    $V(\fitt_k\mathscr F)\subset X$被叫做$\mathscr F$的
+    第$k$个\textit{Fitting概形}。
+\end{defi}
+
+比较下第零阶Fitting理想层与相对更\naive 的层$\mathscr F$的支集是有意义。
+简而言之，对任何的概形$X$上的凝聚层$\mathscr F$，我们可以
+定义\textit{零化子} $\ann \mathscr F\subset \mathscr O_X$通过对每个开集
+$U\subset X$将$(\ann \mathscr{F})(U) \subset \mathscr{O}_X(U)$取做
+$\mathscr O_X(U)$-模$\mathscr F(U)$的零化子。我们定义$\mathscr F$的
+\textit{支集}，记作$\supp \mathscr F$，为$\mathscr F$的零化子的零点子概形
+$V(\ann \mathscr{F}) \subset X$.
+
+（注意，“支集”被用作了两种意思：概形的支集为其底空间或拓扑空间，而层的支集
+则为一个概形。在我们想要指层$\mathscr F$的支集的底空间的时候，即
+$\supp(\supp \mathscr F)$，我们将其简单称为“集合学式支集”）。
+
+对任何的$X$上的凝聚层$\mathscr F$，我们有
+\[
+    (\fitt_0 \mathscr{F}) \cdot \mathscr{F}=0,
+\]
+于是$\fitt_0 \mathscr F\subset \ann \mathscr F$. 另一方向，如果
+$\mathscr F$具有一个表示
+\[
+    \mathscr{O}_X^n \longrightarrow \mathscr{F} \longrightarrow 0
+\]
+则$\fitt_0 \mathscr F\supset (\ann \mathscr F)^n$. 这俩不等式可见
+Eisenbud [1995, Proposition 20.7]. 从第一点立刻可以见到
+\[
+    V(\fitt_0 \mathscr F)\supset \supp \mathscr F,
+\]
+即第零阶Fitting概形包含了$\mathscr F$的支集；而从第二点可知，
+$V(\fitt_0 \mathscr F)$的底空间与$\supp \mathscr F$的底空间是相同的，即
+\[
+    |V(\fitt_0\mathscr F)|=|\supp \mathscr F|.
+\]
+
+区别主要体现在概形结构上：第零阶Fitting理想可以真包含于$\mathscr F$的
+零化子中，而第零阶Fitting概形可以真包含$\mathscr F$的支集。
+
+比如，考虑概形$X=\mathbb{A}_K^1=\spec K[x]$，以及子概形$Y=V(x)$和
+$Z=V(x^2)$. 层
+\[
+    \mathscr{F}=\mathscr{O}_Z \quad \text { 和 } \quad 
+    \mathscr{G}=\mathscr{O}_Y \oplus \mathscr{O}_Y
+\]
+的长度都是$2$，但是$\mathscr F$的支集为$Z$，而$\mathscr G$的支集则为
+更小的概形$Y$. 但相反，我们看到第零阶Fitting概形是相等的：
+\[
+    V(\fitt_0 \mathscr{F})=V(\fitt_0 \mathscr{G})=Z.
+\]
+
+% p.221
+
+\begin{exe}\label{exe:5.11}
+    \begin{compactenum}[(a)]
+        \item 若$X$是一个概形，$Y\subset X$是一个子概形，
+        $Y$的结构层的第零阶Fitting理想$\fitt_0\mathscr O_Y$即$Y$的理想层
+        $\mathscr I_Y$，而相应的第零阶Fitting概形即$Y$本身。
+        \item 证明，一个直和的第零阶Fitting理想为相应的Fitting理想的乘积，
+        即对一对$X$上的凝聚层$\mathscr F$和$\mathscr G$，我们有
+        \[
+            \fitt_0(\mathscr F\oplus \mathscr G)=\fitt_0\mathscr F\cdot \fitt_0\mathscr G.
+        \]
+        用例子证明，若用$\mathscr F$的任意的$\mathscr G$-扩张代之
+        $\mathscr F\oplus \mathscr G$则上述命题将不再正确，这里扩张指一个
+        层$\mathscr H$使得如下正和列成立
+        \[
+            0 \longrightarrow \mathscr{F} \longrightarrow \mathscr{H} 
+            \longrightarrow \mathscr{G} \longrightarrow 0.
+        \]
+        \item 从前两部分推出，若$X$是一个正则一维概形（如$X=\mathbb A_K^1$
+        或者$X=\spec \mathbb Z$）以及$\mathscr F$为任意的层，其集合论式支集
+        为一个闭点$p\in X$，则 
+        \[
+            \fitt_0\mathscr F=\mathfrak{m}_p^l,
+        \]
+        其中$l$为$\mathscr F$的长度。
+    \end{compactenum}
+\end{exe}
+
+\paragraph*{Fitting像} 现在，令$\varphi:X\to Y$为一个概形间的有限态射。
+直像$\varphi_*\mathscr O_X$于是为$Y$上的凝聚层，根据定义，概形学式的像
+$\bar\varphi(X)$为这个层的支集$\supp(\varphi_*(\mathscr O_X))$. 若用
+第零阶Fitting概形代之，则给出了承诺过的与基变换可交换的另一个像的定义：
+
+\begin{defi}\label{defi:5.12}
+    对任何的有限态射$\varphi:X\to Y$，$\varphi$的\textit{Fitting像}
+    为直像层$\varphi_*\mathscr O_X$的第零阶Fitting概形，即
+    \[
+        \varphi_{\fitt}(X)=V(\fitt_0 \varphi_* \mathscr{O}_X).
+    \]
+    对任何的闭子概形$Z\subset X$，我们可以类似定义$\varphi_{\fitt} (Z)$
+    为限制到$Z$上的$\varphi$的Fitting像，直像层$\varphi_*\mathscr O_Z$的
+    第零阶Fitting概形。
+\end{defi}
+
+\begin{exe}\label{exe:5.13}
+    考虑Example \ref{exa:5.6} 和 \ref{exa:5.7}. 在此二例中，证明
+    $X$的原点处的纤维$X_0$的Fitting像是一个双重点，并不既约，于是我们有 
+    \[
+        \varphi_{\fitt} (X_0)=\varphi_{\fitt}(X)_0.
+    \]
+\end{exe}
+
+\begin{exe}\label{exe:5.14}
+    考虑投影和含入的复合
+    \[
+        X=\spec K[\epsilon] / \epsilon^2 \stackrel{\varphi}{\longrightarrow} 
+        \spec K \stackrel{\iota}{\longrightarrow} \spec K[t] .
+    \]
+    证明
+    \[
+        \iota_{\fitt}\left(\varphi_{\fitt}(X)\right) 
+        \subsetneq(\iota \circ \varphi)_{\fitt}(X).
+    \]
+\end{exe}

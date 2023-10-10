@@ -163,8 +163,8 @@ $U_\alpha$上不同。
 	则纤维积$A\times_C B$为一个从$\mathscr C$到集合范畴的
 	函子，它将$\mathscr C$中的任意对象$Z$变为
 	\[
-		(A\times_C B)(Z)=\left\{(a,b)\in A(Z)\times B(Z)
-		\;|\; f(a)=f(b)\text{ in } C(Z)\right\},
+		(A\times_C B)(Z)=\{(a,b)\in A(Z)\times B(Z)
+		\;|\; f(a)=f(b)\text{ in } C(Z)\},
 	\]
 	对于态射的变换是显然的。
 \end{defi}
@@ -301,11 +301,11 @@ $h_X(\spec \cc)$.
 
 \subsection{函子的切空间} \label{s:6.1.3}
 
-有时候，比起概形的方程，其点函子，在计算它的几何信息
+比起概形的方程，有时候其点函子在计算它的几何信息
 时会更方便！一个典型的例子出现在Zariski切空间。（我们
 将看到这将应用到第 \ref{s:6.2.3} 节。）
 
-我们将在给定域$K$上的概形上工作，所有的态射都是$K$上的
+我们将在给定域$K$上的概形上考虑问题，所有的态射都是$K$上的
 态射。
 
 回忆，若$X$是一个概形，则对任意$K$-有理点$p\in X$，
@@ -324,10 +324,9 @@ Zariski切空间中的元素。}
 
 % p.257
 
-为验证它，首先注意到由代数映射\footnote{译者注：这里应该是模掉
-$\varepsilon$.}%
+为验证，首先注意到由代数同态
 $K[\varepsilon]/(\varepsilon^2)
-\to K$ 诱导的含入映射$\iota :\spec K\to \spec K[\varepsilon]/
+\to K$ 诱导的含入$\iota :\spec K\to \spec K[\varepsilon]/
 (\varepsilon^2)$，态射$\spec K[\varepsilon]/(\varepsilon^2)\to X$
 确定了一个态射$\spec K\to X$，进而一个$X$的闭$K$-有理点$p$.
 这样一个态射$\spec K\to X$的扩张包含一个$K$-代数同态
@@ -354,7 +353,7 @@ $\mathscr O_{X,p}/\mm_{X,p}^2$的分解$K\oplus \mm_{X,p}/\mm_{X,p}^2$；
 (\varepsilon^2)$. 这个映射确定了想要的概形态射
 $\spec K[\varepsilon]/(\varepsilon^2)\to K$.
 
-在第 \ref{s:4.2.1} 节，我们将看到概形的这个切向量的刻画是如何被用来
+在第 \ref{s:4.2.1} 节，我们将看到此概形切向量的刻画是如何被用来
 给出射影空间的切向量的一个内蕴描述的，这完善了我们在第 \ref{s:4.2.4}
 节中的讨论。
 
@@ -376,8 +375,8 @@ $K[\varepsilon]/(\varepsilon^2)$的一个自同构，使得如下图
 $T_pF \times T_pF \to T_pF$. 一般地，似乎好像没法做到，但对那些
 保持纤维积的函子，比如可表函子，我们可以做到。
 
-为此，考虑概形$\spec K\left[\varepsilon', \varepsilon''\right] /
-\left(\varepsilon', \varepsilon''\right)^{2}$，即平面上一点的极大理想
+为此，考虑概形$\spec K[\varepsilon', \varepsilon''] /
+(\varepsilon', \varepsilon'')^{2}$，即平面上一点的极大理想
 的平反给出的闭子概形。由投影给出的交换图%
 % p.258
 \[

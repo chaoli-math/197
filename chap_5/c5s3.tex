@@ -1,7 +1,66 @@
-\section{奇异概形和判别式}
+\section{奇异概形和判别式}\label{s:5.3}
 
-\subsection{定义}
+\subsection{定义}\label{s:5.3.1}
+
+% p.230
+在这节中，我们将考虑概形间态射的光滑以及奇异点。为启发我们的定义，
+考虑微分流形间的态射$f:M\to N$，并假设$\dim M\geq \dim N$. 这样的态射
+表现得最简单的时候是在$x\in M$其上微分$Df_x$是满的：限制到这样的点$x$
+的适当领域上，态射$f$看上去就像乘积到其中一个因子的投影一般，此时我们称
+$x$是$f$的一个光滑点。
+
+在概形范畴中，Zariski开集往往太大了以至于不嫩那个容纳乘积结构，而
+（如我们将看到的）可能还有来自于这些点具有不同的剩余类域的困难。但，
+依然可能通过局部乘积结构来定义概形间态射的光滑性，如见 Altman, Kleiman [1970],
+但在目前的情况下，通过推广流形上的微分刻画来刻画光滑点和奇异点会更有意义。
+
+为此，我们引入环同态的K\"ahler微分模，以及其整体版本，概形间态射的相对余切层。
+若$\psi:A\to B$为一个环同态，我们定义\textit{$A$-线性K\"ahler微分模}
+$\Omega_{B/A}$，这是一个$B$-模，为由符号$db$所生成的自由$B$-模，其中$b\in B$，
+模掉了关系
+\[
+    d(b_1 b_2)=b_1 d b_2+b_2 d b_1 \quad \text { 对所有 } b_1, b_2 \in B
+\]
+以及 
+\[
+    d \psi_a=0 \quad \text { 对所有 } a \in A.
+\]
+
+这些关系保证了同态
+\[
+    \begin{aligned}
+        B & \longrightarrow \Omega_{B / A}, \\
+        b & \longmapsto d b,
+    \end{aligned}
+\]
+是一个$A$-线性导子；实际上，这是适当意义下的万有$A$-线性导子。（细节见
+Eisenbud [1995].） 于是，容易见到，比如若$B=A[x_1,\dots,x_n]/(f_1,\dots,f_n)$,
+则$\Omega_{B/A}$在Jacobi矩阵
+\[
+    \left(\frac{\partial f_i}{\partial x_j}\right)
+\]
+的余核中。
+
+为整体化，令$\varphi:X\to Y$为概形间态射。我们如下定义$\varphi:X\to Y$的
+\textit{相对余切层}，记作$\Omega_{X/Y}$，该层在仿射开集$U\subset X$上
+（映到仿射开集$V\subset Y$）取为$\mathscr O_X(U)$的
+$\mathscr O_Y(V)$-线性K\"ahler微分模。上面说的仿射开集们在$X$中构成了一个
+拓扑基$\mathscr B$. 则$\mathscr B$-层（见第 \ref{s:1.1.3} 节）的公理是
+容易检查的，相当于说微分模的构造是局部相容的，于是这些数据确实定义了一个层。
+
+% p.231
+
+概形间态射$\varphi:X\to Y$在点$x\in X$的\textit{相对维数}被定义为差
+$\dim (X,x)-\dim(Y,\varphi(x))$.
 
 \subsection{判别式}
 
 \subsection{例子}
+
+\begin{defi}\label{defi:5.31}
+    令$C\to \spec K$为一个代数闭域$K$上的曲线，而$p\in C$为一个闭点。
+    我们称$p$为一个\textit{结点}、\textit{尖点}或\textit{互自切点}若
+    局部环$\mathscr O_{C,p}$关于其极大理想的形式完备化$\hat{\mathscr O}$
+    同构于相应的$K[\![x,y]\!]/(y^2-x^2)$, $K[\![x,y]\!]/(y^2-x^3)$或
+    $K[\![x,y]\!]/(y^2-x^4)$.
+\end{defi}
