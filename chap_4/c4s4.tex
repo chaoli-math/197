@@ -34,11 +34,24 @@ $\bbp_\rr^1$在$\spec \rr$上的型，或者更简明地，一个射影直线的
 射影空间$\mathbb P^n$（对任何$n$）的$S$-型的同构类以自然的方式构成了一个群，
 叫做$S$的\textit{Brauer群}（或，当$S=\spec K$为一个域的谱时，$K$的Brauer群），
 其中射影空间$\mathbb P_S^n$为恒等元。这个群可以由Galois上同调计算，见
-Serre [1975]. 下面是一个联系到数论的一个Brauer群的构造的。
+Serre [1975]. 下面是Brauer群的构造，其与数论有关。
 
+令$K$为一个域，而$A$为一个$K$上的$n$-维 Azumaya 代数，即$A$是一个代数，
+作为一个向量空间是$n$-维的，有一个非平凡的双边理想，而其中心恰好就是$K$.
+比如，所有$K$上的$d\times d$矩阵构成的代数$M_d(K)$，这是个$d^2$-维 Azumaya 代数。
+从Wedderburn结构定理，如果$A$是一个$K$上的$n$-维 Azumaya 代数，且$n$是一个平凡，
+记$n=d^2$，则$\overline{K} \otimes A \cong M_d(\overline{K}) \cong 
+\overline{K} \otimes M_d(K)$ （在这意义下，$A$是$M_d(K)$的一个型）。
+
+将$M_d(K)$等同到$K$上的一个$d$-维向量空间$V$的自同态代数，容易看到$M_d(K)$
+的左理想都具有形式
 \[
-    \left\{a \in M_d(K) \mid \operatorname{Im}(a) \subset W\right\}
+    \left\{a \in M_d(K) \mid \operatorname{Im}(a) \subset W\right\},
 \]
+其中$W\subset V$是一个子空间。此左理想的向量空间维数为$\dim(V)\dim(W)$.
+特别地，维数为$d(d-1)$的左理想对应到$V$中的超平面，即$\mathbb P(V)$中的点。
+于是，$M_d(K)$中的$d(d-1)$-平面的Grassmannian的子概形在$M_d(K)$的乘法下封闭，
+即是理想，这个子概形同构于$\mathbb P^d(K)$.
 
 \[
     S \otimes A_G \subset A_G \otimes A_G \xrightarrow{\text { multiplication }}
@@ -85,3 +98,32 @@ Serre [1975]. 下面是一个联系到数论的一个Brauer群的构造的。
 \]
 
 \nottran
+
+\begin{exe}\label{exe:4.86}
+    $K$是一个域，证明对$\spec K$上的$\mathbb P_K^1$的任意型$X$同构于一个平面
+    圆锥曲线$C\subset \mathbb P_K^2$. 特别地，推出一个$\spec K$上的
+    $\mathbb P_K^1$的型同构于$\mathbb P_K^1$当且仅当它有一个点的剩余类域为$K$.
+\end{exe}
+
+\begin{exe}\label{exe:4.87}
+    用上个习题，证明$\spec K$上的$\mathbb P_K^1$的型$X$同构于$\mathbb P_K^1$
+    当且仅当他有一个零维子概形$\Gamma\subset X$的次数为奇数，即，其$\Gamma$
+    的坐标环作为$K$-向量空间的维数为奇数。
+\end{exe}
+
+\begin{exe}\label{exe:4.88}
+    证明，$\spec K$上的$\mathbb A_K^1$不存在非平凡的型，即，所有
+    $\spec K$上的$\mathbb A_K^1$的型都同构于$\mathbb A_K^1$.
+\end{exe}
+
+\begin{exe}\label{exe:4.89}
+    用例子证明，上面三个习题都不再正确若我们不再明确$S=\spec K$，即，如果
+    我们考虑一个一般的概形$S$上的$\mathbb P_S^1$和$\mathbb A_S^1$的型。
+    （为找到反例，取$S=\mathbb P_K^1$为一个域上的射影直线以及考虑
+    仿射平面$\mathbb A_K^2$关于原点的爆破。）
+\end{exe}
+
+另一种万有圆锥曲线的无理度的推广将在 Exercise \ref{exe:6.38} 中讨论，
+这次断言$d$-次万有有理正规曲线是有理的当且仅当$d$为奇数。
+
+另一个射影空间的型的例子出现在几何语境中，见上面的 Exerecise \ref{exe:4.71}.

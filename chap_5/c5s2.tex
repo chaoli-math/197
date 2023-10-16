@@ -281,9 +281,31 @@ $a_i= \pm a_0 \sigma_i(\alpha)$和$b_j= \pm b_0 \sigma_j(\beta)$是双齐次的�
 $\sigma_i(\alpha)$对每个$\alpha_i$是一个线性多项式，$\beta_j$也类似，我们见到
 $h$对每个$\alpha_i$的次数$\leq d$，而对每个$\beta_j$的次数$\leq e$.
 
-\nottran
+对给定的指标$i$, $j$，令$L$为整环的商域$B/(\alpha_i-\alpha_j)$. 令$\bar P$为
+$P$在$L$中的像。因为$f$和$g$在$L$中有公共根，则常多项式
+$\bar P\in (f,g)L[x]$也有这个根，于是$\bar P=0$. 因此，$P$在$B$中可以被
+$\alpha_i-\beta_j$整除，继而$h$在$B_0$中可以被$\alpha_i-\beta_j$整除。
+因此，$h$可以被$\prod_{i, j}\left(\alpha_i-\beta_j\right)$整除。特别地，
+我们看到$d\geq m$以及$e\geq n$，于是$P=a_0^d b_0^eh$在$B$中可以被$R$整除，
+在$B$中我们记$P=RQ$.
+
+如果$h$为一个多项式函数，其对$\alpha$和$\beta$都分别对称，对每个$\alpha_i$
+的次数$\leq u$而对$\beta_j$的次数$\leq v$，则因为基本对称函数生成了
+所有对称函数构成的环，$h$实际上为系数$a_i/a_0$和$b_j/b_0$的多项式，对前者次数
+$\leq u$，而对后者次数$\leq v$. 则对任何$d$, $e$相应地大于
+$h$对$\alpha$的次数和$h$对$\beta$的次数，多项式$a_0^db_0^e h$在$A$中。
+
+从$P$和$R$的形式，我们可以记$Q=a_0^{d-m} b_0^{e-n} q$，其中$q\in B_0$为一个
+多项式，对每个$\alpha_i$的次数$\leq d-m$而对每个$\beta_j$的次数$\leq e-n$. 
+此外，$q$分别对$\alpha_i$和$\beta_j$对称，于是$Q$可以写为$\sigma_i(\alpha)$
+和$\sigma_j(\beta)$的多项式，对这二类变量次数分别$\leq d-m$和$\leq e-n$.
+从上面的讨论，我们看到了所需的$Q\in A$.
 
 % p.228
+如果我们取$P=R'$，则我们看到在$A$中$R$整除了$R'$，但因为两者都有相同的次数，
+他们至多差一个符号。（对$f(x)=x^m$和$g(x)=x^n$分别计算两侧，实际上可以看到
+他们是相等的。）特别地，$R$在$A \cap(f, g) A[x]$中，所以从我们已证的，
+$R$生成了这个理想，此即所证。
 \end{proof}
 
 我们并不能直接应用Proposition \ref{pro:5.8} 到Theorem \ref{thm:5.15} 的情况，
@@ -291,12 +313,21 @@ $h$对每个$\alpha_i$的次数$\leq d$，而对每个$\beta_j$的次数$\leq e$
 $A$的一个开子集上，而此时态射是有限的，则：
 
 \begin{coro}\label{coro:5.16}
-    \nottran
+令$B=\mathbb{Z}[a_0, \ldots, a_m, b_0, \ldots, b_n][a_0^{-1}]$，且令
+\[
+    f=a_0 x^m+\cdots+a_m \quad \text { 和 } \quad g=b_0 x^n+\cdots+b_n \in B[x]
+\]
+为一元多项式，次数为$m$和$n$，且$f$是首一的。则投影$\varphi:V(f,g)\to \spec B$
+是有限的。$V(f,g)\subset \mathbb A_B^1$在$\varphi$下的概形学式像的定义理想由
+$R_{m,n}(f,g)$生成。因此，如果$f_0$, $g_0$为代数闭域$L$上的两个$m$, $n$次的
+任意多项式，其中一个是首一的，则$f_0$和$g_0$在$L$中有公共根当且仅当
+$R_{m,n}(f_0,g_0)=0$.
 \end{coro}
 
-\[
-    f=a_0 x^m+\cdots+a_m \quad \text { and } \quad g=b_0 x^n+\cdots+b_n \in B[x]
-\]
+\begin{proof}
+    \nottran
+\end{proof}
+
 
 \begin{coro}\label{coro:5.17}
 令$S$是一个环，而$f,g\in S[x]$为$S$上的一元多项式。若

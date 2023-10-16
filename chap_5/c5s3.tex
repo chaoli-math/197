@@ -9,7 +9,7 @@
 的适当领域上，态射$f$看上去就像乘积到其中一个因子的投影一般，此时我们称
 $x$是$f$的一个光滑点。
 
-在概形范畴中，Zariski开集往往太大了以至于不嫩那个容纳乘积结构，而
+在概形范畴中，Zariski开集往往太大了以至于不能容纳乘积结构，而
 （如我们将看到的）可能还有来自于这些点具有不同的剩余类域的困难。但，
 依然可能通过局部乘积结构来定义概形间态射的光滑性，如见 Altman, Kleiman [1970],
 但在目前的情况下，通过推广流形上的微分刻画来刻画光滑点和奇异点会更有意义。
@@ -19,11 +19,11 @@ $x$是$f$的一个光滑点。
 $\Omega_{B/A}$，这是一个$B$-模，为由符号$db$所生成的自由$B$-模，其中$b\in B$，
 模掉了关系
 \[
-    d(b_1 b_2)=b_1 d b_2+b_2 d b_1 \quad \text { 对所有 } b_1, b_2 \in B
+    d(b_1 b_2)=b_1 d b_2+b_2 d b_1 \quad \text { 对所有 }\,b_1, b_2 \in B
 \]
 以及 
 \[
-    d \psi_a=0 \quad \text { 对所有 } a \in A.
+    d \psi_a=0 \quad \text { 对所有 }\,a \in A.
 \]
 
 这些关系保证了同态
@@ -53,9 +53,112 @@ $\mathscr O_Y(V)$-线性K\"ahler微分模。上面说的仿射开集们在$X$中
 概形间态射$\varphi:X\to Y$在点$x\in X$的\textit{相对维数}被定义为差
 $\dim (X,x)-\dim(Y,\varphi(x))$.
 
+\begin{defi}\label{defi:5.21}
+    令$\varphi:X\to Y$为一个Noether概形间的态射，且假设$\varphi$是平坦的、
+    有限型的，且有着常相对余维数$d$. 我们定义$\varphi$的\textit{奇异概形}
+    $\sing\varphi\subset X$为$\varphi$的相对余切层的
+    第$d$个Fitting理想，即
+    \[
+        \sing\varphi=V(\fitt_d \Omega_{X/Y})\subset X.
+    \]
+    当态射$\varphi|_{\sing \varphi}:\sing \varphi\to Y$是有限的，我们定义
+    \textit{判别式概形}$\Delta(\varphi)\subset Y$为$\sing \varphi$在$Y$
+    中的Fitting像，即
+    \[
+        \Delta(\varphi)=V(\fitt_0(\varphi_* \mathscr{O}_{\sing \varphi})) 
+        \subset Y.
+    \]
+\end{defi}
+
+\[
+    X=\spec A[x_1, \ldots, x_n] /(f_1, \ldots, f_m)
+\]
+
+\[
+    \begin{pmatrix}
+        \partial f_1 / \partial x_1 & \ldots & \partial f_m / \partial x_1 \\
+        \vdots & & \vdots \\
+        \partial f_1 / \partial x_n & \ldots & \partial f_m / \partial x_n
+    \end{pmatrix}
+\]
+
+\[
+    \varphi: X=\spec K^{\prime} \longmapsto Y=\spec K
+\]
+
 \subsection{判别式}
 
+\[
+    D_m(f)=\frac{(-1)^{m(m-1) / 2}}{a_0} R_{m, m-1}(f, f^{\prime}).
+\]
+
 \subsection{例子}
+
+\[
+    \varphi: X=\spec K[t, x] /(f) \rightarrow Y=\spec K[t]
+\]
+
+\[
+    f(x)=x^k+a_{k-1}(t) x^{k-1}+\ldots+a_1(t) x+a_0(t)
+\]
+
+\[
+    \varphi_{k, m}: X=X_{k, m}=\spec K[t, x] /\left(x^k-t^m\right) \rightarrow Y=\spec K[t]
+\]
+
+\[
+    \mu_\alpha: Y=\spec K[t] \longrightarrow Y=\spec K[t]
+\]
+
+\[
+    \xymatrix{
+        X_{k,\alpha m}\ar[r]\ar[d]_{\varphi_{k,\alpha m}}& X_{k,m}\ar[d]^{\varphi_{k, m}}\\
+        Y\ar[r]_{\mu_\alpha}& Y
+    }
+\]
+
+\[
+    \delta_{k, \alpha m}=\alpha \cdot \delta_{k, m}
+\]
+
+\[
+    \delta_{2, m}=\begin{vmatrix}
+        1 & 0 & t^m \\
+        2 & 0 & 0 \\
+        0 & 2 & 0
+    \end{vmatrix}=4 t^m
+\]
+
+\[
+    \begin{aligned}
+        \delta_{k, m} & =\left|\begin{array}{ccccccccccc}
+        1 & 0 & \ldots & 0 & 0 & 0 & -t^m & 0 & \ldots & 0 & 0 \\
+        0 & 1 & \ldots & 0 & 0 & 0 & 0 & -t^m & \ldots & 0 & 0 \\
+        \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+        0 & 0 & \ldots & 1 & 0 & 0 & 0 & 0 & \ldots & -t^m & 0 \\
+        0 & 0 & \ldots & 0 & 1 & 0 & 0 & 0 & \ldots & 0 & -t^m \\
+        k & 0 & \ldots & 0 & 0 & 0 & 0 & 0 & \ldots & 0 & 0 \\
+        0 & k & \ldots & 0 & 0 & 0 & 0 & 0 & \ldots & 0 & 0 \\
+        \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+        0 & 0 & \ldots & k & 0 & 0 & 0 & 0 & \ldots & 0 & 0 \\
+        0 & 0 & \ldots & 0 & k & 0 & 0 & 0 & \ldots & 0 & 0 \\
+        0 & 0 & \ldots & 0 & 0 & k & 0 & 0 & \ldots & 0 & 0
+        \end{array}\right| \\
+        & =(-1)^{k-1} k^k \cdot t^{m(k-1)}
+        \end{aligned}
+\]
+
+\[
+    \delta_{k, m}=m(k-1)
+\]
+
+\[
+    f(x)=x^k-t^{k l}=\prod_{i=0}^{k-1}(x-\zeta^i t^l)
+\]
+
+\[
+    \Delta(f)=\prod_{0 \leq i<j \leq k-1}(\zeta^j t^l-\zeta^i t^l)^2=\prod_{0 \leq i<j \leq k-1}(\zeta^j-\zeta^i) t^{2 l}
+\]
 
 \begin{defi}\label{defi:5.31}
     令$C\to \spec K$为一个代数闭域$K$上的曲线，而$p\in C$为一个闭点。
