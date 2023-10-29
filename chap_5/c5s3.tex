@@ -70,10 +70,16 @@ $\dim (X,x)-\dim(Y,\varphi(x))$.
     \]
 \end{defi}
 
-\[
-    X=\spec A[x_1, \ldots, x_n] /(f_1, \ldots, f_m)
-\]
+为理解这个定义，我们首先转到最经典的情况，即代数闭域上的不可约非奇异簇之间的
+$\varphi:X\to Y$. 此时，常相对维数的条件是自动满足的，平坦性则变成了纤维
+$\varphi^{-1}(y)$的维数是常数，且等于相对维数。
 
+奇异概形的概念为局部性的，我们可以转入仿射的情况并假设$Y=\spec A$，以及记
+\[
+    X=\spec A[x_1, \ldots, x_n] /(f_1, \ldots, f_m).
+\]
+如前所说，此时$A$-线性 K\"ahler 微分层$\Omega_{X/Y}$为$n\times m$ Jacobian
+矩阵
 \[
     \begin{pmatrix}
         \partial f_1 / \partial x_1 & \ldots & \partial f_m / \partial x_1 \\
@@ -81,15 +87,101 @@ $\dim (X,x)-\dim(Y,\varphi(x))$.
         \partial f_1 / \partial x_n & \ldots & \partial f_m / \partial x_n
     \end{pmatrix}
 \]
+的余核。因此，概形$\sing \varphi$的底空间恰是$X$中的那些$x$其上Jacobian矩阵的
+秩小于$n-d$构成的，换句话说，即使得微分$D\varphi$不是满射的点们，恰如经典的定义。
 
+然而，概形学的语境下新的现象涌现了。比如，考虑一个有限域扩张
+$K\hookrightarrow K'$，且令
 \[
     \varphi: X=\spec K^{\prime} \longmapsto Y=\spec K
 \]
+为相应的一点概形间的态射。这里相对维数为$0$，于是$\varphi$是奇异的当且仅当
+$\Omega_{X/Y}\neq 0$. 从一个域论的经典结论，这当且仅当扩张$K\hookrightarrow K'$
+并不是可分的。
+
+% p.232
 
 \subsection{判别式}
 
+我们现在想要更仔细地考虑态射$\varphi:X\to Y$的奇异概形$\sing \varphi$在$Y$上是
+有限的情况，以及描述关联于这个态射的判别式概形$\Delta(\varphi)\subset Y$. 
+我们将主要（但不完全）关注于当$X$是$\mathbb A_Y^1$的闭子概形的情况，其为系数
+为$Y$上的正则函数的一个多项式$f(x)$的零点集，这将领我们到一元多项式的
+\textit{判别式}的定义。此时，和前面章节里关于结式的讨论类似，我们将这个问题
+看作如何给出那些点$y=[\mathfrak p]\in Y=\spec A$的定义方程
+的公式，这些点上$f$具有重根，即使得$f\in A[x]$模$\mathfrak p$后
+$\bar f\in A/\mathfrak p[x]$在$\kappa (y)$的代数闭包中有重根。如结式的讨论，
+我们将有两种一般的定义，一种用Fitting理想，以及另一种
+（在更特殊的情况$X=\spec A[x]/(f)$）更经典的判别式的定义，作为
+一个适当的多项式“万有族”的（既约）分支概形的拉回。我们将最终证明这两种定义在后者
+可定义的情况中相同。
+
+为经典的构造，我们首先需要定义我们的万有分支覆盖。令
+\[
+    A=\zz[a_0,\dots,a_m],
+\]
+以及令
+\[
+    f=a_0x^m+\cdots+a_m\in A[x]
+\]
+为一般的$m$-次一元多项式。扩张我们的多项式环，定义
+\[
+    B_0=\zz [\alpha_1,\dots,\alpha_m]\quad \text{和}\quad 
+    B=B_0[a_0]
+\]
+以及映射$A\to B$，其将$a_i$变到$f=a_0\prod_i (x-\alpha_i)$的第$i$个系数，
+其为$\pm a_0\sigma_i(\alpha)$. 正如 Theorem \ref{thm:5.15} 的证明中所示，
+这些系数是代数独立的，我们将$A$看成$B$的一个子环。
+
+\[
+    D_1=\prod_{i<j}(\alpha_i-\alpha_j)
+\]
+
+\nottran
+
+% p.233
+
+\[
+    D_m(f)=a_0^{2 m-2} D_1^2=a_0^{2 m-2} \prod_{i<j}(\alpha_i-\alpha_j)^2
+\]
+
 \[
     D_m(f)=\frac{(-1)^{m(m-1) / 2}}{a_0} R_{m, m-1}(f, f^{\prime}).
+\]
+
+\[
+    R_{m, m-1}(f, f^{\prime})=a_0^{m-1} \prod_{i=1}^m f^{\prime}(\alpha_i)
+\]
+
+
+\[
+    f^{\prime}(x)=\sum_{j=1}^m f(x) /(x-\alpha_j)
+\]
+
+\[
+    f^{\prime}(\alpha_i)=a_0 \prod_{j \neq i}(\alpha_i-\alpha_j)
+\]
+
+\[
+    \begin{aligned}
+        R_{m, m-1}(f, f^{\prime}) & =a_0^{m-1} \prod_{i=1}^m f^{\prime}(\alpha_i)=a_0^{2 m-1} \prod_{j \neq i}(\alpha_i-\alpha_j) \\
+        & =(-1)^{m(m-1) / 2} a_0^{2 m-1} \prod_{i<j}(\alpha_i-\alpha_j)^2 \\
+        & =(-1)^{m(m-1) / 2} a_0 D_m(f)
+        \end{aligned}
+\]
+
+% p.234
+
+\[
+    \Delta(\varphi)=V(D_m(f)) \subset Y
+\]
+
+\[
+    f(x)=x^n+a_{n-1} x^{n-1}+\cdots+a_0 \in \mathbb{Z}[x]
+\]
+
+\[
+    \spec B\to \spec \zz
 \]
 
 \subsection{例子}
@@ -152,6 +244,8 @@ $\dim (X,x)-\dim(Y,\varphi(x))$.
     \delta_{k, m}=m(k-1)
 \]
 
+% p.236
+
 \[
     f(x)=x^k-t^{k l}=\prod_{i=0}^{k-1}(x-\zeta^i t^l)
 \]
@@ -159,6 +253,36 @@ $\dim (X,x)-\dim(Y,\varphi(x))$.
 \[
     \Delta(f)=\prod_{0 \leq i<j \leq k-1}(\zeta^j t^l-\zeta^i t^l)^2=\prod_{0 \leq i<j \leq k-1}(\zeta^j-\zeta^i) t^{2 l}
 \]
+
+\[
+    \Omega_{X / Y}=\mathscr{O}_X\{d x\} /\left(k x^{k-1} d x\right)
+\]
+
+\[
+    0 \longrightarrow \mathscr{O}_X \stackrel{\nu}{\longrightarrow} \mathscr{O}_X \longrightarrow \Omega_{X / Y} \longrightarrow 0
+\]
+
+\[
+    \sing\varphi=V(\fitt_0 \Omega_{X/Y})=V(x^{k-1})\subset X
+\]
+
+\[
+    0 \longrightarrow \mathscr{O}_Y^{\oplus k} \stackrel{\varphi_* \nu}{\longrightarrow} \mathscr{O}_Y^{\oplus k} \longrightarrow \varphi_* \mathscr{O}_{\sing \varphi} \longrightarrow 0
+\]
+
+
+% p.237
+\[
+    \varphi_* \nu=\begin{pmatrix}
+        0 & t^m & 0 & \ldots & 0 & 0 \\
+        0 & 0 & t^m & \ldots & 0 & 0 \\
+        0 & 0 & 0 & \ldots & 0 & 0 \\
+        \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+        0 & 0 & 0 & \ldots & 0 & t^m \\
+        1 & 0 & 0 & \ldots & 0 & 0
+    \end{pmatrix}
+\]
+
 
 \begin{defi}\label{defi:5.31}
     令$C\to \spec K$为一个代数闭域$K$上的曲线，而$p\in C$为一个闭点。
