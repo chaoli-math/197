@@ -325,9 +325,16 @@ $R_{m,n}(f_0,g_0)=0$.
 \end{coro}
 
 \begin{proof}
-    \nottran
-\end{proof}
+    令$A$如Theorem \ref{thm:5.15} 中定义，$B$是一个平坦$A$-代数，因此从
+    Proposition \ref{pro:5.8}，本推论的第一部分从Theorem \ref{thm:5.15}
+    中相应部分得到。为看到有限性，注意到$B[x]/(f)$以及在$B$上有限，
+    因为他作为模是由$1,x,\dots,x^{m-1}$所生成的。因此，商环$B[x]/(f,g)$
+    是有限的，其谱为$V(f,g)$.
 
+    因为$V(f,g)$在$\spec B$上有限，我们可以应用Proposition \ref{pro:5.8}
+    的集合论部分，则当$f$是首一的时，本推论的最后部分成立。而当$g$是首一的
+    情况，我们也可以类似论证得到。
+\end{proof}
 
 \begin{coro}\label{coro:5.17}
 令$S$是一个环，而$f,g\in S[x]$为$S$上的一元多项式。若
@@ -348,16 +355,50 @@ $f(x)=a_0 \prod_{i=1}^m(x-\alpha_i)$在$S$上完全分解成线性因子，则
 % p.229
 
 \begin{exa}\label{exa:5.18}
-    \nottran
+    当$f$, $g$的领头系数为零时结式也为零，这事实乍一看似乎是一个不幸的异常，
+    但如果我们将仿射直线“紧化”为 $A$ 上的射影直线（严格来说，
+    是$\spec A$上的相对紧化），便不会有这个问题。
+    如果我们观察当 $f$ 的领头系数趋向 $0$ 时多项式 $f$ 的根会发生什么情况，
+    我们会发现其中至少有一个向 $\infty$ 移动；也就是说，如果我们齐性化并将
+    $f$视为定义了射影直线的$m$个点，则这个零点集的极限将包含点$\infty$.
+    因此，若$f$和$g$的领头系数都是零，则合理地，点$\infty$是
+    （作为$m$次和$n$次多项式）共同的根。证明，若
+    $F=a_0x^m+a_1x^{m-1}y+\cdots+a_my^m$和$G=b_0x^n+\cdots+b_ny^n$
+    为$A=\mathbb Z[a_0,\dots,a_m,b_0,\dots,b_n]$上的一般的$m$, $n$次齐次多项式，
+    则$V(F,G)\subset \mathbb P_A^1$在到$\spec A$的自然投影的像概形
+    的定义理想由结式$R_{m,n}(F,G):=R_{m,n}(F(x,1),G(x,1))$生成。
+    证明，如果$F_0,G_0$为任意域$L$上的$m$, $n$次齐次多项式，则$F_0$和$G_0$
+    在$\mathbb P_{L}^1$中有公共根当且仅当$R_{m,n}(F_0,G_0)=0$.
 \end{exa}
 
 \begin{exe}\label{exe:5.19}
-    \nottran
-\[
-    0 \to(R_{m, n}(f, g)) \to A \to A /(R_{m, n}(f, g)) \to 0
-\]
+    证明，在Theorem \ref{thm:5.15} 中，整数环可以如下换成任意的交换环$K$：令
+    $A$为定理中整数环上的多项式环，再令$B=A\otimes_{\mathbb Z}K$.
+
+    \begin{compactenum}[(a)]
+        \item 证明，只需证明正和列
+        \[
+            0 \to(R_{m, n}(f, g)) \to A \to A /(R_{m, n}(f, g)) \to 0
+        \]
+        当我们在$\mathbb Z$上张量积$K$后，仍然是正合的。
+        \item 证明，对每个素数$p$，交换群$A/(R_{m,n}(f,g))$没有$p$-挠元。
+        （你可能需要用到如下事实，$R_{m,n}(f,g)$看作在一个更小的多项式环上的
+        $a_m$, $b_n$的多项式，在合适的意义下，具有“领头项”$a_m^nb_n^m$.）用(b)
+        的结论证明(a).
+    \end{compactenum}
+
 \end{exe}
 
 \begin{exe}\label{exe:5.20}
-    \nottran
+    上面的结式的计算看似有些特殊，但是它可以用来计算任意的有限态射
+    $\varphi:X\to Y$的（集合学式的）像。到一个仿射覆盖上，然后假设$Y=\spec A'$，
+    其中$A'$是一个环，而$X=\spec A'[x_1,\dots,x_d]/I$. 递推地约化问题到$d=1$.
+    令$f_1,\dots,f_e$为$I$的生成元，假设他们的$x_1$的次数最高为$n$. 证明，
+    $I$包含了一个首一多项式$f$，次数记作$m$. 令$t_1,\dots,t_e$为新的变量，
+    再令$g=\sum_it_if_i\in A'[t_1,\dots,t_e]$. 令$R=R_{m,n}(f,g)$为结式，
+    $J$为$R$中以$t$为变量的首一多项式的系数在$A'$中生成的理想。证明，$J$
+    定义了$\varphi$的集合学式的像，同时$J$也包含于定义了概形学式像的
+    理想中。(实践中，人们一般不用这种计算方法，而是用Gr\:oebner基的技术，
+    其并不像结式，他实际计算了整个概形学式像的理想，该方法可见 
+    Cox et al. [1997, Section 2.8] 或 Eisenbud [1995, Chapter 15])。
 \end{exe}

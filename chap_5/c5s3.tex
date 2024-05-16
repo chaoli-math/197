@@ -133,94 +133,150 @@ $\bar f\in A/\mathfrak p[x]$在$\kappa (y)$的代数闭包中有重根。如结�
 其为$\pm a_0\sigma_i(\alpha)$. 正如 Theorem \ref{thm:5.15} 的证明中所示，
 这些系数是代数独立的，我们将$A$看成$B$的一个子环。
 
+在$B$中，我们可以构造多项式
 \[
-    D_1=\prod_{i<j}(\alpha_i-\alpha_j)
+    D_1=\prod_{i<j}(\alpha_i-\alpha_j).
 \]
-
-\nottran
-
+当两个$f$的根相同时，这个多项式为零，但这并不是我们问题的解答，因为这不是
+$A$中的多项式。一方面，他在根的置换下并不是不变的。但是，容易看到，如果$\pi$
+是一个根的置换，$D_1$在置换作用后等于$\operatorname{sgn}(\pi)D_1$，其中
+$\operatorname{sgn}(\pi)$是置换的符号。因此，$D_1^2$在根的置换下不变，
+于是可以表为对称函数$\sigma_i(\alpha)=a_i/a_0$的多项式。每个$\alpha_i$在
+$D_1$中出现的次数小于等于$m-1$，于是在$D_1^2$中至多为$2m-2$，从此可见%
 % p.233
-
 \[
     D_m(f)=a_0^{2 m-2} D_1^2=a_0^{2 m-2} \prod_{i<j}(\alpha_i-\alpha_j)^2
 \]
+定义了$A$中的一个元素。多项式$D_m(f)$被称为$f$的\textit{判别式}。
 
-\[
+\begin{pro}\label{pro:5.22}
+    记号同上，我们有
+    \[
     D_m(f)=\frac{(-1)^{m(m-1) / 2}}{a_0} R_{m, m-1}(f, f^{\prime}).
-\]
+    \]
+    若$f_0\in L[x]$为域$L$上的一个$m$次的一元首一多项式，则$D_m(f_0)=0$
+    当且仅当$f_0$在$L$的代数闭包中有重根。
+\end{pro}
 
+\begin{proof}
+
+将Corollary \ref{coro:5.17}应用到上面所定义的环$B$，可知
 \[
-    R_{m, m-1}(f, f^{\prime})=a_0^{m-1} \prod_{i=1}^m f^{\prime}(\alpha_i)
+    R_{m, m-1}(f, f^{\prime})=a_0^{m-1} \prod_{i=1}^m f^{\prime}(\alpha_i).
 \]
-
-
+但是，
 \[
-    f^{\prime}(x)=\sum_{j=1}^m f(x) /(x-\alpha_j)
+    f^{\prime}(x)=\sum_{j=1}^m f(x) /(x-\alpha_j),
 \]
-
+故
 \[
     f^{\prime}(\alpha_i)=a_0 \prod_{j \neq i}(\alpha_i-\alpha_j)
 \]
-
+以及
 \[
     \begin{aligned}
         R_{m, m-1}(f, f^{\prime}) & =a_0^{m-1} \prod_{i=1}^m f^{\prime}(\alpha_i)=a_0^{2 m-1} \prod_{j \neq i}(\alpha_i-\alpha_j) \\
         & =(-1)^{m(m-1) / 2} a_0^{2 m-1} \prod_{i<j}(\alpha_i-\alpha_j)^2 \\
-        & =(-1)^{m(m-1) / 2} a_0 D_m(f)
+        & =(-1)^{m(m-1) / 2} a_0 D_m(f),
         \end{aligned}
 \]
+从此可知$D_m(f)$的公式。推论的第二点来自于，一个首一多项式与另一个多项式在域
+上的结式为零当且仅当他们有共同的根，而从常规的计算可知，多项式$f(x)$和
+他的导数有共同的根当且仅当$f$有重根。
+\end{proof}
+
+作为推论，在特殊情况$X=\spec A[x]/(f)$中，我们得到了允诺的经典和现代定义的等同。
 
 % p.234
 
-\[
-    \Delta(\varphi)=V(D_m(f)) \subset Y
-\]
+\begin{coro}\label{coro:5.23}
+    令$A$是一个环，$f\in A[x]$是一个$m$次首一多项式，而$\varphi:X=\spec A[x]/(f)
+    \to Y=\spec A$为相应的态射。$\varphi$的判别式概形为$f$的判别式的零点，即
+    \[
+    \Delta(\varphi)=V(D_m(f)) \subset Y.\]
+\end{coro}
 
+比如，若$B=\mathbb Z[\alpha]$为某个数域的阶（order）\footnote{
+    译者注：我不确定order是不是翻译成阶。代数数域$K$的一个order $O$是$K$
+    的一个子环，他作为$\mathbb Z$-模有限生成，且$O\otimes_{\mathbb Z}\mathbb Q=K$.
+}%
+以及
 \[
     f(x)=x^n+a_{n-1} x^{n-1}+\cdots+a_0 \in \mathbb{Z}[x]
 \]
-
+为$\alpha$满足的不可约首一多项式，则$f$为态射
 \[
     \spec B\to \spec \zz
 \]
+的判别式概形的定义方程。
+
+\begin{exa}\label{exe:5.24}
+    证明这个态射的奇异概形为$f$的\textit{离差}(different)%
+    \footnote{译者注：离差源于超理用户imsane. }%
+    ，其比如定义于Lang [1994].
+\end{exa}
+
+\begin{exa}\label{exe:5.25}
+    考虑在第 \ref{s:2.4.2} 节和Exercise \ref{exe:4.51} 中所讨论的
+    阶$A=\mathbb Z[\sqrt{3}]$, $B=\mathbb Z[11\sqrt{3}]$, 
+    $C=\mathbb Z[2\sqrt{3}]$和$D=\mathbb Z[121\sqrt{3}]$. 
+    态射$\spec A\to \spec \mathbb Z$, $\spec B\to \spec \mathbb Z$, 
+    $\spec C\to \spec \mathbb Z$, $\spec D\to \spec \mathbb Z$的
+    判别式概形是什么？这和之前所画的概形的图有什么联系？
+\end{exa}
 
 \subsection{例子}
 
+为演示我们的态射的判别式概形的定义，我们将计算一些具体的例子。
+对下面所有的态射$\varphi:X\to Y$，目标概形将是仿射直线$Y=\spec K[t]$，
+其中$K$是一个特征为零的域。对所有但除了最后一个例子，态射$\varphi$
+将是有限的，对除了最后两个例子，$X$将是仿射直线$\mathbb A_Y^1=\spec K[t][x]$
+的一个子概形，在$Y$上有限且平坦。具体地，我们取
 \[
-    \varphi: X=\spec K[t, x] /(f) \rightarrow Y=\spec K[t]
+    \varphi: X=\spec K[t, x] /(f) \rightarrow Y=\spec K[t],
 \]
-
+其中
 \[
     f(x)=x^k+a_{k-1}(t) x^{k-1}+\ldots+a_1(t) x+a_0(t)
 \]
+是一个$x$的系数在$K[t]$中的首一多项式。在所有的例子中，我们将考虑
+判别式概形，作为$\mathbb A_K^1$的支于零点的子概形，由其次数所确定。
 
+\begin{exa}\label{exa:5.26}
+我们从例子$f(x)=x^k-t^m$开始，即态射
 \[
-    \varphi_{k, m}: X=X_{k, m}=\spec K[t, x] /\left(x^k-t^m\right) \rightarrow Y=\spec K[t]
+    \varphi_{k, m}: X=X_{k, m}=\spec K[t, x] /\left(x^k-t^m\right) \rightarrow Y=\spec K[t].
 \]
+我们将记这个态射的判别式概形的次数为$\delta_{k,m}$，并将用三种方法来计算他。
+% p.235
 
+在我们开始前，注意到，若
 \[
     \mu_\alpha: Y=\spec K[t] \longrightarrow Y=\spec K[t]
 \]
-
+是由$t\mapsto t^\alpha$给出的态射，我们有纤维积图
 \[
     \xymatrix{
         X_{k,\alpha m}\ar[r]\ar[d]_{\varphi_{k,\alpha m}}& X_{k,m}\ar[d]^{\varphi_{k, m}}\\
         Y\ar[r]_{\mu_\alpha}& Y
     }
 \]
-
+于是，由于判别式概形在拉回下的不变性，对任意的$\alpha$和$m$，我们有
 \[
-    \delta_{k, \alpha m}=\alpha \cdot \delta_{k, m}
+    \delta_{k, \alpha m}=\alpha \cdot \delta_{k, m}.
 \]
 
+第一个计算，我们用多项式$f(x)$的判别式作为$f$和$f'$的结式的定义，然后应用
+Sylvester行列式。因此，比如在$k=2$时，判别式为
 \[
-    \delta_{2, m}=\begin{vmatrix}
+    \delta_{2, m}=\left|\begin{array}{ccc}
         1 & 0 & t^m \\
         2 & 0 & 0 \\
         0 & 2 & 0
-    \end{vmatrix}=4 t^m
+    \end{array}\right|=4 t^m,
 \]
-
+因此（$K$的特征为零）$\delta_{2,m}=m$. 更一般地，对任意的$k$，
+我们有$a_{k-1}=\cdots=a_1=0$以及$a_0=-t^m$. 因此，
 \[
     \begin{aligned}
         \delta_{k, m} & =\left|\begin{array}{ccccccccccc}
@@ -236,13 +292,15 @@ $\bar f\in A/\mathfrak p[x]$在$\kappa (y)$的代数闭包中有重根。如结�
         0 & 0 & \ldots & 0 & k & 0 & 0 & 0 & \ldots & 0 & 0 \\
         0 & 0 & \ldots & 0 & 0 & k & 0 & 0 & \ldots & 0 & 0
         \end{array}\right| \\
-        & =(-1)^{k-1} k^k \cdot t^{m(k-1)}
+        & =(-1)^{k-1} k^k \cdot t^{m(k-1)},
         \end{aligned}
 \]
-
+故
 \[
-    \delta_{k, m}=m(k-1)
+    \delta_{k, m}=m(k-1).
 \]
+
+\nottran
 
 % p.236
 
@@ -253,6 +311,9 @@ $\bar f\in A/\mathfrak p[x]$在$\kappa (y)$的代数闭包中有重根。如结�
 \[
     \Delta(f)=\prod_{0 \leq i<j \leq k-1}(\zeta^j t^l-\zeta^i t^l)^2=\prod_{0 \leq i<j \leq k-1}(\zeta^j-\zeta^i) t^{2 l}
 \]
+
+
+\end{exa}
 
 \[
     \Omega_{X / Y}=\mathscr{O}_X\{d x\} /\left(k x^{k-1} d x\right)
